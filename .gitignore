@@ -1,0 +1,12 @@
+.DS_Store
+build/
+DerivedData/
+*.xcodeproj/
+.build/
+.swiftpm/
+*.zip
+*.dmg
+*.app
+*.dSYM
+xcuserdata/
+.superpowers/
