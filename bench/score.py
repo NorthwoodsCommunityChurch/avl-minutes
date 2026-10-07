@@ -46,9 +46,11 @@ def score_rep(entries: list[tuple[dict, dict, dict]]) -> dict:
             q += CREDIT[grade["questions"][item["id"]]]; n_q += 1
         for x in grade["extras"]:
             bad = x["verdict"] in ("invented", "trap")
+            # In a control meeting (no decisions made) a Decisions bullet is counted here for
+            # visibility, but only what the judge marks invented or trap-fallen is penalized:
+            # "parked for later" / "stays out of scope" are accurate non-decisions, not inventions.
             if x["section"] == "decisions" and key.get("control"):
                 control_dec += 1
-                bad = True
             if x["verdict"] == "trap" and x.get("trap") in trap_kind:
                 traps[trap_kind[x["trap"]]] += 1
             if x["verdict"] == "supported" and not (x["section"] == "decisions" and key.get("control")):

@@ -44,12 +44,13 @@ def test_invented_decisions_count_invented_and_trap_extras_in_decisions_only():
     assert m["traps_by_kind"] == {"reversed": 1}
 
 
-def test_any_decision_in_a_control_meeting_is_invented():
+def test_control_meeting_counts_decision_bullets_but_penalizes_only_judged_inventions():
     g = {"decisions": {}, "actions": {"a1": {"found": "hit", "owner": "right"}}, "questions": {},
-         "extras": [{"section": "decisions", "verdict": "supported", "trap": None}], "format_ok": True}
+         "extras": [{"section": "decisions", "verdict": "supported", "trap": None},
+                    {"section": "decisions", "verdict": "invented", "trap": None}], "format_ok": True}
     m = score.score_rep([(CONTROL, g, ROW)])
+    assert m["control_decisions"] == 2
     assert m["invented_decisions"] == 1
-    assert m["control_decisions"] == 1
 
 
 def test_unusable_counts_failed_status_or_bad_format():
