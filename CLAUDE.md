@@ -14,7 +14,13 @@ SQLite FTS5, MCP Swift SDK, XcodeGen.
 
 ---
 
-## Status — 2026-10-07
+## Status — 2026-10-07 (evening)
+- **Direction change (Aaron, 2026-10-07):** Minutes is now **only the transcriber on Aaron's laptop**. The always-on
+  assistant is **Hermes Agent on the engineering Mac mini** (`engineering-mac`), fed by a to-be-built **Hermes Helper**
+  (notes index + MCP search, same engine) and Power Automate → OneDrive feeds. Full record + next steps:
+  [docs/research/2026-10-07-assistant-direction.md](docs/research/2026-10-07-assistant-direction.md). **Resume there.**
+- **Summary bench** (`bench/`, 5 models, 30 synthetic meetings) is running detached via `bench/finish.sh`;
+  progress in `bench/results/orchestrate.log`, scorecard at `bench/results/REPORT.md` when `FULL SCORECARD READY` appears.
 - **Stage:** active development on branch `minutes-v1`, pushed to private repo
   `NorthwoodsCommunityChurch/avl-minutes` (created 2026-10-07 with Aaron's OK). `main` holds spec + plan only;
   merging `minutes-v1` into `main` still needs Aaron's OK.
@@ -46,9 +52,9 @@ Call tap (IOProc) ──────┴─ 16 kHz ───┼─ Sortformer dia
 → Attributor → TranscriptDocument → NotesBridge (Minutes --notes-helper) → Apple Notes
 NotesIndexer → notes-index.db (FTS5) ← Minutes --mcp (read-only) ← Claude Code
 ```
-One binary, several modes: app (default), `--mcp`, `--notes-helper`, `--audio-check`, `--transcribe-check`;
-debug builds also have `--gallery` (all screens in one off-screen, non-focusable window for screenshots)
-and `--unregister-login`.
+One binary, several modes: app (default), `--mcp`, `--index` (headless Notes indexing, no UI — built for the mini,
+now superseded by the planned Hermes Helper target), `--notes-helper`, `--unregister-login`, `--audio-check`,
+`--transcribe-check`; debug builds also have `--gallery` (all screens in one off-screen, non-focusable window).
 
 ### Where things live
 - `Packages/MinutesKit/` — pure, tested logic (attribution, speakers, transcript doc, Notes index, MCP tools)
@@ -125,3 +131,4 @@ End a work session with **`/save`**.
 | 2026-10-07 | Repo created (private); Sparkle wired; feed + secrets rows filled |
 | 2026-10-07 | Final review fix pass: timeline across capture gaps, helper deadlines, unsaved-transcript guard, Start gating |
 | 2026-10-07 | Aaron: no Canopy listing, no custom icon, no release script |
+| 2026-10-07 | Direction: Minutes = transcriber only; Hermes + Hermes Helper on the engineering mini; summary bench; `--index` mode |
