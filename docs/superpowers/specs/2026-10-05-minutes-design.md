@@ -104,7 +104,7 @@ One macOS app, `Minutes.app`, with two modes from the same binary:
 | Unit | Responsibility | Depends on |
 |---|---|---|
 | `MicCapture` | Opens default input with voice processing (echo cancellation, other-audio ducking minimized), takes channel 0, resamples to 16 kHz mono Float32 | AVFAudio |
-| `CallCapture` | Global process tap (all processes except Minutes) + private aggregate device read by its own AVAudioEngine; sums channels to mono, resamples to 16 kHz. Watchdog rebuilds the tap if it delivers pure zeros for 10 s while any other process reports `IsRunningOutput` | CoreAudio, AVFAudio |
+| `CallCapture` | Global process tap (all processes except Minutes) + private aggregate device read with a Core Audio IOProc (AVAudioEngine on a tap aggregate proved unreliable — ledger, Task 12); sums channels to mono, resamples to 16 kHz. Watchdog rebuilds the tap if it delivers pure zeros for 10 s while any other process reports `IsRunningOutput` | CoreAudio, AVFAudio |
 | `StreamTranscriber` | One per stream. Single-use SpeechAnalyzer + SpeechTranscriber with `.volatileResults` and `.audioTimeRange`; emits volatile text (live UI) and final word runs with times | Speech |
 | `StreamDiarizer` | One per stream, own model instance. `SortformerDiarizer` (`.balancedV2_1`, ~1.5 s latency); appends finalized per-frame speaker probabilities (4 slots × 80 ms) to a rolling `SpeakerActivity` window (last 120 s) | FluidAudio |
 | `VoicePrint` | Enrollment (≈30 s reading → CAM++ embeddings of 3 s windows → mean, L2-normalized, 192 numbers) and matching (cosine similarity) | FluidAudio CAM++ |
@@ -189,7 +189,9 @@ This is the product. Rules the code must follow:
   HTML-escaped. Untitled meetings are titled "Meeting — Mon Oct 5, 2:00 PM".
 - If Notes refuses a write (permission denied, Notes not responding), lines
   stay in memory, the popover shows the error, the next save retries, and Stop
-  offers **Copy transcript** so nothing is lost.
+  offers **Try Again** and **Copy transcript** so nothing is lost. Until one of
+  them succeeds, New Meeting, Quit, and update relaunches are held. Every Notes
+  call has a deadline, so a hung Notes can't freeze Stop.
 
 ## 6. Notes index and Claude access (MCP)
 
@@ -265,7 +267,7 @@ labels may be wrong; "Me" is Aaron) and everything else is Aaron's own notes.
 - Popover, listening: elapsed time, a level meter per source, the last few
   lines live (volatile text dimmed), last-saved-to-Notes time, **Stop**.
 - After Stop: "Saved to Notes" with **Open in Notes**; on save failure,
-  **Copy transcript**.
+  **Try Again** and **Copy transcript** (New Meeting waits until one succeeds).
 - Footer: Settings…, Quit.
 
 ### Settings
@@ -276,7 +278,8 @@ labels may be wrong; "Me" is Aaron) and everything else is Aaron's own notes.
 - Claude: Connect / connected status; notes indexed count and last refresh;
   **Refresh now**.
 - Models: download status.
-- Updates (Sparkle).
+- Updates (Sparkle): automatic-check toggle, version, Check for Updates. Background
+  checks are skipped and relaunches postponed while a meeting runs.
 
 ### First run
 
@@ -303,10 +306,10 @@ saved"; the audio is discarded.
 | Models not downloaded / offline on first run | Start disabled with the reason |
 | Call tap fails | Room capture continues; popover shows "Call audio unavailable" |
 | Tap goes silent (known macOS bug) | Watchdog rebuilds it |
-| Mic device changes mid-meeting | Restart the mic engine on the new default device; same analyzers continue (small clock drift accepted) |
+| Mic device changes mid-meeting | Restart the mic engine on the new default device (one retry after 1 s, then the popover says room capture stopped); same analyzers continue. A per-stream timeline re-anchors line times after any capture gap, so lines keep their real meeting time |
 | Diarizer/embedder throws | Lines continue labeled "Unknown"; transcription never stops for a labeling failure |
-| Notes write fails | Keep lines in memory, show error, retry at next save; Stop offers Copy transcript |
-| Index refresh fails | Keep old index; Settings and MCP responses show its age |
+| Notes write fails or times out | Keep lines in memory, show error, retry at next save; Stop offers Try Again and Copy transcript |
+| Index refresh fails | Keep old index; Settings, the popover footer, and MCP responses show its age. Meetings still start — only Notes *permission* blocks Start |
 | App crash / force quit | The note keeps the last save (≤ 30 s old). The note's "in progress" line remains; acceptable |
 | MCP: index missing | Tools say "No notes indexed yet — open Minutes once." |
 

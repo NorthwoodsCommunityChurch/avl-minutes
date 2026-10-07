@@ -32,7 +32,7 @@ A Mac menu bar app that turns meetings into text in Apple Notes — without ever
 1. Click the waveform in the menu bar.
 2. Optionally type a meeting name, then click **Start Listening**. Tell the people in the meeting you're transcribing.
 3. While listening, the menu bar shows a red dot and the elapsed time.
-4. Click **Stop**. The transcript is in Notes under **Meeting Transcripts**; click **Open in Notes** to see it.
+4. Click **Stop**. The transcript is in Notes under **Meeting Transcripts**; click **Open in Notes** to see it. If Notes couldn't save it, click **Try Again** or **Copy Transcript** — Minutes keeps it until you do.
 5. In Claude Code, ask things like "What did we decide about the lobby screens in Tuesday's meeting?"
 
 ## Configuration
@@ -46,6 +46,7 @@ Open **Settings** from the gear in the menu bar panel:
 | Remind me to tell attendees | Shows a reminder under Start |
 | Claude Code | Connects the search server: `claude mcp add minutes --scope user -- /Applications/Minutes.app/Contents/MacOS/Minutes --mcp` |
 | Open Minutes at login | Keeps the notes index fresh for Claude |
+| Check for updates automatically | Minutes updates itself; it never checks or relaunches during a meeting |
 
 ## Privacy
 
@@ -80,7 +81,7 @@ MINUTES_TRACE=1 /Applications/Minutes.app/Contents/MacOS/Minutes --transcribe-ch
 ```
 Minutes/                 App: audio capture, pipeline, Notes bridge, Claude connector, SwiftUI
   App/  Audio/  Pipeline/  Notes/  Claude/  UI/
-Packages/MinutesKit/     Tested core: attribution, speakers, transcript, Notes index, MCP tools + server
+Packages/MinutesKit/     Tested core: attribution, speakers, transcript + timeline, Notes index, MCP tools + server, child-process runner
 Packages/AudioDeps/      Wraps the vendored FluidAudio (Vendor/, fetched by scripts/fetch-deps.sh)
 scripts/                 build-and-run, fetch-deps, no-audio guard, audit-writes, mcp-smoke-test
 docs/                    Design spec, implementation plan, screenshots
