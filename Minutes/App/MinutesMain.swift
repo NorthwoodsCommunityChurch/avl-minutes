@@ -3,21 +3,25 @@ import ServiceManagement
 import MinutesKit
 import MinutesMCP
 
-/// One binary, three modes: `--mcp` runs the headless search server for Claude Code;
-/// `--notes-helper` runs one Apple Notes request for the app; anything else launches
-/// the menu bar app.
+/// One binary, several modes: `--mcp` runs the headless search server; `--index` keeps the
+/// Notes index current with no UI (the assistant mini); `--notes-helper` runs one Apple
+/// Notes request for the app; `--unregister-login` removes the login item; anything else
+/// launches the menu bar app.
 @main
 enum MinutesMain {
     static func main() {
         if CommandLine.arguments.contains("--notes-helper") {
             MainActor.assumeIsolated { NotesHelper.run() }
         }
-        #if DEBUG
         if CommandLine.arguments.contains("--unregister-login") {
             try? SMAppService.mainApp.unregister()
             print("login item status: \(SMAppService.mainApp.status.rawValue)")
             exit(0)
         }
+        if CommandLine.arguments.contains("--index") {
+            MainActor.assumeIsolated { IndexService.run() }
+        }
+        #if DEBUG
         if CommandLine.arguments.contains("--gallery") {
             MainActor.assumeIsolated { Gallery.run() }
         }
