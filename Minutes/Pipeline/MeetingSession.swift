@@ -266,6 +266,24 @@ final class MeetingSession {
         }
     }
 
+    #if DEBUG
+    /// Sample state for the `--gallery` screenshot mode. Debug builds only.
+    func loadPreview(phase: Phase, lines: [TranscriptLine], volatile: [Source: String] = [:]) {
+        let start = Date().addingTimeInterval(-872)
+        var document = TranscriptDocument(title: "Staff meeting", startedAt: start, sources: [.room, .call])
+        for line in lines { document.append(line) }
+        if phase == .finished { document.endedAt = start.addingTimeInterval(47 * 60) }
+        self.document = document
+        self.startedAt = start
+        self.liveLines = lines
+        self.volatileText = volatile
+        self.levels = [.room: 0.08, .call: 0.02]
+        self.lastSaved = Date().addingTimeInterval(-12)
+        self.noteID = "preview"
+        self.phase = phase
+    }
+    #endif
+
     struct SessionError: LocalizedError {
         let message: String
         init(_ message: String) { self.message = message }

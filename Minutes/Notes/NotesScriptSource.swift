@@ -60,6 +60,14 @@ on createNote(folderName, html)
 	end tell
 end createNote
 
+on showNote(noteID)
+	tell application "Notes"
+		show note id noteID
+		activate
+	end tell
+	return true
+end showNote
+
 on setBody(noteID, html)
 	tell application "Notes"
 		set body of note id noteID to html

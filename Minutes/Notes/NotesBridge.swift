@@ -8,6 +8,7 @@ enum NotesRequest: Codable {
     case plaintext(ids: [String])
     case create(folder: String, html: String)
     case setBody(noteID: String, html: String)
+    case show(noteID: String)
 }
 
 /// The helper's JSON reply on stdout.
@@ -38,6 +39,10 @@ struct NotesBridge: Sendable {
     func createNote(folder: String, html: String) async throws -> String {
         guard case .created(let id) = try await send(.create(folder: folder, html: html)) else { throw NotesBridgeError.badOutput }
         return id
+    }
+
+    func showNote(noteID: String) async throws {
+        guard case .done = try await send(.show(noteID: noteID)) else { throw NotesBridgeError.badOutput }
     }
 
     func setBody(noteID: String, html: String) async throws {
@@ -113,6 +118,9 @@ enum NotesHelper {
                 reply = .created(id: try runner.createNote(folder: folder, html: html))
             case .setBody(let noteID, let html):
                 try runner.setBody(noteID: noteID, html: html)
+                reply = .done
+            case .show(let noteID):
+                try runner.showNote(noteID: noteID)
                 reply = .done
             }
         } catch let error as NotesBridgeError {

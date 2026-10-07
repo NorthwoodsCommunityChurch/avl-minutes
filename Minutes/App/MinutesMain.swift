@@ -1,4 +1,5 @@
 import Foundation
+import ServiceManagement
 import MinutesKit
 import MinutesMCP
 
@@ -11,6 +12,16 @@ enum MinutesMain {
         if CommandLine.arguments.contains("--notes-helper") {
             MainActor.assumeIsolated { NotesHelper.run() }
         }
+        #if DEBUG
+        if CommandLine.arguments.contains("--unregister-login") {
+            try? SMAppService.mainApp.unregister()
+            print("login item status: \(SMAppService.mainApp.status.rawValue)")
+            exit(0)
+        }
+        if CommandLine.arguments.contains("--gallery") {
+            MainActor.assumeIsolated { Gallery.run() }
+        }
+        #endif
         if CommandLine.arguments.contains("--transcribe-check") {
             TranscribeCheck.run()
         }

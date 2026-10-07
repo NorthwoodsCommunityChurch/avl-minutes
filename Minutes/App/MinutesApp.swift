@@ -4,26 +4,52 @@ struct MinutesApp: App {
     @State private var model = AppModel()
 
     var body: some Scene {
-        MenuBarExtra("Minutes", systemImage: "waveform") {
-            VStack(alignment: .leading, spacing: 8) {
-                if let error = model.startupError {
-                    Text(error).foregroundStyle(.red)
-                }
-                if let indexer = model.indexer {
-                    Text("Notes indexed: \(indexer.noteCount)")
-                    Text(indexer.lastRefresh.map { "Last refresh: \($0.formatted(date: .omitted, time: .standard))" } ?? "Not refreshed yet")
-                    if let error = indexer.lastError { Text(error).foregroundStyle(.red) }
-                    Button(indexer.isRefreshing ? "Refreshing…" : "Refresh now") {
-                        Task { await indexer.refreshNow() }
-                    }
-                    .disabled(indexer.isRefreshing)
-                }
-                Divider()
-                Button("Quit Minutes") { NSApplication.shared.terminate(nil) }
-            }
-            .padding()
-            .frame(width: 280, alignment: .leading)
+        MenuBarExtra {
+            MenuContent(model: model)
+        } label: {
+            MenuBarLabel(session: model.session)
         }
         .menuBarExtraStyle(.window)
+
+        Window("Welcome to Minutes", id: "welcome") {
+            WelcomeView(model: model)
+        }
+        .windowResizability(.contentSize)
+        .defaultLaunchBehavior(model.onboarded ? .suppressed : .presented)
+
+        Settings {
+            SettingsView(model: model)
+        }
     }
+}
+
+/// Menu bar icon: a waveform when idle; a red record dot and the elapsed time while
+/// listening (the same pattern macOS uses for screen recording).
+struct MenuBarLabel: View {
+    let session: MeetingSession
+
+    var body: some View {
+        if session.isActive, let start = session.startedAt {
+            TimelineView(.periodic(from: start, by: 1)) { context in
+                HStack(spacing: 4) {
+                    Image(nsImage: Self.recordingImage)
+                    Text(ElapsedFormat.short(from: start, to: context.date))
+                        .monospacedDigit()
+                }
+            }
+            .accessibilityLabel("Minutes is listening")
+        } else {
+            Image(systemName: "waveform")
+                .accessibilityLabel("Minutes")
+        }
+    }
+
+    /// Non-template so it stays red in the menu bar.
+    private static let recordingImage: NSImage = {
+        let configuration = NSImage.SymbolConfiguration(paletteColors: [.systemRed])
+        let image = NSImage(systemSymbolName: "record.circle.fill", accessibilityDescription: "Listening")?
+            .withSymbolConfiguration(configuration) ?? NSImage()
+        image.isTemplate = false
+        return image
+    }()
 }

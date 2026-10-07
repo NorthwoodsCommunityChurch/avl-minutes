@@ -77,6 +77,10 @@ final class NotesScriptRunner {
         return id
     }
 
+    func showNote(noteID: String) throws {
+        _ = try call("showNote", NSAppleEventDescriptor(string: noteID))
+    }
+
     func setBody(noteID: String, html: String) throws {
         _ = try call("setBody", NSAppleEventDescriptor(string: noteID), NSAppleEventDescriptor(string: html))
     }
