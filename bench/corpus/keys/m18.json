@@ -1,0 +1,124 @@
+{
+ "id": "m18",
+ "title": "Easter Production Kickoff",
+ "type": "production meeting",
+ "minutes": 30,
+ "sources": [
+  "room",
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Megan",
+   "role": "Service producer / worship"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Derek",
+   "role": "Lighting & media volunteer"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Travis",
+   "role": "Online/stream & volunteer coordinator (remote)"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Easter services will be at 9:00 and 11:00 on Easter Sunday",
+   "evidence": "lock in nine and eleven for Easter Sunday"
+  },
+  {
+   "id": "d2",
+   "text": "Rent four extra moving lights for Easter",
+   "evidence": "we'll rent four extra moving lights for Easter"
+  },
+  {
+   "id": "d3",
+   "text": "Use the full LED wall for the main stage look instead of fabric",
+   "evidence": "we'll run the full LED wall for the main look"
+  },
+  {
+   "id": "d4",
+   "text": "Add a camera position in the balcony for Easter",
+   "evidence": "Let's add a camera up in the balcony"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Get a quote from the lighting vendor for the rental",
+   "owner": "Me",
+   "due": "Friday",
+   "evidence": "I'll get a quote from the lighting vendor"
+  },
+  {
+   "id": "a2",
+   "task": "Build out the ProPresenter templates for Easter",
+   "owner": "Derek",
+   "due": "this week",
+   "evidence": "I can build out the pro presenter templates"
+  },
+  {
+   "id": "a3",
+   "task": "Put together the volunteer schedule for both services",
+   "owner": "Travis",
+   "due": null,
+   "evidence": "I'll put together the volunteer schedule for both services"
+  },
+  {
+   "id": "a4",
+   "task": "Run a test on the new stream encoder",
+   "owner": "Travis",
+   "due": "this week",
+   "evidence": "I'll run a test on the new stream encoder"
+  },
+  {
+   "id": "a5",
+   "task": "Order a couple more intercom belt packs",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll order a couple more intercom belt packs"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "What is the actual Easter production budget this year?",
+   "evidence": "do we even know what the Easter budget is"
+  },
+  {
+   "id": "q2",
+   "text": "Are we allowed to run haze in the sanctuary?",
+   "evidence": "are we allowed to run haze in the sanctuary"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "other_party",
+   "claim": "The team approved the Easter production budget.",
+   "evidence": "that's going to be up to the elders to approve"
+  },
+  {
+   "id": "t2",
+   "kind": "already_done",
+   "claim": "Someone needs to update the LED wall firmware before Easter.",
+   "evidence": "the LED wall firmware was already updated last month"
+  },
+  {
+   "id": "t3",
+   "kind": "label_noise",
+   "claim": "Aaron will call the choir director about how many mics they need.",
+   "evidence": "I'll call the choir director this week about mic counts"
+  }
+ ]
+}

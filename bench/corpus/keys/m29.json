@@ -1,0 +1,210 @@
+{
+ "id": "m29",
+ "title": "Production Team Planning Retreat — Morning Session",
+ "type": "planning retreat",
+ "minutes": 90,
+ "sources": [
+  "room"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Marcus",
+   "role": "Operations pastor"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Jenna",
+   "role": "Volunteer coordinator / ProPresenter lead"
+  },
+  {
+   "label": "Speaker 3",
+   "name": "Dave",
+   "role": "Audio lead / FOH engineer"
+  },
+  {
+   "label": "Speaker 4",
+   "name": "Priya",
+   "role": "Lighting and video tech"
+  },
+  {
+   "label": "Speaker 5",
+   "name": "Tyler",
+   "role": "Livestream / IT liaison (also appears as Speaker 6 after the break)"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Move the midweek rehearsal to Tuesday nights",
+   "evidence": "let's move the midweek rehearsal to Tuesday nights"
+  },
+  {
+   "id": "d2",
+   "text": "Standardize every campus on the same ProPresenter template",
+   "evidence": "We'll standardize every campus on the same pro presenter template"
+  },
+  {
+   "id": "d3",
+   "text": "Buy two new PTZ cameras this quarter",
+   "evidence": "We're buying two new PTZ cameras this quarter"
+  },
+  {
+   "id": "d4",
+   "text": "Add a Saturday 5pm service for Easter weekend",
+   "evidence": "We're adding a Saturday five o'clock service for Easter"
+  },
+  {
+   "id": "d5",
+   "text": "Volunteer onboarding track will have three levels",
+   "evidence": "the onboarding track is going to have three levels"
+  },
+  {
+   "id": "d6",
+   "text": "Replace the old intercom with a new Clear-Com system",
+   "evidence": "we're replacing the old intercom with a new clear calm system"
+  },
+  {
+   "id": "d7",
+   "text": "Hold the audio console purchase until next budget year",
+   "evidence": "we hold the console purchase until next budget year"
+  },
+  {
+   "id": "d8",
+   "text": "Put all production scheduling on the shared Planning Center calendar",
+   "evidence": "everything goes on the shared planning center calendar"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Get quotes for the two cameras",
+   "owner": "Me",
+   "due": "next Friday",
+   "evidence": "I'll get quotes for the two cameras by next Friday"
+  },
+  {
+   "id": "a2",
+   "task": "Audit all the stage inputs",
+   "owner": "Dave",
+   "due": "before February",
+   "evidence": "I'll audit all the stage inputs before February"
+  },
+  {
+   "id": "a3",
+   "task": "Draft the volunteer onboarding document",
+   "owner": "Jenna",
+   "due": "this week",
+   "evidence": "I'll draft the volunteer onboarding document this week"
+  },
+  {
+   "id": "a4",
+   "task": "Set up the lighting walk-through with the vendor",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll set up the lighting walk through with the vendor"
+  },
+  {
+   "id": "a5",
+   "task": "Schedule a demo of the new Clear-Com unit",
+   "owner": "Tyler",
+   "due": null,
+   "evidence": "I'll get a demo of the new clear calm unit scheduled"
+  },
+  {
+   "id": "a6",
+   "task": "Book the February follow-up session",
+   "owner": "Marcus",
+   "due": null,
+   "evidence": "I'll book the February follow up session"
+  },
+  {
+   "id": "a7",
+   "task": "Build the master ProPresenter template",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll build the master pro presenter template"
+  },
+  {
+   "id": "a8",
+   "task": "Send the volunteer survey out",
+   "owner": "Jenna",
+   "due": "next week",
+   "evidence": "I'll send the volunteer survey out next week"
+  },
+  {
+   "id": "a9",
+   "task": "Rename and document all the intercom channels",
+   "owner": "Tyler",
+   "due": null,
+   "evidence": "I'll rename and document all the intercom channels"
+  },
+  {
+   "id": "a10",
+   "task": "Pull the console trade-in value from the dealer",
+   "owner": "Dave",
+   "due": null,
+   "evidence": "I can pull the console trade in value from the dealer"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Who covers production if both key techs are out the same weekend",
+   "evidence": "who covers if both of us are gone the same weekend"
+  },
+  {
+   "id": "q2",
+   "text": "Whether the budget can handle both cameras and the intercom",
+   "evidence": "Can the budget really handle both cameras and the intercom"
+  },
+  {
+   "id": "q3",
+   "text": "What to do about the intercom/audio dead spot in the balcony",
+   "evidence": "what do we do about that dead spot up in the balcony"
+  },
+  {
+   "id": "q4",
+   "text": "Whether to keep the 9am service given attendance",
+   "evidence": "should we even keep the nine o'clock service anymore"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "label_noise",
+   "claim": "Priya will pull the console trade-in value from the dealer",
+   "evidence": "I can pull the console trade in value from the dealer"
+  },
+  {
+   "id": "t2",
+   "kind": "reversed",
+   "claim": "The team decided to buy the new audio console this year",
+   "evidence": "let's just buy the new console this year"
+  },
+  {
+   "id": "t3",
+   "kind": "hypothetical",
+   "claim": "The team decided to add a simultaneous Facebook livestream",
+   "evidence": "what if we streamed to YouTube and Facebook at the same time"
+  },
+  {
+   "id": "t4",
+   "kind": "joke",
+   "claim": "The team decided to replace volunteers with robots",
+   "evidence": "We should just replace all the volunteers with robots"
+  },
+  {
+   "id": "t5",
+   "kind": "tentative",
+   "claim": "The team decided to switch to Blackmagic cameras",
+   "evidence": "I'm leaning toward the black magic cameras but we're not deciding that today"
+  }
+ ]
+}

@@ -1,0 +1,285 @@
+Intercom upgrade options vendor call
+Tuesday, November 17, 2026 · 3:30 PM · 30 min · Call
+Transcribed by Minutes. Audio was not recorded.
+
+[00:00:02] Me: Alright, I think we're recording now. Let me just, um, let me pull this over.
+[00:00:07] Speaker 1: Can you hear the call okay? It sounded a little quiet on my end.
+[00:00:11] Me: Yeah, should be good. Marcus, you still there?
+[00:00:15] Caller 1: I'm here, I'm here. Can you guys hear me alright?
+[00:00:18] Me: Loud and clear. Awesome.
+[00:00:21] Caller 1: Perfect. Yeah, sorry, I was fighting with my headset for a second there.
+[00:00:26] Speaker 1: Oh, we know all about fighting with headsets around here. That's basically the whole meeting.
+[00:00:31] Caller 1: Ha, fair enough. So how's the weather up there? I heard you guys got some snow already.
+[00:00:37] Me: Oh man, yeah. We got like four inches last night, totally out of nowhere.
+[00:00:42] Speaker 1: It's October. It is not supposed to be snowing in October.
+[00:00:46] Caller 1: See, down here it's still like seventy degrees. I'm in shorts right now.
+[00:00:51] Speaker 1: Okay, now I hate you. That's not fair.
+[00:00:54] Caller 1: Ha. Yeah, it won't last, trust me. Give it a month and we'll be complaining too.
+[00:00:59] Me: Well, the parking lot was a mess this morning. Our facilities guy was out there at like six with the little plow thing.
+[00:01:06] Speaker 1: Did the heat even kick on in the lobby? I was freezing during setup.
+[00:01:10] Me: I don't think the, uh, the MSP never finished the thermostat schedule thing. That's a whole other conversation.
+[00:01:17] Speaker 1: Oh right, don't get me started on that.
+[00:01:20] Caller 1: Ha, well, I won't keep you from your actual problems. Should we, uh, should we dig in?
+[00:01:25] Me: Yeah, let's do it. So, um, for anybody, I mean Marcus you know this, but Dana's here with me in the room. She coordinates most of our production volunteers.
+[00:01:35] Speaker 1: Hi Marcus. I'm the one who actually has to hear the complaints when the headsets cut out, so.
+[00:01:41] Caller 1: Ha, nice to meet you Dana. So I'm Marcus, I'm one of the sales engineers over here. I've been doing church intercom systems for, gosh, probably twelve years now.
+[00:01:52] Me: Oh nice, okay.
+[00:01:54] Caller 1: Yeah, so I've seen pretty much every setup you can imagine. Why don't you walk me through what you've got currently and what's driving you nuts.
+[00:02:02] Me: Sure. So right now we're running an old clear calm wired system. It's, um, it's gotta be fifteen years old at this point.
+[00:02:11] Caller 1: Okay, wired. What's the, uh, what model base station?
+[00:02:15] Me: Honestly I'd have to go look. It's the gray box with the two channels. We've got, um, let me think, we've got stations at front of house, at the camera positions, one up in the booth.
+[00:02:27] Speaker 1: And the one back by the stage that doesn't work half the time.
+[00:02:30] Me: Right, yeah. So the big issue is dropouts. Like mid-service, somebody's talking and the channel just dies.
+[00:02:38] Caller 1: Mm, okay. And is it always the same spot or is it kind of random?
+[00:02:43] Me: It feels random but Dana thinks it's one of the cables.
+[00:02:47] Speaker 1: I'm pretty sure it's the run that goes under the stage. Every time somebody rolls a riser over it, boom, we lose camera two.
+[00:02:55] Caller 1: Yeah, that tracks. Those under-stage runs take a beating. How many drops do you have total?
+[00:03:01] Me: Uh, six? Maybe seven if you count the dead one.
+[00:03:05] Caller 1: Okay. So here's kind of the first big fork in the road for you guys. You can either go in and re-pull all that cable, do fresh wired drops, or you move to a wireless intercom system.
+[00:03:17] Me: Right, that's kind of the question I've been chewing on.
+[00:03:20] Speaker 1: What's the, like, ballpark difference? Because re-pulling cable sounds like a nightmare with our ceiling.
+[00:03:26] Caller 1: It can be. I mean, wired is rock solid once it's in, don't get me wrong. But if your conduit's a mess and you're fishing cable through old walls, the labor adds up fast.
+[00:03:37] Me: Our walls are block. Like, concrete block. Running anything new is brutal.
+[00:03:42] Caller 1: Yeah, see, that changes the math a lot. On a block building, wireless usually wins just on install cost alone.
+[00:03:49] Speaker 1: And then we're not tied to where the jacks are, right? Like the camera ops kind of wander.
+[00:03:55] Caller 1: Exactly. That's the other big win. Your volunteers aren't tethered. They can move around, go grab a shot from the balcony, whatever.
+[00:04:03] Me: Yeah, our camera three guy is always complaining he can't reach the far side.
+[00:04:08] Speaker 1: Because the cable's too short and he won't admit it's a him problem.
+[00:04:11] Me: Ha, right.
+[00:04:13] Caller 1: Ha. Well, wireless solves the him problem, at least that one.
+[00:04:17] Me: Okay so, I mean, honestly the more I hear this the more I'm leaning wireless. Dana, what do you think?
+[00:04:23] Speaker 1: I'm in. I do not want to be crawling under the stage pulling cable, and neither do our volunteers.
+[00:04:29] Me: Yeah. Yeah, okay. I think, let's go with the wireless system instead of running more wired drops. That just makes sense for our building.
+[00:04:38] Caller 1: Great, I think that's the right call for a block structure. We'll build the whole thing around wireless then.
+[00:04:44] Speaker 1: I mean, or we could save a whole lot of money and maybe we just hand everybody a walkie talkie from the hardware store.
+[00:04:52] Caller 1: Ha!
+[00:04:53] Me: Please do not. I can already picture somebody's baby monitor cutting into channel one.
+[00:04:58] Speaker 1: Hey, I'm just saying, twenty bucks a pop at the hardware store. Budget's happy.
+[00:05:03] Caller 1: You laugh, but I have walked into churches that were literally doing that. It is not pretty.
+[00:05:09] Speaker 1: Oh I'm kidding, I'm kidding. The pastor would key up mid-sermon and we'd all hear it.
+[00:05:14] Me: Yeah no. Okay, so wireless, the real kind.
+[00:05:18] Caller 1: The real kind, yes. Good.
+[00:05:21] Me: So, um, before we get into the units, like what's the actual technology? Is this the same as our wireless mics or is it a different thing?
+[00:05:30] Caller 1: Good question, and that's actually something we'll want to dig into carefully, because frequency coordination matters a lot. But let me first get a sense of scale.
+[00:05:40] Speaker 1: Wait, hold on, before we move on. Are we sure wireless is reliable enough? Because the whole reason we're here is dropouts.
+[00:05:48] Caller 1: Totally fair thing to ask. The modern digital wireless intercom is a completely different animal from your fifteen-year-old wired gear.
+[00:05:56] Me: Okay.
+[00:05:57] Caller 1: Like, it's licensed-free bands, it's encrypted, and the roaming is seamless if we design the antenna coverage right.
+[00:06:05] Speaker 1: Hmm. Okay. I just don't want to trade one set of dropouts for a different set of dropouts.
+[00:06:11] Caller 1: No, I hear you, and honestly that comes down to the coverage design more than anything. We'll spend time on that.
+[00:06:18] Me: Alright, that's reassuring. So scale, you said. We've got, like I said, six positions roughly.
+[00:06:25] Caller 1: Okay. And are those all people who need to talk back, or are some of them just listening?
+[00:06:31] Me: Uh, mostly talk back. The camera folks, the director, that's me, front of house.
+[00:06:37] Speaker 1: Lighting too, sometimes. And we've been wanting to get the ProPresenter person on comms.
+[00:06:43] Me: Oh that's true, the pro presenter op is totally out of the loop right now. She just watches me wave my arms.
+[00:06:49] Caller 1: Ha. Yeah, you'd be amazed how much smoother things go when the graphics person can actually hear the calls.
+[00:06:56] Speaker 1: That would change my life, honestly.
+[00:06:58] Me: Okay so we might actually need more than six once we count everybody.
+[00:07:03] Caller 1: That's what I want to figure out. Let's maybe come back to exact quantities in a sec. Do you have a floor plan handy, by the way?
+[00:07:11] Me: Somewhere, yeah. I can dig up the floor plan, it's from the last renovation.
+[00:07:15] Caller 1: Perfect, that'll help me with the antenna placement side.
+[00:07:19] Speaker 1: Our room is weird though. It's kind of an L shape with the green room off to the side.
+[00:07:24] Caller 1: Okay, noting that. L shapes and side rooms are exactly where you want to think about coverage carefully.
+[00:07:31] Me: Yeah, the green room's always been a dead zone for everything. Cell phones, the old comms, all of it.
+[00:07:37] Speaker 1: It's like a bunker back there.
+[00:07:39] Caller 1: Ha, well, we'll keep the bunker in mind. Those cinderblock green rooms, you sometimes need a dedicated antenna.
+[00:07:47] Me: Okay. Um, let me, hang on, let me grab my notes real quick so I don't forget stuff.
+[00:07:53] Speaker 1: While you do that, Marcus, is this the same system you put in at that big church over in, where was it, the one you mentioned on email?
+[00:08:01] Caller 1: Oh, yeah, similar family of product, yeah. Theirs was a bigger install but same core gear.
+[00:08:08] Speaker 1: Cool. Did they do wireless too?
+[00:08:10] Caller 1: They did, yeah. They had a similar block construction thing going on, actually.
+[00:08:15] Me: Okay, I'm back. Sorry. So where were we, quantities?
+[00:08:19] Caller 1: Yep, let's talk quantities. How many beltpacks do you realistically think you need on a given weekend?
+[00:08:26] Me: That's the question, right. Dana, you know the volunteer side better than me.
+[00:08:31] Speaker 1: Well, let me think through it position by position.
+[00:08:34] Caller 1: Take your time, this is the important part.
+[00:08:37] Me: Yeah because I don't want to under-buy and then be stuck.
+[00:08:40] Speaker 1: And I don't want six headsets for eight people and someone's always left out.
+[00:08:45] Caller 1: Right, that's the classic mistake. Everyone under-counts the first time.
+[00:10:02] Speaker 1: Okay so let me just go down the list. Camera one, camera two, that's two.
+[00:10:08] Me: Two cameras, yep. Though sometimes we run a third on the balcony.
+[00:10:13] Speaker 1: Right, but that's not every week. Then the director, which is you, that's three.
+[00:10:19] Me: Three, okay.
+[00:10:21] Speaker 1: Front of house four, lighting five, and the pro presenter op is six.
+[00:10:27] Caller 1: Okay, so that's six talk-back positions right there, before you even count the occasional balcony camera.
+[00:10:34] Me: Hmm. So if I buy six I'm already maxed with no spare.
+[00:10:38] Speaker 1: And the stage manager. We keep forgetting she exists.
+[00:10:42] Me: Oh man, yeah, she's been borrowing a headset off whoever's not using one.
+[00:10:47] Caller 1: So realistically you're looking at seven or eight to be comfortable.
+[00:10:52] Me: Ugh, that's creeping up. What's the price jump between six and eight?
+[00:10:57] Caller 1: Per beltpack it's not huge, but it adds up. I'd honestly just budget for what you actually use.
+[00:11:04] Speaker 1: Can I say something? The balcony camera and the stage manager aren't every weekend.
+[00:11:10] Me: True.
+[00:11:11] Speaker 1: So the core is six. We could keep the extras on the wired stuff for now.
+[00:11:16] Me: Oh, that's a good point. We don't have to make everybody wireless.
+[00:11:20] Caller 1: Exactly, you can run a hybrid. Wireless where people move, wired where they sit still.
+[00:11:26] Me: Okay, I like that. So six belt packs wireless, and the odd positions stay wired.
+[00:11:32] Caller 1: That's a very common setup. The system bridges the two no problem.
+[00:11:37] Me: Alright. Dana, you good with six?
+[00:11:40] Speaker 1: I'm good with six. Six covers the people who actually move around.
+[00:11:44] Caller 1: Great, so we're settled on six belt packs then.
+[00:11:48] Me: Yeah, let's call it six. That feels right.
+[00:11:51] Speaker 1: Six it is.
+[00:11:53] Caller 1: Perfect. And on the wired side, what do you have right now that still works?
+[00:11:58] Me: We've got two wired stations that are honestly fine. The main station and one at front of house.
+[00:12:04] Caller 1: Are those clear calm as well?
+[00:12:06] Me: Yeah, same old clear calm. The boxes themselves never gave us trouble, it was the beltpack drops.
+[00:12:12] Caller 1: Right, so those two wired stations should integrate with the new base no problem.
+[00:12:17] Me: So we don't need to replace those? That saves some money.
+[00:12:21] Caller 1: No need, as long as they're the standard format, which they sound like they are.
+[00:12:26] Me: Okay, decision then, we'll keep the two wired stations we already have.
+[00:12:30] Speaker 1: Good, less to buy.
+[00:12:32] Caller 1: Smart. Reuse what works. I'll note the two wired stations stay in place.
+[00:12:38] Me: Alright, that feels like progress. Now, the thing I keep coming back to is that green room.
+[00:12:44] Speaker 1: The bunker.
+[00:12:45] Me: The bunker, yeah. If the pro presenter op or anybody's back there, are they just gonna drop out?
+[00:12:51] Caller 1: So that's the coverage question. With one antenna near the main room, will one antenna actually cover the green room, probably not through cinderblock.
+[00:13:01] Me: That's what I was afraid of.
+[00:13:03] Speaker 1: So what, we put a second antenna back there?
+[00:13:06] Caller 1: That's one option. I'd want to see the floor plan before I say for sure.
+[00:13:11] Me: Yeah, I really don't know if one will reach. Let's flag that as an open question.
+[00:13:16] Speaker 1: Noted. Green room coverage, question mark.
+[00:13:19] Caller 1: And the other thing I want to raise, and this is important, is your wireless microphones.
+[00:13:25] Me: Oh. Right. We've got a bunch of wireless mics for the band and speakers.
+[00:13:30] Caller 1: What frequency band are those in? Because the comms are RF too, and we need to check whether that's going to step on our wireless microphones.
+[00:13:39] Me: Honestly I'd have to look. I think the handhelds are up in the, uh, I don't remember the block.
+[00:13:46] Speaker 1: Is that going to be a problem?
+[00:13:48] Caller 1: It can be if they're in the same band. It's manageable, but we have to coordinate frequencies.
+[00:13:54] Me: So that's another thing we don't have an answer on tonight.
+[00:13:57] Caller 1: Correct. I don't want to guess. Get me the models of your wireless mics and I'll check for conflicts.
+[00:14:03] Me: Okay, interference with the mics, that's open too.
+[00:14:07] Speaker 1: We're collecting open questions tonight.
+[00:14:09] Caller 1: Ha, that's normal at this stage. Better to raise them now than discover them at install.
+[00:14:15] Me: For sure. So back to the antenna thing for a second, Marcus. What's your gut?
+[00:14:20] Caller 1: My gut? For an L-shaped room with a cinderblock side room, I'm leaning toward adding a second antenna but I don't want to commit until I see the plan.
+[00:14:30] Me: Fair enough.
+[00:14:31] Caller 1: It might turn out one high-placed antenna does it. I've been surprised before. But plan-dependent.
+[00:14:38] Speaker 1: So we hold off on the antenna count.
+[00:14:40] Caller 1: Hold off, yeah. Don't let anyone put two antennas on a quote until we've — hang on, I think I'm —
+[00:14:47] Me: Marcus? You there?
+[00:14:49] Speaker 1: I think he dropped.
+[00:14:51] Me: Classic. We're talking about comms reliability and the call drops.
+[00:14:55] Speaker 1: The irony is unbelievable.
+[00:14:57] Unknown: ...can you...
+[00:14:59] Me: Nope, he's gone. Give it a sec, he'll call back.
+[00:15:03] Speaker 1: While we wait, did you ever hear back from facilities about the green room door?
+[00:15:08] Me: No, that's a whole separate saga. They keep saying they'll look at it.
+[00:15:12] Speaker 1: It squeaks right during the quiet part of worship every single time.
+[00:15:16] Me: I know. Someone WD-40'd it once and it lasted a month.
+[00:15:20] Speaker 1: Maybe put it on the list for the facilities guy.
+[00:15:23] Unknown: ...hello...
+[00:15:25] Me: Oh, is that him? Hang on.
+[00:15:27] Caller 2: Hey, sorry about that, can you hear me? My office wifi just dumped me.
+[00:15:32] Me: Yeah, we got you now. We were just laughing that the comms vendor's call dropped.
+[00:15:37] Caller 2: Ha, don't remind me. At least mine's a wifi problem and not RF.
+[00:15:42] Speaker 1: We'll let it slide this once.
+[00:15:44] Caller 2: Appreciate it. So where did we leave off? I think I was saying don't commit to two antennas yet.
+[00:15:51] Me: Right, exactly. We agreed to hold on the antenna count until you see the floor plan.
+[00:15:56] Caller 2: Perfect, yeah. And we'd locked in six wireless beltpacks and keeping your two wired stations.
+[00:16:02] Me: Correct. Those felt solid.
+[00:16:04] Caller 2: Good, I've got that noted on my end too.
+[00:16:07] Speaker 1: So really the two open items are the green room coverage and the mic interference.
+[00:16:12] Caller 2: Exactly those two. Both of which I can answer once I have your floor plan and your mic models.
+[00:16:18] Me: Okay. I feel better having that narrowed down.
+[00:16:21] Speaker 1: Me too. It sounded like a huge project an hour ago.
+[00:16:25] Caller 2: It's really not bad. The core is simple. It's the RF details that take care.
+[00:16:31] Me: Yeah, and that green room is gonna be the wildcard, I can feel it.
+[00:16:35] Caller 2: Could be. But worst case it's one extra antenna, not a redesign.
+[00:16:40] Me: Okay. So what do you need from us to put together actual numbers?
+[00:16:44] Caller 2: Good question. Let me list out what I need, and then I can talk about getting you a demo unit.
+[00:16:50] Me: Oh, a demo would be great, actually.
+[00:16:52] Speaker 1: Yeah, let the volunteers try it before we commit.
+[00:20:03] Caller 2: Okay, so the short list from me is the floor plan, your wireless mic models, and a rough headcount of comms users.
+[00:20:11] Me: That all makes sense. The headcount I can nail down pretty easily.
+[00:20:15] Speaker 1: We've got camera, there's a floor director, audio, lighting, the stage manager some weeks.
+[00:20:21] Me: Yeah, it fluctuates. I'll do a headcount of how many volunteers need headsets and get you a real number.
+[00:20:27] Caller 2: Perfect, that's exactly what I need. Even just typical weekend versus big event would help.
+[00:20:33] Me: Sure. Christmas we balloon up, but a normal Sunday it's more like, what, five or six?
+[00:20:38] Speaker 1: Six on a full weekend. Seven if we've got the overflow room running.
+[00:20:43] Caller 2: Good, so the six beltpacks we spec'd lines up nicely with that.
+[00:20:47] Me: Right. And the two wired stations cover the booth positions.
+[00:20:51] Caller 2: Exactly. Okay, next thing, the floor plan. Do you have a PDF or anything?
+[00:20:56] Me: I've got the facilities CAD drawing somewhere. It's a little out of date but close enough.
+[00:21:01] Caller 2: That's totally fine. I mostly need walls, distances, and where that green room sits.
+[00:21:06] Me: Yeah, I'll email you the floor plan this afternoon. Might be two files, the auditorium and the back of house.
+[00:21:13] Caller 2: Even better. The more I can see the green room relationship to the stage, the better on the RF side.
+[00:21:19] Speaker 1: That green room is tucked behind the block wall, that's the problem.
+[00:21:23] Caller 2: Yeah, block walls are murder on wireless. That's good to know up front.
+[00:21:28] Me: See, I told you it'd be the wildcard.
+[00:21:30] Caller 2: You called it. Okay, so beyond what you send me, I'd love for you to actually feel the coverage.
+[00:21:37] Speaker 1: Is that where the demo comes in?
+[00:21:39] Caller 2: It is. Here's what I can do, we'll ship you a demo unit to try for a weekend.
+[00:21:44] Me: Oh nice. How many packs come in the demo kit?
+[00:21:47] Caller 2: Usually a base and two beltpacks. Enough to walk the space and hear real dropouts, or the lack of them.
+[00:21:54] Speaker 1: Two is plenty to test the green room and the booth.
+[00:21:57] Me: Yeah, if two packs make it to the green room clean, I'll feel a lot better.
+[00:22:02] Caller 2: That's the idea. And honestly, while you've got the demo, somebody should just walk the dead zones.
+[00:22:08] Speaker 1: I can do that. I can walk the whole building and note the dead spots while I've got a pack on.
+[00:22:14] Caller 2: That's perfect, that's exactly the kind of real-world data that beats any prediction I can run.
+[00:22:20] Me: Dana's good at that, she notices everything.
+[00:22:23] Speaker 1: I'll make a little map. Green room, the hallway, the overflow, backstage left where it's all metal.
+[00:22:29] Caller 2: Backstage metal, yep, write that one down for sure.
+[00:22:32] Unknown: ...the catwalk too...
+[00:22:34] Me: Oh yeah, good point, test up on the catwalk, our lighting folks live up there.
+[00:22:39] Speaker 1: Adding it to the list.
+[00:22:41] Caller 2: Great. So to recap the demo, I send the kit, you try it a weekend, Dana walks the dead spots.
+[00:22:48] Me: And then we send it back, I assume?
+[00:22:50] Caller 2: Yeah, prepaid return label in the box. No cost to you for the trial.
+[00:22:55] Me: That's very fair. Okay, I like this a lot better than an hour ago.
+[00:22:59] Speaker 1: Same. So what's the money side look like, roughly?
+[00:23:03] Caller 2: So I don't want to throw a number out and have it be wrong once I see the floor plan.
+[00:23:08] Me: Understood. Ballpark is fine for now, though, so we know the order of magnitude.
+[00:23:13] Caller 2: Ballpark, six packs, two antennas if the green room needs it, reusing your wired, you're in a reasonable range.
+[00:23:20] Speaker 1: That's vague, Marcus.
+[00:23:22] Caller 2: Ha, it is, deliberately. Let me do it properly. I'll get the formal quote over to you by Friday.
+[00:23:28] Me: Friday works. That gives me time to loop in the right people.
+[00:23:32] Caller 2: And I'll put two versions on it, one with the second antenna, one without, so you can see the delta.
+[00:23:38] Me: That's really helpful, thank you. Because honestly the budget isn't mine to just approve.
+[00:23:43] Speaker 1: Right, anything this size, that has to go to the finance team for approval.
+[00:23:48] Me: Yeah, I can recommend it, but finance signs off. So the cleaner the quote, the better for me.
+[00:23:54] Caller 2: Totally get it. I'll make it itemized so your finance people can see exactly what each piece is.
+[00:24:00] Me: Perfect. An itemized quote goes over way better in that meeting.
+[00:24:04] Speaker 1: Should we put a date on the install, or wait for finance?
+[00:24:08] Me: Let's at least pencil something so it doesn't slip into spring.
+[00:24:12] Caller 2: I'd actually encourage that. My install calendar fills up fast after the new year.
+[00:24:17] Me: Okay, then let's lock in the January install date, assuming finance says yes to the quote.
+[00:24:23] Caller 2: Great, I'll hold a week in January for you. Which is better, early or late in the month?
+[00:24:29] Me: Late January. We're still tearing down Christmas gear the first couple weeks.
+[00:24:34] Caller 2: Makes sense, nobody wants an install during teardown. I'll mark the last full week.
+[00:24:39] Speaker 1: Late January is good. Gives me time to retrain volunteers on the new packs too.
+[00:24:44] Caller 2: And I'll be on site for that first weekend, I always do the first service with a new system.
+[00:24:50] Me: Oh that's great, I didn't know you did that. That takes a load off.
+[00:24:54] Caller 2: Yeah, I don't like dropping a system and disappearing. I want to hear it work in your room.
+[00:24:59] Speaker 1: That's reassuring, honestly.
+[00:25:01] Me: Okay, let me make sure I've got my list. Floor plan this afternoon, headcount to you, Dana walks the building.
+[00:25:08] Speaker 1: And I do that during the demo weekend, not before.
+[00:25:11] Me: Right, during the demo. And you send the quote Friday and the demo kit when?
+[00:25:16] Caller 2: Demo kit I can get out next week, so you'd have it for the weekend after.
+[00:25:21] Me: That lines up nicely with getting the quote first, then testing.
+[00:25:25] Caller 2: Exactly. Quote Friday, kit next week, you test, then we talk again before finance.
+[00:25:31] Speaker 1: Can we get one more call on the calendar now so it doesn't vanish?
+[00:25:35] Me: Good idea. Let's not do the phone tag thing again.
+[00:25:38] Caller 2: Agreed. How about the Monday after your demo weekend? I'll send an invite once I know ship dates.
+[00:25:45] Me: Works for me. Dana, you around Mondays?
+[00:25:47] Speaker 1: Mornings, yeah. After eleven is better, I've got the school run.
+[00:25:52] Caller 2: Late morning Monday, noted. I'll aim for eleven thirty.
+[00:25:56] Me: Perfect. I think that's everything, honestly. This was really productive.
+[00:26:01] Speaker 1: Way more than I expected, given the call dropped twice.
+[00:26:04] Caller 2: Hey, three times if you count the beginning, but who's counting.
+[00:26:08] Me: We are definitely not counting. Oh, one thing, does the demo need any special power?
+[00:26:13] Caller 2: Nope, standard wall outlet for the base, the packs are rechargeable. Chargers are in the kit.
+[00:26:19] Me: Easy. Dana, we've got outlets at the booth and backstage, so we're fine.
+[00:26:23] Speaker 1: Yeah, backstage left is the only iffy one but there's a power strip.
+[00:26:28] Caller 2: That'll do. Just don't leave the packs on the charger forever, top them off and go.
+[00:26:33] Me: Noted. Alright, Marcus, thank you, this was great.
+[00:26:36] Caller 2: My pleasure. So to confirm, floor plan today, headcount soon, quote from me Friday, demo next week.
+[00:26:43] Me: That's the plan. And late January pending finance.
+[00:26:46] Caller 2: Pending finance, yep. I won't book the crew till you give me the green light.
+[00:26:51] Speaker 1: Good. I'll start prepping the volunteer schedule around that week anyway.
+[00:26:55] Caller 2: Love the enthusiasm. Okay, I'll let you two get back to it.
+[00:26:59] Me: Thanks Marcus, talk Monday after the demo. Take care.
+[00:27:03] Caller 2: You got it, bye now.
+[00:27:05] Speaker 1: Okay. That felt like actual progress for once.
+[00:27:08] Me: It really did. Let me send that floor plan before I forget, that's always how it slips.
+[00:27:13] Speaker 1: Do it now, I'll wait. And put the green room door on the facilities list while you're in email.
+[00:27:19] Me: Ha, two birds. Alright, give me two minutes and then we can lock the booth and go.

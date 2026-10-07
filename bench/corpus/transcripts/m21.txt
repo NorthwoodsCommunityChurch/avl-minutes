@@ -1,0 +1,564 @@
+Worship center audio console replacement
+Tuesday, December 15, 2026 · 9:00 AM · 45 min · Room
+Transcribed by Minutes. Audio was not recorded.
+
+[00:00:00] Me: Alright, I think we're mostly here. Marcus, grab a coffee before we start if you want.
+[00:00:06] Speaker 1: Yeah give me a sec, the pot was like half empty when I got here.
+[00:00:11] Speaker 2: I made a fresh one like ten minutes ago, it should be good.
+[00:00:15] Speaker 1: Oh perfect. You're a lifesaver, Dana.
+[00:00:19] Speaker 3: Is there any of that creamer left or did somebody kill it?
+[00:00:23] Speaker 2: There's the oat one still, the regular's gone.
+[00:00:27] Speaker 3: Oat it is, I guess. Living dangerously.
+[00:00:31] Me: While you guys sort out the coffee crisis, Rick, did you find the room okay?
+[00:00:36] Speaker 4: Yeah, parking was a nightmare though, there's some moms group thing in the lot.
+[00:00:41] Me: Oh right, the Tuesday morning thing, I always forget about that.
+[00:00:45] Speaker 4: Nearly parked in the spot with the cones and everything.
+[00:00:49] Speaker 1: Okay, I'm back, I'm caffeinated, let's do this.
+[00:00:53] Me: Great. So thanks everybody for carving out the time. This is kind of the console conversation we've been putting off.
+[00:01:00] Speaker 1: The one we've been putting off for like a year.
+[00:01:03] Me: Honestly more like two. Um, so let me just set the table a little bit.
+[00:01:08] Me: The board in the worship center, the main console, it's been giving us trouble for a while now and it's getting worse.
+[00:01:15] Speaker 2: It's getting a lot worse. Last Sunday we lost channel twelve through sixteen mid service.
+[00:01:21] Speaker 1: Wait, that was during the second song? I thought that was a cable thing.
+[00:01:25] Speaker 2: No, it was the board. The whole input card just dropped out and then came back on its own.
+[00:01:31] Me: Yeah and that's the scary part, it comes back so you can't even reliably reproduce it for anybody.
+[00:01:37] Speaker 3: Is that the same one that was buzzing a few weeks back, or is that different?
+[00:01:42] Me: Different issue, but same board. The buzz was a grounding thing, we mostly chased that down.
+[00:01:48] Speaker 2: The cutting out is the real problem. I've had three volunteers tell me they're nervous mixing on it now.
+[00:01:55] Speaker 1: That's not good. If the team doesn't trust the gear, that's a whole thing.
+[00:02:00] Me: Right, and here's the kicker. I called the vendor about support and the model's been end of lifed.
+[00:02:06] Speaker 4: End of lifed meaning what, exactly? No parts?
+[00:02:10] Me: No parts, no firmware updates, and they won't even do a bench repair on it anymore.
+[00:02:15] Speaker 2: So if that input card dies for real, there's nothing to swap in.
+[00:02:19] Me: Correct. We'd be dead in the water on a Sunday with no backup plan.
+[00:02:24] Speaker 1: Okay, when you put it like that, I mean, that changes the urgency for me.
+[00:02:29] Speaker 3: How old is the thing anyway?
+[00:02:31] Me: We bought it, um, I want to say 2013, 2014? So it's well past its useful life.
+[00:02:38] Speaker 4: That's twelve, thirteen years. For a console is that normal or did we get shorted?
+[00:02:44] Me: No, that's actually a decent run for a digital board. They just don't last forever.
+[00:02:49] Speaker 2: The faders are getting scratchy too, by the way. Three of them on the right side.
+[00:02:54] Speaker 1: Okay so I think we all kind of know where this is going.
+[00:02:58] Me: I think so. My honest recommendation is we stop pouring time into a board we can't support and we replace it.
+[00:03:05] Speaker 1: Yeah. Yeah, I'm there. I don't think we have much choice.
+[00:03:09] Speaker 4: I'm not going to argue the need, I just want to understand the number before we commit to anything.
+[00:03:15] Me: Totally fair, and we'll get to the money, I promise.
+[00:03:18] Speaker 2: Can I just say, from the team side, the sooner the better. Morale is a factor.
+[00:03:24] Speaker 1: Agreed. So if we're replacing it, when do we actually do the swap?
+[00:03:29] Speaker 3: Whatever weekend it is, I'll need lead time to get into the booth and pull cabling.
+[00:03:34] Speaker 1: What about a holiday weekend? Those are lower attendance, lower stakes.
+[00:03:39] Me: Hmm. We could, the hard part is finding a window where we're not slammed with specials.
+[00:03:45] Speaker 1: New Year's is pretty quiet though, right? Christmas Eve is the big push and then it dies down.
+[00:03:51] Speaker 2: New Year's weekend we usually only have the one service, the Sunday.
+[00:03:56] Speaker 1: Right, so there's basically a whole week of nothing after Christmas.
+[00:04:00] Me: That's actually not a bad window. Christmas Eve is done, everybody's checked out anyway.
+[00:04:05] Speaker 3: And I'd have the building pretty much to myself that week for cabling.
+[00:04:09] Speaker 1: Okay so let's just do the whole swap over new year's weekend. Get it done while it's quiet.
+[00:04:15] Me: Yeah, let's pencil that in. That gives us a nice quiet week to not rush.
+[00:04:20] Speaker 2: I like that way better than trying to do it on a normal weekend.
+[00:04:24] Speaker 4: Just note it's pencil, because I haven't seen a dollar figure yet.
+[00:04:28] Me: Noted, Rick, noted. Pencil, not pen.
+[00:04:32] Speaker 1: Okay, so that's the when, roughly. What about the what. What are we actually buying?
+[00:04:38] Me: So this is the part I've done the most homework on. I've been demoing a few boards over the last couple months.
+[00:04:45] Speaker 2: You dragged me to that one at the dealer, the big one.
+[00:04:48] Me: I did. So the three real contenders in our range are the Allen and Heath dee live, the Digico, and the Yamaha.
+[00:04:56] Speaker 1: Okay, and in English, which one do you like?
+[00:04:59] Me: For us, the dee live. Hands down, for what we need and what we can afford.
+[00:05:04] Speaker 4: Why that one over the others? Give me the short version.
+[00:05:08] Me: Short version, the Digico is gorgeous but it's way over budget and over-featured for a church our size.
+[00:05:14] Speaker 2: The Digico was like a spaceship. It was beautiful but it was a lot.
+[00:05:19] Me: Right. The Yamaha is solid and cheaper, but the workflow is clunkier and the expansion options are more limited.
+[00:05:26] Speaker 1: And the dee live sits in the middle?
+[00:05:28] Me: It sits in the sweet spot. The surface is intuitive, our volunteers will pick it up fast, and the audio quality is excellent.
+[00:05:36] Speaker 2: From a volunteer training angle, that matters a ton. The layout on it just makes sense.
+[00:05:42] Speaker 3: Is that the one with the touchscreen and the little screens over each fader?
+[00:05:46] Me: That's the one. The channel displays over the faders, yeah. Really nice for new folks.
+[00:05:51] Speaker 1: Okay, I trust you on this. You've been living in these demos.
+[00:05:55] Me: And the big one for me, Allen and Heath support is excellent and the platform's got years of life ahead of it.
+[00:06:02] Speaker 4: So we're not going to be back in this room in three years.
+[00:06:05] Me: Exactly. That's the whole point. We buy once and we're set for a decade plus.
+[00:06:11] Speaker 2: I'll second the dee live. The team that tried it at the demo loved it.
+[00:06:15] Speaker 1: Alright, then let's go with the dee live for the main room. That's my vote.
+[00:06:20] Me: Great, so that's our console. The Allen and Heath dee live for the worship center.
+[00:06:25] Speaker 4: Again, subject to the number, but conceptually I'm not opposed to that one.
+[00:06:30] Me: Understood. The board itself is decided, the budget's a separate conversation and we'll get there.
+[00:06:36] Speaker 1: Honestly it feels good to actually land on something. We've been circling this forever.
+[00:06:42] Speaker 2: It really does. I've been dreading every Sunday lately waiting for it to drop channels.
+[00:06:47] Speaker 3: So which specific model of the dee live, there's a few surfaces, right?
+[00:06:51] Me: There are a few surface sizes. I'm leaning toward the mid one, but I'll firm that up with the quote.
+[00:06:57] Speaker 3: Okay, because that changes how much room it takes in the booth.
+[00:07:01] Me: Good point, and we'll have to measure the booth at some point, the footprint's a little different.
+[00:07:06] Speaker 1: Is the new one bigger than what we've got?
+[00:07:09] Me: Depends on the surface size. The mid one is pretty close, the big one would be tight.
+[00:07:14] Speaker 2: The booth is already cramped with the current board and the two monitors.
+[00:07:18] Speaker 3: And the lighting console's crammed in there too, don't forget.
+[00:07:22] Me: Yeah, the booth real estate is a whole separate headache, we'll come back to it.
+[00:07:26] Speaker 4: Can I ask a dumb question? Does a new board mean new everything, like all the stage stuff too?
+[00:07:32] Me: Not a dumb question at all, that's actually the next thing I wanted to get into.
+[00:07:37] Speaker 1: Because that's where the cost could balloon, right? If it's the whole system.
+[00:07:41] Me: It could, if we weren't smart about it. But I think we can reuse a lot of what we have.
+[00:07:47] Speaker 2: The stage boxes especially. Those are relatively new, we put those in what, four years ago?
+[00:07:53] Me: Something like that, and they're on Dante, which is the good news for compatibility.
+[00:07:58] Speaker 4: You're going to have to explain Dante to me at some point, but not right now.
+[00:08:02] Me: Ha, fair, I'll give you the two minute version later. Short answer, it's the audio network.
+[00:08:08] Speaker 1: Okay so hold on, let me make sure I've got the big picture before we go deeper.
+[00:08:13] Speaker 1: We're replacing the board, we're looking at the dee live, and we're thinking New Year's for the swap.
+[00:08:19] Me: That's the shape of it, yeah. Those are the big three things.
+[00:08:23] Speaker 2: And the stage boxes probably stay. That's the money saver.
+[00:08:27] Me: Right, which I want to dig into, because what we reuse versus replace is the whole budget story.
+[00:08:33] Speaker 4: That's the part I care about, so yes, let's dig into that.
+[00:08:37] Speaker 3: Before we move off scheduling though, am I good to assume the New Year's thing for my planning?
+[00:08:43] Me: For now, yeah, plan around it loosely, but don't book anything hard yet.
+[00:08:48] Speaker 3: Loosely. Got it. I just don't want to be the guy scrambling for cable the day before.
+[00:08:53] Speaker 1: Fair. Nobody wants you scrambling, Tom, you get grumpy.
+[00:08:57] Speaker 3: I do get grumpy, it's true.
+[00:09:00] Me: Okay, so let me pull up the diagram I made of what we've got versus what we'd need.
+[00:09:05] Speaker 2: Ooh, Aaron made a diagram, everybody.
+[00:09:08] Me: I know, I know, hold your applause. It's color coded and everything.
+[00:09:12] Speaker 4: Color coded, now we're talking. Rick likes a spreadsheet.
+[00:09:16] Speaker 1: Of course you do.
+[00:09:18] Me: Alright so on the left here is the current signal chain, stage boxes into the board into the amps.
+[00:09:25] Speaker 2: And the broadcast feed splits off where, after the board?
+[00:09:28] Me: After the board, yeah, we send a feed to the stream. Which, actually, brings up something I want to talk through.
+[00:09:35] Speaker 1: The broadcast mix. I've been thinking about that too.
+[00:09:38] Me: Yeah, let's get into that, because there's a decision there about how we handle it with the new board.
+[00:09:44] Speaker 2: The current way is kind of a compromise, honestly.
+[00:09:47] Me: It is. We're pulling an aux for the stream and it's never quite right.
+[00:09:52] Speaker 1: Right, the online folks always get a weird mix. The drums are too hot or whatever.
+[00:09:57] Me: Exactly, so with the new board we've got some options there, and I want to walk through them.
+[00:10:03] Speaker 4: Is this going to add cost?
+[00:10:05] Me: Maybe, maybe not, depends which way we go. Let me lay it out first.
+[00:10:10] Speaker 2: Before you do, can I grab more coffee? Anybody else?
+[00:10:14] Speaker 1: I'm good.
+[00:10:15] Speaker 3: I'll take a top off if you're going.
+[00:10:17] Me: Go ahead, we'll pause thirty seconds. Grab the oat creamer for Tom.
+[00:10:21] Speaker 3: Appreciate you.
+[00:10:23] Speaker 2: Okay, I'm pouring, keep talking, I can hear you.
+[00:10:27] Me: Alright, so the broadcast question. Right now everything's one engine, one board doing both the room and the stream.
+[00:10:34] Speaker 1: And that's where it gets compromised, because the room mix and the stream mix want different things.
+[00:10:40] Me: Right. So one option is we just keep doing it that way, aux feed off the new board, done.
+[00:10:46] Speaker 2: That's the cheap option.
+[00:10:48] Me: That's the cheap option, yes.
+[00:10:50] Speaker 4: I'm sensing there's an expensive option coming.
+[00:10:53] Me: Ha, there's always an expensive option, Rick. But let me finish the cheap one first.
+[00:10:58] Speaker 1: No, go ahead, because I actually want to float something on the broadcast side.
+[00:11:03] Me: Okay, hold that thought for like two minutes, let me finish the lay of the land.
+[00:11:08] Speaker 1: Fine, fine, two minutes.
+[00:11:10] Me: So the dee live can actually do a decent amount of this internally with its mix busses.
+[00:11:16] Speaker 2: How many busses does it have? Enough for a separate broadcast setup?
+[00:11:20] Me: Plenty, that's not the constraint. The constraint is more about who's driving it on a Sunday.
+[00:11:26] Speaker 1: That's the real question, right? We don't have a spare person to mix the stream.
+[00:11:31] Me: That's the crux of it, and that's exactly what I wanted us to chew on next.
+[00:11:36] Speaker 3: Okay I'm back, oat creamer acquired, carry on.
+[00:11:40] Speaker 2: You didn't miss anything, he's still setting up the question.
+[00:11:43] Me: I'm a slow builder, what can I say. Okay, so here's the thing I want to put in front of you.
+[00:11:49] Speaker 1: This is my broadcast idea, is this where I jump in?
+[00:11:52] Me: Give me ten more seconds and then it's all yours, Marcus.
+[00:11:56] Speaker 1: The floor is almost mine. I can feel it.
+[00:12:01] Me: Okay, it's yours. Go.
+[00:12:03] Speaker 1: Alright, so here's what I've been chewing on. What if we ran a separate console just for broadcast?
+[00:12:10] Me: Say more.
+[00:12:11] Speaker 1: Like a second, smaller board, back in the booth, that only does the stream mix. So the room guy mixes the room, and somebody else owns the broadcast on their own surface.
+[00:12:21] Speaker 4: And that's the expensive option, I'm guessing.
+[00:12:24] Speaker 1: It might not be as crazy as it sounds, because the dee live can share the same stage inputs.
+[00:12:30] Me: That's true, with the right setup you can split the Dante to two surfaces.
+[00:12:35] Speaker 2: Wait, two full consoles off the same stage boxes? That's actually doable?
+[00:12:40] Me: In principle, yeah. You'd gain back the independent mix without compromising the room.
+[00:12:45] Speaker 1: Right, and then the stream stops sounding like a bad bootleg.
+[00:12:49] Speaker 3: People do comment on the online audio, for what it's worth.
+[00:12:53] Speaker 4: Okay but a second console is a second purchase. What are we talking, ballpark?
+[00:12:58] Me: Depends on the surface. Could be another big spend, could be something smaller.
+[00:13:03] Speaker 1: I'm not saying we buy it day one. I'm just saying let's not build ourselves into a corner where we can't add it later.
+[00:13:10] Me: That's fair, that's a design consideration.
+[00:13:13] Speaker 2: But we still have the people problem. Who's actually sitting at the second board on a Sunday?
+[00:13:18] Speaker 1: That's the part I don't have an answer for yet.
+[00:13:21] Me: Yeah, and honestly that's the thing that makes me want to park this idea rather than decide it today.
+[00:13:27] Speaker 1: I'm okay parking it. I just wanted it on the table.
+[00:13:30] Me: It's on the table. Let's call it a future phase, not part of this swap.
+[00:13:35] Speaker 4: Good, because I didn't budget for two consoles.
+[00:13:38] Speaker 1: Nobody's asking you to, Rick. Yet.
+[00:13:41] Speaker 4: The "yet" is doing a lot of work there.
+[00:13:44] Me: Let's write it down as something to revisit, but it's not decided, okay? Separate broadcast console is a maybe.
+[00:13:51] Speaker 2: Noted as a maybe.
+[00:13:53] Speaker 1: Fine. The floor is relinquished.
+[00:13:56] Me: Thank you. Okay, so let's talk about what we actually keep versus replace.
+[00:14:02] Speaker 3: This is the part I care about, because I'm the one running cable.
+[00:14:06] Me: Right, so the good news is the stage boxes. We don't need to touch those.
+[00:14:11] Speaker 2: The ones under the stage and the two on the upstage wall?
+[00:14:14] Me: Those exact ones. The dee live talks to them natively, so we'll reuse the stage boxes we already have.
+[00:14:20] Speaker 3: Oh thank goodness, because repulling that snake would be a nightmare.
+[00:14:24] Me: Exactly, no new copper to the stage. That's a big save on labor.
+[00:14:29] Speaker 4: Does reusing them actually save money, or is that just convenience?
+[00:14:33] Me: Both. Those boxes are a few grand each, and the install time is real money too.
+[00:14:38] Speaker 2: So that's confirmed? We're keeping the existing boxes as part of the plan?
+[00:14:42] Me: Yeah, I'd call that decided. Reuse the Dante stage boxes.
+[00:14:46] Speaker 1: One less thing to argue about.
+[00:14:48] Speaker 3: I'll drink my oat creamer to that.
+[00:14:51] Speaker 2: Hold on though, I want to make sure the compatibility is actually real and not just a spec sheet promise.
+[00:14:57] Me: Meaning what, specifically?
+[00:14:59] Speaker 2: Meaning our boxes are a certain firmware, and I've been burned before by "it supports Dante" that turns out to need an upgrade card.
+[00:15:07] Me: That's a legitimate worry. The dan tee version matters.
+[00:15:11] Speaker 3: I can confirm the dan tee stuff works with it.
+[00:15:14] Me: You've tested that pairing before?
+[00:15:16] Speaker 3: I'll pull up the model numbers and actually verify it against the dee live, but yeah, I'm fairly sure.
+[00:15:22] Me: Okay, let's make that a real action item, because I don't want to assume.
+[00:15:26] Speaker 2: Right, write it down, somebody confirm the Dante compatibility before we commit the order.
+[00:15:31] Me: Can you own that one?
+[00:15:33] Speaker 3: Yeah, I can confirm the dan tee stuff works with it.
+[00:15:36] Me: Perfect. Get me model and firmware so I can sanity check it with the vendor too.
+[00:15:41] Speaker 2: And if it needs a card, we need to know that now, not in January.
+[00:15:45] Me: Agreed, that could change the quote.
+[00:15:48] Speaker 4: See, this is what I like, catching the hidden costs early.
+[00:15:52] Me: We try, Rick, we try.
+[00:15:54] Speaker 1: So stage boxes stay, broadcast console is a maybe-later. What else is on the keep-or-replace list?
+[00:16:00] Me: Amps. That's the next one, and it's less clear cut.
+[00:16:04] Speaker 2: Oh, that's a good point actually. Do we even have enough amp channels for that?
+[00:16:09] Me: That's exactly the question. Depends how we route the outputs off the new board.
+[00:16:14] Speaker 2: Because if we start splitting zones differently, we might run short on the amp side.
+[00:16:19] Speaker 3: The amp rack is pretty full right now, I know that much.
+[00:16:23] Me: It is. We've got, what, the mains, the subs, the fills, the under balcony.
+[00:16:28] Speaker 2: And the stage monitors if we ever go back to wedges instead of in-ears.
+[00:16:32] Speaker 1: We're not going back to wedges.
+[00:16:34] Speaker 2: I'm just saying, for the count.
+[00:16:36] Me: So the honest answer is I don't know off the top of my head if we're fine.
+[00:16:41] Speaker 4: How do we find out?
+[00:16:43] Me: Somebody counts the channels against the new routing plan. But I don't want to guess at it live right now.
+[00:16:49] Speaker 2: Let's leave it open then. It's a real question, do we even have enough amp channels for that.
+[00:16:55] Me: Yeah, flag it. We'll figure the amp count once the output design is locked.
+[00:16:59] Speaker 3: If we need more amp channels that's another line item, right Rick?
+[00:17:03] Speaker 4: Everything's a line item, Tom. That's my whole job.
+[00:17:06] Speaker 1: Spoken like a true business administrator.
+[00:17:09] Speaker 4: Somebody's got to be the villain.
+[00:17:11] Me: You're not the villain, you're the reason we still have a building.
+[00:17:14] Speaker 4: I'm going to get that printed on a mug.
+[00:17:17] Speaker 2: Oat creamer mug energy.
+[00:17:19] Speaker 3: Hey, don't knock the creamer.
+[00:17:21] Me: Okay, refocus. So amps are an open question, I'm marking it.
+[00:17:26] Speaker 2: Good. I don't want to find out mid-service that we clipped something.
+[00:17:30] Me: Nobody wants that. Alright, so where are we. New board is the dee live, that's locked.
+[00:17:36] Speaker 1: Locked.
+[00:17:37] Me: Stage boxes reused, locked. Broadcast console, maybe later. Amp channels, open question.
+[00:17:43] Speaker 4: That's a clean summary, I appreciate it.
+[00:17:45] Me: I try to keep the pile organized.
+[00:17:47] Speaker 2: Can I ask a dumb question about the control network?
+[00:17:50] Me: No such thing. Go.
+[00:17:52] Speaker 2: When we run two surfaces, or even just the one new board plus the Dante, does our current switch handle all that traffic?
+[00:17:59] Me: That's a really good question and it's related to the amp one, honestly.
+[00:18:03] Speaker 3: The network switch in the booth? That thing's a few years old.
+[00:18:07] Me: It is. I'd want to check it can handle the Dante load cleanly, especially if we grow.
+[00:18:13] Speaker 2: Because dropping packets on audio is worse than no audio.
+[00:18:16] Me: Way worse. Let's hold that one too, it's part of the network conversation.
+[00:18:20] Speaker 1: We're collecting a lot of "hold that" items.
+[00:18:23] Me: That's normal for the first real planning pass. We prune next time.
+[00:18:27] Speaker 4: As long as the holds don't all turn into dollar signs.
+[00:18:30] Me: Some will, I won't lie to you.
+[00:18:32] Speaker 4: At least you're honest.
+[00:18:34] Speaker 2: Hey Aaron, did the new in-ear packs ever come in, totally unrelated?
+[00:18:38] Me: They did, actually, they're in the cabinet. Marcus, your drummer will be thrilled.
+[00:18:43] Speaker 1: Oh he will not stop talking about it.
+[00:18:45] Speaker 2: We ordered those back in August, right?
+[00:18:47] Me: Yeah, forever ago. Anyway, that's off topic, back to the console.
+[00:18:51] Speaker 3: Sorry, that's on me, I asked.
+[00:18:53] Me: No worries. Okay, so the big thing I still want to nail is the configuration philosophy.
+[00:18:59] Speaker 1: Meaning presets and scenes?
+[00:19:01] Me: Right. The dee live lets us save scenes per service type, and I want our volunteers to not be scared of it.
+[00:19:08] Speaker 2: That's the whole battle. Half my team can run the old board blind and the other half will panic at a new layout.
+[00:19:14] Me: Which is why I want to build a locked-down user profile for the newer folks.
+[00:19:19] Speaker 2: Oh I love that. Limit what they can touch.
+[00:19:22] Me: Exactly. Faders and mutes, and the scary stuff hidden.
+[00:19:26] Speaker 1: Can you still get to it if something breaks mid-service?
+[00:19:29] Me: Admin login overrides it, so yeah, a lead can jump in.
+[00:19:33] Speaker 2: That actually solves a problem I didn't know how to solve.
+[00:19:36] Me: That's one of the reasons the dee live made the shortlist, honestly.
+[00:19:40] Speaker 4: So this is partly a volunteer retention thing too.
+[00:19:43] Me: A hundred percent. If the board scares people, we lose people.
+[00:19:47] Speaker 2: And then I'm mixing every single weekend, which, no thank you.
+[00:19:51] Speaker 1: We'd like to keep Dana alive, yes.
+[00:19:53] Speaker 2: Appreciated.
+[00:19:54] Me: Okay, so profiles and scenes, I'll own the template for that. But let's hold the detail for the training conversation.
+[00:20:01] Speaker 3: Another hold.
+[00:20:02] Me: Another hold. We'll get to training near the end.
+[00:20:05] Speaker 4: Can we circle back to the actual timeline at some point? That's what I need for the board.
+[00:20:10] Me: Yes, that's next, actually. Let me close out the config piece.
+[00:20:14] Speaker 2: Before we leave config, one thing. The outboard, the comp and verb stuff we rented last Easter.
+[00:20:20] Me: The dee live has that onboard, so we drop the rentals entirely.
+[00:20:24] Speaker 2: Oh, so that's a recurring cost that goes away.
+[00:20:27] Me: It is. Rick, write that in the plus column.
+[00:20:30] Speaker 4: Now we're talking. A savings for once.
+[00:20:33] Me: Small one, but real. The effects and dynamics are all built in.
+[00:20:37] Speaker 1: So no more carting in that rack every Christmas.
+[00:20:40] Me: No more. Tom will be happy, that's one less thing to haul.
+[00:20:44] Speaker 3: I will dance in the parking lot.
+[00:20:46] Me: Okay, so that's config at a high level. Let's shift to when this actually happens.
+[00:20:51] Speaker 4: Finally, the timeline.
+[00:20:53] Me: Finally. And I want to revisit the New Year's idea, because I'm not sure it's smart.
+[00:20:58] Speaker 1: Oh interesting, I thought that was settled.
+[00:21:01] Me: We said it fast earlier, but let me explain why I'm second-guessing it.
+[00:21:05] Speaker 2: Because New Year's weekend is already a weird service.
+[00:21:08] Me: That's part of it. Attendance is low but it's still a live service, and I don't love installing under that pressure.
+[00:21:15] Speaker 4: So you want to move it.
+[00:21:17] Me: I think so, but let's actually talk it through rather than just flip it.
+[00:21:21] Speaker 1: Okay, what's the alternative window you're thinking?
+[00:21:24] Me: Mid-January, honestly. After the holidays settle, before we ramp into the spring stuff.
+[00:21:30] Speaker 2: That gives us a clean week with no major events, I think.
+[00:21:33] Me: That's my read too. But let me pull the calendar before we commit to a date.
+[00:21:38] Speaker 4: As long as I get a date for the proposal, I don't care which week.
+[00:21:42] Me: Understood. Give me two minutes and we'll land on something concrete.
+[00:24:03] Me: Okay, I pulled up the master calendar. The week of January twelfth is wide open, no weddings, no outside rentals.
+[00:24:11] Speaker 4: That's a Monday, the twelfth?
+[00:24:13] Me: Twelfth is a Monday, yeah. So we'd load in and do the physical install that week.
+[00:24:18] Speaker 2: And then we'd have the whole week to patch and test before Sunday.
+[00:24:22] Me: Right. Install Monday through Wednesday, tuning Thursday, and then we rehearse with the band Saturday.
+[00:24:28] Speaker 1: So the first live service on it will be January eighteenth.
+[00:24:32] Me: Correct. That's the Sunday. January eighteenth is our go-live.
+[00:24:36] Speaker 4: Okay, that I can take to the board. A real date.
+[00:24:40] Speaker 3: That's way better than fighting it on New Year's.
+[00:24:43] Me: It is. Let me say it plainly so we don't lose it. We are not doing it over New Year's anymore.
+[00:24:49] Speaker 1: Wait, hold on. Earlier we all said New Year's.
+[00:24:52] Me: We did, and I'm walking that back on purpose. Install is the week of the twelfth, service on the eighteenth.
+[00:24:58] Speaker 4: Just to push back once, because someone will ask me. Why not let's just do the whole swap over new year's weekend?
+[00:25:06] Me: Because the room is dark-ish but still live, and if something goes sideways I've got no vendor and no second Sunday to recover.
+[00:25:14] Speaker 2: And half our volunteers are traveling that weekend anyway.
+[00:25:17] Speaker 4: Okay, that's a good answer. New Year's is dead, January twelfth it is.
+[00:25:22] Me: Everybody good with that? Marcus?
+[00:25:24] Speaker 1: Yeah, I'm good. Honestly I like having the buffer week.
+[00:25:28] Speaker 2: Me too. New Year's always felt rushed.
+[00:25:31] Me: Great. So decision: install the week of January twelfth, first service January eighteenth. That replaces the New Year's plan entirely.
+[00:25:40] Speaker 3: Can I write that on the whiteboard so nobody re-litigates it?
+[00:25:43] Me: Please do. Big letters.
+[00:25:45] Speaker 4: Underline it twice.
+[00:25:47] Me: Okay, timeline's locked. Now, the thing you actually need, Rick, is the number.
+[00:25:52] Speaker 4: The number and where it comes from. The board's going to want a real quote, not a ballpark.
+[00:25:58] Me: Agreed. The quote I have from pro sound is from back in the summer, so it's stale.
+[00:26:04] Speaker 4: How stale are we talking?
+[00:26:06] Me: Couple months, and the dee live pricing shifted a little. I want current numbers before you present anything.
+[00:26:12] Speaker 2: Didn't they also quote the stage box reuse separately?
+[00:26:16] Me: They did, as a line item, which actually helps us. I'll get the updated quote from pro sound by Friday.
+[00:26:23] Speaker 4: Friday works. If I have it Friday I can build the proposal over the weekend.
+[00:26:28] Me: Perfect. So I own the vendor quote, due Friday.
+[00:26:31] Speaker 1: And who writes the thing that goes to the elders?
+[00:26:34] Speaker 4: That's me. I'll write up the budget proposal for the elders once I've got Aaron's quote.
+[00:26:40] Me: Thank you. And just so it's clear, the proposal's a recommendation, right? The actual approval is theirs.
+[00:26:46] Speaker 4: Right, I'm not deciding the spend. I'm packaging it so the elders can decide.
+[00:26:51] Me: Good, I just want that distinction on the record.
+[00:26:54] Speaker 4: Noted. I'll frame the recurring savings too, the rental stuff we talked about.
+[00:26:59] Me: Yeah, put the Easter rental savings in there. It's small but it reads well.
+[00:27:04] Speaker 1: Every little bit helps when you're asking for forty grand.
+[00:27:07] Speaker 4: Don't say the number out loud yet, you'll jinx it.
+[00:27:10] Me: Ha. Okay, quote Friday, proposal from Rick after that.
+[00:27:14] Speaker 3: What's the elders' meeting date? Does the timing even work?
+[00:27:18] Speaker 4: They meet the second Tuesday, so that's... the thirteenth? No wait.
+[00:27:23] Me: The thirteenth is during our install week. That's cutting it close.
+[00:27:27] Speaker 4: Let me check the elder calendar. If they meet before Christmas we're fine, if it slides to January it's tight.
+[00:27:34] Me: Can you confirm that date and get back to us?
+[00:27:37] Speaker 4: Yeah, I'll look it up. Worst case I ask for an email approval.
+[00:27:41] Me: Okay. Let's not solve the elder calendar in this room.
+[00:27:44] Speaker 4: Agreed, that's my problem to chase.
+[00:27:47] Me: Alright. Before we move to training, there's a technical thing I don't want to forget.
+[00:27:52] Speaker 2: The network.
+[00:27:53] Me: The network. We're reusing the Dante stage boxes, which is great, but the dee live is going to push more channels across that same backbone.
+[00:28:01] Speaker 2: Right, more channels, more streams.
+[00:28:03] Me: So the real question is, will the current switch handle the extra dan tee traffic.
+[00:28:08] Speaker 3: Which switch are we talking about, the one in the booth or the one at the stage?
+[00:28:12] Me: The core one in the booth. The managed one the MSP put in two years ago.
+[00:28:17] Speaker 3: That one's a gigabit, I think. Is that enough?
+[00:28:20] Me: For audio Dante, probably, but I don't want to guess. Dante's picky about switches.
+[00:28:25] Speaker 2: We also share that switch with the video stuff, don't we?
+[00:28:29] Me: We do, that's exactly my worry. If broadcast and audio are both on it, headroom matters.
+[00:28:34] Speaker 4: Is this a cost thing? Because if it's another box I need it in the proposal.
+[00:28:39] Me: It might be. That's why I'm raising it now, even if we can't answer it today.
+[00:28:44] Speaker 3: Can the MSP just tell us the model and specs?
+[00:28:47] Me: They can, but whether it's got the throughput and the QoS set right for Dante, that's a deeper look.
+[00:28:54] Speaker 2: Should we loop them in before the install, not during?
+[00:28:57] Me: Definitely before. I just don't want to commit to an answer until I've actually checked the config.
+[00:29:02] Speaker 4: So this is an open item, not a decision.
+[00:29:05] Me: Open item. Flag it. The switch capacity question is genuinely unresolved right now.
+[00:29:11] Speaker 3: I'll put a star next to it on the board.
+[00:29:13] Me: Thanks. I don't want us ordering the console and then discovering the network chokes.
+[00:29:18] Speaker 1: Would it help to just buy a dedicated audio switch and separate the networks?
+[00:29:23] Me: Maybe, that's one option. But that's a whole design conversation, and I don't want to decide it on the fly.
+[00:29:29] Speaker 2: Agreed, let's not design the network in the next ten minutes.
+[00:29:33] Me: Right. Leaving it open. I'll scope it properly and bring numbers if there's a cost.
+[00:29:38] Speaker 4: Just flag me early if it adds to the total. The board hates surprises.
+[00:29:43] Me: Understood. If there's a switch cost, you'll know before the proposal's final.
+[00:29:48] Speaker 3: Hey, unrelated, is the booth AC getting fixed? It was ninety degrees in there Sunday.
+[00:29:53] Me: Oh that's a facilities ticket, that's on you actually.
+[00:29:56] Speaker 3: It's on me? Great. Nobody told me.
+[00:29:59] Speaker 1: The whole back of the room was warm Sunday, people were fanning themselves.
+[00:30:03] Speaker 3: I'll look at the unit. Probably a filter.
+[00:30:06] Me: Separate issue, let's not rabbit-hole. But yeah, a hot booth cooks the gear too.
+[00:30:11] Speaker 4: Especially a brand new forty-thousand-dollar console.
+[00:30:14] Me: Don't say the number.
+[00:30:15] Speaker 4: Sorry.
+[00:30:17] Speaker 2: Quick thing while we're on hardware. Does the dee live surface fit the current booth footprint?
+[00:30:23] Me: It's close. The surface is a little wider than what we've got now.
+[00:30:27] Speaker 3: How much wider?
+[00:30:28] Me: Few inches each side, I think. We'll need to measure before install week.
+[00:30:33] Speaker 2: Because the booth desk has those side rails.
+[00:30:36] Me: Right, the rails might have to come off. Tom, that's probably one for you to measure.
+[00:30:41] Speaker 3: Measure the booth, got it. I'll add it to my list.
+[00:30:44] Me: We'll nail that down in the training-and-logistics part. Let me not jump ahead.
+[00:30:49] Speaker 4: You keep saying we'll get to things. Are we actually going to get to them?
+[00:30:53] Me: We are, I promise. There's maybe three things left and training's the big one.
+[00:30:58] Speaker 1: And I do want real time on training, not thirty seconds at the end.
+[00:31:02] Me: You'll get it. That's the next segment, basically.
+[00:31:05] Speaker 2: Can I ask one more scheduling thing before training?
+[00:31:08] Me: Go.
+[00:31:09] Speaker 2: If install is the week of the twelfth, when does the old board actually come out? Same week?
+[00:31:14] Me: Same week. We can't run both at once, there's no space.
+[00:31:18] Speaker 2: So there's a window where we have no console in the booth.
+[00:31:21] Me: Correct, a couple days mid-week. That's fine because there's no midweek service that week.
+[00:31:27] Speaker 1: Wednesday night group is off for the holidays till the twenty-first?
+[00:31:31] Me: Right, they resume later. So the dark window doesn't hit anything live.
+[00:31:36] Speaker 2: Okay, that eases my mind.
+[00:31:38] Speaker 4: What happens to the old board? Does it have any trade-in value?
+[00:31:42] Me: Honestly, not much, nobody supports it. But we'll talk reuse in a minute.
+[00:31:47] Speaker 3: Don't throw it in the dumpster, it still kind of works.
+[00:31:50] Me: Kind of is the operative word. We'll find it a home.
+[00:31:54] Speaker 1: Youth would take anything, they mix on a phone app right now.
+[00:31:58] Me: Hold that thought, that's literally on my list for the end.
+[00:32:01] Speaker 3: Another hold.
+[00:32:02] Me: Another hold, yes. I'm sorry, I'm trying to keep us from tangling everything together.
+[00:32:07] Speaker 4: No, it's good. I just need my two things, the quote and the proposal, and I'm set.
+[00:32:12] Me: You've got both. Quote from me Friday, proposal from you after.
+[00:32:16] Speaker 4: Then I'm a happy administrator.
+[00:32:18] Me: Rare and precious. Okay, let me recap the timeline block before we move on.
+[00:32:23] Speaker 2: Good idea, it moved around a lot.
+[00:32:25] Me: So: New Year's install is off. Install happens the week of January twelfth, go-live Sunday the eighteenth.
+[00:32:33] Speaker 1: First service the eighteenth. Got it.
+[00:32:35] Me: I'll have the refreshed vendor quote by Friday. Rick builds the elder proposal off that.
+[00:32:41] Speaker 4: And the elders approve or not, that's their call.
+[00:32:44] Me: Their call entirely. And we have one open flag, the booth switch and whether it handles the added Dante load.
+[00:32:51] Speaker 2: That's the one with the star on the board.
+[00:32:53] Me: That's the one. I'll chase the MSP on it and come back with specs, and a cost if there is one.
+[00:32:59] Speaker 3: Everything's on the board. We're organized for once.
+[00:33:02] Me: Don't tell anyone, they'll expect it every week.
+[00:33:05] Speaker 4: So what's left?
+[00:33:06] Me: Training, and then what we do with the old board. Both quick-ish.
+[00:33:10] Speaker 1: Training's not quick for me, just warning you.
+[00:33:13] Me: Fair. Let's give it the time then. Everybody still okay on the clock?
+[00:33:17] Speaker 2: I've got till the top of the hour.
+[00:33:19] Speaker 4: Same, roughly.
+[00:33:20] Speaker 3: I'm good.
+[00:33:21] Me: Alright, let me grab the training notes I started. Give me one sec.
+[00:33:25] Speaker 1: While you do that, Dana, did you ever hear back on the Dante compatibility thing?
+[00:33:30] Speaker 2: Still checking. I'll confirm the stage boxes map clean before anybody orders.
+[00:33:35] Me: Good, that pairs with the switch question, honestly.
+[00:33:38] Speaker 2: Same network family, yeah. I'll bundle both when I report back.
+[00:33:42] Me: Perfect. Okay, training. Marcus, this is your section as much as mine.
+[00:33:47] Speaker 1: Finally my turn. I've been patient.
+[00:33:49] Me: You have. Painfully patient.
+[00:33:51] Speaker 4: We should applaud him.
+[00:33:52] Me: We'll applaud at the end if nobody adds more holds.
+[00:33:55] Speaker 3: No promises.
+[00:33:56] Me: Okay, so my thinking on training is we don't go live cold.
+[00:36:02] Me: So here's the plan I want to float. Two Sundays of training before we go live, hands on the actual surface.
+[00:36:09] Speaker 1: Okay, that I like. My team panics if they see a new screen cold.
+[00:36:14] Speaker 2: Two Sundays is realistic. One is not, honestly.
+[00:36:17] Me: Right. The surface is different enough that muscle memory resets.
+[00:36:21] Speaker 1: So walk me through what two Sundays actually looks like.
+[00:36:24] Me: Week one we shadow, the new board's up but the old one still drives the service. Week two the volunteers run it with me standing right there.
+[00:36:33] Speaker 2: I like that. Nobody's alone on a live mix the first time.
+[00:36:37] Speaker 4: And that lands before the eighteenth?
+[00:36:39] Me: It has to. Install week is the twelfth, so training Sundays would be the fourth and the eleventh.
+[00:36:45] Speaker 1: Wait, the board's not installed till the twelfth though.
+[00:36:48] Me: Good catch. Let me rethink that.
+[00:36:50] Speaker 2: You'd want both training Sundays after install, so the eleventh doesn't work.
+[00:36:55] Me: Yeah, scratch the fourth and eleventh. It'd be the eleventh and the eighteenth, which collides with go-live.
+[00:37:02] Speaker 1: So we're tight.
+[00:37:03] Me: We're tight. Let me hold the exact dates but lock the principle: two Sundays of training before we go live, non-negotiable.
+[00:37:11] Speaker 1: Agreed on the principle. I'll defend the two Sundays to the team.
+[00:37:15] Speaker 2: Me too. That's the decision I care about most, frankly.
+[00:37:19] Me: Then that's decided. I'll sort the calendar mechanics and make the dates fit around install.
+[00:37:24] Speaker 4: You might push go-live a week if it's that tight.
+[00:37:27] Me: Maybe. But I don't want to reopen the eighteenth right now, let's keep it and I'll make training work.
+[00:37:33] Speaker 1: Fair.
+[00:37:34] Me: I'll get the training sessions on the calendar and send invites by end of next week.
+[00:37:39] Speaker 2: Put me down for both. I'll be there regardless.
+[00:37:42] Speaker 1: Same, obviously.
+[00:37:44] Me: Appreciate it. Okay, old board. What do we actually do with it.
+[00:37:48] Speaker 3: Please don't say storage closet. We're drowning in dead gear.
+[00:37:52] Me: No, I actually have a use. The old board goes to the youth room.
+[00:37:56] Speaker 1: Oh, that's smart. Their mixer is ancient.
+[00:37:59] Speaker 3: Theirs is worse than ancient. It hums.
+[00:38:02] Speaker 5: It does hum, I've heard it from the hallway.
+[00:38:05] Me: So even a flaky board that cuts out occasionally is an upgrade for them.
+[00:38:10] Speaker 4: As long as youth knows it's got the channel issue.
+[00:38:13] Me: I'll flag that to their leader. It's a step up for a room that runs eight channels, not forty.
+[00:38:19] Speaker 1: Youth will be thrilled. That's a win.
+[00:38:21] Me: Good, so old board to the youth room, that's settled.
+[00:38:24] Speaker 3: I'll handle the physical move when the time comes, I've got the cart.
+[00:38:28] Me: Perfect, Tom. Which actually brings up two things I need from you.
+[00:38:32] Speaker 3: Hit me.
+[00:38:33] Me: First, when you talk to the vendor, ask them about a loaner surface during the swap.
+[00:38:38] Speaker 3: A loaner, so we're not dark if install slips?
+[00:38:41] Me: Exactly. If the new one's delayed even a few days I don't want a silent weekend.
+[00:38:46] Speaker 2: That's a really good insurance policy. Ask what it costs too.
+[00:38:50] Speaker 3: I'll ask about a loaner surface and the cost, got it.
+[00:38:53] Me: Second thing, and this one's not glamorous, I need you to measure the booth so the surface actually fits.
+[00:38:59] Speaker 3: You think it won't?
+[00:39:00] Me: The dLive surface is wider than what we've got. I am not finding that out on install day.
+[00:39:06] Speaker 2: Oh yeah, measure twice. The old one barely fit the cutout.
+[00:39:10] Speaker 3: I'll measure the booth, depth and width, and get you numbers this week.
+[00:39:14] Me: Thank you. Width, depth, and cable clearance behind it.
+[00:39:18] Speaker 3: Behind it too, noted.
+[00:39:20] Speaker 4: What if it doesn't fit?
+[00:39:22] Me: Then we modify the booth, but let's not borrow trouble till Tom measures.
+[00:39:26] Speaker 1: Famous last words.
+[00:39:27] Me: Always. Okay, I think that's the list. Let me do a fast recap.
+[00:39:32] Speaker 4: Go.
+[00:39:33] Me: Console is the dLive. Install week of January twelfth, go-live the eighteenth. Two training Sundays, dates to follow.
+[00:39:41] Speaker 2: Reusing the stage boxes, pending my Dante check.
+[00:39:44] Me: Right, you confirm Dante and loop in the switch question. I chase the MSP on the switch, I get the vendor quote by Friday.
+[00:39:52] Speaker 4: I build the elder proposal off your quote.
+[00:39:54] Me: And the elders decide. Tom measures the booth and asks about the loaner. Old board to youth.
+[00:40:00] Speaker 3: And I move it when we're ready.
+[00:40:02] Me: And I calendar training. Did I miss anything?
+[00:40:05] Speaker 1: The broadcast mix thing, did we land that?
+[00:40:08] Me: We did not land it. That stays a someday idea, not part of this project.
+[00:40:12] Speaker 1: Okay, just checking it didn't sneak onto the list.
+[00:40:15] Speaker 2: It's not on the board, I looked.
+[00:40:17] Me: Parked, officially. We can revisit after we're stable on the new desk.
+[00:40:21] Speaker 4: Smart. One thing at a time.
+[00:40:23] Speaker 5: Quick question before we scatter, who tells the volunteers about the new board?
+[00:40:28] Me: Good one. Dana, you and I will draft a note to the audio team together.
+[00:40:32] Speaker 5: Works. I'll start it, you add the technical bits.
+[00:40:35] Me: Deal. That's not urgent though, after the quote's approved.
+[00:40:38] Speaker 1: Don't want to announce something the elders haven't blessed.
+[00:40:42] Me: Exactly, so that note waits on their yes.
+[00:40:45] Speaker 4: Reasonable.
+[00:40:46] Unknown: Can you hear the coffee machine?
+[00:40:48] Speaker 3: That's the HVAC, not the coffee.
+[00:40:50] Me: Either way, not our meeting. Okay, we good?
+[00:40:53] Speaker 2: We're good. This was productive.
+[00:40:55] Speaker 1: Shockingly organized.
+[00:40:56] Me: I told you, don't say it out loud.
+[00:40:58] Speaker 4: Too late, the bar is set.
+[00:41:00] Me: Great, now every meeting gets a board with stars.
+[00:41:03] Speaker 3: I'll make the stars gold next time.
+[00:41:05] Speaker 1: Overachiever.
+[00:41:07] Me: Alright, real quick, calendar check so nobody's surprised. Friday I send the quote.
+[00:41:12] Speaker 4: And I'll turn the proposal around over that weekend so it's ready for the next elder meeting.
+[00:41:17] Me: When is that, do you know?
+[00:41:19] Speaker 4: The twenty-first, I think. I'll double-check and tell you.
+[00:41:22] Me: Perfect, that gives us runway before January.
+[00:41:25] Speaker 2: As long as the Dante check comes back clean, we're fine.
+[00:41:28] Me: When do you think you'll know?
+[00:41:30] Speaker 2: Couple days. I'm waiting on a spec sheet from the stage box side.
+[00:41:34] Me: No rush, just before anyone clicks order.
+[00:41:36] Speaker 2: Before anyone orders, promise.
+[00:41:38] Speaker 1: Hey, before I forget, are we still on for the band meeting Thursday?
+[00:41:42] Me: That's a worship thing, not AVL, but yes as far as I know.
+[00:41:46] Speaker 1: Just checking you weren't double-booked.
+[00:41:48] Me: Nope, I'll be there with coffee.
+[00:41:50] Speaker 3: Bring the good coffee this time.
+[00:41:52] Me: The good coffee is a myth, Tom.
+[00:41:54] Speaker 4: It really is.
+[00:41:55] Me: Okay, I'll write all this up and send minutes by tomorrow so everyone has their actions.
+[00:42:01] Speaker 2: Thank you, that helps.
+[00:42:03] Me: And if I got a date wrong in the recap, ping me, the eighteenth is the one that matters.
+[00:42:08] Speaker 1: Eighteenth, go-live, burned into my brain.
+[00:42:11] Me: Good. Thanks everybody, genuinely. This was a big one to get through.
+[00:42:15] Speaker 4: Good meeting, Aaron.
+[00:42:16] Speaker 2: Thanks all.
+[00:42:17] Speaker 3: See you in the booth.
+[00:42:18] Me: See you Sunday. Go get your hour back.

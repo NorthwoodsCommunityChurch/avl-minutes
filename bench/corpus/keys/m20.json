@@ -1,0 +1,141 @@
+{
+ "id": "m20",
+ "title": "Christmas Eve weekend services planning",
+ "type": "staff meeting",
+ "minutes": 45,
+ "sources": [
+  "room",
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Dave",
+   "role": "Worship pastor"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Karen",
+   "role": "Executive pastor"
+  },
+  {
+   "label": "Speaker 3",
+   "name": "Megan",
+   "role": "Production coordinator / ProPresenter"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Tom",
+   "role": "MSP IT contact (on call)"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Run three Christmas Eve services this year",
+   "evidence": "let's lock in three Christmas Eve services this year"
+  },
+  {
+   "id": "d2",
+   "text": "Only livestream the 5pm service",
+   "evidence": "we'll only livestream the five o'clock one"
+  },
+  {
+   "id": "d3",
+   "text": "Rent two extra cameras for Christmas Eve",
+   "evidence": "go ahead and rent two extra cameras for Christmas Eve"
+  },
+  {
+   "id": "d4",
+   "text": "During candlelight, bring house lights down to 10%",
+   "evidence": "bring the house lights all the way down to ten percent"
+  },
+  {
+   "id": "d5",
+   "text": "Hold a full dress rehearsal on December 23rd",
+   "evidence": "we'll hold a full dress rehearsal on the twenty third"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Place the camera rental order",
+   "owner": "Me",
+   "due": "Monday",
+   "evidence": "I'll put in the camera rental order on Monday"
+  },
+  {
+   "id": "a2",
+   "task": "Build all the Christmas carol slides in ProPresenter",
+   "owner": "Megan",
+   "due": "next Friday",
+   "evidence": "I can build out all the carol slides by next Friday"
+  },
+  {
+   "id": "a3",
+   "task": "Finalize and send the song list",
+   "owner": "Dave",
+   "due": "Monday",
+   "evidence": "I'll have the final song list to you by Monday"
+  },
+  {
+   "id": "a4",
+   "task": "Increase upload bandwidth before the stream",
+   "owner": "Tom",
+   "due": null,
+   "evidence": "I'll go ahead and bump up the upload bandwidth before then"
+  },
+  {
+   "id": "a5",
+   "task": "Recruit two more camera volunteers",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll reach out to a couple more camera volunteers this week"
+  },
+  {
+   "id": "a6",
+   "task": "Send out the finalized volunteer schedule",
+   "owner": "Karen",
+   "due": null,
+   "evidence": "I'll send the finalized volunteer schedule out to everyone"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Does the overflow room have its own audio feed?",
+   "evidence": "do we even have an audio feed going to the overflow room"
+  },
+  {
+   "id": "q2",
+   "text": "Who covers camera two for the early service?",
+   "evidence": "who's going to run camera two for the early service"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "tentative",
+   "claim": "The team decided to rent a hazer for the carols",
+   "evidence": "I'm kind of leaning toward renting a hazer"
+  },
+  {
+   "id": "t2",
+   "kind": "other_party",
+   "claim": "The staff approved buying the new audio console",
+   "evidence": "that's really a call for the finance team to make"
+  },
+  {
+   "id": "t3",
+   "kind": "already_done",
+   "claim": "Someone needs to order the new handheld wireless mics",
+   "evidence": "new handheld wireless mics already came in last week"
+  }
+ ]
+}

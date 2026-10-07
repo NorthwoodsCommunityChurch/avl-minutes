@@ -1,0 +1,170 @@
+{
+ "id": "m28",
+ "title": "Kids Wing AV Install Coordination",
+ "type": "project meeting",
+ "minutes": 60,
+ "sources": [
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Marcus",
+   "role": "Facilities director"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Priya",
+   "role": "Kids ministry director"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Devin",
+   "role": "MSP technician"
+  },
+  {
+   "label": "Caller 2",
+   "name": "Ray",
+   "role": "AV integrator"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Classrooms get flat panel displays instead of projectors",
+   "evidence": "going with flat panel displays in the classrooms instead of projectors"
+  },
+  {
+   "id": "d4",
+   "text": "Standardize on 65-inch panels for all classrooms",
+   "evidence": "let's standardize on the sixty five inch panels for all of them"
+  },
+  {
+   "id": "d2",
+   "text": "MSP pulls data drops; Ray handles AV cabling",
+   "evidence": "your team pulls the data drops and Ray handles the AV cabling"
+  },
+  {
+   "id": "d6",
+   "text": "Check-in kiosks go on their own VLAN",
+   "evidence": "check in kiosks go on their own separate V LAN"
+  },
+  {
+   "id": "d5",
+   "text": "Use the existing Q-SYS core for kids room audio",
+   "evidence": "we'll use the existing cue sis core for the kids room audio"
+  },
+  {
+   "id": "d3",
+   "text": "Install happens the week of February 15",
+   "evidence": "the install happens the week of February fifteenth"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Send room drawings to Ray",
+   "owner": "Me",
+   "due": "Friday",
+   "evidence": "I'll get you the room drawings by Friday"
+  },
+  {
+   "id": "a2",
+   "task": "Send revised quote with 65-inch units",
+   "owner": "Ray",
+   "due": null,
+   "evidence": "I'll send over a revised quote with the sixty five inch units"
+  },
+  {
+   "id": "a3",
+   "task": "Schedule the cabling crew for install week",
+   "owner": "Devin",
+   "due": null,
+   "evidence": "I'll get the cabling crew scheduled for that week"
+  },
+  {
+   "id": "a7",
+   "task": "Stand up the kiosk VLAN",
+   "owner": "Devin",
+   "due": null,
+   "evidence": "I'll stand up that V LAN for the kiosks on our end"
+  },
+  {
+   "id": "a5",
+   "task": "Put together screen content requirements",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll put together what we want on the screens"
+  },
+  {
+   "id": "a4",
+   "task": "Get electrician to add outlets in each classroom",
+   "owner": "Marcus",
+   "due": null,
+   "evidence": "I'll get the electrician out to add outlets in each classroom"
+  },
+  {
+   "id": "a6",
+   "task": "Order the wall mounts once sizes confirmed",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll order the wall mounts once we confirm the sizes"
+  },
+  {
+   "id": "a8",
+   "task": "Compile the total project cost",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll pull together the total cost for everything"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Whose budget covers the extra electrical work",
+   "evidence": "is that coming out of facilities or the AVL budget"
+  },
+  {
+   "id": "q2",
+   "text": "Who will operate the kids auditorium on weekends",
+   "evidence": "Who is actually going to run that room on the weekend"
+  },
+  {
+   "id": "q3",
+   "text": "Can the ceiling support the display mounts",
+   "evidence": "can the ceiling actually take the weight of those mounts"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "joke",
+   "claim": "The team decided to install a large LED wall in the kids room",
+   "evidence": "we could just drag the big LED wall in there"
+  },
+  {
+   "id": "t2",
+   "kind": "tentative",
+   "claim": "They decided to add a confidence monitor on the kids stage",
+   "evidence": "I'm leaning toward a confidence monitor but let's not lock that in"
+  },
+  {
+   "id": "t3",
+   "kind": "other_party",
+   "claim": "Aaron will approve the final project budget",
+   "evidence": "the final budget sign off is up to the finance committee"
+  },
+  {
+   "id": "t4",
+   "kind": "already_done",
+   "claim": "The MSP still needs to pull cabling to the check-in area",
+   "evidence": "we already ran the drops to the check in area"
+  }
+ ]
+}

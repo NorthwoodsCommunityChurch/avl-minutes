@@ -1,0 +1,684 @@
+Kids Wing AV Install Coordination
+Monday, January 18, 2027 · 1:00 PM · 60 min · Call
+Transcribed by Minutes. Audio was not recorded.
+
+[00:00:04] Me: Alright, I think we're mostly here. Marcus, can you hear me okay?
+[00:00:08] Speaker 1: Yeah, loud and clear. Let me just grab a chair real quick.
+[00:00:13] Speaker 2: Hey Aaron, sorry I'm like two minutes late, the kids drop-off thing ran long.
+[00:00:18] Me: No worries, Priya, we're just getting settled. We've still got the two callers to get on.
+[00:00:24] Speaker 2: Okay good. How was your weekend, by the way? Did you end up going to the lake?
+[00:00:29] Me: We did, yeah. Water was freezing but the kids didn't care at all.
+[00:00:34] Speaker 1: That's October in the north for you. My brother-in-law went out fishing Saturday and came back with nothing but a sunburn.
+[00:00:41] Speaker 2: Ha, that sounds about right.
+[00:00:44] Me: Alright, let me pull in the dial-in. I think Devin from the MSP is supposed to join, and Ray from the integrator.
+[00:00:52] Unknown: ...can you hear...
+[00:00:55] Caller 1: Hello? Yeah, this is Devin. Can you guys hear me?
+[00:00:59] Me: Yep, we got you Devin. Thanks for hopping on.
+[00:01:03] Caller 1: No problem. Sorry, I'm driving back from the Cedar site so I'm on hands-free, just a heads up.
+[00:01:09] Speaker 1: As long as you keep both hands on the wheel, buddy.
+[00:01:13] Caller 1: Ha, always.
+[00:01:16] Me: Okay, we're just waiting on Ray and then we can dig in. Let me text him real quick.
+[00:01:22] Speaker 2: While we wait, um, did everybody see the thing about the parking lot repaving? They sent an email this morning.
+[00:01:29] Speaker 1: Oh yeah, that's gonna be a mess for a couple weekends. They're starting the north lot first.
+[00:01:35] Speaker 2: As long as it's done before the Christmas services, I'm happy.
+[00:01:39] Me: That's the plan, supposedly. Marcus, you'd know better than me.
+[00:01:43] Speaker 1: Supposedly mid-November they wrap. I'll believe it when I park on it.
+[00:01:48] Unknown: ...joining now...
+[00:01:51] Caller 2: Hey, this is Ray, sorry I'm late. Had a meeting run over.
+[00:01:55] Me: Ray, perfect timing, we were just about to start. You're coming through good.
+[00:02:00] Caller 2: Great. I've got the kids wing drawings open on my end, so I'm ready when you are.
+[00:02:06] Me: Awesome. So just to set the table for everybody — this is the Kids Wing AV install coordination. We've got the classroom displays, the check-in kiosks, the network side, and then the little auditorium audio.
+[00:02:19] Speaker 2: And I really want to get the classrooms nailed down today if we can, because the volunteers keep asking me.
+[00:02:25] Me: Totally. Let's start right there, the classroom displays. Ray, remind everybody what the two options were.
+[00:02:32] Caller 2: Sure. So originally the design had short-throw projectors in each of the eight classrooms, ceiling mounted, with a pull-down screen.
+[00:02:41] Caller 2: But the other option, which honestly I'd lean toward now, is flat panel displays on the wall.
+[00:02:47] Speaker 1: What's driving the change? Just curious from a facilities side.
+[00:02:51] Caller 2: Couple things. Projector bulbs and maintenance, the rooms have a lot of ambient light from those big windows, and honestly the install is cleaner with panels.
+[00:03:02] Speaker 2: The brightness thing is huge. Last year we tried a little projector in room four and you couldn't see anything in the morning sun.
+[00:03:10] Me: Yeah, I remember that. It washed out completely.
+[00:03:14] Caller 1: For what it's worth, from a support standpoint, panels are way easier for us too. No lamp replacements, fewer calls.
+[00:03:22] Me: Okay, so it sounds like there's pretty broad agreement. Let me just say it plainly so it's on the record — are we going with flat panel displays in the classrooms instead of projectors?
+[00:03:33] Speaker 2: Yes, from my side absolutely.
+[00:03:36] Speaker 1: Facilities is fine with that. Less stuff hanging from my ceilings.
+[00:03:40] Caller 2: Great, I'll update the design to panels for all eight rooms.
+[00:03:44] Me: Perfect. So that's decided, flat panels, not projectors.
+[00:03:49] Speaker 2: Oh thank goodness. The teachers are gonna be so happy.
+[00:03:53] Caller 2: Now the next question is sizing, because the rooms are different dimensions.
+[00:03:58] Me: Right, walk us through that.
+[00:04:01] Caller 2: So the drawings show, um, four of the rooms are kind of standard size, two are bigger, and two are those small breakout rooms.
+[00:04:10] Caller 2: My instinct was to spec maybe seventy-five inch in the big rooms, sixty-five in the standard, and fifty-five in the little ones.
+[00:04:19] Speaker 1: Three different sizes though, that's three different mount types, three different spare parts.
+[00:04:25] Me: Yeah, that was gonna be my concern too. From a volunteer and support angle, mixing sizes gets confusing.
+[00:04:32] Speaker 2: Honestly for what we show — it's mostly the countdown timer, worship videos, the lesson slides — does the size matter that much room to room?
+[00:04:42] Caller 1: If you standardize, every room's the same mount, same setup, same everything. We'd love that.
+[00:04:48] Me: What if we just pick one size and use it everywhere? Even if it's a little big in the small rooms and a little small in the big ones.
+[00:04:56] Caller 2: You could. The sixty-five is kind of the sweet spot. Seventy-five in a breakout room would be overkill and the fifty-five would feel small in the big rooms.
+[00:05:06] Speaker 2: I'd rather err on the bigger side in every room, honestly.
+[00:05:10] Me: Okay. So proposal — let's standardize on the sixty five inch panels for all of them. One size, one mount, one spare on the shelf.
+[00:05:19] Speaker 1: I like that a lot. Way simpler for me.
+[00:05:22] Speaker 2: Works for me. Sixty-five everywhere.
+[00:05:25] Caller 2: Alright, sixty-five inch across all eight rooms. That actually simplifies my quote too.
+[00:05:31] Me: Great, let's lock that in. Standard sixty-five inch panels, all classrooms.
+[00:05:36] Caller 1: Sorry, you cut out for a sec — did you say all eight rooms get the same size?
+[00:05:41] Me: Yep, all eight, sixty-five inch.
+[00:05:44] Caller 1: Got it, thanks.
+[00:05:47] Speaker 2: Can I ask a dumb question? The breakout rooms are really small. Is a sixty-five gonna look ridiculous?
+[00:05:54] Caller 2: It'll be a little generous but it'll be fine. Kids won't complain about a big screen.
+[00:05:59] Speaker 1: Nobody's ever said the TV's too big.
+[00:06:02] Speaker 2: Fair point.
+[00:06:05] Me: Okay so Ray, to redo the numbers — the current quote has the mix of sizes and the projectors, right?
+[00:06:12] Caller 2: Correct, the quote you have is the old projector-based design. That's all gonna change.
+[00:06:18] Me: Can you get us a fresh quote based on where we just landed?
+[00:06:22] Caller 2: Yeah, no problem. I'll send over a revised quote with the sixty five inch units, all eight rooms, panels not projectors.
+[00:06:30] Me: Perfect. And timeline on that, roughly?
+[00:06:33] Caller 2: Uh, give me till early next week. I need to check panel availability with my distributor.
+[00:06:39] Me: That's fine. No rush this week.
+[00:06:42] Speaker 1: Ray, when you quote the mounts, make sure they're the tilting kind, not just flat. Those rooms have the high wainscoting.
+[00:06:50] Caller 2: Good catch, I'll spec tilting mounts. Thanks Marcus.
+[00:06:54] Me: Oh, and Ray, do you have the actual room dimensions, or are you working off the old architectural set?
+[00:07:00] Caller 2: I've got the old architectural drawings but I'm not a hundred percent sure they match what got built. There were some changes during construction.
+[00:07:08] Me: Yeah, there were. The wall between seven and eight moved, I know that for sure.
+[00:07:13] Speaker 1: And the cubbies changed in a couple rooms.
+[00:07:16] Me: Let me get you the as-builts and the measured drawings so you're working off reality. I'll get you the room drawings by Friday.
+[00:07:24] Caller 2: That'd be great, that'll make the quote way more accurate.
+[00:07:28] Speaker 2: Wait, should we be worried about where the panels go on the wall? Like, kid height versus adult height?
+[00:07:35] Me: Good question. We'll want them high enough that little hands can't grab them but low enough to see.
+[00:07:41] Caller 2: I usually mount classroom displays with the center around fifty-four to sixty inches. For a kids room we might go a touch higher.
+[00:07:49] Speaker 2: Yeah, please go higher. I promise you a three-year-old will try to touch it.
+[00:07:54] Caller 1: They'll touch it, they'll lick it, they'll do everything to it.
+[00:07:58] Speaker 2: Ha, you're not wrong, Devin.
+[00:08:01] Me: Okay, so Ray's got the revised quote, I've got the drawings to him by Friday. Good start.
+[00:08:07] Speaker 1: Hey, random thought while we're on screens — what are we doing in the big kids assembly room? The one where they do the large group gathering.
+[00:08:16] Me: We'll get to that, it's on my list for the audio part. But display-wise that one's trickier.
+[00:08:22] Speaker 2: That's the room where I really wanted something with some wow factor for the worship time.
+[00:08:28] Speaker 1: I mean, we could just drag the big LED wall in there.
+[00:08:32] Me: Ha, yeah, let me just unbolt the main auditorium wall and roll it down the hallway on a dolly.
+[00:08:38] Speaker 1: Put some casters on it, call it mobile.
+[00:08:41] Speaker 2: Please don't, the senior pastor would have a heart attack.
+[00:08:45] Caller 2: I've actually had a church ask me to do exactly that. It did not go well.
+[00:08:50] Me: Okay, okay, for the assembly room we'll talk real options later. Probably a bigger panel or a small proper LED, but that's a separate conversation.
+[00:08:59] Speaker 2: Noted. Just planting the seed.
+[00:09:02] Me: Seed planted. Devin, you still with us? I know you're driving.
+[00:09:06] Caller 1: Yep, still here. Just merged onto the highway, so if I go quiet that's why.
+[00:09:11] Me: No problem. We're gonna need you heavy on the next section about the network and the check-in kiosks.
+[00:09:17] Caller 1: Yeah, that's the part I really care about, so I'll perk up.
+[00:09:21] Speaker 2: Before we leave the classrooms — how are these panels gonna actually get the slides? Like, is there a computer in each room?
+[00:09:29] Me: Good question. My thinking is a little media player behind each panel that pulls from pro presenter, or we do a signage approach.
+[00:09:38] Caller 2: Both are doable. The little players are cheap and reliable. We can spec those into the same quote.
+[00:09:45] Me: Let's do that. Ray, add a player per room to the revised quote.
+[00:09:49] Caller 2: Will do. One player, one sixty-five inch panel, one tilting mount per room, times eight.
+[00:09:55] Speaker 2: And the teachers just turn it on and it works? That's the dream.
+[00:09:59] Me: That's the dream. Whether we hit it is another story.
+[00:10:03] Speaker 1: Famous last words.
+[00:10:06] Caller 1: As long as it's on the network right, it'll be fine. Which is, you know, my whole thing.
+[00:10:11] Me: Which is a perfect segue, actually. But before we switch, Priya, anything else purely on the classroom displays?
+[00:10:18] Speaker 2: Um, just — when do you think they'd physically get installed? The volunteers keep asking me for a date.
+[00:10:25] Me: We'll hit scheduling at the very end once we know the whole scope. I don't want to promise a date and blow it.
+[00:10:32] Speaker 2: Fair. I'll tell them "soon" for now.
+[00:10:35] Speaker 1: The most dangerous word in facilities. "Soon."
+[00:10:39] Me: Ha. Okay. Oh, one more thing — the panels, are we doing the commercial grade ones or the consumer TVs? There's a cost difference.
+[00:10:48] Caller 2: For a church kids environment, I'd honestly lean commercial for the warranty and the always-on rating, but we can price both.
+[00:10:56] Me: Price both and we'll decide with the numbers in front of us. Don't lock it yet.
+[00:11:01] Caller 2: Understood, I'll show both lines on the quote so you can compare.
+[00:11:05] Speaker 2: Is the commercial one gonna like, double the price?
+[00:11:08] Caller 2: Not double. Maybe thirty, forty percent more per unit. We'll see the real numbers.
+[00:11:14] Speaker 2: Okay. I just don't want to be the reason we blow the budget.
+[00:11:18] Me: You won't be. The budget's a whole separate headache we'll get to.
+[00:11:22] Speaker 1: Speaking of headaches, did the new breaker panel ever get inspected in that wing? I lost track.
+[00:11:28] Me: Uh, that's actually relevant to the electrical we'll need. Hold that thought, Marcus, let's bring it up in the network section.
+[00:11:35] Speaker 1: Will do.
+[00:11:37] Caller 1: Yeah, electrical and data kind of go together for the kiosks, so that's a good place to talk it.
+[00:11:43] Me: Exactly. Okay, let me do a quick recap before we move on so nobody's lost.
+[00:11:49] Me: Classrooms — flat panels instead of projectors, sixty-five inch across all eight rooms, tilting mounts, a media player per room.
+[00:11:58] Speaker 2: Yes.
+[00:12:00] Me: Ray's sending a revised quote with commercial and consumer options priced out, and I'm getting him the real room drawings by Friday.
+[00:12:08] Caller 2: That all matches what I've got written down.
+[00:12:11] Speaker 1: Sounds right to me.
+[00:12:13] Me: Great. Devin, you ready to switch into the network and kiosk stuff?
+[00:12:18] Caller 1: Yeah, give me one sec, I'm gonna pull over at this gas station so I can actually focus.
+[00:12:23] Me: Perfect, take your time, we'll chat for a second.
+[00:12:27] Speaker 2: So Aaron, totally unrelated, did the new volunteer sign-up form ever go live? I had someone ask.
+[00:12:33] Me: Oh, it did, yeah, it went up last week. The link's on the kids page now.
+[00:12:38] Speaker 2: Oh great, I'll point people there. I had three new parents interested on Sunday.
+[00:12:43] Speaker 1: Three new volunteers, that's a good weekend.
+[00:12:46] Speaker 2: Right? I'll take it.
+[00:12:49] Caller 1: Okay, I'm parked, I'm back and focused. Let's do the network.
+[00:12:54] Me: Perfect timing. So the big pieces are the data drops, the kiosk network, and who's pulling what cable.
+[00:13:01] Caller 1: Right, and I think there's a clean split we can draw between what we handle and what Ray's crew handles.
+[00:13:08] Speaker 1: Before we go deep — is any of this gonna need me to open walls? Because that changes my timeline.
+[00:13:14] Me: Possibly in a couple spots. Let's map it out.
+[00:13:17] Caller 2: Most of it should be accessible above the ceiling grid, but there might be one or two fished walls.
+[00:13:24] Speaker 1: Okay, as long as I know in advance.
+[00:13:27] Me: We'll make sure you do. Alright, Devin, start us off on the drops.
+[00:13:31] Caller 1: Sure. So for the kiosks and the check-in stations, those are data, that's squarely our side...
+[00:15:02] Caller 1: Okay so continuing — the way I'd draw it, your team pulls the data drops and Ray handles the AV cabling. Clean line between the two.
+[00:15:11] Caller 2: That works for me. I don't want to be running Cat6 to switches, that's your world.
+[00:15:17] Me: Yeah, I think that's the sane division. Data and network is the MSP, AV signal runs are Ray's crew.
+[00:15:24] Speaker 1: And where does that leave me? I'm just asking because somebody's gotta cut the holes.
+[00:15:29] Caller 1: Any of the actual low voltage drops we're responsible for, we sub the physical pull or your guys do it, whatever's cheaper.
+[00:15:37] Speaker 1: My maintenance guys can do basic pulls if it's accessible ceiling. Fished walls I'd want a pro.
+[00:15:43] Me: Let's flag the fished walls separately. Ray, how many do you think we're actually talking?
+[00:15:49] Caller 2: Off the drawings, maybe two rooms where the panel location doesn't line up with a drop. Rest is above grid.
+[00:15:57] Speaker 2: Sorry, dumb question — what's a fished wall mean?
+[00:16:01] Me: No such thing as a dumb question. It means we snake cable down inside a finished wall instead of running it in open ceiling.
+[00:16:08] Speaker 2: Got it, okay. More work.
+[00:16:10] Caller 2: More work, more time, and you want it done before paint and trim, not after.
+[00:16:16] Speaker 1: That's the timeline thing I keep harping on.
+[00:16:19] Me: Noted. Devin, talk to me about the check-in side specifically.
+[00:16:24] Caller 1: Right, so good news there. We already ran the drops to the check in area during the lobby refresh last month.
+[00:16:32] Speaker 2: Oh, did we? I didn't realize that was done.
+[00:16:35] Caller 1: Yeah, that was part of the lobby project. Those drops are live and terminated, they're ready for the kiosks.
+[00:16:42] Me: So that's one thing off the list, that's already handled.
+[00:16:46] Speaker 2: That's a relief, honestly.
+[00:16:48] Caller 2: Confirm the count though. How many positions did you land there?
+[00:16:52] Caller 1: Four drops at the check-in counter, I believe. I can double-check the as-builts but I'm fairly sure it's four.
+[00:16:59] Speaker 2: Four should be plenty. We run three kiosks and a printer right now.
+[00:17:04] Me: Good. So check-in drops are done, that's not new scope. Let's talk the network design for them.
+[00:17:11] Caller 1: So here's my recommendation, and this is kind of a security thing too. The check in kiosks go on their own separate V LAN.
+[00:17:19] Speaker 1: What's the reason for that? Just curious.
+[00:17:22] Caller 1: Two reasons. One, those kiosks touch parent and kid data, so you want them isolated. Two, keeps them off the guest and staff traffic.
+[00:17:31] Me: Yeah, I'm fully on board with that. We should've done it a while ago honestly.
+[00:17:36] Speaker 2: Is that gonna slow down check-in? Sundays are chaos, I can't have it lagging.
+[00:17:41] Caller 1: No, if anything it's cleaner. Dedicated segment, no competing traffic. Should be faster, not slower.
+[00:17:48] Speaker 2: Okay, sold. As long as it's fast on Sunday morning.
+[00:17:52] Me: Alright, so let's call that decided — kiosks on their own VLAN. Devin, that's on your side to configure?
+[00:17:59] Caller 1: Yep. I'll stand up that V LAN for the kiosks on our end, switch config and all that. That's us, not Ray.
+[00:18:06] Caller 2: Yeah, don't look at me for VLANs. I plug in the screens.
+[00:18:10] Me: Ha, fair enough. So Devin owns the kiosk VLAN setup.
+[00:18:14] Caller 1: Correct. I'll get that scoped into our change ticket this week.
+[00:18:18] Speaker 1: Hang on, back up. The breaker panel I mentioned — does any of this depend on that inspection?
+[00:18:24] Me: Yeah, let's get into electrical now. Marcus, where did the panel land?
+[00:18:28] Speaker 1: So the new sub-panel went in for that wing, but I genuinely can't remember if it passed final inspection. I'd have to pull the permit.
+[00:18:37] Me: We need that nailed down, because every classroom display needs power behind it.
+[00:18:42] Speaker 2: Wait, there's no outlets behind where the screens go?
+[00:18:46] Speaker 1: Not all of them. Some rooms, yeah. A few we'd have to add a dedicated outlet.
+[00:18:51] Caller 2: You want an outlet right behind the mount so there's no cord hanging down. Looks clean, it's code-friendly.
+[00:18:58] Me: Right. So that's electrician work, that's a licensed trade, that's not Ray and it's not Devin.
+[00:19:04] Speaker 1: That'd be my electrical contractor. I can get them in.
+[00:19:08] Me: Okay, so here's the budget question I keep circling. The electrical work — is that coming out of facilities or the AVL budget?
+[00:19:16] Speaker 1: Ooh. That's a good question. Historically outlets are a facilities line item.
+[00:19:22] Me: Right, but this is driven by the AV install, so I could see it argued either way.
+[00:19:27] Speaker 2: Please don't make it come out of kids ministry. I'm begging.
+[00:19:31] Me: No, no, this isn't touching your budget, Priya. This is between facilities and AVL.
+[00:19:36] Speaker 1: Let me be honest, I don't have a clean answer. I'd want to check how we coded the lobby outlets last year.
+[00:19:43] Me: Yeah, let's not solve that right now. Let's flag it as open and figure out the budget owner later.
+[00:19:49] Caller 1: For what it's worth, when you did the lobby, the outlets were on the facilities ticket, not ours.
+[00:19:55] Speaker 1: See, that's a precedent. But I still want to verify before I commit my budget to it.
+[00:20:01] Me: Totally fair. So that stays an open question — who eats the electrical cost.
+[00:20:06] Speaker 1: Agreed, open for now.
+[00:20:08] Unknown: ...can hear a truck going by...
+[00:20:11] Caller 1: Sorry, that's me, I'm parked by the road. You still hear me okay?
+[00:20:15] Me: You're clear. Okay so let's get crew scheduling nailed down for the cabling.
+[00:20:20] Caller 1: So timing. Once we know the install week, I need to get my low voltage guys lined up. They book out.
+[00:20:27] Caller 2: Same, my cabling crew I need lead time. Couple weeks minimum.
+[00:20:32] Me: We're looking at the week of February fifteenth for the big install, roughly.
+[00:20:37] Speaker 1: That's still soft, right? I haven't confirmed trades for that week.
+[00:20:41] Me: Soft but that's the target. Devin, assuming that holds, can your crew hit it?
+[00:20:47] Caller 1: Should be fine. I'll get the cabling crew scheduled for that week, pending you confirming the date.
+[00:20:53] Me: Perfect. So you're owning the crew scheduling on the network side.
+[00:20:57] Caller 1: Yep, that's me. I'll put a hold on the calendar now and firm it once you say go.
+[00:21:03] Caller 2: And I'll do the same for the AV pulls. We'll want to be in there the same week, coordinated.
+[00:21:09] Me: Right, you two should talk directly so you're not tripping over each other in the ceiling.
+[00:21:14] Caller 1: Yeah, Ray, we should just hop on a call once the date's locked.
+[00:21:18] Caller 2: Works for me. Send me a time.
+[00:21:20] Speaker 2: This is the part where I just nod and let you nerds figure it out.
+[00:21:24] Me: Ha, pretty much. But you're the customer, so if anything sounds wrong, speak up.
+[00:21:29] Speaker 2: So far it all sounds smart. My only thing is Sunday can't break.
+[00:21:34] Caller 1: We won't touch the live check-in network during a weekend. All this work happens midweek.
+[00:21:40] Speaker 2: Good. That's my whole concern in one sentence.
+[00:21:43] Me: Let me recap the network piece so far. Data drops are MSP, AV cabling is Ray's crew.
+[00:21:50] Caller 2: Correct.
+[00:21:51] Me: Check-in drops already exist from the lobby project. Kiosks go on their own VLAN, Devin configures it.
+[00:21:58] Caller 1: All correct.
+[00:22:00] Me: And the electrical outlet work is open — we don't know whose budget yet.
+[00:22:05] Speaker 1: Right, that one's parked.
+[00:22:07] Caller 1: One more thing I'd add. The media players in each classroom, do you want those on the staff VLAN or something separate?
+[00:22:14] Me: Hm. Good question. They're basically signage players, they don't touch kid data.
+[00:22:20] Caller 2: They just pull content and push to the panel. Low risk.
+[00:22:24] Caller 1: I'd lean toward putting them on a signage or IOT segment, not the kiosk one. Different purpose.
+[00:22:30] Me: Yeah, I don't want to co-mingle the signage players with the check-in kiosks.
+[00:22:35] Caller 1: Agreed, keep them separate. The kiosk VLAN stays locked down just for check-in.
+[00:22:40] Me: Let's not fully design the signage segment today, but directionally, players separate from kiosks.
+[00:22:46] Caller 1: Works. I'll propose a couple options when I write up the network doc.
+[00:22:51] Speaker 2: How many VLANs are we up to now? I lost count.
+[00:22:54] Caller 1: For your world, really just the kiosk one is the firm decision. The rest is design detail.
+[00:22:59] Me: Right, the only locked network decision today is kiosks isolated. Everything else is Devin's recommendation to flesh out.
+[00:23:06] Speaker 1: Can I ask a facilities thing while we're paused?
+[00:23:09] Me: Go for it.
+[00:23:10] Speaker 1: The ceiling grid in those rooms — some of it's that older lay-in tile. If your guys are up in it a lot, tiles crack.
+[00:23:18] Caller 2: Yeah, we see that. We bring replacement tiles, but you should have a few spares on site.
+[00:23:24] Speaker 1: I've got a stack in storage. I'll pull some aside for that week.
+[00:23:28] Me: Good thinking. Let's not forget the little stuff like that.
+[00:23:32] Speaker 2: Okay unrelated for one sec — did everybody see the thing with the youth lock-in getting moved?
+[00:23:38] Speaker 1: Oh, it moved? To when?
+[00:23:40] Speaker 2: March something. They double-booked the gym with the men's breakfast.
+[00:23:45] Me: Classic. The gym is always the bottleneck.
+[00:23:48] Speaker 1: Tell me about it. I referee that calendar every week.
+[00:23:52] Me: Okay, let's not rabbit-hole. Back to the kiosks for a second — Priya, hardware.
+[00:23:57] Speaker 2: Yeah?
+[00:23:58] Me: Are you keeping the three kiosks you have, or does this project replace them?
+[00:24:03] Speaker 2: I'd love new ones but the current ones work. They're just slow sometimes.
+[00:24:08] Caller 1: The slowness might literally be the shared network. Once they're on their own VLAN, test them before you buy new.
+[00:24:15] Speaker 2: Oh, interesting. So the VLAN might fix the lag for free.
+[00:24:19] Caller 1: Possibly. I wouldn't promise it, but I'd try that first before spending on hardware.
+[00:24:24] Me: Let's hold on new kiosk hardware then. Isolate first, see if the speed problem goes away.
+[00:24:30] Speaker 2: I like free. Let's do that.
+[00:24:32] Me: So no kiosk purchase for now — that's a wait-and-see, not a decision to buy.
+[00:24:37] Caller 1: Right, and I'll build a quick test once the VLAN's up so we have real numbers.
+[00:24:42] Speaker 2: Perfect. If it's still slow after, then we talk new ones.
+[00:24:46] Me: Deal. Devin, on the drop count at check-in — you said four, when can you confirm?
+[00:24:52] Caller 1: I'll pull the as-builts tomorrow and confirm the exact number and the port assignments.
+[00:24:58] Me: Great. And just to be crystal clear for the minutes — we are not pulling new check-in drops.
+[00:25:04] Caller 1: Correct, we already ran the drops to the check in area, so that's done, no new cable there.
+[00:25:10] Speaker 1: That saves a ceiling I don't have to open, so I'm happy.
+[00:25:14] Me: Everybody wins on that one. Okay, Ray, back to you on the classroom AV runs.
+[00:25:19] Caller 2: So per room I'm running a signal cable from the media player location to the panel, plus power considerations we talked about.
+[00:25:27] Me: And that's HDMI over Cat, or a direct run?
+[00:25:30] Caller 2: For sixty-five inch at those distances, direct HDMI's fine if the player's near the screen. If it's in a cabinet across the room, I'd do HDBaseT.
+[00:25:40] Me: Let's keep the player right at the panel where we can. Simpler.
+[00:25:44] Caller 2: Agreed, that's cleanest. Behind the screen, small shelf or a mount bracket.
+[00:25:49] Speaker 2: Where do the kids not rip it off the wall? That's my real question.
+[00:25:53] Caller 2: Ha, good point. We can get a locking enclosure for the player. Tamper-resistant.
+[00:25:59] Speaker 2: Yes. Assume everything will be touched by a four-year-old.
+[00:26:03] Me: Let's spec tamper-resistant mounts and enclosures across the board then.
+[00:26:08] Caller 2: I'll note that in the quote. Secure mounts add a little but worth it in kids spaces.
+[00:26:13] Me: Definitely worth it. Okay, where are we on time? Let me check the agenda.
+[00:26:18] Speaker 1: We've still got the auditorium audio and the scheduling to go.
+[00:26:22] Me: Right. Before we leave network — any last questions on the kiosk VLAN or the drops?
+[00:26:28] Caller 1: None from me. I've got my two actions: confirm drop count, stand up the VLAN.
+[00:26:33] Speaker 2: And test the slow kiosks once it's up.
+[00:26:36] Caller 1: Right, three things. I'll keep track.
+[00:26:38] Me: And the electrical budget question stays open, I'll circle back with Marcus offline on that.
+[00:26:44] Speaker 1: Yeah, let me look at how we coded the lobby and I'll come back to you.
+[00:26:48] Me: Perfect. Devin, you said the data side is squarely yours — I just want that in the record clearly.
+[00:26:54] Caller 1: Yes. To restate it cleanly: your team pulls the data drops and Ray handles the AV cabling. That's the split.
+[00:27:02] Caller 2: And I'll coordinate with Devin on the shared ceiling time so we're efficient.
+[00:27:07] Me: Love it. Alright, quick breather and then we jump to the auditorium audio.
+[00:27:12] Speaker 2: Can I grab water real quick? Thirty seconds.
+[00:27:15] Me: Go, go. Devin, Ray, you two good on time?
+[00:27:18] Caller 1: I'm good for another half hour easy.
+[00:27:21] Caller 2: Same here.
+[00:27:22] Speaker 1: While she's up — Aaron, the sub-panel inspection, I'll just text my permit guy right now so I stop forgetting.
+[00:27:29] Me: Please do, that's been floating three meetings now.
+[00:27:32] Speaker 1: Texting him this second. Done.
+[00:27:35] Me: Thank you. That unblocks a lot.
+[00:27:37] Caller 1: If the panel didn't pass, does that push everything?
+[00:27:41] Me: It could push the electrical, but the AV install can mostly proceed. We'd just stage power last.
+[00:27:47] Caller 2: Yeah, I can hang screens and run cable before power's energized. No problem.
+[00:27:52] Me: Good, so the panel is a risk but not a hard blocker for the AV work.
+[00:27:57] Speaker 1: I'll know by end of week whether it passed.
+[00:28:00] Me: Great, let's put that down. Okay, Priya's back?
+[00:28:04] Speaker 2: I'm back, sorry.
+[00:28:06] Me: No worries. One more network thing came to me — guest wifi in those rooms, is that a kid-ministry need?
+[00:28:13] Speaker 2: Not really. Volunteers use their phones but we don't hand out wifi to parents in classrooms.
+[00:28:19] Caller 1: Then I'd keep guest wifi out of scope here. One less thing.
+[00:28:23] Me: Agreed, guest wifi's not part of this project.
+[00:28:26] Speaker 2: Correct, don't add that.
+[00:28:28] Me: Okay. I think network's wrapped. Devin, anything you need from me to move?
+[00:28:33] Caller 1: Just the confirmed install date. Once I have that, I'll get the cabling crew scheduled for that week and lock my calendar.
+[00:28:40] Me: You'll have the date as soon as Marcus confirms trades. Marcus?
+[00:28:44] Speaker 1: Give me till end of next week. I need to call two contractors.
+[00:28:48] Me: End of next week for a confirmed install week. That works for everybody?
+[00:28:53] Caller 2: Works for me as long as it's not later. My crew books out.
+[00:28:57] Caller 1: Same. Sooner the better but end of next week's fine.
+[00:29:01] Speaker 2: Fine by me, I'm just the happy recipient.
+[00:29:04] Me: Great. So to summarize the open items before audio: electrical budget owner is open, panel inspection pending, install date pending Marcus.
+[00:29:13] Speaker 1: That's an accurate list.
+[00:29:15] Caller 1: And on my side, VLAN, drop count, kiosk test — all mine to execute.
+[00:29:20] Me: Perfect, I've got all that written. Let me read it back one more time so the notes are right.
+[00:29:26] Me: Decision — the check-in kiosks are isolated on their own VLAN, Devin configures it.
+[00:29:31] Caller 1: Yep.
+[00:29:32] Me: Decision — MSP owns data drops, Ray owns AV cabling.
+[00:29:36] Caller 2: Correct.
+[00:29:37] Me: Noted as already done — check-in area drops were pulled last month in the lobby project.
+[00:29:43] Caller 1: Right, that's not new work.
+[00:29:45] Me: Open question — electrical outlet cost, facilities or AVL.
+[00:29:49] Speaker 1: Still open, I'll research.
+[00:29:51] Me: And actions — Devin schedules the cabling crew once the date's set, and stands up the VLAN.
+[00:29:57] Caller 1: Both mine, yes.
+[00:29:59] Speaker 2: You're very thorough, Aaron, it's a little scary.
+[00:30:02] Me: Ha, it's the only way I don't drop things. Okay — quick tangent is fine, then audio.
+[00:30:08] Speaker 1: Honestly I'm impressed we got through network without a fight.
+[00:30:12] Caller 2: Networks are easy. Wait till we argue about speaker placement.
+[00:30:16] Me: Oh, we're about to. That's literally the next section.
+[00:30:19] Speaker 2: Great, my favorite, loud things for small children.
+[00:30:23] Me: Ha. Alright, before that — Devin, anything blocking you from starting the VLAN work early?
+[00:30:29] Caller 1: Not really, I could stand it up ahead of the install since the drops are already live.
+[00:30:35] Me: Oh, that's a good point. You could do the VLAN before the big install week.
+[00:30:40] Caller 1: Yeah, I'll stand up that V LAN for the kiosks on our end whenever, it doesn't depend on the classroom work.
+[00:30:46] Speaker 2: Wait, so the check-in could get faster before February?
+[00:30:50] Caller 1: Potentially, yeah. I can decouple that and do it sooner.
+[00:30:54] Me: Let's do it sooner then. No reason to wait on the check-in improvement.
+[00:30:58] Caller 1: I'll fit it in the next couple weeks and run that speed test after.
+[00:31:03] Speaker 2: You just became my favorite person on this call.
+[00:31:06] Caller 2: Hey now.
+[00:31:07] Speaker 2: Second favorite. You hang the screens.
+[00:31:10] Me: Ha, okay. So kiosk VLAN gets pulled forward, happens before the install.
+[00:31:15] Caller 1: Correct, decoupled and early.
+[00:31:17] Me: Love it. Marcus, does Devin need a maintenance escort to be in the IDF closet?
+[00:31:22] Speaker 1: Yeah, anybody in the network closet needs me or my guy to badge them in.
+[00:31:27] Caller 1: Just give me a window and someone to let me in, I'm quick.
+[00:31:31] Speaker 1: Text me a day, I'll have someone meet you.
+[00:31:34] Me: Easy. Okay, I think network is genuinely done. Any last word, anyone?
+[00:31:39] Caller 2: Nothing from me on network.
+[00:31:41] Speaker 2: I'm good.
+[00:31:42] Caller 1: All set.
+[00:31:43] Me: Alright. Let's shift to the kids auditorium audio. This is the fun one.
+[00:31:48] Speaker 2: Define fun.
+[00:31:49] Me: So the big question is whether we add gear or use what's already there.
+[00:31:54] Caller 2: What's in that room now? Remind me.
+[00:31:57] Me: There's already a cue sis core serving that wing, believe it or not.
+[00:32:02] Caller 2: Oh nice. If there's a Q-SYS core already, that changes the whole conversation.
+[00:32:07] Me: Exactly. I don't think we need a new DSP at all.
+[00:32:11] Speaker 1: Wait, when did that go in? I don't remember a core going in there.
+[00:32:15] Me: It went in with the original build-out, it's just underused. Couple of ceiling speakers and a wall plate.
+[00:32:21] Speaker 2: So we already own the brains, we just need to use them?
+[00:32:25] Me: Pretty much. That's a budget win if it pans out.
+[00:32:28] Caller 2: Let me verify the core has free channels before we commit. But directionally, reuse it.
+[00:32:34] Me: Yeah, let's dig into that now — Ray, what do you need to confirm capacity?
+[00:35:01] Caller 2: Okay, so I pulled up the old commissioning sheet while you were talking.
+[00:35:06] Caller 2: The core's a Core 110, and it looks like only about a third of the channels are mapped.
+[00:35:12] Me: That's what I figured. Plenty of headroom for a couple more zones.
+[00:35:16] Caller 2: Yeah, you've got room. I'd want to lay hands on it physically, but on paper it's fine.
+[00:35:22] Speaker 2: So in human words, what does that mean for my room?
+[00:35:26] Me: It means we don't buy a new processor. We point the existing one at your speakers and mics.
+[00:35:32] Speaker 2: Okay. And that's cheaper than the alternative?
+[00:35:35] Me: A lot cheaper. A new DSP plus programming is several thousand dollars we just don't spend.
+[00:35:41] Caller 2: Programming the existing core still takes me a few hours, to be fair.
+[00:35:45] Me: Sure, but hours versus hardware plus hours. Big difference.
+[00:35:49] Speaker 1: I'm just surprised it's been sitting there doing almost nothing this whole time.
+[00:35:54] Me: Welcome to my life, Marcus. Half the building has stuff like that.
+[00:35:58] Speaker 2: Okay so are we deciding this or still poking at it?
+[00:36:02] Me: Let's decide it. Ray, with the caveat you verify channels, are you comfortable?
+[00:36:07] Caller 2: Yeah. Assuming free channels, which I'm ninety percent on, go for it.
+[00:36:12] Me: Then let's make it official — we'll use the existing cue sis core for the kids room audio.
+[00:36:18] Speaker 2: Great. One less thing.
+[00:36:20] Caller 2: I'll flag it in writing if the capacity turns out short, but I don't expect that.
+[00:36:25] Me: Perfect. Devin, you still with us? Anything from the network side on the core?
+[00:36:30] Caller 1: Still here. The core's on the AV VLAN already, so nothing changes for me.
+[00:36:35] Me: Good, that's clean.
+[00:36:37] Speaker 1: Hang on, is that core on a UPS? If the power blips, does the kids room drop?
+[00:36:43] Me: Uh, good question. I think it's on the rack UPS but I'd have to check.
+[00:36:48] Speaker 1: Worth checking. That closet's had a couple of flickers this year.
+[00:36:52] Me: Noted. I'll confirm the UPS when I'm in there next.
+[00:36:56] Caller 2: If it's not, it's a cheap add. That rack's got room.
+[00:37:00] Me: Yeah. Okay, so audio hardware is basically settled. Now the speakers themselves.
+[00:37:06] Speaker 2: The ceiling ones that are up there, are they any good?
+[00:37:09] Me: They're fine for voice. For kids worship with tracks, you might want a little more.
+[00:37:15] Speaker 2: We do play tracks. The band does three songs and it gets loud in a good way.
+[00:37:20] Caller 2: Then I'd add two small powered speakers up front and leave the ceiling for voice fill.
+[00:37:26] Me: That's what I was thinking. Distributed ceiling for speech, point source for music.
+[00:37:31] Speaker 2: Okay, I trust you two on the speaker thing. That's beyond me.
+[00:37:35] Me: We'll spec it and put it in the quote. Ray, add that to the revision.
+[00:37:39] Caller 2: Two powered tops up front, got it. I'll line-item it separately so you can see the cost.
+[00:37:45] Me: Appreciate it. Alright, let's talk screens in that room.
+[00:37:49] Speaker 2: Oh, this is the part I actually care about.
+[00:37:52] Me: I figured. So right now there's nothing up front for the kids to see, right?
+[00:37:57] Speaker 2: Nothing. The leaders hold up printed signs like it's nineteen ninety.
+[00:38:02] Caller 1: That's amazing.
+[00:38:03] Speaker 2: It's not. It's chaos.
+[00:38:05] Me: So the plan is at least one large display up front for lyrics and the teaching slides.
+[00:38:11] Speaker 2: Yes. And can it do the countdown and the games? We do a lot of on-screen games.
+[00:38:17] Me: Totally. If we run pro presenter to it, you get countdowns, lyrics, games, all of it.
+[00:38:23] Speaker 2: Then yes, I want that.
+[00:38:25] Me: Okay but here's the thing I need from you. I don't know your content.
+[00:38:30] Speaker 2: What do you mean my content?
+[00:38:33] Me: Like, how many screens you actually need, what goes on each one, resolution, aspect ratio.
+[00:38:39] Speaker 2: Oh. Hmm.
+[00:38:40] Me: Like do you need a separate screen for the band to see lyrics, or just the one front display?
+[00:38:46] Speaker 2: I hadn't thought about the band seeing anything.
+[00:38:49] Caller 2: That's actually the big question. One display or two changes the mounting and the cabling.
+[00:38:55] Me: Right. So Priya, can you put together a list of what content you're running each week?
+[00:39:01] Speaker 2: I can do that. Like a document?
+[00:39:03] Me: Yeah, just, you know, here's what we show, here's who needs to see it.
+[00:39:08] Speaker 2: Okay. I'll talk to my weekend leads and write up what we actually put on screen.
+[00:39:13] Me: That's exactly it. Screen content requirements, basically.
+[00:39:17] Speaker 2: When do you need it?
+[00:39:19] Me: Before Ray finalizes the quote, so the sooner the better. No hard date yet.
+[00:39:24] Speaker 2: I'll get it to you. Give me a week-ish.
+[00:39:27] Caller 2: A week works for me. I'm not quoting the room displays till I hear from you anyway.
+[00:39:32] Me: Great. So to be clear, you're sending me the content requirements, I'll turn that into a screen layout.
+[00:39:38] Speaker 2: Wait, so I don't design the screens?
+[00:39:41] Me: No, you tell me what you need, I'll put together what we want on the screens.
+[00:39:46] Speaker 2: Oh good. Because I would design something hideous.
+[00:39:49] Caller 1: Confirmed.
+[00:39:50] Speaker 2: Devin, you don't even work here.
+[00:39:52] Caller 1: I feel very involved though.
+[00:39:54] Me: Okay, moving on. There's one screen question I keep going back and forth on.
+[00:40:00] Speaker 2: Which is?
+[00:40:01] Me: Whether the person running slides needs their own little monitor to see what's coming next.
+[00:40:07] Speaker 2: Like the one you guys have in the big room? The one that shows the next slide?
+[00:40:12] Me: Exactly, a confidence monitor. It shows the operator the current and next slide.
+[00:40:17] Speaker 2: That seems useful. Why are you going back and forth?
+[00:40:20] Me: Because it's another display, another mount, another cable, and I'm not sure your room needs it.
+[00:40:26] Caller 2: Depends who's driving. A volunteer who's nervous, yeah, a confidence monitor helps a lot.
+[00:40:32] Me: Right. So I'm leaning toward a confidence monitor but let's not lock that in.
+[00:40:37] Speaker 2: Okay. What makes you decide yes or no?
+[00:40:40] Me: Honestly it depends on your answer to a question I haven't asked yet.
+[00:40:44] Speaker 2: Ominous.
+[00:40:45] Me: Who is actually going to run that room on the weekend?
+[00:40:49] Speaker 2: What do you mean, run it?
+[00:40:51] Me: Someone has to push the slides, start the countdown, run the games, every service.
+[00:40:57] Speaker 2: I mean... the leaders? Whoever's teaching?
+[00:41:00] Me: See, that's the thing. The teacher can't teach and run pro presenter at the same time.
+[00:41:05] Speaker 2: Oh. Yeah, that's a problem.
+[00:41:08] Caller 2: This is the thing that kills these installs. Nobody plans who operates it.
+[00:41:13] Me: Right. I can build you the best room in the building and if nobody runs it, it sits dark.
+[00:41:19] Speaker 2: So I need a volunteer. A tech volunteer. For kids.
+[00:41:23] Me: You need a few, so you have rotation. One per service minimum.
+[00:41:28] Speaker 2: We barely have enough leaders as it is.
+[00:41:31] Me: I know. I'm not trying to dump a problem on you, but it's real.
+[00:41:35] Speaker 2: No, you're right. I just don't have an answer right now.
+[00:41:39] Me: That's fair, and we don't have to solve it today. But it affects the confidence monitor.
+[00:41:44] Speaker 2: How so?
+[00:41:45] Me: If it's a dedicated tech person, they learn the system, maybe no monitor needed.
+[00:41:50] Me: If it's rotating leaders who barely touch it, a confidence monitor saves everybody.
+[00:41:55] Speaker 2: That actually makes sense. So the staffing decides the gear.
+[00:41:59] Me: Exactly. So let's leave the monitor open until you figure out staffing.
+[00:42:04] Caller 2: Works for me. I'll quote it as an option, plus or minus, so the number's not a surprise.
+[00:42:10] Me: Perfect. Thank you, Ray.
+[00:42:12] Speaker 1: Can I ask a dumb facilities question?
+[00:42:14] Me: There are no dumb facilities questions, only expensive ones.
+[00:42:18] Speaker 1: Where's the operator going to sit? Is there a booth, a table, what?
+[00:42:22] Speaker 2: Oh. Good question. The room's just open floor right now.
+[00:42:26] Me: We'd probably do a small podium or a table at the back with a laptop.
+[00:42:31] Speaker 1: Because if it's a table you need power and a data drop there too.
+[00:42:35] Me: Yes. Devin, that's another drop, back corner of the kids auditorium.
+[00:42:40] Caller 1: Add it to the list. One more drop, operator position, kids room.
+[00:42:44] Me: And Marcus, power at that spot too.
+[00:42:47] Speaker 1: Noted. Back corner, power and data. I'll fold it into the electrical scope.
+[00:42:52] Speaker 2: This room keeps getting more complicated.
+[00:42:55] Me: That's how it always goes. It's never just a TV on a wall.
+[00:42:59] Caller 2: If it were just a TV on a wall you wouldn't need me.
+[00:43:02] Me: Fair point.
+[00:43:03] Speaker 2: So just to make sure I've got my homework. I write up what we put on screen each week.
+[00:43:09] Me: Yes. Content requirements, and a note on whether the band needs their own view.
+[00:43:14] Speaker 2: And I start thinking about who runs it.
+[00:43:17] Me: That one's bigger, but yeah, start thinking volunteers.
+[00:43:20] Speaker 2: And you turn my content thing into an actual screen design.
+[00:43:24] Me: Correct. You give me the what, I give you the how.
+[00:43:27] Speaker 2: Okay. I can hold up my end.
+[00:43:30] Me: I know you can. Alright, Ray, from the audio and screen side, do you have what you need?
+[00:43:35] Caller 2: Mostly. I need Priya's content to finalize displays, and I'll verify the core myself.
+[00:43:41] Me: When can you get into the room to check the core?
+[00:43:44] Caller 2: I'm out there next week for the drawings anyway. I'll pop the rack then.
+[00:43:49] Me: Oh right, you're coming for the room measurements. Perfect, do it all in one trip.
+[00:43:54] Caller 2: That's the plan. Fewer trips, happier invoice for you.
+[00:43:58] Speaker 1: Appreciate that, genuinely.
+[00:44:00] Me: Okay. Let me make sure I've captured the audio decisions out loud.
+[00:44:04] Me: We're reusing the existing core, no new DSP. Two powered speakers up front for music.
+[00:44:10] Caller 2: Correct.
+[00:44:11] Me: Ceiling speakers stay for voice. Confidence monitor is a maybe, pending staffing.
+[00:44:16] Speaker 2: And my content doc drives the screens.
+[00:44:19] Me: Right. I think that's the whole audio and screen picture.
+[00:44:23] Speaker 1: What about a microphone for the teacher? Did we cover that?
+[00:44:27] Me: Good catch. Yeah, they'll want a wireless lav or a headset.
+[00:44:32] Speaker 2: Headset. The lavs always end up clipped to a kid.
+[00:44:36] Me: Ha, headset it is. One wireless headset channel on the core.
+[00:44:40] Caller 2: I'll add a wireless receiver to the audio line items. One channel, headset.
+[00:44:45] Me: And a handheld too, for the worship leader. Make it two channels.
+[00:44:49] Caller 2: Two channels, one headset, one handheld. Done.
+[00:44:53] Speaker 2: See, this is why I don't design it myself.
+[00:44:56] Me: You'd have ended up with kazoos.
+[00:44:58] Speaker 2: Honestly the kids would love that.
+[00:45:00] Me: Okay, let's not. Devin, anything else you need from this audio segment?
+[00:45:05] Caller 1: No, audio's all on the AV VLAN, I'm not touching it. Just the operator drop I noted.
+[00:45:11] Me: Right, the operator drop. You got that on your list?
+[00:45:14] Caller 1: On the list. That plus the kiosk VLAN plus the cabling crew.
+[00:45:19] Me: You're carrying a lot, Devin. Thank you.
+[00:45:21] Caller 1: It's what you pay us for. Allegedly.
+[00:45:24] Speaker 1: Allegedly is doing a lot of work in that sentence.
+[00:45:27] Me: Okay, let's keep moving. We've still got scheduling and the mounts to figure out.
+[00:45:32] Speaker 2: Before we leave screens, one thing. The games are interactive sometimes.
+[00:45:37] Me: Interactive how?
+[00:45:38] Speaker 2: Like the leader taps the screen to pick a kid's answer. Is that a thing we can do?
+[00:45:43] Me: A touch display? We can, but it's more money and it changes the mount.
+[00:45:48] Caller 2: Touch panels at sixty-five inches get pricey fast. Just so you know going in.
+[00:45:53] Me: Yeah. Priya, put that in your content doc too — flag anything that needs touch.
+[00:45:58] Speaker 2: Okay. Honestly it might be a nice-to-have, not a must.
+[00:46:02] Me: That's the right way to think about it. Must-haves and nice-to-haves, two lists.
+[00:46:07] Speaker 2: Got it. I'll separate them.
+[00:46:09] Me: Perfect. Ray, for now assume non-touch unless Priya says otherwise?
+[00:46:14] Caller 2: Assume non-touch, quote touch as an alternate if she flags a room for it.
+[00:46:19] Me: Great. You're good at this.
+[00:46:21] Caller 2: Twenty years of people changing their mind at the last minute.
+[00:46:24] Speaker 2: I heard that.
+[00:46:25] Caller 2: You were meant to.
+[00:46:27] Me: Okay. I think the audio and screens block is genuinely wrapped.
+[00:46:31] Speaker 2: That felt productive.
+[00:46:32] Me: It was. Quick recap so nobody forgets their piece before we hit scheduling.
+[00:46:37] Me: Priya, content doc with must-haves, nice-to-haves, band view, and touch flags.
+[00:46:42] Speaker 2: Yep. A week-ish.
+[00:46:44] Me: Ray, verify the core next week, revise the quote with speakers, mics, and the monitor as an option.
+[00:46:50] Caller 2: Will do.
+[00:46:51] Me: And I'll turn Priya's doc into the actual screen layout once I have it.
+[00:46:55] Speaker 1: And I've got the operator power and data on my electrical list.
+[00:46:59] Me: Right. Okay, let's take two minutes and then talk install dates.
+[00:47:04] Speaker 2: Can we? I have a hard stop at the top of the hour.
+[00:47:07] Me: We'll get you out in time. Scheduling's quick-ish.
+[00:47:10] Caller 1: I may have to drop right at the hour too, just a heads up.
+[00:47:14] Me: Noted. Let's make sure we hit dates while everyone's still on.
+[00:47:18] Speaker 1: Then let's not take two minutes, let's just go.
+[00:47:21] Me: Fair. Okay, scheduling it is.
+[00:50:02] Me: Okay, install window. Ray, when can your crew realistically be on site?
+[00:50:07] Caller 2: Depends on the data drops being in. Devin, when's your cabling crew done?
+[00:50:12] Caller 1: If I get them scheduled for late January, we're buttoned up first week of February.
+[00:50:18] Me: So AV install could start the week after that.
+[00:50:21] Caller 2: Right. I'd want the panels and mounts on site before we send techs.
+[00:50:26] Me: Then let's target mid-February. How does the week of the fifteenth look for everybody?
+[00:50:31] Speaker 1: Fifteenth's a Sunday, so the crews would come Monday the sixteenth on.
+[00:50:36] Me: Good catch. So the install happens the week of February fifteenth, crews Monday through whenever.
+[00:50:42] Caller 2: Works for me. Three classrooms plus the auditorium, I'd budget three days.
+[00:50:47] Speaker 2: Is that during the week? We have programming Wednesday nights.
+[00:50:51] Me: Marcus, can we keep them out of the kids wing Wednesday evening?
+[00:50:55] Speaker 1: Yeah, they can stage in the gym and work days. Wednesday they wrap by four.
+[00:51:00] Speaker 2: That works. As long as the rooms are clean by five-thirty.
+[00:51:04] Caller 2: We'll tarp and sweep end of each day. Not our first church.
+[00:51:08] Me: Okay, so decision — we're locking the install for the week of February fifteenth.
+[00:51:13] Speaker 1: Lock it.
+[00:51:14] Speaker 2: Works for me.
+[00:51:15] Caller 1: Fine on my end.
+[00:51:17] Caller 2: Confirmed.
+[00:51:19] Me: Love it. Marcus, that gives you how long for the electrical?
+[00:51:23] Speaker 1: Plenty. I'll get the electrician out to add outlets in each classroom well before then.
+[00:51:28] Me: Each room needs what, a quad by the display and one at the operator spot?
+[00:51:33] Speaker 1: A quad behind each panel and a dedicated circuit for the auditorium rack, yeah.
+[00:51:38] Me: Perfect. Can you have that done by early February so cabling and power aren't tripping over each other?
+[00:51:44] Speaker 1: I'll aim for the first week of February. I'll call the electrician this week.
+[00:51:49] Caller 1: That helps me. My guys hate working around live electrical.
+[00:51:53] Unknown: Everybody does.
+[00:51:55] Me: Okay. Mounts. Ray, you're supplying those or am I?
+[00:52:00] Caller 2: Your call. I can include them in the quote, or you buy them and we just hang them.
+[00:52:06] Me: I'll probably buy them, I get a better rate through our vendor. Let me take that.
+[00:52:11] Caller 2: Fine. Just don't cheap out on the brackets at sixty-five inches.
+[00:52:15] Me: I won't. I'll order the wall mounts once we confirm the sizes.
+[00:52:19] Speaker 2: Wait, sizes aren't confirmed? I thought we said sixty-five everywhere.
+[00:52:23] Me: Panels are sixty-five. The mount depends on the VESA pattern on the final model Ray specs.
+[00:52:30] Caller 2: Right, give me the model numbers in the quote and you order to match.
+[00:52:34] Me: Exactly. So mounts wait on your revised quote.
+[00:52:38] Caller 2: You'll have it by end of next week.
+[00:52:40] Me: Good.
+[00:52:42] Speaker 2: Quick thing while I remember —
+[00:52:44] Caller 1: — sorry, go ahead —
+[00:52:45] Speaker 2: the classroom ceilings. Some of those are that old drop tile, right?
+[00:52:50] Speaker 1: Two of the three, yeah. The corner room is drywall over block.
+[00:52:54] Speaker 2: So can the ceiling actually take the weight of those mounts?
+[00:52:58] Me: These are wall mounts, not ceiling. We're going into the wall, not the tile.
+[00:53:03] Speaker 2: Oh. On the walls, okay. Those are block behind the drywall?
+[00:53:08] Speaker 1: Two are block, the divider wall between rooms two and three is just studs.
+[00:53:13] Me: Hmm. A sixty-five on a stud wall, we need to hit framing or add backing.
+[00:53:18] Speaker 1: I can have the electrician's guys add plywood backing while the walls are open.
+[00:53:23] Me: That'd be ideal. Can you confirm which walls are structural before we order mounts?
+[00:53:28] Speaker 1: I'll check the drawings and walk it this week.
+[00:53:31] Me: Okay, so that's still an open question — which walls hold and where we need backing.
+[00:53:36] Speaker 2: Good, because I do not want a TV falling on a four-year-old.
+[00:53:40] Caller 2: That is generally frowned upon, yes.
+[00:53:42] Me: Noted for the record, no TVs on children.
+[00:53:45] Speaker 2: Thank you.
+[00:53:47] Caller 1: Hey, I've got about five minutes before I drop.
+[00:53:50] Me: Okay, anything you need from us before you go, Devin?
+[00:53:54] Caller 1: Just the room drawings so I can mark drop locations. You're sending those?
+[00:53:58] Me: Yep, those are coming from me, I owe those to both you and Ray.
+[00:54:02] Caller 1: Great. And I'll have the cabling crew scheduled and confirm the dates back to you.
+[00:54:07] Me: Perfect. And the kiosk VLAN?
+[00:54:10] Caller 1: I'll stand that up on our side, it's independent of the physical install.
+[00:54:14] Me: Good. Thanks Devin.
+[00:54:16] Caller 1: Alright, I'm gonna drop. Thanks everybody, good meeting.
+[00:54:19] Speaker 2: Bye Devin.
+[00:54:20] Speaker 1: See ya.
+[00:54:22] Me: Okay. So where are we on total dollars. Somebody's going to ask me a number.
+[00:54:28] Speaker 2: The elders already asked me a number. Twice.
+[00:54:31] Me: Yeah. So I've got panels, mounts, speakers, mics, the Q-SYS work, cabling, and electrical.
+[00:54:38] Caller 2: My quote covers panels, speakers, mics, AV cabling, labor. Not your mounts, not the electrical.
+[00:54:45] Speaker 1: Electrical's on the facilities line, I'll have my own number for that.
+[00:54:49] Me: Right. So nobody has the whole picture in one place yet.
+[00:54:53] Speaker 2: Which is the thing finance keeps asking for.
+[00:54:56] Me: I'll pull together the total cost for everything — Ray's quote, my mounts, Marcus's electrical, all of it.
+[00:55:03] Speaker 1: Send me a line to fill in and I'll drop the electrical figure in.
+[00:55:07] Me: Will do. I'll build one sheet, everybody fills their column.
+[00:55:11] Caller 2: Just flag which numbers are firm and which are estimates. Finance always asks.
+[00:55:16] Me: Good note. I'll mark estimates clearly.
+[00:55:19] Speaker 2: And then what, you present that to the elders?
+[00:55:22] Me: No — I compile it, but the final budget sign off is up to the finance committee.
+[00:55:28] Speaker 2: Right. We're not approving anything in this room.
+[00:55:31] Me: Correct. We scope it, we price it, we hand them a clean number. They say yes or no.
+[00:55:37] Speaker 1: Honestly that's cleaner. I don't want to be the one guessing at the ceiling.
+[00:55:41] Me: Agreed. So my total sheet goes to finance, not an approval, just the ask.
+[00:55:46] Speaker 2: When do you need everyone's pieces for that?
+[00:55:49] Me: Ray's quote end of next week, Marcus's electrical whenever you've got it. I'll compile the week after.
+[00:55:55] Speaker 1: You'll have my number by then.
+[00:55:57] Caller 2: Quote's coming, like I said.
+[00:55:59] Me: Then I can have the total in front of finance before their November meeting.
+[00:56:03] Speaker 2: That would make them very happy.
+[00:56:05] Me: Let's make finance happy for once.
+[00:56:07] Speaker 1: Bold goal.
+[00:56:09] Me: Okay, Priya, I know you've got a hard stop. Anything before you jump?
+[00:56:13] Speaker 2: Just — I'll have the content doc to you in about a week, must-haves and nice-to-haves.
+[00:56:19] Me: And the touch flags and the band view.
+[00:56:21] Speaker 2: And those, yes. You remembered.
+[00:56:23] Me: I write things down. Go, you're free.
+[00:56:26] Speaker 2: Thank you all. This was great. Bye!
+[00:56:29] Caller 2: Bye Priya.
+[00:56:30] Speaker 1: See you Sunday.
+[00:56:32] Me: Okay. Marcus, Ray, let's just double-check the handoffs so I don't miss anything.
+[00:56:37] Speaker 1: Electrician for outlets and backing, I walk the walls this week, I give you an electrical number.
+[00:56:43] Me: And you confirm which walls are structural before I order mounts.
+[00:56:47] Speaker 1: Right. That's the gate on your mount order.
+[00:56:50] Me: Ray, revised quote end of next week with model numbers.
+[00:56:54] Caller 2: Panels, mounts as a line item you can strike, speakers, mics, monitor as option, labor.
+[00:56:59] Me: And I'll order mounts off your model numbers once the walls are confirmed.
+[00:57:03] Caller 2: And you're sending me the drawings too, same as Devin.
+[00:57:06] Me: Yep, drawings to both of you this week. That's on me.
+[00:57:10] Caller 2: Then I think we're good. February fifteenth week, we make it happen.
+[00:57:14] Me: One more time for the recording — install is locked the week of February sixteenth, Monday on.
+[00:57:20] Speaker 1: Fifteenth's the Sunday, work starts the sixteenth, yeah, we're saying the same thing.
+[00:57:24] Me: Good. Anybody have anything I didn't capture?
+[00:57:27] Speaker 1: The gym staging — I'll put a note out to the Sunday teams so nobody's surprised.
+[00:57:32] Me: Thanks. That's a good catch.
+[00:57:34] Caller 2: I'm set. Appreciate you all being organized, makes my life easy.
+[00:57:38] Me: We try. Alright, I think that's a meeting.
+[00:57:41] Speaker 1: That's a meeting.
+[00:57:43] Me: Thanks everybody. I'll send notes out today so we all have the same list.
+[00:57:48] Caller 2: Perfect. Talk soon.
+[00:57:50] Speaker 1: Later, Aaron.
+[00:57:51] Me: Bye guys.

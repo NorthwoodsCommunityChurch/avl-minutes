@@ -1,0 +1,463 @@
+Christmas Eve weekend services planning
+Friday, December 11, 2026 · 3:30 PM · 45 min · Room and call
+Transcribed by Minutes. Audio was not recorded.
+
+[00:00:04] Speaker 1: Hey, hey, there he is. I was starting to think you got lost in the server room again.
+[00:00:09] Me: Ha, no, I was just chasing down an intercom pack that wouldn't charge. Sorry I'm like two minutes late.
+[00:00:15] Speaker 2: You're fine, we're just getting coffee. Megan, is that the good stuff or the lobby stuff?
+[00:00:21] Speaker 3: It's the lobby stuff, I'm not gonna lie to you.
+[00:00:24] Speaker 2: Ugh, okay, noted. I'll lower my expectations.
+[00:00:28] Speaker 1: Honestly the lobby pot grows on you. Like a fungus.
+[00:00:32] Me: That's a great tagline. We should put that on the welcome banner.
+[00:00:36] Speaker 3: Northwoods: it grows on you, like a fungus. I'll make the slide.
+[00:00:41] Speaker 2: Please do not make that slide. Okay, are we waiting on Tom to call in?
+[00:00:46] Me: Yeah, he said he'd dial in around nine. He's doing something with the firewall this morning.
+[00:00:51] Speaker 1: The MSP guy, right? The IT folks.
+[00:00:54] Me: Yeah, Tom's our main contact over there. He handles the network stuff for us.
+[00:00:59] Speaker 2: Good, because I have questions about bandwidth that I don't understand well enough to ask.
+[00:01:05] Me: That makes two of us, honestly.
+[00:01:08] Speaker 3: While we wait, did everybody see the parking lot got repaved? It's so smooth now.
+[00:01:13] Speaker 1: Oh I know, I almost cried. No more pothole by the youth entrance.
+[00:01:17] Speaker 2: That pothole had a name. We'd had it for years.
+[00:01:21] Speaker 1: We should've done a funeral. Megan, slide.
+[00:01:24] Speaker 3: Already drafting it.
+[00:01:27] Unknown: Can you hear me?
+[00:01:29] Me: Oh, I think that might be Tom. Tom, you there?
+[00:01:33] Caller 1: Yeah, hey, sorry, can you hear me okay now? I was on mute and also apparently in another dimension.
+[00:01:39] Me: We got you loud and clear. Welcome, Tom.
+[00:01:42] Caller 1: Thanks. Sorry, the firewall update ran long. What'd I miss?
+[00:01:46] Speaker 2: Only a proposed funeral for a pothole. You're caught up.
+[00:01:50] Caller 1: Sounds about right for a Monday.
+[00:01:53] Speaker 2: Okay, let's actually start, because I've got a hard stop at ten. Aaron, you want to kick us off?
+[00:01:59] Me: Sure. So the whole reason we're here is Christmas Eve. It's closer than it feels.
+[00:02:04] Speaker 1: It's always closer than it feels. Every single year.
+[00:02:08] Me: Right. So the big first question, the one everything else hangs on, is how many services are we doing on Christmas Eve.
+[00:02:15] Speaker 2: And this is the thing we go around and around on every year.
+[00:02:19] Speaker 1: Last year we did two and the five o'clock was packed. Like fire-marshal-nervous packed.
+[00:02:25] Speaker 3: Yeah, we turned people away from the five. That didn't feel great.
+[00:02:29] Me: That's my memory too. The three o'clock was comfortable, the five was over capacity.
+[00:02:34] Speaker 2: So the question is do we add a third service or do we just live with the crowding.
+[00:02:39] Speaker 1: I mean, from a worship standpoint, three is a lot of reps for the band and vocal team in one night.
+[00:02:45] Speaker 3: And for my booth people. Three full runs of ProPresenter, three camera calls, it's a long night.
+[00:02:51] Me: It is. But honestly the pro presenter load is the same slides three times, that part I'm not worried about.
+[00:02:57] Speaker 3: True, the content's built once. It's more the human stamina.
+[00:03:01] Speaker 2: Karen's practical question: if we add a third, do we actually fill it, or do we just split the same people across three half-full rooms.
+[00:03:09] Speaker 1: That's the real risk. You dilute the energy.
+[00:03:12] Me: I don't think we would, though. We turned people away. There's demand we're not capturing.
+[00:03:17] Speaker 3: And a half-full room on Christmas Eve still feels warm. Candles help. It's forgiving.
+[00:03:23] Caller 1: Can I ask a dumb question from the IT side? Does adding a service change what you need from the network?
+[00:03:29] Me: Good question, and we'll get there. Streaming is a whole separate conversation. For now I just want the service count nailed down.
+[00:03:36] Caller 1: Got it, I'll hold my bandwidth stuff.
+[00:03:39] Speaker 2: So what are we actually proposing. Three times? Like three, five, and seven?
+[00:03:44] Speaker 1: Seven's late for families with little kids. The late one never does as well.
+[00:03:49] Speaker 3: Yeah, the seven last time we tried it was thin.
+[00:03:52] Me: What if we did three, five, and then like a five-thirty overflow —
+[00:03:56] Speaker 1: — no, that's chaos, you can't turn a room that fast —
+[00:03:59] Me: — yeah, scratch that, bad idea. Thinking out loud.
+[00:04:02] Speaker 2: So realistically the options are three and five, like last year, or three, five, and a later one.
+[00:04:09] Speaker 1: Honestly if we add one I'd rather it be earlier, not later. Like a one o'clock.
+[00:04:14] Speaker 3: Ooh, an early afternoon one. Families with toddlers would love a one o'clock.
+[00:04:19] Speaker 2: Interesting. So one, three, five.
+[00:04:22] Me: I actually really like that. You catch the nap-schedule families early and you relieve the five.
+[00:04:28] Speaker 1: One, three, five. The band can do that. It's front-loaded but everyone's home by six-thirty.
+[00:04:34] Speaker 3: And nobody's here till ten at night tearing down. I'm into it.
+[00:04:38] Speaker 2: Karen's hesitation is just the one o'clock. Do people come at one on Christmas Eve? That's early.
+[00:04:44] Speaker 1: I think they do now. Culture's shifted, people want to get it done and go to family dinner.
+[00:04:50] Me: We could promote the one as the family service. Lean into kids, shorter, candles, out the door.
+[00:04:56] Speaker 3: I love a themed service. I can build a whole look for it.
+[00:04:59] Speaker 2: Okay. I came in skeptical but I think you've talked me into it.
+[00:05:04] Me: So let's lock in three Christmas Eve services this year — one, three, and five.
+[00:05:09] Speaker 2: Yes. Let's do it. Three services, one, three, five. That's decided.
+[00:05:14] Speaker 1: Done. I'll tell the band to hold the whole afternoon.
+[00:05:17] Speaker 3: And I'll put all three in the planning center so nobody double-books.
+[00:05:21] Caller 1: Great, so three services total. That helps me plan too.
+[00:05:25] Me: Three total. One, three, five. Everybody write that down somewhere real.
+[00:05:30] Speaker 2: It's in my notes. In pen. We are not relitigating this in November.
+[00:05:35] Speaker 1: Famous last words. We always relitigate it in November.
+[00:05:39] Speaker 2: Not this year. Pen, Dave. Pen.
+[00:05:42] Unknown: It's locked.
+[00:05:44] Me: Okay, so that's the anchor. Now everything else keys off those three times.
+[00:05:49] Speaker 3: Can I just flag, three services means three teardown-and-reset moments for the stage. The candle stuff especially.
+[00:05:56] Me: Yeah, noted, we'll get into the candlelight stuff. That's its own headache.
+[00:06:01] Speaker 1: The candle moment is the whole reason people come, though. We can't skimp it.
+[00:06:05] Speaker 3: I'm not saying skimp, I'm saying it's three resets instead of two. Just flagging.
+[00:06:10] Speaker 2: Noted and appreciated. Keep flagging things, that's how we don't get surprised.
+[00:06:15] Caller 1: While it's quiet, do you want me to pull up last year's stream numbers? I've got them somewhere.
+[00:06:20] Me: Yeah, actually, that'd be perfect, because streaming's next. Hang on though, let me make sure we closed the service thing.
+[00:06:27] Speaker 2: We closed it. Three services. Moving on.
+[00:06:30] Me: Okay, moving on. Megan, before we leave scheduling — the one o'clock, does that step on the kids' ministry Christmas thing at all?
+[00:06:38] Speaker 3: Let me think. No, I think their thing is on the twenty-third in the morning.
+[00:06:42] Speaker 1: Right, the kids' pageant is the twenty-third. Different day.
+[00:06:46] Me: Okay good. Because the twenty-third is going to matter for us too, for a different reason.
+[00:06:51] Speaker 2: Rehearsal. I know where you're going. We'll get there.
+[00:06:55] Me: You read my mind. Yeah.
+[00:06:57] Speaker 3: Can I grab more coffee real quick before we dig in? Anybody want the fungus?
+[00:07:02] Speaker 1: I'll take a fungus, thank you.
+[00:07:04] Speaker 2: None for me, I'm already vibrating.
+[00:07:07] Caller 1: I'd take one but, you know, the logistics.
+[00:07:10] Me: We'll overnight you a cup, Tom.
+[00:07:12] Caller 1: Appreciated. Okay, I found the numbers from last year, by the way, whenever you're ready.
+[00:07:17] Me: Give us like two minutes and we'll dive into stream. Let me just, uh, let me set the table on the gear situation first.
+[00:07:24] Speaker 2: Go for it.
+[00:07:26] Me: So the reason three services complicates my world specifically is cameras and the stream. We're thin on cameras.
+[00:07:33] Speaker 1: How many do we have running now on a normal weekend?
+[00:07:36] Me: Three that are reliable. A fourth that's, let's say, moody.
+[00:07:40] Speaker 3: The fourth one is cursed. We don't talk about the fourth one.
+[00:07:44] Me: It's not cursed, it's just got a bad SDI run I keep meaning to fix.
+[00:07:48] Speaker 3: Cursed.
+[00:07:49] Speaker 1: I vote cursed.
+[00:07:51] Speaker 2: Noted, the church has one cursed camera. This is going in the annual report.
+[00:07:56] Me: My point is, for Christmas Eve, three cameras isn't enough to make the room look full and warm on the stream.
+[00:08:02] Caller 1: And that's where last year's numbers get interesting, because the stream viewership on Christmas Eve was way up over a normal week.
+[00:08:09] Me: Right, hold that thought, Tom, because that's exactly the next thing.
+[00:08:13] Speaker 2: Okay so before Tom's numbers, is there anything else purely on the schedule we need to settle? Because I want to bank the decisions before we go down the gear rabbit hole.
+[00:08:23] Me: Schedule-wise, the only other thing is the rehearsal date, and Karen already guessed it's the twenty-third.
+[00:08:29] Speaker 1: Which I'm good with, by the way. The twenty-third evening works for the band.
+[00:08:33] Speaker 2: Let's hold the rehearsal conversation till the end so we don't tangle it with streaming. Park it.
+[00:08:38] Me: Parked. Okay. Tom, now I actually want your numbers.
+[00:08:42] Caller 1: Great. So let me pull the dashboard up and share what we saw.
+[00:08:46] Speaker 3: And I'm back with fungus. What'd I miss?
+[00:08:49] Speaker 1: We decided the fourth camera is cursed. It's official now.
+[00:08:52] Speaker 3: Oh good, I've been saying that for a year.
+[00:08:55] Me: It's not — okay, whatever. Tom, take it away.
+[00:12:04] Caller 1: So just to recap what I had on screen, last Christmas Eve we peaked at just over eleven hundred concurrent viewers on the stream.
+[00:12:12] Me: Eleven hundred. That's more than double a normal Sunday.
+[00:12:16] Caller 1: Correct. And the drop-off data shows almost all of that was on the early evening service, not the late one.
+[00:12:23] Speaker 2: That tracks. The late one is mostly people who are already here.
+[00:12:28] Speaker 1: So are we even streaming all three, or is that the question?
+[00:12:32] Me: That's exactly the question. My honest recommendation, given three cameras and a tired crew, is we'll only livestream the five o'clock one.
+[00:12:41] Speaker 2: Say more. Why the five?
+[00:12:43] Me: Because the data Tom just showed, the five o'clock, or whatever the early evening slot ends up being, is where the online audience actually shows up.
+[00:12:52] Caller 1: I'd back that. Streaming all three triples your encoder load and your crew hours for, frankly, not much extra reach.
+[00:13:00] Speaker 3: And honestly from the pro presenter side, running a clean stream feed on all three means I need a second operator I don't have.
+[00:13:08] Speaker 1: Wait, so the four o'clock family one and the late one just, what, don't get recorded?
+[00:13:13] Me: We can still record the late one to disk for archive. I just wouldn't push it live.
+[00:13:18] Speaker 2: Recording and streaming are different lifts, right? I always mix those up.
+[00:13:22] Me: Totally different. Recording is one button and a hard drive. Streaming is the whole encoder, the bandwidth, the graphics, the whole circus.
+[00:13:30] Speaker 1: Okay. I think I'm convinced. Streaming the five makes sense.
+[00:13:34] Speaker 3: Which service is actually at five though? I thought we locked four, six, and eleven.
+[00:13:39] Me: Right, sorry, five is me being sloppy. I mean the middle one, the six o'clock.
+[00:13:44] Speaker 2: Oh no. Okay, this matters. Let's be precise or we'll crucify ourselves later.
+[00:13:49] Caller 1: On my dashboard the big spike was timestamped right around the early evening, so whichever one lands first after dark.
+[00:13:57] Me: Let's just call it this: we stream the main evening service, and the main evening service is the six o'clock. Everybody good with that wording?
+[00:14:05] Speaker 2: Yes. Stream the six. Record the eleven for archive. Four o'clock, nothing.
+[00:14:10] Speaker 1: Good with me.
+[00:14:11] Speaker 3: Good here.
+[00:14:12] Caller 1: No objection from my side.
+[00:14:14] Me: Great, that's locked. One stream, the evening six o'clock, that's our public livestream.
+[00:14:20] Speaker 2: And I just want to flag for comms, so we don't promise online people a four o'clock stream that isn't happening.
+[00:14:27] Speaker 3: Oh, good catch. The graphic last year said "services streaming all day" and it was a lie.
+[00:14:32] Me: It was a small lie.
+[00:14:34] Speaker 3: It was a graphic-sized lie, Aaron.
+[00:14:37] Me: Fair. Okay, so cameras. Even for just the one stream, I want that six o'clock to look full and warm, and three cameras won't do it.
+[00:14:46] Speaker 1: How many do you actually want?
+[00:14:48] Me: Five total. So I'd rent two. One for a wide balcony shot, one for a tight shot on the candles.
+[00:14:55] Speaker 2: What does renting two run us, ballpark?
+[00:14:58] Me: For the weekend, with the right lenses, I'm guessing somewhere around eighteen hundred, maybe two grand.
+[00:15:04] Speaker 2: That's inside what we set aside for Christmas production. I don't need to escalate that.
+[00:15:09] Caller 1: And two extra cameras feeding the stream, that's where the bandwidth question comes in on my end.
+[00:15:15] Me: Hold that, Tom, I want to lock the camera thing first. So can I get a yes on renting two?
+[00:15:21] Speaker 2: Yes. From the budget side, go ahead and rent two extra cameras for Christmas Eve.
+[00:15:26] Speaker 1: Love it. Five cameras. It'll look like a real production.
+[00:15:30] Speaker 3: Does that include a fix for the cursed one, or are we still at three reliable plus two rentals?
+[00:15:36] Me: Three reliable plus two rentals. I'm not trusting the cursed one on a holiday.
+[00:15:40] Speaker 3: Smart. Never trust the cursed one.
+[00:15:43] Me: Okay. I'll put in the camera rental order on Monday so we're ahead of the holiday crunch, because the rental houses get slammed in December.
+[00:15:51] Speaker 2: Good. The earlier the better. Last year we scrambled.
+[00:15:55] Me: Last year was a nightmare. I called four places on the twentieth.
+[00:15:59] Caller 1: I remember that email chain. It had a lot of exclamation points.
+[00:16:03] Me: That was a stressful week, Tom.
+[00:16:05] Speaker 1: Okay so Monday you order two cameras. What lenses are you grabbing?
+[00:16:09] Me: Probably a long seventy to two hundred for the candle close-up, and a wide for the balcony. I'll spec it with the order.
+[00:16:17] Speaker 3: Can the balcony one actually mount up there? Last time we gaff-taped a camera to the railing and I had a heart attack.
+[00:16:24] Me: There's a proper clamp mount now. I bought it over the summer. No more gaff tape.
+[00:16:29] Speaker 3: Growth. I'm proud of us.
+[00:16:31] Speaker 2: Okay, now Tom, bandwidth. Go.
+[00:16:34] Caller 1: Right. So here's my concern. Five cameras into your switcher is fine, that's internal. But the stream still goes out your single upload pipe.
+[00:16:43] Me: And our upload is, what, not great.
+[00:16:45] Caller 1: It's okay for one clean feed. But if you bump your stream bitrate to make five cameras look nice, you're going to saturate the upload.
+[00:16:54] Speaker 2: In English, what happens if we don't fix it?
+[00:16:57] Caller 1: In English, the stream gets choppy and buffers, especially at the exact moment eleven hundred people are watching.
+[00:17:03] Speaker 1: Yeah, let's not do that on Christmas Eve.
+[00:17:06] Caller 1: So the good news is your circuit can actually carry more. We just have the upload throttled in the firewall config from a while back.
+[00:17:14] Me: Oh, I didn't know it was throttled.
+[00:17:16] Caller 1: It was a thing we did to protect the office traffic. But for a Wednesday evening service, office traffic is basically zero.
+[00:17:23] Me: So you can open it up for that night?
+[00:17:25] Caller 1: Yeah. I'll go ahead and bump up the upload bandwidth before then so you've got headroom for a higher bitrate.
+[00:17:32] Speaker 2: Does bumping it cost anything from the provider?
+[00:17:35] Caller 1: No, it's within your existing plan. It's just a config change on our side, no new charge.
+[00:17:41] Speaker 2: Perfect. I like the free ones.
+[00:17:43] Me: Tom, can you do it a few days ahead so we can test it at rehearsal?
+[00:17:47] Caller 1: Yeah, I'll have it done before the twenty-third so you can hammer on it during the dress run.
+[00:17:52] Me: That's exactly what I wanted to hear.
+[00:17:54] Speaker 3: Wait, can we actually test the real stream at rehearsal? Like push a private stream?
+[00:17:59] Me: Yeah, we do an unlisted test stream. We did that two years ago and it saved us.
+[00:18:04] Speaker 3: I don't remember that.
+[00:18:05] Me: You were on maternity leave.
+[00:18:07] Speaker 3: Oh, right. I was busy making a human.
+[00:18:09] Speaker 2: A more important production.
+[00:18:11] Speaker 3: Debatable, but thank you.
+[00:18:13] Me: Okay, so cameras and bandwidth are sorted. Tom, anything else on the IT side we should preempt?
+[00:18:19] Caller 1: Just the usual. Make sure the encoder box has its updates done well before, not the day of. I'll check it remotely next week.
+[00:18:27] Me: Please do. Carbon light did a sneaky reboot on us last month.
+[00:18:31] Caller 1: Yeah, the backup software sometimes grabs the box mid-service. I've got that scheduled off-hours now.
+[00:18:38] Me: Appreciate it. Okay, let's talk audio real quick while we're on gear.
+[00:18:42] Speaker 1: Oh, that reminds me. Do we have enough handhelds for the extra vocalists on Christmas Eve? I want like six on stage.
+[00:18:49] Me: We were short two. I put in a request a while back.
+[00:18:53] Speaker 2: Oh, you don't need to order those, actually. Those new handheld wireless mics already came in last week.
+[00:18:59] Me: Wait, they came in? Nobody told me.
+[00:19:02] Speaker 2: They came to the main office. They're sitting in a box on my floor, I kept meaning to walk them over.
+[00:19:08] Me: Okay, so that's handled, not a to-do. Great, one less thing.
+[00:19:12] Speaker 1: So we've got the six handhelds now?
+[00:19:14] Me: If those are the two I ordered, then yes, four plus two new, that's six.
+[00:19:19] Speaker 2: They're the two you ordered. Same model, I checked the box.
+[00:19:22] Me: You're a hero, Karen. I'll grab the box after this.
+[00:19:25] Speaker 3: Are they on the same frequency band? Because the last batch fought with the in-ears.
+[00:19:30] Me: Good question. I'll coordinate them when I set up. Should be fine, but I'll scan the RF to be sure.
+[00:19:36] Speaker 3: The RF gremlins come out at Christmas. Something about the extra bodies in the room.
+[00:19:41] Me: It's the bodies, yeah, they absorb signal. More people, weaker RF.
+[00:19:46] Speaker 1: See, I never knew that. People are sponges.
+[00:19:49] Me: Human beings are mostly water, Dave.
+[00:19:51] Speaker 1: Deep.
+[00:19:52] Speaker 2: Okay, are we good on the stream and gear block? I want to make sure I captured it.
+[00:19:57] Me: Let me say it back. We stream only the six o'clock evening service. We rent two cameras for five total. I order those Monday.
+[00:20:05] Speaker 2: Yep.
+[00:20:06] Me: Tom bumps our upload bandwidth before the twenty-third. And the two new handheld mics are already here, so that's done.
+[00:20:13] Caller 1: That all matches what I've got.
+[00:20:15] Speaker 3: And the cursed camera stays benched.
+[00:20:17] Me: The cursed camera stays benched, yes, for the record.
+[00:20:20] Speaker 2: Beautiful. I feel very organized right now.
+[00:20:23] Speaker 1: Don't jinx it, we still have lighting to fight about.
+[00:24:02] Me: Okay, lighting. The big one is the candlelight moment at the end of the five and the six. That's the signature thing people remember.
+[00:24:10] Speaker 1: Right. Last year it felt too bright when everyone lit their candles. You couldn't really see the glow.
+[00:24:16] Me: Agreed. The house was way up. My plan is, when we hit the final carol, we bring the house lights all the way down to ten percent and let the candles carry the room.
+[00:24:26] Speaker 1: Ten percent, okay. Is that enough for people to, like, not trip walking in?
+[00:24:31] Me: By that point everyone's seated. We hold ten percent for Silent Night, then bring it back up slowly during the closing.
+[00:24:38] Speaker 3: I like that. It reads really well on camera too, the warm pools.
+[00:24:42] Speaker 2: So we're settled on ten percent for the candle song?
+[00:24:45] Me: Yeah, let's lock it. House down to ten percent for the candlelight moment, stage washes down to just the warm front light.
+[00:24:52] Speaker 2: Done. Love it.
+[00:24:54] Speaker 1: Can we get the stage really moody, though? Like, I want it to feel cinematic.
+[00:24:59] Me: Define cinematic.
+[00:25:01] Speaker 1: You know, like, beams of light coming down, that kind of atmosphere. The light you can actually see in the air.
+[00:25:07] Speaker 3: You mean haze.
+[00:25:08] Speaker 1: Haze. Yes. That's the word.
+[00:25:11] Me: Our hazer died in the spring, remember. The pump went and I never replaced it because it wasn't in the budget.
+[00:25:18] Speaker 1: Can we rent one? For Christmas Eve specifically. I'm kind of leaning toward renting a hazer just for that weekend.
+[00:25:24] Me: We could. It's not crazy money for a weekend. Depends what else the lighting budget's absorbing.
+[00:25:30] Speaker 2: How much are we talking?
+[00:25:32] Me: A decent water-based hazer is maybe, I don't know, a hundred, hundred-fifty for a weekend rental. Plus fluid.
+[00:25:39] Speaker 1: That's nothing for how good it'll look.
+[00:25:41] Me: It looks great until the smoke detector in the lobby decides it's a fire.
+[00:25:45] Speaker 3: Oh no. Did that happen before?
+[00:25:47] Me: Two Easters ago. The haze drifted into the hallway and we got a very loud surprise mid-service.
+[00:25:53] Speaker 1: Okay, that's a real concern.
+[00:25:55] Me: It is. If we do a hazer we have to talk to facilities about isolating the detectors in the room, which is a whole thing.
+[00:26:02] Speaker 2: So let's not fully commit on the hazer today. Dave, you're leaning that way, but let's leave it as a maybe until Aaron checks the detector situation.
+[00:26:10] Speaker 1: That's fair. I just want it on the table.
+[00:26:12] Me: It's on the table. I'm not saying no, I'm saying let me find out what facilities needs first. Not a decision yet.
+[00:26:19] Speaker 1: Deal. Leaning, not locked.
+[00:26:21] Speaker 3: I'll believe the haze when I smell the haze.
+[00:26:24] Speaker 1: You'll smell it, trust me.
+[00:26:27] Me: Okay. Separate from haze, the moving lights. I want to reprogram the back truss for the carols so it's not the same look as a normal Sunday.
+[00:26:35] Speaker 3: Are you doing that yourself or is that a volunteer thing?
+[00:26:38] Me: I'll do the programming. It's too fiddly to hand off this close to Christmas.
+[00:26:42] Speaker 1: Speaking of carols, can we talk slides? Because that's the part that always falls apart.
+[00:26:47] Me: Yeah, let's pivot to pro presenter. Megan, this is you.
+[00:26:50] Speaker 3: Okay, so last year the lyrics were a disaster because we kept getting different versions of the carols. Like, which verse of O Come All Ye Faithful.
+[00:26:59] Speaker 1: That was my fault. I changed the arrangement the day before.
+[00:27:02] Speaker 3: It wasn't just that. The slides had different wording than what you were singing. People in the seats were lost.
+[00:27:08] Me: So the fix is one source of truth. Dave gives us the final arrangements, Megan builds the slides from that, and nobody touches it after.
+[00:27:16] Speaker 3: Exactly. If I have the final song list and the actual verses you're using, I can build out all the carol slides by next Friday.
+[00:27:24] Speaker 2: Next Friday, that's the... what, the eighteenth?
+[00:27:27] Speaker 3: Something like that. Plenty of runway before the rehearsal.
+[00:27:30] Me: That works, as long as Dave gets you the list in time. Dave?
+[00:27:34] Speaker 4: Yeah, I can do that. Let me nail down the keys with the band first.
+[00:27:38] Me: When can you get Megan the final list?
+[00:27:40] Speaker 4: I'll have the final song list to you by Monday. That gives her the full week.
+[00:27:45] Speaker 3: Monday's perfect. If it slips past Wednesday I start to panic.
+[00:27:49] Speaker 4: It won't slip. Monday, I promise. Song list and the verse order.
+[00:27:53] Me: Great. So Dave, final song list to Megan by Monday, and Megan, carol slides done by next Friday.
+[00:27:59] Speaker 3: Yep. And I'll use the new background package, the snowy one, not the gold from last year.
+[00:28:05] Speaker 4: Oh, the gold was so much. It looked like a jewelry commercial.
+[00:28:09] Speaker 3: It really did.
+[00:28:10] Me: Megan, make sure the carol slides are tagged separately in pro presenter so they don't get mixed into the regular Sunday playlist.
+[00:28:17] Speaker 3: Already planning on a dedicated Christmas Eve playlist. Separate file, even.
+[00:28:21] Me: Perfect. Last year someone pulled up the wrong playlist during soundcheck and we lost twenty minutes.
+[00:28:27] Speaker 4: That was me again, wasn't it.
+[00:28:29] Me: I didn't say that.
+[00:28:30] Speaker 4: You were thinking it.
+[00:28:32] Speaker 2: Can I ask a dumb question about the slides? Do we do the lyrics during the candlelight part, or is that from memory?
+[00:28:39] Speaker 3: Good question. Silent Night I'd put lyrics up but very dim, low on the wall so it doesn't blow out the mood.
+[00:28:46] Me: And with the house at ten percent the screen brightness matters. Megan, drop the LED wall output for that song or it'll look like a billboard.
+[00:28:54] Speaker 3: Right, I'll bring the wall brightness way down for Silent Night. Maybe thirty, forty percent.
+[00:28:59] Me: Yeah, we'll dial it in at rehearsal. But plan for low.
+[00:29:03] Speaker 3: Noted.
+[00:29:04] Unknown: ...is the coffee still on?
+[00:29:06] Speaker 2: There's coffee in the lobby if anybody wants it, it's probably cold now.
+[00:29:10] Speaker 4: I'm good, I've had like four cups.
+[00:29:12] Unknown: ...grab one after.
+[00:29:14] Me: Okay, staying on slides for one more sec. Do we have a countdown and a pre-service loop for Christmas Eve?
+[00:29:20] Speaker 3: I was going to reuse last year's countdown. Is that fine or do we want something new?
+[00:29:25] Speaker 2: Reuse is fine. Nobody remembers last year's countdown except us.
+[00:29:29] Speaker 3: Fair. One less thing to build.
+[00:29:31] Me: Good. Keep your plate light, you've got the carols to do.
+[00:29:34] Speaker 4: Hey, while we're here, the band wants to do an instrumental during the offering. Does that need slides?
+[00:29:40] Speaker 3: Just a title card maybe, or a holding slide. Easy.
+[00:29:44] Speaker 4: Cool. I'll let you know the song for that too.
+[00:29:46] Me: Put it in the same Monday list so Megan has everything at once.
+[00:29:50] Speaker 4: Yep, it'll all be in there. Carols, offering, everything.
+[00:29:54] Speaker 3: Thank you. One list, one time.
+[00:29:56] Speaker 1: Can I circle back to lighting for a sec?
+[00:29:58] Me: Sure.
+[00:29:59] Speaker 1: For the candle lighting itself, the actual moment people light candles off each other, is there enough light for the ushers to pass the flame?
+[00:30:06] Me: That's the ten percent. At ten percent plus the stage warm wash it's enough to see your neighbor. We tested that light level two years ago and it worked.
+[00:30:14] Speaker 1: Okay, as long as nobody's lighting their sleeve on fire.
+[00:30:17] Me: The battery candles would fix that, but you hate the battery candles.
+[00:30:21] Speaker 1: They look fake. Real flame or nothing.
+[00:30:23] Speaker 2: Insurance would prefer the battery ones, just saying.
+[00:30:26] Me: That's a whole separate fight. We've always done real candles, let's not reopen it today.
+[00:30:31] Speaker 1: Agreed. Real candles, ten percent house, moody stage. We're good.
+[00:30:35] Me: And the hazer's a maybe pending facilities.
+[00:30:38] Speaker 1: Pending facilities. I heard you.
+[00:30:40] Speaker 3: Should I plan the slides assuming haze or no haze? Does it even change anything for me?
+[00:30:45] Me: It doesn't change your slides at all. Haze is purely a me-and-facilities problem.
+[00:30:49] Speaker 3: Perfect, then I don't care.
+[00:30:51] Speaker 4: Brutal.
+[00:30:52] Speaker 3: I care about you, Dave, just not about the haze.
+[00:30:55] Me: Okay. Let me make sure I've got the lighting actions straight. I'm programming the moving lights, I'm checking with facilities on the hazer and the smoke detectors.
+[00:31:04] Speaker 2: And the house-down-to-ten-percent thing is locked.
+[00:31:07] Me: Locked. I'll build that into the cue list for both evening services.
+[00:31:11] Speaker 4: What about the matinee, if we do an afternoon one? Same lighting?
+[00:31:15] Me: The afternoon one's tricky because of the windows. We've got that west-side glare until like four.
+[00:31:21] Speaker 3: Oh right, the sun. The shades don't fully black it out.
+[00:31:24] Me: They don't. So any afternoon service, the candlelight moment won't be as dramatic. Just physics.
+[00:31:30] Speaker 1: Can we close the shades all the way?
+[00:31:32] Me: They're the manual ones on the west bank. Half of them stick.
+[00:31:35] Speaker 2: Add it to the facilities list while you're at it.
+[00:31:37] Me: It's going on the list. Facilities is going to love me this week.
+[00:31:41] Speaker 4: Tell them it's for Jesus.
+[00:31:43] Me: I will literally say that.
+[00:31:45] Speaker 2: Okay, we've been going a while. Where are we on time? I've got maybe ten more minutes before my next thing.
+[00:31:51] Me: Let's use it. We still need to nail the rehearsal and volunteers.
+[00:31:55] Speaker 3: Before we move off slides, one thing. If Dave's list slips past Monday, my Friday deadline slips too. I just want that on record.
+[00:32:03] Speaker 4: It's not slipping. Monday.
+[00:32:05] Speaker 3: I'm just protecting myself.
+[00:32:06] Me: Noted for the record. Megan's Friday depends on Dave's Monday.
+[00:32:10] Speaker 2: Chain of custody. I love it.
+[00:32:12] Me: Also Megan, can you double check the lower-third template for the livestream? Since we're only streaming the one service, I want the song titles to show for the online folks.
+[00:32:21] Speaker 3: Oh yeah, good call. I'll set up lower thirds with the carol titles for the stream.
+[00:32:26] Me: Just for the streamed service, not the in-room wall.
+[00:32:29] Speaker 3: Right, two different outputs. I'll keep them separate.
+[00:32:32] Speaker 4: This is why we love Megan.
+[00:32:34] Speaker 3: Keep talking, you still owe me a song list.
+[00:32:37] Me: Okay. Rehearsal and volunteers, let's go.
+[00:36:02] Me: Okay, rehearsal. I want everybody in the room, full run, nothing half-baked.
+[00:36:07] Speaker 1: When are we thinking? The week before is already packed with the kids' thing.
+[00:36:12] Speaker 2: The twenty-second is the kids' Christmas program, so that's out.
+[00:36:16] Me: Right. So my proposal is we'll hold a full dress rehearsal on the twenty third.
+[00:36:21] Speaker 1: The twenty-third works for the band. Everybody's already in town by then.
+[00:36:25] Speaker 3: Evening? I can't do daytime, I've got the slide build wrapping up.
+[00:36:29] Me: Evening. Let's say six to nine. Full tech, full band, candlelight run included.
+[00:36:34] Speaker 2: Six to nine on the twenty-third. I'll make that work.
+[00:36:37] Speaker 4: Band can be there at six, warmed up by six-thirty.
+[00:36:40] Me: Perfect. So that's locked, dress rehearsal the twenty-third, six to nine.
+[00:36:45] Speaker 3: Can we please actually run the candle moment in rehearsal? Last year we talked about it and never did it.
+[00:36:51] Me: Yes. That's the whole point. I want to see the house dim and the cue timing for real.
+[00:36:56] Speaker 1: And the band cut at the right spot, which we never practiced either.
+[00:37:00] Me: Full run. No skipping the hard parts.
+[00:37:03] Caller 1: Aaron, do you need me on site for the rehearsal, or is that an AVL-only thing?
+[00:37:08] Me: Tom, I don't think you need to be here in person. If you can just make sure the stream encoder's reachable that evening, that's plenty.
+[00:37:15] Caller 1: Easy. I'll have it up so you can do a test push during rehearsal.
+[00:37:19] Me: That'd be great, actually. A real test stream the twenty-third.
+[00:37:23] Speaker 2: Okay, volunteers. This is the part that always falls apart.
+[00:37:27] Me: It's the part I lose sleep over. Let me walk through where we're short.
+[00:37:31] Me: For the 5pm, which is the one we're streaming, I need camera one, camera two, the two rentals, plus a switcher op and ProPresenter.
+[00:37:40] Speaker 3: I'm on ProPresenter for the 5pm, obviously.
+[00:37:43] Me: Right, you're covered. Switcher I've got myself. It's camera operators I'm thin on.
+[00:37:48] Speaker 1: How many warm bodies total are you missing?
+[00:37:51] Me: For the whole weekend, across all services? Probably four camera people.
+[00:37:55] Speaker 2: Four. Okay. Where do we usually find them?
+[00:37:58] Me: Honestly, I beg. I've got a couple of regulars who might say yes if I ask early enough.
+[00:38:04] Me: So here's what I'll do. I'll reach out to a couple more camera volunteers this week and see who bites.
+[00:38:10] Speaker 2: This week, good. The earlier you ask, the better your odds before the holidays swallow everyone.
+[00:38:16] Speaker 4: I can maybe grab one of the college kids who did the summer series.
+[00:38:20] Me: If you've got a name, send it to me. I'll take anyone with a pulse and a steady hand.
+[00:38:24] Speaker 4: I'll text you after this.
+[00:38:26] Speaker 3: The summer kid was actually good, the one with the headphones.
+[00:38:29] Speaker 1: That narrows it down, everyone has headphones.
+[00:38:32] Speaker 3: The big ones. You know who I mean.
+[00:38:34] Me: We'll figure out the headphones later. The point is I'm chasing camera ops this week.
+[00:38:39] Speaker 2: And on my end, I'll build the master grid once you tell me who's confirmed.
+[00:38:44] Me: That'd help a ton. If you own the schedule, I'll just feed you names as they come in.
+[00:38:49] Speaker 2: Yeah, send me names and roles and I'll slot them. Once it's set, I'll send the finalized volunteer schedule out to everyone.
+[00:38:56] Me: Perfect. So you've got the schedule, I've got recruiting.
+[00:38:59] Speaker 2: When do you want the schedule out by? People need notice.
+[00:39:03] Me: Can we aim for it to go out the week of the fifteenth? That gives people a solid week.
+[00:39:08] Speaker 2: Week of the fifteenth. I'll have it out by then, assuming names are in.
+[00:39:12] Me: I'll push to have most confirmations by the twelfth.
+[00:39:15] Speaker 1: That's aggressive but okay.
+[00:39:17] Me: Aggressive is the only speed in December.
+[00:39:20] Speaker 3: Wait, I have a question that's been nagging me.
+[00:39:23] Speaker 3: do we even have an audio feed going to the overflow room this year?
+[00:39:27] Me: Ah. Um. That's a really good question.
+[00:39:30] Speaker 2: We're definitely using overflow for the 5pm, it always fills.
+[00:39:34] Me: The feed was flaky last Easter. I'm honestly not sure the patch to overflow is still live.
+[00:39:40] Caller 1: That might be running through the old matrix. I'd have to check what's actually routed there.
+[00:39:45] Me: Yeah, I don't want to promise it works until I trace it. Let's leave that open for now.
+[00:39:50] Speaker 2: But we need an answer before the twenty-third, because if people are in overflow with no sound, that's a disaster.
+[00:39:56] Me: Agreed, I'll put it on my list to trace, but I don't have the answer today.
+[00:40:00] Speaker 3: Just flagging it so it doesn't get forgotten again.
+[00:40:03] Me: It's flagged. Overflow audio, unknown status.
+[00:40:06] Speaker 4: Speaking of audio, are we finally replacing that front-of-house console? It glitched twice on Sunday.
+[00:40:12] Me: Don't get me started. The fader on channel twelve is dying.
+[00:40:16] Speaker 1: It cut out during the bridge. I heard it from stage.
+[00:40:19] Me: A new console is like, a real number. We're talking twenty-plus thousand for the one I'd actually want.
+[00:40:25] Speaker 2: Twenty thousand. Okay. That's not something we decide in this room.
+[00:40:29] Me: No. I can spec it and get a quote, but I can't approve that.
+[00:40:33] Speaker 2: Right. that's really a call for the finance team to make, not us.
+[00:40:37] Me: Totally. I'll put together the numbers so they have something real to look at.
+[00:40:41] Speaker 2: Get me the quote and I'll walk it over to finance. But we're not deciding spend today.
+[00:40:46] Me: Understood. Console stays a finance question.
+[00:40:49] Speaker 4: As long as it survives Christmas Eve.
+[00:40:51] Me: It'll survive. I'll baby channel twelve personally.
+[00:40:54] Caller 1: If it dies mid-service, that's a different conversation.
+[00:40:57] Me: Then we pray and reboot. Classic AVL.
+[00:41:00] Speaker 2: Okay, I've got about two minutes. Anything else blocking?
+[00:41:04] Me: One more volunteer gap I'm staring at.
+[00:41:07] Me: We added an early service, right, the three o'clock. who's going to run camera two for the early service?
+[00:41:13] Speaker 3: Not me, I'm prepping the 5pm stream by then.
+[00:41:16] Speaker 1: The band's doing soundcheck at three, so nobody from music.
+[00:41:20] Me: Right, so camera two at three o'clock is just... an open slot right now.
+[00:41:25] Speaker 2: Add it to the recruiting list. Maybe one of the new names covers it.
+[00:41:29] Me: Maybe, but I don't have a person for it today. I'm leaving it open.
+[00:41:33] Speaker 4: Can camera one just cover wide and we skip two for the early one?
+[00:41:37] Me: Possibly, but then we lose the close-up. I'd rather staff it if I can.
+[00:41:41] Speaker 3: We're not streaming the three o'clock anyway, so it's lower stakes.
+[00:41:45] Me: True, it's in-room only. Still, two cameras looks a lot better on the wall.
+[00:41:49] Speaker 2: Decide it once you know your volunteer count. Don't solve it now.
+[00:41:53] Me: Fair. Camera two early service, unresolved, pending bodies.
+[00:41:57] Speaker 2: Okay, I really have to jump. Can someone recap my action?
+[00:42:01] Me: You're sending the finalized schedule the week of the fifteenth once I feed you names.
+[00:42:05] Speaker 2: Got it. And you're chasing camera ops this week. Great. Bye all.
+[00:42:10] Speaker 1: Bye Karen.
+[00:42:11] Speaker 3: Bye.
+[00:42:12] Me: Okay, last few things while we've got Dave and Megan.
+[00:42:16] Speaker 4: I'm here. Song list Monday, slides Friday, I know.
+[00:42:19] Speaker 3: He's learning.
+[00:42:20] Me: Tom, anything from your side before you drop?
+[00:42:23] Caller 1: Just the bandwidth bump, which I'm handling, and I'll have the encoder reachable for the rehearsal test.
+[00:42:29] Me: Perfect. Thanks for jumping on, Tom.
+[00:42:31] Caller 1: Anytime. Good luck with the console quote.
+[00:42:34] Me: Oh, I'll need it. Talk soon.
+[00:42:36] Unknown: See ya.
+[00:42:38] Speaker 3: So what's left on the board?
+[00:42:40] Me: Dress rehearsal locked for the twenty-third. Recruiting is mine, schedule is Karen's.
+[00:42:45] Me: Overflow audio and camera two at three are both still open.
+[00:42:49] Speaker 1: Two loose ends. That's actually not bad for December.
+[00:42:52] Me: It's a Christmas miracle. Alright, I think that's us.
+[00:42:56] Speaker 3: Send me that lower-third note so I don't forget.
+[00:42:59] Me: Will do. Thanks everyone, this was productive.
+[00:43:02] Speaker 4: Merry almost Christmas, team.
+[00:43:04] Speaker 3: Go write your song list.
+[00:43:06] Me: On that note, we're done.

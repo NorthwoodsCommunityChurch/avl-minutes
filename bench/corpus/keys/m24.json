@@ -1,0 +1,135 @@
+{
+ "id": "m24",
+ "title": "Livestream outage post-incident review",
+ "type": "post-incident review",
+ "minutes": 45,
+ "sources": [
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Marcus",
+   "role": "Production and volunteer coordinator"
+  },
+  {
+   "label": "Caller 2",
+   "name": "Dana",
+   "role": "MSP network engineer (reappears as Caller 4 after a reconnect: label_split)"
+  },
+  {
+   "label": "Caller 3",
+   "name": "Ellen",
+   "role": "Operations director"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Disable automatic firmware updates on the streaming encoder.",
+   "evidence": "turn off automatic firmware updates on that encoder"
+  },
+  {
+   "id": "d2",
+   "text": "Set up monitoring that alerts the team when the stream drops.",
+   "evidence": "an alert that fires the second the stream drops"
+  },
+  {
+   "id": "d3",
+   "text": "Write a one-page outage runbook for the Sunday volunteers.",
+   "evidence": "write a one page runbook for the Sunday volunteers"
+  },
+  {
+   "id": "d4",
+   "text": "Create a ProPresenter holding slide for stream interruptions.",
+   "evidence": "we should build a holding slide in pro presenter"
+  },
+  {
+   "id": "d5",
+   "text": "Make post-incident reviews standard within 48 hours of any outage.",
+   "evidence": "do a review within forty eight hours of any outage"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Set up the stream-down monitoring alert.",
+   "owner": "Dana",
+   "due": "Friday",
+   "evidence": "I'll get the stream down alert set up by Friday"
+  },
+  {
+   "id": "a2",
+   "task": "Audit the firewall failover configuration.",
+   "owner": "Dana",
+   "due": "January 9",
+   "evidence": "audit the fail over config on the firewall"
+  },
+  {
+   "id": "a3",
+   "task": "Train the Sunday volunteers on the new runbook.",
+   "owner": "Marcus",
+   "due": "Saturday",
+   "evidence": "I can run the volunteers through it on Saturday"
+  },
+  {
+   "id": "a4",
+   "task": "Draft the one-page outage runbook.",
+   "owner": "Me",
+   "due": "Friday",
+   "evidence": "I'll have the runbook drafted by Friday"
+  },
+  {
+   "id": "a5",
+   "task": "Get a quote for a redundant internet line.",
+   "owner": "Ellen",
+   "due": null,
+   "evidence": "I'll get a quote for a redundant internet line"
+  },
+  {
+   "id": "a6",
+   "task": "Build the ProPresenter holding slide.",
+   "owner": "Me",
+   "due": "before Sunday",
+   "evidence": "put that holding slide together before Sunday"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Why the backup internet line never failed over automatically.",
+   "evidence": "why didn't the backup line take over automatically"
+  },
+  {
+   "id": "q2",
+   "text": "Whether the encoder crashed on its own or from an auto-update.",
+   "evidence": "we still don't know if it crashed or updated itself"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "hypothetical",
+   "claim": "The team decided to move the livestream to a cloud encoder.",
+   "evidence": "what if we just ran everything through a cloud encoder"
+  },
+  {
+   "id": "t2",
+   "kind": "joke",
+   "claim": "They agreed to stream services from Aaron's phone as the backup.",
+   "evidence": "we could just stream the whole thing from my phone"
+  },
+  {
+   "id": "t3",
+   "kind": "tentative",
+   "claim": "They decided to purchase a second encoder.",
+   "evidence": "I'm leaning toward a second encoder but let's not commit to that today"
+  }
+ ]
+}

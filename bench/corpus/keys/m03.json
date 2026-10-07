@@ -1,0 +1,76 @@
+{
+ "id": "m03",
+ "title": "Projector lamp warranty call",
+ "type": "vendor call",
+ "minutes": 10,
+ "sources": [
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Dana",
+   "role": "vendor warranty support rep"
+  },
+  {
+   "label": "Caller 2",
+   "name": "Marcus",
+   "role": "vendor escalation tech"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "File a warranty claim on the failed projector lamp",
+   "evidence": "let's go ahead and file the warranty claim on this lamp"
+  },
+  {
+   "id": "d2",
+   "text": "Run the projector in eco mode until the replacement arrives",
+   "evidence": "we'll run it in eco mode until the replacement gets here"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Email the serial number and receipt to the vendor",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll email you the serial number and the receipt this afternoon"
+  },
+  {
+   "id": "a2",
+   "task": "Send an RMA number and shipping label to Aaron",
+   "owner": "Dana",
+   "due": null,
+   "evidence": "I'll get an R M A number and a shipping label over to you"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Is the second projector lamp covered under the same warranty window?",
+   "evidence": "second lamp covered under the same warranty window"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "other_party",
+   "claim": "The church decided to buy a new projector",
+   "evidence": "that's really up to the finance team to approve"
+  },
+  {
+   "id": "t2",
+   "kind": "already_done",
+   "claim": "Aaron needs to register the projector's warranty",
+   "evidence": "we already registered that projector back when we installed it"
+  }
+ ]
+}

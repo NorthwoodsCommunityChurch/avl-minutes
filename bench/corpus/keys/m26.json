@@ -1,0 +1,171 @@
+{
+ "id": "m26",
+ "title": "Production team monthly",
+ "type": "staff meeting",
+ "minutes": 60,
+ "sources": [
+  "room",
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Dana",
+   "role": "volunteer coordinator"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Marcus",
+   "role": "media/ProPresenter lead"
+  },
+  {
+   "label": "Speaker 3",
+   "name": "Kevin",
+   "role": "camera/video lead (also appears as Speaker 4 after label split)"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Rachel",
+   "role": "executive pastor / finance, on the call"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Move the midweek rehearsal to Thursday nights",
+   "evidence": "move the midweek rehearsal to Thursday nights"
+  },
+  {
+   "id": "d2",
+   "text": "Order six new intercom beltpacks",
+   "evidence": "order six new beltpacks"
+  },
+  {
+   "id": "d3",
+   "text": "Standardize so every campus uses the same ProPresenter template",
+   "evidence": "everybody uses the same pro presenter template"
+  },
+  {
+   "id": "d4",
+   "text": "Add a third camera operator slot for weekend services",
+   "evidence": "add a third camera operator slot"
+  },
+  {
+   "id": "d5",
+   "text": "Keep one single livestream feed for now",
+   "evidence": "keep one single livestream feed for now"
+  },
+  {
+   "id": "d6",
+   "text": "Replace the failing LED processor",
+   "evidence": "replacing the failing LED processor"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Place the order for the beltpacks",
+   "owner": "Me",
+   "due": "Monday",
+   "evidence": "put in the order for the beltpacks on Monday"
+  },
+  {
+   "id": "a2",
+   "task": "Update the volunteer schedule in Planning Center",
+   "owner": "Dana",
+   "due": null,
+   "evidence": "update the volunteer schedule in planning center"
+  },
+  {
+   "id": "a3",
+   "task": "Contact the MSP about livestream upload bandwidth",
+   "owner": "Me",
+   "due": null,
+   "evidence": "reach out to the MSP about the upload bandwidth"
+  },
+  {
+   "id": "a4",
+   "task": "Build the standardized ProPresenter templates",
+   "owner": "Marcus",
+   "due": "before the next meeting",
+   "evidence": "have the templates built before the next meeting"
+  },
+  {
+   "id": "a5",
+   "task": "Send over the updated budget numbers",
+   "owner": "Rachel",
+   "due": "Friday",
+   "evidence": "send over the updated budget numbers by Friday"
+  },
+  {
+   "id": "a6",
+   "task": "Run training for the new camera volunteers",
+   "owner": "Kevin",
+   "due": null,
+   "evidence": "run the training for the new camera folks"
+  },
+  {
+   "id": "a7",
+   "task": "Get an updated quote on the LED processor from the vendor",
+   "owner": "Me",
+   "due": null,
+   "evidence": "grab an updated quote from the vendor"
+  },
+  {
+   "id": "a8",
+   "task": "Post the new Thursday rehearsal time in the group",
+   "owner": "Dana",
+   "due": null,
+   "evidence": "post the new Thursday time in the group"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Can the budget cover both the intercom and the LED processor this quarter?",
+   "evidence": "handle both of those this quarter"
+  },
+  {
+   "id": "q2",
+   "text": "Who is covering the extra Easter services?",
+   "evidence": "who's covering the extra Easter services"
+  },
+  {
+   "id": "q3",
+   "text": "Do we risk the audio console firmware update before Easter?",
+   "evidence": "risk the firmware update before Easter"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "hypothetical",
+   "claim": "The team decided to add a second livestream from the lobby",
+   "evidence": "ran a second stream from the lobby"
+  },
+  {
+   "id": "t2",
+   "kind": "joke",
+   "claim": "The team will use cardboard signs instead of confidence monitors",
+   "evidence": "just hold up a cardboard sign"
+  },
+  {
+   "id": "t3",
+   "kind": "tentative",
+   "claim": "The team decided to buy the new streaming encoder",
+   "evidence": "leaning toward the new encoder but let's not commit"
+  },
+  {
+   "id": "t4",
+   "kind": "other_party",
+   "claim": "The team approved purchasing a new LED wall",
+   "evidence": "up to the elders and finance team"
+  }
+ ]
+}

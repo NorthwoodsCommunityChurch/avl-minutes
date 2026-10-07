@@ -1,0 +1,123 @@
+{
+ "id": "m15",
+ "title": "Intercom upgrade options vendor call",
+ "type": "vendor call",
+ "minutes": 30,
+ "sources": [
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Dana",
+   "role": "volunteer/production coordinator (in room)"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Marcus",
+   "role": "vendor sales engineer (on call)"
+  },
+  {
+   "label": "Caller 2",
+   "name": "Marcus",
+   "role": "same vendor rep after a reconnect (label_split)"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Go with a wireless intercom system rather than adding more wired drops",
+   "evidence": "let's go with the wireless system instead of running more wired drops"
+  },
+  {
+   "id": "d2",
+   "text": "Order six wireless beltpacks",
+   "evidence": "so we're settled on six belt packs then"
+  },
+  {
+   "id": "d3",
+   "text": "Keep and reuse the two existing wired stations",
+   "evidence": "we'll keep the two wired stations we already have"
+  },
+  {
+   "id": "d4",
+   "text": "Lock in a January installation date",
+   "evidence": "let's lock in the January install date"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Send the formal quote",
+   "owner": "Marcus",
+   "due": "Friday",
+   "evidence": "I'll get the formal quote over to you by Friday"
+  },
+  {
+   "id": "a2",
+   "task": "Do a headcount of volunteers who need headsets",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll do a headcount of how many volunteers need headsets"
+  },
+  {
+   "id": "a3",
+   "task": "Walk the building and note dead spots",
+   "owner": "Dana",
+   "due": null,
+   "evidence": "I can walk the whole building and note the dead spots"
+  },
+  {
+   "id": "a4",
+   "task": "Ship a demo/loaner unit to try for a weekend",
+   "owner": "Marcus",
+   "due": null,
+   "evidence": "we'll ship you a demo unit to try for a weekend"
+  },
+  {
+   "id": "a5",
+   "task": "Email the floor plan to the vendor",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll email you the floor plan this afternoon"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Will a single antenna actually cover the green room?",
+   "evidence": "will one antenna actually cover the green room"
+  },
+  {
+   "id": "q2",
+   "text": "Will the wireless intercom step on the wireless microphones' frequencies?",
+   "evidence": "whether that's going to step on our wireless microphones"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "joke",
+   "claim": "The team decided to use consumer walkie-talkies from the hardware store",
+   "evidence": "maybe we just hand everybody a walkie talkie from the hardware store"
+  },
+  {
+   "id": "t2",
+   "kind": "tentative",
+   "claim": "They decided to add a second antenna",
+   "evidence": "I'm leaning toward adding a second antenna but I don't want to commit"
+  },
+  {
+   "id": "t3",
+   "kind": "other_party",
+   "claim": "Aaron approved the budget on the call",
+   "evidence": "that has to go to the finance team for approval"
+  }
+ ]
+}

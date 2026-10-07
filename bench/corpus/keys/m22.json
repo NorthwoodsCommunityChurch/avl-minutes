@@ -1,0 +1,140 @@
+{
+ "id": "m22",
+ "title": "Camera Upgrade Proposal — Integrator Call",
+ "type": "vendor call",
+ "minutes": 45,
+ "sources": [
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Dave",
+   "role": "Operations/tech coordinator (in room)"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Megan",
+   "role": "Production volunteer lead (in room)"
+  },
+  {
+   "label": "Caller 1",
+   "name": "integrator account manager (on call)",
+   "role": "Integrator sales"
+  },
+  {
+   "label": "Caller 2",
+   "name": "integrator systems engineer (on call)",
+   "role": "Integrator engineer"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Bring in one demo PTZ unit for a two-week trial",
+   "evidence": "let's get a demo unit in here for two weeks"
+  },
+  {
+   "id": "d2",
+   "text": "Replace all three cameras at once rather than phasing",
+   "evidence": "we'll replace all three of the cameras at once"
+  },
+  {
+   "id": "d3",
+   "text": "Reuse the existing SDI cabling runs",
+   "evidence": "we can reuse the existing SDI cabling that's already run"
+  },
+  {
+   "id": "d4",
+   "text": "Target the install for the third week of January",
+   "evidence": "let's target the third week of January for the install"
+  },
+  {
+   "id": "d5",
+   "text": "Include the new joystick controller in the package",
+   "evidence": "we'll include the new joystick controller in the package"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Send the revised quote",
+   "owner": "Caller 1",
+   "due": "Friday",
+   "evidence": "I'll get you the revised quote by Friday"
+  },
+  {
+   "id": "a2",
+   "task": "Send photos of the rack and cable runs",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll send over photos of the rack and the cable runs"
+  },
+  {
+   "id": "a3",
+   "task": "Set up the site survey",
+   "owner": "Caller 2",
+   "due": "next week",
+   "evidence": "I'll set up the site survey for next week"
+  },
+  {
+   "id": "a4",
+   "task": "Pull together the volunteer operator schedule",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll pull together the volunteer operator schedule"
+  },
+  {
+   "id": "a5",
+   "task": "Prep the demo unit before it ships",
+   "owner": "Marcus",
+   "due": null,
+   "evidence": "Marcus will get the demo unit prepped before it ships"
+  },
+  {
+   "id": "a6",
+   "task": "Confirm the demo delivery date with the integrator",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll confirm the delivery date with you two"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Will the new cameras integrate with the existing switcher?",
+   "evidence": "will these play nice with our existing switcher"
+  },
+  {
+   "id": "q2",
+   "text": "Can the budget cover a fourth camera in the balcony?",
+   "evidence": "can the budget stretch to a fourth camera up in the balcony"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "joke",
+   "claim": "The group decided to fully automate and remove the camera operators",
+   "evidence": "we could just replace all the volunteers with robots"
+  },
+  {
+   "id": "t2",
+   "kind": "tentative",
+   "claim": "They decided to buy the auto-tracking cameras",
+   "evidence": "I'm leaning toward the auto tracking one but let's not lock that in"
+  },
+  {
+   "id": "t3",
+   "kind": "other_party",
+   "claim": "Aaron approved the full project budget on the call",
+   "evidence": "the elders are going to have to sign off on the final number"
+  }
+ ]
+}

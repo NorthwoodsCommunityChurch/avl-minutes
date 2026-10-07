@@ -1,0 +1,123 @@
+{
+ "id": "m19",
+ "title": "Comms + AVL livestream graphics alignment",
+ "type": "cross-team meeting",
+ "minutes": 30,
+ "sources": [
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Dana",
+   "role": "AVL livestream tech"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Megan",
+   "role": "Communications director"
+  },
+  {
+   "label": "Caller 2",
+   "name": "Tyler",
+   "role": "Comms graphic designer"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Adopt the new lower-third template for the livestream",
+   "evidence": "let's go with the new lower third template"
+  },
+  {
+   "id": "d2",
+   "text": "Scripture slides will use the new brand font going forward",
+   "evidence": "scripture slides will use the new brand font"
+  },
+  {
+   "id": "d3",
+   "text": "Comms will deliver sermon graphics by Thursday at noon each week",
+   "evidence": "graphics in our hands by Thursday at noon"
+  },
+  {
+   "id": "d4",
+   "text": "Remove the giving QR code from the livestream overlay",
+   "evidence": "we'll pull the giving QR code off the livestream"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Rebuild the ProPresenter template with the new lower third",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll rebuild the pro presenter template this week"
+  },
+  {
+   "id": "a2",
+   "task": "Send the brand font files and the color hex codes",
+   "owner": "Tyler",
+   "due": "Wednesday",
+   "evidence": "I'll send over the font files and the hex codes"
+  },
+  {
+   "id": "a3",
+   "task": "Set up a recurring Thursday deadline reminder for graphics",
+   "owner": "Megan",
+   "due": null,
+   "evidence": "I'll put a recurring reminder on our calendar"
+  },
+  {
+   "id": "a4",
+   "task": "Test the new overlay on the livestream encoder",
+   "owner": "Dana",
+   "due": "Sunday",
+   "evidence": "I'll test the overlay on the encoder before Sunday"
+  },
+  {
+   "id": "a5",
+   "task": "Send everyone a recap of the decisions",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll send everyone a recap after this"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Who owns the announcement loop content going forward",
+   "evidence": "who actually owns the announcement loop content now"
+  },
+  {
+   "id": "q2",
+   "text": "Do the LED wall graphics need to match the livestream exactly",
+   "evidence": "do the wall graphics need to match the livestream exactly"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "reversed",
+   "claim": "The team decided to use motion backgrounds behind the scripture slides",
+   "evidence": "let's use the motion backgrounds behind the scripture"
+  },
+  {
+   "id": "t2",
+   "kind": "hypothetical",
+   "claim": "They agreed to add a lower third for the worship leader",
+   "evidence": "what if we added a lower third for the worship leader"
+  },
+  {
+   "id": "t3",
+   "kind": "joke",
+   "claim": "They decided to hire a full-time designer",
+   "evidence": "maybe we just hire a full time designer"
+  }
+ ]
+}

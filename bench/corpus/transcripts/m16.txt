@@ -1,0 +1,269 @@
+Luminetic Streaming Encoder Demo
+Monday, November 23, 2026 · 9:00 AM · 30 min · Call
+Transcribed by Minutes. Audio was not recorded.
+
+[00:00:04] Me: Alright, I think we're connected. Can you guys hear me okay?
+[00:00:07] Caller 1: Yep, loud and clear on our end. How's it going, Aaron?
+[00:00:11] Me: Good, good. Little cold up here, we got our first real frost this morning.
+[00:00:16] Caller 1: Oh man, you're way ahead of us. We're still in the sixties down here.
+[00:00:21] Me: Yeah, well, northern Minnesota, you know how it is. Um, let me pull Megan in, she's on the AVL team with me.
+[00:00:28] Speaker 1: Hey everybody, sorry, I was wrestling with the, uh, the conference room speaker.
+[00:00:33] Caller 1: No worries at all. So, hey, thanks for making the time. Uh, this is Derek, I'm the account exec you've been emailing with.
+[00:00:41] Caller 1: And I've got Priya with me, she's one of our solutions engineers, she's gonna do the actual demo part.
+[00:00:47] Caller 2: Hi, yeah, nice to, uh, nice to meet you both. Can you hear me alright? Sometimes my mic is weird.
+[00:00:53] Me: Yeah, you sound great, Priya. Thanks for hopping on.
+[00:00:56] Speaker 1: Hi Priya. Um, quick question before we dive in, is this gonna be recorded? Just curious.
+[00:01:02] Caller 1: We're not recording on our side, no. Totally up to you guys if you want to.
+[00:01:07] Me: Nah, we're good. I'll just take some notes. So, um, where do you want to start?
+[00:01:12] Caller 1: Well, maybe real quick, just so Priya has context, can you give us like the thirty second version of your current setup?
+[00:01:20] Me: Sure, yeah. So we're a, uh, single campus right now but we've got a second location opening, we're hoping, next fall.
+[00:01:28] Me: We run three services on the weekend, two Sunday morning, one Saturday night. Full band, you know, typical.
+[00:01:35] Me: On the stream side we're pushing out to, uh, YouTube and Facebook mainly, and our own site.
+[00:01:41] Caller 2: Got it. And what are you encoding with right now, if you don't mind me asking?
+[00:01:46] Me: Right now it's a, it's a software encoder running on a dedicated PC. We've had some, uh, some stability headaches with it.
+[00:01:54] Speaker 1: Yeah, it drops frames like maybe once a month, usually right in the middle of the sermon, naturally.
+[00:02:00] Caller 2: Ha, yeah, it's always the worst possible moment, right? That's actually a really common pain point.
+[00:02:06] Caller 1: And that's, I mean, that's a big part of why we wanted to show you the, the hardware box.
+[00:02:11] Me: Yeah, I'm all ears. Oh, and one thing, we already migrated the stream over to the new c d n last month, so that part we're happy with.
+[00:02:20] Caller 1: Oh, nice, okay. Which, uh, which provider did you end up going with?
+[00:02:24] Me: It's, uh, I always blank on the name. Megan, who was it?
+[00:02:28] Speaker 1: It's the one that starts with, uh, it's Fastpath, I think? The new one.
+[00:02:33] Me: Fastpath, yeah. So the delivery side's solid now. It was really the encoder that's the weak link.
+[00:02:39] Caller 2: Perfect, that actually makes my job easier. So let me, uh, let me share my screen here.
+[00:02:45] Caller 2: Can everybody see the, the slide? It should say StreamForge Edge at the top.
+[00:02:50] Me: Yep, we got it. Stream Forge Edge.
+[00:02:53] Caller 2: Great. So this is our, uh, our flagship hardware encoder. The whole idea is reliability first.
+[00:03:00] Caller 2: It's a dedicated appliance, so there's no operating system updates sneaking in and breaking your stream mid service.
+[00:03:07] Speaker 1: That alone, honestly, that would make my life so much better.
+[00:03:11] Caller 2: Right? So it does up to, um, four simultaneous output streams, each with independent bitrate settings.
+[00:03:18] Caller 2: So you could push a high quality feed to your website and a lighter one to Facebook, all from the one box.
+[00:03:25] Me: Okay, that's, that's interesting. We currently have to run two instances to do that.
+[00:03:30] Caller 2: Yeah, you won't need to with this. It's all handled in hardware. Um, it also does automatic failover.
+[00:03:37] Caller 2: So if you've got two internet connections, it'll bond them or fail over between them automatically.
+[00:03:43] Me: We do have a backup, uh, backup line. It's a cellular thing the MSP set up for us.
+[00:03:49] Caller 1: Oh perfect, yeah, that'll plug right in. That's exactly the kind of redundancy this is built for.
+[00:03:55] Speaker 1: Sorry, can I, uh, can I jump in with a nuts and bolts question?
+[00:03:59] Caller 2: Please, yeah, go for it.
+[00:04:01] Speaker 1: So on the input side, does it take a cue sis or n d i input directly, or do we have to go through, like, an s d i converter?
+[00:04:10] Caller 2: Great question. So, um, the base model takes S D I and H D M I in.
+[00:04:16] Caller 2: For N D I, there's a software license you add on, and then it'll ingest N D I straight off the network.
+[00:04:23] Speaker 1: Okay, because our, our whole plant is going, uh, N D I eventually, so that matters a lot to us.
+[00:04:29] Me: Yeah, that's, that's kind of the direction we're heading. We've got a cue sis setup for audio already.
+[00:04:35] Caller 2: Yeah, so the cue sis side, that's audio, that would come in over, um, usually over S D I embedded or analog.
+[00:04:43] Caller 2: But the video N D I, yeah, that's the license I mentioned. I can get you the specifics on that.
+[00:04:49] Speaker 1: That'd be great, thanks.
+[00:04:51] Caller 1: And just so you know, a lot of churches your size are making that exact N D I transition, so you're in good company.
+[00:04:58] Me: Yeah, feels like that's where everything's going. Um, Megan, didn't you go to that workshop on it?
+[00:05:04] Speaker 1: I did, yeah, back in, uh, back in the spring. It was, honestly it was a little over my head at the time.
+[00:05:10] Me: Ha, well, we'll get there. Okay, Priya, sorry, keep going.
+[00:05:14] Caller 2: No problem. So, um, the other big thing is the management dashboard. It's all web based.
+[00:05:20] Caller 2: So you can monitor your stream health, your bitrate, dropped frames, all of it, from any browser.
+[00:05:27] Caller 2: You could even check it from your phone in the lobby if you wanted to.
+[00:05:31] Speaker 1: Oh, that's nice. Right now we have to walk back to the booth and look at the, the encoder PC directly.
+[00:05:38] Caller 2: Yeah, and it'll send you alerts too. Like if the stream drops it'll text or email whoever's on the list.
+[00:05:44] Me: That would've saved us a few times. We had one Sunday where the stream was down for, what, twenty minutes?
+[00:05:50] Speaker 1: It was more like twenty five. Nobody noticed till someone, uh, till someone commented on the Facebook feed.
+[00:05:56] Me: Right, yeah. Not our finest moment.
+[00:05:59] Caller 1: See, that's, that's the stuff that keeps you up at night, and that's exactly what we're trying to solve.
+[00:06:05] Caller 2: Let me show you the actual dashboard real quick. Give me one sec to log into the demo unit.
+[00:06:11] Caller 2: Um, while that loads, does your pro presenter machine feed into the same switcher, or is that separate?
+[00:06:18] Me: Pro presenter goes into the switcher as a, as a separate input, yeah. We key some of it over camera too.
+[00:06:25] Caller 2: Okay, so that'd all come downstream of the switcher before it hits the encoder, which is fine.
+[00:06:31] Speaker 1: Yeah, the encoder just sees the program out from the switcher, basically.
+[00:06:35] Caller 2: Exactly. Okay, here we go, the dashboard's up. Can you see it now?
+[00:06:40] Me: Uh, it's a little blurry on our end but it's coming in.
+[00:06:43] Caller 1: It might take a second to, to sharpen up over the screen share.
+[00:06:47] Me: There it goes. Okay, yeah, now I can read it.
+[00:06:50] Caller 2: Cool. So this top section here, this is your live health monitor. Green means everything's happy.
+[00:06:57] Caller 2: These little graphs are your, um, your output bitrates for each of the four streams.
+[00:07:03] Speaker 1: And that updates in real time?
+[00:07:05] Caller 2: Real time, yeah, about once a second. And this red number here would be your dropped frame count.
+[00:07:11] Me: And right now it's at zero, which, uh, which is the dream.
+[00:07:15] Caller 2: Ha, that's the goal, right? Zero and green.
+[00:07:18] Caller 1: Hey Aaron, totally unrelated, but did you guys ever get that, uh, that new lighting console you were looking at?
+[00:07:24] Me: Oh, the, no, not yet. That's, uh, that's a whole other budget conversation for next year.
+[00:07:30] Caller 1: Ha, I hear you. I just remembered you mentioning it last time we talked.
+[00:07:34] Me: Yeah, it's on the wish list. Everything's on the wish list.
+[00:07:38] Speaker 1: The wish list is very long.
+[00:07:40] Me: It really is. Okay, so back to the, uh, the dashboard. Priya, what's this section over here on the left?
+[00:07:47] Caller 2: Oh, that's your stream destinations. So this is where you'd configure your, um, your YouTube and Facebook endpoints.
+[00:07:54] Caller 2: You just paste in the stream key for each and it, it remembers them. You can save presets per service.
+[00:08:01] Me: Presets would be handy. We have a different config for the Saturday night thing.
+[00:08:06] Caller 2: Yeah, so you'd just have a Saturday preset and a Sunday preset and load whichever one.
+[00:08:11] Speaker 1: That's cleaner than what we do now, which is, uh, basically a text file with everything copy pasted.
+[00:08:17] Caller 2: Ha, you'd be surprised how common that is. The spreadsheet-slash-text-file method.
+[00:08:23] Me: Hey, don't knock the text file, it's gotten us this far.
+[00:08:26] Caller 1: Ha, whatever works, man. If it ain't broke, well, except when it is broke, mid sermon.
+[00:08:32] Me: Right, there's the catch. Okay, so this all looks, uh, it looks pretty slick so far.
+[00:08:38] Caller 2: Good, I'm glad. Let me walk you through what actually happens when you set up a new stream, step by step.
+[00:08:45] Speaker 1: Yeah, I'd like to see that. That's usually where these things get, uh, get complicated.
+[00:08:50] Caller 2: Totally fair. So let me click into the, um, the new stream wizard here.
+[00:08:55] Me: Take your time, we're following along.
+[00:08:58] Caller 2: Okay, so first screen, it just asks you to name the stream and pick your input source.
+[00:09:04] Caller 2: So here's where your N D I sources would show up, if you had the license, alongside the S D I and H D M I.
+[00:09:11] Speaker 1: Gotcha, so they'd all just be in the same dropdown.
+[00:09:14] Caller 2: Exactly, one dropdown, pick your source. Then you set resolution and frame rate on the next screen.
+[00:09:21] Me: And it'll do, what, up to 1080p60?
+[00:09:24] Caller 2: 1080p60 on the base model, and the pro model does 4K if you ever go that route.
+[00:09:30] Me: We're nowhere near 4K, but good to know there's headroom.
+[00:09:34] Caller 1: You'd be amazed, a lot of folks say that and then two years later they're calling about 4K.
+[00:09:40] Me: Ha, fair enough. Alright, keep going, Priya, this is good stuff.
+[00:09:44] Caller 2: Okay so next up is the encoding settings, and this is where the real magic is, so let me zoom in a bit.
+[00:09:52] Speaker 1: Yeah, make it bigger if you can, it's a touch small.
+[00:09:55] Caller 2: Sure thing, how's that?
+[00:09:57] Me: Perfect, yeah, that's readable now.
+[00:10:02] Caller 2: Alright, so on this encoding screen you've got your bitrate control, and we default to a constant bitrate but you can switch to variable.
+[00:10:10] Me: We've always run constant. Our upload is, uh, it's decent but it's not unlimited, so.
+[00:10:16] Caller 2: Right, and that's actually where the adaptive mode shines. If your connection dips, the encoder can step down automatically instead of just, you know, dropping the stream.
+[00:10:25] Speaker 1: Oh, that would've saved us during that storm back in, uh, August. We lost the second service feed entirely.
+[00:10:32] Me: Yeah, that was a rough morning. The whole thing just froze on the YouTube side.
+[00:10:37] Caller 1: See, that's exactly the kind of thing the adaptive logic is built for. It's watching the buffer the whole time.
+[00:10:43] Caller 2: Let me show you the, um, the health monitor that goes with it. It's on the main dashboard.
+[00:10:49] Caller 2: So you'd see your encoder temp, your CPU load, and this little graph here is your outbound bitrate in real time.
+[00:10:57] Me: Oh, that's nice. Megan, look at that, it's got the, the little color coding.
+[00:11:02] Speaker 1: Yeah, green good, red bad, I can work with that. Our current setup you basically have to guess.
+[00:11:08] Caller 2: Ha, no more guessing. And if it goes red you get an alert, email or text, you pick.
+[00:11:14] Speaker 1: Hey, um, sorry, give me one sec, I think my phone's going off, someone's at the, uh, the loading dock.
+[00:11:20] Me: Go ahead, Megan, we'll keep rolling. It's probably the lighting order.
+[00:11:24] Speaker 1: Yeah, probably. Be right back.
+[00:11:27] Caller 2: No worries. So while she's stepping away, let me show you the recording side.
+[00:11:32] Caller 2: Every stream can simultaneously record to local storage, so you'd have a, a backup file even if the stream itself has issues.
+[00:11:40] Me: That's good. Right now we record separately on a totally different box, and sometimes someone forgets to hit record.
+[00:11:47] Caller 1: Oh man, the classic. The forgot-to-record phone call. I've gotten a few of those.
+[00:11:52] Me: Ha, yeah, you don't want that call Monday morning when the pastor wants the clip.
+[00:11:57] Caller 2: Right, so this just removes that whole category of problem. It's recording by default unless you turn it off.
+[00:12:04] Me: I like default-on for that. Our volunteers, you know, they've got a lot to remember already.
+[00:12:10] Caller 1: How many volunteers are you running on a given weekend, Aaron?
+[00:12:14] Me: Uh, on a full Sunday, probably, what, eight to ten on the AVL team across the services.
+[00:12:20] Caller 1: Okay, yeah, so simplicity really matters for you. The fewer manual steps the better.
+[00:12:25] Me: Exactly. Every extra button is another thing to train and another thing to forget.
+[00:12:30] Caller 2: Makes sense. So let me also show the, um, the multi-destination part, because I know you asked about simulcast earlier.
+[00:12:37] Caller 2: You can push to three destinations at once on the base unit, more if you bond connections.
+[00:12:43] Me: Three covers us. We do YouTube, Facebook, and our own, uh, website player.
+[00:12:49] Caller 2: Perfect, that's the common trio. And each one can have its own bitrate so you don't overload anything.
+[00:12:56] Me: Smart. Okay, this is, this is genuinely impressive. I want Megan back for the next part.
+[00:13:02] Caller 1: No rush, we've got time blocked.
+[00:13:05] Speaker 2: Okay, sorry about that, I'm back. It was the lighting delivery, they needed a signature.
+[00:13:10] Me: No worries. Did the right pallet show up this time?
+[00:13:13] Speaker 2: It did, miracle of miracles. So what'd I miss?
+[00:13:17] Me: Priya walked through the recording, it does local backup recording by default, which, you know, solves our forgot-to-record thing.
+[00:13:24] Speaker 2: Oh nice, that's a big one for us. Okay, good.
+[00:13:28] Caller 2: And I just showed the multi-destination, three outputs on the base. Want me to go back over any of it?
+[00:13:34] Speaker 2: No, I think Aaron caught me up. Keep going, I'll jump in.
+[00:13:38] Caller 1: So, Aaron, this feels like a good moment to talk about, uh, next steps. Where's your head at?
+[00:13:44] Me: Honestly, I think the logical thing is to get one of these in the building and actually run it against a real weekend.
+[00:13:51] Caller 1: That's exactly what I was gonna suggest. We do an on-site pilot, no commitment, you run it live.
+[00:13:57] Me: Yeah. You know what, let's go ahead and schedule the on site pilot for December.
+[00:14:02] Caller 1: Love it. December works great on our end, things slow down for us before the holidays.
+[00:14:08] Speaker 2: December's actually good for us too, our schedule's a little lighter after the, uh, the Christmas prep ramps up but before the services themselves.
+[00:14:16] Me: Right, we'd want it in before all the Christmas Eve craziness so we're not testing during the busiest week of the year.
+[00:14:23] Caller 1: Ha, no, definitely not. We never recommend piloting during your Super Bowl.
+[00:14:28] Me: Ha, the Christmas Eve Super Bowl, that's about right.
+[00:14:31] Caller 2: So for the pilot to go smoothly, there are a couple things it'd help to have from you ahead of time.
+[00:14:37] Me: Sure, what do you need from us?
+[00:14:39] Caller 2: Mainly your available upload bandwidth, so we can set the encoder ceilings correctly before we even show up.
+[00:14:46] Me: Yeah, I can get that. I can send over our current upload bandwidth numbers, we had the MSP run a test a couple weeks ago.
+[00:14:53] Caller 1: Oh perfect, that saves us a step. Fresh numbers are even better.
+[00:14:57] Me: Yeah, they tested both the, uh, the main line and the backup. I'll dig up the report.
+[00:15:03] Caller 2: Great. And it'd also help to understand your weekend load, like how many services, what times, that sort of thing.
+[00:15:10] Me: I'll send you our weekend service schedule so you can see the volume.
+[00:15:14] Speaker 2: Oh, yeah, I was gonna offer that, I've got it all in the shared calendar anyway.
+[00:15:18] Me: Right, Megan's got the master schedule, so between the two of us we'll get you everything.
+[00:15:23] Caller 2: Perfect, that's really all I need to prep a solid pilot config.
+[00:15:27] Caller 1: This is coming together nicely. Priya, can you make a note to prep the pilot unit for a December window?
+[00:15:33] Caller 2: Already writing it down. December pilot, prep the base StreamForge Edge unit, get the bandwidth and schedule from Aaron.
+[00:15:40] Speaker 2: Quick question while we're on it, um, does the pilot unit come with the N D I license or is that separate?
+[00:15:47] Caller 2: Good question, for the pilot we'll just unlock everything so you can try the N D I inputs too, no charge during the trial.
+[00:15:54] Speaker 2: Oh, that's great, because that's honestly the feature I'm most curious about.
+[00:15:58] Me: Yeah, if the N D I works clean that changes our whole camera routing.
+[00:16:02] Caller 1: And that's the beauty of a pilot, you find that out on your own gear, in your own room.
+[00:16:08] Me: Totally. I don't want to, you know, decide based on a demo in a conference room, no offense.
+[00:16:14] Caller 2: None taken, honestly I agree, our stuff shows best when it's actually running your services.
+[00:16:20] Caller 1: So let me just confirm the logistics. We ship you a unit early December, you run it a couple weekends, we check in after.
+[00:16:28] Me: That works. Megan, does early December clash with anything on the calendar?
+[00:16:33] Speaker 2: Let me think, the first two weekends are pretty normal, then the third weekend we start the Christmas services rehearsals.
+[00:16:40] Me: So let's aim for those first two weekends, that's our cleanest window.
+[00:16:44] Caller 1: First two weekends of December, got it. I'll pencil that in on our side.
+[00:16:49] Caller 2: And I'll build the config around a two-weekend run, that gives us enough data to actually compare.
+[00:16:55] Me: Sounds good. Alright, so that's the pilot roughly sketched out, which, uh, which feels like real progress.
+[00:17:02] Caller 1: It does. Now, before we wrap the demo side, should we touch on the, uh, the numbers? Pricing and all that?
+[00:17:09] Me: Yeah, let's, let's get into pricing, because that's the part the finance folks are gonna ask me about first.
+[00:17:15] Caller 1: Of course, that's always the question. Priya, do you want to pull up the, uh, the pricing sheet?
+[00:17:20] Caller 2: Yeah, give me a second to switch over. I'll share the, um, the standard pricing first and then we can talk multi-site.
+[00:17:27] Me: Multi-site's the one I really need to understand, since we've got the two campuses now.
+[00:17:32] Speaker 2: Three if you count the, uh, the portable setup we do at the school in the spring.
+[00:17:37] Me: Ha, true, though I don't know if that counts as a real site or just a, a very ambitious Sunday.
+[00:17:43] Caller 1: Ha, we can figure out how to categorize the, the ambitious Sunday.
+[00:17:47] Caller 2: Okay, sharing the pricing sheet now, can everybody see that?
+[00:17:51] Me: Yeah, it's up. Give me a sec to actually read it.
+[00:17:55] Caller 2: Take your time, and I'll walk through the tiers once you've had a look.
+[00:20:01] Caller 2: Okay, so the base StreamForge Edge unit is a flat per-unit license, and that's the number at the top there.
+[00:20:09] Me: Right, I see the, the per-unit line. That's roughly what Derek quoted in the email.
+[00:20:15] Caller 1: Yeah, that number's held steady, we didn't want to surprise you.
+[00:20:19] Caller 2: Then below that you've got the support tier, which is annual, and that's where the, um, the multi-site stuff comes in.
+[00:20:27] Me: Okay, so this is the part I need to get right. So what does the annual cost look like for multiple sites?
+[00:20:34] Caller 2: So, it depends a little, each site needs at least one unit, and then there's a, a management license that spans all of them.
+[00:20:42] Caller 1: The management layer is where you actually save, because you're not paying full freight per campus.
+[00:20:48] Me: Mm, okay, but I'm not seeing a specific two-campus number on this sheet.
+[00:20:53] Caller 2: Yeah, that's, that's fair, this sheet is the single-site list, I'd have to build you a, a proper multi-site quote.
+[00:21:00] Speaker 2: Would the portable school thing need its own management license too, or does it ride under one campus?
+[00:21:06] Caller 2: Honestly that's a good edge case, I'd have to check how we license a, a temporary venue.
+[00:21:12] Me: Yeah, let's, let's not lose that question, because the spring setup is a real thing we do every year.
+[00:21:18] Caller 1: We'll chase that down. The, the short version is multi-site is almost always cheaper than you'd guess from the list price.
+[00:21:25] Me: That's helpful, but I, I really do need the actual annual figure before I can take this anywhere.
+[00:21:31] Caller 2: Understood, I'll put together a multi-site annual breakdown and, um, send it alongside the trial stuff.
+[00:21:38] Me: Perfect. Speaking of the trial, how does that, how does licensing work during the pilot itself?
+[00:21:44] Caller 2: So the pilot is fully unlocked and free, and to kick it off, I'll get a trial license key over to you.
+[00:21:51] Me: Oh, nice, so we don't pay anything to, to actually run the two weekends?
+[00:21:56] Caller 1: Correct, the pilot's on us, that's, that's the whole point, you prove it out before a dollar changes hands.
+[00:22:03] Speaker 2: And the trial key unlocks the N D I inputs too, right, like you said earlier?
+[00:22:08] Caller 2: Exactly, the trial key is everything on, no features held back.
+[00:22:13] Me: Okay. Um, that's, that's great, but I, I want to be careful here.
+[00:22:18] Caller 1: Sure, careful's good. What's, what's on your mind?
+[00:22:22] Me: So, you know, I got a little ahead of myself earlier saying let's schedule December. I, I actually can't commit to a pilot date yet.
+[00:22:30] Caller 1: Oh, okay. Is it, is it a calendar thing or a, a different issue?
+[00:22:35] Me: It's budget. We've got a capital review coming up and I, I shouldn't be slotting a pilot before the elders have, have looked at the AVL budget.
+[00:22:44] Speaker 2: Yeah, that's, that's fair, we haven't even taken the encoder line to them yet.
+[00:22:49] Me: Right. So I want to, to walk this back a little, let's hold off on locking the December pilot until after the budget review.
+[00:22:57] Caller 1: Okay, no problem, I'd rather you do it the right way than, than rush it.
+[00:23:02] Me: I appreciate that. I don't want Priya building a whole config around a date we might, might have to move.
+[00:23:08] Caller 2: That's okay, I'll keep my notes but I won't, uh, won't lock the ship date on our end.
+[00:23:14] Caller 1: So just to be clear on our side, we hold the December pilot, pending your budget review, and pick it back up after.
+[00:23:21] Me: Exactly. The interest is real, I just can't, can't put a date on the calendar in good conscience yet.
+[00:23:28] Speaker 2: When's the capital review, roughly? Just so we know the, the timeframe.
+[00:23:33] Me: It's, uh, it's mid-November I think, I'd have to double-check with the office.
+[00:23:38] Caller 1: Okay, so realistically we'd be re-connecting late November about a, a possible pilot after the holidays maybe.
+[00:23:46] Me: Yeah, could be after the holidays honestly, given Christmas services eat all of December anyway.
+[00:23:52] Speaker 2: Which, which actually solves my scheduling worry, so, so that works out.
+[00:23:57] Caller 2: For what it's worth, running it in, in January on a, a calmer weekend might give cleaner data anyway.
+[00:24:04] Me: True. Alright, so the trial key and the multi-site quote, those I still want, right, those don't depend on the pilot date.
+[00:24:12] Caller 2: Correct, I'll send both of those regardless, you can, you can sit with the numbers while you wait on budget.
+[00:24:19] Me: Perfect, that's, that's exactly what I need to bring to the finance conversation.
+[00:24:24] Caller 1: Great. Anything else on, on pricing or features before we, we let you two go?
+[00:24:30] Me: Megan, anything from your side? You're the one who's gonna be living in this thing.
+[00:24:35] Speaker 2: Um, no, I think the big one for me was N D I and the trial covers that, so, so I'm good.
+[00:24:42] Caller 1: Love it. This has been a, a really productive call, honestly.
+[00:24:46] Me: It has. Sorry for the, the little reversal there on the pilot date, I just, I'd rather be straight with you.
+[00:24:53] Caller 1: No, no, truly, I'd take an honest maybe over a, a shaky yes any day.
+[00:24:59] Caller 2: Agreed. I'll get the key and the quote out, probably by, uh, end of week.
+[00:25:05] Me: End of week's great. And then we'll, we'll reconnect after the budget review, late November-ish.
+[00:25:11] Caller 1: Perfect, I'll put a, a reminder on my calendar to follow up with you around Thanksgiving.
+[00:25:17] Speaker 2: Oh, one more tiny thing, does the trial key expire, like, how long do we have?
+[00:25:22] Caller 2: Good catch, the trial keys usually run thirty days, but I can, I can set yours longer given the timing.
+[00:25:29] Me: Yeah, that'd help, 'cause if we don't run it till January a, a thirty-day clock is tight.
+[00:25:35] Caller 2: I'll set it to ninety days, that gives you, um, plenty of room.
+[00:25:40] Me: Ninety's great, thank you. Okay, I think that's everything on my list.
+[00:25:45] Caller 1: Same here. Megan, Aaron, really appreciate you both, uh, giving us the time.
+[00:25:51] Speaker 2: Of course, thanks for walking us through all of it, it was, it was genuinely helpful.
+[00:25:57] Caller 2: Thank you both, I'll get those materials over and, uh, we'll talk soon.
+[00:26:02] Me: Sounds good. Oh, hey, before we drop, totally off topic, did you guys get any of that storm roll through this week?
+[00:26:09] Caller 1: Ha, oh man, yeah, we lost power for like, like half a day at the office.
+[00:26:14] Me: Oof, that's rough. We just had a lot of rain, the, the parking lot was a lake Sunday morning.
+[00:26:20] Caller 2: Ha, our basement server room had us a little nervous but, but it held.
+[00:26:25] Speaker 2: Knock on wood, our rooms stayed dry too, which for this building is, is a miracle.
+[00:26:31] Caller 1: Ha, well, here's hoping December, or, or January, is calmer weather.
+[00:26:36] Me: Right? Alright, I'll let you two go. Thanks again, Derek, Priya, this was great.
+[00:26:42] Caller 1: Take care, Aaron. Talk to you after the, the budget review.
+[00:26:46] Caller 2: Bye, everyone, thank you.
+[00:26:48] Speaker 2: Bye, thanks guys.
+[00:26:50] Me: Alright, Megan, let's, uh, let's debrief for a sec once they've dropped.

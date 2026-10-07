@@ -1,0 +1,241 @@
+LED wall quote review
+Friday, October 16, 2026 · 1:00 PM · 20 min · Call
+Transcribed by Minutes. Audio was not recorded.
+
+[00:00:02] Me: Hey Dave, come on in, grab a seat. Megan should be dialing in any second now.
+[00:00:07] Speaker 1: Thanks. Man, that coffee in the lobby was rough this morning, did you make that?
+[00:00:12] Me: That was not me, that was the volunteer team, I take no responsibility.
+[00:00:16] Speaker 1: Tasted like it had been sitting since the early service.
+[00:00:20] Me: Probably had. How was the game yesterday, did your kid's team win?
+[00:00:25] Speaker 1: Oh, they got crushed, like eleven to two. It was cold too, I was freezing on those bleachers.
+[00:00:31] Me: That's rough. Did you at least get the good hot chocolate?
+[00:00:35] Speaker 1: No, they ran out. Story of my life.
+[00:00:39] Unknown: ...can you hear me now?
+[00:00:41] Caller 1: Hi, sorry, hey, can you guys hear me okay? I think I was on mute.
+[00:00:45] Me: Yeah, Megan, we got you loud and clear. How's it going?
+[00:00:49] Caller 1: Good, good! Sorry I'm a couple minutes late, back to back calls today. Thanks for making the time.
+[00:00:55] Me: No problem at all. So I've got Dave here in the room with me, he does a lot of our facilities and tech stuff.
+[00:01:01] Speaker 1: Hey Megan, nice to, uh, nice to meet you over the phone.
+[00:01:05] Caller 1: Nice to meet you too, Dave. Okay, so did you both get the quote PDF I sent over Friday afternoon?
+[00:01:11] Me: Yeah, I pulled it up. It's the one with the two line items at the top, right?
+[00:01:16] Caller 1: Exactly. So let me just walk you through it. Um, the main thing we spec'd out is the LED wall for your main auditorium, and I gave you two options on pixel pitch.
+[00:01:26] Me: Right, the two point nine and the two point six.
+[00:01:30] Caller 1: Correct. So the two point nine millimeter is our, you know, our standard workhorse panel. It's a little cheaper per tile, and honestly for a lot of rooms it's totally fine.
+[00:01:40] Speaker 1: And the two point six is the, the finer one?
+[00:01:43] Caller 1: Yes, the two point six has a tighter pixel pitch, so the image looks sharper, especially if people are sitting close.
+[00:01:50] Me: Which matters for us, our front row is what, like twelve feet from the stage?
+[00:01:55] Speaker 1: More like ten, ten feet. Those front chairs are right up on it.
+[00:01:59] Caller 1: Yeah, see, at ten feet with the two nine you might start to see the individual pixels a little bit. The two six, you really won't.
+[00:02:07] Me: Okay. And what's the, um, what's the price difference between the two?
+[00:02:11] Caller 1: So the way it breaks out, the two point six option is running about, let me see, about eighteen percent more than the two nine across the whole wall.
+[00:02:20] Speaker 1: Eighteen percent. On the whole thing that's not nothing.
+[00:02:24] Caller 1: It's not nothing, no. But I will say, the panels we're quoting are the same series, so your brightness is identical, it's fifteen hundred nits either way.
+[00:02:33] Me: Fifteen hundred nits, okay. That's plenty for us, we're not fighting a ton of window light in there.
+[00:02:39] Caller 1: Right, you've got a pretty controlled room. So brightness isn't really the deciding factor here, it really comes down to that pixel pitch and viewing distance.
+[00:02:48] Speaker 1: What about on camera? Aaron, doesn't the finer one look better on the stream?
+[00:02:53] Me: It does, yeah. The tighter the pitch the less you get that, uh, that moiré thing when the cameras pan across it.
+[00:02:59] Caller 1: That's a great point, Dave. On camera the two six is noticeably cleaner, you get less of the scan lines and the shimmer.
+[00:03:06] Me: Yeah and our whole weekend kind of lives on the stream now, so that's a real consideration.
+[00:03:11] Speaker 1: How many people are watching online these days?
+[00:03:14] Me: Depends on the week, but we're averaging like six, seven hundred views on a Sunday. Sometimes more if the weather's bad.
+[00:03:21] Speaker 1: Huh. Funny how a snowstorm is good for the numbers.
+[00:03:25] Me: Right? Our best attendance is a blizzard.
+[00:03:28] Caller 1: Ha, we hear that from a lot of churches up your way, honestly.
+[00:03:32] Me: So Megan, just so I'm clear, the two six, is that the same depth panel? Does it change anything on the mounting side?
+[00:03:39] Caller 1: No, same cabinet depth, same weight per tile, same mounting hardware. It's literally just the LED density on the face that's different.
+[00:03:47] Speaker 1: Okay, so from my end nothing changes for install.
+[00:03:51] Caller 1: Nothing changes, correct. It's just the tile cost.
+[00:03:55] Me: Alright. Dave, what's your gut? I'm kind of leaning finer.
+[00:03:59] Speaker 1: Honestly if the brightness is the same and it looks better up close and on camera, I don't know why we'd go cheaper and regret it.
+[00:04:06] Me: Yeah, that's where I'm at. We're going to live with this thing for what, ten years?
+[00:04:11] Caller 1: Easily ten years, yeah. These panels, with normal usage, I mean we see them going well past that.
+[00:04:17] Me: Right. I don't want to save a few grand now and be squinting at pixels for a decade.
+[00:04:22] Speaker 1: Agreed. Spend the money once.
+[00:04:25] Me: Okay. Yeah, okay let's go with the two point six millimeter panels. That's the one.
+[00:04:31] Caller 1: Perfect, great choice. I really do think that's the right call for your room.
+[00:04:36] Speaker 1: Can you, um, can you reflect that in the quote so we're looking at the right number?
+[00:04:41] Caller 1: Absolutely, I'll make sure the revised version only shows the two six pricing so it's not confusing.
+[00:04:47] Me: Great. What does that put the panel subtotal at, roughly?
+[00:04:51] Caller 1: For just the wall tiles, you're looking at right around, um, right around sixty one thousand.
+[00:04:57] Speaker 1: Sixty one. Okay.
+[00:04:59] Me: That's before the processor and all that, right?
+[00:05:02] Caller 1: Correct, that's just the display itself. The processing and the install are separate line items, which is actually what I wanted to talk about next.
+[00:05:10] Me: Perfect, let's get into that. Dave, you had a question on the processor too, didn't you?
+[00:05:15] Speaker 1: Yeah, hang on, let me find my notes. I wrote it down somewhere.
+[00:05:19] Me: While he digs, Megan, remind me, is the processor on this quote the new model or the one we talked about back in spring?
+[00:05:26] Caller 1: So that's a good question, and there's actually a newer unit out now that I'd want to walk you through before you decide.
+[00:05:33] Speaker 1: Okay, found it. Yeah, my note just says, quote, ask about the box, which, thanks past me, very helpful.
+[00:05:40] Me: Ha, real detailed.
+[00:05:42] Caller 1: Ha, no that's okay, the box is exactly what we're getting into.
+[00:05:46] Me: Alright, walk us through it.
+[00:07:02] Caller 1: So the processor that was on the spring quote, that was the older generation, and honestly I'd steer you away from it at this point.
+[00:07:10] Me: Okay, why's that?
+[00:07:12] Caller 1: The new unit handles the higher resolution a lot better, it's got the extra inputs, and it future proofs you if you ever add to the wall.
+[00:07:21] Speaker 1: What's the, uh, what's the difference in cost between the old box and the new one?
+[00:07:26] Caller 1: It's about twenty eight hundred more for the newer processor, so you're going from roughly fifty one hundred up to around seventy nine hundred.
+[00:07:35] Me: Hmm. Twenty eight hundred.
+[00:07:37] Speaker 1: That's not nothing, but if we're buying finer panels anyway it seems silly to choke them with an old processor.
+[00:07:44] Caller 1: That's exactly the point I'd make. With the two six you really want the headroom on the processing side.
+[00:07:50] Me: Yeah, and the inputs matter. Right now we're stretched on inputs with the switcher as it is.
+[00:07:56] Speaker 1: How many inputs does the new one give us?
+[00:07:59] Caller 1: You get four, and two of them are the twelve G ins, so you've got room for the cameras and pro presenter without a converter.
+[00:08:07] Me: Oh that's nice, that cleans up our rack actually.
+[00:08:10] Speaker 1: Yeah it does. Okay I'm, I'm into the new box.
+[00:08:14] Me: Same here. Megan, yeah let's add the new processor to the order.
+[00:08:19] Caller 1: Great, I'll swap that line item for the newer unit on the revised quote.
+[00:08:24] Me: Perfect.
+[00:08:25] Speaker 1: And that comes with the control software, or is that extra?
+[00:08:29] Caller 1: No, the software's included, and we do a remote config session with you before install so it's dialed in when we show up.
+[00:08:36] Me: That's handy. Our last processor we basically figured out ourselves off a PDF.
+[00:08:41] Speaker 1: Don't remind me.
+[00:08:43] Caller 1: Ha, yeah, no, we don't do that to people anymore.
+[00:08:47] Me: Okay, so while we're on the money stuff, let's talk warranty. What are the options there?
+[00:08:52] Caller 1: So standard is a two year parts and labor on the panels and the processor. That's included in the number I gave you.
+[00:08:59] Me: Two years standard, okay.
+[00:09:01] Caller 1: Then we offer a three year and a five year extended. The five year also bumps your spare tile count and covers the power supplies.
+[00:09:09] Speaker 1: What's the five year run us?
+[00:09:11] Caller 1: The five year is, um, let me see, it's forty two hundred on top, and that includes two extra spare tiles.
+[00:09:19] Me: Spare tiles are the thing I actually care about. When one goes we can't exactly run to the store.
+[00:09:25] Speaker 1: Right, and on a wall that's up front every weekend, a dead tile is a dead tile. Everybody sees it.
+[00:09:31] Caller 1: Exactly, and the five year is the one most of our church clients land on for that reason.
+[00:09:37] Me: Yeah. For something we're keeping ten years, two years of coverage feels short.
+[00:09:42] Speaker 1: I'd do the five. The spares alone almost justify it.
+[00:09:46] Me: Okay. Yeah we'll take the five year warranty option. Put that on there too.
+[00:09:51] Caller 1: Perfect, I'll add the five year extended with the spare tiles included.
+[00:09:56] Speaker 1: And the spares, those ship with everything else? We store them here?
+[00:10:00] Caller 1: Yep, they ship in the same crate, you keep them on site, and if you ever use one we just replenish under the warranty.
+[00:10:07] Me: Love it. Okay, that's panels, processor, warranty.
+[00:10:11] Unknown: sorry, say that last part again?
+[00:10:13] Caller 1: Oh, just that the spares live on site with you.
+[00:10:16] Speaker 1: Hey, so, can I throw a wrench in here for a second?
+[00:10:19] Me: Course, go.
+[00:10:20] Speaker 1: The wall we've got now, the frame that's bolted to the back there, that was spec'd for the old lighter screen, right?
+[00:10:27] Me: Yeah, that structure's been up since, what, the remodel. Twenty eighteen?
+[00:10:31] Speaker 1: So my question is, can the existing structure handle the extra weight, because these cabinets, you said they're heavier per tile than what's up now.
+[00:10:40] Caller 1: So I can get you the exact per cabinet weight, but yes, this system is heavier overall than a typical older wall.
+[00:10:48] Me: Huh. That's a real question, Dave, I hadn't thought about the frame.
+[00:10:52] Speaker 1: I just don't want us to buy sixty grand of panels and then find out the steel won't take it.
+[00:10:57] Caller 1: That's a very fair concern. What I'd normally say is have a structural person confirm the load rating before install.
+[00:11:04] Me: Do we have the original drawings for that frame anywhere?
+[00:11:07] Speaker 1: There's a binder from the remodel in the mechanical room, maybe. I honestly don't know if the load numbers are in it.
+[00:11:14] Me: Okay, we need to pin that down before we commit to a date. That's a, that's a real one.
+[00:11:19] Caller 1: And just so you know, we have a rigging partner we can bring in if you want a formal assessment, but that is a separate cost.
+[00:11:27] Speaker 1: Let's not add cost yet, let me see what I can find on our end first.
+[00:11:31] Me: Yeah, let's start with the binder. Megan, send me the total weight of the full wall and I'll get that in front of somebody.
+[00:11:38] Caller 1: Will do, I'll put the total system weight right on the revised quote so it's all in one place.
+[00:11:44] Me: Perfect.
+[00:11:45] Speaker 1: Because if that frame doesn't work, that's a whole other line of welding and brackets and I don't even want to guess the number.
+[00:11:52] Caller 1: Right, and I'd rather flag it now than on install day.
+[00:11:56] Me: Hundred percent. Okay, so that's our one open item, the structure.
+[00:12:00] Speaker 1: Yeah, mark that as unresolved, I'm not comfortable saying yes on the weight yet.
+[00:12:05] Me: Noted. Alright, so where does that put the running total, Megan, panels plus the new processor plus the five year?
+[00:12:12] Caller 1: So with the two six panels, the new processor, and the five year warranty, you're at about, um, seventy three thousand before install and tax.
+[00:12:22] Me: Seventy three. Okay.
+[00:12:24] Speaker 1: And install's still its own line?
+[00:12:26] Caller 1: Install's separate, yeah, I'll have a firm install number once we nail down the date and the structure thing.
+[00:12:33] Me: Makes sense, we can't really price the labor till we know if there's rigging work.
+[00:12:38] Caller 1: Exactly.
+[00:12:39] Me: Okay. Good. I feel better having the processor sorted, that was the part I kept going back and forth on.
+[00:12:45] Speaker 1: Yeah, the new box is the right move. Even just the inputs.
+[00:12:49] Me: For sure.
+[00:12:50] Caller 1: And you'll like the config session, it really does make install day smoother.
+[00:12:55] Me: Alright. Let's talk timing and who does what, because I know you've got a hard stop, Megan.
+[00:13:00] Caller 1: I do, I've got another call at the bottom of the hour, but we've got a few minutes.
+[00:13:05] Speaker 1: Quick thing, do the panels come in your standard black bezel or is there, like, a color option?
+[00:13:11] Caller 1: Standard's a matte black, which honestly you want on a stage, it disappears under the lights.
+[00:13:17] Speaker 1: Yeah, that's fine, just checking.
+[00:13:19] Me: Last thing we did had a shiny frame and it caught every par can we owned.
+[00:13:24] Caller 1: Ha, yeah, matte black, you won't have that problem.
+[00:13:28] Me: Good. Okay, so on timing.
+[00:13:31] Speaker 1: Before we go there, remind me the lead time once we sign?
+[00:13:35] Caller 1: From a signed quote and deposit, the panels are about six weeks out from the factory.
+[00:13:41] Me: Six weeks. Okay, that actually lines up with what I was hoping, timing wise.
+[00:13:46] Speaker 1: Depending on the structure thing.
+[00:13:48] Me: Depending on the structure thing, yes, Dave, I heard you.
+[00:13:51] Caller 1: Ha, he's got a point though.
+[00:13:53] Me: He does, he does. Okay, let's figure out the install window.
+[00:14:02] Caller 1: So the way our calendar looks, if you sign in the next couple weeks, you're installing sometime in January.
+[00:14:09] Me: January's actually perfect for us, it's dead around here after the holidays.
+[00:14:14] Speaker 1: Yeah, we've got nothing on the stage that second and third week.
+[00:14:18] Caller 1: Great, so we'll install during the week of January twelfth, that's a slow one for my crew too.
+[00:14:24] Me: Week of the twelfth, let's pencil that in.
+[00:14:27] Speaker 1: Pencil, not pen, till we know about the frame.
+[00:14:30] Me: Right, right. Okay before we lock anything, I want to go back to the processor for a sec.
+[00:14:36] Caller 1: Sure, what's up?
+[00:14:37] Me: So we said, yeah let's add the new processor to the order, and I'm now second guessing the timing on that.
+[00:14:44] Speaker 1: Meaning the money or the need?
+[00:14:46] Me: The money, mostly. The old processor still drives this resolution fine, right, Megan?
+[00:14:52] Caller 1: Honestly? For the two six wall at that size, your current box will run it day one.
+[00:14:58] Me: That's what I thought. So the new one's a nice to have, not a must have.
+[00:15:03] Speaker 1: And it's, what, like six grand of that total?
+[00:15:06] Caller 1: The new processor's about fifty eight hundred, yeah.
+[00:15:10] Me: Okay. Here's where I land. Let's keep the existing processor for now and pull the new one off the quote.
+[00:15:16] Speaker 1: I think that's smart. We can add it later when the budget's not already stretched.
+[00:15:21] Me: Yeah. So scratch the processor, we'll revisit it next budget year.
+[00:15:25] Caller 1: Totally doable, I'll just drop it off the line items.
+[00:15:29] Me: Good. I feel better about that number already.
+[00:15:32] Speaker 1: What does that bring us to, ballpark?
+[00:15:35] Caller 1: Takes you from seventy three down to around sixty seven, five, before install and tax.
+[00:15:41] Me: Sixty seven five. That's a lot easier to walk into a board meeting with.
+[00:15:46] Speaker 1: Hey, random thought while we're dreaming.
+[00:15:49] Me: Uh oh.
+[00:15:50] Speaker 1: No, hear me out, what if we put a small wall in the lobby, like a little welcome screen, off the leftover panels?
+[00:15:57] Me: Huh. I mean, that'd be cool for announcements.
+[00:16:00] Caller 1: You could, the spare panels would tile into a small secondary. People do it.
+[00:16:05] Speaker 1: Just a thought, something to chew on.
+[00:16:07] Me: Yeah, let's not open that can today, but I like the brain. Park it.
+[00:16:12] Caller 1: I'll leave it out of the quote, you can always ask later.
+[00:16:15] Me: Perfect, keep the quote to the main wall only. Okay, Megan, I know you're tight on time, let's nail down who's doing what.
+[00:16:23] Caller 1: Yep. So on my end, I'll get you the revised quote by Tuesday, two six panels, five year warranty, existing processor, no lobby stuff.
+[00:16:32] Me: Tuesday's great. That gives me time before the board meets Thursday.
+[00:16:36] Caller 1: And once you've got the signed quote and deposit back to me, the six week clock starts.
+[00:16:42] Me: Right. So the deposit, that's the part I have to get approved. I'll take the deposit request to the board on Thursday.
+[00:16:49] Speaker 1: What's the deposit, percentage wise?
+[00:16:51] Caller 1: It's fifty percent to start the factory order.
+[00:16:54] Me: Fifty. Okay, that's what I'll bring to them.
+[00:16:57] Speaker 1: And I'll handle the structure question. I'll pull the measurements off the back wall this week and send photos of the existing frame.
+[00:17:05] Caller 1: That'd be huge, Dave. If you can get me the beam spacing and the frame dimensions, I can have my install guy weigh in.
+[00:17:12] Speaker 1: Can do. I'll get up there with a tape measure Saturday morning.
+[00:17:16] Me: And Megan, you'll give us the firm install number once Dave sends that over?
+[00:17:21] Caller 1: Exactly, structure plus date equals real labor number. Should be quick once I have the photos.
+[00:17:27] Me: Love it. So just to read it back, Megan revises the quote by Tuesday, I take the deposit to the board Thursday, Dave measures the wall this weekend.
+[00:17:37] Speaker 1: And nobody signs anything till the frame's a yes.
+[00:17:40] Me: Correct. Structure's still our one open question.
+[00:17:44] Caller 1: Which I think we'll resolve fast, but yeah, good to hold on it.
+[00:17:48] Me: Okay. Anything else from your side before you jump?
+[00:17:52] Caller 1: Just, honestly, great call, you two ask good questions, it makes my job easier.
+[00:17:57] Me: Ha, we've been burned before, so.
+[00:17:59] Speaker 1: The shiny frame incident.
+[00:18:01] Me: The shiny frame incident, we don't talk about it.
+[00:18:04] Caller 1: Matte black, remember. No more par can disco.
+[00:18:08] Me: No more disco. Okay, Megan, go hit your call, we've got what we need.
+[00:18:12] Caller 1: Thanks guys, revised quote lands in your inbox by Tuesday, I'll flag it so you see it.
+[00:18:18] Me: Appreciate you. Talk soon.
+[00:18:20] Caller 1: Bye Aaron, bye Dave.
+[00:18:22] Speaker 1: See ya.
+[00:18:24] Me: Okay. That went well, I think.
+[00:18:27] Speaker 1: Yeah. Dropping the processor was the right call, that was eating the budget.
+[00:18:31] Me: Totally. And it's not like we need it today.
+[00:18:34] Speaker 1: Nope. My only worry's still that frame.
+[00:18:37] Me: Same. If the welding thing turns into a monster we may have to rethink the January date.
+[00:18:42] Speaker 1: Let me get the measurements first before we spiral.
+[00:18:45] Me: Deal. Get me the photos and I'll forward them to Megan with you cc'd.
+[00:18:49] Speaker 1: Works. You want me to grab the old install drawings too, if I can find them?
+[00:18:54] Me: If you can find them, yeah, that'd save her a step.
+[00:18:57] Speaker 1: They're in that filing cabinet somewhere, probably under a pile of gel frames.
+[00:19:02] Me: Of course they are. Okay. I think we're good.
+[00:19:06] Speaker 1: What time's the board Thursday?
+[00:19:08] Me: Seven. I'll have the quote and the deposit number ready to present.
+[00:19:12] Speaker 1: You want me there for the structure questions?
+[00:19:15] Me: If you can swing it, yeah, they trust your read on the building stuff more than mine.
+[00:19:20] Speaker 1: I'll be there. Seven.
+[00:19:22] Me: Perfect. Alright, let me write all this down before I forget it.
+[00:19:26] Speaker 1: Panels, warranty, no processor, January twelfth, deposit to the board.
+[00:19:31] Me: And measurements this weekend.
+[00:19:33] Speaker 1: Measurements this weekend. Got it.
+[00:19:35] Me: Cool. Thanks, Dave, this was a good one.
+[00:19:38] Speaker 1: Yeah man. I'll text you after I'm up on the ladder Saturday.
+[00:19:42] Me: Please don't fall off the ladder.
+[00:19:44] Speaker 1: No promises.
+[00:19:46] Me: Alright, I'm gonna go eat lunch. Later.
+[00:19:49] Speaker 1: Later.

@@ -1,0 +1,123 @@
+{
+ "id": "m13",
+ "title": "Christmas Eve service production planning",
+ "type": "event planning",
+ "minutes": 30,
+ "sources": [
+  "room"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Megan",
+   "role": "creative/worship director"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Dave",
+   "role": "facilities/production manager"
+  },
+  {
+   "label": "Speaker 3",
+   "name": "Josh",
+   "role": "volunteer coordinator"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Run three Christmas Eve services at 3, 5, and 7 PM",
+   "evidence": "let's lock in three services at three, five, and seven"
+  },
+  {
+   "id": "d2",
+   "text": "Use real candles on the platform and battery candles in the house seating",
+   "evidence": "Real candles just on the platform and battery ones in the house"
+  },
+  {
+   "id": "d3",
+   "text": "Livestream only the 5 o'clock service",
+   "evidence": "we'll only livestream the five o'clock service this year"
+  },
+  {
+   "id": "d4",
+   "text": "Rent four moving lights for the Christmas Eve design",
+   "evidence": "let's go ahead and rent the four moving lights"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Build the ProPresenter playlist for all services",
+   "owner": "Me",
+   "due": "Monday",
+   "evidence": "I'll build out the pro presenter playlist by next Monday"
+  },
+  {
+   "id": "a2",
+   "task": "Line up two more camera operators",
+   "owner": "Josh",
+   "due": null,
+   "evidence": "I can line up two more camera operators"
+  },
+  {
+   "id": "a3",
+   "task": "Order 300 battery candles",
+   "owner": "Dave",
+   "due": "Friday",
+   "evidence": "I'll get three hundred battery candles ordered by Friday"
+  },
+  {
+   "id": "a4",
+   "task": "Send the final song list",
+   "owner": "Megan",
+   "due": "tonight",
+   "evidence": "I'll send over the final song list tonight"
+  },
+  {
+   "id": "a5",
+   "task": "Run a haze test against the fire panel",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll run a haze test with the fire panel"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Whether the fire marshal permits open flame on the platform",
+   "evidence": "Has anyone actually checked with the fire marshal about open flame"
+  },
+  {
+   "id": "q2",
+   "text": "Whether there are enough Clear-Com belt packs for all three cameras",
+   "evidence": "Do we even have enough clear com belt packs for all three cameras"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "tentative",
+   "claim": "The team decided to add an 11 PM candlelight service",
+   "evidence": "I'm kind of leaning toward adding an eleven o'clock"
+  },
+  {
+   "id": "t2",
+   "kind": "other_party",
+   "claim": "Aaron approved the lighting rental budget",
+   "evidence": "that's really up to finance to sign off on"
+  },
+  {
+   "id": "t3",
+   "kind": "already_done",
+   "claim": "Someone needs to make the lower third graphics",
+   "evidence": "the lower third graphics are already finished"
+  }
+ ]
+}

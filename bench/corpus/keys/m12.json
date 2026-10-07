@@ -1,0 +1,89 @@
+{
+ "id": "m12",
+ "title": "Fall Baptism Sunday Debrief",
+ "type": "event debrief",
+ "minutes": 20,
+ "sources": [
+  "room",
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Dana",
+   "role": "Production coordinator"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Marcus",
+   "role": "Online/weekend services pastor (on call)"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Add a locked-off camera on the baptism tank for future baptisms.",
+   "evidence": "we're going to put a locked off camera on the tank next time"
+  },
+  {
+   "id": "d2",
+   "text": "Pre-build all baptism name slides ahead of time instead of typing them live.",
+   "evidence": "build all the baptism name slides ahead of time"
+  },
+  {
+   "id": "d3",
+   "text": "Switch to a handheld mic for baptisms going forward instead of the lav.",
+   "evidence": "we'll switch to the handheld for the baptisms going forward"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Build the baptism name slides in ProPresenter.",
+   "owner": "Me",
+   "due": "Thursday",
+   "evidence": "I'll have the name slides built by Thursday"
+  },
+  {
+   "id": "a2",
+   "task": "Send Aaron the final list of baptism names.",
+   "owner": "Marcus",
+   "due": "Friday",
+   "evidence": "I'll get you the final list of names by Friday"
+  },
+  {
+   "id": "a3",
+   "task": "Recruit an additional camera volunteer.",
+   "owner": "Dana",
+   "due": null,
+   "evidence": "I'll reach out to find another camera volunteer"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Is there budget for another camera this year?",
+   "evidence": "do we even have budget for another camera this year"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "hypothetical",
+   "claim": "The team decided to run a second livestream dedicated to the baptisms.",
+   "evidence": "if we ran a second stream just for the baptisms"
+  },
+  {
+   "id": "t2",
+   "kind": "joke",
+   "claim": "The team decided to put a GoPro on the pastor during baptisms.",
+   "evidence": "we could just strap a go pro to the pastor"
+  }
+ ]
+}

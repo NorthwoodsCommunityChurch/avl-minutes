@@ -1,0 +1,108 @@
+Truss inspection follow-up
+Tuesday, October 6, 2026 · 9:00 AM · 10 min · Room and call
+Transcribed by Minutes. Audio was not recorded.
+
+[00:00:03] Me: Hey Dave, did you get the coffee machine working in the green room, or are we still, uh, boiling water like it's 1890?
+[00:00:09] Speaker 1: It's working, barely. I think the thing is older than the building honestly.
+[00:00:14] Me: Ha, yeah. Okay, let me get Gary dialed in here, he said he'd call in around nine.
+[00:00:21] Speaker 1: No rush. You want the lights on the stage or did you want them dark for the, uh, for what he's looking at?
+[00:00:27] Me: Doesn't matter for this, it's the truss itself. Let me just, hold on.
+[00:00:34] Caller 1: Hello? Can you guys hear me okay?
+[00:00:37] Me: Hey Gary, yeah we got you. You're on speaker in the auditorium, Dave's here too.
+[00:00:42] Caller 1: Perfect, perfect. Hey Dave. Um, sorry, my signal's a little spotty, I'm driving between sites this morning.
+[00:00:49] Speaker 1: Morning Gary. No worries.
+[00:00:52] Caller 1: So, uh, let me just walk you through what I found when I came out Thursday on the downstage truss.
+[00:00:59] Me: Yeah, go for it. I've got the paper copy you left but honestly I couldn't read half the handwriting.
+[00:01:05] Caller 1: Ha, fair. Okay so the truss structure itself, the actual aluminum, that's in good shape. No cracks, no deformation at the corner blocks, all good.
+[00:01:15] Speaker 1: Okay, that's a relief.
+[00:01:17] Caller 1: Right. The issue is the safety cables. A bunch of them are, um, frayed near the thimble, and a couple are the wrong rating entirely, looks like somebody swapped them out at some point.
+[00:01:28] Me: Yeah that doesn't surprise me, that stuff predates me.
+[00:01:32] Caller 1: So my recommendation, and it's not expensive, let's go ahead and replace all the safety cables on the downstage truss. Every single one, don't try to pick and choose.
+[00:01:42] Me: Yeah, I'm good with that. Dave, you good with that?
+[00:01:45] Speaker 1: Absolutely, if they're frayed we're not messing around with that. Replace them all.
+[00:01:50] Caller 1: Great. They're cheap, it's the labor of getting up there that costs you, so do it all at once.
+[00:01:56] Me: Makes sense. We can do that on a Tuesday when the room's empty.
+[00:02:01] Caller 1: Perfect. I'll note that in the report as, uh, action item one.
+[00:02:06] Me: Hey, so while we're on the truss, I've got a question that's been nagging me.
+[00:02:11] Caller 1: Shoot.
+[00:02:13] Me: We're planning to hang some new LED wash fixtures this spring, they're heavier than what we've got now. Does the current truss rating even cover those new LED units?
+[00:02:23] Caller 1: That's a, that's a really good question. I'd have to see the weights. What are you, what's the spec on them?
+[00:02:30] Me: They're the, uh, the new color source spots, I think each one's like, I want to say thirty-some pounds a piece.
+[00:02:37] Speaker 1: And how many are we hanging?
+[00:02:39] Me: Twelve across the downstage. Plus the cabling, plus the existing stuff that's staying.
+[00:02:44] Caller 1: Yeah, okay. So before you hang a single one of those, I need the actual cut sheets. Send me the manufacturer weights, not your guess.
+[00:02:53] Me: Ha, fair enough. I'll send over the list of the new fixtures this afternoon, with the spec sheets attached.
+[00:02:59] Caller 1: Perfect, that's all I need to run the load calc. It might be fine, it might mean we add a point, but I'm not gonna eyeball it.
+[00:03:07] Speaker 1: That's the right call. I don't want to find out the hard way.
+[00:03:11] Caller 1: Exactly. So just to be clear, the point load matters more than the total, so I'll want to know your spacing too — kkkhhh —
+[00:03:19] Me: Gary? You there?
+[00:03:22] Speaker 1: I think we lost him.
+[00:03:24] Me: Yeah, his signal's been garbage all morning. He'll call back.
+[00:03:28] Speaker 1: While we wait, did you ever hear back from the paint crew about the lobby?
+[00:03:33] Me: Oh man, no. They were supposed to come Monday and just, never showed. Sarah's chasing them down.
+[00:03:39] Speaker 1: Typical. That whole wall's been half-primed for like three weeks now.
+[00:03:44] Me: I know. It looks terrible on the welcome shots when we do the building tour video.
+[00:03:49] Unknown: back on, sorry about that
+[00:03:52] Caller 2: Hey, sorry guys, I'm back, I drove through a dead zone there. Did you catch that last part about spacing?
+[00:03:59] Me: We got up to "the point load matters more than the total" and then you cut out.
+[00:04:04] Caller 2: Okay, yeah. So I'll need the spacing between fixtures too, not just the weights.
+[00:04:10] Me: Got it. I'll put the spacing on the same email with the spec sheets.
+[00:04:15] Speaker 1: So we're replacing all the cables regardless, right? That part's locked in.
+[00:04:20] Caller 1: Correct, the cables are happening no matter what the load calc says.
+[00:04:25] Me: Good. One less thing I have to think about.
+[00:04:28] Caller 2: Now, the other thing I flagged, and this is more serious, is the moving lights. We need to talk about those.
+[00:04:35] Me: Yeah, I figured that was coming.
+[00:04:38] Speaker 1: Hang on, let me grab the report sheet off the booth.
+[00:05:01] Caller 2: Okay, so the moving heads on the downstage truss. When I pulled the yoke covers, two of the four had play in the pan bearing, and one had a cracked clamp.
+[00:05:12] Me: A cracked clamp. That's the thing holding it to the truss?
+[00:05:16] Caller 2: That's the thing holding thirty pounds of fixture over your worship team's heads, yeah.
+[00:05:21] Speaker 1: Okay, so what's the call on those? Pull them down?
+[00:05:25] Caller 2: My recommendation, and I'll put this in writing, is you do not power those up at all until I've done a re-inspection.
+[00:05:33] Me: So we're dark on the movers for, what, a couple weekends?
+[00:05:37] Caller 2: Could be. Depends how fast you can get me back out and whether the clamps are in stock.
+[00:05:43] Speaker 1: I'd rather be dark than take the risk, honestly.
+[00:05:46] Me: Agreed. Let's say we keep the moving lights locked out until it passes re-inspection. I'll blackhole them in the console tonight so nobody fires them up by accident.
+[00:05:56] Caller 2: That's exactly what I want to hear. Lock them out in software and physically tag them if you can.
+[00:06:02] Me: Yeah, I'll gaff a note right on the bumper so the volunteers don't touch them.
+[00:06:07] Speaker 1: Can you send us all this written down? I don't want to be relying on, you know, my memory of a phone call.
+[00:06:13] Caller 2: Absolutely. I'll email you the full inspection report today, it's got photos of everything, the cables, the clamp, the bearing play, all of it.
+[00:06:22] Me: That's perfect. Can you copy Dave on that too?
+[00:06:25] Caller 2: Yep, I've got both your addresses from the work order.
+[00:06:29] Speaker 1: Appreciate it, Gary.
+[00:06:31] Caller 1: No problem. Um, while I've got you both — and this is just a thought — have you guys considered going on an annual inspection plan?
+[00:06:40] Me: Tell me more.
+[00:06:42] Caller 1: So instead of these one-off call-outs where you're scrambling, we schedule a full rig inspection once a year, same time every year, and you get priority booking if something comes up in between.
+[00:06:53] Speaker 1: Huh. What's that run us?
+[00:06:56] Caller 1: It depends on the scope, but for a room your size it'd probably be somewhere in the twelve to fifteen hundred range annually.
+[00:07:04] Me: That's not nothing, but it beats finding a cracked clamp by accident.
+[00:07:08] Speaker 1: I mean, I like the idea in principle.
+[00:07:11] Caller 1: No pressure at all, I'm just planting the seed. You can think it over.
+[00:07:16] Me: Honestly, after this morning, I'm leaning toward the annual inspection plan. But I don't want to commit to a dollar figure on the phone.
+[00:07:24] Speaker 1: Yeah, let's not decide that right now. We need to look at where we're at for the year.
+[00:07:29] Me: Right. Let's sit on it and revisit once we've seen the written report.
+[00:07:34] Caller 1: Totally fair. I'll include the plan pricing in the email so you've got it in front of you.
+[00:07:39] Speaker 1: And just so we're all clear, whatever we land on, the cable replacement plus the re-inspection plus anything else, that whole number has to go to the finance team for approval before I can cut a PO.
+[00:07:51] Me: Right, that's above both our heads.
+[00:07:53] Speaker 1: Way above. I can recommend it but I can't approve it.
+[00:07:57] Caller 1: Understood. I'll itemize the quote so it's easy for them to see line by line.
+[00:08:02] Me: That'd help a lot, thank you. Okay, so let me just make sure I've got my list straight.
+[00:08:08] Speaker 1: Go for it.
+[00:08:10] Me: I'm sending you the fixture list with weights and spacing and spec sheets this afternoon. The safety cables are getting replaced regardless. The movers stay locked out till you re-inspect.
+[00:08:21] Caller 1: Correct on all three. And I send you the report with photos and the plan pricing today.
+[00:08:27] Speaker 1: And I take the final number to finance once we've got the quote.
+[00:08:31] Me: Perfect. I think that's everything.
+[00:08:34] Caller 1: When do you want me back out for the re-inspection? Roughly.
+[00:08:38] Me: As soon as the clamps are in, honestly. Let me see what the report says and I'll call you to book it.
+[00:08:44] Caller 1: Sounds good. I'll keep an eye out for your email so I can run that load calc.
+[00:08:49] Speaker 1: Thanks for squeezing us in, Gary. I know you're slammed this time of year.
+[00:08:53] Caller 1: Happy to. You guys actually take this stuff seriously, which I appreciate.
+[00:08:58] Me: We try. Nobody wants a fixture coming down mid-service.
+[00:09:02] Caller 1: Nope. Okay, I'll let you two go. Report's coming by end of day.
+[00:09:07] Me: Thanks Gary, talk soon.
+[00:09:09] Speaker 1: Bye now.
+[00:09:11] Caller 1: Bye.
+[00:09:14] Speaker 1: Alright. You good with all that?
+[00:09:17] Me: Yeah. I'll get that email out before I forget. Can you ping Sarah about the paint crew while I do?
+[00:09:23] Speaker 1: Yeah, I'll chase that separately. Different headache.
+[00:09:26] Me: Appreciate it. Let's regroup once finance says yes or no.
+[00:09:30] Speaker 1: Sounds good. I'll walk the quote over the second it lands.

@@ -1,0 +1,216 @@
+{
+ "id": "m30",
+ "title": "Easter Weekend Full Production Meeting",
+ "type": "event planning",
+ "minutes": 90,
+ "sources": [
+  "room",
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Dale",
+   "role": "Executive pastor"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Renee",
+   "role": "Worship leader"
+  },
+  {
+   "label": "Speaker 3",
+   "name": "Marcus",
+   "role": "Facilities manager"
+  },
+  {
+   "label": "Speaker 4",
+   "name": "Holly",
+   "role": "Volunteer coordinator"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Trent",
+   "role": "Staging/LED rental vendor"
+  },
+  {
+   "label": "Caller 2",
+   "name": "Priya",
+   "role": "MSP / IT provider"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Run three services Easter Sunday morning plus a Good Friday service",
+   "evidence": "run three services on Easter Sunday morning"
+  },
+  {
+   "id": "d2",
+   "text": "Rent the extra LED wall panels from the vendor",
+   "evidence": "go ahead and rent the extra wall panels"
+  },
+  {
+   "id": "d3",
+   "text": "Add a handheld camera position on the floor for Easter",
+   "evidence": "add a handheld camera down on the floor"
+  },
+  {
+   "id": "d4",
+   "text": "Use the haze machine for every Easter service",
+   "evidence": "use the haze machine for every Easter service"
+  },
+  {
+   "id": "d5",
+   "text": "Livestream only the 11am service, not all three",
+   "evidence": "we'll only stream the eleven o'clock service"
+  },
+  {
+   "id": "d6",
+   "text": "Move the choir onto the main stage",
+   "evidence": "move the choir up onto the main stage"
+  },
+  {
+   "id": "d7",
+   "text": "Order four more intercom belt packs for Easter",
+   "evidence": "order four more belt packs for Easter"
+  },
+  {
+   "id": "d8",
+   "text": "Volunteer call time is two hours before the first service",
+   "evidence": "call time is two hours before the first service"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Build the ProPresenter playlists for all services",
+   "owner": "Me",
+   "due": "the fifteenth",
+   "evidence": "I'll build out the pro presenter playlists"
+  },
+  {
+   "id": "a2",
+   "task": "Send over the LED wall rental quote",
+   "owner": "Caller 1",
+   "due": "Friday",
+   "evidence": "send over the rental quote by Friday"
+  },
+  {
+   "id": "a3",
+   "task": "Recruit three more camera volunteers",
+   "owner": "Holly",
+   "due": null,
+   "evidence": "recruit three more camera volunteers"
+  },
+  {
+   "id": "a4",
+   "task": "Program all the lighting cues",
+   "owner": "Me",
+   "due": null,
+   "evidence": "program all the lighting cues this week"
+  },
+  {
+   "id": "a5",
+   "task": "Bump up the upload bandwidth before Easter",
+   "owner": "Caller 2",
+   "due": null,
+   "evidence": "bump up the upload bandwidth before Easter"
+  },
+  {
+   "id": "a6",
+   "task": "Set out the parking barricades Easter morning",
+   "owner": "Marcus",
+   "due": null,
+   "evidence": "set out the parking barricades that morning"
+  },
+  {
+   "id": "a7",
+   "task": "Finalize the worship song list",
+   "owner": "Renee",
+   "due": "next Tuesday",
+   "evidence": "finalize the song list by next Tuesday"
+  },
+  {
+   "id": "a8",
+   "task": "Place the order for the intercom belt packs",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll place the order for the belt packs"
+  },
+  {
+   "id": "a9",
+   "task": "Schedule a volunteer training the week before",
+   "owner": "Holly",
+   "due": null,
+   "evidence": "schedule a volunteer training the week before"
+  },
+  {
+   "id": "a10",
+   "task": "Test the stream encoder with the MSP",
+   "owner": "Me",
+   "due": null,
+   "evidence": "test the stream encoder with the network team"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Does the audio console have enough inputs for the full choir?",
+   "evidence": "do we even have enough inputs for the full choir"
+  },
+  {
+   "id": "q2",
+   "text": "Who will direct video across all three services?",
+   "evidence": "who is going to direct video for all three"
+  },
+  {
+   "id": "q3",
+   "text": "Does the overflow room need its own feed?",
+   "evidence": "does the overflow room need its own feed"
+  },
+  {
+   "id": "q4",
+   "text": "Where will the recorded footage be stored?",
+   "evidence": "where are we going to store all that footage"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "other_party",
+   "claim": "The meeting approved the Easter production budget",
+   "evidence": "that whole budget decision sits with the finance team"
+  },
+  {
+   "id": "t2",
+   "kind": "already_done",
+   "claim": "Aaron will order haze fluid as a new task",
+   "evidence": "I already ordered the haze fluid last week"
+  },
+  {
+   "id": "t3",
+   "kind": "label_noise",
+   "claim": "Marcus (facilities) will cover front of house for Good Friday",
+   "evidence": "I can cover front of house for Good Friday"
+  },
+  {
+   "id": "t4",
+   "kind": "hypothetical",
+   "claim": "They decided to add a drone shot over the parking lot",
+   "evidence": "what if we added a drone shot over the parking lot"
+  },
+  {
+   "id": "t5",
+   "kind": "reversed",
+   "claim": "All three Easter services will be livestreamed",
+   "evidence": "let's go live on all three Easter services"
+  }
+ ]
+}

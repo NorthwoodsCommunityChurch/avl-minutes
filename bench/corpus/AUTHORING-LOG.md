@@ -1,0 +1,177 @@
+- 11:22:18 m01: plan 30s, 2 segment(s)
+- 11:23:03 m01: segment 1/2 45s, 76 lines
+- 11:23:31 m01: segment 2/2 28s, 47 lines
+- 11:23:45 m01: key repair 14s, 0 problem(s) left
+- 11:23:45 m01: VALID
+- 11:24:23 m02: plan 21s, 2 segment(s)
+- 11:24:58 m02: segment 1/2 35s, 51 lines
+- 11:25:37 m02: segment 2/2 39s, 57 lines
+- 11:25:48 m02: key repair 12s, 0 problem(s) left
+- 11:25:48 m02: VALID
+- 11:26:11 m03: plan 23s, 2 segment(s)
+- 11:26:43 m03: segment 1/2 32s, 42 lines
+- 11:27:18 m03: segment 2/2 35s, 52 lines
+- 11:27:30 m03: key repair 12s, 0 problem(s) left
+- 11:27:30 m03: VALID
+- 11:28:17 m04: plan 47s, 3 segment(s)
+- 11:28:44 m04: segment 1/3 27s, 45 lines
+- 11:29:07 m04: segment 2/3 23s, 32 lines
+- 11:29:31 m04: segment 3/3 24s, 32 lines
+- 11:29:45 m04: key repair 14s, 0 problem(s) left
+- 11:29:45 m04: VALID
+- 11:30:12 m05: plan 27s, 2 segment(s)
+- 11:30:51 m05: segment 1/2 39s, 54 lines
+- 11:31:25 m05: segment 2/2 34s, 50 lines
+- 11:31:40 m05: key repair 15s, 0 problem(s) left
+- 11:31:40 m05: VALID
+- 11:32:18 m06: plan 37s, 2 segment(s)
+- 11:33:14 m06: segment 1/2 57s, 51 lines
+- 11:33:51 m06: segment 2/2 37s, 53 lines
+- 11:34:05 m06: key repair 14s, 0 problem(s) left
+- 11:34:05 m06: VALID
+- 11:34:46 m07: plan 41s, 3 segment(s)
+- 11:35:36 m07: segment 1/3 50s, 81 lines
+- 11:36:35 m07: segment 2/3 58s, 87 lines
+- 11:37:38 m07: segment 3/3 63s, 69 lines
+- 11:37:38 m07: VALID
+- 11:38:14 m08: plan 36s, 3 segment(s)
+- 11:39:06 m08: segment 1/3 53s, 66 lines
+- 11:40:07 m08: segment 2/3 60s, 86 lines
+- 11:41:02 m08: segment 3/3 56s, 85 lines
+- 11:41:17 m08: key repair 15s, 0 problem(s) left
+- 11:41:17 m08: VALID
+- 11:41:50 m09: plan 33s, 2 segment(s)
+- 11:43:09 m09: segment 1/2 79s, 117 lines
+- 11:44:18 m09: segment 2/2 69s, 125 lines
+- 11:44:34 m09: key repair 16s, 0 problem(s) left
+- 11:44:34 m09: VALID
+- 11:45:10 m10: plan 36s, 3 segment(s)
+- 11:46:12 m10: segment 1/3 62s, 88 lines
+- 11:46:57 m10: segment 2/3 45s, 70 lines
+- 11:47:39 m10: segment 3/3 42s, 60 lines
+- 11:47:54 m10: key repair 15s, 0 problem(s) left
+- 11:47:54 m10: VALID
+- 11:48:45 m11: plan 51s, 3 segment(s)
+- 11:49:43 m11: segment 1/3 58s, 93 lines
+- 11:50:45 m11: segment 2/3 61s, 106 lines
+- 11:51:29 m11: segment 3/3 44s, 77 lines
+- 11:51:29 m11: VALID
+- 11:53:00 m12: plan 91s, 2 segment(s)
+- 11:54:12 m12: segment 1/2 73s, 117 lines
+- 11:55:10 m12: segment 2/2 57s, 93 lines
+- 11:55:28 m12: key repair 18s, 0 problem(s) left
+- 11:55:28 m12: VALID
+- 11:56:17 m13: plan 49s, 3 segment(s)
+- 11:57:28 m13: segment 1/3 71s, 98 lines
+- 11:58:39 m13: segment 2/3 71s, 100 lines
+- 11:59:42 m13: segment 3/3 64s, 79 lines
+- 12:00:03 m13: key repair 21s, 0 problem(s) left
+- 12:00:03 m13: VALID
+- 12:01:19 m14: plan 76s, 3 segment(s)
+- 12:02:41 m14: segment 1/3 82s, 126 lines
+- 12:03:50 m14: segment 2/3 69s, 116 lines
+- 12:05:08 m14: segment 3/3 78s, 125 lines
+- 12:05:46 m14: key repair 38s, 0 problem(s) left
+- 12:05:46 m14: VALID
+- 12:06:37 m15: plan 51s, 3 segment(s)
+- 12:07:54 m15: segment 1/3 77s, 124 lines
+- 12:09:26 m15: segment 2/3 92s, 121 lines
+- 13:13:34 m15: plan 68s, 3 segment(s)
+- 13:14:45 m15: segment 1/3 70s, 94 lines
+- 13:15:38 m15: segment 2/3 53s, 93 lines
+- 13:16:43 m15: segment 3/3 65s, 94 lines
+- 13:16:43 m15: VALID
+- 13:18:03 m16: plan 80s, 3 segment(s)
+- 13:19:20 m16: segment 1/3 77s, 110 lines
+- 13:20:28 m16: segment 2/3 68s, 85 lines
+- 13:21:22 m16: segment 3/3 54s, 70 lines
+- 13:21:22 m16: VALID
+- 13:22:06 m17: plan 44s, 3 segment(s)
+- 13:23:14 m17: segment 1/3 68s, 103 lines
+- 13:24:20 m17: segment 2/3 66s, 89 lines
+- 13:25:20 m17: segment 3/3 60s, 96 lines
+- 13:25:40 m17: key repair 21s, 0 problem(s) left
+- 13:25:40 m17: VALID
+- 13:27:00 m18: plan 79s, 3 segment(s)
+- 13:28:15 m18: segment 1/3 75s, 134 lines
+- 13:29:21 m18: segment 2/3 66s, 118 lines
+- 13:30:25 m18: segment 3/3 64s, 111 lines
+- 13:30:43 m18: key repair 18s, 0 problem(s) left
+- 13:30:43 m18: VALID
+- 13:31:33 m19: plan 50s, 2 segment(s)
+- 13:33:28 m19: segment 1/2 115s, 204 lines
+- 13:34:40 m19: segment 2/2 72s, 143 lines
+- 13:34:40 m19: VALID
+- 13:35:27 m20: plan 48s, 4 segment(s)
+- 13:36:44 m20: segment 1/4 77s, 118 lines
+- 13:37:56 m20: segment 2/4 72s, 108 lines
+- 13:39:19 m20: segment 3/4 83s, 124 lines
+- 13:40:26 m20: segment 4/4 67s, 109 lines
+- 13:40:52 m20: key repair 26s, 0 problem(s) left
+- 13:40:52 m20: VALID
+- 13:42:15 m21: plan 83s, 4 segment(s)
+- 13:43:52 m21: segment 1/4 97s, 152 lines
+- 13:45:19 m21: segment 2/4 87s, 149 lines
+- 13:46:47 m21: segment 3/4 88s, 148 lines
+- 13:47:48 m21: segment 4/4 61s, 111 lines
+- 13:48:24 m21: key repair 37s, 0 problem(s) left
+- 13:48:24 m21: VALID
+- 13:49:19 m22: plan 55s, 3 segment(s)
+- 13:51:10 m22: segment 1/3 110s, 158 lines
+- 13:52:48 m22: segment 2/3 98s, 135 lines
+- 13:54:29 m22: segment 3/3 101s, 158 lines
+- 13:54:29 m22: VALID
+- 13:55:51 m23: plan 81s, 3 segment(s)
+- 13:57:44 m23: segment 1/3 113s, 188 lines
+- 13:59:18 m23: segment 2/3 94s, 154 lines
+- 14:00:53 m23: segment 3/3 95s, 148 lines
+- 14:00:53 m23: VALID
+- 14:02:12 m24: plan 80s, 3 segment(s)
+- 14:03:43 m24: segment 1/3 91s, 124 lines
+- 14:05:18 m24: segment 2/3 95s, 120 lines
+- 14:06:43 m24: segment 3/3 85s, 109 lines
+- 14:06:43 m24: VALID
+- 14:08:04 m25: plan 80s, 5 segment(s)
+- 14:09:49 m25: segment 1/5 106s, 176 lines
+- 14:11:07 m25: segment 2/5 77s, 149 lines
+- 14:12:23 m25: segment 3/5 76s, 108 lines
+- 14:13:43 m25: segment 4/5 79s, 115 lines
+- 14:15:01 m25: segment 5/5 78s, 121 lines
+- 14:15:01 m25: VALID
+- 14:16:00 m26: plan 59s, 4 segment(s)
+- 14:18:06 m26: segment 1/4 126s, 239 lines
+- 14:19:37 m26: segment 2/4 91s, 171 lines
+- 14:21:25 m26: segment 3/4 108s, 197 lines
+- 14:23:02 m26: segment 4/4 97s, 176 lines
+- 14:23:02 m26: VALID
+- 14:24:39 m27: plan 97s, 6 segment(s)
+- 14:25:52 m27: segment 1/6 73s, 114 lines
+- 14:27:02 m27: segment 2/6 69s, 98 lines
+- 14:28:24 m27: segment 3/6 83s, 124 lines
+- 14:29:45 m27: segment 4/6 80s, 112 lines
+- 14:30:55 m27: segment 5/6 70s, 93 lines
+- 14:31:23 m27: segment 6/6 28s, 36 lines
+- 14:31:23 m27: VALID
+- 14:32:24 m28: plan 61s, 4 segment(s)
+- 14:34:02 m28: segment 1/4 99s, 149 lines
+- 14:36:28 m28: segment 2/4 146s, 225 lines
+- 14:38:12 m28: segment 3/4 103s, 184 lines
+- 14:39:26 m28: segment 4/4 74s, 122 lines
+- 14:39:50 m28: key repair 24s, 0 problem(s) left
+- 14:39:50 m28: VALID
+- 14:41:07 m29: plan 78s, 5 segment(s)
+- 14:43:32 m29: segment 1/5 144s, 253 lines
+- 14:46:02 m29: segment 2/5 151s, 290 lines
+- 14:48:04 m29: segment 3/5 122s, 189 lines
+- 14:50:25 m29: segment 4/5 141s, 226 lines
+- 14:51:30 m29: segment 5/5 65s, 106 lines
+- 14:52:14 m29: key repair 44s, 0 problem(s) left
+- 14:52:14 m29: VALID
+- 14:53:33 m30: plan 79s, 5 segment(s)
+- 14:55:39 m30: segment 1/5 126s, 199 lines
+- 14:58:06 m30: segment 2/5 147s, 208 lines
+- 15:00:38 m30: segment 3/5 152s, 235 lines
+- 15:03:01 m30: segment 4/5 143s, 219 lines
+- 15:05:11 m30: segment 5/5 129s, 188 lines
+- 15:07:04 m30: key repair 113s, 0 problem(s) left
+- 15:07:04 m30: VALID

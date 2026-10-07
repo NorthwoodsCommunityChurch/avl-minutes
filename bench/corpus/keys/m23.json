@@ -1,0 +1,141 @@
+{
+ "id": "m23",
+ "title": "Christmas Eve Rehearsal Schedule and Crew",
+ "type": "event planning",
+ "minutes": 45,
+ "sources": [
+  "room",
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Marcus",
+   "role": "worship pastor"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Dana",
+   "role": "volunteer coordinator"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Tyler",
+   "role": "livestream/camera lead (remote)"
+  },
+  {
+   "label": "Caller 2",
+   "name": "Rachel",
+   "role": "ProPresenter/graphics volunteer (remote)"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Run two Christmas Eve services at 3pm and 5pm",
+   "evidence": "doing the three o'clock and the five o'clock"
+  },
+  {
+   "id": "d2",
+   "text": "Hold full run-through rehearsal Dec 23 at 6pm",
+   "evidence": "the full run through on the twenty third"
+  },
+  {
+   "id": "d3",
+   "text": "Run four cameras for both services",
+   "evidence": "we'll run four cameras for both services"
+  },
+  {
+   "id": "d4",
+   "text": "Bring house lights to 10% during Silent Night candlelight moment",
+   "evidence": "house lights down to ten percent for Silent Night"
+  },
+  {
+   "id": "d5",
+   "text": "Crew call time is 1pm on Christmas Eve",
+   "evidence": "call time for the whole crew is one pm"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Build out the ProPresenter playlist",
+   "owner": "Me",
+   "due": "Monday",
+   "evidence": "I'll build out the pro presenter playlist by Monday"
+  },
+  {
+   "id": "a2",
+   "task": "Send out the volunteer schedule",
+   "owner": "Dana",
+   "due": "tonight",
+   "evidence": "I'll send out the volunteer schedule tonight"
+  },
+  {
+   "id": "a3",
+   "task": "Send the final song order",
+   "owner": "Marcus",
+   "due": "Sunday",
+   "evidence": "get you the final song order by Sunday"
+  },
+  {
+   "id": "a4",
+   "task": "Test the livestream encoder",
+   "owner": "Tyler",
+   "due": "Tuesday",
+   "evidence": "I'll test the stream encoder on Tuesday"
+  },
+  {
+   "id": "a5",
+   "task": "Order a case of batteries for the wireless mics",
+   "owner": "Me",
+   "due": null,
+   "evidence": "order a case of batteries for the wireless"
+  },
+  {
+   "id": "a6",
+   "task": "Create lower thirds and song backgrounds in ProPresenter",
+   "owner": "Rachel",
+   "due": null,
+   "evidence": "put together the lower thirds and the song backgrounds"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Does the overflow room need its own separate feed?",
+   "evidence": "need a separate feed for the overflow room"
+  },
+  {
+   "id": "q2",
+   "text": "Do they have enough intercom belt packs for all camera ops?",
+   "evidence": "we have enough belt packs for everyone"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "already_done",
+   "claim": "Aaron still needs to update the firmware on the cameras",
+   "evidence": "already updated the firmware on all the cameras"
+  },
+  {
+   "id": "t2",
+   "kind": "label_noise",
+   "claim": "Dana will send the final song order by Sunday",
+   "evidence": "get you the final song order by Sunday"
+  },
+  {
+   "id": "t3",
+   "kind": "reversed",
+   "claim": "They added a 1pm Christmas Eve service",
+   "evidence": "let's go ahead and add the one o'clock service"
+  }
+ ]
+}

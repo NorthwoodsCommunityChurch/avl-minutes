@@ -1,0 +1,112 @@
+Lobby Screens Check-In
+Friday, September 18, 2026 · 10:30 AM · 10 min · Room
+Transcribed by Minutes. Audio was not recorded.
+
+[00:00:00] Me: Hey, morning. You find parking okay? The lot's a mess with the sealcoating.
+[00:00:06] Speaker 1: Yeah, I just parked over by the preschool entrance. Nobody ever uses that side.
+[00:00:12] Me: Smart. Coffee's still hot if you want some, I think Dana made a pot earlier.
+[00:00:18] Speaker 1: I'm good, I already had like three cups at home. My wife says I'm vibrating.
+[00:00:24] Me: Ha, yeah, that's me by second service every week.
+[00:00:29] Speaker 1: How was the weekend, by the way? I was out with the kids.
+[00:00:34] Me: It was fine, mostly. The sermon ran long but nobody died. Um, the band was tight though.
+[00:00:41] Speaker 1: Nice. Okay, so, the lobby screens. You wanted to look at the north one.
+[00:00:47] Me: Yeah. So the north lobby screen, the big one by the welcome desk, it's been doing this flicker thing.
+[00:00:54] Speaker 1: Flicker like how? Like it goes dark or just kind of pulses?
+[00:01:00] Me: It's more of a pulse. Like every, I don't know, thirty seconds it does a little hiccup.
+[00:01:07] Speaker 1: Huh. And that's on both the announcement loop and the live feed, or just the loop?
+[00:01:13] Me: Good question. I've only really watched it during the loop, honestly.
+[00:01:19] Speaker 1: Okay so here's the thing I keep coming back to. Is the flicker the player or the panel itself?
+[00:01:26] Me: Right, that's the whole question, isn't it.
+[00:01:30] Speaker 1: Because if it's the little media player box, that's a cheap fix. If it's the panel, that's a whole different conversation.
+[00:01:38] Me: Yeah. The player back there is one of those little carbon light boxes, the cheap streaming ones.
+[00:01:45] Speaker 1: Those things are hit or miss. We've replaced like two of them already this year.
+[00:01:51] Me: I know. And this panel is, what, the original install? That's gotta be eight years old.
+[00:01:58] Speaker 1: At least. That's the one that came with the building, right?
+[00:02:03] Me: Yep. Honestly that screen has been limping along forever.
+[00:02:08] Speaker 1: I mean, honestly we should just throw it out the window and start over.
+[00:02:13] Me: Ha! Facilities would love that. Glass everywhere in the lobby.
+[00:02:18] Speaker 1: Right onto the sealcoating. Really finish the job.
+[00:02:22] Me: Okay, okay. Let's actually be useful here.
+[00:02:26] Speaker 1: Fair. So, troubleshooting. We could watch it during the live feed next weekend and see if the flicker's there too.
+[00:02:34] Me: That'd tell us a lot. If it only does it on the loop, then it's probably the file or the player, not the panel.
+[00:02:42] Speaker 1: Exactly. And speaking of the loop, did you ever finish the new one?
+[00:02:47] Me: I did, yeah. The new announcement loop is done, it's got the fall series graphics and the updated service times.
+[00:02:55] Speaker 1: Oh nice. Is that the one with the, uh, the new intro bumper?
+[00:03:00] Me: Yeah, the one Kayla made. It looks way cleaner than the old one.
+[00:03:05] Speaker 1: The old loop still has the summer camp slide in it. In October.
+[00:03:10] Me: I know, I know. That's embarrassing. People have been walking past it for a month.
+[00:03:16] Speaker 1: So are we putting the new one up or what?
+[00:03:20] Me: Yeah, let's go with the new loop for Sunday morning. No reason to keep running the old one.
+[00:03:26] Speaker 1: Good. That at least gets the camp slide off there.
+[00:03:30] Me: And honestly if the flicker's still there with a fresh file, that points more at the hardware.
+[00:03:37] Speaker 1: Right, it's kind of a free test. New loop goes up, we watch it, we learn something either way.
+[00:03:43] Me: I like that. Low effort, actual information.
+[00:03:47] Speaker 1: Did the flicker start recently or has it always kind of done it?
+[00:03:52] Me: It got noticeably worse maybe two, three weeks ago. Before that it was rare.
+[00:03:59] Speaker 1: That's interesting. Two, three weeks ago, anything change back there? Did anyone touch the rack?
+[00:04:06] Me: Not that I know of. Although the cleaning crew was back there dusting, I think.
+[00:04:12] Speaker 1: Mm. Those cables back there are a rat's nest. Somebody bumping them wouldn't surprise me.
+[00:04:19] Me: Yeah, the whole back of that cabinet is a disaster. I've been meaning to redo it.
+[00:04:25] Speaker 1: We should at least look at the HDMI run before we blame the panel.
+[00:04:30] Me: Agreed. Let me grab a flashlight, it's dark back there.
+[00:04:34] Speaker 1: While you do that I'll pull up the loop on my laptop and double check it exports clean.
+[00:04:40] Me: Perfect. Oh, hey Dana.
+[00:04:44] Speaker 1: She's been hovering by the door for like a minute.
+[00:04:48] Me: She does that. Come on in.
+[00:04:52] Speaker 2: Hey guys, sorry, I'm not interrupting, am I? I just saw the door open.
+[00:04:58] Me: No, you're fine. We're just poking at the north lobby screen.
+[00:05:03] Speaker 2: Oh, the flickery one? I noticed that last Sunday during, um, greeting time.
+[00:05:09] Speaker 1: See, it's not just us. Dana's seeing it too.
+[00:05:13] Speaker 2: Yeah it was like, every few seconds, the whole picture kind of twitched.
+[00:05:19] Me: That's exactly it. Okay, hold on, let me get back here with the light.
+[00:05:24] Speaker 1: Watch the power strip, don't kick it.
+[00:05:27] Unknown: careful, careful.
+[00:05:30] Speaker 2: Is it something I did? I was running pro presenter from that side.
+[00:05:35] Me: No, no, totally unrelated. The lobby screens don't even touch that machine.
+[00:05:41] Speaker 1: Okay so I'm following the HDMI from the player. Aaron, pull that one, the gray one.
+[00:05:48] Me: This one? Oh. Yeah, look at that, the connector's all loose.
+[00:05:53] Speaker 1: Oh that's barely in there. The little jacket is cracked right at the end.
+[00:05:59] Me: Yeah, that's chewed up. When I wiggle it the screen does the thing. Watch.
+[00:06:05] Speaker 1: There it is. There's your flicker. It twitched when you moved it.
+[00:06:10] Speaker 2: Oh wow, so it really was just the cable?
+[00:06:13] Me: Maybe. I don't want to call it fixed yet, but that's a pretty strong hint.
+[00:06:19] Speaker 1: Okay so let's not overthink this. Let's just replace that cable.
+[00:06:24] Me: Yeah. Let's do it right, we'll swap that cable out before the weekend so it's solid for Sunday.
+[00:06:31] Speaker 1: Good. A cheap cable is way better than chasing a ghost for a month.
+[00:06:37] Me: I'll grab a new cable from the storage closet, I'm pretty sure we've got a few long HDMIs in the bin.
+[00:06:44] Speaker 1: Get a good one, not one of the freebie ones that came in a box.
+[00:06:49] Me: Yeah, yeah. There's some decent braided ones in there.
+[00:06:53] Speaker 2: Do you want me to grab anything while you two are back there?
+[00:06:57] Me: Nah, we're good Dana, thanks though.
+[00:07:01] Speaker 1: So on the loop side, I'll export the new loop and drop it on the player, that way when you put the fresh cable in it's all new.
+[00:07:09] Me: Perfect, that cleans up both things at once. New file, new cable.
+[00:07:14] Speaker 1: And then if it still flickers, well, now we really know it's the panel.
+[00:07:20] Me: Right. But I'd be surprised at this point.
+[00:07:24] Speaker 2: Okay I'm gonna let you guys work. I just wanted to say hi.
+[00:07:29] Me: Thanks for stopping by. And thanks for the flicker confirmation, genuinely helpful.
+[00:07:34] Speaker 2: Anytime. See you Sunday.
+[00:07:37] Speaker 1: Later, Dana.
+[00:07:40] Speaker 1: So. While I've got you thinking about this player.
+[00:07:44] Me: Uh oh.
+[00:07:46] Speaker 1: No, hear me out. That thing is like six, seven years old. It's slow, the menus lag.
+[00:07:53] Me: It is old, I'll give you that.
+[00:07:56] Speaker 1: I'm kind of leaning toward just getting a new player, honestly. Something modern, we could schedule loops remotely.
+[00:08:04] Me: I don't hate the idea. But let's not bundle that into this week.
+[00:08:09] Speaker 1: No, no, I'm not saying now. Just, down the road.
+[00:08:13] Me: Yeah. Let's see if the cable fixes it first. If it does, the old player lives to fight another day.
+[00:08:20] Speaker 1: Fair. I'll price a couple out just so we have numbers, no commitment.
+[00:08:26] Me: Sure, numbers are fine. We're not deciding on a new player today though.
+[00:08:31] Speaker 1: Totally. Just planting the seed.
+[00:08:34] Me: Seed planted. Okay, so recap. You export the loop and copy it over.
+[00:08:40] Speaker 1: Yep. And you've got the cable swap.
+[00:08:44] Me: Before the weekend, yeah. And then Sunday we both just keep an eye on the screen.
+[00:08:50] Speaker 1: During the live feed, like we said. If it's clean, we close it out.
+[00:08:55] Me: Love it. Alright, let me go dig that cable out before I forget.
+[00:09:01] Speaker 1: And I'll do the export this afternoon while I'm thinking about it.
+[00:09:06] Me: You're a machine. Okay. Anything else lobby-wise?
+[00:09:11] Speaker 1: The south screen's fine. The hallway one by the cafe, somebody said it was dim, but that might just be the brightness setting.
+[00:09:19] Me: We'll look at that another day. One screen at a time.
+[00:09:23] Speaker 1: Deal. Alright, I'm gonna go grab my laptop.
+[00:09:28] Me: Cool. Good meeting, surprisingly productive for standing in a lobby.
+[00:09:33] Speaker 1: We found the gremlin. I'll take it.
+[00:09:37] Me: Alright, talk in a bit.

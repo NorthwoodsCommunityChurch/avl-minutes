@@ -1,0 +1,371 @@
+AVL Budget Review FY27
+Friday, November 13, 2026 · 2:00 PM · 30 min · Room and call
+Transcribed by Minutes. Audio was not recorded.
+
+[00:00:04] Me: Morning, morning. You want coffee? Marcus made it this time so, uh, no promises.
+[00:00:09] Speaker 1: Oh wow, is that a threat or a warning?
+[00:00:12] Speaker 2: Hey, I resent that. That pot is perfectly drinkable today.
+[00:00:16] Me: Today being the key word.
+[00:00:19] Speaker 1: How was the weekend, by the way? Second service felt packed.
+[00:00:24] Me: Yeah, it was good. The, um, the new walk-in song went over well I think.
+[00:00:30] Speaker 2: People were actually clapping on beat for once, which, you know, miracle.
+[00:00:35] Speaker 1: Did you guys watch the game Saturday night? My brother-in-law would not stop texting me.
+[00:00:41] Speaker 2: Oh I missed the end, I fell asleep like the third quarter. Kid woke us up at five.
+[00:00:47] Me: How old is she now?
+[00:00:49] Speaker 2: Fourteen months. Walking everywhere. It's chaos, it's great.
+[00:00:54] Speaker 1: Enjoy it, they get opinions later.
+[00:00:58] Me: Ha. Alright, is Kevin dialing in or did we scare him off?
+[00:01:03] Speaker 1: He said he'd call, he had a thing with the, uh, the audit folks running long.
+[00:01:09] Speaker 2: We can start without him probably, he mostly just wants the numbers.
+[00:01:14] Speaker 1: Let's give him a minute. You see the parking lot striping finally got done?
+[00:01:19] Me: Oh yeah, looks sharp. Took them long enough.
+[00:01:22] Speaker 2: Only like four months after we asked.
+[00:01:25] Speaker 1: Facilities timing, you know how it is.
+[00:01:29] Unknown: ...can you hear me?
+[00:01:31] Speaker 1: There he is. Kevin, you're a little quiet, can you say that again?
+[00:01:36] Caller 1: Sorry, sorry, I'm here. Audit meeting went way over, you know how those go.
+[00:01:42] Me: No worries, we were just, uh, complaining about the parking lot.
+[00:01:46] Caller 1: Classic. Okay, I've got maybe forty-five minutes before my next thing.
+[00:01:52] Speaker 1: That's plenty. Okay, let's, let's actually start then. This is the AVL budget review for, um, FY27.
+[00:02:00] Speaker 1: The whole point today is to get a rough wish list and figure out what's capital versus operating.
+[00:02:07] Caller 1: Right, and just so everyone's on the same page, I don't need final numbers today.
+[00:02:13] Caller 1: I need categories and ballpark figures so I can slot them into the committee template.
+[00:02:19] Me: That works. Do we have the template? Last year it was kind of a mess.
+[00:02:24] Caller 1: Yeah, I redid it. It's cleaner now. I'll send over the budget template this afternoon.
+[00:02:30] Me: Perfect, thank you.
+[00:02:32] Speaker 1: Great, so with that in mind, Aaron, you want to walk us through the big stuff first?
+[00:02:38] Me: Sure. Um, so there's really a few buckets. There's the computer refresh, the audio side, lighting, and then the camera and LED wall stuff.
+[00:02:48] Me: Let's start easy. The, uh, ProPresenter machine. The one in the booth is on its last legs.
+[00:02:54] Speaker 2: Oh for sure. It froze during the offering last week, I almost had a heart attack.
+[00:02:59] Me: Yeah. It's a 2017, it can't handle the newer, um, pro presenter builds.
+[00:03:05] Speaker 1: So you're saying it needs to be in this budget year, not pushed again?
+[00:03:10] Me: Honestly yes. We pushed it last year and we got burned.
+[00:03:14] Caller 1: What's a replacement run, roughly?
+[00:03:17] Me: A Mac Studio spec'd the way we need it, you're looking at probably three grand with the warranty.
+[00:03:23] Caller 1: Okay, that's not scary. I'd rather do it right than limp along.
+[00:03:28] Speaker 1: Then let's just, let's commit to that. The new Mac for pro presenter goes in the FY27 budget.
+[00:03:35] Me: Agreed. That one's a no-brainer.
+[00:03:38] Speaker 2: Finally. I will throw a party when that thing gets replaced.
+[00:03:42] Caller 1: Note it as capital, over the threshold, so that's fine.
+[00:03:46] Speaker 1: Good. Okay, what about audio? You mentioned the wireless mics.
+[00:03:51] Me: Yeah. So this is the one I really want to talk through.
+[00:03:55] Me: Our handhelds, the, uh, the wireless ones for the vocalists, half of them are ancient.
+[00:04:01] Me: We've got, what, eight channels total, and the four oldest are the ones that keep dropping out.
+[00:04:07] Speaker 2: That's the dropout on, uh, on the center vocal mic right? During the bridge every single week.
+[00:04:13] Me: Every week. It's the RF, the older capsules just can't keep up with the, um, the new frequency crowding.
+[00:04:20] Speaker 1: Crowding from what?
+[00:04:22] Me: Everything. Phones, the, you know, the broadcast changes, there's just less clean spectrum than there used to be.
+[00:04:29] Caller 1: So are we talking about replacing all eight or just some?
+[00:04:33] Me: I don't think we need all eight this year. My recommendation is we replace the four oldest handheld mics and keep the newer four.
+[00:04:41] Speaker 1: That feels reasonable. Does that actually fix the dropout though, or are we half-fixing it?
+[00:04:47] Me: No, the four bad ones are exactly the problem children. The newer four are solid.
+[00:04:52] Speaker 2: Yeah I can back that up, the dropouts are always the older bodypacks and handhelds.
+[00:04:58] Speaker 1: Okay. Then let's plan on the four oldest getting replaced. Aaron, that's your call, you know the gear.
+[00:05:05] Me: Yep, I'm confident on that. Four is the right number for this year.
+[00:05:09] Caller 1: And ballpark on four handhelds?
+[00:05:12] Me: Depends on the system. Could be anywhere from, uh, four to seven thousand depending on the brand and whether we match what we have.
+[00:05:20] Caller 1: That's a wide range. Can you tighten that up for me?
+[00:05:24] Me: Yeah, I don't want to just throw a number at you. Let me get real pricing.
+[00:05:28] Speaker 1: How soon can you get that?
+[00:05:30] Speaker 2: I'll get three quotes by next Friday, I've already got two vendors in mind.
+[00:05:35] Speaker 1: Perfect, three quotes gives us something to defend to the committee.
+[00:05:40] Me: Yeah, and I'll make sure one of them is a like-for-like match so the volunteers don't have to relearn everything.
+[00:05:46] Caller 1: Smart. Mixed systems are a nightmare for training.
+[00:05:50] Speaker 2: Tell me about it. Every time we change something I get the same fifteen questions.
+[00:05:55] Speaker 1: Okay so just to recap that piece, four mics, quotes coming next week, capital or operating Kevin?
+[00:06:02] Caller 1: Four mics is probably under the capital threshold individually, but bundled it might cross it.
+[00:06:08] Caller 1: Let me look at how we treated it last time. I'll flag it when I send the template.
+[00:06:13] Me: Works for me.
+[00:06:15] Speaker 2: Hey, random, but did the, uh, did the Clear-Com packs come back from repair yet?
+[00:06:20] Me: One did. The other one they said is, um, not worth fixing. We'll get to that.
+[00:06:26] Speaker 1: Let's park that for the intercom section, I don't want to jump around.
+[00:06:30] Speaker 2: Fair, sorry.
+[00:06:32] Caller 1: While you're all talking, I'm actually looking at last year's actuals real quick.
+[00:06:37] Caller 1: You guys came in under on the operating side, which the committee will like.
+[00:06:42] Me: We, uh, we held off on a couple things. Some of which is why we're here now.
+[00:06:47] Speaker 1: Right, the stuff we deferred is coming due.
+[00:06:50] Caller 1: Understood, that's normal. Deferring forever just creates a cliff.
+[00:06:55] Me: Exactly. And the cue sis, uh, the Q-SYS processor is fine for now, so that's not on the list this year at least.
+[00:07:02] Speaker 1: Good, one less thing.
+[00:07:04] Speaker 2: Oh I keep meaning to ask, did we ever hear back about the, um, the warranty on the big amp?
+[00:07:10] Me: The one that fried? No. That's a whole separate saga, let's hold it.
+[00:07:15] Speaker 1: Yeah let's keep moving, Kevin's on a clock.
+[00:07:18] Caller 1: I appreciate that. I've got the audit people breathing down my neck.
+[00:07:22] Speaker 2: Sounds fun.
+[00:07:24] Caller 1: It's a blast. Okay, so where are we, we've got the Mac and the mics so far.
+[00:07:30] Speaker 1: Right. So confirmed this year, the ProPresenter Mac, and the four mics pending Aaron's quotes.
+[00:07:37] Me: Yep. Those two I'm solid on.
+[00:07:40] Speaker 1: Then I think the next big conversation is lighting, which, uh, that's the expensive one.
+[00:07:46] Me: Yeah. Buckle up for that one.
+[00:07:48] Speaker 2: Can I grab more coffee before we do lighting? I need to be caffeinated for this.
+[00:07:53] Speaker 1: Ha, go, go. Grab me one too actually.
+[00:07:56] Me: While he's up, Kevin, do you want the lighting stuff broken out by fixtures versus the console, or all together?
+[00:08:03] Caller 1: Break it out if you can. The console's a big single line item, that'll draw questions.
+[00:08:09] Me: Okay, that's, that's helpful to know going in.
+[00:08:12] Caller 1: The committee always zeroes in on the biggest single number, so prep me for it.
+[00:08:17] Speaker 1: That's good coaching, thank you.
+[00:08:19] Me: So just so I understand the template, is there a column for, like, year-over-year justification?
+[00:08:25] Caller 1: There is. There's a notes field, use it. The more context the fewer follow-up emails.
+[00:08:31] Me: Love that. Fewer emails is the dream.
+[00:08:34] Speaker 2: Okay I'm back, I'm fortified. What'd I miss?
+[00:08:37] Speaker 1: Kevin wants lighting broken out, fixtures separate from the console.
+[00:08:41] Speaker 2: Got it.
+[00:08:42] Me: And the console's the scary number so we need good justification notes.
+[00:08:47] Speaker 1: Alright. Before we dive in, Aaron, can you just set up what the lighting situation even is for Kevin?
+[00:08:53] Me: Sure. So our lighting board, the console, is the, um, the oldest piece of gear we own basically.
+[00:09:00] Caller 1: Older than the ProPresenter machine?
+[00:09:02] Me: Oh way older. It predates me, and I've been here six years.
+[00:09:07] Speaker 2: It's held together with, like, hope and gaff tape at this point.
+[00:09:11] Speaker 1: That's not comforting.
+[00:09:13] Me: It works, it just, it doesn't talk to the newer fixtures well, and parts are getting hard to find.
+[00:09:19] Caller 1: Okay, so this is the kind of thing where if it dies mid-service we're stuck?
+[00:09:24] Me: Pretty much. There's no, uh, there's no backup board that can run the current rig.
+[00:09:29] Speaker 1: Alright, that's the context. Let's actually get into the numbers on it.
+[00:09:34] Speaker 2: This is the fun part. Define fun.
+[00:09:37] Me: Ha. Okay, so for the console itself, let me pull up what I was looking at.
+[00:09:42] Caller 1: Take your time, I'm writing down what we've got so far.
+[00:09:46] Speaker 1: While he pulls that up, did everyone see the email about the all-staff next week?
+[00:09:51] Speaker 2: I did, is that the one with the potluck sign-up?
+[00:09:54] Speaker 1: That's the one. Don't all bring chips again.
+[00:09:57] Me: Okay, I've got it up. So here's the lighting picture.
+[00:10:02] Me: So the board I've been pricing is the replacement for our current console, and a mid-tier one lands around, um, twenty-two thousand.
+[00:10:11] Caller 1: Twenty-two for just the console, not fixtures?
+[00:10:14] Me: Correct, just the console. The fixtures are a separate line like you asked.
+[00:10:18] Speaker 1: And that twenty-two, is that install too or just the box?
+[00:10:22] Me: That's the box plus basic programming. Install's maybe another two.
+[00:10:27] Caller 1: Okay. And remind me, this replaces the thing that predates all of us.
+[00:10:32] Me: Yes. The hope-and-gaff-tape special.
+[00:10:35] Speaker 2: I stand by that description.
+[00:10:37] Speaker 1: Honestly, given what you said about no backup, I think we put the new console in the budget.
+[00:10:43] Me: I'd love that. It's the thing that keeps me up at night.
+[00:10:46] Caller 1: I can live with it being in there as long as the justification notes are strong.
+[00:10:51] Speaker 1: Then let's put the new console in the budget for now and we'll see how it looks against everything else.
+[00:10:57] Me: Great, I'll build it as its own line with the age and the parts issue spelled out.
+[00:11:03] Caller 1: Good. That's exactly the kind of context the committee eats up.
+[00:11:07] Speaker 2: Write down "mid-service failure risk," that phrase scares people in a good way.
+[00:11:12] Me: Noted, verbatim.
+[00:11:14] Speaker 1: Okay, that's the console. What's next on your list, Aaron?
+[00:11:18] Me: Um, cameras. That's the next big one, and that one's more of a timing question.
+[00:11:24] Caller 1: Timing meaning what?
+[00:11:26] Me: Meaning our cameras are okay for now, but they're the next thing to age out after the console.
+[00:11:32] Speaker 2: The main one on the stage-left wall has that, uh, that flickery thing sometimes.
+[00:11:37] Me: Right, and that's intermittent, I can't reliably reproduce it.
+[00:11:41] Speaker 1: So the real question is, are the cameras this year or next year.
+[00:11:45] Me: That's, yeah, that's exactly the question and I don't have a clean answer.
+[00:11:50] Caller 1: Ballpark the camera upgrade for me so I at least know the magnitude.
+[00:11:54] Me: Three cameras, switching, all in, you're probably looking at the high thirties, low forties.
+[00:12:00] Speaker 1: Oof. Okay, that's not a this-and-the-console-same-year number.
+[00:12:05] Caller 1: No, probably not. Can the cameras wait a year without something failing?
+[00:12:10] Me: Honestly I don't know. I'd want to watch that flicker another couple months before I commit.
+[00:12:16] Speaker 1: Let's leave the camera timing open for now and come back to it.
+[00:12:20] Caller 1: Fine by me. Just flag it in the notes as a known upcoming expense.
+[00:12:25] Me: Will do. I'll label it as, like, FY27 or FY28, decision pending.
+[00:12:31] Speaker 2: Can I throw something camera-adjacent out there?
+[00:12:34] Speaker 1: Go for it.
+[00:12:35] Speaker 2: What if we added a second camera operator position, like a part-time paid slot?
+[00:12:41] Speaker 1: Paid, not volunteer?
+[00:12:43] Speaker 2: Yeah, because the volunteer reliability on cameras is, um, it's rough some weekends.
+[00:12:49] Caller 1: That's a personnel line, that's a whole different conversation than gear.
+[00:12:53] Speaker 2: I know, I'm just, I'm floating it. Not saying do it.
+[00:12:57] Me: It'd help, I won't lie. When we're short a camera op I'm basically flying one less angle.
+[00:13:03] Speaker 1: Let's not open the staffing can today, we can note it as an idea.
+[00:13:08] Speaker 2: Totally, just wanted it on somebody's radar.
+[00:13:11] Caller 1: I'll pretend I didn't hear a new salary. Kidding. Sort of.
+[00:13:15] Speaker 2: Ha, fair.
+[00:13:17] Unknown: ...the flicker thing again...
+[00:13:19] Speaker 1: Okay, moving on. What about the big wall, the LED wall?
+[00:13:24] Me: Right, so the LED wall is its own animal. That's not an operating expense, that's capital.
+[00:13:30] Caller 1: Agreed, that one goes through the capital process, not the regular budget.
+[00:13:35] Me: Which is a whole separate form, right?
+[00:13:38] Caller 1: It is. Different template, needs a project scope and a couple vendor bids.
+[00:13:43] Speaker 1: Can you handle that, Aaron, or does that need to be me?
+[00:13:46] Me: No, I can do it. I'll write up the capital request for the wall and route it to Kevin.
+[00:13:52] Caller 1: Perfect. Keep the operating budget and the capital request totally separate, don't blend them.
+[00:13:58] Me: Understood. Wall lives in capital, everything else in the operating template.
+[00:14:03] Speaker 2: What's the wall even cost these days?
+[00:14:05] Me: For our size? It's a six-figure conversation, easily.
+[00:14:09] Speaker 1: Yeah that's definitely not a slip-it-in-the-budget item.
+[00:14:13] Caller 1: Right, capital, elders, the whole approval chain. That's months out.
+[00:14:18] Me: Which is why I want the request written now so it's ready when there's a window.
+[00:14:23] Caller 1: Smart. Get it to me and I'll tell you what's missing.
+[00:14:27] Speaker 1: Okay, good. What else is on the gear list?
+[00:14:30] Me: Um, intercom. This is a small one but it's annoying.
+[00:14:34] Speaker 2: The belt packs.
+[00:14:35] Me: Yeah. Right now we keep renting the clear calm belt packs for the big weekends.
+[00:14:41] Caller 1: Renting, as in every time?
+[00:14:43] Me: Pretty much every Christmas and Easter we rent four extra packs.
+[00:14:47] Speaker 1: What's the rental run us versus just buying them?
+[00:14:51] Me: Buying's maybe, um, a little over a thousand a pack, so four is pushing five grand.
+[00:14:57] Caller 1: And the rental per event?
+[00:14:59] Me: Couple hundred a weekend, two big weekends, so call it under a thousand a year.
+[00:15:05] Caller 1: Then the math says keep renting. Five years of rental barely touches the buy price.
+[00:15:11] Speaker 1: And we're not using them week to week anyway.
+[00:15:14] Me: No, just the surge weekends.
+[00:15:16] Speaker 1: Okay, let's agree to keep renting the belt packs, no purchase line.
+[00:15:20] Caller 1: Agreed, that's the right call financially.
+[00:15:23] Me: Works for me, one less capital-ish thing to justify.
+[00:15:27] Speaker 2: See, I can save money sometimes.
+[00:15:29] Speaker 1: Noted and appreciated.
+[00:15:31] Caller 1: I'll believe it when the camera operator idea goes away.
+[00:15:35] Speaker 2: It's resting, not gone.
+[00:15:37] Speaker 1: Okay so where are we. Console's in, cameras are timing-pending, wall's capital, intercom stays rental.
+[00:15:45] Me: That's a good summary. Let me make sure I've got the console actually captured right.
+[00:15:50] Caller 1: On the console, give me the year it was installed if you can find it.
+[00:15:55] Me: I'll dig through the old binders. There's a chance nobody wrote it down.
+[00:16:00] Speaker 1: That tracks for this building.
+[00:16:02] Speaker 2: Half our documentation is a guy named Dave who left in 2015.
+[00:16:07] Me: Rest in peace, Dave's spreadsheets.
+[00:16:10] Caller 1: As long as I get a defensible age, even "approximately" is fine.
+[00:16:14] Me: I'll put "circa" and a year. Circa always sounds authoritative.
+[00:16:19] Speaker 1: Alright. Before we get to the volunteer side, any other gear lines I'm forgetting?
+[00:16:24] Me: Um, there's the fried amp situation but I think that's more of an insurance question.
+[00:16:30] Speaker 1: Right, the amp that died. Hold that thought, let's park it for the volunteer stuff.
+[00:16:35] Me: Sure, I just didn't want it to fall off the list.
+[00:16:38] Caller 1: Write "amp - insurance TBD" so we circle back.
+[00:16:42] Me: Done. Parked.
+[00:16:44] Speaker 2: And can we make sure we actually talk about training money before we run out of time?
+[00:16:49] Speaker 1: Yes, that's literally next. Give me thirty seconds for coffee round two.
+[00:16:54] Speaker 2: We've all got a problem.
+[00:16:56] Caller 1: While she's up, Aaron, resend me those three quotes when you have them, same thread.
+[00:17:02] Me: Yep, next Friday, same email thread, I'll keep it all together.
+[00:17:06] Caller 1: Perfect. Fewer threads, fewer emails.
+[00:17:09] Me: You and me both.
+[00:17:11] Speaker 2: So on training, real quick while we wait.
+[00:17:14] Me: Yeah?
+[00:17:15] Speaker 2: Our volunteers have basically never had formal training on the new fixtures.
+[00:17:20] Me: That's true, we kind of learn-as-you-go on Sunday morning.
+[00:17:24] Speaker 2: Which is how we get the flickery camera nobody reports.
+[00:17:28] Me: Fair hit.
+[00:17:29] Speaker 1: Okay I'm back and I heard "training," which is my favorite word that costs money.
+[00:17:35] Speaker 2: It doesn't have to cost much, that's my pitch.
+[00:17:38] Caller 1: Let's hear it, because training lines are usually an easy yes with the committee.
+[00:17:43] Speaker 1: Good, we need an easy yes after that console number.
+[00:17:47] Me: Speaking of, I should double check whether the console includes a training day from the vendor.
+[00:17:52] Speaker 2: Oh, that'd fold right in.
+[00:17:54] Me: Let me verify that before we overlap the two lines.
+[00:17:57] Speaker 1: Good catch. Okay, Marcus, walk us through the volunteer side.
+[00:20:01] Speaker 2: So the short version is, we've got about thirty people across audio, video, and lighting, and most of them got trained by somebody who got trained by somebody.
+[00:20:09] Me: The great oral tradition of the booth.
+[00:20:12] Speaker 2: Exactly. So what I want is for us to add a real line for volunteer training, even if it's small, like a thousand bucks a year.
+[00:20:20] Speaker 1: A thousand for what, specifically? I can't take "vibes" to the committee.
+[00:20:24] Speaker 2: Food for a couple training nights, maybe a stipend if we bring somebody in, and some printed quick-reference cards.
+[00:20:31] Caller 1: Printed cards, that's cute, people still read those?
+[00:20:34] Speaker 2: In a dark booth at 7am? Yeah, actually they do.
+[00:20:38] Me: I'll back that. Half our mistakes are because nobody wrote down the one weird thing about channel twelve.
+[00:20:44] Speaker 1: Channel twelve is cursed, we all know this.
+[00:20:46] Me: Channel twelve is absolutely cursed.
+[00:20:48] Caller 1: Okay, a thousand-dollar training line is the kind of thing the committee loves, honestly. It makes us look responsible.
+[00:20:55] Speaker 1: Alright, I'm sold. Let's add a real line for volunteer training at a thousand, and Aaron, you'll check if the console vendor day overlaps.
+[00:21:03] Me: Yep, I'll fold that in so we don't double pay.
+[00:21:06] Speaker 2: Can I also pitch something that's free?
+[00:21:09] Speaker 1: My favorite number.
+[00:21:11] Speaker 2: Before we spend a dime on training, I want to actually know what people feel shaky on. So I'll put together a quick survey for the volunteers.
+[00:21:19] Me: Oh, that's smart. We're guessing right now.
+[00:21:22] Speaker 2: Right, I don't want to build a lighting class and find out everyone's actually scared of pro presenter.
+[00:21:28] Me: Pro presenter is its own category of fear.
+[00:21:31] Caller 1: Wait, that's the Mac thing we're replacing, right?
+[00:21:34] Me: The software, yeah, runs on the Mac we put in next year's budget.
+[00:21:38] Caller 1: Got it. Carry on.
+[00:21:40] Speaker 2: So survey first, results back to you two, then we design the training around what they actually need.
+[00:21:46] Speaker 1: When can you have the survey out?
+[00:21:48] Speaker 2: Give me, uh, a couple weeks. I'll draft it and send it to you both before it goes out.
+[00:21:54] Speaker 1: Good. I like that order of operations.
+[00:21:57] Me: Me too. It also gives us a before-and-after story for the committee next year.
+[00:22:02] Caller 1: Now you're speaking my language. Metrics.
+[00:22:05] Speaker 1: Okay, that's training. Marcus, anything else on the volunteer side?
+[00:22:09] Speaker 2: Well, this loops back, but what if we added a second camera operator position?
+[00:22:14] Speaker 1: Paid or volunteer?
+[00:22:16] Speaker 2: That's the thing, I don't know yet. Could be volunteer, could be a small stipend on the bigger weekends.
+[00:22:22] Me: It would fix the flickery-camera-nobody-reports problem, that's for sure.
+[00:22:26] Caller 1: It's also a whole new conversation, staffing versus gear.
+[00:22:30] Speaker 1: Yeah, let's not open the staffing can today. Park it.
+[00:22:34] Speaker 2: That's fair, I'm just planting the seed.
+[00:22:36] Me: Seed planted. We'll let the survey tell us if we even have people for it.
+[00:22:41] Speaker 1: Good, loop it into the survey results. Okay, before I forget again, the amp.
+[00:22:47] Me: The fried amp, yes.
+[00:22:49] Speaker 1: So what's the actual question there?
+[00:22:51] Me: The real question is, does insurance cover the amp that got fried, because if it does, it's not a budget line at all.
+[00:22:58] Caller 1: Which amp was it, the one in the youth room?
+[00:23:01] Me: No, the main house amp, the one that took the power hit back in, uh, September.
+[00:23:06] Caller 1: Right, the storm weekend. Honestly I don't know if that's covered or deductible-eaten.
+[00:23:12] Speaker 1: Who talks to the insurance people, is that you, Kevin?
+[00:23:15] Caller 1: It goes through the MSP first for the, the surge documentation, then me for the claim.
+[00:23:21] Me: So there's a dependency. I'd need the MSP to confirm it was a surge event.
+[00:23:26] Caller 1: And I genuinely don't know the answer on coverage until I see the policy language. Let me not promise a number.
+[00:23:33] Speaker 1: Okay so that one stays open. We don't budget for it yet because it might be covered.
+[00:23:38] Me: Agreed, leave it parked as insurance TBD.
+[00:23:41] Caller 1: If it's not covered, it becomes a replacement line, but that's a next-meeting problem.
+[00:23:46] Speaker 1: Works for me. Okay, let me do a sanity check on the total, because I'm getting nervous.
+[00:23:52] Me: That's never a good sign when you say that.
+[00:23:55] Speaker 1: So we've got the wireless mics, the pro presenter Mac, the LED wall capital request, the training line, and the lighting console.
+[00:24:03] Caller 1: What's the running number with all of that?
+[00:24:06] Speaker 1: With the console it's, um, it's a lot. The console is basically the whole increase by itself.
+[00:24:13] Me: Yeah, the console number is the elephant.
+[00:24:16] Caller 1: Remind me, earlier we said let's put the new lighting console in the budget, right? That was the plan.
+[00:24:22] Me: That was where we landed, yeah.
+[00:24:24] Speaker 1: Here's my worry. If I walk in with the console and the LED wall request in the same year, I think we get a no on both.
+[00:24:32] Caller 1: That's a real risk. The committee sees two big capital asks and they get spooked.
+[00:24:38] Me: So you're saying pick one.
+[00:24:40] Speaker 1: I'm saying I'd rather protect the LED wall request and pull the console back out for now.
+[00:24:46] Me: Hmm. Honestly? The LED wall is the thing people actually see on the weekend. The console I can limp along on.
+[00:24:53] Speaker 2: The console does still turn on, to be fair.
+[00:24:56] Me: It turns on. It's just held together with hope and gaff tape.
+[00:24:59] Caller 1: I'd agree with Dana here. Lead with the wall, hold the console a year.
+[00:25:04] Speaker 1: Okay, so let's make that the decision. We pull the lighting console out of this budget and revisit it next cycle.
+[00:25:11] Me: Yeah, I'm good with that. Pull the console. Keep the wall request in.
+[00:25:15] Speaker 2: And the training line stays?
+[00:25:17] Speaker 1: Training stays, it's small and it's an easy yes.
+[00:25:20] Me: And the mics and the Mac stay, those are small too.
+[00:25:23] Caller 1: Good. That's a much cleaner story. One big ask, a few small sensible ones.
+[00:25:28] Speaker 1: Aaron, that doesn't change your console training question, we just shelve it with the console.
+[00:25:34] Me: Right, it rides along with the console whenever that comes back. I'll note it.
+[00:25:38] Speaker 2: Sorry, so I update nothing on my end, survey still goes out?
+[00:25:42] Speaker 1: Survey still goes out, training line still in, that's all alive.
+[00:25:46] Speaker 2: Great.
+[00:25:47] Unknown: Wait, is it on?
+[00:25:49] Unknown: Yeah, the light's green.
+[00:25:51] Speaker 1: Okay, so where does that leave us for the committee.
+[00:25:54] Caller 1: Somebody's got to actually present this. That's you, Dana.
+[00:25:58] Speaker 1: Yep. I'll take this to the finance committee next month and walk them through the whole package.
+[00:26:04] Caller 1: And I'll have the template to Aaron so the numbers are formatted the way the committee likes.
+[00:26:09] Me: Which you're sending, and I'm filling in, and sending back to both of you.
+[00:26:13] Caller 1: Correct. And your three quotes by Friday feed the mic line.
+[00:26:17] Me: Friday, same thread, I know, I know.
+[00:26:20] Speaker 1: When exactly is the committee meeting, so I can back into a deadline?
+[00:26:24] Caller 1: It's the second Tuesday, so, uh, I'll confirm the date and send it around.
+[00:26:29] Speaker 1: Please do, because I want everything locked a week before.
+[00:26:33] Me: That means I'm the bottleneck on quotes, so I'll treat Friday as hard.
+[00:26:37] Speaker 1: Thank you. Okay, let me read back the list so we're all clear.
+[00:26:41] Speaker 1: In the budget, we have the four oldest wireless mics, the pro presenter Mac, the LED wall capital request, and a thousand-dollar training line.
+[00:26:50] Me: And we're renting the clear calm packs instead of buying, that stays.
+[00:26:54] Speaker 1: Right, Clear-Com stays a rental. Out of the budget, the lighting console, shelved a year.
+[00:27:00] Caller 1: And parked separately, the amp insurance question and the camera timing.
+[00:27:05] Me: And the second camera operator idea is folded into the survey, not budgeted.
+[00:27:10] Speaker 1: Perfect. That's a list I can actually defend.
+[00:27:13] Speaker 2: Can I get the survey question list to you by, say, two weeks from Friday?
+[00:27:18] Speaker 1: Two weeks is fine. Send it to Aaron and me first.
+[00:27:21] Speaker 2: Will do.
+[00:27:22] Caller 1: Hey, I've got a hard stop in two minutes, anything else need me?
+[00:27:26] Me: Just the template and the committee date, and you've got both.
+[00:27:30] Caller 1: Template this week, date as soon as I confirm it. You'll both have them.
+[00:27:34] Speaker 1: Thanks, Kevin. You dialing in made this way faster.
+[00:27:38] Caller 1: Happy to. Beats reading the minutes afterward and being confused.
+[00:27:42] Me: Nobody reads the minutes, Kevin, that's the dirty secret.
+[00:27:45] Caller 1: Which is why your "circa" thing is going to haunt somebody in 2031.
+[00:27:49] Me: Circa 2031, somebody will thank me.
+[00:27:52] Speaker 1: Okay, I think that's it. Marcus, Aaron, anything last?
+[00:27:56] Speaker 2: Nope, I'm good. Survey and training, that's my homework.
+[00:27:59] Me: And I've got quotes, the template, the LED wall write-up, and the console training note for whenever.
+[00:28:05] Speaker 1: Great. I'll take it from there and get us on the committee agenda.
+[00:28:09] Caller 1: Alright, dropping off. Thanks all.
+[00:28:12] Speaker 1: Bye Kevin.
+[00:28:13] Speaker 2: See ya.
+[00:28:15] Speaker 1: Okay. That went better than the console number made me think it would.
+[00:28:19] Me: Pulling the console honestly feels right. I don't want to lose the wall over it.
+[00:28:24] Speaker 2: And the training stuff is the part I actually care about, so I'm happy.
+[00:28:28] Speaker 1: Good. Let's not let the survey sit for a month though.
+[00:28:31] Speaker 2: It won't, I promise. Two weeks.
+[00:28:34] Me: I'll hold you to channel twelve being on the survey.
+[00:28:37] Speaker 2: Channel twelve gets its own section.
+[00:28:40] Speaker 1: Alright, thanks everybody, I'll send notes out this afternoon.
+[00:28:44] Me: Thanks Dana. I'll start on those quotes today.

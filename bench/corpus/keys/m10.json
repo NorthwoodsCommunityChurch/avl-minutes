@@ -1,0 +1,89 @@
+{
+ "id": "m10",
+ "title": "Youth night production planning",
+ "type": "event planning",
+ "minutes": 20,
+ "sources": [
+  "room",
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Marcus",
+   "role": "youth pastor"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Jenna",
+   "role": "volunteer coordinator (on call)"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Run the haze machine for youth night",
+   "evidence": "let's go ahead and run the haze for youth night"
+  },
+  {
+   "id": "d2",
+   "text": "No livestream for youth night, in-room only",
+   "evidence": "We're not going to livestream this one"
+  },
+  {
+   "id": "d3",
+   "text": "Band soundcheck locked at 5:30 PM",
+   "evidence": "soundcheck at five thirty, that's locked in"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Build the ProPresenter playlist for youth night",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll build out the pro presenter playlist this week"
+  },
+  {
+   "id": "a2",
+   "task": "Line up two more volunteers for youth night",
+   "owner": "Caller 1",
+   "due": null,
+   "evidence": "I can line up two more volunteers for that"
+  },
+  {
+   "id": "a3",
+   "task": "Send the song list to Aaron",
+   "owner": "Marcus",
+   "due": "Wednesday",
+   "evidence": "I'll get you the song list by Wednesday"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Will the haze/fog trigger the smoke detectors in the youth room?",
+   "evidence": "Does the fog set off the smoke detectors in there"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "other_party",
+   "claim": "The team decided to buy new moving lights for youth night",
+   "evidence": "That's really up to the elders to sign off on"
+  },
+  {
+   "id": "t2",
+   "kind": "already_done",
+   "claim": "Aaron needs to create the LED wall template",
+   "evidence": "I already finished the LED wall template yesterday"
+  }
+ ]
+}

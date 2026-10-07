@@ -1,0 +1,88 @@
+{
+ "id": "m08",
+ "title": "LED wall quote review",
+ "type": "vendor call",
+ "minutes": 20,
+ "sources": [
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Dave",
+   "role": "facilities/tech volunteer in room"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Megan",
+   "role": "LED vendor sales rep"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Go with the 2.6mm pixel pitch panels instead of the 2.9mm",
+   "evidence": "okay let's go with the two point six millimeter panels"
+  },
+  {
+   "id": "d2",
+   "text": "Schedule the install for the slow week of January 12",
+   "evidence": "we'll install during the week of January twelfth"
+  },
+  {
+   "id": "d3",
+   "text": "Include the five-year warranty option in the order",
+   "evidence": "Yeah we'll take the five year warranty option"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Send the revised quote with the 2.6mm panels",
+   "owner": "Caller 1",
+   "due": "Tuesday",
+   "evidence": "I'll get you the revised quote by Tuesday"
+  },
+  {
+   "id": "a2",
+   "task": "Take the deposit request to the board for approval",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll take the deposit request to the board"
+  },
+  {
+   "id": "a3",
+   "task": "Pull updated measurements off the back wall structure",
+   "owner": "Speaker 1",
+   "due": null,
+   "evidence": "I'll pull the measurements off the back wall"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Can the existing mounting structure support the heavier panels?",
+   "evidence": "can the existing structure handle the extra weight"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "reversed",
+   "claim": "They decided to add the new video processor to the order",
+   "evidence": "yeah let's add the new processor to the order"
+  },
+  {
+   "id": "t2",
+   "kind": "hypothetical",
+   "claim": "They decided to add a small LED wall in the lobby",
+   "evidence": "what if we put a small wall in the lobby"
+  }
+ ]
+}

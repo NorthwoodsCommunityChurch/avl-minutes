@@ -1,0 +1,127 @@
+Weekend production check-in
+Monday, September 14, 2026 · 9:00 AM · 10 min · Room
+Transcribed by Minutes. Audio was not recorded.
+
+[00:00:00] Me: Alright, I think we're recording now. Little light's on, so.
+[00:00:04] Speaker 1: Oh good, good. Hey, did you ever get coffee this morning or are you running on fumes?
+[00:00:09] Me: Running on fumes, man. The machine in the green room is still making that grinding noise.
+[00:00:14] Speaker 2: It sounds like it's dying honestly. Somebody should tell facilities before it just, you know, explodes.
+[00:00:20] Me: Yeah. Okay, um, let's actually start. This is just the weekend production check-in, nothing crazy.
+[00:00:27] Speaker 1: Cool. So Sunday. Overall I thought it went pretty smooth?
+[00:00:31] Me: Yeah, I thought so too. The, uh, the first service was a little rough on the top.
+[00:00:36] Speaker 2: The slides were behind, I know, that was on me. Pro presenter froze right as the first song started.
+[00:00:43] Me: It wasn't your fault, the machine hiccupped. We've seen that before.
+[00:00:47] Speaker 1: Did it do the thing where it drops the second output?
+[00:00:50] Speaker 2: Yeah, exactly that. I had to like, restart the whole app between services.
+[00:00:55] Me: Okay, that's worth logging. Um, but the band sounded great, Mark, your mix was clean.
+[00:01:01] Speaker 1: Oh thanks. The new vocal mic helped a lot.
+[00:01:04] Me: It did. Okay so let me, let me run through a couple things for this weekend.
+[00:01:09] Speaker 1: Go for it.
+[00:01:10] Me: First thing, the live stream. We keep starting the countdown way too early and then it just sits there.
+[00:01:16] Speaker 2: Yeah people are staring at a blank countdown for like five minutes.
+[00:01:20] Me: Right. So I want to, let's push the stream start to nine twenty five. Give the room time to fill.
+[00:01:26] Speaker 1: Nine twenty five, yeah that makes sense. Service is at nine thirty so that's a tight little pre-roll.
+[00:01:32] Me: That's the point, keeps it tight. Okay, so that's decided, nine twenty five going forward.
+[00:01:37] Speaker 2: I'll update the countdown timer in pro presenter.
+[00:01:40] Me: Perfect. Um, the other thing, the announcement slides.
+[00:01:44] Speaker 2: Oh I know, they're a mess. Half of them are from like three weeks ago.
+[00:01:48] Me: Yeah, there was an event on there that already happened.
+[00:01:51] Speaker 2: That's embarrassing. Okay, I'll rebuild the announcement slides this week, from scratch probably.
+[00:01:57] Me: That'd be great. Just pull the current stuff from the comms team.
+[00:02:01] Speaker 2: Yeah I'll ping Hannah for the updated graphics.
+[00:02:04] Speaker 1: While we're talking slides, um, can I throw something out there?
+[00:02:08] Me: Sure.
+[00:02:09] Speaker 1: So the stage monitoring. What if we switched the whole band to in ears?
+[00:02:14] Me: Oh, that's a whole conversation.
+[00:02:16] Speaker 1: I know, I know. I'm just saying, we'd kill the stage volume, the mix out front gets way cleaner.
+[00:02:22] Speaker 2: The drummer would love that, he's always complaining about the wedges.
+[00:02:26] Me: It's a cool idea. That's a big spend though, and training the band on it.
+[00:02:31] Speaker 1: Totally. I'm not saying do it tomorrow, just, you know, floating it.
+[00:02:35] Me: Yeah let's, let's park that one. We can revisit when we talk about next year's gear.
+[00:02:40] Speaker 1: Fair enough.
+[00:02:41] Me: Um, okay. The other stage thing. The worship team keeps asking about the confidence monitor.
+[00:02:47] Speaker 2: Right, because the one on stage left, they can't see it from the keys.
+[00:02:51] Me: Exactly. So I'm thinking a second one, stage right side.
+[00:02:55] Speaker 1: I think that's an easy win honestly. We've got the mount already.
+[00:02:59] Me: Yeah let's add the second confidence monitor on stage. That solves the sightline thing.
+[00:03:04] Speaker 2: Oh good, they'll be thrilled.
+[00:03:06] Speaker 1: We've got that spare display in the closet, the, uh, the one from the old lobby setup.
+[00:03:11] Me: Perfect, that's free then.
+[00:03:13] Unknown: is it the big one or the —
+[00:03:15] Speaker 1: It's the fifty five inch I think. Should be plenty.
+[00:03:18] Me: Okay. Um, one more thing and this is the one I'm nervous about.
+[00:03:22] Speaker 2: Uh oh.
+[00:03:23] Me: The camera three cable. The SDI run we ordered to replace the flaky one.
+[00:03:28] Speaker 1: Oh right, the one that keeps dropping color.
+[00:03:30] Me: Yeah. So the real question is, will the new camera cable get here before Sunday?
+[00:03:35] Speaker 1: When did you order it?
+[00:03:37] Me: Thursday last week. Tracking said it shipped but it hasn't moved in two days.
+[00:03:42] Speaker 2: Ugh, that vendor is always slow.
+[00:03:45] Me: I don't know if it's gonna make it. We may have to run the old one again.
+[00:03:49] Speaker 1: Do we have a backup if it doesn't show?
+[00:03:51] Me: Barely. We've got the short run but it won't reach the back position.
+[00:03:55] Speaker 2: So camera three would have to move.
+[00:03:57] Me: Maybe. Let's, let's leave that open for now, I'll check tracking tonight.
+[00:04:02] Speaker 1: Okay. Um, were you at the thing Saturday, the, uh, the volunteer lunch?
+[00:04:07] Me: No, I totally missed it. How was it?
+[00:04:10] Speaker 1: It was good, decent turnout. The tacos were, um, questionable.
+[00:04:14] Speaker 2: The tacos were terrible, Mark, let's be honest.
+[00:04:17] Speaker 1: Okay they were bad. But the people were great.
+[00:04:20] Me: Ha, noted. Okay, back on track. Let's talk about the opening.
+[00:04:25] Speaker 2: The lighting for the opener, you mean?
+[00:04:27] Me: Yeah. Right now the top of service is just, it's flat. House lights full up.
+[00:04:32] Speaker 1: It doesn't really signal anything, like, hey we're starting.
+[00:04:36] Me: Right. I want a preset that pulls the house down a bit and brings up the stage wash.
+[00:04:41] Speaker 2: That'd feel way more intentional.
+[00:04:43] Me: So let me pull up what we've got programmed right now.
+[00:04:47] Speaker 1: Is that on the, the new console or the old board?
+[00:04:50] Me: New one. The old board's basically retired at this point.
+[00:04:54] Speaker 2: Thank goodness, that thing was from like the stone age.
+[00:04:57] Me: Give me one sec, let me find the cue stack.
+[00:06:01] Me: Okay, here it is. So right now cue one is just a full up, nothing fancy.
+[00:06:07] Speaker 1: Yeah, see, it just sits there. No movement into the song.
+[00:06:11] Me: So here's what I'm thinking. For the top of service, we'll run the dimmer preset for the opening song.
+[00:06:17] Speaker 2: House comes down, stage wash comes up, all in one go?
+[00:06:20] Me: Exactly. One button, nice slow fade over like three seconds.
+[00:06:24] Speaker 1: I like that. That reads as, okay, something's happening.
+[00:06:28] Me: Alright, let's make that the call. Dimmer preset for the opener, that's decided.
+[00:06:33] Speaker 2: Love it. Way better than the flat wall of light.
+[00:06:36] Me: The only thing is the preset's half built. I started it a couple weeks ago and never finished.
+[00:06:41] Speaker 1: So it's not ready for Sunday yet?
+[00:06:43] Me: Not yet. I'll reprogram that cue before Thursday rehearsal so we can test it live.
+[00:06:48] Speaker 2: Perfect, then we see it on the actual stage before the weekend.
+[00:06:52] Me: Right. I'd rather not surprise the band with a dark stage.
+[00:06:55] Speaker 1: Ha, yeah, they panic when they can't see their pedals.
+[00:06:58] Me: Okay. So that circles us back to the confidence monitor thing from earlier.
+[00:07:03] Speaker 2: The second one on stage, yeah. We said we'd add it.
+[00:07:06] Me: We did. But I pulled up the AVL budget while you were talking.
+[00:07:10] Speaker 1: Uh oh. That's never a good sentence.
+[00:07:13] Me: We're tighter than I thought this quarter. The cable order already ate into it.
+[00:07:18] Speaker 2: How much is a decent confidence monitor plus the mount and the run?
+[00:07:22] Me: By the time you do a screen, the floor stand, the cabling, you're looking at close to a grand.
+[00:07:28] Speaker 1: Ooph. For something that's kind of a nice to have.
+[00:07:31] Me: Right. Honestly the band's been fine with the one monitor for two years.
+[00:07:35] Speaker 2: That's true. Nobody's actually complained, we just thought it'd be nice.
+[00:07:39] Me: So I think we hold off on the second monitor. We don't add it this quarter.
+[00:07:44] Speaker 1: Agreed. Let's revisit it when the budget resets in January.
+[00:07:48] Me: Yeah, let's shelve it. The one we have works for now.
+[00:07:51] Speaker 2: Makes sense. The lighting change is free, the monitor is a grand.
+[00:07:55] Me: Exactly. Priorities. Okay, I think that's everything on my list.
+[00:08:00] Speaker 1: Did we land on who's running pro presenter Sunday, by the way?
+[00:08:04] Speaker 2: That's me unless something changes. I'm on the booth.
+[00:08:07] Speaker 3: Oh and I meant to say, we've got two new volunteers shadowing this week.
+[00:08:12] Me: Oh nice. Shadowing which positions?
+[00:08:14] Speaker 3: One on cameras, one in the booth with Jenna if that's okay.
+[00:08:18] Speaker 2: Totally fine, I love having a second set of hands.
+[00:08:21] Me: Great. Just make sure they don't touch the new console unsupervised.
+[00:08:25] Speaker 3: Ha, understood. Hands in pockets until they're trained.
+[00:08:29] Me: Perfect. Alright, so to recap, livestream start moves later, Jenna rebuilds the announcement slides.
+[00:08:36] Speaker 2: And you reprogram the opening cue before Thursday.
+[00:08:39] Me: Yep. And the monitor's on hold. Camera cable is the wild card.
+[00:08:43] Speaker 3: You'll let us know on the cable once you check tracking?
+[00:08:46] Me: Tonight, yeah. I'll text the group thread either way.
+[00:08:50] Speaker 2: Sounds good. Anything else or are we free?
+[00:08:53] Me: I think we're good. Thanks for hopping on, both of you.
+[00:08:57] Speaker 3: Thanks Aaron. See you Thursday.
+[00:09:00] Speaker 2: Bye guys.
+[00:09:02] Me: See ya.

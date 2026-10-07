@@ -1,0 +1,1053 @@
+Easter Weekend Full Production Meeting
+Tuesday, January 26, 2027 · 3:30 PM · 90 min · Room and call
+Transcribed by Minutes. Audio was not recorded.
+
+[00:00:04] Me: Alright, I think we're mostly here. Let me just, uh, let me close the door real quick.
+[00:00:11] Speaker 1: Morning everybody. Did anybody grab coffee? There's a fresh pot in the work room.
+[00:00:17] Speaker 2: Oh, there is? I've been running on, like, nothing this morning.
+[00:00:21] Speaker 3: I made it, so, you know, drink at your own risk.
+[00:00:25] Speaker 2: That's reassuring, Marcus, thank you.
+[00:00:29] Me: Okay, so before we get rolling, I've got two folks joining on the call. Trent from the staging company and then Priya from our IT, um, our MSP.
+[00:00:39] Speaker 1: Great. Are they on yet?
+[00:00:42] Me: Trent should be dialing in. Let me, let me just check.
+[00:00:49] Caller 1: Hey, can you hear me? This is Trent.
+[00:00:52] Me: Yep, loud and clear. Thanks for jumping on.
+[00:00:55] Caller 1: No problem. Sorry, I'm in the warehouse so if it gets loud just, uh, just tell me.
+[00:01:01] Me: You're good so far. Priya, are you on too?
+[00:01:05] Caller 2: I'm here. Good morning everyone.
+[00:01:08] Me: Perfect. Okay, so quick, quick roll call for the notes. I'm Aaron, I've got the AVL side.
+[00:01:15] Speaker 1: Dale, executive pastor, and I'm mostly here to keep us on schedule and, uh, keep spending reasonable.
+[00:01:22] Speaker 2: Renee, worship.
+[00:01:24] Speaker 3: Marcus, facilities.
+[00:01:27] Speaker 4: And Holly, I do the volunteer coordinating.
+[00:01:31] Me: And then Trent on staging and LED, and Priya on IT. Great.
+[00:01:36] Speaker 1: Did Holly just get here? I didn't even see you come in.
+[00:01:39] Speaker 4: I've been here, I was just sitting in the corner being quiet.
+[00:01:43] Speaker 2: That never lasts.
+[00:01:45] Speaker 4: Rude, but accurate.
+[00:01:48] Me: Okay, um, so the whole reason we're all crammed in here. Easter. It's, what, it's coming up fast.
+[00:01:56] Speaker 1: It's April fifth this year. So we've got, what is that, that's like six months.
+[00:02:02] Me: Yeah, feels like a lot but it's really not when you count the planning cycles.
+[00:02:07] Speaker 3: And we've got the whole lobby renovation landing right before that, so.
+[00:02:11] Speaker 1: Don't remind me.
+[00:02:13] Me: Let's, uh, let's start with the big picture. The schedule. Last year we did two services and it was, honestly, it was packed.
+[00:02:21] Speaker 1: It was over capacity. We turned people away at the eleven.
+[00:02:25] Speaker 2: We did. I remember the back doors were just, people standing.
+[00:02:29] Speaker 1: So the proposal this year, and I've already floated this with the elders, is we run three services on Easter Sunday morning.
+[00:02:37] Me: Three. Okay. So what are the, what are the times looking like?
+[00:02:41] Speaker 1: We're thinking a nine, an eleven, and then a one. Or maybe a nine, a ten thirty, and a noon. The spacing's still a little fuzzy.
+[00:02:51] Speaker 2: Oh, the one o'clock is going to be rough on the band. That's a long day.
+[00:02:56] Speaker 1: I know, I know. We'll talk about talent load. But three services is kind of locked in at this point.
+[00:03:02] Me: Okay, so three on Sunday. Are we also doing Good Friday?
+[00:03:06] Speaker 1: Yes. Good Friday evening, one service, seven PM. That one's happening too.
+[00:03:12] Me: So I'll write that down as, um, three Sunday morning services plus the one Good Friday evening service. Everybody good with that as the baseline?
+[00:03:21] Speaker 2: Yeah.
+[00:03:22] Speaker 3: Works for me.
+[00:03:23] Speaker 1: That's the plan. Good Friday at seven, three on Sunday.
+[00:03:28] Me: Great, that's, that's our skeleton then.
+[00:03:31] Speaker 4: Can I ask, is the Good Friday one in here or in the chapel?
+[00:03:35] Speaker 1: Main room. We're expecting it to be bigger this year.
+[00:03:39] Speaker 4: Okay, 'cause that changes my volunteer numbers a lot.
+[00:03:42] Me: Yeah, hold that thought, we'll get into volunteers. Um, Trent, you still with us?
+[00:03:47] Caller 1: Yep, still here. Taking notes on the schedule.
+[00:03:51] Me: Cool. So now the fun part, the part I'm actually excited about.
+[00:03:55] Speaker 2: Here we go.
+[00:03:57] Me: I think this is the year we go big on the stream. Last year we only streamed the one service and we had, honestly, we had a ton of people watching online.
+[00:04:06] Speaker 1: The numbers were good. What were they, like, a couple thousand households?
+[00:04:10] Me: Something like that. So my pitch is, let's go live on all three Easter services. Full livestream, all morning.
+[00:04:18] Speaker 2: Oh, I love that. The online church is, like, that's a whole congregation.
+[00:04:23] Speaker 1: I'm into it in principle. People travel on Easter, they want to tune in.
+[00:04:28] Speaker 4: And the shut-ins. We've got a bunch of folks who can't make it in anymore.
+[00:04:32] Me: Exactly, exactly. So yeah, early read, I'm hearing everybody's on board to stream all three.
+[00:04:38] Speaker 1: Yeah, let's, let's plan on that for now. Stream everything.
+[00:04:42] Speaker 2: That's exciting. That feels like a step up for us.
+[00:04:45] Me: It is. I mean, it's also a lot more work, but it's the good kind.
+[00:04:50] Speaker 3: Famous last words.
+[00:04:52] Me: Ha, yeah. Okay so, um, let me, let me flag the first real problem though.
+[00:04:58] Speaker 1: Already?
+[00:05:00] Me: Already. So if we stream all three, the thing that keeps me up at night is who is going to direct video for all three services.
+[00:05:08] Speaker 2: Ooh. Yeah.
+[00:05:10] Me: Because right now, that's me. I direct. And that's, that's a four, five hour window of me glued to the switcher.
+[00:05:17] Speaker 1: Can you not just do all three? You're already there.
+[00:05:21] Me: I mean, physically I'm there, but by the third service my brain is soup. And if anything goes wrong on the stream, I'm the only one who knows the, the whole system.
+[00:05:31] Speaker 4: Do we have anybody on the volunteer side who could direct?
+[00:05:35] Me: That's, that's kind of the open question. I've got camera volunteers, but directing is a different animal.
+[00:05:41] Speaker 2: What about that guy, um, the one who helped at Christmas? He seemed sharp.
+[00:05:46] Me: Maybe. I'd want to train him up way before Easter though. We can't wing that.
+[00:05:51] Speaker 1: So let's, let's not solve it this second, but, Aaron, put a pin in it. Who directs is a real gap.
+[00:05:58] Me: Yeah, I'm writing it down as an open item. Directing coverage for three streamed services.
+[00:06:04] Speaker 4: I can look at my list and see if anybody's got the chops.
+[00:06:08] Me: That'd be great, Holly. No commitment yet, just, just see who we've got.
+[00:06:13] Speaker 2: Sorry, random, is there more of that coffee or did Marcus's poison run out?
+[00:06:18] Speaker 3: There's half a pot. And it's fine coffee.
+[00:06:21] Speaker 2: I'll be the judge of that.
+[00:06:23] Speaker 1: Can we, can we stay on track for like ten more minutes and then we'll do a coffee break?
+[00:06:28] Speaker 2: Fine, fine.
+[00:06:30] Me: Okay so, um, where was I. Right, so the schedule's set, the stream ambition is set, directing is the open question.
+[00:06:38] Caller 2: Aaron, sorry to jump in, this is Priya. Can I ask something on the streaming?
+[00:06:43] Me: Yeah, please.
+[00:06:45] Caller 2: When you say stream all three, are those back to back, or is there a gap? Because that affects what I need to do on the network side.
+[00:06:53] Me: Good question. There'd be a gap between each, like thirty, forty five minutes for turnover.
+[00:06:59] Caller 2: Okay. So three separate stream sessions, basically, not one continuous. That's, that's helpful to know.
+[00:07:06] Me: Right. And we should talk bandwidth, but let's, let's hold that till we get to the IT part.
+[00:07:12] Caller 2: Sounds good. I'll hang tight.
+[00:07:14] Speaker 1: While we're, uh, while we're on the stream, remind me what platform are we pushing to? YouTube still?
+[00:07:21] Me: YouTube and the website embed, same as always. We encode once and it goes both places.
+[00:07:27] Speaker 1: Got it. Okay.
+[00:07:29] Speaker 3: Hey, dumb question from the facilities guy. Does streaming all three mean the cameras are running the whole time? 'Cause that's the HVAC in the booth, it gets hot in there.
+[00:07:39] Me: Ha, not a dumb question. Yeah, the booth runs warm with everything on. We had that issue last summer.
+[00:07:46] Speaker 3: Right, that's what I'm remembering. I'll check the, the vent up there before Easter.
+[00:07:51] Me: Appreciate that. Add it to the list.
+[00:07:54] Speaker 2: See, this is why we have Marcus.
+[00:07:56] Speaker 3: Somebody's gotta think about the boring stuff.
+[00:07:59] Me: Okay, um, Trent, let's loop you in because the next big chunk is the stage and the LED wall.
+[00:08:05] Caller 1: Yeah, I'm ready whenever. I pulled up our inventory this morning.
+[00:08:10] Me: Perfect. So let me just, let me set the context for everybody first.
+[00:08:14] Speaker 1: Before you do, how long are we, what's our, what's the hard stop today?
+[00:08:19] Me: I blocked ninety minutes. So we've got, uh, we've got a good hour and change left.
+[00:08:24] Speaker 1: Okay. I've got a hard out at the top of the hour after that, so just, just so you know.
+[00:08:29] Me: Noted. We'll, we'll keep it moving.
+[00:08:32] Speaker 4: Did everybody see the email about the parking lot repaving? Sorry, unrelated.
+[00:08:37] Speaker 3: Oh, that's happening the week after Easter, thankfully.
+[00:08:40] Speaker 4: Okay, good, 'cause I panicked for a second.
+[00:08:43] Speaker 1: Can we, uh, Easter first, parking lot later.
+[00:08:46] Speaker 4: Sorry, sorry.
+[00:08:48] Me: No worries. Okay, so the LED wall. Right now we've got our, our existing wall, it's the, what is it, the three and nine millimeter panels we own.
+[00:08:58] Caller 1: Yeah, you guys are on the three nine. How big is the current wall, like, dimensions?
+[00:09:04] Me: It's, uh, it's roughly twenty by eleven feet. Give or take.
+[00:09:09] Caller 1: Okay. And for Easter you're thinking you want it bigger?
+[00:09:13] Me: That's the question I want to get into. Renee, you had some, some ideas on the stage look, right?
+[00:09:19] Speaker 2: Yeah, so, the vision for Easter is, we want it to feel really expansive. Like, bright, open, resurrection, you know.
+[00:09:28] Speaker 1: Preach.
+[00:09:29] Speaker 2: And the current wall, on camera it looks a little, a little small. Like it doesn't fill the frame.
+[00:09:35] Me: Yeah, that's, that's a real thing, especially if we're streaming. The wall reads smaller on the broadcast.
+[00:09:41] Caller 1: So one option is we rent you additional panels to extend it out wider. We could do wings, or we could just make the main wall bigger.
+[00:09:50] Me: That's what I was hoping you'd say. Let's, um, let's dig into that more in a few minutes, I want to get the camera stuff adjacent to it.
+[00:09:58] Caller 1: Sure. Just so you know, lead time on rental panels for Easter weekend, that's a busy weekend for us, so, the sooner we lock it the better.
+[00:10:07] Me: Noted, and that's, that's a good push, thank you. We won't sit on it.
+[00:10:11] Speaker 1: How, ballpark, how much are we talking for rental panels? Just so I'm not shocked later.
+[00:10:17] Caller 1: I don't want to throw out a bad number live. Let me put together an actual quote for you.
+[00:10:22] Speaker 1: Fair. I just, you know, I have to take whatever we land on to the finance team anyway.
+[00:10:28] Me: Right. Nothing's, nothing's final today on budget, we all get that.
+[00:10:32] Speaker 1: Correct. I can advocate but I don't sign the check.
+[00:10:35] Me: Understood. Okay, um, let me back up to cameras for a sec while we've got the energy.
+[00:10:41] Speaker 2: Oh, can I say one more thing on the wall?
+[00:10:43] Me: Yeah, go.
+[00:10:44] Speaker 2: If we go wider, the lyrics and the, the motion backgrounds in pro presenter, those are built for the current aspect ratio. So somebody's gotta rebuild those.
+[00:10:54] Me: Oof. Yeah. That's, that's a good catch. That's a whole task by itself.
+[00:10:59] Speaker 2: Just flagging it before we commit to a giant wall.
+[00:11:02] Me: No, that's, that's exactly the kind of thing that bites us later. Adding it to the list.
+[00:11:07] Speaker 1: See, this is the good stuff. This is why we meet six months out.
+[00:11:11] Speaker 3: Six months out and we'll still be scrambling the week of.
+[00:11:14] Me: Ha, yeah, that's, that's just the law of church production.
+[00:11:18] Speaker 4: It's tradition at this point.
+[00:11:20] Me: Okay, cameras. Right now on a normal Sunday we run, uh, we run three cameras. Two on tripods in the back, one on the, the side platform.
+[00:11:30] Speaker 2: And none of them are close, right? They're all kind of locked wide.
+[00:11:34] Me: Right, they're all pretty static. Which is fine for a normal weekend but for Easter, if we're streaming all three services, I want more movement.
+[00:11:43] Speaker 1: More cameras means more volunteers, though.
+[00:11:46] Me: It does. Which, Holly, that's gonna land on you.
+[00:11:49] Speaker 4: I figured. I'm already mentally counting.
+[00:11:52] Me: We'll get specific in a bit. I just want to get the shape of it down first.
+[00:11:56] Speaker 2: What about, like, a camera down front? On the floor? That always looks good for worship.
+[00:12:02] Me: Yeah, a handheld on the floor is, that's on my wish list for sure. We'll come back to it.
+[00:12:08] Speaker 1: Okay I need the coffee break you promised. My brain's full.
+[00:12:12] Me: Ha, alright, give me, give me two minutes to get through one thing and then we'll pause.
+[00:12:17] Speaker 1: Deal.
+[00:12:18] Me: So the one thing is just, I want to make sure we all agree on the, the priority order. Because we can't do everything.
+[00:12:25] Speaker 1: Agreed. What's your ranking?
+[00:12:27] Me: For me it's, number one, the stream has to be rock solid. Number two, the stage look. Number three, the extra camera angles.
+[00:12:36] Speaker 2: I'd maybe flip two and three but, I get it.
+[00:12:39] Speaker 1: No, I think stream reliability first is right. If we're telling people to watch online, it has to work.
+[00:12:46] Me: Right. A broken stream on Easter is, that's the nightmare scenario.
+[00:12:50] Caller 2: And that's where I'd want to make sure we've got the bandwidth headroom. We can talk specifics later but, consider that part of priority one.
+[00:12:58] Me: Totally, Priya, yeah. The network's part of making the stream solid.
+[00:13:03] Speaker 1: Okay. Can we also, at some point, talk about whether we even have the people for all this? I don't want to design a Ferrari we can't drive.
+[00:13:11] Me: That's, honestly that's the fairest point anybody's made. Volunteers and directing coverage, that's the constraint.
+[00:13:18] Speaker 4: I'll have real numbers after I go through my roster. Give me till, I don't know, end of next week?
+[00:13:24] Me: That works. No pressure today.
+[00:13:26] Speaker 3: Hey while we're pausing, did anyone watch the game last night?
+[00:13:30] Speaker 1: Don't. Don't do this to me, we lost in the last two minutes.
+[00:13:34] Speaker 3: I know, I just wanted to share the pain.
+[00:13:36] Speaker 2: I don't even know what sport we're talking about.
+[00:13:39] Speaker 4: Me neither and I'm okay with that.
+[00:13:41] Speaker 3: It's basketball, Renee. Come on.
+[00:13:44] Speaker 2: I knew that.
+[00:13:45] Unknown: You did not.
+[00:13:47] Speaker 1: Okay, okay, two minute coffee break for real. Everybody stretch.
+[00:13:52] Me: Callers, we're gonna take a quick, uh, a quick two minute break. Don't hang up, just, just mute if you need to.
+[00:13:58] Caller 1: No problem, I'll grab a coffee too.
+[00:14:00] Caller 2: Sounds good, I'll be here.
+[00:14:02] Speaker 2: Is this the good coffee or the Marcus coffee?
+[00:14:05] Speaker 3: It's the only coffee, take it or leave it.
+[00:14:08] Speaker 2: Harsh.
+[00:14:10] Speaker 1: Aaron, while people are up, remind me what you need from me specifically out of today.
+[00:14:15] Me: Mostly a, a thumbs up on the schedule, which we've got, and then, uh, cover for me with finance when the numbers come in.
+[00:14:23] Speaker 1: I can do that. As long as the numbers aren't insane.
+[00:14:26] Me: I'll keep 'em sane. Sane-ish.
+[00:14:29] Speaker 1: Sane-ish is doing a lot of work in that sentence.
+[00:14:32] Me: Ha. Okay, um, let's, who's back? Renee you good?
+[00:14:36] Speaker 2: I'm back, I've got my coffee, I'm a new person.
+[00:14:39] Speaker 4: I'm here.
+[00:14:40] Speaker 3: Here.
+[00:14:42] Me: Trent, Priya, you still with us?
+[00:14:44] Caller 1: Yep, back.
+[00:14:46] Caller 2: Still here.
+[00:14:47] Me: Great. Okay so, um, let's really get into the LED wall now, 'cause Trent's got the inventory up and I don't want to waste his time.
+[00:14:55] Caller 1: Yeah, so let me pull the numbers on, on what extending the wall would actually take.
+[00:15:00] Me: Perfect. And just, for the notes, where we landed before the break was, schedule is three Sunday services plus Good Friday, and the plan is to stream everything.
+[00:15:10] Speaker 1: Right, with the directing coverage still an open question.
+[00:15:13] Me: Correct. Okay. So, Trent, hit me. What do we need to make this wall bigger?
+[00:15:19] Caller 1: Alright, so to go from your twenty by eleven to something that fills the frame better, you're probably looking at extending to, like, thirty feet wide.
+[00:15:28] Me: Thirty. Okay. And that's, that's all rental on top of what we own?
+[00:15:33] Caller 1: Right, 'cause you can't buy matching panels in time. Rental's the move for the weekend.
+[00:15:38] Me: Got it. Let's dig into the specifics.
+[00:18:02] Caller 1: Okay so I've got the inventory in front of me now. The panels you own are the two point six millimeter, right?
+[00:18:09] Me: Yeah, two point six, we bought those, what, three years ago.
+[00:18:13] Caller 1: Perfect, 'cause I've got a matching batch in the warehouse. Same pitch, same, uh, same processor family.
+[00:18:19] Me: Oh that's huge. So they'll actually tile together clean?
+[00:18:23] Caller 1: They should, as long as we run them off the same processor. We'd bring a, a spare just in case.
+[00:18:29] Speaker 1: When you say extend to thirty feet, what does that do to the stage itself, Marcus?
+[00:18:34] Speaker 3: Depends how deep they want the structure. If we're hanging it, I need to know the weight before I say yes to anything.
+[00:18:41] Caller 1: Totally fair. For thirty wide by eleven high, you're adding roughly, um, forty extra panels.
+[00:18:48] Speaker 3: Forty panels. And that's flown or ground stacked?
+[00:18:52] Caller 1: I'd ground stack the extension on, on towers, honestly. Easier on your rigging points.
+[00:18:58] Speaker 3: Ground stack I can live with. Flying forty panels I'd have to get the beams inspected and we don't have time.
+[00:19:05] Me: Okay so ground stack towers on each wing. That eats into the stage width though, Renee.
+[00:19:11] Speaker 2: How much are we talking? 'Cause the band already feels cramped on that stage.
+[00:19:16] Caller 1: The towers themselves are maybe eighteen inches deep each side. Not nothing, but not huge.
+[00:19:22] Speaker 2: Eighteen inches each side I can probably work with. I just don't want the drummer in somebody's lap again.
+[00:19:28] Me: Noted. Um, Trent, talk to me about the processor, 'cause last Christmas we had that, that weird color shift on the left side.
+[00:19:36] Caller 1: Right, that was 'cause you were mixing two processors. If we run everything through one of my, uh, my Novastar units, that goes away.
+[00:19:44] Me: Okay good, that was driving me nuts on camera.
+[00:19:47] Speaker 2: It looked green in the overflow room too, people commented.
+[00:19:51] Caller 1: Yeah, single processor fixes that. I'll also send a tech to do the, the color calibration on site.
+[00:19:58] Me: A tech on site, that's, that's included or extra?
+[00:20:02] Caller 1: For a weekend this size I can roll it into the package. One tech, load in through strike.
+[00:20:08] Speaker 1: That's good to hear. I don't want surprise labor lines after the fact.
+[00:20:13] Caller 1: No surprises from me, Dale. I'll itemize it.
+[00:20:16] Me: Okay, so let me, let me just make sure I'm tracking the content side. If we go thirty by eleven, Renee, your, your motion backgrounds have to be rebuilt, right?
+[00:20:26] Speaker 2: Yeah, the resolution changes. Everything in pro presenter is built for the current canvas.
+[00:20:32] Me: So that's a, a content rebuild job on top of the rental.
+[00:20:36] Speaker 2: It is, but my media guy can handle the re-render if I get him the new pixel map.
+[00:20:42] Caller 1: I'll give you the exact pixel map once we lock the panel count.
+[00:20:46] Me: Okay. Um, Holly, from your side, does a bigger wall change anything for volunteers?
+[00:20:52] Speaker 4: Only that somebody has to run it. The, the wall operator spot is already hard to fill.
+[00:20:58] Me: Fair. We can, we can talk staffing in a bit. Let's, let's nail the wall decision first.
+[00:21:04] Speaker 1: What's the rough number, Trent? Ballpark, I know it's not final.
+[00:21:08] Caller 1: For forty panels, towers, the processor, and the tech, you're looking somewhere in the, the eight to nine thousand range for the weekend.
+[00:21:17] Speaker 1: Eight to nine. Hm.
+[00:21:19] Me: That's actually not bad for Easter. Christmas the same scope was closer to eleven.
+[00:21:24] Caller 1: Yeah, Christmas you added the, the floor tiles too. This is just the wall extension.
+[00:21:30] Speaker 1: Does that eight to nine include delivery?
+[00:21:33] Caller 1: It includes delivery and pickup, yeah. Fuel's baked in.
+[00:21:37] Speaker 3: What about load in time? I need to schedule my guys around it.
+[00:21:41] Caller 1: I'd want the stage clear by, uh, Thursday morning Easter week. Load in takes most of a day with the towers.
+[00:21:49] Speaker 3: Thursday morning. Okay, that works, Good Friday rehearsal isn't till Friday afternoon.
+[00:21:55] Me: Good, that lines up. Alright, I think, um, I think we should do it. Dale, what do you think?
+[00:22:01] Speaker 1: I think the wall's been too small on camera for two years. I'm, I'm inclined to go for it.
+[00:22:07] Me: Renee?
+[00:22:08] Speaker 2: Yes. A thousand times yes. The current wall looks tiny in the wide shot.
+[00:22:13] Me: Marcus, you good structurally?
+[00:22:15] Speaker 3: Ground stacked, yeah, I'm good. Flown would've been a no.
+[00:22:19] Me: Okay. Then let's, let's go ahead and rent the extra wall panels. Trent, consider it a go on the thirty foot plan.
+[00:22:27] Caller 1: Awesome, that's great. I'll hold the forty panels for your dates right now so nobody else grabs 'em.
+[00:22:33] Me: Perfect, appreciate that.
+[00:22:35] Speaker 1: Now, to be clear, me saying go doesn't mean the money's approved. The final budget has to be approved by the finance team.
+[00:22:43] Me: Right, understood. So the decision's the plan, the, the dollars go through finance.
+[00:22:48] Speaker 1: Exactly. I can advocate for it but Karen's team signs off. That's just how it works now.
+[00:22:54] Me: That's fine. Trent, so what we need from you to, to feed that process, is a real quote.
+[00:23:01] Caller 1: Absolutely. Can you, uh, can you send over the rental quote by Friday, is that enough lead time?
+[00:23:07] Me: Friday's perfect. If you send over the rental quote by Friday I can get it in front of finance Monday.
+[00:23:13] Caller 1: Done. I'll have it to you Friday, itemized, with the tech labor broken out separate so they can see it.
+[00:23:20] Speaker 1: That's exactly what they'll want, the line items. Karen hates a lump sum.
+[00:23:25] Me: Great. So just so the notes are clean, uh, decision is we rent the extension, Trent sends the quote by Friday, finance has the final say on the money.
+[00:23:35] Caller 1: That's my understanding, yep.
+[00:23:37] Speaker 4: Can I ask, is that quote number separate from the camera budget? I don't want these getting lumped.
+[00:23:43] Me: Good question, Holly. Yeah, I'll keep the wall and the camera lines separate on my sheet.
+[00:23:48] Speaker 4: Okay, 'cause last year the, the whole production number scared people and half of it was rental.
+[00:23:54] Me: Yep, that's, that's a fair memory. I'll break it out so it's not one scary number.
+[00:23:59] Speaker 1: Please do. One big number and the conversation's over before it starts.
+[00:24:04] Caller 2: Aaron, quick one from the IT side while we're on budget.
+[00:24:08] Me: Yeah, go ahead Priya.
+[00:24:10] Caller 2: If the wall's drawing that much more power, is any of that on the, the circuits near the rack room? I don't want the servers browning out.
+[00:24:18] Speaker 3: The wall's on a totally separate panel from the rack, Priya. Different side of the building.
+[00:24:23] Caller 2: Oh good. Then I've got no concerns there. Just had to ask.
+[00:24:27] Me: Smart to ask. Marcus, we do have enough power on that wing for forty more panels, right?
+[00:24:33] Speaker 3: We do. I ran a, a sub panel out there after Christmas exactly for this. We're fine.
+[00:24:39] Me: Oh nice, I forgot you did that. Okay, that's one less thing.
+[00:24:43] Caller 1: That actually saves you money, 'cause I was gonna quote a, a generator tie-in as an option.
+[00:24:48] Me: No generator needed, skip that line. Marcus already handled the power.
+[00:24:52] Caller 1: Easy, taking it off.
+[00:24:54] Speaker 2: See, Marcus is useful for more than bad coffee.
+[00:24:57] Speaker 3: I'm gonna frame that and put it over the coffee pot.
+[00:25:01] Me: Okay, okay. Um, so while we're, while we're dreaming big on the look, let me just, let me float something for the stream.
+[00:25:08] Speaker 1: Uh oh.
+[00:25:09] Me: No, no, hear me out. It's not even my idea, somebody mentioned it to me in the hallway.
+[00:25:14] Speaker 2: That's what everyone says before an expensive idea.
+[00:25:17] Me: Fair. So, what if we added a drone shot over the parking lot, you know, like an opening shot of everyone arriving Easter morning.
+[00:25:26] Speaker 1: A drone shot.
+[00:25:28] Me: Just for the, the open of the livestream. Cars pouring in, the sun coming up, it's a whole vibe.
+[00:25:34] Speaker 2: Okay that would actually look incredible, not gonna lie.
+[00:25:38] Speaker 3: Who's flying it though? You need a licensed guy for that near people.
+[00:25:42] Me: Yeah, that's, that's the catch, you need a, a part one zero seven pilot to fly over a crowd.
+[00:25:48] Caller 1: We don't do drone, just so you know, that'd be a separate vendor.
+[00:25:52] Speaker 1: And insurance. Flying over the parking lot full of cars, our, our policy would have something to say.
+[00:25:59] Me: Yeah. I'm not, I'm not saying we do it, I'm just putting it out there.
+[00:26:03] Speaker 4: It'd be cool for, like, the promo video even if not live.
+[00:26:07] Speaker 1: Let's, let's park the drone. Pun intended. It's a neat idea but it's not for this year.
+[00:26:13] Me: Agreed, totally. Just wanted it on the record that somebody dreamed it.
+[00:26:17] Speaker 2: Noted for the dream file.
+[00:26:19] Me: The dream file, I love it. Okay, so no drone, we're, we're grounded. Back to the wall real quick.
+[00:26:26] Speaker 1: What's left on the wall?
+[00:26:28] Me: Just, um, confirming content timeline. Renee, when does your media guy need the pixel map to hit Easter?
+[00:26:35] Speaker 2: Realistically two weeks out. The re-render and then I wanna test it on the actual wall.
+[00:26:41] Me: Trent, can we get a, a test fire before Easter week? Like power the extension up early?
+[00:26:47] Caller 1: Hm. That's tricky, 'cause the panels are rental, I can't leave 'em on site for two weeks.
+[00:26:53] Me: Right, of course.
+[00:26:54] Caller 1: But, what I can do, I can send you the pixel map spec immediately so the content's built right. Then test day is load in day.
+[00:27:02] Speaker 2: So we'd be testing content the same day we load in. That's, that's tight.
+[00:27:07] Me: It is tight, but Thursday load in, Friday rehearsal, we'd catch problems Friday at least.
+[00:27:13] Speaker 2: Okay. I just, I don't want a repeat of the green screen moment live on Easter.
+[00:27:18] Me: No, no, me neither. Trent, send Renee that spec this week so her guy can start?
+[00:27:23] Caller 1: Yep, I'll send the, the exact resolution and map today actually. It's a standard doc.
+[00:27:29] Speaker 2: Perfect, today's great. The sooner my guy starts the better.
+[00:27:33] Me: Okay good. Um, Priya, does the bigger wall or the content change touch anything on your side, network wise?
+[00:27:40] Caller 2: Not the wall itself. But if the stream's going bigger, we're gonna need to talk bandwidth, which I think is later on your agenda.
+[00:27:48] Me: It is, yeah, we'll, we'll get to the stream bandwidth in a bit.
+[00:27:51] Caller 2: Cool, I'll hold my thoughts. Just flag that our, our current upload won't love four simultaneous streams.
+[00:27:58] Me: Noted, big flag, we'll come back to that.
+[00:28:01] Speaker 1: Wait, four simultaneous? I thought we said stream everything, that's, that's three Sundays and Good Friday but not at once.
+[00:28:09] Me: Right, not at once, they're, they're different time slots. Priya I think means the, the volume over the weekend.
+[00:28:15] Caller 2: Yeah sorry, I mean total load, not concurrent. My bad, bad phrasing.
+[00:28:20] Speaker 1: Okay, 'cause concurrent would've scared me.
+[00:28:23] Me: We'll clarify all that in the stream section. Hold the thought, Priya.
+[00:28:27] Caller 2: Holding.
+[00:28:29] Unknown: ...the map's fine...
+[00:28:31] Me: Sorry, who was that?
+[00:28:33] Caller 1: That was me, I was just confirming the pixel map's a standard thing, I can do it in my sleep.
+[00:28:38] Me: Ha, okay. Um, one more wall thing and then we move to cameras.
+[00:28:43] Speaker 3: Go.
+[00:28:44] Me: The, the towers for the ground stack. Marcus, do those block any walkways or exits? Fire marshal stuff.
+[00:28:51] Speaker 3: Good catch. Eighteen inch towers on the wings shouldn't hit an egress path, but I'll, I'll measure to be safe.
+[00:28:58] Me: Can you measure before the quote's final so we're not surprised?
+[00:29:02] Speaker 3: I'll measure this week. If there's a clearance issue I'll flag it to you and Trent both.
+[00:29:07] Caller 1: Appreciate that, 'cause I can shift the tower footprint a little if I know early.
+[00:29:12] Speaker 3: I'll get you numbers by, uh, Thursday.
+[00:29:15] Me: Great, Thursday works. Okay, I feel good about the wall. Everybody good?
+[00:29:20] Speaker 2: Good.
+[00:29:21] Speaker 4: Good.
+[00:29:22] Speaker 1: Good, pending finance obviously.
+[00:29:24] Me: Pending finance, always. Alright, um, let me, hang on, let me recap the wall for the notes real fast.
+[00:29:31] Speaker 1: Do it, I like the recaps.
+[00:29:33] Me: So, decision, we extend the wall to thirty by eleven, forty rental panels, ground stacked on towers, single processor, Trent's tech on site.
+[00:29:43] Caller 1: Correct.
+[00:29:44] Me: Trent sends the itemized quote by Friday, that goes to finance Monday, and finance makes the final money call.
+[00:29:51] Speaker 1: Right.
+[00:29:52] Me: Renee's media guy rebuilds content off the pixel map Trent sends today, and we test on load in day, Thursday Easter week.
+[00:30:00] Speaker 2: Yep, that's it.
+[00:30:01] Me: And Marcus measures tower clearance by Thursday this week. Drone idea is, is officially parked.
+[00:30:08] Speaker 3: In the dream file.
+[00:30:09] Me: In the dream file. Okay, that's the wall.
+[00:30:12] Speaker 4: Can I jump in with a volunteer thing before cameras, since it's related?
+[00:30:16] Me: Yeah, sure, go for it Holly.
+[00:30:18] Speaker 4: If the wall's bigger and more complex, I really need a, a dedicated wall op, not somebody doubling on lyrics.
+[00:30:25] Me: Agreed. Doubling on that wall this year would be, would be a disaster.
+[00:30:30] Speaker 4: So that's one more specialized role I'm recruiting for. I just want it counted.
+[00:30:35] Me: Count it. We'll, we'll put wall op on the, the camera and screens staffing list.
+[00:30:40] Speaker 4: Okay. And is that person on, on clear calm with the rest of us?
+[00:30:44] Me: Yeah, they'd be on comms, which, uh, which is another thing, we might be short belt packs, but that's later too.
+[00:30:51] Speaker 4: Everything's later today.
+[00:30:53] Me: I know, I know, it all connects. That's Easter.
+[00:30:56] Speaker 1: This is why we start planning in, in February.
+[00:30:59] Me: We should've started in January honestly.
+[00:31:01] Speaker 2: We say that every year.
+[00:31:03] Me: We do. Okay. Priya, before we leave hardware, carbon light, our backup, is that still running nightly on the, the media server?
+[00:31:11] Caller 2: Carbonite? Yeah, it's backing up nightly, I checked it last week, you're green across the board.
+[00:31:17] Me: Good, 'cause if we lose the Easter content I will cry.
+[00:31:20] Caller 2: You're covered. Although if you add a ton of video footage we should talk storage, which, again, later.
+[00:31:27] Me: The later pile is enormous. Okay. Um, let's, let's shift to cameras. That okay with you, Dale, time wise?
+[00:31:34] Speaker 1: Yeah, we've got time, keep rolling.
+[00:31:36] Me: Trent, you can, you can drop off if you want, the wall's settled and the rest is internal.
+[00:31:41] Caller 1: I'll hang for a few more minutes in case cameras touch the stage, then I'll hop.
+[00:31:46] Me: Sounds good. Appreciate you, Trent, this was, this was productive.
+[00:31:50] Caller 1: Of course, man. Quote by Friday, map today, I'm on it.
+[00:31:54] Me: Perfect. Okay, cameras. So right now we run, what, three fixed and the one on the, the balcony.
+[00:32:01] Speaker 2: And the balcony one shakes every time somebody walks up there.
+[00:32:04] Me: It does, it's, it's mounted to the rail, it's terrible. That's a whole other fix.
+[00:32:09] Speaker 1: Is that a today problem or a someday problem?
+[00:32:12] Me: Someday. For Easter I just want to add coverage, not, not fix the rail mount.
+[00:32:17] Speaker 2: What kind of coverage? 'Cause the wides are fine, it's the, the close stuff that's flat.
+[00:32:23] Me: Exactly my thinking. The stage reads flat 'cause everything's locked off and far away.
+[00:32:28] Speaker 2: Right, there's no, no intimacy. It's all from the back wall.
+[00:32:32] Me: So what I want to pitch is a handheld. Somebody down on the floor, moving, getting the, the real faces.
+[00:32:39] Speaker 1: A person walking around during the service with a camera?
+[00:32:42] Me: Down front, low, not, not in anybody's eyeline. It changes the whole feel on stream.
+[00:32:48] Speaker 2: Yes. Oh that would be so good for the, the worship sets especially.
+[00:32:53] Speaker 1: As long as they're not, you know, wandering across the front row distracting people.
+[00:32:58] Me: No, a trained op knows how to be invisible. That's the, the whole skill.
+[00:33:03] Speaker 4: And that's another volunteer. Or, are we hiring that one?
+[00:33:07] Me: I'd, I'd love a volunteer but a trained one. We'll, we'll talk about it in staffing.
+[00:33:12] Speaker 3: Does the handheld need a, a cable run or is it wireless?
+[00:33:16] Me: Good question. Wireless would be cleaner but, uh, wireless video is finicky.
+[00:33:21] Caller 2: Wireless video will fight your Wi-Fi, just so you know. I'd hard wire it if you can.
+[00:33:26] Me: Yeah, Priya's right, I'd, I'd rather run a cable than fight interference on Easter.
+[00:33:31] Speaker 3: A floor cable's a trip hazard though, we'd have to tape and ramp it.
+[00:33:35] Me: We would. Marcus, that's, that's gaff tape and a, a cable ramp at the front.
+[00:33:40] Speaker 3: I've got ramps. I'll just need to know the run path so I'm not covering an aisle.
+[00:33:45] Me: We'll map the path together once we know where the op stands.
+[00:33:49] Speaker 1: Okay, so a handheld, hard wired, trained operator. I'm good with that, it's low cost and high impact.
+[00:33:56] Me: Agreed, let's, let's call it, we're adding a handheld on the floor.
+[00:34:00] Speaker 2: Finally. I've wanted that for three years.
+[00:34:03] Me: I know you have, you remind me constantly.
+[00:34:05] Speaker 2: And I'll keep reminding you till it's, oh wait, it's done now.
+[00:34:09] Me: It's done. Well, it's decided, it's not done till somebody's holding the camera.
+[00:34:14] Speaker 4: Which is my job to find. Noted, handheld op added to the list.
+[00:34:18] Me: Yeah, and that, that leads right into recruiting. Holly, how's the camera volunteer bench looking generally?
+[00:34:25] Speaker 4: Thin. Honestly, after Christmas a couple of my regulars, uh, stepped back.
+[00:34:30] Me: So we're, we're short even before adding the handheld and the wall op.
+[00:34:34] Speaker 4: Correct. I need to actively recruit, not just shuffle the same eight people.
+[00:34:39] Me: Okay, that's, that's a real action for you then.
+[00:34:42] Speaker 4: It is. Let me take recruiting all the camera and screens volunteers as mine.
+[00:34:47] Me: Perfect. Um, how many bodies total are we talking for Easter cameras?
+[00:36:02] Me: Okay so if I count it out, for three services I'd want, what, two on the long lenses, one wide, the handheld, and someone on the wall.
+[00:36:11] Speaker 4: That's five positions. Per service.
+[00:36:14] Me: Per service, but it's the same positions each service, I just need enough people to rotate.
+[00:36:20] Speaker 1: You can't ask the same five to stand there for all three services plus Good Friday.
+[00:36:25] Me: No, that's, that's a burnout recipe. I'd want a bench of, call it ten, so people can tap out.
+[00:36:32] Speaker 4: Ten trained camera people. Aaron, I have maybe six I'd trust on a lens right now.
+[00:36:38] Me: So the gap is real. Realistically, what, we need to find three or four new ones before Easter?
+[00:36:44] Speaker 4: If I can recruit three more camera volunteers and get them trained in time, we're in okay shape.
+[00:36:50] Me: Let's write that down then, Holly's going to recruit three more camera volunteers.
+[00:36:55] Speaker 4: On it. I'll put a call out in the, the volunteer newsletter this week.
+[00:36:59] Speaker 2: I can also just, like, grab people from the worship team who aren't playing a given week.
+[00:37:05] Me: Careful though, a musician watching the clock isn't the same as a camera op watching the shot.
+[00:37:11] Speaker 2: Fair, fair.
+[00:37:12] Speaker 4: And training, that's the bottleneck, not finding warm bodies, it's getting them good.
+[00:37:17] Me: We'll do a, a training session. I'll get to that later, I don't want to lose the camera thread.
+[00:37:23] Speaker 1: Yeah, stay on cameras.
+[00:37:25] Me: So just to lock it, the plan is to add a handheld camera down on the floor, plus our normal positions and the wall op.
+[00:37:33] Speaker 1: Lock it.
+[00:37:34] Speaker 3: Hey, dumb question, where does the handheld's cable actually go back to? The, the booth?
+[00:37:40] Me: Back to the switcher at front of house. It's a, a SDI run, probably a hundred and fifty feet.
+[00:37:46] Speaker 3: A hundred fifty foot of cable taped down. Okay. I'll plan for it.
+[00:37:51] Caller 1: Aaron, if you want, we carry camera cable in the rental too, I can throw a reel on the truck.
+[00:37:57] Me: Oh, that's, Trent, that might be easier than digging ours out. Can you quote a reel of SDI with that?
+[00:38:03] Caller 1: Yeah, I'll add it to the wall quote so it's all one number.
+[00:38:08] Me: Appreciate it.
+[00:38:09] Unknown: ...is that the same quote or...
+[00:38:11] Me: Same quote, Trent's bundling it.
+[00:38:14] Speaker 1: Good, fewer invoices for finance to yell about.
+[00:38:17] Me: Ha, right.
+[00:38:19] Speaker 4: Okay while we're on where things go, can I ask about the overflow room?
+[00:38:24] Me: Yeah, go.
+[00:38:25] Speaker 4: We're expecting it full both the, the nine and eleven. Last Easter the feed in there was rough.
+[00:38:32] Me: It was. It was just a, a mirror of the stream basically, delayed and ugly.
+[00:38:37] Speaker 4: So, I guess my question is, does the overflow room need its own feed this year?
+[00:38:43] Me: That's a, that's a really good question and I don't have a clean answer yet.
+[00:38:48] Speaker 1: What's the difference, cost-wise?
+[00:38:50] Me: A dedicated feed means a clean line off the switcher, not the streaming encoder, so it's not delayed.
+[00:38:57] Speaker 1: And that costs?
+[00:38:59] Me: Cabling and a, a decoder box down there. I'd have to price it. It's not nothing.
+[00:39:05] Caller 2: If it rides the network instead, I'd want to know the, the bitrate before you point it at my switches.
+[00:39:11] Me: Yeah, Priya, that's the thing, I don't want to dump another stream on the house network Easter morning.
+[00:39:17] Speaker 4: So it's, it's open then.
+[00:39:19] Me: It's open. Let me, let me leave overflow feed as a question, I'll come back with options.
+[00:39:24] Speaker 1: Don't let it fall off the list though, a bad overflow room is the first thing people complain about.
+[00:39:30] Me: Noted, it's, it's on the list in red.
+[00:39:33] Speaker 3: Related, the overflow room's TVs, two of them are the old ones, they, they color shift.
+[00:39:39] Me: Ugh, I forgot about those. Let's, let's not open that can today, add it to facilities list.
+[00:39:45] Speaker 3: Already on mine.
+[00:39:46] Speaker 4: Okay, overflow's parked.
+[00:39:48] Me: Parked. Um, let's talk Good Friday staffing for a second, because it's different.
+[00:39:54] Speaker 1: Different how?
+[00:39:55] Me: It's one service, it's quieter, it's a, a smaller crew. But I still need front of house covered.
+[00:40:01] Speaker 1: And you're usually in the booth all weekend, you can't do Good Friday and all three Sundays.
+[00:40:07] Me: Right, I'll be fried by Sunday if I also mix Friday night myself.
+[00:40:11] Speaker 2: So who runs sound Friday?
+[00:40:13] Me: That's what I'm asking. I need a, a competent FOH person for Good Friday specifically.
+[00:40:19] Speaker 3: I can cover front of house for Good Friday.
+[00:40:22] Me: Wait, really? You, you mix?
+[00:40:24] Speaker 3: Uh, no, no, I was, I meant I could unlock and be here, I don't, I can't mix.
+[00:40:30] Me: Ha, okay, that's, that's a different offer. Facilities covering the building, not the console.
+[00:40:36] Speaker 2: I think that was you, Aaron, you said you'd take Friday so the volunteers get the Sunday rest.
+[00:40:42] Me: Oh, did I, yeah, you're right, that, that was me. I can cover front of house for Good Friday.
+[00:40:48] Speaker 1: Okay so Aaron on Friday, and then you hand off to volunteers for Sunday.
+[00:40:52] Me: Right, I'll mix Friday, and the, the bench covers the three Sundays so nobody's dead.
+[00:40:58] Speaker 4: That actually helps me, Friday's the hardest one to staff anyway.
+[00:41:02] Me: Yeah, it being me solves it. Good.
+[00:41:05] Speaker 1: Write that down clearly though because I guarantee somebody will think Marcus is mixing.
+[00:41:10] Speaker 3: Please don't let me near that board.
+[00:41:12] Me: Noted twice. Aaron on front of house Good Friday, Marcus on the building.
+[00:41:17] Speaker 3: Perfect.
+[00:41:18] Unknown: ...coffee for Friday too...
+[00:41:20] Speaker 4: We'll figure out coffee later.
+[00:41:22] Me: Okay. Big one. Renee, the choir.
+[00:41:25] Speaker 2: Yes. Okay. So this year the choir is forty, maybe forty-five people.
+[00:41:31] Speaker 1: Forty-five? Last year it was like twenty-five.
+[00:41:34] Speaker 2: Word got out, it's, it's a good problem.
+[00:41:37] Me: It's a good problem that lives entirely in my audio world, so.
+[00:41:41] Speaker 2: Right, and here's what I want to pitch back at you. I want to move the choir up onto the main stage.
+[00:41:47] Me: Onto the stage, not on the risers off to the side like always.
+[00:41:51] Speaker 2: Onto the main stage. For the big moments it needs to feel like one, one unified thing, not a side garnish.
+[00:41:58] Speaker 1: Visually I love that, especially on camera.
+[00:42:01] Me: Visually, sure. Audio, you just, you just handed me a, a monster.
+[00:42:05] Speaker 2: I know, I know, that's why I'm telling you now and not in April.
+[00:42:09] Me: I appreciate that. So the problem is mic'ing forty-five people on an open stage near the band.
+[00:42:16] Speaker 1: Can't you just use the, the hanging mics?
+[00:42:19] Me: The choir mics, yeah, but on the main stage they'll, they'll pick up the drums and everything else.
+[00:42:25] Speaker 2: What if we put them on the stage but in a, a tighter block?
+[00:42:29] Me: Tighter helps. But the real question, before anything, is inputs.
+[00:42:34] Speaker 1: Inputs?
+[00:42:35] Me: Yeah, like, do we even have enough inputs for the full choir plus the band plus everything?
+[00:42:41] Speaker 2: How many do the choir mics take?
+[00:42:43] Me: Usually three or four hanging mics, but if they're on stage I might need, like, six to get even coverage.
+[00:42:49] Speaker 1: And the console has how many?
+[00:42:51] Me: That's, that's what I have to go count. I think we're, we're tight already with the band fully loaded.
+[00:42:57] Speaker 2: So it might not physically fit.
+[00:42:59] Me: It might not. I'm not going to promise choir-on-stage until I, I count channels and run a, a stage plot.
+[00:43:06] Speaker 1: Fair. But the, the goal is main stage.
+[00:43:09] Me: The goal, and honestly the decision, is move the choir up, I just have to solve the how.
+[00:43:14] Speaker 2: Yes. Thank you. Decision is choir on main stage.
+[00:43:18] Me: Decided, choir goes on the main stage. The input count is a, a genuine open question I own.
+[00:43:24] Caller 1: Aaron, if you run short on channels, the LED package can come with a, a small stage rack, extra pre's.
+[00:43:31] Me: Oh, Trent, that's, hold that thought, that might save me. A stage box with more inputs?
+[00:43:37] Caller 1: Yeah, a digital stage box, rides your network back to the console, adds you like sixteen more.
+[00:43:43] Me: That could completely solve the, the choir input problem. Can you put that on the quote as an option?
+[00:43:49] Caller 1: As an option, yeah, so you can see the number and decide.
+[00:43:53] Me: Perfect, optional stage box line item.
+[00:43:56] Caller 2: If that stage box is network based I need to know it's on its own, uh, its own VLAN, not the house stuff.
+[00:44:03] Me: Yeah, Priya, that'd be its own dedicated audio network, totally separate, don't worry.
+[00:44:08] Caller 2: Okay. Just flag me before you plug anything into my gear.
+[00:44:12] Me: Always do.
+[00:44:13] Speaker 2: See, this is why I bring things early.
+[00:44:16] Me: You're, you're learning, it only took, what, six years.
+[00:44:19] Speaker 2: Rude. True. Rude.
+[00:44:22] Speaker 1: Okay so before we move off choir, where does it sit on stage, Renee, because that affects Marcus's floor.
+[00:44:29] Speaker 2: I'm thinking upstage center, behind the, the band on a shallow riser.
+[00:44:34] Speaker 3: Shallow riser for forty-five, that's a lot of, that's a big deck.
+[00:44:38] Me: And more weight, and more cable, and the handheld's down front of all that.
+[00:44:43] Speaker 3: We may be at the limit of the stage honestly, forty-five people plus a full band.
+[00:44:48] Me: Yeah, that's, Renee, that's another reason I can't say yes to everything till I see a, a drawn plot.
+[00:44:54] Speaker 2: But choir on stage stays, we're just arranging the furniture.
+[00:44:58] Me: Choir on stage stays, correct. The riser and the exact spot, that's, that's a plot conversation.
+[00:45:04] Speaker 3: I can build whatever you draw, just draw it early.
+[00:45:07] Me: I'll have a stage plot to you, both of you, in, let's say two weeks.
+[00:45:11] Speaker 1: Good.
+[00:45:12] Speaker 4: And the choir on stage, does that change where my camera people stand?
+[00:45:17] Me: A little. The wide shot gets prettier, the handheld has to mind the, the riser edge.
+[00:45:23] Speaker 4: Okay, so another thing for the trained ones to learn.
+[00:45:26] Me: Yep.
+[00:45:27] Speaker 2: Oh, totally off topic, did everybody see the, the daffodils came up along the front walk?
+[00:45:33] Speaker 3: Marcus's team planted those in, what, October?
+[00:45:36] Speaker 3: November. And half of them the squirrels dug up.
+[00:45:39] Speaker 2: They look amazing now though.
+[00:45:41] Speaker 1: They do. Okay, spring's coming, which means Easter's coming, which means back to the list.
+[00:45:46] Me: Ha, nice pivot, Dale.
+[00:45:48] Speaker 1: I've been in a lot of meetings.
+[00:45:50] Me: Okay, where were we, choir's decided, inputs are open, overflow's open.
+[00:45:55] Speaker 4: Camera recruiting's mine, handheld's decided.
+[00:45:58] Me: Right. Let me, let me make sure I didn't drop the, the choir monitor question.
+[00:46:03] Speaker 2: Oh, they'll need monitors on stage too.
+[00:46:05] Me: Of course they will. Forty-five people need to hear themselves.
+[00:46:09] Speaker 2: Can they use the band's wedges?
+[00:46:11] Me: No, different mix. That's, that's more outputs, which, same problem as inputs.
+[00:46:16] Speaker 1: Is that a show-stopper?
+[00:46:18] Me: No, but it's more load on the console. It all, it all stacks up, you see why I'm cautious.
+[00:46:24] Speaker 2: I do now.
+[00:46:25] Me: The stage box from Trent would help the outputs too, actually.
+[00:46:29] Caller 1: Yeah, it does both directions, inputs and outputs.
+[00:46:32] Me: Okay that, that box is looking more and more necessary.
+[00:46:36] Speaker 1: Then make sure finance sees it as, as part of the audio need, not a nice-to-have.
+[00:46:41] Me: I will, I'll put it in the, the writeup clearly.
+[00:46:44] Speaker 3: While you're all talking audio, do I need to leave the, the floor pockets open for new cable?
+[00:46:50] Me: Yes, leave the downstage pockets open, I'll know more after the plot.
+[00:46:54] Speaker 3: Got it, I'll leave them open.
+[00:46:56] Unknown: ...what about the back pockets...
+[00:46:58] Me: Back ones probably not, but leave them for now to be safe.
+[00:47:02] Speaker 4: Can I circle back one sec on the camera volunteers?
+[00:47:05] Me: Yeah.
+[00:47:06] Speaker 4: When you say trained, do you mean they come to a, a session, or shadow a service, or both?
+[00:47:12] Me: Ideally both. A classroom bit on the, the camera and the shots, then shadow a live service.
+[00:47:18] Speaker 4: Then I need to recruit them earlier than I thought, because shadowing eats weeks.
+[00:47:23] Me: Yeah, it does. So the, the recruiting of three more camera volunteers really can't wait.
+[00:47:28] Speaker 4: Understood. This week, I said, and I mean it.
+[00:47:31] Me: I believe you.
+[00:47:32] Speaker 2: She's scary when she means it.
+[00:47:34] Speaker 4: I am.
+[00:47:35] Speaker 1: Okay, what about the handheld op specifically, is that one of the three, or extra?
+[00:47:40] Me: Good catch. The handheld is a, a harder skill, so I'd, I'd pull my best current person onto that.
+[00:47:46] Speaker 4: So the three new ones backfill the easier positions.
+[00:47:49] Me: Exactly, new folks on the, the locked-off wide or the wall, veterans on the handheld.
+[00:47:54] Speaker 4: That makes sense. Okay, I've got what I need on recruiting.
+[00:47:58] Me: Great. Trent, you still with us?
+[00:48:00] Caller 1: Still here.
+[00:48:01] Me: So on your quote we've now got the extra wall panels, the SDI reel, and the optional stage box.
+[00:48:08] Caller 1: Correct, I'll itemize all three so you can mix and match.
+[00:48:12] Me: Perfect. When can I, when can I expect that?
+[00:48:15] Caller 1: I'll have it to you by, uh, end of this week, Friday latest.
+[00:48:19] Me: Friday's great, that gives me time before the, the finance cutoff.
+[00:48:23] Speaker 1: And remember, finance signs the number, not us, so get it to them early.
+[00:48:28] Me: Yep, that, that whole budget decision sits with the finance team, I'm just the messenger.
+[00:48:33] Speaker 1: Good, as long as we're clear on that.
+[00:48:35] Me: Clear.
+[00:48:36] Caller 2: Aaron, quick one from my side while I'm thinking of it.
+[00:48:39] Me: Go, Priya.
+[00:48:40] Caller 2: All these feeds, the handheld, the overflow option, the stage box, I need a, a network diagram.
+[00:48:46] Me: Yeah, you do, and you'll get one, I don't want surprises on your switches either.
+[00:48:51] Caller 2: Appreciate it. Just, before Easter, not the week of.
+[00:48:54] Me: Not the week of, agreed, I've learned that lesson.
+[00:48:57] Caller 2: Ha, we both have.
+[00:48:59] Me: Okay. Um, let me, let me look at the clock, we're, we're halfway and we haven't touched lighting.
+[00:49:05] Speaker 1: Or streaming, really, we said we'd stream everything but we haven't nailed it.
+[00:49:10] Me: Right, that's, that's a bigger conversation, let me, let me park streaming for a few minutes.
+[00:49:15] Speaker 2: Before lighting, can I just confirm the choir decision made it into the notes?
+[00:49:20] Me: It did, choir on the main stage, inputs to be solved, I've got it.
+[00:49:24] Speaker 2: Perfect, that's my big win for the day.
+[00:49:27] Speaker 1: You came for one thing.
+[00:49:28] Speaker 2: I came for one thing and I got it.
+[00:49:31] Me: Okay, handheld's decided, we're adding a handheld camera down on the floor, hard wired, veteran op.
+[00:49:37] Speaker 4: And I own recruiting the three.
+[00:49:39] Me: You own recruiting. Overflow feed's an open question, inputs for choir's an open question.
+[00:49:45] Speaker 3: And I'm leaving floor pockets open and planning cable ramps.
+[00:49:48] Me: Right. That's, that's a clean camera and stage picture. Good work, everybody.
+[00:49:53] Speaker 1: So lighting next?
+[00:49:54] Me: Lighting next, and I, I want to talk about haze, which, brace yourselves.
+[00:49:59] Speaker 3: Oh, here we go, the, the smoke fight.
+[00:50:02] Me: It's not smoke, Marcus, it's haze, and we've, we've had this argument.
+[00:50:06] Speaker 3: Every year. And every year it sets off a, a smoke detector somewhere.
+[00:50:11] Me: Once. It set it off once, three years ago, and we fixed how we do it.
+[00:50:16] Speaker 1: Let's, let's actually get into that properly rather than rush it.
+[00:50:20] Me: Agreed, let me grab water first, give me, give me thirty seconds.
+[00:50:24] Speaker 2: While he's up, did anyone eat the, the last donut, or.
+[00:50:28] Speaker 4: Marcus did.
+[00:50:29] Speaker 3: I did not, it was, it was there when I came in.
+[00:50:32] Speaker 1: It was Dale.
+[00:50:33] Speaker 1: It was me, I confess, it was the, the maple one.
+[00:50:36] Speaker 2: Unbelievable.
+[00:50:37] Me: Okay, I'm back, water acquired. Let's, let's talk about why haze matters on camera.
+[00:50:43] Speaker 1: Go.
+[00:50:44] Me: So without haze, your, your light beams are invisible, the stage looks flat on the stream.
+[00:50:50] Speaker 2: It's true, the Christmas footage without haze looked kind of, kind of dead.
+[00:50:55] Me: Right, and with a, a thin haze every beam reads, it gives the whole room depth.
+[00:51:00] Speaker 3: And it, it drifts into the, the return air and up to the detectors.
+[00:51:04] Me: That's the, the real concern, and it's a fair one, so let me explain what's changed.
+[00:51:09] Speaker 3: I'm listening, genuinely.
+[00:51:11] Me: We've got a, a water-based hazer now, not the old oil one, it, it dissipates way faster.
+[00:51:17] Speaker 3: Water based is better, I'll give you that.
+[00:51:19] Me: And we run it, we run it low and continuous, not big blasts, so it, it never spikes.
+[00:51:25] Speaker 1: Can we, can we test that before Easter so we're not guessing?
+[00:51:29] Me: We can and we should, I'd, I'd want a, a test run with the detectors watched.
+[00:51:34] Speaker 3: If you do a test and it stays clear, I'll, I'll stop fighting you on it.
+[00:51:38] Me: Deal. Let's, let's plan a haze test on a, a regular weekend first.
+[00:51:42] Speaker 1: I like that, prove it on a normal Sunday, then commit for Easter.
+[00:51:46] Me: Exactly. But my, my ask is haze on every Easter service, Friday included.
+[00:51:52] Speaker 2: Yes please, it makes the worship sets look incredible.
+[00:51:55] Speaker 1: Pending the test, I'm, I'm inclined to say yes.
+[00:51:58] Me: Pending the test. Let's, let's hold the final haze call for a couple minutes and nail the detector plan.
+[00:54:02] Speaker 3: Okay, so the detector plan, what, what does that actually look like on the day?
+[00:54:08] Me: So we, we isolate the two detectors nearest the return air, and Marcus and I watch them live.
+[00:54:14] Speaker 3: Isolate how, because I'm not, I'm not putting the building off fire watch.
+[00:54:19] Me: No, no, we keep fire watch, we just, we have a person standing under each one with eyes on it.
+[00:54:25] Speaker 3: Human fire watch, I can live with that, honestly that's how we should've done it years ago.
+[00:54:30] Me: Right, and the moment anything reads hot, we kill the hazer, it's, it's a thirty second recovery.
+[00:54:36] Speaker 1: And this is on the, the normal weekend test, not Easter.
+[00:54:40] Me: Correct, test weekend first, watched, documented, then we, we commit for Easter.
+[00:54:45] Speaker 3: And if the test is clean, like I said, I'm done fighting it.
+[00:54:49] Me: So here's, here's my formal ask then. Assuming the test passes, I want to use the haze machine for every Easter service.
+[00:54:56] Speaker 2: Every service, yes, Friday night especially, that room gets so, so moody.
+[00:55:01] Speaker 1: Alright. Pending a clean test, let's call it, haze on all four Easter services.
+[00:55:07] Speaker 3: Agreed, with the human fire watch. That's my condition.
+[00:55:11] Me: Done. Human fire watch, water based hazer, low and slow, I'll write it up.
+[00:55:16] Speaker 4: Do we need to, to budget fluid for all that, that's a lot of running time.
+[00:55:21] Me: Good question, but we're, we're actually fine. I already ordered the haze fluid last week.
+[00:55:26] Speaker 4: Oh, okay, so that's, that's handled.
+[00:55:29] Me: Yeah, two cases came in, that's, that's plenty for Friday and the three Sundays.
+[00:55:34] Speaker 1: See, this is why I like these meetings, half the stuff's already, already moving.
+[00:55:38] Me: I try. The fluid's a non issue, it's sitting in the, the AVL closet right now.
+[00:55:43] Speaker 3: Just don't, don't store it near my, my paint stuff, that corner's a mess.
+[00:55:47] Me: It's on its own shelf, Marcus, I promise.
+[00:55:50] Speaker 2: Can we, while we're on lighting, talk about the, the actual looks for the sets?
+[00:55:55] Me: Yeah, so that's, that's the big lift. I'm gonna program all the lighting cues this week.
+[00:56:01] Speaker 2: This week, wow, okay, so you'll, you'll have them ready to tweak in rehearsal?
+[00:56:06] Me: That's the plan, I'd rather build them now and, and spend rehearsal refining than, than building cold.
+[00:56:12] Speaker 2: That works for me, I'll, I'll get you the song list so you can match the moods.
+[00:56:17] Me: Perfect, the sooner the better, because once I, I start cueing I don't want to redo it.
+[00:56:22] Speaker 1: How many, how many cues are we talking across the service?
+[00:56:25] Me: For a full Easter set, probably, I don't know, forty, fifty looks, with, with transitions.
+[00:56:31] Speaker 1: That's a lot of, of clicking.
+[00:56:33] Me: It is, that's why I'm, I'm blocking out the whole week for it. No volunteers on that part, it's just me.
+[00:56:39] Speaker 4: Speaking of volunteers, I, I still owe you camera people, I haven't forgotten.
+[00:56:43] Me: I know you're on it, Holly, we'll, we'll circle back to staffing in a bit.
+[00:56:47] Speaker 1: Okay, let me, let me pivot to the stream, because I've been thinking about it.
+[00:56:52] Me: Go ahead.
+[00:56:53] Speaker 1: Earlier we, we said stream everything, Friday and all three Sundays, right?
+[00:56:58] Me: That was, that was the plan at the top of the meeting, yeah.
+[00:57:01] Speaker 1: I'm, I'm not sure that's smart anymore, now that I, I see the volunteer load.
+[00:57:06] Me: Say more.
+[00:57:07] Speaker 1: We're stretched on, on camera directors, we've got overflow, we've got choir, it's, it's a lot.
+[00:57:13] Speaker 2: It is a lot. Honestly the nine and the, the early services are mostly, mostly regulars anyway.
+[00:57:19] Speaker 1: Right, the eleven is our, our biggest room and our best, our best shot at new people online.
+[00:57:25] Me: So you're, you're thinking consolidate the stream to one service?
+[00:57:29] Speaker 1: Yeah. I want to say, we'll only stream the eleven o'clock service, and do it really well.
+[00:57:35] Me: Honestly that, that takes a huge load off my booth. One director, one, one locked plan.
+[00:57:41] Speaker 2: And we can, we can still record the others for, for archive, just not, not live.
+[00:57:46] Me: Correct, recording's cheap, it's the, the live directing that eats people.
+[00:57:50] Speaker 1: So let's, let's make that the decision. Stream the eleven only, record the rest.
+[00:57:55] Me: I'm, I'm fully on board with that. It, it reverses what we said earlier but it's the right call.
+[00:58:01] Speaker 4: That saves me like, like six volunteer slots, thank you.
+[00:58:05] Speaker 1: Good. Everyone okay with, with eleven only for the live stream? Dale's, uh, I'm calling it.
+[00:58:11] Speaker 2: Yes.
+[00:58:11] Speaker 3: Fine by me.
+[00:58:12] Me: Locked. Eleven o'clock is the, the only live service. Friday night, do we stream that?
+[00:58:18] Speaker 1: Record it, don't, don't stream it. Same logic.
+[00:58:21] Me: Got it, Friday is record only.
+[00:58:23] Speaker 2: Wait, I thought, I thought earlier Trent was excited about, about streaming all of them in 4K?
+[00:58:29] Caller 1: I mean, I'm, I'm always excited, but one really good stream beats four, four rough ones.
+[00:58:34] Me: Preach, Trent.
+[00:58:35] Caller 1: The LED wall will, will look great on camera either way, so you're, you're good there.
+[00:58:40] Me: Speaking of which, Priya, you still, you still with us on the call?
+[00:58:44] Caller 2: I'm here, I've been, been muted and multitasking, sorry, what do you need?
+[00:58:49] Me: So we, we trimmed the live stream down to one service, the eleven.
+[00:58:53] Caller 2: Oh, that, that actually makes my life easier on the network side.
+[00:58:57] Me: Well, hold that thought, because I still, I still want to push the quality up on that one.
+[00:59:02] Caller 2: Okay, define push the quality up.
+[00:59:05] Me: Higher bitrate, maybe, maybe 1080p sixty, which means more, more upload headroom.
+[00:59:11] Caller 2: Right, our current, our current up pipe is pretty, pretty tight on Sunday mornings.
+[00:59:16] Me: That's what I figured. Can you, can you bump up the upload bandwidth before Easter?
+[00:59:21] Caller 2: I can, I'd, I'd need to call the ISP and, and provision a temporary tier bump.
+[00:59:27] Me: How much lead time on that?
+[00:59:29] Caller 2: Usually, usually two to three weeks, so if I start now we're, we're fine.
+[00:59:34] Me: Perfect, can you own that? Bump the, the upload bandwidth, confirm it's live before Easter weekend.
+[00:59:40] Caller 2: Yep, I'll, I'll put in the request this week and send you the, the confirmed numbers.
+[00:59:45] Speaker 1: What's, what's the cost on a temporary bump?
+[00:59:48] Caller 2: Not much, it's, it's usually a prorated thing, maybe a couple hundred for the, the period.
+[00:59:53] Speaker 1: That's fine, that's, that's well within what we talked about.
+[00:59:57] Me: Okay, and Priya, one more, related thing.
+[01:00:00] Caller 2: Go for it.
+[01:00:01] Me: I want to, before the day, I want to test the stream encoder with the network team.
+[01:00:06] Caller 2: Yes, please, don't, don't surprise my firewall on Easter morning.
+[01:00:10] Me: Ha, exactly. So I'll, I'll own a full encoder test on your, your upgraded pipe.
+[01:00:16] Caller 2: Let's, let's do it a week out so we have, have time to fix anything weird.
+[01:00:21] Me: A week out works. I'll, I'll run the encoder at full Easter settings and we watch it together.
+[01:00:27] Caller 2: Perfect, loop in, loop in whoever's on my team that day, I'll, I'll name someone.
+[01:00:32] Me: Will do. So that's two things on me, program the cues this week, test the encoder a week out.
+[01:00:38] Speaker 1: Good, I like, I like having owners on all this.
+[01:00:41] Caller 2: Hey, I, I might drop in a few minutes, another call, but I've got my, my two items.
+[01:00:46] Me: Thanks Priya, bandwidth bump and the encoder test, we're good.
+[01:00:50] Caller 2: Talk soon.
+[01:00:51] Speaker 2: Wait, so if we're, if we're recording all four services, plus the stream recording, that's, that's a ton of video.
+[01:00:58] Me: It, it really is. Full res multicam for, for four services adds up fast.
+[01:01:03] Speaker 2: Like, where are we going to store all that footage?
+[01:01:06] Me: That's, that's a genuinely good question and I, I don't have a clean answer yet.
+[01:01:11] Speaker 1: Don't we, don't we have the, the cloud backup thing, the, the carbon light?
+[01:01:15] Me: Carbonite, yeah, but that's, that's for documents, it'd, it'd choke on terabytes of video.
+[01:01:21] Speaker 3: What about the, the NAS in the server closet?
+[01:01:24] Me: It's, it's pretty full already, I'd have to, to check how much runway we've got.
+[01:01:29] Speaker 2: So that's, that's unresolved then?
+[01:01:31] Me: It's unresolved. I'll, I'll flag it as an open item, we need a, a real storage plan.
+[01:01:36] Speaker 1: Can you, can you figure out options and bring numbers next time?
+[01:01:40] Me: Yeah, but I, I want to park it as a question for now, I don't want to, to guess at cost.
+[01:01:45] Speaker 1: Fair, park it, but don't, don't let it slip, we'll regret it in May.
+[01:01:49] Me: Noted. Storage for Easter footage, open question, I own, I own finding options.
+[01:01:55] Speaker 4: Could we just, just delete the ones we don't use after a month?
+[01:01:59] Me: Maybe, but Renee usually wants, wants clips for, for socials for a while.
+[01:02:04] Speaker 2: I do, I pull, I pull reels for weeks after, so don't, don't nuke them too fast.
+[01:02:09] Me: Right, which is, which is exactly why we need a real plan, not just, just delete.
+[01:02:14] Speaker 1: Okay, parked. Good. What else on, on the lighting and stream side?
+[01:02:19] Me: Um, let me, let me recap the haze so Marcus is comfortable.
+[01:02:23] Speaker 3: I'm, I'm comfortable, you, you ordered water based, human fire watch, test weekend first.
+[01:02:28] Me: Right, and pending that test, haze runs on, on all four Easter services.
+[01:02:33] Speaker 3: Yep. And the fluid's, the fluid's already here, so no, no scramble.
+[01:02:37] Me: Correct, no scramble.
+[01:02:39] Speaker 5: Hey sorry, I, I had to move rooms, the, the kids wing was loud, can you hear me?
+[01:02:44] Me: Yeah Renee, you're, you're coming through fine now.
+[01:02:47] Speaker 5: Great. So I, I caught the, the storage thing, I really do need those clips, just, just saying again.
+[01:02:53] Me: Heard loud and clear, it's, it's on the list as an open question.
+[01:02:57] Speaker 5: And you, you want my song list so you can program cues, I'll, I'll get it to you.
+[01:03:02] Me: Yes please, by, by end of week if you can, so I can, can build around it.
+[01:03:07] Speaker 5: End of week, okay, I'll, I'll lock the, the Easter set and send it.
+[01:03:11] Speaker 1: While we have, have Renee back, the choir on main stage, we, we settled that right?
+[01:03:16] Speaker 5: We did, choir moves to, to the main stage, I'm, I'm thrilled about it.
+[01:03:21] Me: We did settle it, the, the open thing there was, was console inputs, I still need to count.
+[01:03:26] Speaker 5: Right, the choir mics, how, how many channels does that eat?
+[01:03:30] Me: That's, that's the question I can't, can't answer till I, I look at the console. It might be tight.
+[01:03:36] Speaker 1: Is that a, a new console issue or an old one?
+[01:03:39] Me: Could be, could be either, I need to see if we, we have enough physical inputs free.
+[01:03:44] Speaker 5: Let me know if, if it's a problem, I can, I can thin the choir mic count if I have to.
+[01:03:49] Me: Appreciate that, I'll, I'll confirm the input count and tell you if we're short.
+[01:03:54] Speaker 1: Okay. Back to, back to the drone idea somebody threw out earlier, are we, are we doing that?
+[01:04:00] Me: The, the parking lot drone shot? That was, that was a what if, I don't think we, we committed.
+[01:04:05] Speaker 3: Please no, I've got, I've got enough to manage without a, a drone over the cars.
+[01:04:10] Speaker 1: Yeah, let's, let's leave it as a someday idea, not Easter.
+[01:04:14] Me: Agreed, drone's, drone's off the table for now, it was never really on it.
+[01:04:19] Speaker 2: Good, because we, we only have one stream now anyway, keep it, keep it simple.
+[01:04:23] Me: Exactly, simple and, and excellent on the eleven, that's the, the whole strategy.
+[01:04:28] Speaker 1: Let me, let me just double check I've got the stream decision right.
+[01:04:32] Me: Go.
+[01:04:33] Speaker 1: We are not, not going live on all three Sundays, just the eleven.
+[01:04:37] Me: Correct. Earlier someone said, let's go live on all three Easter services, and we, we walked that back.
+[01:04:43] Speaker 1: Right, I just, I want it crystal clear in the notes so nobody, nobody shows up expecting four streams.
+[01:04:49] Me: It'll be crystal clear. Eleven o'clock, live. Everything else, recorded for, for archive.
+[01:04:55] Speaker 4: And that, that frees up the volunteers I was worried about, which, thank you.
+[01:04:59] Me: It does, Holly, your camera recruiting just, just got easier.
+[01:05:03] Speaker 4: I'll still, I'll still need bodies for the handheld and the, the overflow feed though.
+[01:05:07] Me: True, we, we still have cameras rolling even if we're not, not streaming them all.
+[01:05:12] Speaker 4: Right, recording still needs, needs operators, okay, I'll, I'll plan for that.
+[01:05:17] Speaker 1: How, how many camera volunteers total now?
+[01:05:20] Me: For the, the eleven stream, probably four, plus, plus a couple for the recorded services.
+[01:05:26] Speaker 4: So six ish, across, across the morning, I can, I can find six.
+[01:05:30] Me: You're, you're a miracle worker.
+[01:05:32] Speaker 4: I'm a, a texter with no shame, that's, that's the secret.
+[01:05:35] Speaker 1: Whatever works. Okay, I think, I think we've got lighting and stream mostly nailed.
+[01:05:41] Me: We do. Let me, let me just restate my action items so I, I don't lose them.
+[01:05:46] Speaker 1: Please.
+[01:05:47] Me: One, program all the lighting cues this week. Two, test the stream encoder with the network team a week out.
+[01:05:54] Speaker 1: Good.
+[01:05:55] Me: Three, count console inputs for the, the choir. Four, find storage options for the footage.
+[01:06:01] Speaker 2: And the, the haze test on a normal weekend, that's, that's yours too.
+[01:06:05] Me: Right, five, the, the haze test with fire watch. Thanks, Renee.
+[01:06:09] Speaker 5: That was me actually, I, I think the app's, the app's confused which of us is talking.
+[01:06:14] Me: Ha, probably, you, you keep splitting into two people on my screen.
+[01:06:18] Speaker 5: Story of my, my life. Anyway yes, haze test, on your list.
+[01:06:22] Speaker 1: Priya's got bandwidth, and, and the encoder test is a joint thing with her team.
+[01:06:27] Me: Correct, I, I run the encoder test, her team watches the, the network side.
+[01:06:32] Speaker 3: And I'm, I'm on fire watch for the haze test and, and Easter.
+[01:06:36] Me: You and a, a helper per detector, yeah.
+[01:06:39] Speaker 3: I'll, I'll grab two of my facilities guys, they, they like standing around anyway.
+[01:06:43] Me: Perfect. Honestly I, I feel good about where lighting and stream landed.
+[01:06:48] Speaker 1: Me too. Big, big change dropping to, to one stream, but the right one.
+[01:06:53] Me: The right one. Quality over, over quantity.
+[01:06:56] Speaker 2: Can I, can I say, I'm really glad we, we moved the choir to main stage, it's gonna look amazing.
+[01:07:02] Me: It is, assuming, assuming I can fit the, the inputs, which I'll confirm.
+[01:07:06] Speaker 1: Okay, let's, let's take two minutes and then hit intercom and, and ProPresenter.
+[01:07:11] Me: Sounds good, I need to, to refill the water again, hydration is, is a journey.
+[01:07:16] Speaker 3: Grab me a, a coffee if you're, if you're going by the kitchen.
+[01:07:19] Me: I'm not your, your barista, Marcus, but, but fine, black right?
+[01:07:23] Speaker 3: Black, like my, my soul before nine am.
+[01:07:26] Speaker 4: Can you grab, grab the sign in sheet off the printer while you're up?
+[01:07:30] Me: Sure, printer by, by the kitchen?
+[01:07:32] Speaker 4: Yeah, the, the volunteer one, I need it for the, the next part.
+[01:07:36] Me: Got it. Okay, back in two, don't, don't make any decisions without me.
+[01:07:41] Speaker 1: No promises.
+[01:07:42] Speaker 2: We'll, we'll vote to give you a raise while you're gone.
+[01:07:45] Me: Now that, that I'll allow.
+[01:07:47] Speaker 1: That's, that's a finance decision, not, not mine, sorry Aaron.
+[01:07:51] Me: Worth a, a shot. Alright, two minutes.
+[01:07:54] Speaker 5: I'll, I'll stay on the line, just, just gonna mute.
+[01:07:57] Speaker 1: While he's gone, Holly, how, how are we on the Good Friday front of house crew?
+[01:08:02] Speaker 4: Thin, honestly, Friday night's, Friday night's always hard to staff.
+[01:08:06] Speaker 1: Marcus, didn't you, didn't you say you'd cover the lobby doors Friday?
+[01:08:10] Speaker 4: No, that, that was me who said that, Marcus is on, on fire watch.
+[01:08:14] Speaker 1: Right, sorry, you, you said lobby doors, my, my mistake.
+[01:08:18] Speaker 4: All good, I, I'll do lobby and, and greeters Friday, Marcus is, is haze watch.
+[01:08:23] Speaker 3: Can't, can't be two places, I'm, I'm on the detectors.
+[01:08:26] Speaker 1: Understood. Okay, I'll, I'll stop reassigning people to the, the wrong jobs.
+[01:08:31] Speaker 2: It's a, it's a gift you have, Dale.
+[01:08:33] Speaker 1: My, my spiritual gift is confident wrongness.
+[01:08:36] Speaker 4: At least you, you confess it.
+[01:08:38] Me: Okay I'm back, coffee delivered, sheet acquired, raise denied, I, I heard.
+[01:08:43] Speaker 3: Thanks for the, the coffee.
+[01:08:45] Me: Don't say I, I never do anything for you. Where, where were we?
+[01:08:49] Speaker 1: We were about to, to hit intercom and belt packs.
+[01:08:52] Me: Right, the, the clear calm system, we are, we are short on packs for Easter.
+[01:08:57] Speaker 1: How short?
+[01:08:58] Me: With, with handheld and choir and the, the extra camera positions, pretty short.
+[01:09:03] Speaker 4: How many, how many headsets are we talking about?
+[01:09:06] Me: Let me, let me count positions before I, I throw out a number, give me a sec.
+[01:09:11] Speaker 2: While you count, I, I really do want to lock my, my song list today if we can.
+[01:09:16] Me: We said end of week, that, that's fine, but sooner helps my, my cue programming.
+[01:09:21] Speaker 2: Okay, I'll, I'll try to get it to you by, by Thursday.
+[01:09:24] Me: Thursday's great, that, that gives me the weekend to, to build looks.
+[01:09:28] Speaker 1: Is Thursday, is Thursday realistic with, with your band leads?
+[01:09:32] Speaker 2: It is, we, we rehearsed most of it already, I just need, need to finalize order.
+[01:09:37] Me: Perfect, Thursday song list, then I, I program over the weekend.
+[01:09:41] Speaker 1: Good. Okay Aaron, you, you got that belt pack count yet?
+[01:09:45] Me: Almost, I think we, we need about four more packs, but let me, let me verify positions next.
+[01:12:04] Me: Okay, I, I counted it out, front of house talkback, two cameras, handheld, choir cue, and a spare.
+[01:12:11] Speaker 1: So what's, what's the shortfall land at?
+[01:12:14] Me: We, we need to order four more belt packs for Easter, that gets every position covered with one floater.
+[01:12:20] Speaker 4: Four, four headsets, is that, is that a lot of money?
+[01:12:24] Me: The packs themselves aren't, aren't bad, it's the, the beltpack plus the headset together.
+[01:12:29] Speaker 3: Do we, do we own enough of the actual headsets, or just the, the packs?
+[01:12:33] Me: Good question Marcus, I, I think we have spare headsets, it's the packs we're short.
+[01:12:38] Speaker 1: Can you, can you confirm that before you buy? I don't wanna double order.
+[01:12:42] Me: Yeah, I'll, I'll check the road case tonight, but I'm fairly sure it's packs only.
+[01:12:47] Speaker 2: Is this the, the clear calm stuff that cuts out by the, the stage left wing?
+[01:12:51] Me: That's, that's the one, and more packs won't fix the dropout, that's a, a different gremlin.
+[01:12:56] Speaker 1: Let's, let's not open that can today, just, just get the packs.
+[01:13:00] Me: Agreed, so the, the decision is four more belt packs, I'll, I'll place the order for the belt packs this week.
+[01:13:06] Speaker 1: Do it, that's, that's a yes from me, put it on the production line item.
+[01:13:11] Me: Will do, I'll, I'll place the order once I verify the headset count tonight.
+[01:13:16] Speaker 4: And, and those come in before Easter, right? We're, we're not cutting it close?
+[01:13:20] Me: If I order this week we're, we're fine, standard shipping's like, like five days.
+[01:13:25] Speaker 3: Famous, famous last words, Aaron.
+[01:13:27] Me: I, I know, I know, I'll expedite if it, if it even looks slow.
+[01:13:31] Speaker 1: Okay. Priya, you, you still with us on the, the line?
+[01:13:35] Caller 2: Yep, I'm, I'm here, bandwidth bump is noted, I'll get that scheduled with the, the carrier.
+[01:13:41] Me: Thanks Priya, and, and I'll test the encoder once you, you confirm the new ceiling.
+[01:13:46] Caller 2: Sounds good, just, just give me a day or two lead so I, I can open the ticket.
+[01:13:51] Me: Will do. Okay, let's, let's talk pro presenter, because that's, that's a chunk of work.
+[01:13:56] Speaker 2: Oh, the, the slides, yeah, three services plus Friday is a, is a lot of playlists.
+[01:14:01] Me: It is, so I'll, I'll build out the pro presenter playlists, one per service, so nothing cross-contaminates.
+[01:14:07] Speaker 1: Why, why separate ones, can't you, can't you just reuse the Sunday file?
+[01:14:11] Me: You can, but then somebody, somebody edits the eleven and it, it breaks the nine.
+[01:14:16] Speaker 2: Yeah, we, we got burned on that at Christmas, remember the, the blank bumper.
+[01:14:20] Me: I, I remember, that's exactly why, separate playlists, locked once they're, they're approved.
+[01:14:25] Speaker 1: Okay, that's, that's your call, you, you know the software.
+[01:14:28] Me: It's just, just safer, I'll build them off the, the song list, which brings us back to Renee.
+[01:14:33] Speaker 2: Right, the, the song order, I said Thursday but, but honestly let me breathe.
+[01:14:38] Speaker 1: Hang on, I, I thought we just said Thursday ten minutes ago.
+[01:14:42] Speaker 2: We did, but I, I just remembered the, the kids choir piece isn't, isn't confirmed.
+[01:14:47] Me: Okay so, so what do you actually need, Renee, realistically?
+[01:14:51] Speaker 2: Give me, give me till next week, I'll, I'll finalize the song list by next Tuesday.
+[01:14:56] Me: Tuesday, okay, that, that still works for me, barely, but it, it works.
+[01:15:00] Speaker 1: So not, not Thursday anymore, it's, it's Tuesday, I just wanna, wanna write it down right.
+[01:15:05] Speaker 2: Tuesday, yes, sorry, Thursday was, was me being optimistic.
+[01:15:09] Me: Tuesday final song list, then I, I build the playlists Tuesday night, Wednesday.
+[01:15:14] Speaker 1: Good, that, that's clean, everybody, everybody got that on their, their calendars?
+[01:15:18] Speaker 4: Got it, Tuesday.
+[01:15:20] Me: And once, once that's locked, Renee, no, no swapping songs on, on Saturday, please.
+[01:15:25] Speaker 2: I, I make no promises, but, but I'll try.
+[01:15:28] Me: That's, that's the most honest thing anyone's said all meeting.
+[01:15:31] Speaker 1: Okay. Holly, let's, let's hit volunteers, because that's, that's the big one.
+[01:15:36] Speaker 4: Yeah, so, so with the extra camera and the, the choir, I need more bodies than normal.
+[01:15:41] Me: How, how many net new are we talking?
+[01:15:44] Speaker 4: Probably, probably six to eight across all, all the services if we, we stagger them.
+[01:15:49] Speaker 1: Can you, can you recruit that in time?
+[01:15:52] Speaker 4: If I start, start this week, yeah, Easter people, people actually want to serve Easter.
+[01:15:57] Me: True, it's, it's the one weekend the sign-up sheet, sheet fills itself.
+[01:16:01] Speaker 4: The, the harder part is training, half, half of them have never touched a camera.
+[01:16:06] Me: Right, so we, we should schedule a volunteer training the week before, not, not day-of.
+[01:16:11] Speaker 4: Agreed, day-of, day-of training is how, how you get a shaky handheld on, on the livestream.
+[01:16:16] Speaker 1: When, when exactly, which, which night?
+[01:16:19] Speaker 4: Let's, let's say the Tuesday or, or Wednesday before, evening, after, after people are off work.
+[01:16:24] Me: I can, I can do either, I just need, need the room and the cameras set.
+[01:16:28] Speaker 3: The, the main room's open that, that whole week, far as I, I know.
+[01:16:32] Speaker 4: Then let's, let's pencil Wednesday the week before, I'll, I'll run the sign-up and the training.
+[01:16:37] Me: Perfect, and I'll, I'll handle the actual camera and, and intercom walk-through that night.
+[01:16:42] Speaker 1: Good, so Holly schedules it, Aaron, Aaron teaches it.
+[01:16:46] Speaker 4: Division, division of labor, I, I like it.
+[01:16:49] Me: Just, just make sure the belt packs are, are in by then so they, they can practice on real gear.
+[01:16:54] Speaker 4: Oh that's, that's a good point, don't, don't train them on gear that's, that's still in a box.
+[01:16:59] Me: Exactly, so, so the order really does need to go, go out this week, no, no slipping.
+[01:17:04] Speaker 1: Noted, noted, Aaron orders, trains on real, real stuff, we, we got it.
+[01:17:09] Speaker 4: What, what about call times, when do I tell, tell people to show up?
+[01:17:13] Me: For, for AVL crew, early, we, we need setup and, and soundcheck before anybody's in the lobby.
+[01:17:19] Speaker 4: Give, give me a number I can, I can put on the sign-up.
+[01:17:22] Me: For the, the tech team the call time is two hours before the first service, no, no exceptions Easter.
+[01:17:28] Speaker 4: Two hours, okay, that's, that's earlier than normal, people, people are gonna grumble.
+[01:17:33] Me: They, they can grumble, or, or we can have a camera un-racked when, when the countdown hits.
+[01:17:38] Speaker 1: Two hours it is, that, that's the standard for a, a weekend like this.
+[01:17:42] Speaker 2: Does, does that apply to the band too, or, or just tech?
+[01:17:46] Me: Band's, band's a little different, you, you do your own soundcheck window, but, but close to it.
+[01:17:51] Speaker 2: Okay, I'll, I'll tell the musicians an hour and a half, work backward from, from your check.
+[01:17:56] Me: That works, as long as, as long as I have audio bodies there at the two hour mark.
+[01:18:01] Speaker 4: So just to, to be clear for my sheet, tech two hours, band, band ninety minutes.
+[01:18:06] Me: Correct, two, two and a half if, if anybody wants to be a hero.
+[01:18:10] Speaker 3: Nobody, nobody wants to be that, that much of a hero at six a.m.
+[01:18:14] Me: Fair, fair, two hours, that's the, the line.
+[01:18:17] Speaker 1: Okay Marcus, parking, parking and facilities, what, what do you need from us?
+[01:18:22] Speaker 3: Mostly, mostly I need to know numbers so I, I can staff the, the lot.
+[01:18:26] Speaker 4: Easter, Easter we usually, usually overflow the main lot by, by second service.
+[01:18:31] Speaker 3: Right, so I'll, I'll have my team set out the parking barricades that morning to, to route the overflow.
+[01:18:37] Speaker 1: What, what time does that need to happen?
+[01:18:40] Speaker 3: Before, before the first wave, so, so same deal, couple hours out.
+[01:18:44] Me: That, that lines up with our, our two hour tech call, so the lot's, it's ready when, when crew arrives.
+[01:18:50] Speaker 3: Good, less, less chance of a volunteer, volunteer circling for parking and, and showing up late.
+[01:18:55] Speaker 4: Oh that's, that's real, half, half my no-shows are, are actually parking victims.
+[01:18:59] Speaker 3: So barricades out early, I'll, I'll put two guys on, on cones and, and directing.
+[01:19:04] Speaker 1: Perfect, that, that covers the lot.
+[01:19:07] Me: Hey while, while we're on it, can, can we reserve a few spots for, for the camera volunteers?
+[01:19:12] Speaker 3: Yeah, I'll, I'll cone off, off the front row by the, the side door for, for crew.
+[01:19:16] Speaker 4: Bless you, Marcus, that, that'll save me, me so many angry texts.
+[01:19:20] Speaker 3: Just, just get me the headcount by, by that week.
+[01:19:23] Speaker 4: Will do, I'll, I'll send you the crew list once the, the sign-up closes.
+[01:19:28] Speaker 1: Okay, I, I think we're, we're actually in good shape, let me, let me recap.
+[01:19:33] Me: Go for it, I, I wanna make sure I, I wrote the same things you, you did.
+[01:19:37] Speaker 1: Three Sunday services plus Good Friday, we, we stream only the eleven.
+[01:19:42] Me: Correct, only the, the eleven, that, that reversed our earlier everything-streamed plan.
+[01:19:47] Speaker 1: Right, I, I almost forgot we flipped that, good, good catch.
+[01:19:51] Me: It, it was getting silly, four, four separate streams for, for that audience.
+[01:19:56] Speaker 1: Extra LED panels rented, Trent, Trent's sending the quote, finance, finance signs the budget.
+[01:20:02] Me: Yep, the, the panel spend is, is finance's call, not, not ours to approve.
+[01:20:07] Speaker 1: Handheld camera added on the, the floor, Holly recruits, recruits the operators.
+[01:20:12] Speaker 4: On it, six, six to eight bodies, training Wednesday the, the week before.
+[01:20:17] Speaker 1: Choir moves to the, the main stage, haze every, every service.
+[01:20:21] Me: And the, the haze fluid's already here, I, I ordered that a while back, so that's, that's handled.
+[01:20:27] Speaker 1: Right, you, you said that, not a, not a new task, good.
+[01:20:31] Me: Correct, already, already in the closet, don't, don't let anyone re-order it.
+[01:20:35] Speaker 1: Belt packs, four, four more, Aaron orders this, this week.
+[01:20:39] Me: After, after I confirm headsets tonight, but yes, I, I own that.
+[01:20:43] Speaker 1: Pro presenter, three, three playlists plus Friday, Aaron, Aaron builds those.
+[01:20:48] Me: Off, off Renee's final song list, which, which is Tuesday now, not Thursday.
+[01:20:53] Speaker 2: Tuesday, I, I said Tuesday, hold, hold me to it.
+[01:20:56] Speaker 1: Oh I, I will. Bandwidth bump, Priya, encoder test, Aaron.
+[01:21:01] Caller 2: Yep, I'll, I'll open the carrier ticket this, this week, give Aaron the, the new number.
+[01:21:06] Me: And I, I test the encoder against it before, before Palm Sunday so there's, there's margin.
+[01:21:11] Speaker 1: Call times, two hours tech, ninety minutes band, barricades, barricades out early.
+[01:21:17] Speaker 3: Lot's, lot's covered, crew spots coned, I, I got it.
+[01:21:21] Speaker 1: Did, did I miss anything? Anybody, anybody got an open item?
+[01:21:25] Me: One, one thing's still, still open in my head, the, the overflow room feed.
+[01:21:30] Speaker 4: Oh right, do, do we even have a, a reliable feed to the, the overflow space?
+[01:21:35] Me: That's, that's the question, last, last Easter it froze twice, I, I never fully solved it.
+[01:21:41] Caller 2: Is, is that feed going over the, the network or, or a hard line?
+[01:21:45] Me: Little, little of both, honestly, and, and that's probably the, the problem, Priya.
+[01:21:50] Caller 2: Let's, let's look at that separately, I, I don't wanna guess on, on the call.
+[01:21:54] Me: Agreed, I'll, I'll flag it, we, we don't solve the overflow feed today.
+[01:21:59] Speaker 1: Fine, fine, it's, it's on the list but, but not for this meeting.
+[01:22:03] Me: And, and storage, where, where all that recorded footage lands is, is still unanswered too.
+[01:22:08] Speaker 1: The, the carbon light backup thing you, you mentioned?
+[01:22:11] Me: Carbonite's the, the offsite, but I meant the, the local drives, four services fills them fast.
+[01:22:17] Caller 2: How, how much raw are you, you capturing per service?
+[01:22:20] Me: A lot, multicam, multicam ISO plus the, the program, it, it adds up quick.
+[01:22:25] Caller 2: Yeah we, we should size that before Easter, I, I don't have a number for you today.
+[01:22:30] Me: Same, same bucket as the overflow feed, open, open question, we, we follow up.
+[01:22:35] Speaker 1: Okay, two, two open items, overflow feed and, and storage, both, both parked.
+[01:22:40] Me: Parked, not, not forgotten, I'll, I'll keep them on the production doc.
+[01:22:44] Speaker 2: Can, can I ask one thing before we, we close?
+[01:22:47] Speaker 1: Go, go ahead.
+[01:22:48] Speaker 2: The, the choir inputs, do we, do we actually have enough console channels for, for all of them?
+[01:22:54] Me: That, that's a real question, I, I haven't counted choir mics against, against the board yet.
+[01:22:59] Speaker 2: Because if, if we're short, that, that changes my, my whole mic plan.
+[01:23:03] Me: It, it might, let me, let me do an input count before I, I promise anything.
+[01:23:08] Speaker 1: So that, that's open too, console, console inputs for the choir.
+[01:23:12] Me: Open, yeah, I, I don't wanna hand-wave the, the channel count, that, that bites you live.
+[01:23:17] Speaker 2: Thank you, I, I just, I didn't wanna find out, out on Saturday.
+[01:23:21] Me: No, no, good to raise it, I'll, I'll get you a real answer with, with the song list.
+[01:23:26] Speaker 1: Alright, anything, anything from the, the callers before I, I let people go?
+[01:23:31] Caller 2: Nothing, nothing from me, just, just loop me on the, the overflow and storage.
+[01:23:35] Me: Will, will do Priya, thanks for, for hanging on the whole, the whole call.
+[01:23:39] Caller 2: Of course, talk, talk soon.
+[01:23:41] Speaker 1: Trent, Trent dropped off earlier I, I think, but we, we have his quote coming.
+[01:23:46] Me: Yeah, he, he said he'd, he'd email the panel numbers, I'll, I'll forward it to finance.
+[01:23:51] Speaker 1: Perfect. Okay, this, this was actually a, a productive hour and a half.
+[01:23:56] Speaker 4: Minus, minus the ten minutes Dale, Dale reassigned everyone, everyone wrong.
+[01:24:00] Speaker 1: My, my gift, remember, confident, confident wrongness.
+[01:24:04] Speaker 3: It, it does keep meetings, meetings exciting.
+[01:24:07] Me: Hey before, before we scatter, one, one more time on the, the critical path.
+[01:24:11] Speaker 1: Go.
+[01:24:12] Me: Renee, song list Tuesday, me, belt pack order this week and, and playlists after Tuesday.
+[01:24:18] Speaker 2: Tuesday, got, got it.
+[01:24:20] Me: Holly, recruiting now, training, training Wednesday the week before, Marcus, barricades, barricades early.
+[01:24:26] Speaker 4: Copy.
+[01:24:27] Speaker 3: Copy.
+[01:24:28] Me: And, and Priya's got bandwidth, I, I test the encoder, that's, that's the chain.
+[01:24:33] Speaker 1: That's, that's a plan I can, I can actually believe in.
+[01:24:36] Speaker 2: Don't, don't jinx it, Dale.
+[01:24:38] Speaker 1: Too, too late, I, I already jinxed it, that's, that's also a spiritual gift.
+[01:24:43] Me: On that, on that note, I, I think we're done, thank, thank you everybody.
+[01:24:47] Speaker 4: Thanks, Aaron, and, and thanks for the, the coffee run.
+[01:24:50] Speaker 3: Yeah, the, the coffee bought you, you some goodwill.
+[01:24:53] Me: It's, it's the only reason anyone, anyone still comes to my, my meetings.
+[01:24:57] Speaker 1: Not, not true, we, we also come for the, the free haze fluid.
+[01:25:01] Me: Which, which is already ordered, do, do not touch it.
+[01:25:04] Speaker 1: Already, already ordered, I, I heard you the, the first three times.
+[01:25:08] Me: Just, just making sure it, it lands in the minutes right.
+[01:25:11] Speaker 2: Okay, I'm, I'm gonna hop, I've, I've got rehearsal.
+[01:25:14] Speaker 1: Go, go, thanks Renee, Tuesday, remember.
+[01:25:17] Speaker 2: Tuesday, bye, everybody.
+[01:25:19] Speaker 4: Bye.
+[01:25:20] Me: Alright, I'll, I'll send notes out tonight after I, I count those headsets.
+[01:25:25] Speaker 1: Perfect, thanks, thanks Aaron, good, good meeting.
+[01:25:28] Speaker 3: See, see you out there.
+[01:25:30] Me: See you, everybody, we, we got this.

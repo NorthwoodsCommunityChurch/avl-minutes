@@ -1,0 +1,65 @@
+{
+ "id": "m11",
+ "title": "Holiday Building Schedule Update",
+ "type": "information share",
+ "minutes": 20,
+ "sources": [
+  "room"
+ ],
+ "control": true,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Dana",
+   "role": "facilities manager"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Marcus",
+   "role": "operations director"
+  }
+ ],
+ "decisions": [],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Send the holiday production schedule to the AVL volunteer team",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll get the holiday schedule out to the volunteer team"
+  },
+  {
+   "id": "a2",
+   "task": "Call the cleaning vendor to confirm the week after Christmas",
+   "owner": "Marcus",
+   "due": "Monday",
+   "evidence": "I'll call them Monday to lock in the week after Christmas"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Whether there will be a New Year's Eve service this year",
+   "evidence": "are we even doing a New Year's Eve service this year"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "label_noise",
+   "claim": "Dana will call the cleaning vendor on Monday",
+   "evidence": "I'll call them Monday to lock in the week after Christmas"
+  },
+  {
+   "id": "t2",
+   "kind": "reversed",
+   "claim": "The whole building will be closed the entire week of Thanksgiving",
+   "evidence": "we're just going to close the whole building that whole week"
+  }
+ ]
+}

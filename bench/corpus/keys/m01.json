@@ -1,0 +1,76 @@
+{
+ "id": "m01",
+ "title": "Weekend production check-in",
+ "type": "production meeting",
+ "minutes": 10,
+ "sources": [
+  "room"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Mark",
+   "role": "tech lead / volunteer coordinator"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Jenna",
+   "role": "ProPresenter operator"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Push the livestream start time to 9:25.",
+   "evidence": "let's push the stream start to nine twenty five"
+  },
+  {
+   "id": "d2",
+   "text": "Use the dimmer lighting preset for the opening song.",
+   "evidence": "we'll run the dimmer preset for the opening song"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Reprogram the lighting cue before the Thursday rehearsal.",
+   "owner": "Me",
+   "due": "Thursday",
+   "evidence": "I'll reprogram that cue before Thursday rehearsal"
+  },
+  {
+   "id": "a2",
+   "task": "Rebuild the announcement slides in ProPresenter.",
+   "owner": "Speaker 2",
+   "due": null,
+   "evidence": "I'll rebuild the announcement slides this week"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Will the new camera cable arrive before Sunday?",
+   "evidence": "will the new camera cable get here before Sunday"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "hypothetical",
+   "claim": "The team decided to switch the whole band to in-ear monitors.",
+   "evidence": "What if we switched the whole band to in ears"
+  },
+  {
+   "id": "t2",
+   "kind": "reversed",
+   "claim": "A second confidence monitor will be added on stage.",
+   "evidence": "Yeah let's add the second confidence monitor on stage"
+  }
+ ]
+}

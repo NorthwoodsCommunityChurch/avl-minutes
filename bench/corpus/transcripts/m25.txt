@@ -1,0 +1,673 @@
+Next-year AVL roadmap planning
+Monday, January 4, 2027 · 3:30 PM · 60 min · Room
+Transcribed by Minutes. Audio was not recorded.
+
+[00:00:04] Speaker 1: Is this thing recording already? The little dot thing is red.
+[00:00:07] Me: Yeah, I hit record on the minutes app. It'll do the whole transcript thing.
+[00:00:11] Speaker 2: Oh good, because I am not taking notes today. My hand's still cramped from last meeting.
+[00:00:16] Speaker 1: That was a long one.
+[00:00:18] Me: Alright, well while we wait for Jen, how was everybody's weekend? Second service felt a little rough on my end.
+[00:00:25] Speaker 3: Rough how? I thought it sounded fine from where I was.
+[00:00:29] Me: The uh, the vocal mix got away from me on the last song. Monitors were fighting me.
+[00:00:34] Speaker 1: I noticed the kick drum was kind of boomy but honestly nobody in the congregation is gonna care.
+[00:00:40] Speaker 2: My kids said it was too loud, but my kids say everything is too loud.
+[00:00:44] Speaker 3: How old are they now?
+[00:00:46] Speaker 2: Seven and ten. The ten-year-old wore the noise canceling headphones the whole time like a little airport worker.
+[00:00:52] Speaker 1: That's hilarious.
+[00:00:54] Unknown: We should get him on the volunteer team.
+[00:00:56] Speaker 2: Right? Child labor.
+[00:00:58] Me: Hey, we take all ages. No, I'm kidding, don't put that in the minutes.
+[00:01:03] Speaker 3: Too late, it's recording.
+[00:01:05] Me: Oh no.
+[00:01:07] Speaker 1: So did anybody watch the game last night? That overtime was unreal.
+[00:01:12] Speaker 3: I fell asleep in the third quarter, don't tell me.
+[00:01:15] Speaker 1: I won't spoil it. But you missed a good one.
+[00:01:18] Speaker 2: I don't follow sports but even I heard people yelling in my neighborhood.
+[00:01:23] Unknown: It was a good one.
+[00:01:25] Speaker 4: Sorry, sorry I'm late. The parking lot is a disaster with the preschool drop-off.
+[00:01:30] Me: No worries, Jen, we were just doing small talk and complaining about my vocal mix.
+[00:01:35] Speaker 4: Oh the last song? Yeah I heard that. We'll fix it.
+[00:01:38] Me: Thanks. Appreciate the vote of confidence.
+[00:01:41] Speaker 4: Anytime. Did somebody grab coffee or is that just for you, Dave?
+[00:01:45] Speaker 1: There's a whole pot over there, I'm not an animal.
+[00:01:48] Speaker 4: Okay good.
+[00:01:50] Me: Alright, let's, um, let's actually get going because Megan's got a hard stop at the top of the hour.
+[00:01:56] Speaker 2: I do, yeah. Eleven sharp, I've got the facilities walkthrough.
+[00:02:00] Me: Right. So the whole point of today is the next-year AVL roadmap. I want us to walk out with a rough plan for what we're tackling.
+[00:02:08] Speaker 2: And a budget number. That's the part I actually need.
+[00:02:11] Me: And a budget number, yes. We'll get there at the end once we know the scope.
+[00:02:16] Speaker 1: Can we put the big stuff first? I don't want to run out of time and never talk about cameras.
+[00:02:21] Me: That's exactly where I was gonna start, actually. Let me lay out the whole list first and then we dig in.
+[00:02:27] Speaker 4: Go for it.
+[00:02:28] Me: So the big rocks for next year, as I see them. Cameras. The LED wall. The audio console. ProPresenter standardization across all the booth machines. Intercom. And then volunteers and training.
+[00:02:42] Speaker 3: That's a lot of big rocks.
+[00:02:44] Me: It is. We won't do all of it, that's why we're prioritizing. Some of this is this-year, some is maybe-later.
+[00:02:51] Speaker 2: As long as the number stays sane I'm listening.
+[00:02:54] Me: Understood. Okay, cameras first since Dave's been chomping at the bit.
+[00:02:58] Speaker 1: I have been. Our cameras are, what, eight years old now?
+[00:03:02] Me: The main three are, yeah. The two Panasonic PTZ things on the sides are newer.
+[00:03:07] Speaker 1: Right, those are fine. I'm talking about the three main broadcast cams. The ones on the tripods and the back platform.
+[00:03:13] Speaker 4: Those are the ones that look kind of grainy on the livestream, right?
+[00:03:17] Speaker 1: Exactly. In low light they fall apart. When Jen takes the house lights down for worship they get super noisy.
+[00:03:24] Speaker 4: Yeah I always feel bad about that, like it looks like I'm ruining the stream.
+[00:03:28] Me: It's not you, it's the sensors. They're just old.
+[00:03:31] Speaker 2: So what are we actually proposing here? New cameras, how many?
+[00:03:35] Me: My recommendation is we're going to replace all three main cameras this year. Not piecemeal, all three at once so they match.
+[00:03:43] Speaker 1: Please. Matching is huge. Right now I'm color-matching three different generations and it's a nightmare in the switcher.
+[00:03:50] Speaker 2: Why does matching matter? Genuine question, I'm not a camera person.
+[00:03:54] Speaker 1: So when we cut between camera one and camera two on the stream, if they're different models the color and the, the skin tones jump. It looks cheap.
+[00:04:02] Speaker 4: It really does. You can totally see it.
+[00:04:05] Speaker 2: Okay, that makes sense. I'll trust you on that.
+[00:04:08] Me: And if we buy all three together we usually get a better deal from the vendor anyway. Bundle pricing.
+[00:04:14] Speaker 1: Plus the same lenses, same batteries, same everything. Spares become way easier.
+[00:04:19] Speaker 2: Alright. I'm not going to fight you on the cameras. They're clearly the oldest thing we've got.
+[00:04:24] Me: So are we agreed? Three main cameras, replaced this year, as one project.
+[00:04:29] Speaker 1: Yes. A hundred percent yes.
+[00:04:31] Speaker 2: Yeah, I'm good with that as the direction. The actual dollar amount I need to see, but the plan, yes.
+[00:04:37] Me: Great. That's our first real decision then. Three main cameras this year.
+[00:04:42] Speaker 3: Do we know roughly what that costs? Ballpark?
+[00:04:45] Me: That's the thing, I don't have a hard number yet. It depends on what tier we go.
+[00:04:50] Speaker 1: Could be anywhere from like twelve to twenty-five a camera depending on the model.
+[00:04:55] Speaker 2: That's a huge range, Dave.
+[00:04:57] Speaker 1: I know, I know. We need quotes.
+[00:04:59] Me: Right, so that's on me. I'll pull together three camera quotes by the end of January so we have real numbers before budget season closes.
+[00:05:07] Speaker 2: End of January works. I don't finalize the budget ask until February anyway.
+[00:05:12] Me: Perfect. I'll reach out to our usual rep and then get a couple comparison bids.
+[00:05:17] Speaker 1: Can I sit in on those calls? I know the specs better than anybody.
+[00:05:21] Me: Yeah, absolutely, I'll loop you in on the vendor stuff.
+[00:05:24] Speaker 4: What camera brands are we even looking at? Just curious.
+[00:05:28] Speaker 1: Probably the Sony line, maybe the Black Magic ones for cost. But I want to actually test before we commit.
+[00:05:34] Speaker 4: Black magic, that sounds like a wrestling move.
+[00:05:37] Speaker 1: It kind of is, when the firmware updates break everything.
+[00:05:40] Speaker 2: Ha. Okay.
+[00:05:42] Me: We can do a demo unit if the vendor offers one. I'd rather not buy blind.
+[00:05:47] Speaker 1: A demo would be great. Bring one in for a weekend and see how it handles the worship lighting.
+[00:05:52] Speaker 4: I can pull the lights down into the worship look so you see worst case.
+[00:05:56] Speaker 1: That's exactly what I want to see.
+[00:05:58] Me: Okay, so cameras are in good shape as a plan. Quotes by end of January, Dave helps evaluate, maybe a demo weekend.
+[00:06:05] Speaker 3: Should we be worried about the recording format? Like do new cameras change how the stream encoder works?
+[00:06:11] Me: Good question. A little, but our ultra ex switcher can handle the newer inputs, so I think we're okay there.
+[00:06:18] Speaker 1: The ultrix is fine. It's actually the one piece of gear I'm not worried about.
+[00:06:22] Speaker 3: Okay, just making sure. I don't want a surprise.
+[00:06:25] Me: No, it's a fair thing to flag. But we're covered on the routing side.
+[00:06:29] Speaker 2: See, this is the stuff I don't understand but I'm glad someone does.
+[00:06:33] Speaker 1: That's why they pay us the big bucks.
+[00:06:35] Speaker 2: Do they though?
+[00:06:36] Speaker 1: No. No they do not.
+[00:06:38] Me: Moving on before this becomes a salary negotiation.
+[00:06:41] Speaker 4: Ha, worth a shot.
+[00:06:43] Me: One more camera thing while we're here. The tripods themselves are kind of shot too. The fluid heads are getting sticky.
+[00:06:50] Speaker 1: Oh yeah, camera two's head drifts when you let go. The operator has to hold it.
+[00:06:55] Speaker 4: That's why that shot always creeps down during the sermon.
+[00:06:58] Speaker 1: Exactly that.
+[00:07:00] Me: So do we fold tripods into the camera project or keep it separate?
+[00:07:04] Speaker 2: If it's small, fold it in. I'd rather have one line item than five.
+[00:07:08] Me: Fair. I'll include a couple of new heads in the quote then, keep it as one camera package.
+[00:07:14] Speaker 1: Good. A good head is like two grand though, just so nobody faints at the number.
+[00:07:19] Speaker 2: Noted. I will prepare to faint later.
+[00:07:22] Me: I'll make sure it's itemized so you can see what's what.
+[00:07:25] Speaker 3: While we're talking cameras, are we ever gonna get a camera in the balcony? People keep asking.
+[00:07:31] Me: That's more of a wish-list thing. I don't want to bite that off this year with everything else going on.
+[00:07:37] Speaker 1: Yeah, the balcony cam is a someday project. We'd need to run cable all the way up there.
+[00:07:42] Speaker 3: Okay, just passing along what I hear from the volunteers.
+[00:07:45] Me: And I appreciate it, keep passing it along. It goes on the list, just not the top of it.
+[00:07:51] Speaker 2: Can we keep the wish list separate from the actual budget? Otherwise it balloons.
+[00:07:56] Me: Yep, I keep a parking lot doc for the someday stuff. Balcony cam's already on it.
+[00:08:01] Speaker 4: You have a parking lot doc? You're so organized.
+[00:08:04] Me: Don't look too closely, it's held together with tape.
+[00:08:07] Speaker 1: Aren't we all.
+[00:08:09] Speaker 2: Okay so cameras are settled as a direction. Three main cams this year, Aaron gets quotes by end of January. What's next on your list?
+[00:08:17] Me: Next is the LED wall, which is the big scary one. But before that, let me just confirm I've got the camera piece written down right.
+[00:08:24] Speaker 3: You're the one recording, you should be fine.
+[00:08:27] Me: True. Okay. So cameras, locked as a plan. Everybody good before we switch topics?
+[00:08:33] Speaker 1: Good here.
+[00:08:34] Speaker 4: Good.
+[00:08:35] Speaker 2: Good, and watching the clock.
+[00:08:37] Me: Watching the clock, understood. Um, actually, Tyler, before we leave cameras, do we have enough camera volunteers to even run three?
+[00:08:45] Speaker 3: That's a good question. Right now I've got maybe four people comfortable on a broadcast cam.
+[00:08:50] Speaker 1: We need like six to have real depth. People get sick, people travel.
+[00:08:55] Speaker 3: I know. Recruiting camera folks is harder than audio for some reason.
+[00:08:59] Speaker 4: Because audio people think they're cool.
+[00:09:01] Speaker 1: Hey.
+[00:09:02] Speaker 4: I'm kidding. Mostly.
+[00:09:04] Me: We'll get to volunteers at the end, it's its own topic. But good to flag that new cameras need operators.
+[00:09:10] Speaker 3: Right, there's no point buying nice cameras if nobody's behind them.
+[00:09:14] Me: Agreed. Okay. Let me grab water and then we hit the LED wall.
+[00:09:18] Speaker 2: Take your time. Well, not too much time.
+[00:09:21] Speaker 1: While he's up, did everyone see the thing facilities sent about the roof?
+[00:09:25] Speaker 2: Oh, the leak over the east stairwell? Yeah, they're on it.
+[00:09:29] Speaker 4: There's a leak? Near our storage room?
+[00:09:31] Speaker 2: No, other side of the building. Your gear's safe.
+[00:09:34] Speaker 4: Okay, phew, because we've got road cases stacked in there.
+[00:09:38] Speaker 1: We really need better storage, that room is a fire hazard.
+[00:09:41] Speaker 3: Everything around here is a fire hazard according to you.
+[00:09:44] Speaker 1: Because it's true.
+[00:09:46] Me: Okay, I'm back. What'd I miss?
+[00:09:48] Speaker 2: Dave declared the storage room a fire hazard. Normal Tuesday.
+[00:09:52] Me: Sounds right. Okay, LED wall. This is the one that's gonna eat the budget if we're not careful.
+[00:09:58] Speaker 1: Here we go.
+[00:10:00] Me: So the current wall, the panels are, honestly they're end of life. We've got dead pixels in the lower left that I can't fix.
+[00:10:07] Speaker 4: Yeah, there's that whole dark patch. I've been hiding it with the lower-third graphics.
+[00:10:12] Me: Which is clever but it's a band-aid. We're out of spare panels and the model's discontinued.
+[00:10:17] Speaker 2: Discontinued meaning we can't just buy more of the same?
+[00:10:20] Me: Correct. So if more panels die, we're stuck.
+[00:10:23] Speaker 1: And they will die. They always die right before Christmas.
+[00:10:27] Speaker 4: Don't manifest that.
+[00:10:28] Speaker 1: I'm just saying, historically.
+[00:10:30] Me: So the question with the wall isn't really if, it's when, and how much. It's a much bigger number than cameras.
+[00:10:37] Speaker 2: How much bigger are we talking?
+[00:10:39] Me: Let me walk through it before we panic about the number. There's a few ways to scope it.
+[00:10:44] Speaker 2: Okay, walk me through it.
+[00:10:46] Me: So the wall is basically broken into the panels, the processor, and the mounting structure.
+[00:10:51] Speaker 4: And the processor is the, that's the thing pro presenter talks to, right?
+[00:10:55] Me: Right, the processor takes our signal and drives the panels. Ours is old but it technically still works.
+[00:11:01] Speaker 1: For now.
+[00:11:02] Me: For now, yes, thank you Dave. So we could potentially keep the processor and just replace panels, or do the whole thing.
+[00:11:09] Speaker 2: And which is smarter?
+[00:11:11] Me: That's the real debate. Let me lay out both and then we decide on timing.
+[00:11:16] Speaker 3: I'm curious about timing actually, because fall is always chaos with the ministry launches.
+[00:11:21] Me: That's a great point and it's exactly the timing question I want to get into.
+[00:11:25] Speaker 4: Fall or bust, huh.
+[00:11:27] Me: Something like that. Let me pull up the panel specs real quick.
+[00:11:31] Speaker 2: And remember, eleven o'clock.
+[00:11:33] Me: I know, I know. We're good on time, I promise.
+[00:11:36] Speaker 1: Famous last words.
+[00:11:38] Me: Okay, so here's the current panel layout and where the dead section is.
+[00:11:42] Speaker 4: Oh wow, seeing it mapped out it's worse than I thought.
+[00:11:46] Speaker 1: Told you.
+[00:11:47] Me: Yeah, so this lower left quadrant is the problem area, and it's spreading.
+[00:11:52] Speaker 2: Spreading like the roof leak. Great.
+[00:11:55] Me: Different kind of leak, but yeah. So let's talk about when this lands on the calendar.
+[00:12:01] Me: My recommendation, and I want to be clear this is a recommendation, is we aim so the LED wall replacement lands in the fall.
+[00:12:09] Speaker 2: Fall of next year, not this coming spring.
+[00:12:12] Me: Right. The quotes and the procurement take months, and I don't want to rush panels in during the busy season.
+[00:12:18] Speaker 3: See, fall is when ministry launches hit though, like I said. That's a full building.
+[00:12:23] Me: It is, but the install window before fall is actually the quiet stretch, August.
+[00:12:28] Speaker 4: So you'd install late summer and have it running for the fall kickoff.
+[00:12:32] Me: Exactly. The wall's live before the launches, not during.
+[00:12:36] Speaker 2: Okay, that logic I follow. So we're saying the wall is a fall project.
+[00:12:41] Me: Yes. Can we agree the wall replacement targets fall, and the cameras are the earlier item?
+[00:12:46] Speaker 2: I'm good with that. Fall for the wall.
+[00:12:49] Speaker 1: Fall for the wall. That rhymes, I like it.
+[00:12:52] Speaker 4: Don't make it a slogan.
+[00:12:53] Speaker 1: Too late.
+[00:12:55] Me: Great, so that's settled on timing. Now the harder question underneath it.
+[00:13:00] Speaker 2: Which is the money.
+[00:13:01] Me: Which is partly money, but actually the thing that keeps me up is power.
+[00:13:06] Speaker 2: Power like electrical.
+[00:13:08] Me: Yeah. The new panels are brighter and they're a different draw. And honestly, can the current power even handle that new wall.
+[00:13:15] Speaker 1: Ooh. That's a facilities question.
+[00:13:17] Me: It's a facilities question and a us question. I genuinely don't know the answer yet.
+[00:13:22] Speaker 4: What's on that circuit right now?
+[00:13:24] Me: The current wall, some of the stage lighting, I'd have to trace it. It's not documented well.
+[00:13:30] Speaker 2: Define not documented well.
+[00:13:32] Me: Meaning the panel labeling in the electrical room is from like three renovations ago.
+[00:13:37] Speaker 1: So it says "stage" on everything.
+[00:13:39] Me: Basically. So before we commit to a panel model, I need to know the draw and whether we need an electrician to pull a new circuit.
+[00:13:46] Speaker 2: And that could be a real cost on top of the panels.
+[00:13:49] Me: It could. That's the unknown I can't close today. I want to flag it as open.
+[00:13:54] Speaker 3: Should we get an electrician to look before we even quote panels?
+[00:13:58] Me: Probably, but I don't want to pay for an assessment until we know the panel spec, because the spec drives the draw.
+[00:14:04] Speaker 2: Chicken and egg.
+[00:14:05] Me: A little. Let me keep the power question on the open list and we circle back once I have a candidate panel.
+[00:14:11] Speaker 4: Makes sense.
+[00:14:13] Speaker 2: Okay. The power thing is officially a question mark. Noted.
+[00:14:17] Me: Noted and unresolved, yes.
+[00:14:19] Speaker 1: Can I raise the thing nobody wants to raise?
+[00:14:22] Me: Go for it.
+[00:14:23] Speaker 1: If we're redoing the wall, do we move the booth to the back wall while we're at it.
+[00:14:28] Speaker 4: Oh, here we go.
+[00:14:29] Speaker 2: Wait, why would we move the booth?
+[00:14:31] Speaker 1: Because right now we're front of house but we're off to the side, and the operators can't actually see the wall straight on.
+[00:14:38] Me: It's a fair point. The sightline from the current booth is bad for anyone running the wall.
+[00:14:43] Speaker 4: I mean, I run pro presenter half blind back there, it's true.
+[00:14:47] Speaker 2: But moving the booth is, that's a construction project. That's not an AVL line item.
+[00:14:52] Me: Right, and that's why I don't want to decide it today. But Dave's not wrong to put it on the table.
+[00:14:57] Speaker 1: I'm just saying, if there's ever a moment to move it, it's when we're already tearing into the wall.
+[00:15:02] Speaker 3: Where would it even go on the back wall? There's doors back there.
+[00:15:06] Speaker 1: There's a spot center-ish, you'd lose a row of seats maybe.
+[00:15:10] Speaker 2: Losing seats is its own conversation with the elders.
+[00:15:13] Me: See, this is why I want to park it. The booth relocation is a real question but it's bigger than this room.
+[00:15:19] Speaker 2: Agreed. Let's not decide booth location today.
+[00:15:22] Me: So I'm writing it down as open, not decided. Do we move the booth, big question mark.
+[00:15:27] Speaker 4: Big asterisk.
+[00:15:28] Speaker 1: Fine, but when we do the wall, don't say I didn't bring it up.
+[00:15:32] Me: It's on the record, Dave. Officially on the record.
+[00:15:35] Speaker 2: Okay. Back to the wall itself. What do you actually need to move forward?
+[00:15:40] Me: First thing I need is accurate dimensions of the existing wall opening. The old drawings are wrong.
+[00:15:46] Speaker 1: I can do that. I'll measure the wall and send over the dimensions.
+[00:15:50] Me: Perfect, that unblocks the quoting.
+[00:15:52] Speaker 1: You want just the active area or the whole frame including the mount?
+[00:15:56] Me: Both, if you can. The frame matters for the structure piece.
+[00:16:00] Speaker 1: Copy. I'll get you the active area and the full frame.
+[00:16:03] Speaker 2: When can you get that?
+[00:16:05] Speaker 1: Uh, I can grab a ladder this week. It's a ten minute job, I just keep forgetting.
+[00:16:10] Me: This week is great. No hard date but soon, because I can't quote panels without it.
+[00:16:15] Speaker 4: Measure twice, order once.
+[00:16:17] Speaker 1: Yeah yeah.
+[00:16:18] Me: So with dimensions in hand, I can go to the two vendors we like and get—
+[00:16:22] Speaker 3: Are we using the same vendor as—
+[00:16:23] Speaker 1: —depends if they still carry—
+[00:16:24] Speaker 4: —the processor though, right?
+[00:16:26] Me: Hang on, one at a time. Tyler, what was your question?
+[00:16:29] Speaker 3: Just whether we're using the same vendor that did the original install.
+[00:16:33] Me: Maybe. They did fine work but they were slow. I'll get at least two quotes regardless.
+[00:16:38] Speaker 2: Two quotes minimum on anything this size, please.
+[00:16:41] Me: Always. For a number like this I'd want two, maybe three.
+[00:16:45] Speaker 4: And Jen's question was about the processor.
+[00:16:48] Speaker 4: That was me. Do the new panels force us to replace the processor, or can we keep ours?
+[00:16:53] Me: That's the keep-versus-replace debate from earlier. Honestly it depends on the panel pitch we pick.
+[00:16:58] Speaker 2: In English?
+[00:16:59] Me: If we go with a finer resolution panel, our old processor probably can't drive it. We'd have to replace it too.
+[00:17:05] Speaker 1: So the cheap option might force the expensive option.
+[00:17:08] Me: Sometimes, yeah. That's why I want the quotes to show both scenarios, keep the processor and replace it.
+[00:17:14] Speaker 2: Okay. I like that you're making the vendors show their work.
+[00:17:17] Me: It's the only way to compare apples to apples on a wall.
+[00:17:21] Speaker 4: What pitch do we even have now?
+[00:17:23] Me: We're at a pretty coarse pitch, which is fine from the seats but it looks rough on the livestream close-ups.
+[00:17:29] Speaker 1: Yeah, the camera eats it alive. You can see every pixel.
+[00:17:33] Speaker 4: The moiré thing.
+[00:17:34] Me: Right, the moiré. A finer pitch would help the broadcast look a lot.
+[00:17:39] Speaker 2: So the wall is also a livestream quality thing, not just a dead-panel thing.
+[00:17:43] Me: Exactly. It's dead panels, it's brightness, and it's how it reads on camera.
+[00:17:48] Speaker 2: Alright. That actually helps me justify the number upstairs.
+[00:17:52] Me: Good, because the number's not small. But fall timing gives us runway to budget it right.
+[00:17:57] Speaker 3: And runway to argue about the booth.
+[00:17:59] Speaker 1: Thank you, Tyler.
+[00:18:00] Speaker 2: Nobody's arguing about the booth today.
+[00:18:03] Me: The booth is parked. Moving on, but not forgetting.
+[00:18:06] Speaker 4: Story of this department.
+[00:18:08] Me: Ha. Okay, so to recap the wall before we shift gears.
+[00:18:12] Me: Timing is fall. Dave gets me dimensions. I get two or three quotes showing keep-or-replace on the processor.
+[00:18:19] Speaker 2: And the power question stays open until you have a panel spec.
+[00:18:22] Me: Correct. Power's the big unknown.
+[00:18:25] Speaker 1: And the booth.
+[00:18:26] Me: And the booth is open, yes, Dave, I wrote it down, I promise.
+[00:18:30] Speaker 2: Can I ask a dumb question about the power thing real quick?
+[00:18:33] Me: There are no dumb questions.
+[00:18:35] Speaker 2: If the power can't handle it, is that a we-call-an-electrician thing or a we-call-the-city thing?
+[00:18:41] Me: Probably just an electrician pulling a dedicated circuit. It's unlikely we need a service upgrade.
+[00:18:46] Speaker 2: Unlikely but not impossible.
+[00:18:48] Me: Unlikely but not impossible. That's the honest answer. I won't know until we trace the load.
+[00:18:53] Speaker 1: And the panel labels say "stage."
+[00:18:55] Me: And the panel labels say "stage," right.
+[00:18:57] Speaker 4: We should really relabel that room someday.
+[00:19:00] Me: Add it to the list of someday things.
+[00:19:02] Speaker 3: The list is getting long.
+[00:19:04] Me: The list is always long. That's the job.
+[00:19:07] Speaker 2: Okay, before we move off the wall, what's the ballpark? Give me a range, not a number.
+[00:19:12] Me: If we keep the processor, lower. If we replace everything including structure, it's a meaningfully bigger range.
+[00:19:18] Speaker 2: I need something I can put in a sentence to the board.
+[00:19:21] Me: Let me get the quotes before I give you a figure I'd regret. I don't want to anchor you wrong.
+[00:19:26] Speaker 2: Fair. I'd rather you be right than fast.
+[00:19:29] Speaker 1: Write that down, that's a first.
+[00:19:31] Speaker 2: Watch it.
+[00:19:32] Me: Okay. So the wall is scoped as much as it can be today. Good conversation.
+[00:19:37] Speaker 4: Can we take like thirty seconds before the next thing? My coffee's gone cold.
+[00:19:41] Me: Yeah, quick breather. We've still got audio, pro presenter, intercom, volunteers, and budget to get through.
+[00:19:47] Speaker 2: In forty minutes.
+[00:19:48] Me: In forty minutes. We can do it.
+[00:19:50] Speaker 1: Famous last words, part two.
+[00:19:52] Speaker 4: Okay, somebody did bring donuts, right? Because I was promised donuts.
+[00:19:56] Speaker 3: They're in the kitchen, I think Marcus brought them.
+[00:19:59] Speaker 4: Bless Marcus.
+[00:20:01] Speaker 1: Marcus always comes through on donuts.
+[00:20:03] Speaker 2: Can somebody grab the box so we don't lose ten minutes to a donut migration?
+[00:20:07] Speaker 3: On it. Don't start audio without me.
+[00:20:10] Me: We'll wait for you, go.
+[00:20:12] Speaker 4: Grab napkins too.
+[00:20:14] Speaker 1: So while he's gone, how bad is the audio console situation really.
+[00:20:18] Me: Bad enough that it's the next thing on the list. Let's wait for Tyler though, he had thoughts last time.
+[00:20:24] Speaker 2: Did he? Tyler has thoughts on audio?
+[00:20:26] Me: He had opinions about the monitor mixes, which, you know, everyone does.
+[00:20:30] Speaker 4: Everyone's a monitor engineer until they have to do it.
+[00:20:33] Speaker 1: Facts.
+[00:20:34] Speaker 2: Okay, while we wait, remind me, the console is how old?
+[00:20:38] Me: Old enough that parts are getting hard. Let me pull the actual service date when Tyler's back.
+[00:20:43] Speaker 3: I'm back, I got the donuts, nobody panic.
+[00:20:46] Speaker 4: My hero.
+[00:20:47] Me: Great, everybody caffeinated and sugared? Let's talk about the console.
+[00:24:02] Me: Okay, the console. This is the thirty-two channel desk we put in back in, what, 2015? And it's been great, but we're starting to lose channels.
+[00:24:11] Speaker 1: We lost input fourteen two Sundays ago mid service. I had to re patch the acoustic guitar on the fly.
+[00:24:18] Speaker 2: I remember that, the guitar dropped out during the second song.
+[00:24:21] Speaker 1: That was me scrambling. Nobody in the room knew but I aged about five years.
+[00:24:26] Speaker 3: Is that the same channel that was crackling at rehearsal?
+[00:24:29] Speaker 1: Same one. It comes and goes, which is almost worse than dead.
+[00:24:33] Me: And that's the thing. The cue sis side of the room is fine, the processing is fine, it's the surface itself that's aging out.
+[00:24:41] Speaker 2: So when the board hears audio console, are they hearing a repair or a replacement?
+[00:24:46] Me: Honestly at this point a replacement. We can keep nursing it but we're throwing money at a desk that's end of life.
+[00:24:53] Speaker 4: What are we even looking at for a new one? Ballpark.
+[00:24:56] Me: A comparable digital desk, probably somewhere in the mid teens. I'd want to spec it properly before I commit to a number.
+[00:25:03] Speaker 2: Mid teens meaning fifteen thousand ish.
+[00:25:05] Me: Ballpark, yeah. Could be a little under if we stay in the same product family.
+[00:25:10] Speaker 1: And staying in the same family means the stage boxes carry over, which is huge. We don't have to re pull anything.
+[00:25:17] Me: Right, that's the big savings. The snake and the stage boxes are newer than the surface.
+[00:25:22] Speaker 3: Wait, so the expensive part isn't even the part that's broken?
+[00:25:25] Me: Correct. The broken part is actually the cheaper part to swap, relatively.
+[00:25:30] Speaker 4: That almost never happens in this building.
+[00:25:32] Speaker 1: Enjoy it while it lasts.
+[00:25:34] Speaker 2: Okay, so help me think about timing. The cameras are end of January for quotes, the wall is fall. Where does a console sit?
+[00:25:42] Me: The console I'd actually argue is the most urgent of the three, because it's the thing that can fail live on a Sunday.
+[00:25:49] Speaker 1: It's the one with the clock on it. The cameras work, the wall works. The desk is the one actively dying.
+[00:25:56] Speaker 2: That's a fair point. A camera that's a little soft is not the same as a console that drops a channel in front of eight hundred people.
+[00:26:04] Speaker 4: Yeah, people forgive a slightly fuzzy picture. They do not forgive the worship leader going silent.
+[00:26:10] Speaker 3: Can confirm, the guitar thing got mentioned in like three group texts.
+[00:26:14] Me: So my recommendation is we move the console up. I think we do it early, not wait.
+[00:26:19] Speaker 2: When you say early, what does early mean in a budget sentence.
+[00:26:23] Me: I mean let's go ahead and replace the audio console this year, first half, before we even get to the wall.
+[00:26:29] Speaker 2: Okay. I can get behind that. If it's the thing most likely to embarrass us on a Sunday, it goes first.
+[00:26:36] Speaker 1: Finally. I've been saying the desk for a year.
+[00:26:39] Speaker 4: He really has, to be fair to him.
+[00:26:41] Me: You have. So we're agreed, console this year, front of the line.
+[00:26:45] Speaker 2: Agreed, pending the actual number. Get me the spec and I'll make room.
+[00:26:49] Speaker 3: Does the new desk fix the monitor mix stuff or is that a separate fight?
+[00:26:53] Me: Separate fight, but a newer desk makes the monitor routing way less painful, yeah.
+[00:26:58] Speaker 1: We could finally do proper personal mixes for the band without the band mutiny.
+[00:27:02] Speaker 4: The drummer would weep actual tears of joy.
+[00:27:05] Speaker 3: The drummer weeps about everything though.
+[00:27:07] Speaker 1: That's a drummer feature, not a bug.
+[00:27:09] Me: Okay, parking the drummer. Console's in for this year, I'll bring a real quote to the next round.
+[00:27:15] Speaker 2: Good. Moving on, because we've got a clock too.
+[00:27:18] Me: Right, pro presenter. This one's less money and more just, we need everybody on the same version.
+[00:27:24] Speaker 4: Please. The version mismatch has bitten us like four times.
+[00:27:28] Me: Explain for Megan, because this is the kind of thing that sounds small and isn't.
+[00:27:32] Speaker 4: So right now the booth machine is on one version, the lobby machine is on an older one, and the two backstage laptops are on something even older.
+[00:27:40] Speaker 2: And that matters because.
+[00:27:42] Speaker 4: Because when I build a show on the new version and open it on an old one, the formatting breaks. Lyrics shift, backgrounds disappear, it's a mess.
+[00:27:50] Speaker 1: We had the Easter thing where the song slides went blank on the lobby screen.
+[00:27:54] Speaker 4: That was exactly this. Different pro presenter versions not talking to each other.
+[00:27:58] Me: So the fix is we standardize on pro presenter seven on every machine. Same version, same everything, across the board.
+[00:28:05] Speaker 2: Is that a cost or is that free?
+[00:28:07] Me: It's licensing, so there's some cost, but it's small compared to everything else we're talking about. Few hundred dollars range.
+[00:28:14] Speaker 4: And honestly worth it just to stop losing my mind on Sunday mornings.
+[00:28:18] Speaker 2: Few hundred I don't even need to take to the board. Do it.
+[00:28:21] Me: Great, so that's decided, everybody on seven. Jen, can you own getting the machines up to date?
+[00:28:27] Speaker 4: Yeah. Although, heads up, I already updated pro presenter on the main booth machine last week, so that one's done.
+[00:28:33] Me: Oh, perfect. So that's the important one already off the list.
+[00:28:36] Speaker 4: Right, the booth was the priority since that's what drives the main screens. So that's handled.
+[00:28:41] Me: Okay, so really we're talking the lobby machine and the two backstage laptops.
+[00:28:45] Speaker 4: Correct. I'll get the licenses updated on the rest of the machines, probably knock it out next week.
+[00:28:51] Me: Beautiful. Anything you need from me for that?
+[00:28:53] Speaker 4: Just the license login, you've got it in the password manager somewhere.
+[00:28:57] Me: I'll dig it out and send it to you today.
+[00:28:59] Speaker 3: While we're on the laptops, one of the backstage ones is really slow to boot. Like three minutes.
+[00:29:05] Speaker 4: That's the old Dell. It's on its last legs honestly.
+[00:29:08] Me: That's a different conversation, but noted. Let's not scope creep into new laptops right now.
+[00:29:13] Speaker 2: Thank you for saying that, I was watching the number climb in my head.
+[00:29:17] Speaker 1: Aaron, self control, who are you.
+[00:29:19] Me: I contain multitudes. Okay so pro presenter is basically solved, which is nice, a cheap win.
+[00:29:25] Speaker 4: We love a cheap win.
+[00:29:26] Speaker 2: We really do. Can the rest of the list be cheap wins too?
+[00:29:30] Me: Ha. No. But intercom's next and that one's medium.
+[00:29:34] Speaker 3: Intercom, as in the clear calm headsets?
+[00:29:37] Me: Yeah, the clear com stuff. But let me finish the pro presenter thread first, I want to make sure we captured it.
+[00:29:43] Speaker 1: Capture it, because I will forget by lunch.
+[00:29:45] Me: So, decision, we standardize everyone on version seven. Jen's handling the lobby and the two backstage laptops next week. Booth's already done.
+[00:29:54] Speaker 4: Yep, that's accurate.
+[00:29:55] Speaker 2: And the cost is small enough it doesn't need board sign off.
+[00:29:58] Me: Correct. That one I can just approve out of the operating line.
+[00:30:02] Speaker 3: Can we also write down somewhere that the slow Dell exists so it doesn't surprise us in six months.
+[00:30:07] Me: Fair, I'll note it as a watch item, not a this year item.
+[00:30:11] Speaker 2: Good distinction. Watch item, not a line item.
+[00:30:14] Speaker 4: Ooh, put that on a mug.
+[00:30:16] Speaker 1: Megan's getting into branding now.
+[00:30:18] Speaker 2: I have range. Okay, where are we on time.
+[00:30:21] Me: We're actually okay. We've got the console agreed, pro presenter agreed, and we still need intercom, volunteers, and the budget number.
+[00:30:28] Speaker 2: The budget number is the one I actually came for, so let's make sure we leave time.
+[00:30:32] Me: We will. Intercom's quick-ish. Let me set it up.
+[00:30:36] Speaker 3: Before you do, dumb question, what's actually wrong with the intercom now? It mostly works.
+[00:30:41] Speaker 1: It mostly works if you stand still and don't walk behind the LED wall.
+[00:30:45] Speaker 3: Okay, that's fair, the dead spot behind the wall is real.
+[00:30:48] Me: Right, and it's wired, so camera two is basically tethered to a cable all service.
+[00:30:53] Speaker 1: Which with the new wall coming, the cable runs get worse, not better.
+[00:30:57] Me: Exactly, so intercom's actually tied to the wall decision. Let me get into that properly.
+[00:31:02] Speaker 2: Hold on, before intercom, I want to make sure I heard the console right. We're saying console this year, for real, front of the line.
+[00:31:09] Me: That's where we landed, yeah. Most likely to fail live, so it goes first.
+[00:31:13] Speaker 2: Okay. I just want to be careful because that plus cameras plus wall is a lot of money in one year.
+[00:31:19] Me: It is. We may have to sequence it so it's not all at once, but the intent is console this year.
+[00:31:25] Speaker 1: We can spread the actual spend across quarters even if we decide now.
+[00:31:29] Speaker 2: That helps. Okay, I'll let you get to intercom, but flag that the total is getting chunky.
+[00:31:34] Me: Noted, and that's exactly what the budget conversation at the end is for. We'll add it all up then.
+[00:31:39] Speaker 4: Spoiler, it's gonna be a big number.
+[00:31:41] Speaker 3: It's always a big number.
+[00:31:43] Me: It's AVL. It's a big number. Okay, intercom. So the proposal is we go wireless.
+[00:31:48] Speaker 1: Finally cut camera two loose.
+[00:31:50] Me: Cut camera two loose, fix the dead spot, and make the headset situation way less miserable for volunteers.
+[00:31:56] Speaker 3: The volunteers will genuinely love that, the cable thing is the number one complaint I get.
+[00:32:01] Me: Which is a good segue to volunteers later, but let's nail intercom down first.
+[00:36:02] Me: Okay, so to say it cleanly for the notes, the proposal is we'll move the intercom over to wireless, Clear-Com beltpacks, same system family we already run.
+[00:36:11] Speaker 1: Clear calm wireless, yeah, that integrates with the base station we've got so we're not ripping everything out.
+[00:36:17] Me: Right, it bolts onto the existing clear calm base, we just add the wireless side and the packs.
+[00:36:23] Speaker 3: How many packs are we talking? Because on a big weekend I've got what, six or seven people on headset.
+[00:36:29] Me: I'd spec six wireless and keep a couple of the wired ones as backup for stationary positions.
+[00:36:35] Speaker 4: Can the booth stay wired? I never move, I don't need to be walking around.
+[00:36:39] Me: Yeah, booth stays wired, lighting stays wired, it's really the camera ops and the floor people who need to roam.
+[00:36:45] Speaker 1: Camera two, camera three, and whoever's doing stage stuff during transitions.
+[00:36:49] Speaker 3: Okay that makes sense. And the dead spot behind the wall, wireless actually fixes that?
+[00:36:54] Me: With an antenna placement, yeah, we put a second antenna on the far side and the coverage wraps around the wall.
+[00:37:01] Speaker 1: Assuming we mount the antenna before the new wall goes in, otherwise we're up on a lift twice.
+[00:37:06] Me: Good point, so there's a sequencing thing, intercom antenna work should happen around the wall install.
+[00:37:12] Speaker 2: So is intercom a yes? I want to lock it so we can move on.
+[00:37:16] Me: I think so. Everyone good on wireless clear calm for intercom?
+[00:37:20] Speaker 1: Yes from me.
+[00:37:21] Speaker 3: Yes, and the volunteers will throw a party.
+[00:37:23] Speaker 4: Yep.
+[00:37:24] Me: Great, that's decided, intercom goes wireless this coming year.
+[00:37:28] Speaker 2: And timing on the packs, because I don't want it landing the same week as Easter.
+[00:37:33] Me: Actually the opposite, I'd want them in hand before Easter so we can shake them out on a normal weekend first.
+[00:37:39] Speaker 1: Please don't debut new gear on Easter, we've learned that one.
+[00:37:43] Me: Never again. So I'll order the wireless packs before Easter, that gives us a few weekends to train on them.
+[00:37:49] Speaker 3: That's smart, learning new headsets live on Easter would be a nightmare.
+[00:37:53] Me: Yeah, I'll get the order in early. Okay, so that's intercom.
+[00:37:57] Speaker 2: Good. Now, before budget, can we circle back to the console for one second.
+[00:38:02] Me: Sure, what's up.
+[00:38:03] Speaker 2: I've been sitting here adding, and cameras plus the wall plus a brand new console in one calendar year is genuinely a lot.
+[00:38:11] Speaker 1: It's the three biggest ticket items all stacked, yeah.
+[00:38:14] Speaker 2: I'm not saying never, I'm saying I'm nervous about all three hitting at once.
+[00:38:18] Me: I hear that. The thing with the console is it's the oldest thing in the room and the most likely to die mid-service.
+[00:38:24] Speaker 1: It threw that channel fault two Sundays ago, we got lucky it recovered.
+[00:38:28] Speaker 3: I remember, you were sweating.
+[00:38:30] Me: I was. So my instinct earlier was let's go ahead and replace the audio console this year, front of the line.
+[00:38:36] Speaker 2: Right, and I agreed in the moment, but now I'm looking at the pile.
+[00:38:40] Speaker 4: What if we nurse the console one more year and do cameras and wall first?
+[00:38:45] Me: Hmm. I don't love nursing it, but I also can't argue that it's the one with a service contract still on it.
+[00:38:51] Speaker 1: It is still under the extended support, right? Through next year?
+[00:38:55] Me: It is, actually. The support runs another, I think, fourteen months.
+[00:38:59] Speaker 2: So if it faults, we have someone to call. The cameras and wall don't have that cushion.
+[00:39:04] Me: That's a fair reframe. Okay, I'm going to walk myself back here.
+[00:39:08] Speaker 2: I don't want to steamroll you, but risk-wise the console is covered and the others aren't.
+[00:39:13] Me: No, you're right. Let's hold off on the console for now and keep it covered under the support contract.
+[00:39:19] Speaker 1: So console comes out of this year's plan, pushes to next.
+[00:39:22] Me: Correct. Reverse what I said earlier, the console is not in this year's list anymore, we ride the contract.
+[00:39:28] Speaker 2: Thank you, that actually brings the number down to something I can defend.
+[00:39:32] Speaker 3: Wait, so for the notes, console is out this year?
+[00:39:35] Me: Out this year, watch item like the Dell, revisit next cycle.
+[00:39:39] Speaker 4: Our watch list is getting long.
+[00:39:41] Me: It is, but it's honest. Okay. Megan, that's your cue, budget.
+[00:39:46] Speaker 2: Finally. So let me total what's actually in this year. Cameras, the wall, intercom wireless.
+[00:39:53] Me: Right, three things. Console dropped off.
+[00:39:56] Speaker 2: Cameras, your rough number was what, forty-ish all in with install?
+[00:40:01] Me: Forty to forty-two for three cameras with lenses and mounts, call it forty-one.
+[00:40:06] Speaker 2: The wall?
+[00:40:07] Me: The wall's the big one, I'm estimating thirty-five once we know the real dimensions from Dave.
+[00:40:13] Speaker 1: Which I'm measuring this week, so that number firms up.
+[00:40:16] Speaker 2: And intercom wireless?
+[00:40:18] Me: Six packs, antenna, labor, probably seven, maybe eight thousand.
+[00:40:23] Speaker 2: So forty-one, thirty-five, eight. That's eighty-four.
+[00:40:28] Me: About eighty-four, yeah, and I'd want a small contingency on top.
+[00:40:32] Speaker 2: So if I round up for contingency, I'd set the budget request at eighty five thousand even.
+[00:40:38] Me: Eighty-five works. That gives us a thousand of wiggle, which isn't much but it's something.
+[00:40:43] Speaker 1: On a wall install, a thousand of contingency is basically nothing.
+[00:40:47] Me: I know, but if the wall measures bigger we'll catch it before we commit, so I'm okay asking eighty-five as the headline.
+[00:40:53] Speaker 2: Okay. Eighty-five is the number I'll take forward. Everyone comfortable with eighty-five as the ask?
+[00:40:59] Me: I am.
+[00:41:00] Speaker 1: Yep.
+[00:41:01] Speaker 3: Works for me, though I don't hold the purse strings.
+[00:41:04] Speaker 4: Eighty-five, got it.
+[00:41:05] Speaker 2: Good. Now I want to be really clear with everybody about how this actually gets approved.
+[00:41:10] Me: Yeah, say it for the room.
+[00:41:12] Speaker 2: We can agree on eighty-five all day in here, but the final approval is really up to the elders and finance, I just bring the proposal.
+[00:41:20] Speaker 1: So this is us recommending, not us deciding the money.
+[00:41:23] Speaker 2: Exactly. We decide the plan, they decide the dollars.
+[00:41:27] Speaker 3: That's a helpful line, I'm always fuzzy on who actually says yes.
+[00:41:31] Speaker 2: The board does. I package it, I advocate for it, but they vote.
+[00:41:35] Me: And realistically, what are the odds on eighty-five?
+[00:41:38] Speaker 2: Honestly? If I frame the console-is-covered reasoning well, decent. They respond to risk arguments.
+[00:41:45] Me: That's why the risk reframe helps us, it's not just cheaper, it's defensible.
+[00:41:49] Speaker 2: Right. So here's what I'll do. I can draft the budget proposal for the board, with the three items and the contingency.
+[00:41:57] Me: That'd be great. Do you need anything from me for it?
+[00:42:00] Speaker 2: I'll need the camera quote and the wall dimensions to firm up the thirty-five, so whenever those land.
+[00:42:06] Me: Camera quotes are coming by end of January like I said, and Dave's measuring this week.
+[00:42:11] Speaker 1: Dimensions to you both by Friday.
+[00:42:13] Speaker 2: Perfect. With those I can write it up. When's the board actually meet next?
+[00:42:18] Me: I think the finance team meets mid-February?
+[00:42:21] Speaker 2: Mid-February, yeah, so if I have the quote by end of January I'm fine.
+[00:42:26] Speaker 3: And if they say no to part of it?
+[00:42:28] Speaker 2: Then we prioritize. If they trim, the wall and cameras are the ones I'd fight for.
+[00:42:33] Me: Agreed, intercom's the one we could delay a few months if we had to, it's the smallest.
+[00:42:38] Speaker 1: Though I'd hate to, the cable situation is rough.
+[00:42:41] Me: I know, but in a trimming scenario it's the flexible one. Hopefully we don't get there.
+[00:42:46] Speaker 2: Let's assume eighty-five and I'll fight for the whole thing. If they cut, we regroup.
+[00:42:51] Speaker 4: Can I ask, does the proposal need the volunteer training stuff in it, or is that separate?
+[00:42:56] Speaker 2: Training's operating budget, not capital, so that's separate and honestly small.
+[00:43:01] Me: Right, training's mostly my time and some snacks, it doesn't hit this number.
+[00:43:05] Speaker 3: Never underestimate snacks as a retention tool, by the way.
+[00:43:09] Me: Oh, I don't, the donut Sundays are load-bearing.
+[00:43:12] Speaker 4: The donut budget is the only budget nobody questions.
+[00:43:15] Speaker 2: As it should be. Okay, so budget-wise I think we're set, eighty-five, I draft it, I take it to the board.
+[00:43:22] Me: That's the budget piece done. Let me make sure I've captured everything before we hit volunteers.
+[00:43:27] Speaker 2: Run it back quick.
+[00:43:28] Me: Cameras this year, wall in the fall, intercom wireless, console deferred under the support contract, pro presenter standardized.
+[00:43:36] Speaker 2: And budget request of eighty-five going to the board.
+[00:43:39] Me: And eighty-five to the board, right. That's the whole capital picture.
+[00:43:43] Speaker 1: That's a clean year, actually, minus the console drama.
+[00:43:46] Me: The console will have its year, just not this one. Okay, Tyler, let's talk volunteers.
+[00:43:52] Speaker 3: Yes, this is my favorite part because it's the part that doesn't cost eighty-five grand.
+[00:43:57] Speaker 2: It costs donuts.
+[00:43:58] Speaker 3: It costs donuts, which is a bargain.
+[00:44:01] Me: So the core problem is we're thin on trained camera ops and we lean on the same four people every weekend.
+[00:44:07] Speaker 1: And when one of them travels, we're scrambling Saturday night.
+[00:44:10] Speaker 3: Which happened twice last month, I was texting people at nine p.m.
+[00:44:14] Me: So what I want to figure out is a regular training rhythm, not the random one-off thing we do now.
+[00:44:20] Speaker 3: I'm fully on board, the ad hoc approach isn't working.
+[00:48:02] Me: Okay so I want to land on an actual cadence, something people can put on their calendar months out.
+[00:48:08] Speaker 3: That's the dream. Right now nobody knows when the next training is because neither do I.
+[00:48:13] Speaker 1: Weeknights are tough for the students, a lot of them have practice or homework.
+[00:48:18] Speaker 4: And weeknights are tough for me, honestly, I'm already here Wednesdays.
+[00:48:22] Me: What about Saturdays? We're already setting up for the weekend anyway, the gear's live.
+[00:48:27] Speaker 3: Saturday mornings are actually good, people are fresher than a weeknight.
+[00:48:31] Speaker 1: And the cameras are already powered and framed, so they can get hands on real.
+[00:48:36] Me: So here's my pitch, training will be the second Saturday of every month, same time, every month, no exceptions.
+[00:48:43] Speaker 3: Second Saturday, I like it because it's predictable, people can plan around it.
+[00:48:48] Speaker 2: Does second Saturday ever collide with anything, like the big holiday setups?
+[00:48:53] Me: Occasionally, but we can skip or move the one or two that conflict and announce it early.
+[00:48:58] Speaker 3: As long as the default is fixed, I can work the exceptions.
+[00:49:02] Speaker 2: Okay, that sounds clean. Second Saturdays it is.
+[00:49:06] Me: Great, so let's call that decided, monthly training, second Saturday, that's our rhythm.
+[00:49:11] Speaker 4: Finally a rhythm.
+[00:49:12] Unknown: About time.
+[00:49:14] Speaker 3: I'll actually be able to promote it now instead of the night-before panic text.
+[00:49:19] Me: Right, and I want it on a real calendar people can subscribe to, not just a verbal thing.
+[00:49:24] Speaker 3: I can own that piece, I've got the volunteer roster already in the scheduling tool.
+[00:49:29] Me: Perfect. So Tyler, can you build out the dates?
+[00:49:33] Speaker 5: Yeah, I'll put together the training calendar for the year, all twelve second Saturdays, and flag the ones that conflict.
+[00:49:40] Me: That's exactly it. When do you think you can have that?
+[00:49:43] Speaker 5: Give me a couple weeks, I want to cross-check it against the facilities calendar first.
+[00:49:48] Speaker 2: Smart, because facilities double-books that room constantly.
+[00:49:52] Speaker 5: Don't I know it. I'll have the draft calendar around mid-November.
+[00:49:56] Me: Mid-November works. And once it's up we push it hard in the volunteer channel.
+[00:50:01] Speaker 1: I can demo the cameras at the first couple so people aren't intimidated.
+[00:50:05] Me: That'd be huge, Dave, the camera ops are exactly who we're short on.
+[00:50:09] Speaker 5: Can we also do like a buddy system, pair a new person with a veteran for a weekend?
+[00:50:14] Me: Love it, but let's not over-engineer the launch, get the calendar up first.
+[00:50:19] Speaker 5: Fair, fair, I'll keep it simple for round one.
+[00:50:22] Speaker 3: Just make sure the donuts are there and they'll come.
+[00:50:25] Me: Load-bearing donuts, noted again.
+[00:50:28] Speaker 2: You two and the donuts.
+[00:50:30] Me: Okay, but there's a near-term thing the calendar doesn't solve, and it's bugging me.
+[00:50:35] Speaker 1: Easter.
+[00:50:36] Me: Easter. The training won't have produced enough new ops by then, so who's going to cover cameras on Easter weekend?
+[00:50:43] Speaker 1: That's five services across two days, that's the hardest weekend we do.
+[00:50:47] Speaker 3: And two of my regulars already told me they're traveling for Easter.
+[00:50:51] Me: So we're short exactly when we're biggest. That's the problem.
+[00:50:55] Speaker 1: We might be able to pull one of the youth volunteers up early if they shadow a few weekends first.
+[00:51:00] Speaker 3: Maybe, but I don't want to throw a brand-new person on cam two during Easter and have it go sideways.
+[00:51:06] Me: Right, Easter's not the weekend to be learning. Let's not solve it right now, but flag it.
+[00:51:11] Speaker 2: Definitely flag it, that's a real gap.
+[00:51:14] Me: I'm writing it down as open, we need an Easter camera plan and we don't have one yet.
+[00:51:19] Speaker 3: I'll keep poking my people, maybe someone's travel plans change.
+[00:51:23] Me: Good, but let's revisit it as its own thing in a few weeks, it's too big for the tail end of this meeting.
+[00:51:29] Speaker 1: Agreed, Easter staffing deserves its own conversation.
+[00:51:33] Me: Okay. Two more quick things and then I'll let everybody go.
+[00:51:37] Speaker 4: I've got one on lighting, if we've got a sec.
+[00:51:40] Me: Go for it, Jen.
+[00:51:41] Speaker 4: The front wash fixtures are aging and three of them are flickering, the warranty's done.
+[00:51:47] Me: Is that a this-year capital thing or a repair thing?
+[00:51:50] Speaker 4: Honestly probably a repair-or-replace quote, I won't know till the vendor looks at them.
+[00:51:55] Me: Okay, that's small enough it doesn't touch the eighty-five, it comes out of operating.
+[00:52:00] Speaker 4: Right, it's a few fixtures, not a system. I can chase it down.
+[00:52:04] Speaker 3: I'll reach out to the lighting vendor for a quote, I've still got the rep's contact from the summer install.
+[00:52:10] Me: Perfect, Jen, you've got the relationship with them anyway.
+[00:52:13] Speaker 4: Yeah, they know our rig, I'll get the flicker fixtures quoted and loop you in.
+[00:52:18] Me: Great, lighting quote is yours. When's realistic?
+[00:52:21] Speaker 4: I'll reach out to the lighting vendor for a quote this week, probably hear back by month-end.
+[00:52:26] Me: Month-end's fine, it's not urgent, just don't let it drift.
+[00:52:30] Speaker 4: It won't, the flicker's driving me nuts on camera anyway.
+[00:52:33] Speaker 1: It really shows on the wide shot, the color shifts.
+[00:52:36] Me: Yeah, I've seen it in the stream. Okay, last thing, and it's one for me.
+[00:52:41] Speaker 2: The bandwidth thing?
+[00:52:42] Me: The bandwidth thing. If we're adding the wall and more camera feeds, I'm worried our upload can't carry the stream clean.
+[00:52:49] Speaker 1: We already drop frames on big weekends, I've seen it buffer.
+[00:52:53] Me: Right, and that's before we add anything. So I need to get the numbers from the provider.
+[00:52:58] Speaker 2: Is that our IT people or the internet company?
+[00:53:01] Me: Both, kind of. I'll set up a meeting with our MSP about the bandwidth and whether we need a bigger circuit.
+[00:53:07] Speaker 2: Because a circuit upgrade is a monthly cost, that's operating too, not capital.
+[00:53:12] Me: Exactly, which is why I want it scoped before you draft the budget narrative.
+[00:53:17] Speaker 2: Good call, if there's a recurring cost coming I'd rather name it now than surprise the board.
+[00:53:22] Me: I'll get the MSP meeting on the books this week and report back what they say.
+[00:53:27] Speaker 1: Ask them about the redundancy too, the failover never actually worked when we tested it.
+[00:53:32] Me: Good flag, I'll put failover on the list for that conversation.
+[00:53:36] Speaker 4: Didn't they say the failover was configured months ago?
+[00:53:39] Me: They said it, but it didn't fail over, so I don't trust it until I see it.
+[00:53:43] Speaker 1: Classic.
+[00:53:44] Speaker 2: Okay, I think that's everything. Let me make sure I have my pieces.
+[00:53:48] Me: Yeah, run your actions.
+[00:53:50] Speaker 2: I'm drafting the eighty-five budget proposal and taking it to the elders and finance board.
+[00:53:55] Me: Right, and the final yes or no on the number is theirs, not ours.
+[00:53:59] Speaker 2: Correct, I'm just making the case, they approve it.
+[00:54:03] Me: Good. Dave, you've got the wall measurements.
+[00:54:06] Speaker 1: Already pulled the rough numbers, I'll send you the exact dimensions tonight.
+[00:54:10] Me: Perfect. Jen, lighting vendor quote on the flicker fixtures.
+[00:54:14] Speaker 4: Yep, reaching out this week.
+[00:54:16] Me: Tyler, the training calendar for the year, mid-November.
+[00:54:19] Speaker 5: On it, second Saturdays all mapped out.
+[00:54:22] Me: And I've got the camera quotes by end of January, the MSP bandwidth meeting, and the intercom packs before Easter.
+[00:54:29] Speaker 3: That's a lot on your plate, Aaron.
+[00:54:31] Me: It's the fun part, mostly. Did I miss anyone's action?
+[00:54:35] Speaker 4: I think that's all of them.
+[00:54:37] Speaker 2: What about Jen updating the rest of the pro presenter machines?
+[00:54:40] Speaker 4: Oh right, yeah, that's still mine, the booth one's done, I'll get the others this month.
+[00:54:45] Me: Good catch, I almost dropped that. The rest of the pro presenter machines standardized by end of month.
+[00:54:51] Speaker 4: End of month, yes.
+[00:54:52] Me: Okay. The two open items I'm carrying into next time are Easter camera staffing and the booth relocation.
+[00:54:59] Speaker 1: Those are both big enough to deserve their own meetings.
+[00:55:02] Me: Agreed. I'll put both on the next agenda rather than rushing them now.
+[00:55:06] Speaker 2: Works for me. When are we meeting again?
+[00:55:09] Me: Let's do early November, before Tyler's calendar is due so we can sanity-check it together.
+[00:55:14] Speaker 5: That timing's good for me.
+[00:55:16] Speaker 3: Just send the invite so it doesn't live only in your head.
+[00:55:19] Me: I'll send it today, promise.
+[00:55:21] Speaker 2: Famous last words.
+[00:55:23] Me: Harsh, but fair. Anybody have anything I didn't cover?
+[00:55:27] Speaker 4: I'm good. This was actually productive for once.
+[00:55:30] Speaker 1: Yeah, having the whole year mapped feels different than firefighting.
+[00:55:34] Me: That was the whole point. Cameras now, wall in fall, intercom wireless, console waits, pro presenter standardized.
+[00:55:41] Speaker 2: And eighty-five to the board, with me carrying it.
+[00:55:44] Me: And training on second Saturdays with a real calendar. That's a plan I can live with.
+[00:55:49] Speaker 3: And donuts.
+[00:55:50] Me: And donuts, obviously. Thanks everybody, I know this ran long.
+[00:55:54] Speaker 1: Worth it though.
+[00:55:55] Speaker 2: Good meeting, Aaron. Send that invite.
+[00:55:58] Me: Sending it the second I close my laptop. Alright, we're done, go enjoy your Saturday.
+[00:56:03] Speaker 4: Finally.
+[00:56:04] Speaker 5: See everybody in November.

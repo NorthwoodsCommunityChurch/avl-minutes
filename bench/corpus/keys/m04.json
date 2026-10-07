@@ -1,0 +1,77 @@
+{
+ "id": "m04",
+ "title": "November Camera Volunteer Schedule",
+ "type": "volunteer scheduling",
+ "minutes": 10,
+ "sources": [
+  "room",
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Dana",
+   "role": "Volunteer coordinator (in room)"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Tyler",
+   "role": "Stream/graphics volunteer (on call)"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Run three cameras every weekend in November.",
+   "evidence": "we'll go with three cameras every weekend in November"
+  },
+  {
+   "id": "d2",
+   "text": "Open volunteer sign-ups on Planning Center this week.",
+   "evidence": "let's open the sign ups on planning center this week"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Send out the draft November camera schedule.",
+   "owner": "Me",
+   "due": "Friday",
+   "evidence": "I'll get the draft schedule out by Friday"
+  },
+  {
+   "id": "a2",
+   "task": "Text new volunteer Marcus to get him on the calendar.",
+   "owner": "Caller 1",
+   "due": null,
+   "evidence": "I can text Marcus and get him on the calendar"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Who covers the Thanksgiving weekend service?",
+   "evidence": "What are we doing for thanksgiving weekend"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "label_noise",
+   "claim": "Dana will handle the stream graphics for November.",
+   "evidence": "I'll take care of the stream graphics for November"
+  },
+  {
+   "id": "t2",
+   "kind": "reversed",
+   "claim": "A volunteer will operate camera two for the wide shot.",
+   "evidence": "let's have a volunteer on camera two for the wide"
+  }
+ ]
+}

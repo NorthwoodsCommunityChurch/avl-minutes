@@ -1,0 +1,88 @@
+{
+ "id": "m07",
+ "title": "Creative team weekly",
+ "type": "staff meeting",
+ "minutes": 20,
+ "sources": [
+  "room"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Megan",
+   "role": "worship/creative pastor"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Derek",
+   "role": "ProPresenter/graphics operator"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Use the shorter sermon series title on the LED wall graphics this weekend.",
+   "evidence": "let's go with the short title on the wall graphics"
+  },
+  {
+   "id": "d2",
+   "text": "Staff two camera operators for the Christmas services.",
+   "evidence": "we'll run two camera operators for the Christmas services"
+  },
+  {
+   "id": "d3",
+   "text": "Move band rehearsal to Wednesday night.",
+   "evidence": "we'll move band rehearsal to Wednesday night"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Rebuild the lower thirds template in ProPresenter.",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll rebuild the lower thirds template this week"
+  },
+  {
+   "id": "a2",
+   "task": "Export the new series graphics and upload them.",
+   "owner": "Derek",
+   "due": "Friday",
+   "evidence": "I can export those and upload them before Friday"
+  },
+  {
+   "id": "a3",
+   "task": "Send out the updated volunteer schedule.",
+   "owner": "Megan",
+   "due": null,
+   "evidence": "I'll send out the updated volunteer schedule tonight"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Whether the budget covers the new intercom beltpacks.",
+   "evidence": "does the budget actually cover the new belt packs"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "already_done",
+   "claim": "Aaron will update the countdown timers.",
+   "evidence": "I already updated the countdown timers last week"
+  },
+  {
+   "id": "t2",
+   "kind": "label_noise",
+   "claim": "Derek will send out the updated volunteer schedule.",
+   "evidence": "I'll send out the updated volunteer schedule tonight"
+  }
+ ]
+}

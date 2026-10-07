@@ -1,0 +1,86 @@
+{
+ "id": "m16",
+ "title": "Luminetic Streaming Encoder Demo",
+ "type": "vendor demo",
+ "minutes": 30,
+ "sources": [
+  "call"
+ ],
+ "control": true,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Megan",
+   "role": "AVL staff / stream tech"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Megan",
+   "role": "AVL staff / stream tech (same person, relabeled after she steps out)"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Derek",
+   "role": "Luminetic account exec"
+  },
+  {
+   "label": "Caller 2",
+   "name": "Priya",
+   "role": "Luminetic solutions engineer"
+  }
+ ],
+ "decisions": [],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Send Luminetic the church's current upload bandwidth numbers",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I can send over our current upload bandwidth numbers"
+  },
+  {
+   "id": "a2",
+   "task": "Send a trial license key for the encoder",
+   "owner": "Priya",
+   "due": "end of week",
+   "evidence": "I'll get a trial license key over to you"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Does the encoder accept a Q-SYS or NDI input directly?",
+   "evidence": "does it take a cue sis or n d i input directly"
+  },
+  {
+   "id": "q2",
+   "text": "What is the annual cost for a multi-site deployment?",
+   "evidence": "what does the annual cost look like for multiple sites"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t_already",
+   "kind": "already_done",
+   "claim": "Aaron will migrate the livestream to the new CDN.",
+   "evidence": "we already migrated the stream over to the new c d n last month"
+  },
+  {
+   "id": "t_label_noise",
+   "kind": "label_noise",
+   "claim": "Aaron will send the weekend service schedule to the vendor.",
+   "evidence": "I'll send you our weekend service schedule so you can see the volume"
+  },
+  {
+   "id": "t_reversed",
+   "kind": "reversed",
+   "claim": "They agreed to schedule an on-site pilot for December.",
+   "evidence": "let's go ahead and schedule the on site pilot for December"
+  }
+ ]
+}

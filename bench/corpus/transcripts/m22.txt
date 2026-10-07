@@ -1,0 +1,455 @@
+Camera Upgrade Proposal — Integrator Call
+Monday, December 21, 2026 · 10:30 AM · 45 min · Call
+Transcribed by Minutes. Audio was not recorded.
+
+[00:00:04] Me: Okay, I think we're recording now. Let me just, uh, pull up the call.
+[00:00:11] Speaker 1: Is it dialing? I don't hear anything yet.
+[00:00:15] Me: Yeah, give it a sec. The, um, the conference line always takes a minute.
+[00:00:22] Caller 1: Hello? Hey, can you guys hear me okay?
+[00:00:26] Me: Yep, we got you. Loud and clear.
+[00:00:29] Caller 1: Awesome, awesome. I've got my colleague joining too, he should be popping in any second.
+[00:00:36] Speaker 2: Oh there he is.
+[00:00:38] Caller 2: Hey everybody, can you hear me? Sorry, my headset was being weird.
+[00:00:43] Me: Yeah, we got both of you. Perfect. So we've got, um, myself, Aaron, and then Dave and Megan here in the room with me.
+[00:00:52] Speaker 1: Hey guys.
+[00:00:54] Speaker 2: Hi.
+[00:00:56] Caller 1: Awesome. Great to finally put some voices to the email chain.
+[00:01:01] Speaker 1: Right? Feels like we've been emailing for a month.
+[00:01:04] Caller 1: Ha, at least. So how was your, uh, how was your weekend? You guys had a big service I think, right?
+[00:01:11] Me: Yeah, it was, uh, it was Vision Sunday so we had both rooms running. Kind of a long one.
+[00:01:18] Speaker 2: It was packed though. Like standing room in the second service.
+[00:01:22] Caller 1: Oh nice, that's a good problem to have.
+[00:01:25] Speaker 1: It would've been better if it hadn't been snowing sideways in the parking lot.
+[00:01:30] Caller 2: Wait, you guys got snow already? It's barely October.
+[00:01:34] Speaker 1: Just a dusting, but you know how people drive. We had like three near misses in the lot.
+[00:01:40] Speaker 2: My car thermometer said twenty-nine degrees when I left. In October. I'm not emotionally ready.
+[00:01:47] Caller 1: Ha, down here it was like seventy-five and sunny, so.
+[00:01:51] Speaker 1: Okay, I don't want to hear it. Rub it in why don't you.
+[00:01:55] Me: Alright, alright, before we all get jealous, um, should we, should we dig in?
+[00:02:01] Caller 1: Yeah, absolutely, let's do it. Thanks for making the time.
+[00:02:05] Me: So just to, you know, set the stage for everybody. The reason we reached out is our, um, our cameras are getting pretty long in the tooth.
+[00:02:14] Caller 1: Right, and you've got the, uh, the PTZ units currently, is that correct?
+[00:02:19] Me: Yeah, we've got three PTZ cameras. Two up front and one in the back by the booth.
+[00:02:25] Speaker 1: And they're old. Like, how old are those, Aaron?
+[00:02:28] Me: Uh, we bought them when we moved into this building, so that's gotta be, what, nine years?
+[00:02:34] Speaker 2: At least nine. The one on house left has that, uh, the color thing.
+[00:02:39] Me: Right, so camera two, it's got this, it like shifts magenta randomly in the middle of service.
+[00:02:46] Caller 2: Oh yeah, that's usually the sensor starting to go. Does it come back if you power cycle it?
+[00:02:52] Me: Sometimes. Sometimes it just, it stays pink for the whole set and we have to cut away from it.
+[00:02:58] Speaker 1: Which looks great on the live stream, let me tell you.
+[00:03:02] Caller 2: Ha, yeah, that's not ideal. And what are you running them into right now? What's the switcher?
+[00:03:08] Me: Um, we've got an ATEM. The, uh, the Constellation. And then it all feeds the stream and the, the IMAG screens.
+[00:03:17] Caller 2: Okay, good, that's helpful. And the control, are you joy-sticking those PTZs or?
+[00:03:23] Me: We've got one old controller but honestly half the volunteers just use the, um, the software thing. The web interface.
+[00:03:31] Speaker 2: Which is a nightmare to teach, by the way. Every new volunteer, I spend like two Sundays just on camera.
+[00:03:38] Caller 1: Yeah, that's a super common pain point we hear. Okay so this is, this is really good context.
+[00:03:45] Caller 1: So the way we usually like to start with a church your size, um, is we don't want to just throw a giant quote at you.
+[00:03:53] Caller 1: What we'd suggest is, let's get a demo unit in here for two weeks, you run it in a real service, and you see if you even like it.
+[00:04:02] Me: Oh, okay, yeah, that's, that's interesting.
+[00:04:05] Speaker 1: So like a loaner? We don't pay for it?
+[00:04:08] Caller 1: Correct, it's a no-cost eval. We ship it, you rack it, you run it a couple weekends, and we talk after.
+[00:04:16] Speaker 2: I like that a lot more than, you know, buying three of something sight unseen.
+[00:04:21] Caller 2: Yeah, and it gives us real footage from your actual room, your actual lighting, instead of a spec sheet.
+[00:04:28] Me: Our lighting is, uh, it's a mixed bag, so that's probably good for you to see.
+[00:04:33] Speaker 1: That's the nicest way anyone's ever described our lighting.
+[00:04:37] Me: Hey, I'm the lighting director too, so I'm allowed to insult it.
+[00:04:41] Caller 1: Ha, fair enough.
+[00:04:43] Me: So the demo unit, um, what model are we talking? Is it one of the new tracking ones?
+[00:04:49] Caller 2: It'd be one of our, uh, the newer box-style cameras with the, the better low-light sensor. I can get you the exact model number.
+[00:04:58] Speaker 2: Wait, box style? So not a PTZ? How does it move?
+[00:05:03] Caller 2: So there's a, it's a longer conversation, but there's an auto-tracking option and there's a traditional pan-tilt head. We can spec either.
+[00:05:12] Me: Okay, hold on, before we get too far down the camera road, I've got a, a compatibility question that's kind of nagging me.
+[00:05:19] Caller 1: Yeah, go for it.
+[00:05:21] Me: These new cameras, um, will these play nice with our existing switcher? Because I really don't want to replace the ATEM right now.
+[00:05:30] Caller 2: Great question. So what outputs are you, are you running SDI into the switcher currently, or NDI, or?
+[00:05:37] Me: SDI. Everything's SDI. We ran all the cable when we built out the room.
+[00:05:42] Caller 2: Perfect, then yeah, our cameras do straight SDI out, so they'll drop right into the ATEM, no issue.
+[00:05:49] Me: Okay, because I've heard horror stories about people going all NDI and then their, their network falls over.
+[00:05:56] Caller 2: Yeah, no, we're not gonna make you re-architect your network. SDI to SDI, it just works.
+[00:06:02] Speaker 1: That's a relief. The network is, uh, the network is a whole other meeting.
+[00:06:07] Me: Don't even get me started. Our MSP and I had a, a long conversation about bandwidth last month.
+[00:06:13] Caller 1: Ha, we'll leave the network out of it.
+[00:06:16] Speaker 2: So if it's SDI, does that mean we can reuse the cable that's already in the walls?
+[00:06:22] Caller 2: Potentially, yeah. We'd want to verify the cable spec, but if it's good quality SDI runs, you shouldn't need to pull new cable.
+[00:06:30] Me: That would save us a ton. Those runs go up and over the, the catwalk, it's a pain to redo.
+[00:06:37] Caller 2: Totally. We'll confirm all that when we look at it, but that's the goal, reuse what works.
+[00:06:43] Speaker 1: Okay so back up, the demo unit, how fast can we actually get one?
+[00:06:48] Caller 1: Depends on inventory, but usually a week, week and a half to ship. I'll check stock after the call.
+[00:06:55] Me: And we'd want it for a full, like, two weekends at least, to really put it through its paces.
+[00:07:01] Caller 1: Yeah, that's why we say two weeks. Covers two Sundays and your midweek stuff.
+[00:07:06] Speaker 2: And who sets it up? Because if it's just dropping in on the SDI, I think, I think Aaron and I could do that.
+[00:07:13] Caller 2: Yeah, it's pretty plug and play for the eval. I'll be on a call with you when you first power it up if you want.
+[00:07:20] Me: That'd be great, honestly. The first boot is always where something goes sideways.
+[00:07:25] Speaker 1: Especially with us.
+[00:07:27] Me: Especially with us, yeah.
+[00:07:29] Caller 1: Ha, you guys are selling yourselves short, I'm sure you're fine.
+[00:07:33] Speaker 2: You haven't seen our booth.
+[00:07:35] Speaker 1: There's a, there's a label maker involved and a lot of hope.
+[00:07:39] Caller 1: Ha, every booth I've ever seen has exactly that energy.
+[00:07:43] Me: Okay so the auto-tracking thing, let me, let me ask about that because that could be huge for us.
+[00:07:49] Caller 2: Sure.
+[00:07:50] Me: The reason we even have three cameras is we need, you know, a wide, a close on the pastor, and the back shot.
+[00:07:57] Me: But the close on the pastor, the volunteers constantly lose him when he walks.
+[00:08:02] Speaker 2: Oh my gosh, every week. He's a, he's a walker. He does not stay on his mark.
+[00:08:08] Caller 2: Yeah, so that's exactly the use case for auto-tracking. It'll follow him across the stage without a camera op touching it.
+[00:08:16] Speaker 1: So we could just replace all the volunteers with robots, is what you're saying.
+[00:08:21] Caller 2: Ha, I mean, I would never say that out loud.
+[00:08:24] Speaker 2: Hey, don't give him ideas, half my volunteers would be thrilled to be replaced.
+[00:08:29] Me: Please don't, I need those people for a dozen other things.
+[00:08:33] Speaker 1: I'm just saying, the robots don't call in sick on Easter.
+[00:08:41] Speaker 1: Okay, that's a fair point. Donuts win.
+[00:08:44] Caller 1: Ha, I think the volunteers are safe for now.
+[00:08:48] Me: Alright, in all seriousness though, the auto-tracking, does it, does it ever lose him? Like if someone walks in front?
+[00:08:55] Caller 2: It's gotten really good. There's some edge cases, but for a single speaker on a stage it's very reliable.
+[00:09:02] Caller 2: That's actually another great reason to do the demo, you'd see it track your specific pastor in your specific room.
+[00:09:09] Me: Yeah, because he wears, uh, he wears a lot of dark clothes against a dark set, so.
+[00:09:15] Caller 2: That's, I won't lie, that's the hard mode for tracking. But it's worth testing.
+[00:09:20] Speaker 2: See, this is why I like the demo idea, we'd know before we spend anything.
+[00:09:25] Speaker 1: What does a, ballpark, what does one of these cameras run? Just so I'm not shocked later.
+[00:09:31] Caller 1: So I don't want to quote a firm number on the call, but the box camera with the tracking license is in the, uh, the mid-range for a pro camera.
+[00:09:41] Speaker 1: That's a very salesman answer.
+[00:09:43] Caller 1: Ha, it is, I'll own that. I'll put real numbers in a written quote, I promise.
+[00:09:49] Me: Yeah, we're gonna need something in writing anyway for, um, for the elders.
+[00:09:54] Caller 1: Of course. Nothing moves without a paper trail, I get it.
+[00:09:58] Speaker 2: So just to make sure I understand the sequence. We do a demo first, then if we like it, then we talk about doing all three?
+[00:10:06] Caller 1: That's how we'd recommend it, yeah. Prove it out on one, then scale to the full room.
+[00:10:12] Me: And when we do the full room, we'd be looking at, what, replacing all three at once or phasing it?
+[00:10:18] Caller 2: We can talk through both. There's some real advantages to doing all three together, but let's, let's get to that in a bit.
+[00:10:25] Me: Fair, fair. Let's not get ahead of ourselves.
+[00:10:28] Speaker 1: Story of my life.
+[00:10:30] Caller 1: Ha. So let me, let me make a note to check demo stock. Who should I, who's the best contact for scheduling the ship?
+[00:10:38] Me: That's me. I'll be the point person. You've got my email.
+[00:10:42] Caller 1: Perfect, aaron at the church, I've got it.
+[00:10:45] Speaker 2: Should we also loop in, um, the facilities guy for when it ships? For the receiving dock?
+[00:10:51] Me: Oh, good call, but let me handle that on our end. I'll let him know a box is coming.
+[00:10:57] Speaker 2: Okay.
+[00:10:58] Caller 2: And just so I'm prepping right, the current PTZs, are they, are they ceiling mounted or on stands?
+[00:11:05] Me: The two up front are on, uh, wall mounts up high. The back one's on the technical balcony rail.
+[00:11:12] Caller 2: Got it. Mounting's gonna be one of the things we want to look at closely, because the new bodies are a different form factor.
+[00:11:19] Me: Right, they're not the little dome shape anymore.
+[00:11:22] Caller 2: Correct, they're a, they're a proper camera body, so the mount is different. We'd sort that out in a site visit.
+[00:11:29] Speaker 1: A site visit, okay, so you'd actually come out here?
+[00:11:33] Caller 2: Yeah, ideally before any full install we'd do a, a proper survey. But that's down the road.
+[00:11:39] Me: We should definitely do that. I'd rather you see the catwalk situation in person than, than me try to describe it.
+[00:11:46] Speaker 1: It defies description, honestly.
+[00:11:49] Caller 1: Ha, now I'm curious.
+[00:11:51] Me: It's, uh, it's a lot of plywood and good intentions.
+[00:11:55] Caller 2: Ha, you'd be amazed how often I hear that exact sentence.
+[00:11:59] Speaker 2: Okay so, sorry, I'm just writing this down so I keep track. Demo unit, two weeks, SDI into the ATEM, test the tracking.
+[00:12:08] Me: Yep, that's the gist of the first phase.
+[00:12:11] Speaker 2: And no new cabling, hopefully.
+[00:12:13] Caller 2: Hopefully. We verify that, but that's the plan.
+[00:12:17] Me: Alright, um, before we get into the bigger proposal and the full room, can we, can we talk about the different camera models you'd actually recommend?
+[00:12:26] Caller 1: Yeah, let's do that. That's a, that's a good segue into the real meat of it.
+[00:12:31] Caller 2: And I can share my screen if, uh, if the call lets me. Let me try.
+[00:12:36] Speaker 1: While he's doing that, Aaron, did you ever hear back from the, the stream company about the dropout last week?
+[00:12:43] Me: Oh, uh, not yet. That's a separate headache. Let's park that for after this call.
+[00:12:48] Speaker 1: Fair.
+[00:12:49] Caller 2: Okay, can you guys see my screen? There should be a, a spec comparison up.
+[00:12:54] Me: Uh, not yet. We see the, the sharing bar but no content.
+[00:12:58] Caller 2: Classic. Give me one sec, let me stop and restart the share.
+[00:13:02] Speaker 2: Technology, am I right? And we're the ones selling it to volunteers as easy.
+[00:13:07] Caller 1: Ha, don't worry, happens on every single call.
+[00:13:11] Me: While we wait, um, I do want to flag, our budget cycle, the, the fiscal year stuff, that's gonna matter for timing.
+[00:13:19] Caller 1: Yeah, when does your, when does your budget year turn over?
+[00:13:23] Me: It's, uh, it's calendar year for the big capital stuff. So anything over a certain amount has to get approved by the elders.
+[00:13:31] Caller 1: Okay, good to know. That'll shape when we, when we want the quote in front of you.
+[00:13:36] Me: Exactly. There's a, there's a window and I don't want to miss it.
+[00:13:40] Caller 2: Okay, screen should be up now. Can you see the comparison chart?
+[00:13:44] Me: Yep, there it is. Okay, now we're cooking.
+[00:13:47] Speaker 2: Oh, that's a lot of columns.
+[00:13:49] Caller 2: Ha, I know, I'll walk you through it, don't panic. Let's start with the one on the far left.
+[00:13:55] Me: Alright, take us through it.
+[00:15:02] Caller 2: So the far left column, that's the entry level PTZ, uh, 20x optical zoom, SDI and NDI out, decent in good light.
+[00:15:12] Me: And in not good light? Because our stage wash varies a lot service to service.
+[00:15:18] Caller 2: Right, that's where the middle and the right columns pull ahead. Bigger sensor, cleaner at the, the lower lux.
+[00:15:26] Speaker 1: What's the, the jump in price between the left and the middle one?
+[00:15:30] Caller 2: Roughly, uh, roughly double per unit. But you're getting a lot more camera.
+[00:15:35] Speaker 2: Double is, that's a real number when you times it by three.
+[00:15:39] Me: Yeah, that's, that's the thing I keep coming back to. We've got three positions and they all need to match.
+[00:15:46] Caller 1: And that's actually a good place to talk strategy. You can phase it, do one now, two later.
+[00:15:53] Me: Honestly I don't love phasing cameras. If they don't match, the, the color grading between shots is a nightmare in the switcher.
+[00:16:01] Caller 2: That's a very fair point. Mismatched cameras, your operators will fight the color all day.
+[00:16:07] Speaker 2: Yeah, Megan's volunteers already struggle with the white balance drift on the old ones.
+[00:16:12] Me: So, so my strong preference, and tell me if this is crazy, is we'll replace all three of the cameras at once.
+[00:16:19] Caller 1: It's not crazy at all. From a consistency standpoint that's actually what we'd recommend.
+[00:16:24] Speaker 1: It's a bigger number up front but it's one approval, one install, one headache instead of three.
+[00:16:31] Me: Right. I'd rather fight that battle once with the elders than, than go back three times.
+[00:16:36] Caller 2: And all three go in during one install window, which is, that's cleaner for everybody.
+[00:16:42] Speaker 2: Okay so for my notes, the plan is all three at once, not phased. Yeah?
+[00:16:47] Me: Yeah, let's, let's lock that in. All three together.
+[00:16:50] Caller 1: Great, that simplifies the quote too.
+[00:16:53] Me: Now the thing that, that I need to understand for the budget, is the cabling. What do we have to re-run?
+[00:17:00] Caller 2: So this is good news, probably. Your existing runs are SDI coax, right, from the camera positions to the rack?
+[00:17:08] Me: As far as I know, yeah. The last install left us the, the coax at all three spots.
+[00:17:13] Caller 2: Then in most cases we can reuse the existing SDI cabling that's already run. These cameras all do 3G SDI.
+[00:17:21] Speaker 1: Oh that's, that's huge. Pulling new cable through this building is, it's a project in itself.
+[00:17:27] Me: That catwalk we were joking about, that's, that's exactly why. I do not want to be fishing cable up there.
+[00:17:33] Caller 2: Understood. The only caveat is if a run is damaged or the, the length is marginal, we'd deal with those one-offs.
+[00:17:41] Me: But baseline assumption, reuse the coax.
+[00:17:44] Caller 2: Baseline, yes, reuse the coax. That keeps the install cost way down.
+[00:17:49] Speaker 2: Can I ask a dumb question? Does reusing the cable mean less downtime too?
+[00:17:54] Caller 2: Not a dumb question. Yeah, way less. We're swapping endpoints, not, not re-pulling the whole building.
+[00:18:01] Me: Okay, so that, that's decision two basically. Reuse the SDI we've got wherever it checks out.
+[00:18:07] Caller 1: Perfect. That's the kind of thing that makes the proposal a lot more attractive.
+[00:18:12] Speaker 1: Aaron, didn't we have a weird spot at camera two though? The run by the, the HVAC chase?
+[00:18:18] Me: Oh yeah, there's one run that goes near the, the air handler. I've always wondered about interference on that one.
+[00:18:25] Caller 2: That's exactly the kind of thing a site survey catches. We'd test every run before we commit.
+[00:18:31] Me: Which, okay, that's a good bridge. How do we, how do we actually verify all this?
+[00:18:36] Caller 2: So I'd come out, or one of our techs, and do a full site survey. Measure the runs, check the rack, photograph everything.
+[00:18:44] Caller 1: And that's, that's no cost to you, that's just part of putting together an accurate quote.
+[00:18:49] Me: I like no cost. Um, when could you, when could that happen?
+[00:18:53] Caller 2: I can set up the site survey for next week. I'll set up the site survey for next week, I've got a couple open days.
+[00:19:00] Me: Next week works. Dave, you'd want to be here for that, right?
+[00:19:04] Speaker 1: Yeah, I should be. Tuesday or Thursday are better for me, Mondays are chaos.
+[00:19:09] Caller 2: Noted, I'll aim for Tuesday or Thursday. I'll confirm the exact day by email.
+[00:19:14] Me: And in the meantime, to, to save you a trip blind, let me get you some photos.
+[00:19:19] Caller 2: Oh, that'd help a lot actually. If you can grab the rack and where the runs terminate.
+[00:19:25] Me: Yeah, I'll send over photos of the rack and the cable runs so you've got context before you come.
+[00:19:31] Caller 2: Perfect. That way I show up already knowing roughly what I'm walking into.
+[00:19:36] Speaker 2: Should I, should I be here for the survey too or is that overkill?
+[00:19:40] Me: Up to you, Megan. It might be good for you to see how the positions work with the operator sightlines.
+[00:19:46] Speaker 2: Yeah, I'll try. Depends on the kids' schedule that week but I'll try.
+[00:19:50] Caller 1: No pressure, it's really just, just a measuring and poking-around visit.
+[00:19:55] Me: Okay, so to recap this chunk. All three cameras, reuse the coax where it passes, survey next week, I send photos.
+[00:20:03] Speaker 1: That's what I've got written down too.
+[00:20:05] Caller 2: Great. Now let me, let me get back to which actual model for the three positions.
+[00:20:11] Me: Yeah, that's the, that's the big question in my head.
+[00:20:14] Caller 2: So the middle option, that's the, the workhorse. Great image, manual operation, your volunteers drive it with the joystick.
+[00:20:22] Speaker 2: That's what they're used to, basically. Just nicer.
+[00:20:25] Caller 2: Right. The right-hand column, that one's got the, the auto tracking built in. It follows the pastor on stage.
+[00:20:32] Me: Okay, now that, that's interesting. Tell me how well the tracking actually works, because I've seen demos that oversell it.
+[00:20:40] Caller 2: Fair skepticism. It's gotten a lot better. It locks onto a presenter and keeps them framed as they move.
+[00:20:47] Speaker 1: Does it get confused if, like, the worship team comes out and there's six people?
+[00:20:52] Caller 2: It can. You set zones and a primary subject. In a busy scene you'd often switch to manual for that camera.
+[00:20:59] Me: So it's not, it's not magic. It's a tool for the, the single-presenter moments.
+[00:21:04] Caller 2: Exactly right. For your sermon, it's fantastic. You could almost run that camera with nobody on it.
+[00:21:11] Speaker 2: Which, I mean, that's kind of the dream for us. We're always short an operator on that position.
+[00:21:16] Me: Yeah, that's the, the staffing angle that makes it tempting.
+[00:21:20] Caller 2: If I'm honest, for your room and your volunteer situation, I'm leaning toward the auto tracking one but let's not lock that in.
+[00:21:28] Me: No, agreed, let's not decide the model today. I want to see it track in our actual room first.
+[00:21:34] Caller 2: Which the demo unit will tell us. That's the whole point of phase one.
+[00:21:38] Speaker 1: So the demo you're sending, is that the, the tracking model or the workhorse?
+[00:21:43] Caller 2: I'd send the tracking one so you can evaluate the feature you're, you're curious about.
+[00:21:48] Me: Yeah, send the tracking one. No point demoing the camera we already understand.
+[00:21:53] Speaker 2: Smart. Test the fancy thing, not the, the normal thing.
+[00:21:57] Caller 1: And just so everyone's clear, the demo's no-commitment, we're not, we're not cornering you.
+[00:22:03] Me: I appreciate that. Um, one thing I want to make sure of, does the tracking model cost more than the workhorse?
+[00:22:10] Caller 2: It does, there's a premium for the, the tracking processor. I'll have exact numbers in the quote.
+[00:22:16] Me: Okay. So that's, that's a real tradeoff. Tracking saves an operator but costs more per unit.
+[00:22:22] Speaker 1: Times three again, don't forget.
+[00:22:24] Me: Right, always times three. That's the, the math that keeps me up at night.
+[00:22:28] Caller 2: Well, and you could mix. Tracking on the, the center camera, workhorse on the two side angles.
+[00:22:35] Me: Oh. Huh. I hadn't, I hadn't thought about mixing.
+[00:22:38] Caller 1: A lot of churches do exactly that. Tracking where the preaching happens, manual on the wides.
+[00:22:44] Speaker 2: But wait, wouldn't that, doesn't that bring back the matching problem Aaron was worried about?
+[00:22:49] Me: Good catch. Do the tracking and non-tracking models color match out of the box?
+[00:22:54] Caller 2: Same sensor family, so yes, they, they grade together cleanly. That's the key difference from mixing old and new.
+[00:23:01] Me: Okay, that, that changes things. If they match, mixing is, is actually on the table.
+[00:23:06] Speaker 1: That could save a chunk of money, right? Two workhorses and one tracker.
+[00:23:11] Caller 2: It could. We'll, we'll price it both ways so you can see the delta.
+[00:23:15] Me: Yeah, I'd want both numbers. All-tracking versus the, the mixed setup.
+[00:23:20] Caller 1: We'll put both scenarios in the quote. That's easy.
+[00:23:24] Speaker 2: Sorry, my note's getting messy. So we're not picking the model today, we're testing the tracker in the demo?
+[00:23:31] Me: Correct. Model decision waits for the demo and the, the numbers.
+[00:23:35] Caller 2: And I'd say don't, don't overthink it until you've seen it track live in your space.
+[00:23:40] Me: That's, that's wise. I've talked myself into and out of three configurations in the last ten minutes.
+[00:23:46] Speaker 1: Ha, that sounds about right for a Tuesday.
+[00:23:49] Caller 1: Welcome to buying cameras. It's, it's a journey.
+[00:23:52] Me: Alright. Um, let me ask about the, the processing side. These all go into the ATEM we've got, no converters needed?
+[00:23:59] Caller 2: Correct, straight SDI into the switcher. No conversion, which is another reason the, the install stays simple.
+[00:24:06] Me: Good. Because last time we added a camera there were, there were converter boxes everywhere and it was a mess.
+[00:24:12] Speaker 1: The, the rat's nest era. We've mostly recovered from that.
+[00:24:16] Caller 2: Ha, I'll find out how recovered when I see the rack photos.
+[00:24:20] Me: Oh, it's, it's better than it was. Not, not perfect, but better.
+[00:24:24] Speaker 2: That's basically our, our whole ministry. Better than it was, not perfect.
+[00:24:28] Caller 1: Ha, you should put that on a, on a banner.
+[00:24:31] Me: Don't tempt me. Okay, um, what about control? How do the volunteers actually drive these.
+[00:24:37] Caller 2: So there's a, a hardware joystick controller, or software control. Most teams your size prefer the physical controller.
+[00:24:45] Speaker 2: The volunteers would one hundred percent want the physical one. The software thing would, would scare them off.
+[00:24:51] Me: Yeah, a, a tactile controller is non-negotiable for our crew. Let's make sure that's in the conversation.
+[00:24:57] Caller 2: Noted. We'll spec a controller. There's, there's a couple options and I'll bring those next time.
+[00:25:03] Me: Okay but let's, let's not finalize the controller model today either. One thing at a time.
+[00:25:08] Speaker 1: We're, we're very good at not finalizing things.
+[00:25:11] Me: Ha, it's a, it's a core competency. Alright, where are we on, on timing for the actual install.
+[00:25:18] Caller 1: So that's, that depends on the survey and when you get the quote approved. But let's talk windows.
+[00:25:24] Me: Yeah, because like I said, our, our capital approval runs through the elders and there's a calendar to it.
+[00:25:30] Caller 2: After the survey next week, I can turn a, a detailed quote around pretty quick.
+[00:25:35] Me: How quick is pretty quick? I'm trying to, to backward-plan from the elder meeting.
+[00:25:40] Caller 1: Give us, uh, give us a week after the survey for the, the full quote with both scenarios.
+[00:25:46] Me: Okay so survey next week, quote the week after. That, that could work with my timeline.
+[00:25:51] Speaker 1: When's the next elders meeting, Aaron? Isn't it, isn't it early November?
+[00:25:55] Me: It's, uh, first week of November I think. I need to double-check the, the exact date.
+[00:26:00] Caller 1: If we can get the quote to you before that, you've, you've got a shot at that meeting.
+[00:26:05] Me: That'd be ideal. Get it approved in November, install in, in the new year during a, a slow week.
+[00:26:11] Caller 2: What does your January look like? That's often a, a good install window for churches, post-Christmas lull.
+[00:26:18] Me: January's our, our quietest stretch, honestly. After the, the Christmas services we're all exhausted and attendance dips.
+[00:26:25] Speaker 2: January's perfect. Nobody's, nobody's doing anything fancy production-wise in January.
+[00:26:30] Me: Right, so if we, if we targeted a, a mid-to-late January install, that gives us margin.
+[00:26:36] Caller 1: That works great on our end. Let's, let's pencil January and nail the week down later.
+[00:26:42] Me: Yeah, don't, don't hold me to a specific week yet, but, but January's the target.
+[00:26:47] Speaker 1: I'll start, I'll start thinking about which Sunday we'd, we'd want the cameras down for.
+[00:26:52] Me: Good. We'll need, we'll need a service or two with the old cameras limping while we transition.
+[00:26:58] Caller 2: The nice thing about reusing the coax, the, the cutover is fast. We're not down for days.
+[00:27:04] Me: That, that really is the selling point of this whole thing for me.
+[00:27:08] Speaker 2: Okay, I think my notes are, are caught up. Big picture, we're in good shape.
+[00:27:13] Caller 1: I think so too. This has been, this has been a really productive call.
+[00:27:17] Me: Yeah, let's, um, let's hammer out a few, a few more specifics before we, we drop off.
+[00:30:02] Me: Okay, sorry, I, I was looking at the calendar on my phone. So the specifics.
+[00:30:08] Speaker 1: Did you find the elder date?
+[00:30:11] Me: Not exactly, but, but I'll track it down. Let's, let's go back to the controller for a sec.
+[00:30:17] Caller 2: Sure. You said don't finalize the model, but did you want it, um, in the package quote or separate line?
+[00:30:24] Me: In the package. I don't want it, I don't want it as some surprise add-on later.
+[00:30:29] Speaker 2: Yeah, bundle it. If it's a separate line the elders will, they'll squint at it.
+[00:30:34] Caller 1: Easy enough. So just to, to say it clearly, we'll include the new joystick controller in the package.
+[00:30:41] Me: Yes. Controller's in the package, model TBD. That's, that's a decision.
+[00:30:46] Caller 2: Perfect. The joystick, the physical controller, it, it drives all three heads from one spot.
+[00:30:52] Speaker 2: That's what our, our volunteers need. One panel, not three menus.
+[00:30:57] Me: Right. Okay, timing. We said January. Can we, can we get sharper than just "January"?
+[00:31:04] Caller 1: We can. Looking at our install calendar, um, the back half of the month is open for us.
+[00:31:10] Me: Dave, what's, what's the service calendar look like late January?
+[00:31:14] Speaker 1: Third and fourth Sundays are, are totally normal services. Nothing special booked.
+[00:31:19] Me: Then let's target the third week of January for the install. That, that gives us a buffer after Christmas teardown.
+[00:31:26] Caller 1: Third week of January. Great, I'll, I'll pencil that on our side.
+[00:31:31] Speaker 2: Wait, third week, is that the, the week of the nineteenth?
+[00:31:35] Me: Something like that, I'd have to, to check the exact dates, but third week is the target.
+[00:31:40] Caller 2: Works for me. And remember the cutover's fast because of the reused coax, so a weekday install is fine.
+[00:31:47] Me: Weekday's better actually. Then we, we test all week before Sunday.
+[00:31:52] Speaker 1: Can we, can we do a Tuesday? Tuesdays the building's, it's dead quiet.
+[00:31:57] Me: Tuesday's my vote too. But let's not, let's not lock the day, just the week.
+[00:32:02] Caller 1: Understood. Week locked, day flexible. Noted on our end.
+[00:32:07] Unknown: That's the opposite of how we usually do it.
+[00:32:10] Me: Ha, true. Okay, the, the big one. Money. Where does the number land roughly?
+[00:32:16] Caller 1: So with three cameras, the controller, labor, and reusing cable, you're, you're in the ballpark we discussed.
+[00:32:23] Me: Ballpark being what, so I can, I can prep the elders mentally.
+[00:32:27] Caller 2: After the survey I'll tighten it, but I don't expect it to, to move much from the estimate.
+[00:32:33] Me: And just so everyone hears me say it, the elders are going to have to sign off on the final number.
+[00:32:39] Speaker 1: Yeah, that's not, that's not ours to approve in this room.
+[00:32:43] Me: Right. We can, we can recommend, we can build the case, but the capital sign-off is theirs.
+[00:32:49] Caller 1: Totally understand. We'll, we'll give you a quote clean enough to put in front of them.
+[00:32:55] Speaker 2: Can I ask a, a dumb question while we're on money?
+[00:32:59] Me: There are no dumb questions, only, only dumb AVL budgets. Go.
+[00:33:04] Speaker 2: Could, could we ever add a camera up in the balcony? For like, worship wides.
+[00:33:10] Me: Oh, that's, that's actually a good question. Hmm.
+[00:33:13] Caller 2: A fourth position is, it's doable. The controller handles four heads no problem.
+[00:33:19] Me: So the real question is, can the budget stretch to a fourth camera up in the balcony.
+[00:33:25] Speaker 1: That's, that's a lot more cable though, isn't it? The balcony's a, a long run.
+[00:33:30] Caller 2: It might be. We'd, we'd have to check if there's existing coax up there during the survey.
+[00:33:36] Me: Yeah, I genuinely don't, don't know what's run to the balcony. Could be nothing.
+[00:33:41] Caller 1: Let's, let's not commit to it. But we can, we can quote a fourth camera as an option.
+[00:33:47] Me: Do that. Quote three firm, and, and show me a fourth-camera number separately so I can see it.
+[00:33:53] Speaker 2: I just, I didn't want us to, to redo all this in a year wishing we'd added it.
+[00:33:58] Me: No, that's, that's smart. But we're not deciding the balcony today. It's an open question.
+[00:34:04] Caller 2: Understood. I'll, I'll note the balcony as an option pending cable.
+[00:34:09] Speaker 1: Megan, write that down so we, so we actually remember it this time.
+[00:34:13] Speaker 2: It's written, it's written. Balcony question mark.
+[00:34:17] Me: Okay. So let's, let's nail down who does what before we drop. Action items.
+[00:34:23] Caller 1: On, on the quote, after the survey I'll get you the revised quote by Friday.
+[00:34:29] Me: Friday after the survey. Good, that, that keeps me ahead of the elder meeting.
+[00:34:34] Caller 1: And that'll have the three-camera package, the controller, and the balcony option broken out.
+[00:34:40] Me: Perfect. That's, that's exactly what I need to, to walk in with.
+[00:34:44] Caller 2: The survey, I've got you penciled for, for next week. I'll send a time to confirm.
+[00:34:50] Me: And I'm sending you the, the rack and cable photos today so you're not walking in blind.
+[00:34:55] Speaker 1: Did you, did you already send those?
+[00:34:58] Me: No, that's, that's still on my plate from earlier. I'll do it this afternoon.
+[00:35:03] Caller 2: Appreciate it. The photos help me, me pre-plan the survey.
+[00:35:07] Me: Now, the demo unit. You mentioned a, a trial camera we could play with.
+[00:35:12] Caller 1: Right, the loaner. We can ship you one of the new heads to, to try on your switcher.
+[00:35:18] Me: That's, that's the part I really want, to prove out the switcher compatibility before we buy.
+[00:35:24] Caller 2: Marcus will get the demo unit prepped before it ships, so it'll, it'll come configured for your setup.
+[00:35:31] Me: Who's Marcus?
+[00:35:32] Caller 1: Marcus is, he's our bench tech. He, he loads firmware and tests everything before it leaves.
+[00:35:38] Me: Oh great. Yeah, having it pre-configured saves me, me a whole evening.
+[00:35:43] Speaker 2: When, when would the demo actually show up?
+[00:35:46] Caller 1: Probably, uh, probably a week to ten days out. I'll confirm the delivery date with you two.
+[00:35:53] Me: Good, loop me and, and Dave both on that, since Dave's here when deliveries land.
+[00:35:58] Speaker 1: Yeah, I sign for, for everything that comes to the dock anyway.
+[00:36:02] Caller 2: Will do. I'll, I'll copy both of you on the shipping confirmation.
+[00:36:07] Me: Okay, and on our side, the, the volunteer piece. Megan, that, that's partly you.
+[00:36:12] Speaker 2: The, the training on the new controller, you mean?
+[00:36:15] Me: Training, and figuring out who's even, who's even running camera in January.
+[00:36:20] Speaker 2: I can, I can map that out. Let me, let me look at who's rostered.
+[00:36:24] Me: Actually, let me take the scheduling piece. I'll pull together the volunteer operator schedule for the install week and the first few Sundays.
+[00:36:32] Speaker 2: Okay, and I'll, I'll handle the training plan once we know the controller model.
+[00:36:37] Me: Deal. Training waits on the, the controller spec, which, which waits on the quote.
+[00:36:42] Speaker 1: Everything waits on, on something. The great chain of AVL.
+[00:36:47] Me: Ha. Alright, did I, did I miss anybody's action?
+[00:36:51] Caller 1: I think we've, we've got it. Quote Friday, survey next week, demo shipping, photos today.
+[00:36:57] Caller 2: And the balcony as an open option on the quote.
+[00:37:00] Me: Right. The balcony's a, a question, not a commitment. Everyone clear?
+[00:37:05] Speaker 2: Clear.
+[00:37:06] Speaker 1: Clear.
+[00:37:07] Me: Oh, one, one thing I want to make sure of. The, the existing SDI cable, we're, we're definitely reusing it, right?
+[00:37:14] Caller 2: Assuming the survey confirms it's, it's healthy, yes. That's the plan we locked.
+[00:37:19] Me: Good. Because that, that's half the reason this is affordable at all.
+[00:37:23] Caller 1: It really is. New coax runs would, would've easily doubled the labor.
+[00:37:28] Speaker 1: Hey, random, is anybody's, uh, is anybody's phone blowing up or is that mine.
+[00:37:33] Me: That's, that's definitely yours. Put it on silent, you animal.
+[00:37:37] Speaker 1: Sorry, sorry, it's the, it's the food truck guy about Sunday.
+[00:37:41] Speaker 2: Wait, we're, we're doing a food truck Sunday? Since when?
+[00:37:45] Speaker 1: Outreach thing after second service. Tacos, I think.
+[00:37:49] Me: Okay that's, that's a different meeting, friends. Tacos later.
+[00:37:53] Speaker 2: I'm just saying nobody told the production team about, about tacos.
+[00:37:57] Me: Noted, we'll, we'll have a full tacos sync. Back to cameras.
+[00:38:01] Caller 1: Ha, we'll, we'll let you two sort out the tacos.
+[00:38:05] Me: So after the quote comes Friday, I, I build the elder proposal over that weekend.
+[00:38:11] Caller 2: And if they have, have technical questions, I'm, I'm happy to join a call.
+[00:38:16] Me: That's, that's a great offer. I might take you up on, on a five-minute elder cameo.
+[00:38:22] Caller 1: We do that a lot actually. Engineers on, on the board calls, it, it builds confidence.
+[00:38:28] Me: Yeah, the, the elders like hearing it straight from, from the technical person.
+[00:38:33] Speaker 1: Especially Gary. Gary asks the, the hardest questions.
+[00:38:37] Me: Gary will, Gary will absolutely ask about the warranty. So, so what is the warranty?
+[00:38:43] Caller 2: Standard is, is two years parts and labor on the heads, extendable to five.
+[00:38:49] Me: Put, put both options in the quote. Gary will want, want to see the five-year number.
+[00:38:54] Caller 1: Will do. Two and five year warranty, both, both broken out.
+[00:38:59] Me: Great. That, that quote is getting detailed, I love it.
+[00:39:03] Speaker 2: Should we, should we also note the, the controller training as a line, or no?
+[00:39:08] Me: Note it, but, but zero-dollar for now until we, we know the model.
+[00:39:13] Caller 2: Usually training's, it's included with an install this size, just so you know.
+[00:39:18] Me: Oh, even better. Then it's, it's a non-issue for the elders.
+[00:39:22] Speaker 1: Less for Gary to, to poke at.
+[00:39:25] Me: Exactly. Okay, um, let me read back the, the actions so I've got them right.
+[00:39:31] Caller 1: Go for it.
+[00:39:32] Me: You're getting me the revised quote by Friday. Survey next week, you're confirming the time.
+[00:39:38] Caller 2: Correct on both.
+[00:39:40] Me: I'm sending rack and cable photos today. I'm, I'm pulling the volunteer operator schedule.
+[00:39:46] Speaker 2: And I've got the, the training plan once we know the controller.
+[00:39:50] Me: Right. And the, the demo unit ships, Marcus preps it, you confirm the delivery date to me and Dave.
+[00:39:57] Caller 1: That's, that's all of it. Clean list.
+[00:40:00] Me: And the open items, the balcony fourth camera, and, and I need the exact elder meeting date.
+[00:40:07] Speaker 1: That, that second one's on you, Aaron.
+[00:40:09] Me: It's, it's painfully on me, yes. I'll have it by, by end of day.
+[00:40:14] Caller 2: One, one more from me. When the demo arrives, test it on, on the actual switcher inputs, not a spare.
+[00:40:21] Me: Hundred percent. That, that's the whole point, to catch any, any surprise.
+[00:40:26] Caller 1: Smart. Better to find, find a gremlin on a loaner than, than a purchase.
+[00:40:31] Me: Preach. Okay, I think, I think we're genuinely done.
+[00:40:35] Speaker 2: We finalized things. In, in one meeting. I'm, I'm a little emotional.
+[00:40:40] Me: Don't, don't jinx it, Megan. The quote hasn't, hasn't shown up yet.
+[00:40:44] Caller 1: It'll be there Friday, I promise. We, we don't miss quote dates.
+[00:40:49] Me: Famous last words. But, but I appreciate it, genuinely.
+[00:40:53] Speaker 1: This was, this was way more productive than I, I expected honestly.
+[00:40:58] Caller 2: Agreed. And thanks for, for the photos coming over, that, that really sets up the survey.
+[00:41:04] Me: They'll, they'll be in your inbox within the hour. Anything else from, from your side?
+[00:41:09] Caller 1: Nothing from us. We'll regroup after the, the survey results.
+[00:41:14] Me: Perfect. Dave, Megan, anything, anything we missed in the room?
+[00:41:18] Speaker 2: Just the, the balcony is officially a question, right? Not a yes.
+[00:41:23] Me: Correct. Open question, quoted as an option, decided, decided later.
+[00:41:28] Speaker 1: And tacos.
+[00:41:29] Me: And tacos, which, which are not on this call. Alright.
+[00:41:34] Caller 1: Ha. Thanks everyone. We'll, we'll talk soon.
+[00:41:38] Me: Thanks, you two. Looking forward to, to that Friday quote.
+[00:41:42] Caller 2: It'll be there. Have a, have a good one, folks.
+[00:41:46] Me: You too. Bye now.
+[00:41:48] Speaker 2: Bye.
+[00:41:49] Unknown: Bye bye.
+[00:41:51] Me: Okay, they're, they're off. Let me, let me get those photos sent before I forget again.
+[00:41:57] Speaker 1: And the elder date. You've, you've said that twice now.
+[00:42:01] Me: I know, I know. Writing it on my, on my hand. Elder date, photos, schedule.
+[00:42:07] Speaker 2: I'll start poking at the, the January roster even before the controller's final.
+[00:42:12] Me: That's fine, just, just don't over-build it till we know what we're training on.
+[00:42:17] Speaker 1: I still can't believe we, we agreed to a week. In January.
+[00:42:21] Me: Third week. Pencil, not pen. Don't, don't tell anyone it's firm yet.
+[00:42:26] Speaker 2: My lips are, are sealed. Mostly.
+[00:42:29] Me: Great. Okay, I'm, I'm gonna grab coffee and send those photos. Good meeting, team.
+[00:42:35] Speaker 1: Good meeting. I'll, I'll be at the dock when that demo lands.
+[00:42:39] Me: Perfect. Alright, let's, let's wrap it there.

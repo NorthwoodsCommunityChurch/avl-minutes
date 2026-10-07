@@ -1,0 +1,581 @@
+Lighting console training & support contract call
+Tuesday, January 12, 2027 · 10:30 AM · 60 min · Call
+Transcribed by Minutes. Audio was not recorded.
+
+[00:00:04] Me: Okay, I think we're recording now. Can everybody hear me alright?
+[00:00:09] Caller 1: Yep, loud and clear on my end, Aaron. How are you doing today?
+[00:00:14] Me: Doing good, doing good. Little cold up here, we got like the first real snow of the season last night.
+[00:00:21] Caller 1: Oh wow, already? We haven't gotten anything down here yet. It's still like fifty degrees.
+[00:00:27] Me: Yeah must be nice. Um, my driveway was a sheet of ice this morning, I almost ate it carrying my coffee out.
+[00:00:34] Caller 1: Oh no. Well, hopefully the coffee survived.
+[00:00:38] Me: The coffee survived, that's the important thing. Um, so is Victor joining us too?
+[00:00:44] Caller 2: I'm here, I'm here. Sorry, I was on mute. Hey Aaron, good to meet you.
+[00:00:50] Me: Hey Victor, yeah likewise. So you're gonna be the one doing the actual training, is that right?
+[00:00:56] Caller 2: That's me, yep. I do all the console stuff, the hands-on. Rebecca handles the contract side.
+[00:01:03] Caller 1: I do the boring paperwork part, basically.
+[00:01:06] Me: Ha, somebody's gotta do it. Um, give me one sec, Marcus and Diane are supposed to be walking in here.
+[00:01:14] Speaker 1: Hey, sorry, sorry. The hallway door was locked again. Hey everybody.
+[00:01:19] Me: There he is. Guys, this is Marcus, he runs our lighting volunteer team. And Diane should be right behind him.
+[00:01:27] Speaker 1: Hey, good to meet you folks. Can you hear me okay from over here or should I scoot closer?
+[00:01:33] Caller 1: We can hear you fine, Marcus.
+[00:01:35] Speaker 2: And I'm here too, sorry, I was grabbing a chair. Diane, operations and facilities.
+[00:01:41] Caller 1: Great, nice to meet you Diane.
+[00:01:44] Me: Okay cool, so we got the whole gang. Um, before we dive in, Rebecca, did you guys have a good, uh, did you do anything for the holiday weekend?
+[00:01:54] Caller 1: Oh, we did, yeah. Went to my sister's place, way too much food, the usual. How about you guys?
+[00:02:01] Me: Pretty low key. We had like twenty people from the church over for, uh, for a potluck thing.
+[00:02:08] Speaker 2: It was a lot more than twenty, Aaron. I counted like thirty-five.
+[00:02:12] Me: Was it? Man. No wonder I ran out of chairs.
+[00:02:16] Speaker 1: That's why the chairs in the green room are all gone, by the way. I was looking for those.
+[00:02:21] Me: Oh. Yeah, that might've been me. I'll bring 'em back.
+[00:02:25] Speaker 2: Uh huh. Sure you will.
+[00:02:28] Caller 2: Sounds like a familiar story. The chairs always disappear.
+[00:02:32] Me: Always. Okay, um, let me, let me set up what we're trying to do today so we don't ramble for an hour.
+[00:02:40] Caller 1: Please, yes.
+[00:02:42] Me: So there's really two things on the agenda. One is the training, getting our volunteers up to speed on the new lighting console. And two is figuring out the support contract, like what tier we're signing up for.
+[00:02:55] Caller 1: Perfect, that's exactly what I had down on my side too.
+[00:02:59] Me: Cool. And I think it makes sense to do the contract piece first, because, you know, that kind of determines what training we even get included.
+[00:03:08] Caller 1: Agreed, yeah. The tiers bundle different training amounts, so let's start there.
+[00:03:14] Speaker 1: Works for me. I mostly care about the training part but I'll pay attention, I promise.
+[00:03:20] Me: Ha, thanks Marcus. Um, oh, and one thing before I forget. Victor, did you get a chance to look at the stage layout I sent?
+[00:03:29] Caller 2: Uh, let me think. You sent the, the drawing of the rig?
+[00:03:33] Me: Yeah, I already sent you the stage plan last week, it's got all the fixture positions on it.
+[00:03:39] Caller 2: Oh right, yes, I did see that. That's super helpful actually. Saves us a step.
+[00:03:45] Me: Good, I just wanted to make sure it came through, 'cause the file was kind of big.
+[00:03:50] Caller 2: No, it came through fine. I've got it open in another window right now.
+[00:03:55] Me: Perfect. So you know what we're working with. It's the, uh, the newer board, the one we got in the spring.
+[00:04:02] Caller 2: Right, and that's the one all this training's gonna be built around.
+[00:04:06] Speaker 1: Which, honestly, none of my volunteers know how to run yet. Like, at all.
+[00:04:11] Me: Yeah, that's, that's kind of the whole reason we're doing this.
+[00:04:15] Speaker 2: We've been limping along with just Aaron and one other guy who knows it.
+[00:04:19] Me: Which is not sustainable, especially when I'm out.
+[00:04:23] Caller 1: No, totally. That single point of failure thing, we hear it a lot from churches your size.
+[00:04:30] Speaker 1: Single point of failure, that's me describing Aaron to the elders every month.
+[00:04:35] Me: Ha, thanks buddy. Appreciate that.
+[00:04:38] Caller 2: Well, the goal is to spread that knowledge out so you've got a bench, you know?
+[00:04:44] Me: Exactly. Okay, so. Rebecca, you wanna walk us through the, the different tiers?
+[00:04:50] Caller 1: Sure. Before I do, um, how many people total do you think would be at the training? Just ballpark.
+[00:04:57] Speaker 1: Uh, I'd say somewhere between, what, six and ten? Depends who shows up.
+[00:05:03] Me: Yeah I'd plan for eight-ish and be happy if we get ten.
+[00:05:07] Speaker 1: Volunteers are flaky, is what I'm saying nicely.
+[00:05:10] Caller 2: Eight to ten is a great size for hands-on, honestly. Much more than twelve and people just stand around.
+[00:05:17] Speaker 2: Can I ask a dumb question before we get going?
+[00:05:20] Caller 1: There's no dumb questions, go for it.
+[00:05:23] Speaker 2: Is all of this stuff, like the training and the contract, is that one budget line or two? Because I have to code it.
+[00:05:31] Me: Uh, good question. I think the contract's the AVL operating budget, and the training might be capital, but, honestly I'm not sure.
+[00:05:40] Speaker 2: Okay, I'll figure out the coding later, I just wanted to flag it.
+[00:05:44] Caller 1: We can itemize it separately on the quote if that helps you, Diane.
+[00:05:48] Speaker 2: That would actually be great, thank you.
+[00:05:51] Me: See, this is why we bring Diane. I would've never asked that.
+[00:05:55] Speaker 2: Somebody's gotta think about money around here.
+[00:05:58] Me: Fair. Okay. Um, one more logistics thing and then I'll let Rebecca talk, I promise.
+[00:06:05] Caller 1: No rush, we've got the hour.
+[00:06:08] Me: Is everybody good on time? Like we blocked an hour but if we go a little over is that okay?
+[00:06:14] Speaker 1: I'm good till noon.
+[00:06:16] Speaker 2: I've got a facilities walkthrough at eleven-thirty but that's plenty.
+[00:06:20] Caller 2: We're flexible on our end.
+[00:06:22] Me: Great. Oh, Diane, did the, uh, did the heater in the booth ever get fixed? Random, but I keep forgetting to ask you in person.
+[00:06:30] Speaker 2: Ugh, no. The part's on backorder. The HVAC guy said maybe next week.
+[00:06:36] Me: Next week, okay. It's been freezing up there.
+[00:06:39] Speaker 2: I know, I know. It's on my list. Everything's on my list.
+[00:06:43] Speaker 1: The list that never ends.
+[00:06:45] Speaker 2: The list that never ends, exactly.
+[00:06:48] Me: Alright, okay, for real now. Rebecca, take it away. Walk us through what the options look like.
+[00:06:55] Caller 1: You got it. So we have basically two support tiers that would make sense for you, there's Silver and there's Gold.
+[00:07:03] Caller 1: And the big difference between them is the response time on support and how much on-site training is bundled in.
+[00:07:11] Me: Okay. And just so I'm framing it right for the team, this is an annual thing, a yearly contract?
+[00:07:18] Caller 1: Correct, it renews annually. You can pay monthly or annually and there's a discount if you do the full year up front.
+[00:07:26] Speaker 2: Ooh, I like discounts. Keep talking.
+[00:07:29] Caller 1: Ha, I had a feeling you might, Diane.
+[00:07:32] Me: Yeah, let's definitely dig into that part. Um, but start with the actual, like, what do you get in each one.
+[00:07:40] Caller 1: Sure. So let me share my screen real quick if that works, I've got a little comparison chart.
+[00:07:46] Me: Yeah, can you, is screen share gonna work on this call? Sometimes it's weird.
+[00:07:51] Caller 1: Let's find out. Give me a second here. Can you see a, uh, a blue slide coming up?
+[00:07:57] Me: Not yet. Still just see your, your webcam.
+[00:08:01] Caller 2: You might have to click the little monitor icon, Rebecca, not the camera one.
+[00:08:06] Caller 1: Oh for heaven's sake. There we go. How about now?
+[00:08:10] Me: Yep, there it is. Okay, "Silver versus Gold," I can read it.
+[00:08:15] Speaker 1: Little blurry on our screen but we can make it out.
+[00:08:18] Caller 1: I'll make it bigger. Is that better?
+[00:08:21] Speaker 1: Yeah, that's good.
+[00:08:23] Caller 1: Okay so top row here is the support response time. Silver is next business day, Gold is four-hour guaranteed response.
+[00:08:32] Me: Four hour, even on a weekend?
+[00:08:34] Caller 1: Even on a weekend, which for you guys matters because, you know, your busy day is Sunday.
+[00:08:40] Me: Right, which is exactly when nobody else is picking up the phone.
+[00:08:44] Speaker 1: That's, that's a big deal actually. If the board dies Sunday morning we're dead in the water.
+[00:08:50] Me: Yeah. Okay, keep going, what else is different.
+[00:08:53] Caller 1: So the next row down is the training days included, and this is where it gets relevant to your second agenda item.
+[00:09:01] Speaker 2: This is the part I was waiting for.
+[00:09:03] Caller 1: Silver gets you one on-site day a year, Gold gets you two, plus remote sessions on top of that.
+[00:09:11] Me: Two on-site days with Gold. Okay. Marcus, that's kind of what we talked about needing, right?
+[00:09:17] Speaker 1: Yeah, one day is never gonna be enough for the number of people we're talking about.
+[00:09:22] Caller 2: I'd agree. For eight to ten folks on a board they've never touched, one day you're just scratching the surface.
+[00:09:29] Me: Okay, that's good to know. Um, what's the, I'm almost afraid to ask, what's the price difference?
+[00:09:36] Caller 1: Let me pull up the numbers. Give me just a second to get to the next slide here.
+[00:09:41] Speaker 2: Brace yourselves, everyone.
+[00:09:43] Me: Ha. Yeah, Diane's already clutching the checkbook.
+[00:09:47] Speaker 2: Somebody has to.
+[00:09:49] Caller 1: Okay, here we go, this slide has the annual pricing broken out for both tiers.
+[00:09:54] Me: Alright, let's see the damage.
+[00:10:00] Caller 1: So the Silver tier comes in at thirty-two hundred a year, and the Gold is forty-nine hundred a year.
+[00:10:08] Me: Okay. So we're talking, what, seventeen hundred difference for the two training days and the faster response.
+[00:10:15] Caller 1: That's right. And honestly the training days alone, if you bought them à la carte, would run you more than that difference.
+[00:10:23] Speaker 1: Wait, how much is a training day on its own?
+[00:10:26] Caller 1: A single on-site day purchased separately is twelve hundred, plus the response time stays at next business day.
+[00:10:34] Me: So two separate days would be twenty-four hundred, and we'd still be on the slow support.
+[00:10:39] Caller 1: Exactly. So the Gold really does pay for itself if you know you want the training.
+[00:10:45] Speaker 2: That math actually makes sense for once.
+[00:10:48] Me: Yeah, no, I'm, I'm following that. Victor, from your side, is the Gold training different at all or is it the same curriculum?
+[00:10:56] Caller 2: Same curriculum, same trainer, it's just more time on the floor. With two days we can actually do hands-on scenarios, not just lecture.
+[00:11:05] Speaker 1: That's what I want. Our folks learn by doing, not by watching a slideshow, no offense.
+[00:11:11] Caller 2: None taken, I hate slideshows too.
+[00:11:14] Caller 1: Which is ironic given what I'm doing right now.
+[00:11:17] Me: Ha, yeah, I was gonna say.
+[00:11:19] Speaker 2: Um, can I ask about the response time thing again. The four hour, is that four hours to get someone on the phone, or four hours to fix it?
+[00:11:28] Caller 1: Good question. It's four hours to a live engineer, guaranteed. Resolution depends on the issue, obviously.
+[00:11:36] Speaker 2: Okay, that's what I figured, just wanted it clear for my notes.
+[00:11:40] Me: Yeah, and the Silver next business day, if the board dies Sunday that's, what, Monday afternoon realistically?
+[00:11:47] Caller 1: Realistically Monday, yeah. Next business day starts Monday morning so you're looking at Monday.
+[00:11:53] Speaker 1: That's a no-go for us. We can't be down a whole Sunday and into Monday.
+[00:11:58] Me: Right. Okay, I'm hearing the room lean pretty hard toward Gold. Diane, any heartburn on the number itself?
+[00:12:05] Speaker 2: I mean, forty-nine hundred is in the AVL line we budgeted. It's not nothing but it's not a surprise.
+[00:12:12] Me: Okay. Then I think, unless anybody objects, let's go with the gold support contract for the year.
+[00:12:18] Speaker 1: Yeah, I'm good with that.
+[00:12:20] Speaker 2: Agreed, Gold.
+[00:12:21] Caller 1: Wonderful, I think that's the right call for a room your size.
+[00:12:25] Me: Okay, so that's decided, we're doing Gold. Um, now Rebecca, you mentioned something earlier about a discount if we pay a certain way?
+[00:12:33] Caller 1: Yes, so there's two ways to pay. You can do quarterly billing, which is just the forty-nine hundred split up, or you can pay the contract annually to get the discount.
+[00:12:44] Me: And what's the discount if we pay the whole thing up front?
+[00:12:47] Caller 1: It's eight percent off the annual, so the forty-nine hundred drops to roughly forty-five hundred.
+[00:12:54] Speaker 2: Eight percent. That's, uh, what, about four hundred bucks?
+[00:12:58] Caller 1: Just under four hundred, yeah. Three ninety-two to be exact.
+[00:13:02] Me: Diane, does paying annually mess anything up on your end, cash-flow wise?
+[00:13:07] Speaker 2: No, for something this size we'd rather pay once and take the discount than deal with four invoices a year.
+[00:13:14] Me: Yeah, four hundred bucks is four hundred bucks, and fewer invoices is honestly a win for both of us.
+[00:13:20] Speaker 2: Less for me to chase, so yes, let's do the annual.
+[00:13:23] Me: Okay, so let's, uh, let's pay it annually and grab that discount. Everyone good?
+[00:13:28] Speaker 1: Fine by me, I don't touch the checkbook anyway.
+[00:13:31] Caller 1: Perfect, I'll reflect the annual pricing with the eight percent off in the quote.
+[00:13:36] Me: Great. So Gold tier, paid annually, that's locked in.
+[00:13:40] Speaker 2: Got it written down.
+[00:13:42] Caller 1: Wonderful. So that covers the contract side, do you want to move into the training specifics or is there more on pricing?
+[00:13:49] Me: Um, hang on, one thing on the training that's been nagging me. The two on-site days with Gold, when your trainer comes out, who's paying for, like, the flights and the hotel?
+[00:13:59] Caller 1: Ah. So the training days themselves are included in the Gold price.
+[00:14:04] Me: Right, but the travel. Like Victor getting here.
+[00:14:08] Caller 1: Travel is, um, let me double check on that actually.
+[00:14:12] Speaker 2: Yeah, that's exactly what I want to know. The forty-nine hundred, is the travel cost included in that number or is that extra?
+[00:14:20] Caller 1: So typically travel is billed separately at cost, but let me confirm whether your package rolls it in.
+[00:14:27] Caller 2: It, uh, it depends on how far I'm coming from, and that can change depending on which office covers your region.
+[00:14:34] Me: Okay, so that's a question mark then. Because if it's, you know, two trips out here with flights and hotels, that could be another, what, fifteen hundred, two grand?
+[00:14:44] Caller 2: It could be in that range, yeah, if I'm flying. If I'm driving it's a lot less.
+[00:14:49] Speaker 2: See, that's a real number. I don't want to approve forty-five hundred and then get surprised by another two thousand in travel.
+[00:14:56] Caller 1: That's completely fair. Let me get you a firm answer on the travel before you sign anything.
+[00:15:02] Me: Yeah, can you, when you send the revised quote, can you break travel out as a line so we can see it?
+[00:15:08] Caller 1: Absolutely, I'll itemize it so there's no ambiguity. I just don't want to quote you a wrong number off the top of my head.
+[00:15:15] Me: No, I appreciate that, I'd rather you check. So let's call that open for now, the travel.
+[00:15:21] Speaker 1: Marcus's vote, put it in writing, whatever it is.
+[00:15:25] Me: Ha, yeah, we're learning that lesson the hard way lately.
+[00:15:28] Speaker 2: Don't get me started.
+[00:15:30] Caller 2: For what it's worth, a lot of the regional sites I cover are within driving distance, so there's a decent chance it's mileage, not airfare.
+[00:15:38] Me: That would be ideal. Where are you actually based, Victor, if you don't mind?
+[00:15:43] Caller 2: I'm out of the, uh, the central regional office, but they sometimes reassign us based on who's available that week.
+[00:15:50] Me: Gotcha. So you genuinely might not know yet who's coming.
+[00:15:54] Caller 2: Correct, it could be me, could be one of my colleagues, but the training's identical either way.
+[00:15:59] Speaker 1: As long as they know the board, I don't care who walks in the door.
+[00:16:03] Caller 2: They'll know the board, that I can promise.
+[00:16:06] Me: Okay. So just to recap where we are, we're doing the Gold contract, paying annually for the eight percent, and the one open item is the travel cost for the trainer.
+[00:16:16] Caller 1: That's a perfect summary. And I'll have that travel answer to you when I send the updated quote.
+[00:16:22] Speaker 2: Can you also, on the quote, show the pre-discount and post-discount so our finance folks see the savings?
+[00:16:29] Caller 1: Yes, I'll show the forty-nine hundred, the discount, and the net. Makes it easy for them to approve.
+[00:16:36] Me: Perfect, that'll help a lot when it goes up the chain.
+[00:16:39] Speaker 2: Our finance committee likes seeing the number they're not spending, weirdly.
+[00:16:43] Caller 1: Ha, everybody's finance committee is like that.
+[00:16:46] Me: Um, one more thing while we're on money. The forty-five hundred, that's just support and training, right? There's no license fees or anything hidden in there?
+[00:16:55] Caller 1: No hidden fees. The console license you already own, this is purely the support and training contract.
+[00:17:02] Me: Okay good, 'cause I remember years ago we got burned on a thing that had a separate software maintenance fee.
+[00:17:08] Caller 1: Yeah, we don't do that anymore, it's all bundled into the tier now.
+[00:17:13] Speaker 1: That's new since the last time we dealt with you guys, then.
+[00:17:16] Caller 1: It is, they simplified the whole structure about two years ago. Much less confusing.
+[00:17:22] Me: Good. Alright. So contract-wise I think we're solid pending the travel number.
+[00:17:27] Speaker 2: Agreed. And I'll flag the travel as unknown in the budget line so nobody freaks out.
+[00:17:33] Me: Yeah, just, just put a placeholder. Um, Rebecca, remind me, does the Gold contract auto-renew or do we revisit it next year?
+[00:17:41] Caller 1: It auto-renews unless you tell us otherwise thirty days out, but we always send a reminder before it renews.
+[00:17:48] Me: Okay. I want to make sure we get a heads up, not just a surprise charge.
+[00:17:52] Caller 1: You'll get an email from me personally sixty days before, I promise.
+[00:17:56] Speaker 2: I'll hold you to that.
+[00:17:58] Caller 1: Please do. Okay, so should we shift gears into the actual training logistics now?
+[00:18:04] Me: Yeah, let's, let's do that. This is the part Marcus has been itching to talk about.
+[00:18:08] Speaker 1: I just want to get dates on a calendar so I can start telling people.
+[00:18:12] Caller 2: That's the right instinct, the sooner your volunteers know, the better turnout you'll get.
+[00:18:17] Me: Before we jump, uh, did we fully land the annual payment thing or do you need a formal yes?
+[00:18:23] Caller 1: I've got it as a yes from the room, but the quote will make it official once you sign.
+[00:18:28] Me: Okay, perfect. Just didn't want it floating. Diane, you're good on record with the annual?
+[00:18:33] Speaker 2: Yes, annual, Gold, discount, travel pending. I've got all four written right here.
+[00:18:38] Me: You're the best. Okay. Victor, let's talk about what these two days actually look like on the ground.
+[00:18:44] Caller 2: Great. So the way I usually structure it, especially across two days, is foundations first and then advanced.
+[00:18:51] Me: Okay, walk us through it.
+[00:18:53] Caller 2: Day one is the interface, patching, basic cue building, getting everyone comfortable just moving around the board.
+[00:22:04] Caller 2: And then day two is where we get into the fun stuff, effect engines, timeline programming, and busking live for a service.
+[00:22:12] Speaker 1: That second day is exactly what my people need, half of them freeze when it's live.
+[00:22:18] Me: Yeah, the live piece is the gap for us. Everybody can build a cue sitting in an empty room.
+[00:22:24] Caller 2: Right, and that's intentional on my end. I want them sweating a little with the band playing.
+[00:22:30] Speaker 2: Metaphorically sweating, I hope, our air handlers are fine now.
+[00:22:34] Caller 2: Ha, metaphorically, yes.
+[00:22:36] Me: Okay so, big picture, we're saying two separate days, not one long marathon day, correct?
+[00:22:42] Caller 2: Correct, I strongly recommend two days. One long day and their brains turn to mush by hour four.
+[00:22:49] Speaker 1: Yeah, no, we tried a six-hour thing once and everybody checked out after lunch.
+[00:22:54] Me: Alright. So let's, let's go ahead and book the two on-site training days. Everybody good with that?
+[00:23:00] Speaker 2: I'm good with two days.
+[00:23:02] Speaker 1: More than good, that's what I wanted.
+[00:23:04] Caller 1: Great, I'll note two on-site days on the training line of the quote.
+[00:23:09] Me: Perfect. Now the harder part, when.
+[00:23:12] Speaker 1: So here's my pitch, and hear me out. Back-to-back Saturdays.
+[00:23:16] Caller 2: Oh I love back-to-back, you keep the momentum from week one into week two.
+[00:23:21] Speaker 1: Right, if you space them a month apart they forget everything from the first session.
+[00:23:26] Me: And Saturdays because our volunteers work during the week.
+[00:23:30] Speaker 1: Exactly, weeknights are dead for us, nobody shows up after a work day.
+[00:23:34] Speaker 2: Saturdays are usually open on the calendar too, at least the mornings.
+[00:23:38] Me: Okay so which month? I don't want to do December, we're slammed through Christmas.
+[00:23:43] Speaker 1: Not December, no way.
+[00:23:45] Caller 2: January I'm actually pretty booked, just so you know, our Q1 fills fast.
+[00:23:50] Me: Hmm. February?
+[00:23:52] Caller 2: February I could do, but let me, let me look. March is actually cleaner for me.
+[00:23:58] Speaker 1: March works great on our side, we're past the winter push by then.
+[00:24:02] Me: Diane, anything blowing up in March I should know about?
+[00:24:05] Speaker 2: Not off the top of my head. There's the, um, the missions banquet but I think that's a Friday.
+[00:24:11] Me: Okay. So Victor, are you saying back-to-back Saturdays in March on your end?
+[00:24:16] Caller 2: Let me confirm. Yeah, back-to-back Saturdays in March works for us, I've got the middle of the month wide open.
+[00:24:23] Speaker 1: Middle of March, perfect.
+[00:24:25] Me: Okay, so we're looking at, what, the fourteenth and the twenty-first?
+[00:24:29] Caller 2: Those are the two I was eyeing, yep.
+[00:24:31] Speaker 2: Wait, is the twenty-first, no, that's fine, I was thinking of April.
+[00:24:35] Unknown: the fourteenth is a Saturday?
+[00:24:37] Caller 2: Yes, both Saturdays.
+[00:24:39] Speaker 1: Fourteenth and twenty-first, I'm writing it down right now.
+[00:24:42] Me: Hold on, don't carve it in stone yet, I have to—
+[00:24:44] Speaker 2: —the fourteenth might overlap with—
+[00:24:46] Speaker 1: —no that's the banquet, the banquet's the Friday—
+[00:24:48] Me: Guys, guys, one at a time.
+[00:24:50] Caller 1: Ha, I can hear the room is excited.
+[00:24:53] Me: We are, sorry. Okay. Let me be the responsible one here. I need to check the building calendar for those dates before we fully commit.
+[00:25:01] Speaker 2: That's fair, facilities has to clear it anyway.
+[00:25:04] Me: Right, because if there's a wedding or a funeral on one of those Saturdays, the room's gone.
+[00:25:09] Speaker 2: And the fourteenth, actually, let me think, I feel like there might be a setup for something.
+[00:25:14] Me: See, this is why I don't want to promise the exact date on the call.
+[00:25:18] Caller 2: Totally understand. How about this, you hold the fourteenth and twenty-first as primary, and I'll pencil them.
+[00:25:25] Me: Perfect. Pencil, not pen.
+[00:25:27] Caller 2: Pencil. And if there's a conflict, my backup offer would be the seventh and fourteenth.
+[00:25:33] Speaker 1: Let's just, let's aim for the fourteenth and twenty-first and Aaron confirms.
+[00:25:37] Me: Yeah. So the decision is back-to-back Saturdays in March, target dates the fourteenth and twenty-first, pending my calendar check.
+[00:25:45] Speaker 2: Written down, pending.
+[00:25:47] Caller 1: And I'll reflect March in the quote with a note that dates are being finalized.
+[00:25:52] Me: Great. Marcus, that gives you enough to start recruiting, right?
+[00:25:56] Speaker 1: Oh yeah. Honestly I just need to tell people "March, two Saturdays, block it off."
+[00:26:01] Caller 2: That's the perfect message, keep it simple this early.
+[00:26:04] Speaker 1: I'll round up the volunteers for both days, I've already got like eight people who said they're in.
+[00:26:10] Me: Eight is great. How many can Victor realistically handle in a session?
+[00:26:14] Caller 2: On a single console? I'd say a sweet spot of six to eight hands-on, maybe ten if some just observe.
+[00:26:21] Speaker 1: Okay so eight is basically my cap then.
+[00:26:24] Caller 2: Eight is ideal. More than ten and people are standing around not touching the board.
+[00:26:29] Speaker 1: Got it. I'll aim for eight committed, maybe a couple of alternates in case somebody flakes.
+[00:26:34] Me: Always build in flake insurance.
+[00:26:36] Speaker 2: The flake rate on Saturdays is real.
+[00:26:38] Speaker 1: Tell me about it. But these are my core people, they'll show.
+[00:26:42] Caller 2: One thing, Marcus, if you can, try to get the same eight both Saturdays.
+[00:26:47] Speaker 1: Oh for sure, it's the same crew both days, that's the whole point.
+[00:26:51] Caller 2: Perfect, 'cause day two builds directly on day one. A new person on day two would be lost.
+[00:26:57] Me: Yeah we don't want anybody parachuting in for the advanced day.
+[00:27:00] Speaker 1: No parachuters. Same eight, both Saturdays, I'll make that crystal clear when I ask them.
+[00:27:05] Me: Okay. So to recap the logistics, Marcus handles the people, I handle confirming the room and dates.
+[00:27:11] Speaker 2: And I'll support Aaron on the facilities side, I can pull up the calendar with him.
+[00:27:16] Me: Appreciate that, Diane. Honestly you probably have better access to the master calendar than I do.
+[00:27:21] Speaker 2: I do, the, uh, the room booking system, I'm an admin on it. You're not, I don't think.
+[00:27:27] Me: I'm not, I always have to ask you anyway. So maybe you check the building calendar for those dates and just tell me.
+[00:27:33] Speaker 2: I can do that, but you own confirming it back to Victor, deal?
+[00:27:37] Me: Deal. I'll be the one who sends the final confirmed dates to the vendor.
+[00:27:42] Caller 1: Works for me, I'll wait for Aaron's email on final dates.
+[00:27:46] Caller 2: Same, I'll hold the pencil marks until I hear from you.
+[00:27:49] Me: Okay. What about timing within the day? Like, what hours are we talking?
+[00:27:54] Caller 2: I usually do a solid six hours with a lunch break. Say nine to four, with an hour for lunch.
+[00:28:01] Speaker 1: Nine to four on a Saturday is doable for my crowd.
+[00:28:04] Me: Do you want us to feed them, or—
+[00:28:06] Speaker 2: We should feed them, you don't get Saturday volunteers for six hours without lunch.
+[00:28:11] Speaker 1: A hundred percent we feed them. I'll put pizza or something in the plan.
+[00:28:15] Me: Okay, lunch is on us. Diane, can we, uh, can that come out of the hospitality line and not my AVL budget?
+[00:28:21] Speaker 2: Ha, nice try. We'll figure the lunch out, it's like sixty bucks of pizza, Aaron, relax.
+[00:28:27] Me: I'm just protecting my budget, you know how it is.
+[00:28:30] Caller 2: I will say, fed volunteers learn better. That's a scientific fact I just made up.
+[00:28:35] Speaker 1: Ha, I believe it though.
+[00:28:37] Me: Alright. Victor, does the nine to four need anything from us facility-wise? Power, tables, anything?
+[00:28:43] Caller 2: Good question. I'll need a table off to the side for my laptop, and reliable power at the console position.
+[00:28:50] Me: We've got power at front of house, that's solid.
+[00:28:53] Caller 2: And ideally the house lights controllable so I can show them looks in a dark room and a lit room.
+[00:28:59] Me: That we can do, the house lights are on the same board anyway.
+[00:29:03] Speaker 2: I'll make sure nobody schedules a cleaning crew in the auditorium those mornings.
+[00:29:07] Me: Oh good call, the vacuums would kill us.
+[00:29:10] Speaker 2: The vacuums and the floor scrubber, that thing is like a jet engine.
+[00:29:14] Speaker 1: Last time they ran it during a rehearsal I thought a plane was landing.
+[00:29:18] Me: Ha. Okay so Diane blocks the auditorium, no cleaning, those two Saturdays.
+[00:29:23] Speaker 2: Blocked, assuming the dates clear. Everything's pending the calendar check, which I'll do Monday.
+[00:29:29] Me: Monday's great. That gives us plenty of runway before March.
+[00:29:33] Caller 2: Plenty. The earlier you lock it, the better my own scheduling is too.
+[00:29:38] Me: Understood. So are we, are we good on the training days as a concept? Two days, March, same crew, fed, room blocked?
+[00:29:45] Speaker 1: I'm thrilled, honestly. This is exactly what I've been asking for.
+[00:29:49] Speaker 2: I'm good, pending the calendar.
+[00:29:51] Caller 1: And I've got everything I need to update the quote.
+[00:29:54] Me: Perfect. Victor, before we move on, is there anything the console itself needs to be ready for you?
+[00:30:00] Caller 2: Yes, actually, and this is important, so let me make sure I have your full attention for this next part.
+[00:30:06] Me: You've got it. This sounds like the gotcha.
+[00:30:09] Caller 2: It's a little bit of a gotcha. It's about software versions. Give me one second to pull up my notes.
+[00:30:15] Speaker 1: Uh oh.
+[00:30:16] Me: Don't say uh oh, Marcus.
+[00:30:18] Speaker 1: I'm just saying, every time someone says "software version" it costs us a weekend.
+[00:30:23] Me: That's, that's unfortunately true in this building.
+[00:30:26] Speaker 2: The man's not wrong.
+[00:30:27] Caller 2: Okay, I'm back, found it. So the thing I need to talk to you about is what version your console is currently running.
+[00:30:34] Me: Right now? I'd have to go look. I think we did an update maybe, maybe a year ago?
+[00:30:40] Caller 2: A year ago could be a problem, depending on where you landed. Do you know the number off the top of your head?
+[00:30:46] Me: I don't, not exactly. Marcus, do you remember what we're on?
+[00:30:50] Speaker 1: I want to say three-point-something but don't quote me.
+[00:30:53] Caller 2: Three-point-something is in the right neighborhood, but the exact number really matters here.
+[00:30:58] Me: Okay, let's dig into that, because I'd rather find out now than the morning of day one.
+[00:34:02] Me: Okay, so I walked back and actually looked at the board while you were talking. The screen says three-point-zero-point-six.
+[00:34:09] Caller 2: Three-oh-six. Okay. Yeah, that's older than I'd want. Here's the deal.
+[00:34:14] Caller 2: For the training to be worth anything, I need everyone on the current build. You'd need to update to version 3.2 before we come out.
+[00:34:22] Me: Three-two. Okay. So that's a jump of, what, a couple minor versions.
+[00:34:27] Caller 2: It's bigger than it sounds. Between three-oh and three-two they changed the whole effects engine and the patch workflow.
+[00:34:34] Speaker 1: See, this is the weekend he was talking about.
+[00:34:37] Me: It might be, Marcus. But better a weekend in February than the two Saturdays we're paying for.
+[00:34:43] Caller 2: Exactly right. If I show up and you're on three-oh-six, half of what I teach won't match your screens.
+[00:34:49] Speaker 2: So the training's basically useless unless the update happens first.
+[00:34:53] Caller 2: I wouldn't say useless, but you'd be getting maybe sixty percent value. Not what you're paying for.
+[00:34:59] Me: No, yeah, we're not doing sixty percent. Let's, let's get it to three-two.
+[00:35:04] Caller 2: Good. And I'd ask you to do it at least two weeks before day one, not the night before.
+[00:35:10] Me: Why two weeks, just so we can shake out bugs?
+[00:35:13] Caller 2: Precisely. New build, new quirks. You want to run a couple services on it before I arrive.
+[00:35:19] Me: That's fair. Okay, put me down for it. I'll get the console updated to 3.2.
+[00:35:25] Caller 2: Perfect. Write it down, Aaron, because this is the one thing that sinks these trainings.
+[00:35:31] Me: It's written. It's in the notes, it's in my calendar, it's everywhere.
+[00:35:35] Speaker 1: Should we do it like, right after a weekend so we have the full week to test?
+[00:35:40] Me: Yeah, I'm thinking I do the update on a Monday, we run Wednesday rehearsal on it, then two weekends to be safe.
+[00:35:47] Caller 2: That's the right instinct. That's exactly how I'd sequence it.
+[00:35:51] Speaker 2: How long does the actual update take? Is that an evening or a whole day?
+[00:35:56] Caller 2: On your model, the file's not huge. Maybe forty minutes if nothing goes sideways.
+[00:36:01] Me: And if something goes sideways?
+[00:36:03] Caller 2: Then you call me. That's what the Gold contract is for.
+[00:36:07] Me: Ha, okay, fair enough. Good answer.
+[00:36:10] Speaker 1: Hey, so here's a thing I've been wondering about.
+[00:36:13] Speaker 1: We've still got the old board in the closet, the one we used before this one. The backup.
+[00:36:19] Me: Right, the, the little one. We keep it for emergencies.
+[00:36:22] Speaker 1: Do we have to update that one too? Like, will the old board even run the new version?
+[00:36:28] Caller 2: Ooh. What's the model on the backup?
+[00:36:31] Me: It's the, uh, it's the previous generation. One size down from what we run now.
+[00:36:36] Caller 2: Hm. That might be a problem. Depending on the exact model, three-two may not even install on it.
+[00:36:43] Speaker 2: Wait, so we could end up with a backup that can't talk to the main board?
+[00:36:48] Caller 2: Potentially, yeah. If your main is on three-two and your backup is stuck on an older build, your show files might not open on both.
+[00:36:56] Me: Oof. That, that defeats the purpose of a backup.
+[00:36:59] Speaker 1: That's what I'm saying. A backup you can't actually load the show onto isn't a backup.
+[00:37:04] Caller 2: Let me be honest with you. I don't have the compatibility chart memorized for that older unit.
+[00:37:10] Me: Can you check and get back to us on whether it'll take three-two?
+[00:37:14] Caller 2: I can, but I'll tell you right now, I have a feeling it's going to be a no.
+[00:37:18] Me: Why's that?
+[00:37:20] Caller 2: Because that generation tapped out on the three-oh line. I'm, I'm fairly sure they never got three-two.
+[00:37:27] Speaker 2: So realistically we have no working backup once we update.
+[00:37:31] Me: Yeah. That's, that's actually a real exposure. If the main board dies on a Sunday we'd have nothing.
+[00:37:37] Caller 1: Aaron, if it helps, this is where a lot of churches end up buying a matching second console.
+[00:37:43] Me: I had a feeling that's where this was going.
+[00:37:45] Caller 1: I'm not trying to upsell you, honestly. But a matched pair on the same version is the only true redundancy.
+[00:37:52] Speaker 1: I mean, she's not wrong. We've talked about replacing that old board for like two years.
+[00:37:57] Me: We have. It's on the someday list. Diane, what's, what's the ballpark we'd even be looking at?
+[00:38:03] Caller 1: For a second unit matching your current one, with the training discount I can probably do it in the low five figures.
+[00:38:10] Speaker 2: Low five figures. So like, what, eleven, twelve thousand?
+[00:38:14] Caller 1: Somewhere in there. I'd have to build the real number, but that's the neighborhood.
+[00:38:18] Me: Okay. That's, that's not nothing.
+[00:38:21] Speaker 1: But think about it. If we're already updating, and already training, buying the backup now means it's all one project.
+[00:38:28] Caller 2: From a training standpoint I'd love that, by the way. I could teach failover live on two real boards.
+[00:38:35] Me: Oh, that'd actually be huge for the volunteers. Learning the switchover for real.
+[00:38:40] Speaker 1: Right? Instead of me describing it on a whiteboard like I do now.
+[00:38:44] Speaker 2: And it solves the compatibility thing in one move instead of two.
+[00:38:48] Me: You know what, yeah. Let's, let's lean into it. While we've got everything open, let's order the backup console too.
+[00:38:55] Caller 1: Great, I'll fold a line item into the revised quote so you can see it next to the contract.
+[00:39:01] Me: Yeah, put it in so we can at least look at the whole number together.
+[00:39:05] Speaker 2: I do want to flag, that's a capital purchase, that's not coming out of your operating budget.
+[00:39:11] Me: No, you're right, that's a whole different bucket.
+[00:39:14] Speaker 2: So it would have to go to finance, probably the elders too at that dollar amount.
+[00:39:19] Me: Agreed. So us saying "order it" today is, is really us saying "price it and start the conversation."
+[00:39:26] Caller 1: Totally understood. I'll quote it, you take it through your approvals, nobody's charging anything today.
+[00:39:32] Speaker 1: But in principle we want it, right? Let's not lose the momentum.
+[00:39:36] Me: In principle, yes. I'm into it. Let's see the number.
+[00:39:40] Unknown: It's the right call.
+[00:39:42] Caller 2: For what it's worth, every church I've trained that bought the pair never regretted it.
+[00:39:48] Me: That's good to hear. Okay, so where does that leave the old board? Do we keep it as a third option?
+[00:39:54] Caller 2: Keep it in the closet, sure. A dead-version board is still better than a cardboard box in a true emergency.
+[00:40:01] Speaker 1: Faint praise for the old board.
+[00:40:03] Me: Ha. Rest in peace, old board. You served us.
+[00:40:07] Caller 1: So just to make sure I heard it right, you want the matching second unit on the revised quote.
+[00:40:13] Me: Yes. As a line item, so we can see contract and console side by side.
+[00:40:18] Caller 1: Done. And I'll make sure it's the exact match so it runs three-two out of the box.
+[00:40:24] Me: That's the whole point, yeah. Both boards on the same version, same show files.
+[00:40:29] Speaker 2: And then the update task is only on the one board, not two.
+[00:40:33] Me: Right, the new one ships current. I just have to bring the main one up to three-two myself.
+[00:40:39] Caller 2: Correct. And again, two weeks ahead, run it live first.
+[00:40:43] Me: Two weeks ahead, run it live. Got it, Victor, you've said it enough times that it's tattooed now.
+[00:40:49] Caller 2: Good. That means I did my job.
+[00:40:52] Speaker 1: Can I ask a dumb question about the update real quick?
+[00:40:55] Me: There are no dumb questions, only expensive ones.
+[00:40:58] Speaker 1: Do we lose all our saved shows when we update? Like our palettes and our cue stacks?
+[00:41:04] Caller 2: Great question, not dumb at all. Short answer, no, but you absolutely back everything up first.
+[00:41:11] Me: Oh yeah. I'm cloning the whole show file to a drive before I touch anything.
+[00:41:16] Caller 2: Two drives, ideally. One stays off-site.
+[00:41:19] Me: Listen to this guy. He's speaking my language.
+[00:41:22] Speaker 2: Finally someone who backs things up as much as you nag us to.
+[00:41:26] Me: I feel very seen right now, thank you Victor.
+[00:41:29] Caller 2: Happy to validate you, Aaron.
+[00:41:31] Speaker 1: So the sequence is back up, update, test, repeat on a service, then you come train us on both boards.
+[00:41:38] Me: That's the whole arc. That's the plan.
+[00:41:40] Caller 1: And if the backup purchase gets approved in time, Victor trains on the pair. If not, he trains on the one.
+[00:41:47] Caller 2: Either way works for me. I'd obviously prefer the pair.
+[00:41:51] Me: Let's aim for the pair but not make the training depend on it, in case approvals drag.
+[00:41:56] Speaker 2: That's smart, because finance can be slow this time of year with the year-end stuff.
+[00:42:01] Me: Yeah, don't I know it. Okay. Anything else on the hardware and version side?
+[00:42:06] Caller 2: One more small thing, then I think we're clear on the technical.
+[00:42:10] Caller 2: When you update, there's a prompt about keeping your user profiles. Say yes, or you'll re-enter every operator login.
+[00:42:18] Me: Keep the profiles, noted. That would've bitten me, thank you.
+[00:42:22] Speaker 1: See, this is already paying off and he's not even here yet.
+[00:42:25] Me: Right? Okay, Victor, Rebecca, let's shift to what you need to send us to prep the volunteers.
+[00:42:31] Caller 1: Perfect, that's a good segue. Victor, you want to talk through the prep materials?
+[00:42:36] Caller 2: Sure. So there's a packet I send ahead of every training.
+[00:42:40] Me: Hang on, let me just make sure Marcus and I are tracking the same to-do list before we add more.
+[00:42:46] Speaker 1: Yeah, I've got update the board, order the backup, feed people, block the room.
+[00:42:51] Me: And I've got the version update specifically on me. That one's mine, don't anybody else touch the board.
+[00:42:57] Caller 2: Please, yes, one person owns the update. That's how it should be.
+[00:43:01] Speaker 2: Aaron owns the board, understood by all.
+[00:43:04] Me: Okay. Now we can talk prep packet. Go ahead, Victor.
+[00:46:03] Caller 2: Okay so the packet, I usually get it out about two weeks ahead. It's got the console map, the shortcut sheet, and a little workbook.
+[00:46:11] Me: A workbook, like homework? Marcus, you hear that, homework.
+[00:46:14] Speaker 1: I love homework, I'm the weird one who liked school.
+[00:46:18] Caller 2: It's light, I promise. It just means people walk in knowing where the grand master is.
+[00:46:24] Me: That's actually huge. Half my volunteers have never seen this board's layout.
+[00:46:28] Caller 2: Right, and that's the whole point. So I'll send you the pre-training prep guide and you distribute it however you like.
+[00:46:35] Me: Perfect. Rebecca, is that the same thing as the onboarding PDF you mentioned, or a different doc?
+[00:46:41] Caller 1: Slightly different. The prep guide is Victor's, the onboarding PDF is more of a contract welcome thing. You'll get both.
+[00:46:48] Speaker 2: Can you send it to Aaron and me? I want it on the ops drive so it doesn't live in one inbox.
+[00:46:54] Caller 2: Absolutely, I'll copy you both.
+[00:46:57] Speaker 2: And just to confirm, you'll send you the pre-training prep guide to the ops address too, not just Aaron's.
+[00:47:03] Caller 2: Yes, both addresses, you've got it.
+[00:47:06] Me: Okay, so on my side, you need a volunteer list from me, right? Names, emails, experience level?
+[00:47:12] Caller 2: Exactly that. Experience level especially, so I can pitch the room right.
+[00:47:17] Me: Cool. I'll email you the list of volunteers once Marcus confirms who's actually coming.
+[00:47:22] Speaker 1: Give me till the end of next week. I've got to chase a couple of the Sunday regulars.
+[00:47:27] Me: End of next week works. Then I turn it around to Victor same day if I can.
+[00:47:32] Caller 1: No rush on our end, as long as it's a week or so before the first Saturday.
+[00:47:37] Caller 2: A week ahead is plenty for me to prep.
+[00:47:40] Speaker 2: While we're on prep, can I raise something about capturing the training itself?
+[00:47:45] Me: Yeah, go for it.
+[00:47:46] Speaker 2: We always lose the people who can't make the Saturdays. Can we record both training sessions so new volunteers down the line can watch them?
+[00:47:54] Me: Oh, I love that. That's a yes from me. Victor, any objection to being filmed?
+[00:47:59] Caller 2: None at all, people do it all the time. Just don't sell the footage, I've got a face for radio.
+[00:48:05] Me: crosstalk no promises.
+[00:48:06] Speaker 1: We could put it in the volunteer portal, the one Diane set up.
+[00:48:10] Speaker 2: Right, I can host it there easy. I'll set up a camera to record the sessions, nothing fancy, just a locked-off wide shot.
+[00:48:17] Me: A wide shot of the board and Victor is all we need. Audio's the thing, actually, make sure we get a decent feed of him talking.
+[00:48:24] Speaker 2: Good point. I'll grab a lav or pull a line off the console room.
+[00:48:28] Caller 2: If you take a feed off my headset I'll sound very professional and slightly robotic.
+[00:48:33] Me: That's just you normally, Victor.
+[00:48:35] Caller 2: Fair.
+[00:48:37] Speaker 1: Hang on, Diane, you want me on camera too, or just Victor?
+[00:48:41] Speaker 2: Just the board and whoever's driving it. Keep it simple.
+[00:48:45] Me: Okay, so that's decided, we record both days, Diane runs the camera. Good.
+[00:48:50] Speaker 1: Quick thing while I think of it. For the people who can't practice on the real board between sessions, is there an offline editor they can practice on?
+[00:48:58] Caller 2: Ooh. Good question. There is a visualizer-slash-offline tool, but it's licensed separately.
+[00:49:05] Me: Separately meaning more money.
+[00:49:07] Caller 1: It's either per-seat or a site license, I'd have to pull the pricing. Not included in Gold.
+[00:49:13] Speaker 1: Because otherwise they only touch the board on a Sunday, and that's a bad time to learn.
+[00:49:18] Me: Yeah, that's a real gap. Rebecca, can you at least get us a number on the offline editor so we know what we're looking at?
+[00:49:25] Caller 1: I can. Let me not quote you wrong on the call, I'll put it in writing.
+[00:49:30] Me: That's fine. I'm not committing to it today, I just want to know the cost.
+[00:49:34] Caller 2: Honestly, even one seat shared among the volunteers helps a ton.
+[00:49:39] Speaker 1: One shared seat on a laptop in the booth would be perfect.
+[00:49:42] Me: We'll park that. Add it to the maybe pile, I don't want to blow the budget on day one.
+[00:49:47] Speaker 2: Speaking of the booth, can I float something kind of out there?
+[00:49:51] Me: Always.
+[00:49:52] Speaker 2: If we do end up with a second console, what if we networked it to the youth room so they could learn on it midweek?
+[00:49:59] Me: Huh.
+[00:50:00] Speaker 1: Oh, that's interesting. They're always begging for real gear over there.
+[00:50:04] Caller 2: Technically doable, these boards network fine. You'd want to think about who manages the sessions though.
+[00:50:11] Me: Yeah, that's a whole can of worms. Let's not solve it right now, but I like that we're thinking about it.
+[00:50:17] Speaker 2: Just planting the seed.
+[00:50:19] Me: Seed planted. We'll come back to the youth room idea another day, it's not on the table for March.
+[00:50:25] Speaker 1: Noted, parking lot.
+[00:50:27] Me: Okay. Victor, back to the actual training for a sec. What should the room look like when you walk in?
+[00:50:33] Caller 2: Board powered, updated to 3.2, backed up, and ideally a projector or the wall so I can throw my slides up.
+[00:50:41] Me: We've got the LED wall, we can feed your laptop to it no problem.
+[00:50:45] Caller 2: Perfect. HDMI or do I need an adapter?
+[00:50:48] Me: Bring a dongle just in case, but we run HDMI to the stage box, so you should be fine.
+[00:50:53] Caller 2: I live in dongles. I'll bring a bag.
+[00:50:56] Speaker 2: We'll have coffee and donuts too, that's non-negotiable for a Saturday.
+[00:51:00] Caller 2: Now that's a Gold tier training.
+[00:51:03] Me: See, that's what the money's really for, Rebecca.
+[00:51:06] Caller 1: I'll make sure that's in the contract. Section 4, pastries.
+[00:51:10] Me: crosstalk clause in writing.
+[00:51:11] Speaker 1: Can we get the good donuts though, not the gas station ones.
+[00:51:15] Speaker 2: The budget allows for good donuts, Marcus, relax.
+[00:51:18] Me: Okay, focus, focus. So prep packet comes from Victor, volunteer list goes from me, recording handled by Diane. Am I missing anything on prep?
+[00:51:27] Caller 2: One thing, make sure the operators have their logins sorted before day one so we're not doing admin during training.
+[00:51:34] Me: Good call. I'll create the profiles when I do the update, since I'm in there anyway.
+[00:51:39] Caller 2: Perfect, kill two birds.
+[00:51:41] Speaker 1: And I'll tell people to actually read the prep guide, for what that's worth.
+[00:51:45] Me: You and I both know half of them won't.
+[00:51:48] Speaker 1: Hope springs eternal.
+[00:51:50] Caller 1: Honestly even if they skim it, it helps.
+[00:51:53] Me: Alright. Rebecca, on the offline editor, just so I'm clear, that's separate from the revised quote, or part of it?
+[00:52:00] Caller 1: I'll list it as an optional line item on the revised quote, clearly marked optional, so you can see it but it won't be bundled.
+[00:52:08] Me: That's exactly how I want it. Thank you.
+[00:52:11] Caller 1: And the backup console, do you want that on the quote as a line too?
+[00:52:15] Me: Umm. Yeah, put it on there so finance sees the full picture, but marked as a separate approval.
+[00:52:21] Caller 1: Got it. Gold contract firm, backup and offline editor as optional lines.
+[00:52:26] Me: Perfect summary. That's exactly the structure I need.
+[00:52:30] Speaker 2: This is the most organized vendor call we've had in a while, I'm impressed.
+[00:52:34] Me: Don't jinx it, we've got five more minutes to ruin it.
+[00:52:37] Caller 2: Challenge accepted.
+[00:52:39] Me: Okay, before we wrap, Victor, anything you need from Diane specifically on the recording side?
+[00:52:45] Caller 2: Just that the camera angle shows the fader bank and the screen. If I can see it on the playback, so can the new folks.
+[00:52:52] Speaker 2: I'll frame it wide enough to catch both. I'll do a test record the week before so there are no surprises.
+[00:52:58] Me: Love that. Test record ahead of time, write that down for yourself.
+[00:53:02] Speaker 2: Already in my notes.
+[00:53:04] Me: Okay, Rebecca, I think we're close to the finish line. What's left on your checklist?
+[00:56:02] Caller 1: Okay, my checklist. I'll finalize the Gold contract language, update the pastry clause for Marcus, and I'll send over the revised quote by Friday with the two optional lines marked.
+[00:56:14] Me: Friday works. That gives me time to walk it to finance before the board meets.
+[00:56:19] Speaker 2: And once they sign off, how does payment actually happen?
+[00:56:23] Caller 1: Once you approve, I'll get the invoice over to your finance office directly, so you're not stuck forwarding PDFs around.
+[00:56:31] Me: Perfect. Send it to the operations email, Diane can make sure it lands in the right inbox.
+[00:56:36] Speaker 2: Yeah, send it to me and I'll route it. Don't let it go to Aaron's inbox, it'll die there.
+[00:56:42] Me: That is unfairly accurate.
+[00:56:44] Caller 1: Noted, finance office via Diane. Easy.
+[00:56:48] Me: Okay, now the one I keep going back and forth on. The backup console.
+[00:56:53] Speaker 1: Earlier you said let's order the backup console too, so it's on the quote already.
+[00:56:58] Me: I did say that, yeah. But the more I sit with it, the more I think we hold off for now.
+[00:57:04] Speaker 2: Hold off meaning drop it, or push it to later?
+[00:57:08] Me: Push it. Let's not order the backup console right now. We don't even know yet if the old board can take version three two.
+[00:57:15] Caller 2: That's fair. Let me actually test the old board remotely once Aaron's on three two, and then we'll know if you even need a new one.
+[00:57:23] Me: Exactly. No sense buying hardware to solve a problem we haven't confirmed. So, decision, we're holding off on the backup console for now.
+[00:57:31] Caller 1: Understood. I'll leave it off the quote entirely then, not even as an optional line.
+[00:57:36] Me: Right, pull it off completely. Keep the offline editor as the one optional line, that's it.
+[00:57:41] Caller 1: Done. Gold contract, offline editor optional, no backup console.
+[00:57:46] Speaker 1: See, that's the organized call ruined, took you four minutes.
+[00:57:50] Me: Told you we'd find a way.
+[00:57:52] Caller 2: For the record, I think holding off is the smart move.
+[00:57:56] Me: Appreciate that, Victor. Okay, so to recap for everybody. Rebecca sends the revised quote Friday, invoice goes to Diane for finance, I'm on the update and the login profiles.
+[00:58:07] Speaker 1: I'm chasing volunteers for the two Saturdays in March.
+[00:58:11] Speaker 2: I'm on recording and a test record the week before.
+[00:58:15] Caller 2: And I'll bring the prep guide and test the old board when you're ready.
+[00:58:20] Me: That's the whole picture. Did I forget anybody's thing?
+[00:58:24] Caller 1: You forgot to confirm the trainer travel question, but we can settle that on the quote.
+[00:58:30] Me: Right, travel costs, still open. Flag that clearly when you send it, I don't want a surprise.
+[00:58:36] Caller 1: Will do, I'll break out travel as its own line so there's no ambiguity.
+[00:58:41] Me: Thank you. Okay, I think that's genuinely everything.
+[00:58:45] Speaker 2: Good call, everybody. That was productive.
+[00:58:48] Me: Thanks for jumping on, Rebecca, Victor. We'll talk once the quote's in.
+[00:59:14] Caller 1: Thanks all, have a great week.
+[00:59:17] Caller 2: See you in March. Bye now.
+[00:59:20] Speaker 1: Later.
+[00:59:22] Me: Alright, we're clear.

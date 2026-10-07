@@ -1,0 +1,357 @@
+Livestream outage post-incident review
+Tuesday, December 29, 2026 · 2:00 PM · 45 min · Call
+Transcribed by Minutes. Audio was not recorded.
+
+[00:00:04] Me: Okay, I think it's recording now. Let me just, uh, confirm. Yeah, there we go, the little red dot is up.
+[00:00:11] Caller 1: Can you guys hear me? I feel like I'm coming through kind of quiet.
+[00:00:15] Me: Yeah, Marcus, you're good. You're coming through fine on my end.
+[00:00:19] Caller 3: I can hear everybody. Hey Aaron, happy almost-holidays, by the way. Did you end up taking that week off?
+[00:00:26] Me: Uh, part of it. Ellen, you know how it is, there's always something to set up on a Saturday night.
+[00:00:32] Caller 3: Oh, don't I know it. I think I was in the building until like nine last Sunday chasing down a thermostat.
+[00:00:39] Caller 1: Wait, was that you? I saw the lobby was freezing and I blamed facilities.
+[00:00:44] Caller 3: No, no, facilities gets the blame for the big stuff. The small stuff is all me.
+[00:00:49] Me: Ha. Okay, while we wait on Dana to hop on, how was everybody's weekend otherwise?
+[00:00:55] Caller 1: Honestly pretty good, other than the obvious. My kid had a soccer thing Saturday, we froze for two hours.
+[00:01:02] Caller 3: It's that time of year. Everything's cold and everything's a fundraiser.
+[00:01:07] Unknown: Yeah, exactly.
+[00:01:09] Me: Right? I got three different sign-up sheets passed to me in one service.
+[00:01:14] Caller 1: That's the narthex ministry working overtime.
+[00:01:18] Me: Oh here we go, I think Dana's joining. Let me let her in from the waiting room.
+[00:01:23] Caller 2: Hello? Hi, sorry, I was fighting with my headset. Can everyone hear me okay?
+[00:01:29] Me: Loud and clear, Dana. Thanks for jumping on, I know it's a little early for you guys.
+[00:01:34] Caller 2: No worries at all. Coffee is doing its job. Mostly.
+[00:01:38] Caller 3: We were just complaining about the weather, you didn't miss anything important.
+[00:01:43] Caller 2: Ha, the weather is the one outage I can't put a ticket in for.
+[00:01:48] Me: Alright. Well, let me not keep everybody too long. The reason I pulled this together is to do a little post-incident review on Sunday's stream drop.
+[00:01:57] Me: Nothing formal, nobody's in trouble, I just want us all on the same page about what happened and how we stop it next time.
+[00:02:05] Caller 3: Sounds good. I think a lot of people have questions, so getting ahead of it is smart.
+[00:02:11] Caller 1: Yeah, I already got two emails from small group leaders asking if we're, quote, back online for good.
+[00:02:18] Me: Right, and that's exactly the kind of thing I want us to be able to answer clearly. So let me frame it and then walk the timeline.
+[00:02:26] Me: Um, so for those who weren't in the booth, the livestream went down during the second service. We were fine through worship and then we dropped.
+[00:02:35] Caller 2: Do you have the, uh, the actual clock times? That'll help me line it up against what I see on the network side.
+[00:02:42] Me: I do, I pulled them from the, from the pro presenter log and the stream dashboard this morning. Let me share them.
+[00:02:50] Me: So the service started at ten thirty. Everything's green. The stream drops at approximately ten forty five, so call it fifteen minutes in.
+[00:02:59] Caller 1: Yeah, that tracks with what I saw. We were right at the end of the second song.
+[00:03:04] Me: Right. And then it stays down for, uh, roughly twenty minutes. We came back around eleven oh five, give or take.
+[00:03:12] Caller 3: Oof. So that's basically the entire message opener gone for the online folks.
+[00:03:18] Me: Pretty much, yeah. The first chunk of the sermon, the welcome, the announcement loop, all of it just, gone to the online audience.
+[00:03:26] Caller 2: Okay. And when you say it dropped, was the encoder still showing as live, or did it go fully dark?
+[00:03:33] Me: That's a good question and honestly that's part of what's fuzzy. On our end the dashboard just said offline. Red banner, the whole thing.
+[00:03:42] Caller 1: From the room it looked like the little status light on the encoder was doing the blinky thing it does when it's unhappy.
+[00:03:49] Me: Right, the amber blink. Which usually means it lost signal or lost network, one of the two.
+[00:03:55] Caller 2: Those are very different problems though, from where I sit. One's your gear, one's my pipe.
+[00:04:01] Me: Totally, and that's why I wanted you on, Dana. I don't want to point fingers at the network if it was our box, or vice versa.
+[00:04:09] Caller 3: Hang on, before we get deep, can I ask a dumb operations question?
+[00:04:14] Me: There's no dumb questions, go for it.
+[00:04:16] Caller 3: When this happened, did anybody in the room actually know it was down, or did we find out from a comment online?
+[00:04:23] Me: Uh. Little of both, honestly. Marcus, you want to take that one? You were closer to it.
+[00:04:29] Caller 1: Yeah so, um, I was running volunteers, right, I wasn't glued to the stream monitor. One of the camera kids, uh, noticed the dashboard went red.
+[00:04:39] Caller 1: But by the time she flagged me and I walked over, we'd probably already been down a couple minutes.
+[00:04:45] Caller 3: So there was a lag just in us noticing.
+[00:04:48] Caller 1: A real lag, yeah. We don't have anything that, like, pings us. Somebody has to be looking at the right screen at the right moment.
+[00:04:56] Me: And that's a gap, I'll flag that, we'll come back to it. Let me finish the timeline first so Dana has the full picture.
+[00:05:03] Caller 2: Appreciate that.
+[00:05:05] Me: So, ten forty five we drop. Marcus and his volunteer notice maybe ten forty seven, ten forty eight.
+[00:05:12] Me: I get pulled over around ten fifty. I restart the encoder, I'm restarting the streaming software, I'm doing the usual dance.
+[00:05:20] Caller 1: You were not happy, for the record.
+[00:05:23] Me: No, I was not. Um. And then it comes back on its own, or because of the restart, I genuinely can't tell which, at about eleven oh five.
+[00:05:33] Caller 2: Hm. That ambiguity is going to matter later. Hold that thought.
+[00:05:38] Caller 3: Can I ask, in that twenty minutes, what did the online people actually see? A black screen?
+[00:05:44] Me: They saw the, the platform's default "stream will resume shortly" placeholder. Which is, you know, better than nothing but it's not our branding, it's just generic.
+[00:05:54] Caller 1: Yeah a couple people commented asking if the church forgot to pay the internet bill.
+[00:05:59] Caller 3: Oh, lovely.
+[00:06:01] Me: Right, so that's a perception thing too.
+[00:06:03] Unknown: Mm-hmm.
+[00:06:05] Caller 2: Okay. So from my side, let me tell you what I've got, because I pulled some stuff before this call.
+[00:06:11] Caller 2: I don't show a full outage on the primary circuit at that time. There's a blip, but the primary line, the fiber, it's up.
+[00:06:20] Me: Interesting. So the pipe didn't go down.
+[00:06:23] Caller 2: Not fully, no. Which actually raises the thing I most want to understand, and it's the thing I can't explain yet.
+[00:06:30] Caller 2: You guys have the secondary connection, the cellular failover we put in last spring, right? The backup line.
+[00:06:37] Me: We do, yeah. The whole point of that was exactly this scenario.
+[00:06:41] Caller 2: Right. So here's my open question for the group. If the primary even hiccuped, why didn't the backup line take over automatically? That's what it's there for.
+[00:06:52] Me: Yeah. That's, honestly that's been bugging me all morning too.
+[00:06:56] Caller 3: Wait, I thought the whole reason we paid for that second line was so this exact thing couldn't happen.
+[00:07:02] Caller 2: It is. That's why I'm confused. On paper it should have just, seamlessly carried the traffic and nobody online notices a thing.
+[00:07:11] Caller 1: So it just, didn't do its job?
+[00:07:14] Caller 2: Maybe. Or it did, and something else is the real failure, and the backup is a red herring. I don't want to assume yet.
+[00:07:22] Me: Okay, so let me write that down as an open item because I don't think we can close it on this call.
+[00:07:28] Me: The failover not kicking in, that's a, that's a question mark we need to actually dig into.
+[00:07:33] Caller 2: Agreed. I'd need to look at the firewall logs and the cellular modem logs side by side, and I haven't correlated those yet.
+[00:07:41] Caller 3: How long does that take you? Roughly.
+[00:07:44] Caller 2: Depends what the logs even kept. Some of this stuff rolls over fast, so I want to pull them before they age out.
+[00:07:51] Me: Let's definitely make sure we grab those. Losing the evidence would be the worst outcome here.
+[00:07:56] Caller 2: Yep. I'll flag that for myself.
+[00:07:59] Caller 1: Sorry, quick side question, is this the same cellular thing that we had trouble activating back in, what, April?
+[00:08:06] Me: It is. Remember it took like three tries and two different SIM cards.
+[00:08:11] Caller 1: Oh man, I blocked that out. That was a whole Saturday.
+[00:08:15] Caller 2: Yeah that install was, uh, it was not our smoothest. I'll be honest.
+[00:08:20] Caller 3: Should that make us nervous about whether it was ever set up right?
+[00:08:24] Caller 2: It's a fair thing to keep in the back of our mind. But I don't want to jump to blaming the install before I see logs.
+[00:08:31] Me: That's fair. Let's not pre-judge it. Um, let me pause and make sure I've captured the room's perspective too.
+[00:08:38] Me: Ellen, from the operations side, is there anything you saw or heard that I should fold into this?
+[00:08:44] Caller 3: Yeah, a couple things. One, the front desk got calls. Like actual phone calls, from people watching at home who couldn't get in.
+[00:08:52] Caller 3: And the volunteer at the desk had no idea what to tell them because nobody told her anything was wrong.
+[00:08:58] Me: Right. The communication gap again.
+[00:09:01] Caller 3: Exactly. So it's not just the tech failing, it's that when the tech fails we don't have a, a plan for what everybody else does.
+[00:09:09] Caller 1: That's fair. I was heads-down trying to fix it, I wasn't thinking about the lobby at all.
+[00:09:14] Caller 3: And you shouldn't have to. That's my point, there should be a thing we all just, follow.
+[00:09:19] Me: Noted. I think there's a bigger theme emerging here about process, not just the one box that broke.
+[00:09:26] Caller 2: Can I ask a clarifying thing on the timeline while we're here?
+[00:09:30] Me: Please.
+[00:09:31] Caller 2: When you restarted the encoder, did you also power-cycle the little modem, or just the encoder itself?
+[00:09:38] Me: Just the encoder, I'm pretty sure. I didn't touch the networking gear. I didn't want to make it worse, honestly.
+[00:09:45] Caller 2: Okay, that's actually useful. Because if you didn't touch the modem and it came back anyway, that tells me something.
+[00:09:52] Caller 1: See, this is why we need you on these calls, Dana, I would've unplugged everything in a panic.
+[00:09:58] Caller 2: Ha, the classic turn-it-all-off-and-pray approach. Sometimes it works, to be fair.
+[00:10:04] Caller 3: Don't tell my IT people I said this but that approach has saved me more than once.
+[00:10:09] Caller 2: It's on the recording now, Ellen.
+[00:10:11] Caller 3: Oh no.
+[00:10:13] Me: Ha. Okay, let me, let me reel us back. So just to recap the timeline so far so everyone agrees before we go to causes.
+[00:10:21] Me: Service at ten thirty, stream drops about ten forty five, we're down roughly twenty minutes, back around eleven oh five. Does that match everybody's memory?
+[00:10:30] Caller 1: Yep. That's what I saw.
+[00:10:32] Caller 3: That matches the front desk calls too, they started coming in right around ten fifty.
+[00:10:37] Caller 2: And it matches my blip on the primary, roughly. The timing lines up.
+[00:10:42] Me: Good. So we've got a shared timeline. The two big open threads I'm hearing are, one, why the box dropped at all, and two, the failover question Dana raised.
+[00:10:52] Caller 2: Those might be the same root cause or two totally separate ones, just so we're clear.
+[00:10:57] Me: Right, don't want to conflate them. Um, before we dig into causes, anybody need a water break or are we good to keep rolling?
+[00:11:05] Caller 1: I'm good.
+[00:11:06] Caller 3: Keep going, I've got a hard stop at the top of the hour.
+[00:11:09] Me: Oh, good to know, Ellen. Let me make sure we get the decisions done before you have to drop then.
+[00:11:14] Caller 3: Appreciate it. I can read the notes for anything after.
+[00:11:18] Me: Perfect. Okay, so one more framing thing and then Dana I want to get into the encoder with you.
+[00:11:24] Me: The reason this one stings is we've been pretty solid for like six months. This is the first real drop since the summer.
+[00:11:31] Caller 1: Yeah, people got used to it just working, which is why the comments were kind of, spicy.
+[00:11:37] Caller 3: Spoiled by reliability. There are worse problems.
+[00:11:40] Me: Ha, true. Okay. Dana, let's talk about what the encoder was actually doing that morning.
+[00:11:46] Caller 2: Yeah. So this is where it gets a little murky, and I'll be upfront that the logs don't give me a clean answer.
+[00:11:53] Caller 1: Uh oh.
+[00:11:54] Caller 2: Yeah, "uh oh" is about right. Let me walk you through what I can and can't see.
+[00:15:02] Caller 2: So when I pulled the encoder logs, the last clean entry is at ten forty two, and then there's just nothing until it boots back up.
+[00:15:11] Me: Nothing meaning no error, or nothing meaning the log itself cut off?
+[00:15:16] Caller 2: Nothing meaning the log just ends mid-stride. No crash dump, no shutdown event, no "I'm updating now" message. It just stops.
+[00:15:24] Caller 1: That's creepy. So it didn't even know it was dying.
+[00:15:28] Caller 2: Either it didn't know, or whatever took it down also took down its ability to write the log. Both are possible.
+[00:15:35] Me: Okay so help me understand the two scenarios you're weighing.
+[00:15:39] Caller 2: Scenario one, the box just hard crashed. Thermal, memory, something hardware-ish, and it fell over and rebooted itself.
+[00:15:47] Caller 2: Scenario two, it pulled a firmware update overnight, staged it, and then applied it at the worst possible moment and rebooted into the new version.
+[00:15:56] Caller 1: Wait, it can just do that on its own? Mid-service?
+[00:16:00] Caller 2: If auto-update is on, yeah. A lot of these boxes check in on a schedule and some of them don't care what you're doing.
+[00:16:07] Caller 3: That is horrifying. Who designed it to update during a live event?
+[00:16:11] Caller 2: Nobody designed it for that, Ellen, it just has no idea a service is happening. It's dumb that way.
+[00:16:17] Me: Is there a way to tell after the fact which one it was? Like a version number we can check?
+[00:16:23] Caller 2: That's the frustrating part. I checked the firmware version this morning and it's on the current build. But I don't have a record of what it was on before Sunday.
+[00:16:33] Me: Ah. So it could've already been on that version, or it could've jumped to it Sunday and we just can't prove it.
+[00:16:40] Caller 2: Exactly. We didn't have the before-picture. So honestly, we still don't know if it crashed or updated itself.
+[00:16:48] Caller 1: So the log's a dead end and the version's a dead end.
+[00:16:52] Caller 2: Pretty much. I hate giving you a shrug, but I'd rather be honest than make something up.
+[00:16:58] Me: No, I appreciate that. I'd rather know we don't know than guess wrong.
+[00:17:03] Caller 3: Okay but here's my operations brain talking. Does it actually matter which one it was, if the fix is the same either way?
+[00:17:11] Me: That's a really good question, Ellen. Dana, does the remediation change depending on the cause?
+[00:17:17] Caller 2: Partly. If it's a firmware auto-update, the fix is easy and specific, we turn off automatic firmware updates on that encoder and the problem can't recur that way.
+[00:17:27] Caller 2: If it's a hardware crash, that's harder, because we can't prevent a crash, we can only detect it faster and recover faster.
+[00:17:34] Me: Right. So the update one has a clean prevention, the crash one is more about response time.
+[00:17:40] Caller 2: Correct. And here's the thing, there's no downside to disabling auto-updates regardless. I'd want to do manual firmware anyway on anything that touches a live feed.
+[00:17:50] Me: I'm fully on board with that. I never want that box deciding to reboot in the middle of worship.
+[00:17:56] Caller 1: Can we just, like, agree to that one right now? Feels like a no-brainer.
+[00:18:00] Me: Yeah, let's lock it. Decision one, we turn off auto firmware updates on the encoder, and I'll schedule manual updates on a weekday instead.
+[00:18:09] Caller 2: I can walk you through where that toggle is, it's buried in a menu but it's not bad.
+[00:18:14] Me: Perfect. We'll do that together this week.
+[00:18:17] Caller 3: Good. That's one concrete thing. I like concrete things.
+[00:18:21] Me: Okay, so that covers prevention for the update scenario. Now the crash scenario, Dana, you said it's about detecting faster.
+[00:18:29] Caller 2: Right. So the worst part of Sunday wasn't that it went down, honestly. Stuff goes down. The worst part is it took you, what, five, ten minutes to even notice?
+[00:18:39] Me: Yeah. I was running the service, I wasn't staring at the stream health. Marcus flagged it from a text from his wife, basically.
+[00:18:46] Caller 1: Yeah, my wife was watching from home with the kids and she texted me "it's frozen." That was our monitoring system.
+[00:18:53] Caller 3: Our monitoring system is Marcus's wife. Let's put that in the report.
+[00:18:57] Caller 1: Please don't.
+[00:18:59] Caller 2: So this is the big one for me. You need an alert that fires the second the stream drops, so you're not relying on comments or a text message.
+[00:19:08] Me: What does that look like in practice? Is that something you can set up on your end?
+[00:19:13] Caller 2: Yeah, there are a few ways. The platform itself can usually ping you when it stops receiving data. Or I can watch it from our monitoring side and have it alert.
+[00:19:23] Caller 1: Where does the alert go, though? Like, if it goes to Aaron's phone and Aaron's on stage, that doesn't help.
+[00:19:29] Me: Good point. It'd need to go to whoever's at the back of house, or the whole production channel.
+[00:19:35] Caller 2: We can send it to a group. Text, email, whatever you want. The point is somebody in that room knows within fifteen seconds, not fifteen minutes.
+[00:19:44] Me: I love that. Okay, decision two, we add stream-down monitoring with an alert to the production team. Dana, can you own the setup on that?
+[00:19:53] Caller 2: Yeah, I'll scope it and bring back the options. I want to make sure the alert's reliable and not spammy, false alarms would be worse than nothing.
+[00:20:02] Me: Agreed, a boy-who-cried-wolf alert is useless. But yes, let's commit to building it.
+[00:20:08] Caller 3: Two decisions before my hard stop. I'm thrilled.
+[00:20:11] Caller 1: Hey, can I throw out a bigger-picture idea while we're on it?
+[00:20:15] Me: Go for it.
+[00:20:16] Caller 1: So what if we just ran everything through a cloud encoder? Like, take the physical box out of the equation entirely and do the encoding up in the cloud.
+[00:20:25] Caller 2: Hmm. You can do that, but you'd still have an appliance on-site pushing the raw feed up, so you don't fully escape the hardware.
+[00:20:33] Caller 1: Yeah but the cloud part wouldn't just randomly reboot on us, right? It's somebody else's problem to keep it up.
+[00:20:40] Caller 2: In theory. But now you're betting everything on your upload bandwidth, and if that hiccups, you're down again, just a different way.
+[00:20:48] Me: And doesn't that add latency and a monthly cost? I don't want to re-architect the whole chain because of one bad Sunday.
+[00:20:55] Caller 1: No, totally, I'm just thinking out loud. Throwing spaghetti.
+[00:20:59] Caller 2: It's a legit option for some setups, but I wouldn't jump to it from where you are. I think the two fixes we just named get you most of the way.
+[00:21:08] Me: Yeah. Let's park the cloud encoder idea. Not a no forever, just not today's decision.
+[00:21:14] Caller 1: Parked. That's fair.
+[00:21:16] Me: Honestly, if we're throwing out ideas, we could just stream the whole thing from my phone and call it a day.
+[00:21:22] Caller 1: Ha! Vertical video for Jesus.
+[00:21:25] Caller 3: I'd watch it. Portrait mode, shaky cam, very authentic.
+[00:21:29] Me: Don't tempt me, the budget would love it.
+[00:21:32] Caller 2: Please no. I will personally drive over and take your phone.
+[00:21:36] Me: Ha, okay, okay. Moving on.
+[00:21:39] Caller 3: Hey, before I lose you all, can I just confirm the failover thing is still open? Because that one worries me more than the encoder, honestly.
+[00:21:47] Caller 2: Yeah, Ellen, that's still unresolved. The backup internet should have taken over when the primary blipped and it didn't, and I don't know why yet.
+[00:21:56] Caller 3: That's the one that keeps me up. We pay for that second line specifically so this doesn't happen.
+[00:22:02] Caller 2: I know. I need to actually audit that failover because right now we're paying for redundancy that isn't redundant.
+[00:22:09] Me: Okay, let's make sure that's captured as its own action, separate from the encoder stuff.
+[00:22:14] Caller 2: Agreed. I'll — hang on, I think my — can you guys still, hello?
+[00:22:19] Caller 1: You're breaking up, Dana.
+[00:22:21] Me: Dana, you there? I think we lost her.
+[00:22:24] Caller 3: Oh the irony. The network engineer dropped off the call.
+[00:22:28] Caller 1: Somebody text her that her internet failed over to nothing.
+[00:22:32] Me: Ha. Give her a sec, she'll probably rejoin.
+[00:22:35] Caller 3: While we wait, Aaron, I do have to say, I think this is exactly the right instinct, doing a proper review instead of just patching it.
+[00:22:43] Me: Thanks. I just didn't want this to be one of those things where we fix it quietly and then it bites us again in three months.
+[00:22:50] Caller 1: And people remember the down time way more than they remember the hundred good Sundays.
+[00:22:55] Caller 3: That's church media in a nutshell.
+[00:22:58] Caller 4: Hey, sorry, can you hear me? My whole wifi just dropped.
+[00:23:02] Me: Yeah, we got you back. You came in on a different line so you look like a new caller on my end.
+[00:23:08] Caller 4: Ha, perfect, so now there are two of me. Anyway, sorry, where were we?
+[00:23:13] Caller 1: You were about to commit to auditing the failover and then the universe muted you.
+[00:23:18] Caller 4: Right, yes. So the failover audit, I'll own that. I want to physically test it, force the primary down and watch whether the backup actually picks up.
+[00:23:28] Me: When can you realistically get in to do that? It kind of needs to be off-hours so we don't knock anything else offline.
+[00:23:35] Caller 4: Yeah, I wouldn't do that during a service, obviously. Let me look at my week and get you a time. Probably a weekday evening.
+[00:23:42] Me: Works. I'll make sure the building's open for you whenever you pick.
+[00:23:46] Caller 3: Okay you two, I've got about five minutes before I turn into a pumpkin. Can we make sure the decisions are crisp?
+[00:23:53] Me: Yes. Let me read them back. One, disable automatic firmware updates on the encoder, I'll handle that with Dana this week.
+[00:24:01] Me: Two, set up stream-down monitoring with an alert to the production team, Dana to scope and build.
+[00:24:07] Caller 4: Both confirmed on my side. And then the failover audit is the third work item, but that's an action, not really a decision, if that distinction matters to you.
+[00:24:17] Me: It does, actually, I'm trying to keep decisions and tasks separate in the notes so they don't blur together.
+[00:24:23] Caller 3: Bless you for that. I've read too many meeting notes where everything's a maybe.
+[00:24:28] Caller 1: Speaking of, are we going to write anything down for the volunteers? Because part of Sunday was nobody in the room knew what to do.
+[00:24:35] Me: Yes, that's exactly where I want to go next, the runbook and the volunteer side. Ellen, can you stick for two more minutes or should we do that after you drop?
+[00:24:44] Caller 3: I can give you two. Go fast.
+[00:24:46] Me: Okay. So the gap on Sunday wasn't just the box, it was that when it went down, nobody at front of house knew the steps.
+[00:24:54] Caller 1: Right. I knew to restart the encoder because I've seen Aaron do it, but the other volunteers just kind of froze.
+[00:25:00] Caller 4: And to be fair, restarting it blind is risky. If it had been mid-update, a power cycle could've bricked it.
+[00:25:07] Me: Oof. Good thing we got lucky then.
+[00:25:10] Caller 4: Very lucky. Which is another reason I want that alert and a written procedure, so it's not luck next time.
+[00:25:16] Caller 3: Okay, so what's the actual decision on the volunteer piece? Give me the one-liner.
+[00:25:21] Me: I think it's, we write a simple runbook for stream failures and we train the volunteers on it. But let me make sure Marcus and I scope that right before I commit the wording.
+[00:25:31] Caller 1: Yeah I'd want to sit down and actually figure out the steps before we promise a document.
+[00:25:36] Caller 3: Fine, but don't let it die in a parking lot. I want to see that runbook exist.
+[00:25:41] Me: It'll exist, I promise. We'll firm up the exact decisions on the volunteer stuff in the next few minutes.
+[00:25:47] Caller 3: Good. Okay, I've got maybe three minutes. Keep going, I'm listening while I pack up.
+[00:25:52] Me: Alright. Dana, one more encoder question before we shift fully to the people side.
+[00:25:57] Caller 4: Shoot.
+[00:25:58] Me: If we can't tell whether it crashed or updated, is there anything we should be logging going forward so next time we're not guessing?
+[00:26:05] Caller 4: Yes, absolutely. I'd set up the encoder to ship its logs off-box so even if it reboots, we keep the history.
+[00:26:13] Me: Can you roll that into the monitoring setup, or is that separate?
+[00:26:17] Caller 4: I'll fold it into the same work. Centralized logging plus the down-alert, same project basically.
+[00:26:23] Caller 1: That's great, because right now our record-keeping is, as established, my wife's text messages.
+[00:26:29] Caller 3: I'm still not over that.
+[00:26:31] Me: Okay. So just so I've got it, the encoder-side stuff is three things, auto-updates off, down-alert, and off-box logging.
+[00:26:40] Caller 4: Correct. First one's a quick toggle, the other two I'll scope together and bring back numbers.
+[00:26:46] Me: Perfect. Alright, let's pivot to the volunteer and process side, which is really where I want to land before we wrap.
+[00:26:53] Caller 3: Two minutes, Aaron, make them count.
+[00:26:55] Me: Ha, no pressure. Okay, so the big question in my head is what a volunteer actually does in the first thirty seconds of a drop.
+[00:30:02] Me: Okay so I wrote down the thirty-second thing. First move for a volunteer is not to touch the box, it's to flip ProPresenter to a holding graphic so the online folks aren't staring at a frozen frame.
+[00:30:14] Caller 1: Yeah, that's the piece we didn't have. On Sunday the stream just sat there dead and people at home thought the whole service crashed.
+[00:30:22] Me: Right. So I think we should build a holding slide in pro presenter that just says we're experiencing technical difficulties, and the volunteer's first job is to pull it up.
+[00:30:32] Caller 3: I like that. That's a real decision I can get behind. Who owns making the slide?
+[00:30:37] Me: I'll take the slide. It's five minutes of design work, I just have to actually do it.
+[00:30:42] Caller 1: Famous last words.
+[00:30:44] Me: Fair. I'll put that holding slide together before Sunday so it's in the rotation this weekend.
+[00:30:50] Caller 3: Good. That's decision one for the volunteer side. Holding slide exists, slide comes up first.
+[00:30:56] Caller 4: And that buys us time, which is the whole point. The holding slide goes up, then the volunteer follows the written steps instead of improvising.
+[00:31:04] Me: Exactly. Which gets me to the runbook. Marcus, this is the one you and I need to co-own.
+[00:31:10] Caller 1: Agreed. What's the scope, though? I don't want a forty page binder nobody reads.
+[00:31:15] Me: No, the opposite. I want to write a one page runbook for the Sunday volunteers. Literally one page, big numbered steps.
+[00:31:22] Caller 3: One page is the right answer. If it's longer than one page they won't read it under stress.
+[00:31:28] Caller 1: Okay, one page I can get behind. What are the steps, roughly, so we're not promising a blank document?
+[00:31:34] Me: Step one, put up the holding slide. Step two, check the encoder status light. Step three, call me or text me. Step four, only restart if I say so.
+[00:31:44] Caller 4: I'd actually add a line there. Don't restart during the overnight update window, but since we're turning auto-updates off, that risk mostly goes away.
+[00:31:53] Me: Right, good, I'll word that carefully. So the decision is we write the one page runbook and we train the volunteers on it.
+[00:32:00] Caller 3: Yes. Final answer this time, not a parking lot?
+[00:32:03] Me: Final answer. I'll own the draft. I'll have the runbook drafted by Friday and send it around for comments.
+[00:32:09] Caller 1: And once you've got the draft, I can run the volunteers through it on Saturday before the second service setup. We've got a window there anyway.
+[00:32:17] Me: That's perfect. So Friday draft, Saturday training, Sunday it's live.
+[00:32:21] Caller 3: Now that is a plan. I'm genuinely impressed, write that one down in bold.
+[00:32:26] Me: Noted. Marcus, you good owning the Saturday walkthrough with whoever's on the schedule?
+[00:32:31] Caller 1: Yep, I'll pull the roster and make sure the right people are there. Probably three or four of them.
+[00:32:37] Caller 3: Okay, that's my two minutes and then some. Before I drop, is there anything you need from operations specifically?
+[00:32:44] Me: Actually yes, one thing, and it's the backup internet question from earlier.
+[00:32:48] Caller 3: The one that never failed over.
+[00:32:50] Me: That one. Dana, remind everybody where that landed, because I don't think we closed it.
+[00:32:55] Caller 4: We didn't. The short version is the secondary line is configured on the firewall but it didn't take over when the primary hiccuped. I need to audit the fail over config on the firewall to figure out why.
+[00:33:07] Caller 3: So is the problem the config, or do we just not have enough of a second line?
+[00:33:12] Caller 4: Could be either. Honestly the DSL backup we have is pretty weak. Even if failover worked, I'm not sure it'd carry the stream.
+[00:33:20] Caller 3: Okay, so that's two different things. Fix the failover, and maybe buy a better backup line.
+[00:33:26] Me: Right, and the second one is a budget conversation, which is yours, Ellen.
+[00:33:31] Caller 3: It is. I'm not going to decide the spend on this call, but I can start getting numbers. I'll get a quote for a redundant internet line and bring it to finance.
+[00:33:40] Me: That's all I need, just the quote to start the conversation.
+[00:33:43] Caller 3: Done. I'll reach out to a couple providers this week. Don't hold your breath on the timeline, those sales guys are slow.
+[00:33:50] Caller 1: Slower than our encoder, even.
+[00:33:52] Caller 3: Ha. Okay, I am actually leaving now. Great job everybody, this is the most organized post-mortem I've been in. Bye.
+[00:33:59] Me: Thanks Ellen. Bye.
+[00:34:01] Caller 1: See ya.
+[00:34:02] Caller 4: Bye.
+[00:34:04] Me: Okay. So with Ellen gone, let's nail down the technical actions that are yours, Dana, so I've got dates.
+[00:34:11] Caller 4: Sure. The firewall failover audit, I can get into that this week. I don't want to put a hard date because I have to coordinate a maintenance window, but I'll have findings next week.
+[00:34:21] Me: That's fine, I'll note it as in progress without a date. And the monitoring alert?
+[00:34:26] Caller 4: That one I can commit to. I'll get the stream down alert set up by Friday. The off-box logging I'll have same timeframe since it's the same tooling.
+[00:34:35] Me: Great. So Friday for the alert and logging, failover audit is next week-ish.
+[00:34:40] Caller 4: Correct. And just to be clear, the alert is the thing that would've saved you Sunday. You'd have gotten a text before the volunteers even noticed.
+[00:34:49] Caller 1: Instead of my wife noticing.
+[00:34:51] Caller 4: Instead of your wife, yes. We're retiring your wife from the monitoring team.
+[00:34:55] Caller 1: She'll be thrilled.
+[00:34:57] Me: Okay, I want to raise one bigger thing before we close, and I want to be careful about how I frame it.
+[00:35:03] Caller 4: Go for it.
+[00:35:04] Me: The real fix for a single encoder dying is a second encoder running in parallel, hot standby. If one drops the other keeps the stream alive.
+[00:35:13] Caller 1: I've wanted that for a while, honestly.
+[00:35:15] Me: Me too. But I don't want to decide that today, because it's real money and I haven't priced it. I'm leaning toward a second encoder but let's not commit to that today.
+[00:35:25] Caller 4: That's the right call. Get the monitoring and the runbook in place first, those are cheap and they cover eighty percent of the pain.
+[00:35:32] Me: Exactly. So I'll put the redundant encoder on the list as something to explore, not a decision. We can revisit after we see how the cheap fixes perform.
+[00:35:41] Caller 1: Works for me. The runbook and the slide solve Sunday. The encoder's a next-quarter thing.
+[00:35:46] Me: Right. And honestly if the failover line and a second encoder both land, we'd be in really good shape, but that's a whole budget season away.
+[00:35:54] Caller 4: One step at a time. Don't boil the ocean.
+[00:35:57] Me: Okay, last process thing, and this one I do want as a decision. The reason this review went well is we did it two days after it happened while everyone remembered.
+[00:36:07] Caller 1: Yeah, if we'd waited a month nobody would remember the timeline.
+[00:36:10] Me: So I want to make this standard. Any time we have a stream outage or a major service failure, we do a review within forty eight hours of any outage.
+[00:36:19] Caller 4: That's a good discipline. Forty eight hours is the sweet spot, memory's fresh but you've had a night to cool off.
+[00:36:26] Caller 1: I'm in. Doesn't have to be this formal every time, but we sit down within two days.
+[00:36:31] Me: Agreed, lightweight is fine, but it happens. I'll write that into our process doc.
+[00:36:36] Caller 4: And loop the findings back into the runbook each time, so the document actually grows with what we learn.
+[00:36:42] Me: Good point. The runbook's a living thing, not a one-time Friday task.
+[00:36:46] Caller 1: As long as it starts at one page.
+[00:36:48] Me: It starts at one page. Future pages require a vote.
+[00:36:51] Caller 4: Ha. Fair enough.
+[00:36:53] Me: Okay let me read back the whole list so we're all aligned, and then we can let Dana get her afternoon back.
+[00:37:00] Caller 4: Appreciated, I've got another call at the top of the hour.
+[00:37:03] Me: Quick then. Decisions, we're turning off auto firmware updates on the encoder. We're adding the down-alert monitoring. We're building the holding slide. We're writing the one page volunteer runbook and training on it. And we're making forty-eight hour reviews standard.
+[00:37:18] Caller 1: That's a lot of decisions for one broken box.
+[00:37:21] Me: It's a productive outage. Actions, Dana's got the alert and off-box logging by Friday, and the firewall failover audit next week.
+[00:37:30] Caller 4: Confirmed.
+[00:37:31] Me: I've got the runbook draft by Friday and the holding slide before Sunday. Marcus has the Saturday volunteer walkthrough. And Ellen's getting the quote for the redundant line.
+[00:37:41] Caller 1: And the second encoder is a maybe, parked.
+[00:37:44] Me: Parked, explicitly not decided. I'll bring pricing to a future meeting.
+[00:37:48] Caller 4: That all matches my notes. One addition, when you draft the runbook, send it to me before the Saturday training so I can sanity-check the encoder steps.
+[00:37:57] Me: Yes, absolutely, you'll be on the Friday review list.
+[00:38:00] Caller 1: Me too, I need to see it before I teach it.
+[00:38:02] Me: Both of you, Friday. Okay, I think that's everything. Anything either of you want to add before we close?
+[00:38:08] Caller 4: Just, good review. This is how it's supposed to go. Most churches I work with never do the follow-up.
+[00:38:14] Caller 1: We're an overachieving church.
+[00:38:16] Caller 4: Clearly. Alright, I've gotta jump. I'll have the alert done by Friday and I'll email when the logging's flowing.
+[00:38:22] Me: Perfect, thanks Dana. Talk soon.
+[00:38:25] Caller 4: Bye all.
+[00:38:26] Caller 1: Later.
+[00:38:28] Me: Okay, just you and me now, Marcus. Quick volunteer logistics before you go?
+[00:38:33] Caller 1: Yeah, I've got a few minutes.
+[00:38:35] Me: On Saturday, how many people do you want to walk through the runbook? I'm thinking just the front of house leads, not the whole team.
+[00:38:42] Caller 1: Agreed, the leads. If the three leads know it, they can coach whoever's on the board any given week.
+[00:38:48] Me: That's smart. So you're training leads, and they cascade it down.
+[00:38:52] Caller 1: Right. I'll make sure the runbook lives in the booth too, printed and laminated, not just a file somewhere.
+[00:38:58] Me: Oh, laminated, fancy.
+[00:39:00] Caller 1: Coffee survives on laminate. Paper doesn't last a month in that booth.
+[00:39:04] Me: True. Okay, so you'll handle printing once I send the final. I'll get it to you Friday so you've got Saturday morning to prep.
+[00:39:11] Caller 1: Works. And I'll text you Saturday after the walkthrough to confirm they've all got it.
+[00:39:16] Me: Perfect. Hey, and thanks for jumping on Sunday, even with the chaos. You kept it from being worse.
+[00:39:22] Caller 1: Of course. Next time I'll have an actual slide to put up instead of just panicking elegantly.
+[00:39:27] Me: Panicking elegantly, that should be the runbook title.
+[00:39:30] Caller 1: Put it on the laminate.
+[00:39:32] Me: Ha. Okay, I think we're genuinely done. I'll get the notes typed up and sent to everyone this afternoon.
+[00:39:38] Caller 1: Sounds good. Separate the decisions from the maybes, like you promised Ellen.
+[00:39:42] Me: Decisions and tasks, clean columns, I swear. Alright, go enjoy your afternoon.
+[00:39:47] Caller 1: You too. Thanks Aaron. Bye.
+[00:39:49] Me: Bye Marcus.

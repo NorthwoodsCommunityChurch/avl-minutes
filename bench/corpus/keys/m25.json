@@ -1,0 +1,170 @@
+{
+ "id": "m25",
+ "title": "Next-year AVL roadmap planning",
+ "type": "planning",
+ "minutes": 60,
+ "sources": [
+  "room"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Dave",
+   "role": "Associate AVL / camera lead"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Megan",
+   "role": "Executive pastor / budget"
+  },
+  {
+   "label": "Speaker 3",
+   "name": "Tyler",
+   "role": "Volunteer coordinator (also appears as Speaker 5 after a label split)"
+  },
+  {
+   "label": "Speaker 4",
+   "name": "Jen",
+   "role": "Lighting designer / ProPresenter op"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Replace all three main sanctuary cameras this year.",
+   "evidence": "we're going to replace all three main cameras this year"
+  },
+  {
+   "id": "d2",
+   "text": "Schedule the LED wall replacement for the fall.",
+   "evidence": "the LED wall replacement lands in the fall"
+  },
+  {
+   "id": "d3",
+   "text": "Standardize on ProPresenter 7 on every machine.",
+   "evidence": "standardize on pro presenter seven on every machine"
+  },
+  {
+   "id": "d4",
+   "text": "Move the intercom to a wireless Clear-Com system.",
+   "evidence": "we'll move the intercom over to wireless"
+  },
+  {
+   "id": "d5",
+   "text": "Set the AVL budget request at $85,000.",
+   "evidence": "set the budget request at eighty five thousand"
+  },
+  {
+   "id": "d6",
+   "text": "Hold volunteer training the second Saturday of every month.",
+   "evidence": "training will be the second Saturday of every month"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Pull together three camera quotes.",
+   "owner": "Me",
+   "due": "end of January",
+   "evidence": "I'll pull together three camera quotes by the end of January"
+  },
+  {
+   "id": "a2",
+   "task": "Draft the budget proposal for the board.",
+   "owner": "Megan",
+   "due": null,
+   "evidence": "I can draft the budget proposal for the board"
+  },
+  {
+   "id": "a3",
+   "task": "Update ProPresenter licenses on the remaining machines.",
+   "owner": "Jen",
+   "due": null,
+   "evidence": "I'll get the licenses updated on the rest of the machines"
+  },
+  {
+   "id": "a4",
+   "task": "Set up a meeting with the MSP about bandwidth.",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll set up a meeting with our MSP about the bandwidth"
+  },
+  {
+   "id": "a5",
+   "task": "Build the volunteer training calendar for the year.",
+   "owner": "Tyler",
+   "due": null,
+   "evidence": "I'll put together the training calendar for the year"
+  },
+  {
+   "id": "a6",
+   "task": "Measure the LED wall and send the dimensions.",
+   "owner": "Dave",
+   "due": null,
+   "evidence": "I'll measure the wall and send over the dimensions"
+  },
+  {
+   "id": "a7",
+   "task": "Reach out to the lighting vendor for a quote.",
+   "owner": "Jen",
+   "due": null,
+   "evidence": "I'll reach out to the lighting vendor for a quote"
+  },
+  {
+   "id": "a8",
+   "task": "Order the wireless intercom packs before Easter.",
+   "owner": "Me",
+   "due": "before Easter",
+   "evidence": "I'll order the wireless packs before Easter"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Should the production booth be relocated to the back wall?",
+   "evidence": "do we move the booth to the back wall"
+  },
+  {
+   "id": "q2",
+   "text": "Can the current electrical power handle the new LED wall?",
+   "evidence": "can the current power even handle that new wall"
+  },
+  {
+   "id": "q3",
+   "text": "Who will cover camera positions on Easter weekend?",
+   "evidence": "who's going to cover cameras on Easter weekend"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "other_party",
+   "claim": "The group approved the $85,000 AVL budget.",
+   "evidence": "the final approval is really up to the elders and finance"
+  },
+  {
+   "id": "t2",
+   "kind": "already_done",
+   "claim": "Jen will update ProPresenter on the main booth machine.",
+   "evidence": "I already updated pro presenter on the main booth machine last week"
+  },
+  {
+   "id": "t3",
+   "kind": "label_noise",
+   "claim": "Tyler will reach out to the lighting vendor for a quote.",
+   "evidence": "I'll reach out to the lighting vendor for a quote"
+  },
+  {
+   "id": "t4",
+   "kind": "reversed",
+   "claim": "The group decided to replace the audio console this year.",
+   "evidence": "let's go ahead and replace the audio console this year"
+  }
+ ]
+}

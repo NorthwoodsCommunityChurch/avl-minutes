@@ -1,0 +1,170 @@
+{
+ "id": "m27",
+ "title": "Lighting console training & support contract call",
+ "type": "vendor call",
+ "minutes": 60,
+ "sources": [
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Marcus",
+   "role": "Lighting volunteer coordinator"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Diane",
+   "role": "Operations / facilities"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Rebecca",
+   "role": "Vendor account manager"
+  },
+  {
+   "label": "Caller 2",
+   "name": "Victor",
+   "role": "Vendor trainer / support tech"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Go with the Gold-level annual support contract.",
+   "evidence": "go with the gold support contract for the year"
+  },
+  {
+   "id": "d2",
+   "text": "Book two on-site training days.",
+   "evidence": "book the two on-site training days"
+  },
+  {
+   "id": "d3",
+   "text": "Hold the two training sessions on back-to-back Saturdays in March.",
+   "evidence": "back-to-back Saturdays in March works for us"
+  },
+  {
+   "id": "d4",
+   "text": "Update the console to version 3.2 before the trainer arrives.",
+   "evidence": "update to version 3.2 before we come out"
+  },
+  {
+   "id": "d5",
+   "text": "Record both training sessions for future volunteers.",
+   "evidence": "record both training sessions so new volunteers"
+  },
+  {
+   "id": "d6",
+   "text": "Pay the support contract annually to get the discount.",
+   "evidence": "pay the contract annually to get the discount"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Email the list of volunteers to the trainer.",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll email you the list of volunteers"
+  },
+  {
+   "id": "a2",
+   "task": "Send the revised contract quote.",
+   "owner": "Caller 1",
+   "due": "Friday",
+   "evidence": "send over the revised quote by Friday"
+  },
+  {
+   "id": "a3",
+   "task": "Update the console software to 3.2 before training.",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll get the console updated to 3.2"
+  },
+  {
+   "id": "a4",
+   "task": "Send the pre-training prep guide to the church.",
+   "owner": "Caller 2",
+   "due": null,
+   "evidence": "send you the pre-training prep guide"
+  },
+  {
+   "id": "a5",
+   "task": "Round up and confirm volunteers for both training days.",
+   "owner": "Speaker 1",
+   "due": null,
+   "evidence": "I'll round up the volunteers for both days"
+  },
+  {
+   "id": "a6",
+   "task": "Check the building calendar for the March Saturdays.",
+   "owner": "Me",
+   "due": null,
+   "evidence": "check the building calendar for those dates"
+  },
+  {
+   "id": "a7",
+   "task": "Send the invoice to the church finance office.",
+   "owner": "Caller 1",
+   "due": null,
+   "evidence": "get the invoice over to your finance office"
+  },
+  {
+   "id": "a8",
+   "task": "Set up a camera to record the training sessions.",
+   "owner": "Speaker 2",
+   "due": null,
+   "evidence": "I'll set up a camera to record the sessions"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Can the old backup board run the new software version, or does it need a hardware upgrade?",
+   "evidence": "will the old board even run the new version"
+  },
+  {
+   "id": "q2",
+   "text": "Is the trainer's travel cost included in the contract number?",
+   "evidence": "is the travel cost included in that number"
+  },
+  {
+   "id": "q3",
+   "text": "Is there an offline editor volunteers can practice on at home?",
+   "evidence": "is there an offline editor they can practice on"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "already_done",
+   "claim": "Aaron needs to send the stage plan to the vendor.",
+   "evidence": "I already sent you the stage plan last week"
+  },
+  {
+   "id": "t2",
+   "kind": "label_noise",
+   "claim": "Speaker 2 (Diane) will send the pre-training prep guide.",
+   "evidence": "send you the pre-training prep guide"
+  },
+  {
+   "id": "t3",
+   "kind": "reversed",
+   "claim": "They decided to order a backup console as well.",
+   "evidence": "let's order the backup console too"
+  },
+  {
+   "id": "t4",
+   "kind": "hypothetical",
+   "claim": "They plan to network the console to a second one in the youth room.",
+   "evidence": "what if we networked it to the youth room"
+  }
+ ]
+}

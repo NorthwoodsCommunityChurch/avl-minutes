@@ -1,0 +1,124 @@
+{
+ "id": "m14",
+ "title": "AVL Budget Review FY27",
+ "type": "budget review",
+ "minutes": 30,
+ "sources": [
+  "room",
+  "call"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Dana",
+   "role": "executive pastor / operations"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Marcus",
+   "role": "production & volunteer coordinator"
+  },
+  {
+   "label": "Caller 1",
+   "name": "Kevin",
+   "role": "finance director (on call)"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Budget to replace the four oldest wireless handheld mics next fiscal year.",
+   "evidence": "replace the four oldest handheld mics"
+  },
+  {
+   "id": "d2",
+   "text": "Include the new ProPresenter Mac in next year's budget.",
+   "evidence": "The new Mac for pro presenter goes in"
+  },
+  {
+   "id": "d3",
+   "text": "Keep renting the Clear-Com belt packs rather than buying this year.",
+   "evidence": "we keep renting the clear calm belt packs"
+  },
+  {
+   "id": "d4",
+   "text": "Add a dedicated budget line for volunteer training.",
+   "evidence": "add a real line for volunteer training"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Get three quotes for the wireless mic replacement.",
+   "owner": "Me",
+   "due": "next Friday",
+   "evidence": "I'll get three quotes by next Friday"
+  },
+  {
+   "id": "a2",
+   "task": "Send the budget template spreadsheet.",
+   "owner": "Kevin",
+   "due": "Friday",
+   "evidence": "I'll send over the budget template this afternoon"
+  },
+  {
+   "id": "a3",
+   "task": "Write the capital request for the LED wall.",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll write up the capital request for the wall"
+  },
+  {
+   "id": "a4",
+   "task": "Put together a volunteer survey on training needs.",
+   "owner": "Marcus",
+   "due": null,
+   "evidence": "put together a quick survey for the volunteers"
+  },
+  {
+   "id": "a5",
+   "task": "Take the AVL budget to the finance committee.",
+   "owner": "Dana",
+   "due": null,
+   "evidence": "take this to the finance committee next month"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Does the camera upgrade fall in this fiscal year or next?",
+   "evidence": "are the cameras this year or next year"
+  },
+  {
+   "id": "q2",
+   "text": "Will insurance cover the lightning-damaged amp?",
+   "evidence": "does insurance cover the amp that got fried"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "label_noise",
+   "claim": "Marcus will get the three quotes for the mic replacement.",
+   "evidence": "I'll get three quotes by next Friday"
+  },
+  {
+   "id": "t2",
+   "kind": "reversed",
+   "claim": "The group decided to put the new lighting console in the budget.",
+   "evidence": "let's put the new lighting console in the budget"
+  },
+  {
+   "id": "t3",
+   "kind": "hypothetical",
+   "claim": "The team will add a second camera operator position.",
+   "evidence": "what if we added a second camera operator"
+  }
+ ]
+}

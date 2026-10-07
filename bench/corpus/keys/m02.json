@@ -1,0 +1,76 @@
+{
+ "id": "m02",
+ "title": "Lobby Screens Check-In",
+ "type": "one-on-one",
+ "minutes": 10,
+ "sources": [
+  "room"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Marcus",
+   "role": "AV tech"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Dana",
+   "role": "volunteer stopping by"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Use the new slide loop on the lobby screens for Sunday morning",
+   "evidence": "let's go with the new loop for Sunday morning"
+  },
+  {
+   "id": "d2",
+   "text": "Swap out the bad cable on the north lobby screen before the weekend",
+   "evidence": "we'll swap that cable out before the weekend"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Export the new loop and put it on the lobby player",
+   "owner": "Speaker 1",
+   "due": null,
+   "evidence": "I'll export the new loop and drop it on the player"
+  },
+  {
+   "id": "a2",
+   "task": "Replace the cable on the north lobby screen",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll grab a new cable from the storage closet"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Is the flicker caused by the player or the panel itself?",
+   "evidence": "Is the flicker the player or the panel itself"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "joke",
+   "claim": "The team decided to throw out the old screen through the window",
+   "evidence": "honestly we should just throw it out the window"
+  },
+  {
+   "id": "t2",
+   "kind": "tentative",
+   "claim": "They decided to buy a brand new player for the lobby",
+   "evidence": "I'm kind of leaning toward just getting a new player"
+  }
+ ]
+}

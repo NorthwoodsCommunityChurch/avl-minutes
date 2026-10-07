@@ -1,0 +1,123 @@
+{
+ "id": "m17",
+ "title": "AV Technician Hiring Debrief",
+ "type": "hiring debrief",
+ "minutes": 30,
+ "sources": [
+  "room"
+ ],
+ "control": false,
+ "people": [
+  {
+   "label": "Me",
+   "name": "Aaron",
+   "role": "AVL director"
+  },
+  {
+   "label": "Speaker 1",
+   "name": "Diane",
+   "role": "operations/HR director"
+  },
+  {
+   "label": "Speaker 2",
+   "name": "Greg",
+   "role": "worship pastor"
+  },
+  {
+   "label": "Speaker 3",
+   "name": "Tyler",
+   "role": "volunteer coordinator"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "d1",
+   "text": "Extend the part-time AV technician offer to Priya.",
+   "evidence": "we're all agreed we extend the offer to Priya"
+  },
+  {
+   "id": "d2",
+   "text": "The role is 18 hours per week.",
+   "evidence": "Let's make it eighteen hours a week then"
+  },
+  {
+   "id": "d3",
+   "text": "Pay rate set at $22 per hour.",
+   "evidence": "twenty two dollars an hour is where we land"
+  },
+  {
+   "id": "d4",
+   "text": "Priya's first Sunday on the schedule is January 10.",
+   "evidence": "her first Sunday will be January tenth"
+  }
+ ],
+ "actions": [
+  {
+   "id": "a1",
+   "task": "Draft the written offer letter.",
+   "owner": "Me",
+   "due": null,
+   "evidence": "I'll put together the offer letter this afternoon"
+  },
+  {
+   "id": "a2",
+   "task": "Run the background screening on Priya.",
+   "owner": "Diane",
+   "due": "Monday",
+   "evidence": "Diane can you start the background screening on Monday"
+  },
+  {
+   "id": "a3",
+   "task": "Call Priya to give the verbal offer.",
+   "owner": "Me",
+   "due": "tomorrow",
+   "evidence": "I'll call her tomorrow to give the verbal"
+  },
+  {
+   "id": "a4",
+   "task": "Notify the other two candidates that they weren't selected.",
+   "owner": "Greg",
+   "due": null,
+   "evidence": "I'll send the declines to the other two candidates"
+  },
+  {
+   "id": "a5",
+   "task": "Add Priya to the Planning Center scheduling.",
+   "owner": "Tyler",
+   "due": null,
+   "evidence": "I'll get her added into planning center"
+  }
+ ],
+ "questions": [
+  {
+   "id": "q1",
+   "text": "Do 18 hours trigger any benefits obligation?",
+   "evidence": "Does eighteen hours trigger any benefit we have to"
+  },
+  {
+   "id": "q2",
+   "text": "Will we require availability for both weekend services?",
+   "evidence": "Do we require her for both weekend services or just"
+  }
+ ],
+ "traps": [
+  {
+   "id": "t1",
+   "kind": "hypothetical",
+   "claim": "The group decided to make the position full-time.",
+   "evidence": "What if we just made this a full time position"
+  },
+  {
+   "id": "t2",
+   "kind": "joke",
+   "claim": "They plan to clone Aaron to save budget.",
+   "evidence": "we could just clone you and save the money"
+  },
+  {
+   "id": "t3",
+   "kind": "tentative",
+   "claim": "Priya's schedule is set as Saturday night plus Sunday.",
+   "evidence": "I'm leaning toward Saturday night and Sunday but"
+  }
+ ]
+}
