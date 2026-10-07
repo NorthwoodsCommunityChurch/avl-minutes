@@ -60,7 +60,7 @@ To check for yourself: run `bash scripts/audit-writes.sh start`, hold a short me
 ## Building from source
 
 ```bash
-git clone <repo-url> && cd Assistant
+git clone https://github.com/NorthwoodsCommunityChurch/avl-minutes.git && cd avl-minutes
 bash scripts/build-and-run.sh          # fetches FluidAudio, generates the project, builds, installs, launches
 swift test --package-path Packages/MinutesKit
 ```

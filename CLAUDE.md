@@ -15,15 +15,15 @@ SQLite FTS5, MCP Swift SDK, XcodeGen.
 ---
 
 ## Status — 2026-10-07
-- **Stage:** active development on branch `minutes-v1`; committed locally only — **no GitHub repo yet**
-  (proposed `NorthwoodsCommunityChurch/avl-minutes`, private; needs Aaron's OK to create).
+- **Stage:** active development on branch `minutes-v1`, pushed to private repo
+  `NorthwoodsCommunityChurch/avl-minutes` (created 2026-10-07 with Aaron's OK). `main` holds spec + plan only;
+  merging `minutes-v1` into `main` still needs Aaron's OK.
 - **Works:** everything end to end except Sparkle — testable core (41 tests); Notes index + MCP search
   over Aaron's real notes (118); Notes read/write via helper process; call capture (IOProc) +
   echo-cancelled mic; transcription + speaker separation (`--transcribe-check` 8/8 + 3/3 both-stream
   runs perfect); native Liquid Glass UI (menu bar panel, Welcome checklist, Settings, voice training);
   no-audio build guard + audit script. Debug build installed at `/Applications/Minutes.app` (not launched).
-- **Plan status (tasks 1–13):** 1–11 done; 12 (UI) built, **awaiting Aaron's approval of the native
-  screens** ([docs/images/minutes-screens.png](docs/images/minutes-screens.png)); 13 remaining: Sparkle
+- **Plan status (tasks 1–13):** 1–11 done; 12 (UI) done, native screens approved by Aaron 2026-10-07 ([docs/images/minutes-screens.png](docs/images/minutes-screens.png)); 13 remaining: Sparkle
   wiring (read `../App Updates/SPARKLE-GUIDE.md` first), final whole-branch code review, merge to main.
 - **Needs Aaron in person:** echo-cancellation test on a Teams call with speakers on (`--audio-check`
   or a real meeting; his speakers were muted and were left muted); voice training + "Me" threshold
@@ -58,7 +58,7 @@ and `--unregister-login`.
 | Thing | Value |
 |---|---|
 | Type / stack | macOS 26 Swift app (XcodeGen) + local Swift packages |
-| GitHub repo | not yet (proposed `NorthwoodsCommunityChurch/avl-minutes`, private) |
+| GitHub repo | [NorthwoodsCommunityChurch/avl-minutes](https://github.com/NorthwoodsCommunityChurch/avl-minutes) (private) |
 | Bundle ID | `com.northwoods.Minutes` |
 | Current version | 0.1.0 (1) |
 | Update feed (Sparkle) | not yet wired (`appcast-minutes.xml` planned) |
