@@ -12,11 +12,11 @@ enum NotesBridgeError: LocalizedError, Codable, Equatable {
     var errorDescription: String? {
         switch self {
         case .permissionDenied:
-            "Minutes isn't allowed to use Notes. Turn it on in System Settings > Privacy & Security > Automation."
+            "\(AppIdentity.name) isn't allowed to use Notes. Turn it on in System Settings > Privacy & Security > Automation."
         case .scriptFailed(let message):
             "Notes didn't respond: \(message)"
         case .badOutput:
-            "Notes sent back something Minutes couldn't read."
+            "Notes sent back something \(AppIdentity.name) couldn't read."
         case .timedOut:
             "Notes didn't respond in time."
         }
@@ -25,11 +25,11 @@ enum NotesBridgeError: LocalizedError, Codable, Equatable {
 
 /// Runs the Notes AppleScript handlers with NSAppleScript. NSAppleScript must stay on
 /// the main thread, and a large write takes seconds, so only the short-lived
-/// `Minutes --notes-helper` process uses this (see NotesBridge). Values travel as
+/// `--notes-helper` child process uses this (see NotesBridge). Values travel as
 /// Apple event descriptors, never as script text.
 @MainActor
 final class NotesScriptRunner {
-    private static let logger = Logger(subsystem: "com.northwoods.Minutes", category: "NotesScriptRunner")
+    private static let logger = Logger(subsystem: AppIdentity.bundleID, category: "NotesScriptRunner")
     private var compiled: NSAppleScript?
 
     func listMetadata() throws -> [NoteMetadata] {

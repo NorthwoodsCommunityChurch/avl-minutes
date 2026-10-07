@@ -16,7 +16,7 @@ final class NotesIndexer {
     private let bridge: NotesBridge
     private let index: NotesIndex
     private var timer: Timer?
-    private static let logger = Logger(subsystem: "com.northwoods.Minutes", category: "NotesIndexer")
+    private static let logger = Logger(subsystem: AppIdentity.bundleID, category: "NotesIndexer")
     private static let fetchBatch = 25
 
     init(index: NotesIndex, bridge: NotesBridge) {

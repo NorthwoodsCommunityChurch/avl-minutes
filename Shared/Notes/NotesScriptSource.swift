@@ -1,8 +1,8 @@
-/// AppleScript handlers Minutes runs in-process through NSAppleScript. Parameters
+/// AppleScript handlers the app runs in-process through NSAppleScript. Parameters
 /// arrive as Apple event descriptors, so note text is never spliced into source.
 enum NotesScriptSource {
     static let text = #"""
--- Handlers Minutes calls in-process (NSAppleScript). Parameters arrive as Apple
+-- Handlers the app calls in-process (NSAppleScript). Parameters arrive as Apple
 -- event descriptors, so note text is never spliced into script source.
 
 on listNotes()

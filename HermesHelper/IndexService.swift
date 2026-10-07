@@ -2,19 +2,19 @@ import Foundation
 import MinutesKit
 import OSLog
 
-/// `Minutes --index`: headless Notes indexing for a machine that only hosts the search
-/// service (the assistant mini). No menu bar, no speech models, no login item; a launchd
-/// agent keeps it running and `Minutes --mcp` answers searches from the same index.
+/// `HermesHelper --index`: keeps the Notes index current with no UI. A launchd user agent
+/// runs it for the whole login session; `HermesHelper --mcp` answers Hermes's searches
+/// from the same index file.
 enum IndexService {
-    private static let logger = Logger(subsystem: "com.northwoods.Minutes", category: "IndexService")
+    private static let logger = Logger(subsystem: AppIdentity.bundleID, category: "IndexService")
 
     @MainActor
-    static func run() -> Never {
+    static func run(indexURL: URL) -> Never {
         let indexer: NotesIndexer
         do {
-            indexer = NotesIndexer(index: try NotesIndex(url: NotesIndex.defaultURL()), bridge: NotesBridge())
+            indexer = NotesIndexer(index: try NotesIndex(url: indexURL), bridge: NotesBridge())
         } catch {
-            FileHandle.standardError.write(Data("minutes --index: \(error)\n".utf8))
+            FileHandle.standardError.write(Data("HermesHelper --index: \(error)\n".utf8))
             exit(1)
         }
         indexer.start()

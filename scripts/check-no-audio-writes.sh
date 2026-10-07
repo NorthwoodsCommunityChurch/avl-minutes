@@ -5,7 +5,7 @@ set -euo pipefail
 ROOT="${1:-$(cd "$(dirname "$0")/.." && pwd)}"
 PATTERN='AVAudioFile|AVAudioRecorder|ExtAudioFile|AudioFileCreate|AudioFileOpen|AVAssetWriter|\.(wav|caf|m4a|aiff|mp3|flac)\b'
 DIRS=()
-for d in "$ROOT/Minutes" "$ROOT/Packages/MinutesKit/Sources"; do
+for d in "$ROOT/Minutes" "$ROOT/Shared" "$ROOT/HermesHelper" "$ROOT/Packages/MinutesKit/Sources"; do
   [ -d "$d" ] && DIRS+=("$d")
 done
 if [ ${#DIRS[@]} -eq 0 ]; then

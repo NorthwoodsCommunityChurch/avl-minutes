@@ -31,11 +31,11 @@ enum NotesReply: Codable {
     case failed(NotesBridgeError)
 }
 
-/// The app's way to reach Apple Notes. Each call runs `Minutes --notes-helper` as a
+/// The app's way to reach Apple Notes. Each call runs this app's binary with `--notes-helper` as a
 /// child process, so slow Notes scripting never blocks the menu bar, and transcript
 /// text moves over a pipe (never argv or a temp file).
 struct NotesBridge: Sendable {
-    private static let logger = Logger(subsystem: "com.northwoods.Minutes", category: "NotesBridge")
+    private static let logger = Logger(subsystem: AppIdentity.bundleID, category: "NotesBridge")
 
     func listMetadata() async throws -> [NoteMetadata] {
         guard case .notes(let notes) = try await send(.list) else { throw NotesBridgeError.badOutput }
@@ -83,7 +83,7 @@ struct NotesBridge: Sendable {
     }
 }
 
-/// `Minutes --notes-helper`: reads one NotesRequest from stdin, runs it with
+/// `--notes-helper` mode (Minutes and Hermes Helper): reads one NotesRequest from stdin, runs it with
 /// NSAppleScript on this process's main thread, writes one NotesReply, exits.
 enum NotesHelper {
     @MainActor
