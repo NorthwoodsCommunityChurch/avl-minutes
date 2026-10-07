@@ -10,7 +10,7 @@ from collections import Counter
 
 from . import common
 
-LOCAL = ("gemma-bigctx", "qwen-coder")
+LOCAL = ("gemma-bigctx", "qwen-coder", "gemma-4-12b", "qwen3.5-9b")
 CORE_BAR, INVENTED_BAR, P90_BAR = 0.90, 1, 180.0
 CREDIT = {"hit": 1.0, "partial": 0.5, "miss": 0.0}
 

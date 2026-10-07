@@ -1,4 +1,4 @@
-"""Blind grading: one Opus call per meeting judges that meeting's six summaries against the key.
+"""Blind grading: one Opus call per meeting judges that meeting's summaries (two per contestant) against the key.
 
   bench/.venv/bin/python -m bench.judge                 # every meeting with all six summaries
   bench/.venv/bin/python -m bench.judge --ids m01 --force
@@ -19,7 +19,7 @@ from . import common
 MODEL = "opus"
 SEED = "summary-bench-v1"
 JUDGE_VERSION = "j1"
-LETTERS = "ABCDEF"
+LETTERS = "ABCDEFGHIJ"
 FOUND = {"hit", "partial", "miss"}
 OWNER = {"right", "wrong", "missing", "n/a"}
 EXTRA = {"supported", "trap", "invented"}

@@ -14,7 +14,8 @@ KEYS = CORPUS / "keys"
 BRIEFS = CORPUS / "briefs.json"
 RESULTS = ROOT / "results"
 
-CONTESTANTS = ("gemma-bigctx", "qwen-coder", "claude-sonnet")
+# Puget models, Claude, then the two 16 GB-class models run on Aaron's laptop (added 2026-10-07).
+CONTESTANTS = ("gemma-bigctx", "qwen-coder", "claude-sonnet", "gemma-4-12b", "qwen3.5-9b")
 
 
 def load_briefs() -> list[dict]:

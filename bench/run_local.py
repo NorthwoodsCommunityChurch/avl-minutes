@@ -1,7 +1,9 @@
 """Runs the Puget models over every meeting through the :11434 queue.
 
   caffeinate -i bench/.venv/bin/python -m bench.run_local --model gemma-bigctx --reps 2
-  caffeinate -i bench/.venv/bin/python -m bench.run_local --model qwen-coder --reps 2 --restore
+  caffeinate -i bench/.venv/bin/python -m bench.run_local --model qwen-coder --reps 2 --restore --inflight 3
+  # 16 GB-class models on a local llama-server (see bench/README.md):
+  caffeinate -i bench/.venv/bin/python -m bench.run_local --base http://127.0.0.1:11435 --model gemma-4-12b
 
 Streaming ("stream": true) so the scheduler keeps no copy of the result. Resume-safe on
 (meeting, rep). A truncated reply is retried once at a larger max_tokens. Network or server
@@ -23,8 +25,8 @@ from typing import Iterable
 
 from . import common, prompt
 
-HOST, PORT = "10.11.4.170", 11434
-BASE = f"http://{HOST}:{PORT}"
+PUGET = "http://10.11.4.170:11434"
+BASE = PUGET
 CONNECT_TIMEOUT = 15
 CLIENT = "minutes-tests"
 TIMEOUT = 900          # the proxy's ceiling
@@ -96,7 +98,8 @@ def call(model: str, transcript: str, max_tokens: int) -> dict:
             yield raw
 
     # Short connect timeout (the Tailscale path drops out), long read timeout (queue + generation).
-    conn = http.client.HTTPConnection(HOST, PORT, timeout=CONNECT_TIMEOUT)
+    host, _, port = BASE.removeprefix("http://").partition(":")
+    conn = http.client.HTTPConnection(host, int(port or 80), timeout=CONNECT_TIMEOUT)
     try:
         conn.connect()
         conn.sock.settimeout(TIMEOUT)
@@ -169,13 +172,16 @@ def restore_default() -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", required=True, choices=["gemma-bigctx", "qwen-coder"])
+    ap.add_argument("--model", required=True, help="model name sent in the request; also the results dir")
+    ap.add_argument("--base", default=PUGET, help="OpenAI-compatible server (default: the Puget queue)")
     ap.add_argument("--reps", type=int, default=2)
     ap.add_argument("--ids", nargs="*")
     ap.add_argument("--restore", action="store_true", help="load gemma-bigctx again at the end")
     ap.add_argument("--inflight", type=int, default=1,
                     help="requests kept in the queue at once; 2-3 for qwen-coder so other tenants' jobs don't force a swap per call (puget, 2026-10-07)")
     args = ap.parse_args()
+    global BASE
+    BASE = args.base.rstrip("/")
 
     out_dir = common.RESULTS / args.model
     (out_dir / "traces").mkdir(parents=True, exist_ok=True)
