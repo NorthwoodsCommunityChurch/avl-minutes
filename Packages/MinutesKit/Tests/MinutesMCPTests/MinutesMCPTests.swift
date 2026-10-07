@@ -41,3 +41,9 @@ private func seededIndex() throws -> URL {
     #expect(r.isError != true)
     #expect(text(r).contains("No notes indexed yet"))
 }
+
+@Test func missingIndexUsesHint() {
+    let url = FileManager.default.temporaryDirectory.appendingPathComponent("no-such-\(UUID().uuidString).db")
+    let r = MinutesMCPServer.call(name: "list_folders", arguments: nil, indexURL: url, noIndexHint: "wait for the index service")
+    #expect(text(r) == "No notes indexed yet — wait for the index service.")
+}

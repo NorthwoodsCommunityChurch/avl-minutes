@@ -2,7 +2,8 @@ import Foundation
 import MCP
 import MinutesKit
 
-/// Read-only MCP server over the local Notes index, run by `Minutes --mcp`.
+/// Read-only MCP server over the local Notes index, run by `Minutes --mcp` (for Claude Code)
+/// and `HermesHelper --mcp` (for Hermes Agent).
 public enum MinutesMCPServer {
     public static let instructions = """
     Search Aaron's Apple Notes, including meeting transcripts made by the Minutes app. \
@@ -56,14 +57,15 @@ public enum MinutesMCPServer {
         arguments: [String: Value]?,
         indexURL: URL,
         timeZone: TimeZone = .current,
-        now: @escaping @Sendable () -> Date = { Date() }
+        now: @escaping @Sendable () -> Date = { Date() },
+        noIndexHint: String = "open Minutes once so it can index your notes"
     ) -> CallTool.Result {
         let args = arguments ?? [:]
         guard tools.contains(where: { $0.name == name }) else {
             return failure("Unknown tool \"\(name)\".")
         }
         guard FileManager.default.fileExists(atPath: indexURL.path) else {
-            return .init(content: [.text("No notes indexed yet — open Minutes once so it can index your notes.")])
+            return .init(content: [.text("No notes indexed yet — \(noIndexHint).")])
         }
         do {
             let notes = NotesTools(index: try NotesIndex(url: indexURL, readOnly: true), timeZone: timeZone, now: now)
@@ -91,20 +93,25 @@ public enum MinutesMCPServer {
         } catch let error as ToolError {
             return failure(error.description)
         } catch {
-            return failure("Minutes could not read the notes index: \(error)")
+            return failure("Could not read the notes index: \(error)")
         }
     }
 
-    public static func run(indexURL: URL, version: String) async throws {
+    public static func run(
+        indexURL: URL,
+        version: String,
+        name: String = "minutes",
+        noIndexHint: String = "open Minutes once so it can index your notes"
+    ) async throws {
         let server = Server(
-            name: "minutes",
+            name: name,
             version: version,
             instructions: instructions,
             capabilities: .init(tools: .init(listChanged: false))
         )
         await server.withMethodHandler(ListTools.self) { _ in .init(tools: tools) }
         await server.withMethodHandler(CallTool.self) { params in
-            call(name: params.name, arguments: params.arguments, indexURL: indexURL)
+            call(name: params.name, arguments: params.arguments, indexURL: indexURL, noIndexHint: noIndexHint)
         }
         try await server.start(transport: StdioTransport())
         await server.waitUntilCompleted()
