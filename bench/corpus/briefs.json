@@ -1,0 +1,920 @@
+[
+ {
+  "id": "m01",
+  "type": "production meeting",
+  "title_hint": "Weekend production check-in",
+  "minutes": 10,
+  "words": 1400,
+  "sources": [
+   "room"
+  ],
+  "control": false,
+  "people": "2-3",
+  "counts": {
+   "decisions": 2,
+   "actions": 2,
+   "questions": 1
+  },
+  "traps": [
+   "reversed",
+   "hypothetical"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "label_split",
+   "misattributed_short_line"
+  ],
+  "date": "Monday, September 14, 2026",
+  "time": "9:00 AM"
+ },
+ {
+  "id": "m02",
+  "type": "one-on-one",
+  "title_hint": "Lobby screens check-in with an AV tech",
+  "minutes": 10,
+  "words": 1400,
+  "sources": [
+   "room"
+  ],
+  "control": false,
+  "people": "2-3",
+  "counts": {
+   "decisions": 2,
+   "actions": 2,
+   "questions": 1
+  },
+  "traps": [
+   "joke",
+   "tentative"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "misattributed_short_line",
+   "crosstalk"
+  ],
+  "date": "Friday, September 18, 2026",
+  "time": "10:30 AM"
+ },
+ {
+  "id": "m03",
+  "type": "vendor call",
+  "title_hint": "Projector lamp warranty call",
+  "minutes": 10,
+  "words": 1400,
+  "sources": [
+   "call"
+  ],
+  "control": false,
+  "people": "2-3",
+  "counts": {
+   "decisions": 2,
+   "actions": 2,
+   "questions": 1
+  },
+  "traps": [
+   "other_party",
+   "already_done"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "crosstalk",
+   "offtopic"
+  ],
+  "date": "Tuesday, September 22, 2026",
+  "time": "1:00 PM"
+ },
+ {
+  "id": "m04",
+  "type": "volunteer scheduling",
+  "title_hint": "Camera volunteer schedule for November",
+  "minutes": 10,
+  "words": 1400,
+  "sources": [
+   "room",
+   "call"
+  ],
+  "control": false,
+  "people": "2-3",
+  "counts": {
+   "decisions": 2,
+   "actions": 2,
+   "questions": 1
+  },
+  "traps": [
+   "label_noise",
+   "reversed"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "offtopic",
+   "unknown_lines"
+  ],
+  "date": "Monday, September 28, 2026",
+  "time": "2:00 PM"
+ },
+ {
+  "id": "m05",
+  "type": "IT status call",
+  "title_hint": "MSP weekly status call (status only, nothing decided)",
+  "minutes": 10,
+  "words": 1400,
+  "sources": [
+   "call"
+  ],
+  "control": true,
+  "people": "2-3",
+  "counts": {
+   "decisions": 0,
+   "actions": 2,
+   "questions": 1
+  },
+  "traps": [
+   "hypothetical",
+   "joke"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "unknown_lines",
+   "label_split"
+  ],
+  "date": "Friday, October 2, 2026",
+  "time": "3:30 PM"
+ },
+ {
+  "id": "m06",
+  "type": "facilities follow-up",
+  "title_hint": "Stage lighting truss inspection follow-up",
+  "minutes": 10,
+  "words": 1400,
+  "sources": [
+   "room",
+   "call"
+  ],
+  "control": false,
+  "people": "2-3",
+  "counts": {
+   "decisions": 2,
+   "actions": 2,
+   "questions": 1
+  },
+  "traps": [
+   "tentative",
+   "other_party"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "label_split",
+   "misattributed_short_line"
+  ],
+  "date": "Tuesday, October 6, 2026",
+  "time": "9:00 AM"
+ },
+ {
+  "id": "m07",
+  "type": "staff meeting",
+  "title_hint": "Creative team weekly",
+  "minutes": 20,
+  "words": 2800,
+  "sources": [
+   "room"
+  ],
+  "control": false,
+  "people": "3",
+  "counts": {
+   "decisions": 3,
+   "actions": 3,
+   "questions": 1
+  },
+  "traps": [
+   "already_done",
+   "label_noise"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "misattributed_short_line",
+   "crosstalk"
+  ],
+  "date": "Monday, October 12, 2026",
+  "time": "10:30 AM"
+ },
+ {
+  "id": "m08",
+  "type": "vendor call",
+  "title_hint": "LED wall quote review",
+  "minutes": 20,
+  "words": 2800,
+  "sources": [
+   "call"
+  ],
+  "control": false,
+  "people": "3",
+  "counts": {
+   "decisions": 3,
+   "actions": 3,
+   "questions": 1
+  },
+  "traps": [
+   "reversed",
+   "hypothetical"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "crosstalk",
+   "offtopic"
+  ],
+  "date": "Friday, October 16, 2026",
+  "time": "1:00 PM"
+ },
+ {
+  "id": "m09",
+  "type": "one-on-one",
+  "title_hint": "Monthly one-on-one with the lighting lead",
+  "minutes": 20,
+  "words": 2800,
+  "sources": [
+   "room"
+  ],
+  "control": false,
+  "people": "3",
+  "counts": {
+   "decisions": 3,
+   "actions": 3,
+   "questions": 1
+  },
+  "traps": [
+   "joke",
+   "tentative"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "offtopic",
+   "unknown_lines"
+  ],
+  "date": "Tuesday, October 20, 2026",
+  "time": "2:00 PM"
+ },
+ {
+  "id": "m10",
+  "type": "event planning",
+  "title_hint": "Youth night production planning",
+  "minutes": 20,
+  "words": 2800,
+  "sources": [
+   "room",
+   "call"
+  ],
+  "control": false,
+  "people": "3",
+  "counts": {
+   "decisions": 3,
+   "actions": 3,
+   "questions": 1
+  },
+  "traps": [
+   "other_party",
+   "already_done"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "unknown_lines",
+   "label_split"
+  ],
+  "date": "Monday, October 26, 2026",
+  "time": "3:30 PM"
+ },
+ {
+  "id": "m11",
+  "type": "information share",
+  "title_hint": "Building schedule update for the holidays (information only, nothing decided)",
+  "minutes": 20,
+  "words": 2800,
+  "sources": [
+   "room"
+  ],
+  "control": true,
+  "people": "3",
+  "counts": {
+   "decisions": 0,
+   "actions": 2,
+   "questions": 1
+  },
+  "traps": [
+   "label_noise",
+   "reversed"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "label_split",
+   "misattributed_short_line"
+  ],
+  "date": "Friday, October 30, 2026",
+  "time": "9:00 AM"
+ },
+ {
+  "id": "m12",
+  "type": "event debrief",
+  "title_hint": "Fall baptism Sunday debrief",
+  "minutes": 20,
+  "words": 2800,
+  "sources": [
+   "room",
+   "call"
+  ],
+  "control": false,
+  "people": "3",
+  "counts": {
+   "decisions": 3,
+   "actions": 3,
+   "questions": 1
+  },
+  "traps": [
+   "hypothetical",
+   "joke"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "misattributed_short_line",
+   "crosstalk"
+  ],
+  "date": "Tuesday, November 3, 2026",
+  "time": "10:30 AM"
+ },
+ {
+  "id": "m13",
+  "type": "event planning",
+  "title_hint": "Christmas Eve service production planning",
+  "minutes": 30,
+  "words": 4200,
+  "sources": [
+   "room"
+  ],
+  "control": false,
+  "people": "3-5",
+  "counts": {
+   "decisions": 4,
+   "actions": 5,
+   "questions": 2
+  },
+  "traps": [
+   "tentative",
+   "other_party",
+   "already_done"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "crosstalk",
+   "offtopic"
+  ],
+  "date": "Monday, November 9, 2026",
+  "time": "1:00 PM"
+ },
+ {
+  "id": "m14",
+  "type": "budget review",
+  "title_hint": "AVL budget review for next fiscal year",
+  "minutes": 30,
+  "words": 4200,
+  "sources": [
+   "room",
+   "call"
+  ],
+  "control": false,
+  "people": "3-5",
+  "counts": {
+   "decisions": 4,
+   "actions": 5,
+   "questions": 2
+  },
+  "traps": [
+   "label_noise",
+   "reversed",
+   "hypothetical"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "offtopic",
+   "unknown_lines"
+  ],
+  "date": "Friday, November 13, 2026",
+  "time": "2:00 PM"
+ },
+ {
+  "id": "m15",
+  "type": "vendor call",
+  "title_hint": "Intercom system upgrade options",
+  "minutes": 30,
+  "words": 4200,
+  "sources": [
+   "call"
+  ],
+  "control": false,
+  "people": "3-5",
+  "counts": {
+   "decisions": 4,
+   "actions": 5,
+   "questions": 2
+  },
+  "traps": [
+   "joke",
+   "tentative",
+   "other_party"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "unknown_lines",
+   "label_split"
+  ],
+  "date": "Tuesday, November 17, 2026",
+  "time": "3:30 PM"
+ },
+ {
+  "id": "m16",
+  "type": "vendor demo",
+  "title_hint": "Streaming encoder vendor demo (informational, nothing decided)",
+  "minutes": 30,
+  "words": 4200,
+  "sources": [
+   "call"
+  ],
+  "control": true,
+  "people": "3-5",
+  "counts": {
+   "decisions": 0,
+   "actions": 2,
+   "questions": 2
+  },
+  "traps": [
+   "already_done",
+   "label_noise",
+   "reversed"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "label_split",
+   "misattributed_short_line"
+  ],
+  "date": "Monday, November 23, 2026",
+  "time": "9:00 AM"
+ },
+ {
+  "id": "m17",
+  "type": "hiring debrief",
+  "title_hint": "Hiring debrief for a part-time AV technician (personnel-sensitive)",
+  "minutes": 30,
+  "words": 4200,
+  "sources": [
+   "room"
+  ],
+  "control": false,
+  "people": "3-5",
+  "counts": {
+   "decisions": 4,
+   "actions": 5,
+   "questions": 2
+  },
+  "traps": [
+   "hypothetical",
+   "joke",
+   "tentative"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "misattributed_short_line",
+   "crosstalk"
+  ],
+  "date": "Friday, November 27, 2026",
+  "time": "10:30 AM"
+ },
+ {
+  "id": "m18",
+  "type": "production meeting",
+  "title_hint": "Easter production kickoff",
+  "minutes": 30,
+  "words": 4200,
+  "sources": [
+   "room",
+   "call"
+  ],
+  "control": false,
+  "people": "3-5",
+  "counts": {
+   "decisions": 4,
+   "actions": 5,
+   "questions": 2
+  },
+  "traps": [
+   "other_party",
+   "already_done",
+   "label_noise"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "crosstalk",
+   "offtopic"
+  ],
+  "date": "Tuesday, December 1, 2026",
+  "time": "1:00 PM"
+ },
+ {
+  "id": "m19",
+  "type": "cross-team meeting",
+  "title_hint": "Communications and AVL alignment on livestream graphics",
+  "minutes": 30,
+  "words": 4200,
+  "sources": [
+   "room"
+  ],
+  "control": false,
+  "people": "3-5",
+  "counts": {
+   "decisions": 4,
+   "actions": 5,
+   "questions": 2
+  },
+  "traps": [
+   "reversed",
+   "hypothetical",
+   "joke"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "offtopic",
+   "unknown_lines"
+  ],
+  "date": "Monday, December 7, 2026",
+  "time": "2:00 PM"
+ },
+ {
+  "id": "m20",
+  "type": "staff meeting",
+  "title_hint": "Weekend services all-staff planning",
+  "minutes": 45,
+  "words": 6300,
+  "sources": [
+   "room",
+   "call"
+  ],
+  "control": false,
+  "people": "4-5",
+  "counts": {
+   "decisions": 5,
+   "actions": 6,
+   "questions": 2
+  },
+  "traps": [
+   "tentative",
+   "other_party",
+   "already_done"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "unknown_lines",
+   "label_split",
+   "misattributed_short_line"
+  ],
+  "date": "Friday, December 11, 2026",
+  "time": "3:30 PM"
+ },
+ {
+  "id": "m21",
+  "type": "project meeting",
+  "title_hint": "Worship center audio console replacement",
+  "minutes": 45,
+  "words": 6300,
+  "sources": [
+   "room"
+  ],
+  "control": false,
+  "people": "4-5",
+  "counts": {
+   "decisions": 5,
+   "actions": 6,
+   "questions": 2
+  },
+  "traps": [
+   "label_noise",
+   "reversed",
+   "hypothetical"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "label_split",
+   "misattributed_short_line",
+   "crosstalk"
+  ],
+  "date": "Tuesday, December 15, 2026",
+  "time": "9:00 AM"
+ },
+ {
+  "id": "m22",
+  "type": "vendor call",
+  "title_hint": "Camera upgrade proposal with the integrator",
+  "minutes": 45,
+  "words": 6300,
+  "sources": [
+   "call"
+  ],
+  "control": false,
+  "people": "4-5",
+  "counts": {
+   "decisions": 5,
+   "actions": 6,
+   "questions": 2
+  },
+  "traps": [
+   "joke",
+   "tentative",
+   "other_party"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "misattributed_short_line",
+   "crosstalk",
+   "offtopic"
+  ],
+  "date": "Monday, December 21, 2026",
+  "time": "10:30 AM"
+ },
+ {
+  "id": "m23",
+  "type": "event planning",
+  "title_hint": "Christmas Eve rehearsal schedule and crew",
+  "minutes": 45,
+  "words": 6300,
+  "sources": [
+   "room",
+   "call"
+  ],
+  "control": false,
+  "people": "4-5",
+  "counts": {
+   "decisions": 5,
+   "actions": 6,
+   "questions": 2
+  },
+  "traps": [
+   "already_done",
+   "label_noise",
+   "reversed"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "crosstalk",
+   "offtopic",
+   "unknown_lines"
+  ],
+  "date": "Friday, December 25, 2026",
+  "time": "1:00 PM"
+ },
+ {
+  "id": "m24",
+  "type": "post-incident review",
+  "title_hint": "Livestream outage post-incident review",
+  "minutes": 45,
+  "words": 6300,
+  "sources": [
+   "call"
+  ],
+  "control": false,
+  "people": "4-5",
+  "counts": {
+   "decisions": 5,
+   "actions": 6,
+   "questions": 2
+  },
+  "traps": [
+   "hypothetical",
+   "joke",
+   "tentative"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "offtopic",
+   "unknown_lines",
+   "label_split"
+  ],
+  "date": "Tuesday, December 29, 2026",
+  "time": "2:00 PM"
+ },
+ {
+  "id": "m25",
+  "type": "planning",
+  "title_hint": "Next-year AVL roadmap",
+  "minutes": 60,
+  "words": 8400,
+  "sources": [
+   "room"
+  ],
+  "control": false,
+  "people": "4-6",
+  "counts": {
+   "decisions": 6,
+   "actions": 8,
+   "questions": 3
+  },
+  "traps": [
+   "other_party",
+   "already_done",
+   "label_noise",
+   "reversed"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "unknown_lines",
+   "label_split",
+   "misattributed_short_line"
+  ],
+  "date": "Monday, January 4, 2027",
+  "time": "3:30 PM"
+ },
+ {
+  "id": "m26",
+  "type": "staff meeting",
+  "title_hint": "Production team monthly",
+  "minutes": 60,
+  "words": 8400,
+  "sources": [
+   "room",
+   "call"
+  ],
+  "control": false,
+  "people": "4-6",
+  "counts": {
+   "decisions": 6,
+   "actions": 8,
+   "questions": 3
+  },
+  "traps": [
+   "hypothetical",
+   "joke",
+   "tentative",
+   "other_party"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "label_split",
+   "misattributed_short_line",
+   "crosstalk"
+  ],
+  "date": "Friday, January 8, 2027",
+  "time": "9:00 AM"
+ },
+ {
+  "id": "m27",
+  "type": "vendor call",
+  "title_hint": "Lighting console training and support contract",
+  "minutes": 60,
+  "words": 8400,
+  "sources": [
+   "call"
+  ],
+  "control": false,
+  "people": "4-6",
+  "counts": {
+   "decisions": 6,
+   "actions": 8,
+   "questions": 3
+  },
+  "traps": [
+   "already_done",
+   "label_noise",
+   "reversed",
+   "hypothetical"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "misattributed_short_line",
+   "crosstalk",
+   "offtopic"
+  ],
+  "date": "Tuesday, January 12, 2027",
+  "time": "10:30 AM"
+ },
+ {
+  "id": "m28",
+  "type": "project meeting",
+  "title_hint": "Kids wing AV install coordination with facilities and the MSP",
+  "minutes": 60,
+  "words": 8400,
+  "sources": [
+   "room",
+   "call"
+  ],
+  "control": false,
+  "people": "4-6",
+  "counts": {
+   "decisions": 6,
+   "actions": 8,
+   "questions": 3
+  },
+  "traps": [
+   "joke",
+   "tentative",
+   "other_party",
+   "already_done"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "crosstalk",
+   "offtopic",
+   "unknown_lines"
+  ],
+  "date": "Monday, January 18, 2027",
+  "time": "1:00 PM"
+ },
+ {
+  "id": "m29",
+  "type": "planning retreat",
+  "title_hint": "Production team planning retreat, morning session",
+  "minutes": 90,
+  "words": 12600,
+  "sources": [
+   "room"
+  ],
+  "control": false,
+  "people": "5-7",
+  "counts": {
+   "decisions": 8,
+   "actions": 10,
+   "questions": 4
+  },
+  "traps": [
+   "label_noise",
+   "reversed",
+   "hypothetical",
+   "joke",
+   "tentative"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "offtopic",
+   "unknown_lines",
+   "label_split"
+  ],
+  "date": "Friday, January 22, 2027",
+  "time": "2:00 PM"
+ },
+ {
+  "id": "m30",
+  "type": "event planning",
+  "title_hint": "Easter weekend full production meeting",
+  "minutes": 90,
+  "words": 12600,
+  "sources": [
+   "room",
+   "call"
+  ],
+  "control": false,
+  "people": "5-7",
+  "counts": {
+   "decisions": 8,
+   "actions": 10,
+   "questions": 4
+  },
+  "traps": [
+   "other_party",
+   "already_done",
+   "label_noise",
+   "reversed",
+   "hypothetical"
+  ],
+  "noise": [
+   "asr_errors",
+   "filler",
+   "unknown_lines",
+   "label_split",
+   "misattributed_short_line"
+  ],
+  "date": "Tuesday, January 26, 2027",
+  "time": "3:30 PM"
+ }
+]
