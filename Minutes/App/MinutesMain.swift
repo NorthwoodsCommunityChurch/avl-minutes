@@ -11,6 +11,9 @@ enum MinutesMain {
         if CommandLine.arguments.contains("--notes-helper") {
             MainActor.assumeIsolated { NotesHelper.run() }
         }
+        if CommandLine.arguments.contains("--audio-check") {
+            AudioCheck.run(voiceProcessing: !CommandLine.arguments.contains("--raw"))
+        }
         if CommandLine.arguments.contains("--mcp") {
             let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0"
             Task.detached {
