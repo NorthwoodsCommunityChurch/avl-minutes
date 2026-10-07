@@ -11,10 +11,13 @@ PORT=11435
 REPS="${REPS:-2}"
 CTX="${CTX:-65536}"
 
-declare -A FILES=(
-  [gemma-4-12b]="gemma-4-12b-it-Q4_K_M.gguf"
-  [qwen3.5-9b]="Qwen3.5-9B-Q4_K_M.gguf"
-)
+model_file() {   # macOS ships bash 3.2: no associative arrays
+  case "$1" in
+    gemma-4-12b) echo "gemma-4-12b-it-Q4_K_M.gguf" ;;
+    qwen3.5-9b)  echo "Qwen3.5-9B-Q4_K_M.gguf" ;;
+    *) echo "unknown contestant: $1" >&2; exit 1 ;;
+  esac
+}
 CONTESTANTS=("$@")
 [ ${#CONTESTANTS[@]} -eq 0 ] && CONTESTANTS=(gemma-4-12b qwen3.5-9b)
 
@@ -22,7 +25,7 @@ stop_server() { [ -n "${SERVER_PID:-}" ] && kill "$SERVER_PID" 2>/dev/null && wa
 trap stop_server EXIT
 
 for name in "${CONTESTANTS[@]}"; do
-  file="$MODELS_DIR/${FILES[$name]}"
+  file="$MODELS_DIR/$(model_file "$name")"
   [ -s "$file" ] || { echo "missing model file: $file" >&2; exit 1; }
   echo "== $name: starting llama-server on :$PORT ($(date +%H:%M:%S))"
   llama-server -m "$file" -c "$CTX" -ngl 99 --jinja --reasoning-format deepseek \
