@@ -2,7 +2,8 @@
 
 **Date:** 2026-10-05 (revised same day: transcripts live in Apple Notes)
 **Status:** approved in conversation 2026-10-05 ("approved, build it"; Notes
-revision: "it can be in iCloud, in its own folder")
+revision: "it can be in iCloud, in its own folder"). The UI section (§7) is superseded by
+[DESIGN.md](../../../DESIGN.md) — Apple native, 2026-10-07.
 **Working name:** Minutes (rename freely; bundle ID `com.northwoods.Minutes`)
 
 ## 1. Purpose
@@ -281,9 +282,10 @@ labels may be wrong; "Me" is Aaron) and everything else is Aaron's own notes.
 
 1. One screen: what Minutes does; it never saves audio; transcripts go to the
    Notes folder; Claude can read your notes.
-2. Permissions, each asked when first needed: Microphone, Speech Recognition,
-   System Audio Recording (macOS says "recording"; our screen explains Minutes
-   listens but does not save), Automation → Notes.
+2. Permissions, each asked when first needed: Microphone, System Audio
+   Recording (macOS says "recording"; our screen explains Minutes listens but does
+   not save), Automation → Notes. (SpeechAnalyzer needs no Speech Recognition
+   permission — removed 2026-10-07.)
 3. Model downloads (Apple speech asset, Sortformer, CAM++) with progress.
 4. Voice training (skippable). 5. Connect to Claude Code.
 

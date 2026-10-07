@@ -6,20 +6,30 @@ Menu bar Mac app that transcribes Aaron's meetings (room mic + Teams/Zoom/browse
 server. Stack: macOS 26 Swift/SwiftUI, Apple SpeechAnalyzer, FluidAudio (Sortformer + CAM++),
 SQLite FTS5, MCP Swift SDK, XcodeGen.
 
-> **Read first:** [docs/superpowers/specs/2026-10-05-minutes-design.md](docs/superpowers/specs/2026-10-05-minutes-design.md)
-> (the product definition), then [DESIGN.md](DESIGN.md) (visual system; mockup in `design/sketches/`).
-> The build plan is [docs/superpowers/plans/2026-10-05-minutes.md](docs/superpowers/plans/2026-10-05-minutes.md).
+> **Read first:** [README.md](README.md) (what it is, usage, privacy), then the product definition
+> [docs/superpowers/specs/2026-10-05-minutes-design.md](docs/superpowers/specs/2026-10-05-minutes-design.md)
+> and [DESIGN.md](DESIGN.md) (Apple-native visual rules). Build plan + task status:
+> [docs/superpowers/plans/2026-10-05-minutes.md](docs/superpowers/plans/2026-10-05-minutes.md).
+> If you read one more thing after this file, read the spec.
 
 ---
 
 ## Status — 2026-10-07
-- **Stage:** active development, branch `minutes-v1` (not pushed; no GitHub repo yet)
-- **Works:** testable core (41 tests), Notes index + MCP search over Aaron's real notes, Notes
-  read/write via helper process, call + echo-cancelled mic capture, transcription + speaker
-  separation end to end (`--transcribe-check`), voice training logic, no-audio build guard and audit script.
-- **In progress / next:** real menu bar UI (design mockup awaiting Aaron's OK), Sparkle, README.
-- **Known issues / pending with Aaron:** echo-cancellation proof with speakers on during a real call;
-  voice training + "Me" threshold calibration (default 0.5).
+- **Stage:** active development on branch `minutes-v1`; committed locally only — **no GitHub repo yet**
+  (proposed `NorthwoodsCommunityChurch/avl-minutes`, private; needs Aaron's OK to create).
+- **Works:** everything end to end except Sparkle — testable core (41 tests); Notes index + MCP search
+  over Aaron's real notes (118); Notes read/write via helper process; call capture (IOProc) +
+  echo-cancelled mic; transcription + speaker separation (`--transcribe-check` 8/8 + 3/3 both-stream
+  runs perfect); native Liquid Glass UI (menu bar panel, Welcome checklist, Settings, voice training);
+  no-audio build guard + audit script. Debug build installed at `/Applications/Minutes.app` (not launched).
+- **Plan status (tasks 1–13):** 1–11 done; 12 (UI) built, **awaiting Aaron's approval of the native
+  screens** ([docs/images/minutes-screens.png](docs/images/minutes-screens.png)); 13 remaining: Sparkle
+  wiring (read `../App Updates/SPARKLE-GUIDE.md` first), final whole-branch code review, merge to main.
+- **Needs Aaron in person:** echo-cancellation test on a Teams call with speakers on (`--audio-check`
+  or a real meeting; his speakers were muted and were left muted); voice training + "Me" threshold
+  calibration (default cosine 0.5); first real launch through the Welcome checklist.
+- **Known issues:** none open. Ledger of every deviation from the plan ("Ruling:" lines):
+  `.superpowers/sdd/2026-10-05-minutes/progress.md` (gitignored, local only).
 
 ## What it does
 Aaron clicks Start in the menu bar before a meeting and Stop after. Speech becomes text in RAM;
@@ -34,7 +44,9 @@ Call tap (IOProc) ──────┴─ 16 kHz ───┼─ Sortformer dia
 → Attributor → TranscriptDocument → NotesBridge (Minutes --notes-helper) → Apple Notes
 NotesIndexer → notes-index.db (FTS5) ← Minutes --mcp (read-only) ← Claude Code
 ```
-One binary, five modes: app (default), `--mcp`, `--notes-helper`, `--audio-check`, `--transcribe-check`.
+One binary, several modes: app (default), `--mcp`, `--notes-helper`, `--audio-check`, `--transcribe-check`;
+debug builds also have `--gallery` (all screens in one off-screen, non-focusable window for screenshots)
+and `--unregister-login`.
 
 ### Where things live
 - `Packages/MinutesKit/` — pure, tested logic (attribution, speakers, transcript doc, Notes index, MCP tools)
@@ -78,6 +90,11 @@ Release: not yet — ask Aaron before any version bump, repo creation, or appcas
 - SpeechAnalyzer needs **no** `SFSpeechRecognizer.requestAuthorization`; calling it from a terminal
   run crashes with a TCC violation.
 - Running modes from a terminal attributes permissions to the terminal/VS Code, not Minutes.
+- **Design is Apple native** (Aaron, 2026-10-07): system controls, `.glass`/`.glassProminent`, no brand
+  fonts/colors. The `northwoods-mac-app-design` skill's custom-brand direction was overridden.
+- **Screenshots: capture only the gallery window** (`screencapture -l <id>`, id printed as
+  `GALLERY_WINDOW=` on stderr). A region capture once caught Aaron's Teams chat; never do that again.
+- Login item auto-registers only for `/Applications` copy launched with no arguments.
 
 ## Update Protocol
 | When you… | Update… |
@@ -93,3 +110,4 @@ End a work session with **`/save`**.
 | Date | Change |
 |---|---|
 | 2026-10-07 | Initial CLAUDE.md to Northwoods standard |
+| 2026-10-07 | /save: status after native UI; README added; screenshot and login-item gotchas |
