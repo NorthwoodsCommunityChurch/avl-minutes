@@ -10,3 +10,4 @@ DerivedData/
 *.dSYM
 xcuserdata/
 .superpowers/
+Vendor/
