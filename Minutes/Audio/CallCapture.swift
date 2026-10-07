@@ -12,7 +12,8 @@ final class CallCapture {
 
     private var tapID = AudioObjectID(kAudioObjectUnknown)
     private var aggregateID = AudioObjectID(kAudioObjectUnknown)
-    private var engine: AVAudioEngine?
+    private var ioProcID: AudioDeviceIOProcID?
+    private let ioQueue = DispatchQueue(label: "com.northwoods.Minutes.call-tap", qos: .userInitiated)
     private let resampler = MonoResampler(channelMode: .sumAll)
     private var watchdog: Timer?
     private let lastSound = LastSound()
@@ -27,7 +28,7 @@ final class CallCapture {
         func get() -> Date { lock.withLock { value } }
     }
 
-    var isRunning: Bool { engine?.isRunning == true }
+    var isRunning: Bool { ioProcID != nil }
 
     func start() throws {
         try build()
@@ -76,36 +77,43 @@ final class CallCapture {
         }
         aggregateID = newAggregate
 
-        let engine = AVAudioEngine()
-        do {
-            try engine.inputNode.auAudioUnit.setDeviceID(aggregateID)
-        } catch {
+        // Read the aggregate directly with an IOProc (Apple's documented pattern for
+        // process taps). AVAudioEngine on a tap aggregate started late or not at all
+        // in roughly 1 of 3 runs.
+        var streamDescription = AudioStreamBasicDescription()
+        var size = UInt32(MemoryLayout<AudioStreamBasicDescription>.size)
+        var formatAddress = CoreAudioProcesses.address(kAudioTapPropertyFormat)
+        guard AudioObjectGetPropertyData(tapID, &formatAddress, 0, nil, &size, &streamDescription) == noErr,
+              let format = AVAudioFormat(streamDescription: &streamDescription) else {
             tearDown()
-            throw error
+            throw CaptureError.aggregateFailed(-1)
         }
-        let format = engine.inputNode.outputFormat(forBus: 0)
-        engine.inputNode.installTap(onBus: 0, bufferSize: 4096, format: format) { [weak self] buffer, _ in
+        var procID: AudioDeviceIOProcID?
+        let procStatus = AudioDeviceCreateIOProcIDWithBlock(&procID, aggregateID, ioQueue) { [weak self] _, inputData, _, _, _ in
+            guard let buffer = AVAudioPCMBuffer(pcmFormat: format, bufferListNoCopy: inputData, deallocator: nil) else { return }
             self?.handle(buffer)
         }
-        engine.prepare()
-        do {
-            try engine.start()
-        } catch {
-            engine.inputNode.removeTap(onBus: 0)
+        guard procStatus == noErr, let procID else {
             tearDown()
-            throw error
+            throw CaptureError.aggregateFailed(procStatus)
         }
-        self.engine = engine
+        ioProcID = procID
+        let startStatus = AudioDeviceStart(aggregateID, procID)
+        guard startStatus == noErr else {
+            tearDown()
+            throw CaptureError.aggregateFailed(startStatus)
+        }
         lastSound.touch()
         Self.logger.info("Call capture started (\(format.channelCount) ch @ \(format.sampleRate) Hz)")
+        Trace.step("call capture: started \(format.channelCount) ch @ \(format.sampleRate) Hz interleaved=\(format.isInterleaved)")
     }
 
     private func tearDown() {
-        if let engine {
-            engine.inputNode.removeTap(onBus: 0)
-            engine.stop()
+        if let ioProcID, aggregateID != kAudioObjectUnknown {
+            AudioDeviceStop(aggregateID, ioProcID)
+            AudioDeviceDestroyIOProcID(aggregateID, ioProcID)
         }
-        engine = nil
+        ioProcID = nil
         if aggregateID != kAudioObjectUnknown {
             AudioHardwareDestroyAggregateDevice(aggregateID)
             aggregateID = AudioObjectID(kAudioObjectUnknown)
@@ -129,6 +137,7 @@ final class CallCapture {
         guard silentFor > 10, Date().timeIntervalSince(lastRebuild) > 30,
               CoreAudioProcesses.anyOtherProcessOutputting() else { return }
         Self.logger.info("Call tap silent while audio is playing; rebuilding")
+        Trace.step("call capture: watchdog rebuild")
         lastRebuild = Date()
         tearDown()
         do {

@@ -19,16 +19,21 @@ final class MonoResampler {
         let frames = Int(buffer.frameLength)
         let channels = Int(buffer.format.channelCount)
         let rate = buffer.format.sampleRate
+        // Interleaved buffers (Core Audio taps) keep every channel in src[0], `stride` apart.
+        let interleaved = buffer.format.isInterleaved
+        let stride = buffer.stride
         guard let monoFormat = AVAudioFormat(commonFormat: .pcmFormatFloat32, sampleRate: rate, channels: 1, interleaved: false),
               let mono = AVAudioPCMBuffer(pcmFormat: monoFormat, frameCapacity: AVAudioFrameCount(frames)),
               let dst = mono.floatChannelData?[0] else { return nil }
         mono.frameLength = AVAudioFrameCount(frames)
-        if channelMode == .firstChannel || channels == 1 {
+        if (channelMode == .firstChannel || channels == 1) && !interleaved {
             dst.update(from: src[0], count: frames)
+        } else if channelMode == .firstChannel || channels == 1 {
+            for i in 0..<frames { dst[i] = src[0][i * stride] }
         } else {
             for i in 0..<frames {
                 var sum: Float = 0
-                for c in 0..<channels { sum += src[c][i] }
+                for c in 0..<channels { sum += interleaved ? src[0][i * stride + c] : src[c][i] }
                 dst[i] = max(-1, min(1, sum))
             }
         }

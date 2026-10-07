@@ -31,6 +31,7 @@ final class StreamTranscriber {
         self.analyzer = analyzer
         let (stream, continuation) = AsyncStream<AnalyzerInput>.makeStream()
         self.continuation = continuation
+        Trace.step("transcriber: analyzer format \(analyzerFormat.commonFormat.rawValue) \(analyzerFormat.sampleRate) Hz \(analyzerFormat.channelCount) ch")
         if analyzerFormat != MonoResampler.canonicalFormat {
             converter = AVAudioConverter(from: MonoResampler.canonicalFormat, to: analyzerFormat)
         }
@@ -41,6 +42,8 @@ final class StreamTranscriber {
                     guard let self else { return }
                     if result.isFinal {
                         let words = Self.words(from: result.text)
+                        Trace.step(String(format: "transcriber: final %.2f–%.2f s, %d words",
+                                          result.range.start.seconds, result.range.end.seconds, words.count))
                         if !words.isEmpty { self.onFinal?(words) }
                     } else {
                         self.onVolatile?(String(result.text.characters))
@@ -59,9 +62,15 @@ final class StreamTranscriber {
         }
     }
 
+    private var fedFrames = 0
+
     /// Feeds one canonical (16 kHz mono Float32) buffer. Called on the audio thread.
     func append(_ buffer: AVAudioPCMBuffer) {
         guard let continuation else { return }
+        if Trace.enabled {
+            fedFrames += Int(buffer.frameLength)
+            if fedFrames % 160_000 < Int(buffer.frameLength) { Trace.step("transcriber: fed \(fedFrames / 16_000) s") }
+        }
         guard let converter else {
             continuation.yield(AnalyzerInput(buffer: buffer))
             return
@@ -86,11 +95,40 @@ final class StreamTranscriber {
     func finish() async {
         continuation?.finish()
         continuation = nil
+        Trace.step("transcriber: finalize")
         if let analyzer { try? await analyzer.finalizeAndFinishThroughEndOfInput() }
-        await resultsTask?.value
+        Trace.step("transcriber: waiting for results")
+        // SpeechTranscriber occasionally never ends its results stream after
+        // finalizing (seen ~1 in 6 runs on macOS 26.5). Wait up to 5 s, then move on.
+        if let resultsTask, await !Self.finishes(resultsTask, within: 5) {
+            Self.logger.error("Transcriber results did not end; cancelling")
+            Trace.step("transcriber: results timed out")
+            resultsTask.cancel()
+        }
+        Trace.step("transcriber: done")
         analyzeTask?.cancel()
         analyzer = nil
         onVolatile?("")
+    }
+
+    /// True if `task` completes within `seconds`. Never waits on the loser.
+    private static func finishes(_ task: Task<Void, Never>, within seconds: Double) async -> Bool {
+        final class Once: @unchecked Sendable {
+            private let lock = NSLock()
+            private var fired = false
+            func claim() -> Bool { lock.withLock { defer { fired = true }; return !fired } }
+        }
+        let once = Once()
+        return await withCheckedContinuation { continuation in
+            Task {
+                await task.value
+                if once.claim() { continuation.resume(returning: true) }
+            }
+            Task {
+                try? await Task.sleep(for: .seconds(seconds))
+                if once.claim() { continuation.resume(returning: false) }
+            }
+        }
     }
 
     /// Splits a final result into timed words. Runs without a time range (spaces,

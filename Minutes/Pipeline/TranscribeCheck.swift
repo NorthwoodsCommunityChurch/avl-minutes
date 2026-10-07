@@ -37,6 +37,7 @@ enum TranscribeCheck {
                     ("Samantha", "Great, please send me the quote by Friday so I can approve it."),
                 ]
                 for (voice, text) in turns {
+                    Trace.step("check: say \(voice)")
                     let say = Process()
                     say.executableURL = URL(fileURLWithPath: "/usr/bin/say")
                     say.arguments = ["-v", voice, text]
@@ -45,6 +46,7 @@ enum TranscribeCheck {
                     try? await Task.sleep(for: .milliseconds(700))
                 }
                 try? await Task.sleep(for: .seconds(3))
+                Trace.step("check: stopping")
                 let stopAt = Date()
                 await session.stop()
                 print(String(format: "transcribe-check: stop took %.1f s", Date().timeIntervalSince(stopAt)))

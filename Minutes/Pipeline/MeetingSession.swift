@@ -96,6 +96,7 @@ final class MeetingSession {
         let voicePrint = try? VoicePrint.load(from: VoicePrint.defaultURL())
 
         for source in Source.allCases where sources.contains(source) {
+            Trace.step("session: making \(source.rawValue) stream")
             do {
                 streams[source] = try await makeStream(source, start: start, locale: locale,
                                                        analyzerFormat: analyzerFormat, voicePrint: voicePrint)
@@ -127,11 +128,14 @@ final class MeetingSession {
         for stream in streams.values { stream.stopCapture() }
         for (source, stream) in streams {
             Self.logger.info("Stopping \(source.rawValue, privacy: .public): transcriber")
+            Trace.step("stop \(source.rawValue): transcriber finish")
             await stream.transcriber.finish()
             Self.logger.info("Stopping \(source.rawValue, privacy: .public): pipeline")
+            Trace.step("stop \(source.rawValue): pipeline finish")
             await stream.pipeline.finish()
         }
         Self.logger.info("Streams stopped; final save")
+        Trace.step("stop: streams stopped")
         streams = [:]
         levels = [:]
         volatileText = [:]
@@ -166,12 +170,14 @@ final class MeetingSession {
             }
         }
         let diarizer: StreamDiarizer?
+        Trace.step("stream \(source.rawValue): loading diarizer models")
         do {
             diarizer = StreamDiarizer(models: try await models.makeDiarizerModels())
         } catch {
             diarizer = nil
             Self.logger.error("Speaker model unavailable; lines will be labeled Unknown")
         }
+        Trace.step("stream \(source.rawValue): diarizer ready")
         let clock = StreamClock()
         let pipeline = StreamPipeline(
             source: source, diarizer: diarizer, embedder: models.embedder, voicePrint: voicePrint, threshold: 0.5
@@ -184,6 +190,7 @@ final class MeetingSession {
             Task { @MainActor [weak self] in self?.volatileText[source] = text }
         }
         transcriber.start()
+        Trace.step("stream \(source.rawValue): transcriber started")
 
         let onBuffer: (AVAudioPCMBuffer) -> Void = { buffer in
             clock.markFirstBuffer(meetingStart: start)
@@ -199,6 +206,7 @@ final class MeetingSession {
             let mic = MicCapture()
             mic.onBuffer = onBuffer
             mic.onLevel = onLevel
+            Trace.step("stream room: starting capture")
             do { try mic.start() } catch {
                 await transcriber.finish()
                 await pipeline.finish()
@@ -212,6 +220,7 @@ final class MeetingSession {
             call.onFailure = { message in
                 Task { @MainActor [weak self] in self?.captureErrors[.call] = message }
             }
+            Trace.step("stream call: starting capture")
             do { try call.start() } catch {
                 await transcriber.finish()
                 await pipeline.finish()

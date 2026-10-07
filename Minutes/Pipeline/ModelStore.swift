@@ -32,21 +32,27 @@ final class ModelStore {
         }
         do {
             state = .preparing("Downloading the speech model")
+            Self.logger.notice("prepare: locale"); Trace.step("prepare: locale")
             let resolved = await SpeechTranscriber.supportedLocale(equivalentTo: Locale.current) ?? Locale(identifier: "en-US")
             let probe = SpeechTranscriber(locale: resolved, transcriptionOptions: [],
                                           reportingOptions: [.volatileResults], attributeOptions: [.audioTimeRange])
+            Self.logger.notice("prepare: asset request"); Trace.step("prepare: asset request")
             if let request = try await AssetInventory.assetInstallationRequest(supporting: [probe]) {
+                Self.logger.notice("prepare: installing speech asset"); Trace.step("prepare: installing speech asset")
                 try await request.downloadAndInstall()
             }
+            Self.logger.notice("prepare: analyzer format"); Trace.step("prepare: analyzer format")
             analyzerFormat = await SpeechAnalyzer.bestAvailableAudioFormat(compatibleWith: [probe])
             locale = resolved
 
             state = .preparing("Downloading the speaker models")
+            Self.logger.notice("prepare: sortformer"); Trace.step("prepare: sortformer")
             _ = try await SortformerModels.loadFromHuggingFace(config: Self.diarizerConfig)
+            Self.logger.notice("prepare: cam++"); Trace.step("prepare: cam++")
             embedder = try await CampPlusEmbedder.load()
 
             state = .ready
-            Self.logger.info("Models ready")
+            Self.logger.notice("prepare: models ready"); Trace.step("prepare: models ready")
         } catch let error as ModelError {
             state = .failed(error.message)
         } catch {
