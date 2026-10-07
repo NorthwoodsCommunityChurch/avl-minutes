@@ -7,9 +7,11 @@ public final class NotesIndex: @unchecked Sendable {
     private let ownerKey = "MinutesKit.NotesIndex.transaction"
     public let isReadOnly: Bool
 
-    public static func defaultURL() -> URL {
+    /// Where the app keeps its index: `~/Library/Application Support/<appFolder>/notes-index.db`.
+    /// Minutes uses its own folder; Hermes Helper passes "Hermes Helper".
+    public static func defaultURL(appFolder: String = "Minutes") -> URL {
         FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
-            .appendingPathComponent("Minutes", isDirectory: true)
+            .appendingPathComponent(appFolder, isDirectory: true)
             .appendingPathComponent("notes-index.db")
     }
 

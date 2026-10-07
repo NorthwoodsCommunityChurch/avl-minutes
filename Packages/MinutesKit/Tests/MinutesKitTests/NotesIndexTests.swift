@@ -83,3 +83,10 @@ private func meta(_ id: String, _ title: String, folder: String = "Notes", modif
     }
     #expect(try index.count() == 1)
 }
+
+@Test func defaultURLUsesTheAppFolder() {
+    let minutes = NotesIndex.defaultURL()
+    #expect(Array(minutes.pathComponents.suffix(3)) == ["Application Support", "Minutes", "notes-index.db"])
+    let helper = NotesIndex.defaultURL(appFolder: "Hermes Helper")
+    #expect(Array(helper.pathComponents.suffix(3)) == ["Application Support", "Hermes Helper", "notes-index.db"])
+}
