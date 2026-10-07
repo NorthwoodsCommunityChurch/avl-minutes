@@ -95,7 +95,10 @@ final class AppModel {
         }
         indexer?.start()
         if !CommandLine.arguments.contains("--gallery") {
-            updater.start(isBusy: { [weak self] in self?.session.isActive ?? false })
+            updater.start(isBusy: { [weak self] in
+                guard let session = self?.session else { return false }
+                return session.isActive || session.hasUnsavedTranscript
+            })
         }
         Task {
             await models.prepare()
@@ -109,17 +112,15 @@ final class AppModel {
 
     var notesReady: Bool { indexer?.lastRefresh != nil && indexer?.lastError == nil }
 
-    var canStart: Bool {
-        models.isReady && notesReady && (useRoom || useCall) && (!useRoom || microphoneAllowed)
-    }
+    /// Meetings need the speech models, a source, and Notes permission. They don't wait
+    /// on the notes index: a slow or failed refresh only affects Claude's search.
+    var canStart: Bool { setupProblem == nil }
 
     /// What's missing before Start can work, in plain words (nil when ready).
     var setupProblem: String? {
-        if let startupError { return startupError }
         if case .failed(let message) = models.state { return message }
         if !models.isReady { return "Getting speech models ready…" }
-        if let error = indexer?.lastError { return error }
-        if !notesReady { return "Connecting to Notes…" }
+        if indexer?.permissionDenied == true { return NotesBridgeError.permissionDenied.localizedDescription }
         if useRoom && !microphoneAllowed { return "Minutes needs microphone access." }
         if !useRoom && !useCall { return "Turn on at least one source." }
         return nil

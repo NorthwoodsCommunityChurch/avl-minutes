@@ -26,11 +26,10 @@ struct MenuContent: View {
 
     private var footer: some View {
         HStack(spacing: 12) {
-            if let indexer = model.indexer {
-                Text(indexStatus(indexer))
-                    .font(.footnote)
-                    .foregroundStyle(.secondary)
-            }
+            Text(model.indexer.map(indexStatus) ?? "Notes search unavailable")
+                .font(.footnote)
+                .foregroundStyle(.secondary)
+                .help(model.indexer?.lastError ?? model.startupError ?? "")
             Spacer()
             SettingsLink {
                 Image(systemName: "gearshape")
@@ -43,13 +42,16 @@ struct MenuContent: View {
                 Image(systemName: "power")
             }
             .buttonStyle(.borderless)
-            .help("Quit Minutes")
-            .disabled(model.session.isActive)
+            .help(model.session.hasUnsavedTranscript ? "Copy the transcript before quitting" : "Quit Minutes")
+            .disabled(model.session.isActive || model.session.hasUnsavedTranscript)
         }
     }
 
     private func indexStatus(_ indexer: NotesIndexer) -> String {
-        guard let refreshed = indexer.lastRefresh else { return indexer.isRefreshing ? "Indexing notes…" : "Notes not indexed yet" }
+        guard let refreshed = indexer.lastRefresh else {
+            if indexer.isRefreshing { return "Indexing notes…" }
+            return indexer.lastError == nil ? "Notes not indexed yet" : "Couldn't index notes"
+        }
         let count = indexer.noteCount == 1 ? "1 note" : "\(indexer.noteCount) notes"
         return "\(count) indexed · \(refreshed.formatted(.relative(presentation: .named)))"
     }
@@ -227,10 +229,19 @@ private struct SavedView: View {
             ProblemRow(message: error)
         }
 
+        if session.hasUnsavedTranscript {
+            Text("This transcript is only in Minutes. Try saving again, or copy it before starting a new meeting.")
+                .font(.footnote)
+                .foregroundStyle(.secondary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+
         HStack {
             if session.saveError != nil {
+                Button("Try Again") { Task { await session.retrySave() } }
+                    .buttonStyle(.glass)
                 Button("Copy Transcript") {
-                    if let text = session.plainTextForCopy() {
+                    if let text = session.copyTranscript() {
                         NSPasteboard.general.clearContents()
                         NSPasteboard.general.setString(text, forType: .string)
                     }
@@ -243,6 +254,7 @@ private struct SavedView: View {
             Spacer()
             Button("New Meeting") { session.reset() }
                 .buttonStyle(.glassProminent)
+                .disabled(session.hasUnsavedTranscript)
         }
         .controlSize(.large)
     }

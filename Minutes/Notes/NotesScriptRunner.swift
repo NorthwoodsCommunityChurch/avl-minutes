@@ -3,10 +3,11 @@ import Foundation
 import MinutesKit
 import OSLog
 
-enum NotesBridgeError: LocalizedError, Codable {
+enum NotesBridgeError: LocalizedError, Codable, Equatable {
     case permissionDenied
     case scriptFailed(String)
     case badOutput
+    case timedOut
 
     var errorDescription: String? {
         switch self {
@@ -16,6 +17,8 @@ enum NotesBridgeError: LocalizedError, Codable {
             "Notes didn't respond: \(message)"
         case .badOutput:
             "Notes sent back something Minutes couldn't read."
+        case .timedOut:
+            "Notes didn't respond in time."
         }
     }
 }

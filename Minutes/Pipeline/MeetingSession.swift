@@ -28,6 +28,8 @@ final class MeetingSession {
     private(set) var captureErrors: [Source: String] = [:]
     private(set) var noteID: String?
     private(set) var document: TranscriptDocument?
+    /// The user copied the transcript after its final save failed.
+    private(set) var copiedAfterFailure = false
 
     /// When false, nothing is written to Notes (used by `--transcribe-check`).
     var saveToNotes = true
@@ -49,14 +51,17 @@ final class MeetingSession {
         let stopCapture: () -> Void
     }
 
-    /// Wall-clock offset of a stream's first buffer from the meeting start.
+    /// Maps a stream's sample clock to meeting time, across capture gaps and restarts.
     final class StreamClock: @unchecked Sendable {
         private let lock = NSLock()
-        private var offset: TimeInterval?
-        func markFirstBuffer(meetingStart: Date) {
-            lock.withLock { if offset == nil { offset = Date().timeIntervalSince(meetingStart) } }
+        private var timeline = StreamTimeline(sampleRate: MonoResampler.canonicalFormat.sampleRate)
+        func record(frames: Int, meetingStart: Date) {
+            let now = Date().timeIntervalSince(meetingStart)
+            lock.withLock { timeline.record(frames: frames, arrivedAt: now) }
         }
-        var offsetSeconds: TimeInterval { lock.withLock { offset ?? 0 } }
+        func meetingSeconds(_ streamSeconds: Double) -> Double {
+            lock.withLock { timeline.meetingSeconds(forStreamSeconds: streamSeconds) }
+        }
     }
 
     init(models: ModelStore, bridge: NotesBridge) {
@@ -65,6 +70,10 @@ final class MeetingSession {
     }
 
     var isActive: Bool { phase == .starting || phase == .listening || phase == .stopping }
+
+    /// The meeting ended, its final save failed, and the transcript exists only in
+    /// memory. Starting over, quitting, and update relaunches wait until it's saved or copied.
+    var hasUnsavedTranscript: Bool { phase == .finished && saveError != nil && !copiedAfterFailure }
 
     func start(title: String, sources: Set<Source>) async {
         guard !isActive, !sources.isEmpty else { return }
@@ -77,6 +86,7 @@ final class MeetingSession {
         levels = [:]
         noteID = nil
         lastSaved = nil
+        copiedAfterFailure = false
 
         await models.prepare()
         guard models.isReady, let locale = models.locale, let analyzerFormat = models.analyzerFormat else {
@@ -149,15 +159,25 @@ final class MeetingSession {
 
     /// Back to idle after the "saved" screen; keeps nothing but the note in Notes.
     func reset() {
-        guard phase == .finished else { return }
+        guard phase == .finished, !hasUnsavedTranscript else { return }
         document = nil
         liveLines = []
         startedAt = nil
+        copiedAfterFailure = false
         phase = .idle
     }
 
-    func plainTextForCopy() -> String? {
-        document?.plainText(timeZone: .current, now: Date())
+    /// Tries the final save again after it failed.
+    func retrySave() async {
+        guard phase == .finished, saveError != nil else { return }
+        await save()
+    }
+
+    /// Plain text for the clipboard; counts as keeping the transcript safe.
+    func copyTranscript() -> String? {
+        guard let text = document?.plainText(timeZone: .current, now: Date()) else { return nil }
+        if phase == .finished { copiedAfterFailure = true }
+        return text
     }
 
     // MARK: - Streams
@@ -193,7 +213,7 @@ final class MeetingSession {
         Trace.step("stream \(source.rawValue): transcriber started")
 
         let onBuffer: (AVAudioPCMBuffer) -> Void = { buffer in
-            clock.markFirstBuffer(meetingStart: start)
+            clock.record(frames: Int(buffer.frameLength), meetingStart: start)
             transcriber.append(buffer)
             pipeline.audio(MonoResampler.samples(buffer))
         }
@@ -206,6 +226,9 @@ final class MeetingSession {
             let mic = MicCapture()
             mic.onBuffer = onBuffer
             mic.onLevel = onLevel
+            mic.onFailure = { message in
+                Task { @MainActor [weak self] in self?.captureErrors[.room] = message }
+            }
             Trace.step("stream room: starting capture")
             do { try mic.start() } catch {
                 await transcriber.finish()
@@ -231,10 +254,9 @@ final class MeetingSession {
     }
 
     private func add(_ line: SlotLine, key: SpeakerKey, source: Source, clock: StreamClock) {
-        let offset = clock.offsetSeconds
         let transcriptLine = TranscriptLine(
-            startMs: Int(((offset + line.start) * 1000).rounded()),
-            endMs: Int(((offset + line.end) * 1000).rounded()),
+            startMs: Int((clock.meetingSeconds(line.start) * 1000).rounded()),
+            endMs: Int((clock.meetingSeconds(line.end) * 1000).rounded()),
             source: source,
             speaker: key,
             text: line.text

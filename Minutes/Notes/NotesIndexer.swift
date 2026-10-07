@@ -10,6 +10,8 @@ final class NotesIndexer {
     private(set) var noteCount = 0
     private(set) var isRefreshing = false
     private(set) var lastError: String?
+    /// Notes Automation permission is off; meetings can't save until it's on.
+    private(set) var permissionDenied = false
 
     private let bridge: NotesBridge
     private let index: NotesIndex
@@ -64,10 +66,12 @@ final class NotesIndexer {
             lastRefresh = finished
             noteCount = (try? index.count()) ?? noteCount
             lastError = nil
+            permissionDenied = false
             Self.logger.info("Index refreshed: \(plan.fetch.count) fetched, \(plan.retag.count) retagged, \(plan.delete.count) removed")
         } catch {
             Self.logger.error("Index refresh failed")
             lastError = error.localizedDescription
+            permissionDenied = (error as? NotesBridgeError) == .permissionDenied
         }
     }
 }

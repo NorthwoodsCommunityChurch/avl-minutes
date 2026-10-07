@@ -36,6 +36,12 @@ struct VoiceTrainingView: View {
 
             status
 
+            if model.session.isActive, trainer.state != .listening {
+                Text("Stop the meeting to train your voice.")
+                    .font(.callout)
+                    .foregroundStyle(.secondary)
+            }
+
             Text("Your voice stays in memory and is erased afterward. Minutes keeps only a voiceprint — 192 numbers that can't be played back.")
                 .font(.footnote)
                 .foregroundStyle(.secondary)
@@ -52,6 +58,7 @@ struct VoiceTrainingView: View {
                 case .idle, .failed:
                     Button("Start Reading") { Task { await trainer.start(models: model.models) } }
                         .buttonStyle(.glassProminent)
+                        .disabled(model.session.isActive)
                 case .listening:
                     Button("Done") { Task { await trainer.finish() } }
                         .buttonStyle(.glassProminent)
@@ -71,6 +78,7 @@ struct VoiceTrainingView: View {
         }
         .padding(24)
         .frame(width: 440)
+        .onAppear { trainer.reset() }
         .onDisappear {
             if trainer.state == .listening { trainer.cancel() }
             model.refreshVoicePrint()

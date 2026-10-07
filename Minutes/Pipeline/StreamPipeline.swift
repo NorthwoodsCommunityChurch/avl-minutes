@@ -63,10 +63,11 @@ final class StreamPipeline {
                 for line in queue.drain(activity: activity, now: received, flush: flush) {
                     var similarity: Float?
                     if let ring, let embedder, let voicePrint, line.end - line.start >= 1.0,
-                       let audio = ring.samples(from: line.start, to: line.end) {
+                       var audio = ring.samples(from: line.start, to: line.end) {
                         if let embedding = try? await embedder.embed(audio: audio) {
                             similarity = voicePrint.similarity(to: embedding)
                         }
+                        audio.withUnsafeMutableBufferPointer { $0.update(repeating: 0) }
                     }
                     let key = resolver.resolve(slot: line.slot, similarity: similarity)
                     await emit(line, key)

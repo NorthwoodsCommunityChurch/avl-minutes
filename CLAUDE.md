@@ -18,17 +18,19 @@ SQLite FTS5, MCP Swift SDK, XcodeGen.
 - **Stage:** active development on branch `minutes-v1`, pushed to private repo
   `NorthwoodsCommunityChurch/avl-minutes` (created 2026-10-07 with Aaron's OK). `main` holds spec + plan only;
   merging `minutes-v1` into `main` still needs Aaron's OK.
-- **Works:** everything end to end — testable core (41 tests); Notes index + MCP search
+- **Works:** everything end to end — testable core (50 tests); Notes index + MCP search
   over Aaron's real notes (118); Notes read/write via helper process; call capture (IOProc) +
   echo-cancelled mic; transcription + speaker separation (`--transcribe-check` 8/8 + 3/3 both-stream
   runs perfect); native Liquid Glass UI (menu bar panel, Welcome checklist, Settings, voice training);
   no-audio build guard + audit script. Debug build installed at `/Applications/Minutes.app` (not launched).
 - **Plan status (tasks 1–13):** 1–11 done; 12 (UI) done, native screens approved by Aaron 2026-10-07 ([docs/images/minutes-screens.png](docs/images/minutes-screens.png)); 13: Sparkle wired
-  (feed `appcast-minutes.xml` not published yet); remaining: final whole-branch code review, merge to main.
+  (feed `appcast-minutes.xml` not published yet); final whole-branch review done and its Important findings fixed
+  (2026-10-07). Remaining: Aaron's test session, then merge to main (needs his OK).
 - **Needs Aaron in person:** echo-cancellation test on a Teams call with speakers on (`--audio-check`
   or a real meeting; his speakers were muted and were left muted); voice training + "Me" threshold
   calibration (default cosine 0.5); first real launch through the Welcome checklist.
-- **Known issues:** none open. Ledger of every deviation from the plan ("Ruling:" lines):
+- **Known issues:** 10 deferred minor review findings (ledger `Final: minor (deferred)` lines), e.g. a Notes
+  create that times out but succeeds can leave a duplicate note; one-word lines may be labeled Unknown. Ledger of every deviation from the plan ("Ruling:" lines):
   `.superpowers/sdd/2026-10-05-minutes/progress.md` (gitignored, local only).
 
 ## What it does
@@ -95,6 +97,10 @@ Release: not yet — ask Aaron before any version bump, repo creation, or appcas
 - **Screenshots: capture only the gallery window** (`screencapture -l <id>`, id printed as
   `GALLERY_WINDOW=` on stderr). A region capture once caught Aaron's Teams chat; never do that again.
 - Login item auto-registers only for `/Applications` copy launched with no arguments.
+- **Start never waits on the notes index** — only Notes *permission* blocks it; index trouble shows in the footer.
+- Notes helper calls have deadlines (`NotesRequest.timeout`, run by MinutesKit `ChildProcess`).
+- **A transcript whose final save failed blocks New Meeting, Quit, and update relaunch** until Try Again
+  succeeds or it's copied (`MeetingSession.hasUnsavedTranscript`).
 - **Sparkle never interrupts a meeting** (`Updater.swift`): background checks are skipped while one runs and
   an accepted update's relaunch waits until it ends. The gallery never starts Sparkle.
 
@@ -114,3 +120,4 @@ End a work session with **`/save`**.
 | 2026-10-07 | Initial CLAUDE.md to Northwoods standard |
 | 2026-10-07 | /save: status after native UI; README added; screenshot and login-item gotchas |
 | 2026-10-07 | Repo created (private); Sparkle wired; feed + secrets rows filled |
+| 2026-10-07 | Final review fix pass: timeline across capture gaps, helper deadlines, unsaved-transcript guard, Start gating |

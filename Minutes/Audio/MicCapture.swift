@@ -7,6 +7,8 @@ import OSLog
 final class MicCapture {
     var onBuffer: ((AVAudioPCMBuffer) -> Void)?
     var onLevel: ((Float) -> Void)?
+    /// Called on the main thread when the mic stops and can't be restarted.
+    var onFailure: ((String) -> Void)?
 
     private let engine = AVAudioEngine()
     private let voiceProcessing: Bool
@@ -67,7 +69,17 @@ final class MicCapture {
             try configureAndStart()
         } catch {
             isRunning = false
-            Self.logger.error("Mic restart failed")
+            Self.logger.error("Mic restart failed; trying once more")
+            // Devices often settle a moment after the change notification.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+                guard let self, self.observer != nil, !self.isRunning else { return }
+                do {
+                    try self.configureAndStart()
+                } catch {
+                    Self.logger.error("Mic restart failed again")
+                    self.onFailure?("The microphone stopped and couldn't restart. Room lines aren't being transcribed.")
+                }
+            }
         }
     }
 

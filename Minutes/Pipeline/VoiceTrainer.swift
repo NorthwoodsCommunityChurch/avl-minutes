@@ -31,26 +31,51 @@ final class VoiceTrainer {
     private var startedAt: Date?
     private static let logger = Logger(subsystem: "com.northwoods.Minutes", category: "VoiceTrainer")
 
-    /// RAM-only sample store shared with the audio thread.
+    /// RAM-only sample store shared with the audio thread. Its storage is reserved up
+    /// front so appends never reallocate (which would leave old audio in freed memory).
     final class SampleBuffer: @unchecked Sendable {
+        private static let capacity = 16_000 * 50   // 50 s at 16 kHz, above the 45 s cap
         private let lock = NSLock()
         private var samples: [Float] = []
-        func append(_ more: [Float]) { lock.withLock { samples += more } }
+
+        init() { samples.reserveCapacity(Self.capacity) }
+
+        func append(_ more: [Float]) {
+            lock.withLock { samples += more.prefix(max(0, Self.capacity - samples.count)) }
+        }
         var count: Int { lock.withLock { samples.count } }
-        func takeAndWipe() -> [Float] {
+
+        /// Hands over the samples without copying them. The caller zeroes them when done.
+        func take() -> [Float] {
             lock.withLock {
-                let copy = samples
-                samples.withUnsafeMutableBufferPointer { $0.update(repeating: 0) }
+                let taken = samples
                 samples = []
-                return copy
+                samples.reserveCapacity(Self.capacity)
+                return taken
             }
         }
+
+        /// Zeroes the samples in place, then empties the buffer.
+        func wipe() {
+            lock.withLock {
+                samples.withUnsafeMutableBufferPointer { $0.update(repeating: 0) }
+                samples.removeAll(keepingCapacity: true)
+            }
+        }
+    }
+
+    /// Back to the start screen (after a save or a failure) so the user can train again.
+    func reset() {
+        guard state != .listening, state != .processing else { return }
+        state = .idle
+        speechSeconds = 0
+        level = 0
     }
 
     func start(models: ModelStore) async {
         guard state != .listening, state != .processing else { return }
         speechSeconds = 0
-        _ = buffer.takeAndWipe()
+        buffer.wipe()
         await models.prepare()
         guard models.embedder != nil else {
             state = .failed("The voice model isn't ready. Check the internet connection and try again.")
@@ -82,7 +107,7 @@ final class VoiceTrainer {
     func cancel() {
         mic?.stop()
         mic = nil
-        _ = buffer.takeAndWipe()
+        buffer.wipe()
         state = .idle
     }
 
@@ -102,7 +127,7 @@ final class VoiceTrainer {
         mic.stop()
         self.mic = nil
         state = .processing
-        var audio = buffer.takeAndWipe()
+        var audio = buffer.take()
         defer { audio.withUnsafeMutableBufferPointer { $0.update(repeating: 0) } }
         guard let embedder = models?.embedder else {
             state = .failed("The voice model isn't ready.")
@@ -112,10 +137,11 @@ final class VoiceTrainer {
         var embeddings: [[Float]] = []
         var start = 0
         while start + window <= audio.count {
-            let slice = Array(audio[start..<start + window])
+            var slice = Array(audio[start..<start + window])
             if Self.speechFraction(slice) >= 0.6, let embedding = try? await embedder.embed(audio: slice) {
                 embeddings.append(embedding)
             }
+            slice.withUnsafeMutableBufferPointer { $0.update(repeating: 0) }
             start += step
         }
         guard embeddings.count >= 3, let print = VoicePrint.make(from: embeddings) else {

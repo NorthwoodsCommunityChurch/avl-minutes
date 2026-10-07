@@ -9,6 +9,17 @@ enum NotesRequest: Codable {
     case create(folder: String, html: String)
     case setBody(noteID: String, html: String)
     case show(noteID: String)
+
+    /// How long the helper may take. Listing every note can be slow; a transcript write
+    /// usually takes a few seconds even for long meetings.
+    var timeout: Duration {
+        switch self {
+        case .list, .plaintext: .seconds(180)
+        case .create: .seconds(90)
+        case .setBody: .seconds(60)
+        case .show: .seconds(20)
+        }
+    }
 }
 
 /// The helper's JSON reply on stdout.
@@ -52,7 +63,14 @@ struct NotesBridge: Sendable {
     private func send(_ request: NotesRequest) async throws -> NotesReply {
         let input = try JSONEncoder().encode(request)
         guard let executable = Bundle.main.executableURL else { throw NotesBridgeError.badOutput }
-        let output = try await Self.run(executable: executable, arguments: ["--notes-helper"], stdin: input)
+        let output: Data
+        do {
+            output = try await ChildProcess.run(executable: executable, arguments: ["--notes-helper"],
+                                                stdin: input, timeout: request.timeout)
+        } catch ChildProcess.Failure.timedOut {
+            Self.logger.error("Notes helper timed out")
+            throw NotesBridgeError.timedOut
+        }
         let reply: NotesReply
         do {
             reply = try JSONDecoder().decode(NotesReply.self, from: output)
@@ -62,41 +80,6 @@ struct NotesBridge: Sendable {
         }
         if case .failed(let error) = reply { throw error }
         return reply
-    }
-
-    private static func run(executable: URL, arguments: [String], stdin: Data) async throws -> Data {
-        try await withCheckedThrowingContinuation { continuation in
-            let process = Process()
-            process.executableURL = executable
-            process.arguments = arguments
-            let input = Pipe(), output = Pipe()
-            process.standardInput = input
-            process.standardOutput = output
-            process.standardError = FileHandle.nullDevice
-            // Drain stdout concurrently so a large reply can't fill the pipe and stall.
-            let collected = OutputBox()
-            let reader = Thread {
-                collected.data = output.fileHandleForReading.readDataToEndOfFile()
-                collected.done.signal()
-            }
-            process.terminationHandler = { _ in
-                collected.done.wait()
-                continuation.resume(returning: collected.data)
-            }
-            do {
-                try process.run()
-                reader.start()
-                input.fileHandleForWriting.write(stdin)
-                try input.fileHandleForWriting.close()
-            } catch {
-                continuation.resume(throwing: error)
-            }
-        }
-    }
-
-    private final class OutputBox: @unchecked Sendable {
-        var data = Data()
-        let done = DispatchSemaphore(value: 0)
     }
 }
 
