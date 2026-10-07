@@ -91,7 +91,7 @@ One macOS app, `Minutes.app`, with two modes from the same binary:
                                 │
                   Attributor → TranscriptDocument (lines, in memory)
                                 │ every 30 s and at Stop
-                          NotesBridge (osascript JXA) ──► Apple Notes (iCloud)
+                  NotesBridge (Minutes --notes-helper) ──► Apple Notes (iCloud)
                                                              │ iCloud sync ⇄ iPhone/iPad
                  NotesIndexer (every 2 min) ◄────────────────┘
                                 │
@@ -111,7 +111,7 @@ One macOS app, `Minutes.app`, with two modes from the same binary:
 | `Attributor` | Pure: each word's dominant slot (highest mean probability over the word's frames, if ≥ 0.3), else previous word's slot, else next word's, else none; consecutive same-slot words become one line. `AttributionQueue` holds a transcript result until diarization covers its end, or 5 s more audio has arrived | — |
 | `TranscriptDocument` | Pure: holds a meeting's lines sorted by start time; renders Notes HTML and plain text | — |
 | `MeetingSession` | One meeting: starts/stops streams, maps stream time to meeting time, feeds the document, saves through `NotesBridge` every 30 s and at Stop | all above |
-| `NotesBridge` | Runs JXA scripts with `/usr/bin/osascript -l JavaScript`, passing JSON on stdin and reading JSON from stdout (no argument-size limits, no string escaping). Operations: ensure folder, create note, replace note body, list notes metadata, read note text | osascript |
+| `NotesBridge` | Each Notes call runs `Minutes --notes-helper` as a child process: JSON request on stdin, JSON reply on stdout. The helper runs AppleScript handlers with NSAppleScript on its own main thread (parameters as Apple event descriptors, never spliced into source). Keeps multi-second note writes off the app's main thread. Operations: list notes metadata, read note text, create note (ensuring the folder), replace note body | NSAppleScript |
 | `NotesIndexer` | Every 2 minutes (and right after each transcript save): lists all notes' id/name/folder/dates/locked flag in bulk, fetches text only for new or changed notes, removes deleted ones | NotesBridge, NotesIndex |
 | `NotesIndex` | SQLite (system libsqlite3, WAL, FTS5) copy of note text. App writes; MCP mode reads | SQLite3 |
 | `NotesTools` | Pure text formatting for the four MCP tools | NotesIndex |
@@ -156,8 +156,8 @@ This is the product. Rules the code must follow:
    in `~/Library/Application Support/Minutes/voiceprint.json`; it cannot be
    played back or turned back into speech.
 4. **No logging of audio or transcript text.** `os.Logger` messages carry
-   state only. No `/tmp` debug logs. Transcript text passes to `osascript`
-   over a pipe (stdin), never through a temp file.
+   state only. No `/tmp` debug logs. Transcript text passes to the Notes
+   helper over a pipe (stdin), never through a temp file or arguments.
 5. **Third-party code checked.** FluidAudio's file-based helpers
    (`AudioSourceFactory`, `processComplete(audioFileURL:)`) write temp audio;
    Minutes never calls them — only the in-memory streaming and `embed(audio:)`
