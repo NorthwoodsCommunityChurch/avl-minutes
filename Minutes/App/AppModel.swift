@@ -10,6 +10,7 @@ final class AppModel {
     let bridge = NotesBridge()
     let models = ModelStore()
     let trainer = VoiceTrainer()
+    let updater = Updater()
     let session: MeetingSession
     let indexer: NotesIndexer?
     let startupError: String?
@@ -93,6 +94,9 @@ final class AppModel {
             try? SMAppService.mainApp.register()
         }
         indexer?.start()
+        if !CommandLine.arguments.contains("--gallery") {
+            updater.start(isBusy: { [weak self] in self?.session.isActive ?? false })
+        }
         Task {
             await models.prepare()
             await refreshClaudeStatus()

@@ -57,6 +57,18 @@ struct SettingsView: View {
                     get: { _ = model.loginSettingVersion; return model.openAtLogin },
                     set: { model.openAtLogin = $0 }
                 ))
+                Toggle("Check for updates automatically", isOn: Binding(
+                    get: { model.updater.automaticallyChecks },
+                    set: { model.updater.automaticallyChecks = $0 }
+                ))
+                    .disabled(!model.updater.isStarted)
+                LabeledContent {
+                    Button("Check for Updates…") { model.updater.checkForUpdates() }
+                        .disabled(!model.updater.canCheckForUpdates)
+                } label: {
+                    Text("Version")
+                    Text(Updater.versionDescription)
+                }
             }
 
             Section("Speech Models") {

@@ -57,7 +57,7 @@ Whether Minutes is listening. Expressed natively:
 **Problems** — an inline `Label` with `exclamationmark.triangle.fill` (yellow) and one action button ("Open System Settings", "Try Again", "Copy Transcript"). Never a modal alert while a meeting runs.
 
 ### Settings (`Settings` scene, `Form` `.grouped`)
-Sections: **Voice** (status, Train / Retrain / Delete), **Transcripts** (Notes folder name, "Remind me to tell attendees"), **Claude** (Connected / Connect, notes indexed, last refresh, Refresh Now), **General** (Open at login), **Models** (status, Download).
+Sections: **Voice** (status, Train / Retrain / Delete), **Transcripts** (Notes folder name, "Remind me to tell attendees"), **Claude** (Connected / Connect, notes indexed, last refresh, Refresh Now), **General** (Open at login, Check for updates automatically, Version with Check for Updates…), **Models** (status, Download).
 
 ### Welcome (window, first launch until setup is complete)
 A single setup checklist, Apple-setup-assistant style: large `waveform` symbol, "Welcome to Minutes", one line on the promise, then rows — Microphone, Call audio, Notes, Speech models, Your voice (optional), Claude — each with a status symbol and an action button. "Done" (.glassProminent) closes it.

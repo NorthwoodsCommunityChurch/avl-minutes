@@ -26,6 +26,12 @@
 	<string>Minutes listens to call audio playing on this Mac so it can type out what callers say. Audio is never saved.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>Minutes turns speech into text on this Mac.</string>
+	<key>SUFeedURL</key>
+	<string>https://northwoodscommunitychurch.github.io/app-updates/appcast-minutes.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>VIMxKZmmRokdMcHK5d3QU4+qHgBglmkVFP5aAVvxgqM=</string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
 	<key>NSAppleEventsUsageDescription</key>
 	<string>Minutes saves meeting transcripts into your Meeting Transcripts folder in Notes and reads your notes so Claude can search them.</string>
 </dict>
