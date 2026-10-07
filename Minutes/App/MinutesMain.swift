@@ -11,6 +11,9 @@ enum MinutesMain {
         if CommandLine.arguments.contains("--notes-helper") {
             MainActor.assumeIsolated { NotesHelper.run() }
         }
+        if CommandLine.arguments.contains("--transcribe-check") {
+            TranscribeCheck.run()
+        }
         if CommandLine.arguments.contains("--audio-check") {
             AudioCheck.run(voiceProcessing: !CommandLine.arguments.contains("--raw"))
         }
