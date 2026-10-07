@@ -76,7 +76,10 @@ bash scripts/mcp-smoke-test.sh
 MINUTES_TRACE=1 /Applications/Minutes.app/Contents/MacOS/Minutes --transcribe-check [--both] [--save]
 bash scripts/audit-writes.sh start  # … run a meeting …  bash scripts/audit-writes.sh report
 ```
-Release: not yet — ask Aaron before any version bump, repo creation, or appcast publish.
+Release: not yet — ask Aaron before any version bump or appcast publish.
+Aaron's calls (2026-10-07): **not listed in Canopy** (`app-updates/catalog.json` gets no entry);
+**no custom app icon** and **no release script** — don't build them unless he asks. If a release
+happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
 
 ## Conventions & gotchas
 - **Never save audio.** The build fails on audio-writing APIs or audio file extensions in any source
@@ -121,3 +124,4 @@ End a work session with **`/save`**.
 | 2026-10-07 | /save: status after native UI; README added; screenshot and login-item gotchas |
 | 2026-10-07 | Repo created (private); Sparkle wired; feed + secrets rows filled |
 | 2026-10-07 | Final review fix pass: timeline across capture gaps, helper deadlines, unsaved-transcript guard, Start gating |
+| 2026-10-07 | Aaron: no Canopy listing, no custom icon, no release script |
