@@ -85,6 +85,8 @@ enum IndexService {
                             print("\(stamp()) notify: \(status)"); fflush(stdout)
                         }
                     }
+                    // A capped pass (backfill in progress) continues at once instead of waiting for the next tick.
+                    if r.capped { refreshFeed(feed) }
                 case .failure(let error):
                     let text = "\(error)"
                     if text != lastFeedProblem { print("\(stamp()) feed problem: \(text)"); fflush(stdout) }

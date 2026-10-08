@@ -84,3 +84,25 @@ private func write(_ text: String, to url: URL, modified: Date? = nil) throws {
     let m = try #require(FeedRecord.parse(Data(#"{"type":"mail","subject":"S"}"#.utf8), relativePath: "mail/a.json", fileModifiedAt: .init()))
     #expect(m.groupKey == nil)
 }
+
+@Test func mailAndCalendarAreIndexedBeforeTeamsAndAPassIsCapped() throws {
+    let folder = try tempDir()
+    let index = try NotesIndex(url: tempDir().appendingPathComponent("index.db"))
+    let old = Date().addingTimeInterval(-3600)
+    for n in 0..<5 {
+        let json = "{\"type\":\"teams\",\"chat\":\"c\",\"from\":\"Kirk\",\"created\":\"2026-10-08T10:00:00Z\",\"id\":\"t\(n)\",\"body\":\"chat \(n)\"}"
+        try write(json, to: folder.appendingPathComponent("teams/t\(n).json"), modified: old)
+    }
+    try write(#"{"type":"mail","received":"2026-10-08T20:58:26Z","from":"brian@example.org","subject":"Atrium","body":"drawings"}"#, to: folder.appendingPathComponent("mail/brian.json"), modified: Date())
+    try write(#"{"type":"calendar","action":"updated","subject":"Sync","start":"2026-10-09T19:00:00Z","end":"2026-10-09T19:40:00Z","id":"e1","body":"x"}"#, to: folder.appendingPathComponent("calendar/e1.json"), modified: Date())
+    let feed = FeedIndexer(folder: folder, index: index, maxPerPass: 4)
+    let first = try feed.refresh()
+    #expect(first.indexed == 4)
+    #expect(first.capped == true)
+    #expect(first.records.prefix(2).map(\.folder).sorted() == ["calendar", "mail"])   // mail and calendar before any chat history
+    #expect(first.records.dropFirst(2).allSatisfy { $0.folder == "teams" })
+    let second = try feed.refresh()
+    #expect(second.indexed == 3)
+    #expect(second.capped == false)
+    #expect(try feed.count() == 7)
+}

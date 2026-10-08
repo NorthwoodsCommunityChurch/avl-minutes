@@ -30,8 +30,10 @@ public final class FeedIndexer: @unchecked Sendable {
         public var total: Int
         /// Files that could not be read this pass (still downloading, permission); retried next pass.
         public var unreadable: Int
-        /// The records indexed this pass, in processing order (oldest file first).
+        /// The records indexed this pass, in processing order (mail and calendar first, then chats, oldest file first).
         public var records: [IndexedRecord] = []
+        /// True when the pass stopped at `maxPerPass` with files left; the next pass continues.
+        public var capped = false
         public init(indexed: Int, removed: Int, skipped: Int, total: Int, unreadable: Int = 0) {
             self.indexed = indexed
             self.removed = removed
@@ -47,9 +49,22 @@ public final class FeedIndexer: @unchecked Sendable {
         setiopolicy_np(IOPOL_TYPE_VFS_MATERIALIZE_DATALESS_FILES, IOPOL_SCOPE_PROCESS, IOPOL_MATERIALIZE_DATALESS_FILES_ON)
     }
 
-    public init(folder: URL, index: NotesIndex) {
+    /// Files read per pass. A backfill drops thousands of chat files at once and each OneDrive placeholder takes a
+    /// moment to download, so a pass is capped and mail and calendar always go first: new mail never waits behind
+    /// old chat history. The caller runs another pass right away while `Result.capped` is true.
+    public let maxPerPass: Int
+
+    public init(folder: URL, index: NotesIndex, maxPerPass: Int = 250) {
         self.folder = folder
         self.index = index
+        self.maxPerPass = max(1, maxPerPass)
+    }
+
+    private static func priority(_ id: String) -> Int {
+        let path = id.dropFirst(FeedRecord.idPrefix.count)
+        if path.hasPrefix("calendar/") { return 0 }
+        if path.hasPrefix("mail/") { return 1 }
+        return 2
     }
 
     /// The first `~/Library/CloudStorage/OneDrive-*/AI Feed` that exists, if any.
@@ -80,10 +95,19 @@ public final class FeedIndexer: @unchecked Sendable {
         let dates = Dictionary(files.map { ($0.path, $0.modifiedAt) }, uniquingKeysWith: { a, _ in a })
         skipped = skipped.filter { present.contains($0.key) }
         try index.transaction {
-            // Oldest file first, so within a group each newer file replaces the one before it.
-            for note in plan.fetch.sorted(by: { $0.modifiedAt == $1.modifiedAt ? $0.id < $1.id : $0.modifiedAt < $1.modifiedAt }) {
+            // Calendar and mail before chats; within a folder oldest file first, so within a group each newer file
+            // replaces the one before it.
+            let ordered = plan.fetch.sorted { a, b in
+                let (pa, pb) = (Self.priority(a.id), Self.priority(b.id))
+                if pa != pb { return pa < pb }
+                return a.modifiedAt == b.modifiedAt ? a.id < b.id : a.modifiedAt < b.modifiedAt
+            }
+            var read = 0
+            for note in ordered {
                 let path = String(note.id.dropFirst(FeedRecord.idPrefix.count))
                 if skipped[path] == note.modifiedAt { continue }
+                if read == maxPerPass { result.capped = true; break }
+                read += 1
                 guard let data = try? Data(contentsOf: folder.appendingPathComponent(path)) else {
                     result.unreadable += 1
                     continue
