@@ -32,11 +32,18 @@ Measured on the mini (Gemma 4 12B, 64K context, llama-server): 10-minute meeting
 
 Aaron stopped the bench at 15:52 with the 5-meeting preview judged (all five contestants, two passes) and timing from every finished run. Gemma 4 12B and Qwen 3.5 9B tied on quality (every decision found, nothing invented, one dropped action item each in one pass) but Qwen took twice as long (159 s vs 81 s typical per 10-minute meeting on the laptop; ~6,300 vs ~1,500 output tokens) and failed the 180 s bar. Aaron chose **Gemma 4 12B on the mini** ("setup hermes with 12b on the mini"): transcript text never leaves the mini. Puget's Gemma 31B (43 s typical, most precise) remains a three-line config change away. Full table: [bench/FINDINGS.md](../../bench/FINDINGS.md).
 
+## 2026-10-08: where it landed
+
+- **Teams is the channel** (not Discord/Telegram): a Teams bot "Hermes" (Developer Portal) → Cloudflare Worker `hermes` → tunnel `engineering-mac` → `hermes-teams` relay → Hermes API server. Spec: [2026-10-08-hermes-teams-relay-design.md](../superpowers/specs/2026-10-08-hermes-teams-relay-design.md). Aaron: "we ARE NOT using fallbacks".
+- **Tools:** terminal, browser, computer use, file, code, delegation, image, speech, and the clarifying-question tool are off (CLI and API platforms). Web search stays on (keyless free tiers).
+- **AI Feed:** flows for mail and calendar live (Aaron built them with the guide); Teams chat flow pending. The helper indexes the folder every 2 minutes.
+- **Model:** moved from the local Gemma 12B to **Puget's Gemma 31B** (`gemma-bigctx`) on Aaron's call once he saw the mini could host Hermes while Puget hosts the model; the local server/model/llama.cpp were removed. The 16 GB mini had been swapping 12.6 GB with the 12B resident.
+- **Task board:** Planka registered as MCP server `planka` (same `@chmald/planka-mcp` as Claude Code, Aaron's API key).
+- **Persona:** `SOUL.md` tells Hermes to look unknown things up on its own, never ask to research, answer briefly.
+
 ## Next steps, in order
 
-1. **Phone channel** — Aaron picks Discord or Telegram; then `hermes gateway install` on the mini (launchd) and the platform token in `~/.hermes/.env`.
-2. **Tool surface decision** — Hermes's default toolset includes a local terminal (the mini's user has passwordless sudo) and browser/computer-use tools. For a notes-and-summaries assistant, recommend turning those off (`hermes tools`) until a feed needs them.
-3. **OneDrive AI Feed** — once Aaron's Power Automate flows produce files, extend the helper's index to that folder (spec "Later").
-4. **Write-back** — digests to Notes through the index service (spec "Later").
-5. **Teams bridge** — Power Automate both ways (Aaron's note, 2026-10-07).
-6. **Minutes on the laptop** — unchanged: Aaron's in-person test session, then merge `minutes-v1` → `main` with his OK.
+1. **Teams feed flow** (Aaron, guide flow 3), then confirm the `teams` folder indexes.
+2. **Planning Center** — read-only MCP server (Services plans/teams/songs, People, Calendar) using Aaron's Personal Access Token; build in this repo.
+3. **Write-back** — digests to Notes through the index service (helper spec "Later").
+4. **Minutes on the laptop** — unchanged: Aaron's in-person test session, then merge `minutes-v1` → `main` with his OK.

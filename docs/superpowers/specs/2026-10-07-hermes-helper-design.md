@@ -112,6 +112,6 @@ After the helper's index has refreshed once with permission granted: quit Minute
 
 ## Later
 
-- **AI Feed:** the index service also walks the OneDrive "AI Feed" folder and indexes each file as a note-like record with a `source` column; the MCP tools gain a `source` filter. Same FTS table.
+- **AI Feed (done 2026-10-08):** the index service walks the OneDrive "AI Feed" folder every 2 minutes; each JSON file becomes a record under account "AI Feed" in folder `mail`, `calendar`, or `teams` (id `feed:<path>`), so the existing tools and their `folder` filter cover it. Calendar files for one event share a `group_key` and the newest wins. Cloud placeholders are materialized on read. See `MinutesKit/Feed/`.
 - **Write-back:** Hermes asks the helper to write a digest note. Apple events from a `--mcp` child of Hermes would be attributed to Hermes's parent process by TCC, so writes go through the launchd-run index service (local socket), which already holds the Notes permission.
 - **Teams bridge:** separate; Power Automate, per Aaron.
