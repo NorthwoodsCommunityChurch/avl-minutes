@@ -47,10 +47,11 @@ public enum FeedRecord {
             if !field("id").isEmpty { groupKey = "calendar:\(field("id"))" }
         case "teams":
             let from = field("from")
-            if skippedSenders.contains(from.lowercased()) { return nil }
+            // No sender = a bot or system message (Hermes's own replies arrive without a user name).
+            if from.isEmpty || skippedSenders.contains(from.lowercased()) { return nil }
             when = date(field("created"))
             let preview = text.replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression).trimmingCharacters(in: .whitespaces)
-            title = "\(from.isEmpty ? "Teams" : from): \(String(preview.prefix(titleLimit)))"
+            title = "\(from): \(String(preview.prefix(titleLimit)))"
             lines = ["From: \(from)", "Sent: \(field("created"))", "Chat: \(field("chat"))"]
         default:
             return nil

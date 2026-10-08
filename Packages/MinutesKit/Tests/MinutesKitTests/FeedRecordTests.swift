@@ -39,6 +39,12 @@ private func parse(_ json: String, path: String) -> FeedRecord.Parsed? {
     #expect(parse(#"{"type":"teams","from":"Hermes","body":"The answer"}"#, path: "teams/z.json") == nil)
 }
 
+@Test func teamsMessagesWithoutASenderAreSkipped() {
+    // Bot and system messages carry no user display name; Hermes's own replies arrive this way.
+    #expect(parse(#"{"type":"teams","chat":"19:abc","from":"","created":"2026-10-08T18:28:57Z","id":"m2","body":"Here is what I found."}"#, path: "teams/w.json") == nil)
+    #expect(parse(#"{"type":"teams","chat":"19:abc","created":"2026-10-08T18:28:57Z","id":"m3","body":"no from field at all"}"#, path: "teams/v.json") == nil)
+}
+
 @Test func unknownOrBrokenFilesAreSkipped() {
     #expect(parse(#"{"type":"weather","body":"x"}"#, path: "mail/a.json") == nil)
     #expect(parse("not json", path: "mail/b.json") == nil)
