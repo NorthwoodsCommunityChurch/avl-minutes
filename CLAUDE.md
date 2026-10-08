@@ -178,6 +178,11 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
   **The helper's first touch of the OneDrive folder raises a macOS permission prompt on the mini's screen** and its
   directory open blocks until someone clicks Allow (edit-3, 2026-10-08: stuck 25 min, a shell over SSH read the same
   folder fine). The helper also keeps looking for the folder every 2 min, since OneDrive is usually signed in after it starts.
+- **Never list a OneDrive folder with `FileManager.enumerator`** in a long-lived process: on edit-3 the helper kept getting the
+  listing as it was at launch and never saw files written later (new mail waited for a restart). `FeedIndexer.listing()` now
+  does plain `contentsOfDirectory` reads two levels deep, which see new files at once. The feed is also read calendar and
+  mail first, 250 files per pass (a Teams backfill of thousands of files no longer delays new mail), and a `feed_format`
+  version in the index triggers a full re-read when record text changes shape (calendar titles now carry the local date).
 - **Outlook writes several files per calendar event** (added, added, updated, updated); feed records carry a
   `group_key` (`calendar:<event id>`) and the newest file replaces the rest (index schema 2, migrates in place).
 - **Puget's gateway needs `X-Client`** and streaming; Hermes sends both via `model.default_headers` and its default
