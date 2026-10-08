@@ -167,24 +167,32 @@ public final class FeedIndexer: @unchecked Sendable {
     /// Every `*.json` under the folder, as paths relative to it; hidden files and folders are skipped.
     /// A folder macOS refuses to list (permission) is an error, not an empty feed.
     private func listing() throws -> [File] {
+        // Plain readdir per folder, two levels deep. The deep FileManager enumerator (getattrlistbulk) kept returning
+        // a stale listing on a OneDrive File Provider folder: a long-running helper never saw files written after it
+        // started until it was restarted (edit-3, 2026-10-08). Plain directory reads see new files at once.
+        let fm = FileManager.default
         var out: [File] = []
-        _ = try FileManager.default.contentsOfDirectory(atPath: folder.path)   // throws on a permission denial
         var failure: ListingError?
-        let keys: [URLResourceKey] = [.isRegularFileKey, .contentModificationDateKey]
-        guard let enumerator = FileManager.default.enumerator(at: folder, includingPropertiesForKeys: keys, options: [.skipsHiddenFiles], errorHandler: { url, error in
-            if failure == nil { failure = ListingError(path: url.path, underlying: error) }
-            return true
-        }) else { return out }
-        let base = folder.standardizedFileURL.path
-        for case let url as URL in enumerator {
-            guard url.pathExtension.lowercased() == "json" else { continue }
-            let values = try url.resourceValues(forKeys: Set(keys))
-            guard values.isRegularFile == true else { continue }
-            var path = url.standardizedFileURL.path
-            if path.hasPrefix(base) { path = String(path.dropFirst(base.count)) }
-            path = path.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
-            out.append(File(path: path, modifiedAt: values.contentModificationDate ?? Date()))
+        func read(_ dir: URL, prefix: String, depth: Int) {
+            let names: [String]
+            do {
+                names = try fm.contentsOfDirectory(atPath: dir.path)
+            } catch {
+                if depth == 0 { failure = ListingError(path: dir.path, underlying: error) }
+                return
+            }
+            for name in names where !name.hasPrefix(".") {
+                let url = dir.appendingPathComponent(name)
+                guard let attributes = try? fm.attributesOfItem(atPath: url.path),
+                      let type = attributes[.type] as? FileAttributeType else { continue }
+                if type == .typeDirectory {
+                    if depth < 2 { read(url, prefix: prefix + name + "/", depth: depth + 1) }
+                } else if type == .typeRegular, name.lowercased().hasSuffix(".json") {
+                    out.append(File(path: prefix + name, modifiedAt: attributes[.modificationDate] as? Date ?? Date()))
+                }
+            }
         }
+        read(folder, prefix: "", depth: 0)
         if let failure { throw failure }
         return out.sorted { $0.path < $1.path }
     }
