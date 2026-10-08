@@ -19,7 +19,13 @@ SQLite FTS5, MCP Swift SDK, XcodeGen.
 - **Roles (Aaron, 2026-10-07):** Minutes is **only the transcriber on Aaron's laptop**. The always-on assistant is
   **Hermes Agent on the engineering Mac mini** (`engineering-mac`). Record + remaining steps:
   [docs/research/2026-10-07-assistant-direction.md](docs/research/2026-10-07-assistant-direction.md).
-- **Mini is live (2026-10-08):** Hermes Agent v0.21.5 (`~/.hermes`, gateway as launchd `ai.hermes.gateway` with its
+- **HOST MOVED 2026-10-08 afternoon:** the assistant now runs on **`edit-3`** (DC - Edit 3, 10.11.1.104, the erased
+  former video director M1 mini); `engineering-mac` goes back to engineering and still has the old copies until
+  `scripts/decommission-assistant-mac.sh engineering-mac` runs (needs Aaron's go). Provisioning/migration is one
+  command: `scripts/setup-assistant-mac.sh <host> [--old-host <alias>]` (Hermes restored from the backup in OneDrive
+  `secrets/migration/`). Verified on edit-3: Teams message answered in 35 s, notes question in 55 s, 118 notes indexed.
+  Still on edit-3: Aaron signs in OneDrive (AI Feed), turns on auto-login; Teams feed flow 3 pending.
+- **Mini is live (2026-10-08, originally on engineering-mac):** Hermes Agent (now v0.21.6 on edit-3; `~/.hermes`, gateway as launchd `ai.hermes.gateway` with its
   API server on 127.0.0.1:8642) talks to **Puget's Gemma 4 31B** (`http://10.11.4.170:11434/v1`, model `gemma-bigctx`,
   header `X-Client: hermes`, streaming; Aaron's call 2026-10-08, "Hermes can run on that mini, but use the models on
   the puget"). The local Gemma 12B server and model file were removed the same day (swap had hit 12.6 GB).
@@ -176,3 +182,4 @@ End a work session with **`/save`**.
 | 2026-10-07 | Direction: Minutes = transcriber only; Hermes + Hermes Helper on the engineering mini; summary bench; `--index` mode |
 | 2026-10-08 | Hermes Helper target built and live on the mini; Minutes removed there; Hermes Agent + Gemma 12B set up; bench stopped on the preview |
 | 2026-10-08 | Teams relay + Cloudflare door live; AI Feed (mail, calendar) indexed; model moved to Puget's Gemma 31B, local 12B removed; Planka MCP; SOUL rules |
+| 2026-10-08 | Host migrated engineering-mac → edit-3 (setup-assistant-mac.sh); Planning Center MCP (Weekend Rundown's pco-mcp) registered; decommission script written |

@@ -41,9 +41,14 @@ Aaron stopped the bench at 15:52 with the 5-meeting preview judged (all five con
 - **Task board:** Planka registered as MCP server `planka` (same `@chmald/planka-mcp` as Claude Code, Aaron's API key).
 - **Persona:** `SOUL.md` tells Hermes to look unknown things up on its own, never ask to research, answer briefly.
 
+## 2026-10-08 afternoon: host moved to Edit 3
+
+Aaron: "Since we aren't running a model local for hermes" the erased former video director mini (M1, 16 GB, renamed **DC - Edit 3**, alias `edit-3`) is the assistant host; the engineering mini goes back. Migration = `scripts/setup-assistant-mac.sh edit-3 --old-host engineering-mac` (Hermes restored from `hermes backup`; helper, relay + config/state, Planning Center server from Weekend Rundown's `pco-mcp` pinned to `mcp<2`, tunnel connector moved). Verified end to end from Teams. Leftovers on engineering-mac await `scripts/decommission-assistant-mac.sh engineering-mac` (Aaron's go).
+
 ## Next steps, in order
 
+0. **Decommission engineering-mac** (script above, after Aaron says go); Aaron signs OneDrive in on edit-3 and enables auto-login.
 1. **Teams feed flow** (Aaron, guide flow 3), then confirm the `teams` folder indexes.
-2. **Planning Center** — read-only MCP server (Services plans/teams/songs, People, Calendar) using Aaron's Personal Access Token; build in this repo.
+2. **Planning Center** — done: Weekend Rundown's read-only `pco-mcp/server.py` runs on the host as MCP `planning_center` (token master in OneDrive `secrets/planning-center.env`).
 3. **Write-back** — digests to Notes through the index service (helper spec "Later").
 4. **Minutes on the laptop** — unchanged: Aaron's in-person test session, then merge `minutes-v1` → `main` with his OK.
