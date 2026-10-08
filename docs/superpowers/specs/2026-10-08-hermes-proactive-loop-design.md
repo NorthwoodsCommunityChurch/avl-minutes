@@ -15,7 +15,7 @@
 
 ```
 Power Automate flows ──► OneDrive AI Feed ──► Hermes Helper (indexes every 2 min)
-                                                   │ new or replaced records this pass, written in the last 15 min
+                                                   │ new or replaced records this pass, written in the last hour
                                                    ▼
                                         POST http://127.0.0.1:8787/notify  (x-notify-key)
                                                    │
@@ -36,7 +36,7 @@ Event-driven: nothing runs until the feed changes. Cost per event is one short H
 1. **Helper** (`FeedIndexer.refresh()` returns the records it indexed; `FeedNotifier` filters and posts).
    - Which records: calendar records whose action is `updated` or `deleted`, calendar records added for the next 48 hours,
      and mail records with `direction: sent`. Teams chat messages are not forwarded (Aaron reads those himself).
-   - Only records whose file is newer than 15 minutes (so a backfill, a first pass, or a restart never floods Hermes), at most
+   - Only records whose file is newer than an hour (OneDrive sync plus a pass can take minutes; a backfill, a first pass, or a restart still never floods Hermes, since history is older than that), at most
      12 per notify; a recurring-series change collapses to one line per subject ("Sunday Flow + Outlook: 40 occurrences updated,
      next is Oct 15 2:00–2:40 PM").
    - Reads the relay's key from `~/hermes-teams/config/local.json` (`notifyKey`); if the relay is down, drops the batch and logs.
@@ -72,5 +72,5 @@ If yes, reply with only the one or two lines he should see in Teams. If nothing 
 
 - Relay: `node --test` covers the key check, the 409 before a home conversation, the template, NO_MESSAGE silence, and the
   proactive send.
-- Helper: MinutesKit tests cover which records qualify, the 15-minute window, the series collapse, and the 12-item cap.
+- Helper: MinutesKit tests cover which records qualify, the one-hour window, the series collapse, and the 12-item cap.
 - Live: Aaron moves a test meeting; a line arrives in Teams.

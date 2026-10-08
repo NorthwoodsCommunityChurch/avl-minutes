@@ -4,11 +4,12 @@ import Foundation
 /// the lines the Teams relay forwards. Pure logic; the helper does the HTTP call.
 ///
 /// Rules (spec 2026-10-08-hermes-proactive-loop-design.md): calendar records that were updated or deleted,
-/// calendar records added for the next 48 hours, and mail Aaron sent. Only files newer than 15 minutes, so a
+/// calendar records added for the next 48 hours, and mail Aaron sent. Only files newer than an hour, so a
 /// backfill, a first pass, or a restart never floods Hermes; a recurring series collapses to one line; at most
 /// 12 lines per batch.
 public enum FeedNotifier {
-    public static let freshness: TimeInterval = 15 * 60
+    /// OneDrive sync plus a pass can take a while; anything older than this is history, not news.
+    public static let freshness: TimeInterval = 60 * 60
     public static let upcomingWindow: TimeInterval = 48 * 3600
     public static let maxLines = 12
 

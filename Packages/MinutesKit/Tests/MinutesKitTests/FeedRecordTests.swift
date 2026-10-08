@@ -59,6 +59,14 @@ private func parse(_ json: String, path: String) -> FeedRecord.Parsed? {
     #expect(parse(#"{"type":"teams","chat":"19:abc","created":"2026-10-08T18:28:57Z","id":"m3","body":"no from field at all"}"#, path: "teams/v.json") == nil)
 }
 
+@Test func aPlainUpdatedCalendarRecordParses() throws {
+    let json = #"{"type": "calendar", "action": "updated", "subject": "Proactive loop test (Claude)", "start": "2026-10-09T19:30:00Z", "end": "2026-10-09T20:10:00Z", "location": "Tech Center", "organizer": "Aaron Larson", "attendees": "Aaron Larson", "id": "claude-test-proactive-0001", "body": "Test only."}"#
+    let p = try #require(parse(json, path: "calendar/20261008-215647-claudetest.json"))
+    #expect(p.metadata.title == "Proactive loop test (Claude)")
+    #expect(p.body.hasPrefix("Calendar event, updated"))
+    #expect(p.groupKey == "calendar:claude-test-proactive-0001")
+}
+
 @Test func unknownOrBrokenFilesAreSkipped() {
     #expect(parse(#"{"type":"weather","body":"x"}"#, path: "mail/a.json") == nil)
     #expect(parse("not json", path: "mail/b.json") == nil)

@@ -25,8 +25,8 @@ private func record(_ folder: String, _ title: String, body: String, age: TimeIn
 
 @Test func oldFilesNeverTriggerSoBackfillsAndRestartsStayQuiet() {
     let now = Date()
-    let old = record("calendar", "Old change", body: "Calendar event, updated", age: 20 * 60, now: now)
-    let fresh = record("calendar", "New change", body: "Calendar event, updated", age: 5 * 60, now: now)
+    let old = record("calendar", "Old change", body: "Calendar event, updated", age: 90 * 60, now: now)
+    let fresh = record("calendar", "New change", body: "Calendar event, updated", age: 40 * 60, now: now)
     #expect(FeedNotifier.select([old, fresh], now: now).map(\.title) == ["New change"])
 }
 
