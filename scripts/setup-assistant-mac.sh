@@ -31,7 +31,7 @@ remote '[ -x ~/.local/bin/hermes ] && echo "hermes present: $(hermes --version 2
 
 log "3/9 restore Hermes home from $(basename "$BACKUP") (config, .env, SOUL, memories, sessions)"
 scp -q "$BACKUP" "$HOST:hermes-backup.zip" 2>&1 | grep -v post-quantum || true
-remote 'hermes import ~/hermes-backup.zip --yes </dev/null 2>&1 | tail -n 4 || hermes import ~/hermes-backup.zip </dev/null 2>&1 | tail -n 4; rm -f ~/hermes-backup.zip; sed -i "" "s|/Users/[a-z0-9_-]*/|$HOME/|g" ~/.hermes/config.yaml; grep -c "$HOME" ~/.hermes/config.yaml'
+remote 'hermes import --force ~/hermes-backup.zip </dev/null 2>&1 | tail -n 3; rm -f ~/hermes-backup.zip; sed -i "" "s|/Users/[a-z0-9_-]*/|$HOME/|g" ~/.hermes/config.yaml; grep -c "^  \(notes\|planka\|planning_center\):" ~/.hermes/config.yaml'
 
 log "4/9 Planning Center MCP server (read-only; token from OneDrive)"
 remote 'mkdir -p ~/pco-mcp && chmod 700 ~/pco-mcp'
@@ -39,19 +39,20 @@ scp -q "$PCO_SRC/server.py" "$SECRETS/planning-center.env" "$HOST:pco-mcp/" 2>&1
 remote 'cd ~/pco-mcp && mv -f planning-center.env .env && chmod 600 .env && [ -x .venv/bin/python ] || /opt/homebrew/opt/python@3.13/bin/python3.13 -m venv .venv </dev/null; cd ~/pco-mcp && .venv/bin/pip install -q "mcp>=1.2,<2" "httpx>=0.27" "python-dotenv>=1.0" </dev/null 2>&1 | tail -n 1; .venv/bin/python server.py --selftest </dev/null 2>&1 | head -n 3 | cut -c1-120'
 
 log "5/9 Hermes tool switches + gateway service"
-remote 'for p in cli api_server; do hermes tools disable --platform $p terminal browser computer_use file code_execution delegation image_gen tts clarify </dev/null 2>&1 | tail -n 1; done; hermes gateway install --start-on-login --start-now </dev/null 2>&1 | tail -n 2; sleep 15; curl -s -m 5 http://127.0.0.1:8642/health; echo; hermes mcp list </dev/null 2>&1 | grep -E "planning|planka|notes"'
+remote 'for p in cli api_server; do hermes tools disable --platform $p terminal browser computer_use file code_execution delegation image_gen tts clarify </dev/null 2>&1 | tail -n 1; done; hermes gateway install --start-on-login --start-now </dev/null 2>&1 | tail -n 2; hermes gateway restart </dev/null 2>&1 | tail -n 1; sleep 25; curl -s -m 5 http://127.0.0.1:8642/health; echo; hermes mcp list </dev/null 2>&1 | grep -E "planning|planka|notes"'
 
 log "6/9 Hermes Helper (Notes + AI Feed index, MCP notes)"
-bash scripts/deploy-helper.sh "$HOST" 2>&1 | grep -E "Hermes Helper|state =|deployed|FAILED|error:" | tail -n 4
+bash scripts/deploy-helper.sh "$HOST" 2>&1 | grep -E "Hermes Helper|state =|deployed|FAILED|error:" | tail -n 4 || true
 
 log "7/9 Teams relay (+ its config and state)"
-bash hermes-teams/scripts/deploy-teams-relay.sh "$HOST" 2>&1 | grep -E "state =|ok|deployed|FAILED|error" | tail -n 3
+bash hermes-teams/scripts/deploy-teams-relay.sh "$HOST" 2>&1 | grep -E "state =|ok|deployed|FAILED|error" | tail -n 3 || true
 remote 'mkdir -p ~/hermes-teams/config ~/hermes-teams/data'
 scp -q "$MIG/hermes-teams-local.json" "$HOST:hermes-teams/config/local.json" 2>&1 | grep -v post-quantum || true
 scp -q "$MIG/hermes-teams-state.json" "$HOST:hermes-teams/data/state.json" 2>&1 | grep -v post-quantum || true
 remote 'chmod 600 ~/hermes-teams/config/local.json ~/hermes-teams/data/state.json; cd ~/hermes-teams && node scripts/setup.js --stdin <<< "{}" | tail -n 2; sleep 2; curl -s -m 5 http://127.0.0.1:8787/health; echo'
 
 log "8/9 Cloudflare tunnel connector (token fetched with wrangler's login, never printed)"
+npx --yes wrangler@4 whoami >/dev/null 2>&1 || true   # refreshes the OAuth token on disk
 OAUTH=$(grep -E '^oauth_token' "$HOME/Library/Preferences/.wrangler/config/default.toml" | sed -E 's/^oauth_token *= *"([^"]+)"/\1/')
 TOKEN=$(curl -s -m 20 -H "Authorization: Bearer $OAUTH" "https://api.cloudflare.com/client/v4/accounts/$ACCOUNT_ID/cfd_tunnel/$TUNNEL_ID/token" | python3 -c "import json,sys; print(json.load(sys.stdin).get('result') or '')")
 [ -n "$TOKEN" ] || { echo "could not fetch the tunnel token (run: npx wrangler@4 login)"; exit 1; }

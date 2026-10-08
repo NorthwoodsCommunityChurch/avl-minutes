@@ -19,6 +19,6 @@ for i in \$(seq 1 20); do launchctl print "gui/\$(id -u)/$LABEL" >/dev/null 2>&1
 launchctl bootstrap "gui/\$(id -u)" ~/Library/LaunchAgents/$LABEL.plist
 sleep 3
 launchctl print "gui/\$(id -u)/$LABEL" | grep -E "state =|pid =" || true
-curl -s -m 5 http://127.0.0.1:8787/health; echo
+curl -s -m 5 http://127.0.0.1:8787/health || echo "(relay not answering yet)"; echo
 REMOTE
 echo "hermes-teams deployed to $HOST."
