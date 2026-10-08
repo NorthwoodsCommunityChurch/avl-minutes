@@ -46,6 +46,13 @@ private func parse(_ json: String, path: String) -> FeedRecord.Parsed? {
     #expect(noID.groupKey == nil)
 }
 
+@Test func sentMailIsTitledByRecipient() throws {
+    let p = try #require(parse(#"{"type":"mail","direction":"sent","received":"2026-10-08T20:00:00Z","from":"Aaron Larson","to":"Kirk Smith <kirk@example.org>","subject":"Lobby screens","body":"Done before Sunday."}"#, path: "mail/s.json"))
+    #expect(p.metadata.title == "To Kirk Smith <kirk@example.org>: Lobby screens")
+    #expect(p.body.contains("Sent by Aaron to: Kirk Smith <kirk@example.org>"))
+    #expect(!p.body.hasPrefix("From:"))
+}
+
 @Test func teamsMessagesWithoutASenderAreSkipped() {
     // Bot and system messages carry no user display name; Hermes's own replies arrive this way.
     #expect(parse(#"{"type":"teams","chat":"19:abc","from":"","created":"2026-10-08T18:28:57Z","id":"m2","body":"Here is what I found."}"#, path: "teams/w.json") == nil)

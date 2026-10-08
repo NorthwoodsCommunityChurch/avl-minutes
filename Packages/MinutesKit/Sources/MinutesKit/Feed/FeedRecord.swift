@@ -35,8 +35,14 @@ public enum FeedRecord {
         case "mail":
             title = field("subject")
             when = date(field("received"))
-            lines = ["From: \(field("from"))", "To: \(field("to"))", "Received: \(field("received"))", "Subject: \(field("subject"))"]
             if title.isEmpty { title = "(no subject)" }
+            if field("direction") == "sent" {
+                // Aaron's own outgoing mail (the Sent Items flow): titled by recipient so "did I email X" is findable.
+                title = "To \(field("to")): \(title)"
+                lines = ["Sent by Aaron to: \(field("to"))", "Sent: \(field("received"))", "Subject: \(field("subject"))"]
+            } else {
+                lines = ["From: \(field("from"))", "To: \(field("to"))", "Received: \(field("received"))", "Subject: \(field("subject"))"]
+            }
         case "calendar":
             title = field("subject")
             when = date(field("start"))
