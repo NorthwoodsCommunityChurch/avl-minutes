@@ -1,0 +1,14 @@
+// Wrangler config for the Hermes front door (see worker.mjs). Deploy with ./scripts/deploy-worker.sh.
+// `service_id` is the Workers VPC service "hermes-relay" (127.0.0.1:8787 over tunnel "engineering-mac"); it is an
+// account-scoped id, not a secret. The tunnel token lives only in the mini's launchd plist. The Worker also carries
+// the secret FRONT_DOOR_KEY (wrangler secret put), which the relay requires on every request.
+{
+  "name": "hermes",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "vars": { "ORIGIN": "http://127.0.0.1:8787", "APP_NAME": "Hermes" },
+  "vpc_services": [{ "binding": "UPSTREAM", "service_id": "01a11c03-033f-7c02-bd0c-70cf397f26ba", "remote": true }],
+  "observability": { "enabled": false }
+}

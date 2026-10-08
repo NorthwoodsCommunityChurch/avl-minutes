@@ -1,0 +1,6 @@
+config/local.json
+data/
+node_modules/
+teams-app/*.zip
+teams-app/manifest.json
+.wrangler/

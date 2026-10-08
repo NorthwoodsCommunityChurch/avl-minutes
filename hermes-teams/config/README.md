@@ -1,0 +1,1 @@
+`local.json` lives only on the mini (mode 600), written by `scripts/setup.js`. Fields: `port`, `host`, `baseUrl`, `frontDoorKey`, `teamsBot {appId, appPassword, tenantId}`, `allowedUsers [{aadObjectId | name}]`, `hermes {url, key, timeoutMs}`. Master copies of the secrets: OneDrive `VS Code/Assistant/secrets/`.

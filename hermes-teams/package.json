@@ -1,0 +1,15 @@
+{
+  "name": "hermes-teams",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Relay between a Microsoft Teams bot and Hermes Agent's API server on the assistant Mac mini.",
+  "main": "server.js",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test",
+    "setup": "node scripts/setup.js",
+    "teams-manifest": "node scripts/teams-manifest.js"
+  },
+  "license": "MIT"
+}
