@@ -15,12 +15,21 @@ public final class FeedIndexer: @unchecked Sendable {
         public var removed: Int
         public var skipped: Int
         public var total: Int
-        public init(indexed: Int, removed: Int, skipped: Int, total: Int) {
+        /// Files that could not be read this pass (still downloading, permission); retried next pass.
+        public var unreadable: Int
+        public init(indexed: Int, removed: Int, skipped: Int, total: Int, unreadable: Int = 0) {
             self.indexed = indexed
             self.removed = removed
             self.skipped = skipped
             self.total = total
+            self.unreadable = unreadable
         }
+    }
+
+    /// OneDrive keeps synced files as cloud-only placeholders until something reads them; a background
+    /// process gets "Resource deadlock avoided" unless it opts in to downloading them on read.
+    public static func allowDownloadingPlaceholders() {
+        setiopolicy_np(IOPOL_TYPE_VFS_MATERIALIZE_DATALESS_FILES, IOPOL_SCOPE_PROCESS, IOPOL_MATERIALIZE_DATALESS_FILES_ON)
     }
 
     public init(folder: URL, index: NotesIndex) {
@@ -53,19 +62,38 @@ public final class FeedIndexer: @unchecked Sendable {
         lock.lock()
         defer { lock.unlock() }
         let present = Set(files.map(\.path))
+        let dates = Dictionary(files.map { ($0.path, $0.modifiedAt) }, uniquingKeysWith: { a, _ in a })
         skipped = skipped.filter { present.contains($0.key) }
         try index.transaction {
-            for note in plan.fetch {
+            // Oldest file first, so within a group each newer file replaces the one before it.
+            for note in plan.fetch.sorted(by: { $0.modifiedAt == $1.modifiedAt ? $0.id < $1.id : $0.modifiedAt < $1.modifiedAt }) {
                 let path = String(note.id.dropFirst(FeedRecord.idPrefix.count))
                 if skipped[path] == note.modifiedAt { continue }
-                let data = try Data(contentsOf: folder.appendingPathComponent(path))
-                if let parsed = FeedRecord.parse(data, relativePath: path, fileModifiedAt: note.modifiedAt) {
-                    try index.upsert(parsed.metadata, body: parsed.body)
-                    result.indexed += 1
-                } else {
+                guard let data = try? Data(contentsOf: folder.appendingPathComponent(path)) else {
+                    result.unreadable += 1
+                    continue
+                }
+                guard let parsed = FeedRecord.parse(data, relativePath: path, fileModifiedAt: note.modifiedAt) else {
                     skipped[path] = note.modifiedAt
                     result.skipped += 1
+                    continue
                 }
+                if let key = parsed.groupKey, let latest = try index.latestInGroup(key) {
+                    let mine = milliseconds(note.modifiedAt)
+                    if latest.modifiedMs > mine || (latest.modifiedMs == mine && latest.id > note.id) {
+                        skipped[path] = note.modifiedAt   // an older copy of something already indexed
+                        result.skipped += 1
+                        continue
+                    }
+                }
+                try index.upsert(parsed.metadata, body: parsed.body, groupKey: parsed.groupKey)
+                if let key = parsed.groupKey {
+                    for gone in try index.delete(groupKey: key, except: parsed.metadata.id) {
+                        let gonePath = String(gone.dropFirst(FeedRecord.idPrefix.count))
+                        if let date = dates[gonePath] { skipped[gonePath] = date }
+                    }
+                }
+                result.indexed += 1
             }
             try index.delete(ids: plan.delete)
             result.removed = plan.delete.count

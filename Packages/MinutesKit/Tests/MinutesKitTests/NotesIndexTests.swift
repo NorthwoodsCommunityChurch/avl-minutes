@@ -90,3 +90,38 @@ private func meta(_ id: String, _ title: String, folder: String = "Notes", modif
     let helper = NotesIndex.defaultURL(appFolder: "Hermes Helper")
     #expect(Array(helper.pathComponents.suffix(3)) == ["Application Support", "Hermes Helper", "notes-index.db"])
 }
+
+@Test func groupKeysLetALaterRecordReplaceEarlierOnes() throws {
+    let index = try NotesIndex(url: tempURL())
+    try index.upsert(meta("a", "v1", folder: "calendar"), body: "first", groupKey: "calendar:E1")
+    try index.upsert(meta("b", "v2", folder: "calendar"), body: "second", groupKey: "calendar:E1")
+    try index.upsert(meta("c", "other", folder: "calendar"), body: "third", groupKey: "calendar:E2")
+    try index.upsert(meta("d", "plain"), body: "no group")
+    #expect(try index.ids(groupKey: "calendar:E1").sorted() == ["a", "b"])
+    #expect(try index.delete(groupKey: "calendar:E1", except: "b") == ["a"])
+    #expect(try index.note(id: "a") == nil)
+    #expect(try index.note(id: "b")?.title == "v2")
+    #expect(try index.count() == 3)
+}
+
+@Test func existingIndexesGainTheGroupKeyColumn() throws {
+    let url = tempURL()
+    try FileManager.default.createDirectory(at: url.deletingLastPathComponent(), withIntermediateDirectories: true)
+    let v1 = try SQLiteConnection(path: url.path, readOnly: false)   // the schema as shipped before group keys
+    try v1.exec("""
+    CREATE TABLE notes (id INTEGER PRIMARY KEY, note_id TEXT NOT NULL UNIQUE, title TEXT NOT NULL, folder TEXT NOT NULL,
+      account TEXT NOT NULL, created_at INTEGER NOT NULL, modified_at INTEGER NOT NULL, body TEXT NOT NULL);
+    CREATE VIRTUAL TABLE notes_fts USING fts5(title, body, content='notes', content_rowid='id', tokenize='porter unicode61');
+    CREATE TRIGGER notes_ai AFTER INSERT ON notes BEGIN INSERT INTO notes_fts(rowid, title, body) VALUES (new.id, new.title, new.body); END;
+    CREATE TRIGGER notes_ad AFTER DELETE ON notes BEGIN INSERT INTO notes_fts(notes_fts, rowid, title, body) VALUES ('delete', old.id, old.title, old.body); END;
+    CREATE TRIGGER notes_au AFTER UPDATE ON notes BEGIN INSERT INTO notes_fts(notes_fts, rowid, title, body) VALUES ('delete', old.id, old.title, old.body);
+      INSERT INTO notes_fts(rowid, title, body) VALUES (new.id, new.title, new.body); END;
+    CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
+    INSERT INTO notes(note_id, title, folder, account, created_at, modified_at, body) VALUES ('1', 'Before', 'Notes', 'iCloud', 1, 1, 'x');
+    PRAGMA user_version = 1;
+    """)
+    let reopened = try NotesIndex(url: url)
+    #expect(try reopened.note(id: "1")?.title == "Before")
+    try reopened.upsert(meta("2", "After", folder: "calendar"), body: "y", groupKey: "calendar:E9")
+    #expect(try reopened.ids(groupKey: "calendar:E9") == ["2"])
+}

@@ -52,3 +52,34 @@ private func write(_ text: String, to url: URL, modified: Date? = nil) throws {
     #expect(FeedRecord.notesOnly(all).keys.sorted() == ["n1"])
     #expect(FeedRecord.feedOnly(all).keys.sorted() == ["feed:mail/a.json"])
 }
+
+@Test func laterFilesForTheSameCalendarEventReplaceEarlierOnes() throws {
+    let folder = try tempDir()
+    let index = try NotesIndex(url: tempDir().appendingPathComponent("index.db"))
+    let t0 = Date(timeIntervalSince1970: 1_800_000_000)
+    let event = #""id":"AAMk-event-1""#
+    try write(#"{"type":"calendar","action":"added","subject":"New Event","start":"2026-10-08T17:00:00.0000000","#  + event + "}", to: folder.appendingPathComponent("calendar/20261008-163338-1572.json"), modified: t0)
+    try write(#"{"type":"calendar","action":"added","subject":"New Event","start":"2026-10-08T17:00:00.0000000","#  + event + "}", to: folder.appendingPathComponent("calendar/20261008-163339-1637.json"), modified: t0.addingTimeInterval(1))
+    try write(#"{"type":"calendar","action":"updated","subject":"Hermes Test","start":"2026-10-08T17:00:00.0000000","#  + event + "}", to: folder.appendingPathComponent("calendar/20261008-163346-8239.json"), modified: t0.addingTimeInterval(8))
+    try write(#"{"type":"calendar","action":"added","subject":"Other event","start":"2026-10-09T17:00:00.0000000","id":"AAMk-event-2"}"#, to: folder.appendingPathComponent("calendar/20261008-170000-1111.json"), modified: t0.addingTimeInterval(60))
+    let feed = FeedIndexer(folder: folder, index: index)
+    let r = try feed.refresh()
+    #expect(r.total == 2)
+    let titles = try index.list(folder: "calendar", since: nil, until: nil, limit: 10).map(\.title).sorted()
+    #expect(titles == ["Hermes Test", "Other event"])
+    #expect(try index.note(id: "feed:calendar/20261008-163346-8239.json")?.title == "Hermes Test")
+    #expect(try index.note(id: "feed:calendar/20261008-163338-1572.json") == nil)
+
+    // A later update to event 1 (next pass) replaces the survivor too, and nothing comes back.
+    try write(#"{"type":"calendar","action":"updated","subject":"Hermes Test (moved)","start":"2026-10-08T18:00:00.0000000","#  + event + "}", to: folder.appendingPathComponent("calendar/20261008-180000-2222.json"), modified: t0.addingTimeInterval(120))
+    #expect(try feed.refresh().total == 2)
+    #expect(try index.list(folder: "calendar", since: nil, until: nil, limit: 10).map(\.title).sorted() == ["Hermes Test (moved)", "Other event"])
+    #expect(try feed.refresh() == FeedIndexer.Result(indexed: 0, removed: 0, skipped: 0, total: 2))
+}
+
+@Test func feedRecordsCarryAGroupKeyForDuplicates() throws {
+    let p = try #require(FeedRecord.parse(Data(#"{"type":"calendar","subject":"S","id":"E1"}"#.utf8), relativePath: "calendar/a.json", fileModifiedAt: .init()))
+    #expect(p.groupKey == "calendar:E1")
+    let m = try #require(FeedRecord.parse(Data(#"{"type":"mail","subject":"S"}"#.utf8), relativePath: "mail/a.json", fileModifiedAt: .init()))
+    #expect(m.groupKey == nil)
+}

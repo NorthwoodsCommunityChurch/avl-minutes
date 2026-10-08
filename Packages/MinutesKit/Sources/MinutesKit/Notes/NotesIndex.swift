@@ -27,9 +27,21 @@ public final class NotesIndex: @unchecked Sendable {
         }
     }
 
+    /// Schema 1: notes + FTS. Schema 2 adds `group_key` (feed records that describe the same item,
+    /// e.g. the four files Outlook writes for one calendar event, so the newest can replace the rest).
     private func migrate() throws {
         var version: Int64 = 0
         try db.query("PRAGMA user_version") { version = $0.int(0) }
+        if version == 1 {
+            var hasColumn = false
+            try db.query("PRAGMA table_info(notes)") { if $0.text(1) == "group_key" { hasColumn = true } }
+            try db.exec("BEGIN")
+            if !hasColumn { try db.exec("ALTER TABLE notes ADD COLUMN group_key TEXT") }
+            try db.exec("CREATE INDEX IF NOT EXISTS notes_group ON notes(group_key)")
+            try db.exec("PRAGMA user_version = 2")
+            try db.exec("COMMIT")
+            return
+        }
         guard version < 1 else { return }
         try db.exec("""
         BEGIN;
@@ -41,9 +53,11 @@ public final class NotesIndex: @unchecked Sendable {
           account TEXT NOT NULL,
           created_at INTEGER NOT NULL,
           modified_at INTEGER NOT NULL,
-          body TEXT NOT NULL
+          body TEXT NOT NULL,
+          group_key TEXT
         );
         CREATE INDEX notes_modified ON notes(modified_at);
+        CREATE INDEX notes_group ON notes(group_key);
         CREATE VIRTUAL TABLE notes_fts USING fts5(
           title, body, content='notes', content_rowid='id', tokenize='porter unicode61'
         );
@@ -58,10 +72,12 @@ public final class NotesIndex: @unchecked Sendable {
           INSERT INTO notes_fts(rowid, title, body) VALUES (new.id, new.title, new.body);
         END;
         CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
-        PRAGMA user_version = 1;
+        PRAGMA user_version = 2;
         COMMIT;
         """)
     }
+
+
 
     // MARK: Transactions
 
@@ -94,16 +110,48 @@ public final class NotesIndex: @unchecked Sendable {
 
     // MARK: Writes
 
-    public func upsert(_ note: NoteMetadata, body: String) throws {
+    public func upsert(_ note: NoteMetadata, body: String, groupKey: String? = nil) throws {
         try serialized {
             try db.query("""
-            INSERT INTO notes(note_id, title, folder, account, created_at, modified_at, body)
-            VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)
+            INSERT INTO notes(note_id, title, folder, account, created_at, modified_at, body, group_key)
+            VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)
             ON CONFLICT(note_id) DO UPDATE SET
               title = excluded.title, folder = excluded.folder, account = excluded.account,
-              created_at = excluded.created_at, modified_at = excluded.modified_at, body = excluded.body
+              created_at = excluded.created_at, modified_at = excluded.modified_at, body = excluded.body,
+              group_key = excluded.group_key
             """, [.text(note.id), .text(note.title), .text(note.folder), .text(note.account),
-                  .int(milliseconds(note.createdAt)), .int(milliseconds(note.modifiedAt)), .text(body)])
+                  .int(milliseconds(note.createdAt)), .int(milliseconds(note.modifiedAt)), .text(body),
+                  Self.optional(groupKey)])
+        }
+    }
+
+    /// The newest record in a group (by file date, then id), if any.
+    public func latestInGroup(_ groupKey: String) throws -> (id: String, modifiedMs: Int64)? {
+        try serialized {
+            var found: (id: String, modifiedMs: Int64)?
+            try db.query("SELECT note_id, modified_at FROM notes WHERE group_key = ?1 ORDER BY modified_at DESC, note_id DESC LIMIT 1", [.text(groupKey)]) { found = ($0.text(0), $0.int(1)) }
+            return found
+        }
+    }
+
+    /// Ids of every record sharing a group key.
+    public func ids(groupKey: String) throws -> [String] {
+        try serialized {
+            var out: [String] = []
+            try db.query("SELECT note_id FROM notes WHERE group_key = ?1 ORDER BY note_id", [.text(groupKey)]) { out.append($0.text(0)) }
+            return out
+        }
+    }
+
+    /// Deletes the other members of a group; returns what was deleted. (One lock hold: the lock is not
+    /// reentrant outside `transaction`, so this never calls the other public methods.)
+    @discardableResult
+    public func delete(groupKey: String, except keep: String) throws -> [String] {
+        try serialized {
+            var gone: [String] = []
+            try db.query("SELECT note_id FROM notes WHERE group_key = ?1 AND note_id != ?2 ORDER BY note_id", [.text(groupKey), .text(keep)]) { gone.append($0.text(0)) }
+            for id in gone { try db.query("DELETE FROM notes WHERE note_id = ?1", [.text(id)]) }
+            return gone
         }
     }
 

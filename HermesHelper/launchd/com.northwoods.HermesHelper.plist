@@ -19,6 +19,8 @@
 	<string>Aqua</string>
 	<key>ProcessType</key>
 	<string>Background</string>
+	<key>MaterializeDatalessFiles</key>
+	<true/>
 	<key>StandardOutPath</key>
 	<string>__HOME__/Library/Logs/HermesHelper.log</string>
 	<key>StandardErrorPath</key>

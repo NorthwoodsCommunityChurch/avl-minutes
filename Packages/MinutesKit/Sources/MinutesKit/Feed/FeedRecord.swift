@@ -14,6 +14,8 @@ public enum FeedRecord {
     public struct Parsed: Sendable, Equatable {
         public let metadata: NoteMetadata
         public let body: String
+        /// Records describing the same item (Outlook writes several files per calendar event); the newest wins.
+        public let groupKey: String?
     }
 
     /// `relativePath` is the file's path inside the feed folder, e.g. `mail/20261008-161658-6678.json`.
@@ -28,6 +30,7 @@ public enum FeedRecord {
         var title: String
         var lines: [String]
         var when: Date?
+        var groupKey: String?
         switch type {
         case "mail":
             title = field("subject")
@@ -41,6 +44,7 @@ public enum FeedRecord {
                      "When: \(field("start")) to \(field("end"))", "Where: \(field("location"))",
                      "Organizer: \(field("organizer"))", "Attendees: \(field("attendees"))"]
             if title.isEmpty { title = "(untitled event)" }
+            if !field("id").isEmpty { groupKey = "calendar:\(field("id"))" }
         case "teams":
             let from = field("from")
             if skippedSenders.contains(from.lowercased()) { return nil }
@@ -53,7 +57,7 @@ public enum FeedRecord {
         }
         let metadata = NoteMetadata(id: idPrefix + relativePath, title: title, folder: folder, account: account,
                                     createdAt: when ?? fileModifiedAt, modifiedAt: fileModifiedAt, isLocked: false)
-        return Parsed(metadata: metadata, body: (lines + ["", text]).joined(separator: "\n"))
+        return Parsed(metadata: metadata, body: (lines + ["", text]).joined(separator: "\n"), groupKey: groupKey)
     }
 
     public static func notesOnly(_ stamps: [String: IndexedStamp]) -> [String: IndexedStamp] {

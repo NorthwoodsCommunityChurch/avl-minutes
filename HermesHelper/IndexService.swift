@@ -25,6 +25,7 @@ enum IndexService {
         logger.info("Index service started")
         let feed = feedFolder.map { FeedIndexer(folder: $0, index: index) }
         if let feed {
+            FeedIndexer.allowDownloadingPlaceholders()
             print("\(stamp()) AI Feed folder: \(feed.folder.path)")
             refreshFeed(feed)
             Timer.scheduledTimer(withTimeInterval: feedInterval, repeats: true) { _ in
@@ -56,8 +57,8 @@ enum IndexService {
                 feedBusy = false
                 switch outcome {
                 case .success(let r):
-                    if r.indexed > 0 || r.removed > 0 || lastFeedProblem != nil || !feedReported {
-                        print("\(stamp()) feed: \(r.indexed) indexed, \(r.removed) removed, \(r.skipped) skipped, \(r.total) records"); fflush(stdout)
+                    if r.indexed > 0 || r.removed > 0 || r.unreadable > 0 || lastFeedProblem != nil || !feedReported {
+                        print("\(stamp()) feed: \(r.indexed) indexed, \(r.removed) removed, \(r.skipped) skipped, \(r.unreadable) unreadable, \(r.total) records"); fflush(stdout)
                     }
                     lastFeedProblem = nil
                     feedReported = true
