@@ -158,6 +158,9 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
 - **Puget's gateway needs `X-Client`** and streaming; Hermes sends both via `model.default_headers` and its default
   `stream: true`. Hermes's `hermes gateway restart` drains the current turn first, so a restart mid-question shows
   as "Hermes couldn't answer: fetch failed" in Teams.
+- **An erased Mac defaults to Pacific time** (edit-3 came up `America/Los_Angeles`, two hours behind the fleet's
+  `America/Chicago`), which skews Hermes's sense of "today" and calendar times; `setup-assistant-mac.sh` step 1 now sets
+  the zone, and `hermes gateway restart` is needed for a running gateway to notice.
 - **Memory on the 16 GB mini:** the local 12B at 64K context pinned 10.4 GB and pushed 12.6 GB to swap; a quantized
   KV cache (`-ctk q8_0 -ctv q8_0 -fa on`) fixed it before the model was removed altogether.
 

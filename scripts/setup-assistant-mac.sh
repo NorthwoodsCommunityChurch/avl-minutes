@@ -23,8 +23,8 @@ ACCOUNT_ID="3ee1816a7162c301a0e4b923872e828d"
 log() { printf '\n== %s\n' "$*"; }
 remote() { ssh "$HOST" "export LC_ALL=C PATH=/opt/homebrew/bin:\$HOME/.local/bin:\$PATH; $*" 2>&1 | grep -v post-quantum || true; }
 
-log "1/9 power + Homebrew packages on $HOST"
-remote 'sudo pmset -a sleep 0 disksleep 0 displaysleep 15 autorestart 1 womp 1 </dev/null; which brew >/dev/null || { echo "Homebrew missing: install it on the Mac first (brew.sh)"; exit 1; }; brew install --quiet node cloudflared python@3.13 </dev/null 2>&1 | grep -E "🍺|Error" | tail -n 3; which node cloudflared'
+log "1/9 power, time zone + Homebrew packages on $HOST"
+remote 'sudo pmset -a sleep 0 disksleep 0 displaysleep 15 autorestart 1 womp 1 </dev/null; sudo systemsetup -settimezone America/Chicago -setusingnetworktime on </dev/null 2>/dev/null | grep -v "^$"; date "+%Z %H:%M"; which brew >/dev/null || { echo "Homebrew missing: install it on the Mac first (brew.sh)"; exit 1; }; brew install --quiet node cloudflared python@3.13 </dev/null 2>&1 | grep -E "🍺|Error" | tail -n 3; which node cloudflared'
 
 log "2/9 Hermes Agent (official installer, no browser / screen tools)"
 remote '[ -x ~/.local/bin/hermes ] && echo "hermes present: $(hermes --version 2>/dev/null | head -1)" || { curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash -s -- --non-interactive --skip-browser --skip-computer-use </dev/null 2>&1 | tail -n 3; }'
