@@ -48,6 +48,10 @@ Open **Settings** from the gear in the menu bar panel:
 | Open Minutes at login | Keeps the notes index fresh for Claude |
 | Check for updates automatically | Minutes updates itself; it never checks or relaunches during a meeting |
 
+## Hermes Helper (the assistant Mac mini)
+
+The repo also builds **Hermes Helper**, a background app with no windows for the always-on assistant Mac mini. It keeps its own search index of the Mac's Apple Notes (the same engine as Minutes) and serves it read-only to [Hermes Agent](https://github.com/NousResearch/hermes-agent) over MCP, so Hermes can answer questions from your notes and meeting transcripts. Install with `bash scripts/deploy-helper.sh` (builds, copies over SSH, registers a launchd agent); click Allow once when macOS asks to let Hermes Helper control Notes. Design: [docs/superpowers/specs/2026-10-07-hermes-helper-design.md](docs/superpowers/specs/2026-10-07-hermes-helper-design.md).
+
 ## Privacy
 
 - Stored on this Mac: `~/Library/Application Support/Minutes/notes-index.db` (a text-only search index of your notes) and `voiceprint.json` (if trained). Models live in `~/Library/Application Support/FluidAudio/Models`.

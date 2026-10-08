@@ -3,7 +3,8 @@
 Menu bar Mac app that transcribes Aaron's meetings (room mic + Teams/Zoom/browser call audio)
 **without ever recording audio**, writes each transcript into an iCloud Apple Notes folder
 ("Meeting Transcripts"), and lets Claude Code search all of Aaron's notes through a local MCP
-server. Stack: macOS 26 Swift/SwiftUI, Apple SpeechAnalyzer, FluidAudio (Sortformer + CAM++),
+server. The same repo builds **Hermes Helper**, the background app on the assistant Mac mini that
+indexes Notes for Hermes Agent (spec: [docs/superpowers/specs/2026-10-07-hermes-helper-design.md](docs/superpowers/specs/2026-10-07-hermes-helper-design.md)). Stack: macOS 26 Swift/SwiftUI, Apple SpeechAnalyzer, FluidAudio (Sortformer + CAM++),
 SQLite FTS5, MCP Swift SDK, XcodeGen.
 
 > **Read first:** [README.md](README.md) (what it is, usage, privacy), then the product definition
@@ -14,13 +15,18 @@ SQLite FTS5, MCP Swift SDK, XcodeGen.
 
 ---
 
-## Status — 2026-10-07 (evening)
-- **Direction change (Aaron, 2026-10-07):** Minutes is now **only the transcriber on Aaron's laptop**. The always-on
-  assistant is **Hermes Agent on the engineering Mac mini** (`engineering-mac`), fed by a to-be-built **Hermes Helper**
-  (notes index + MCP search, same engine) and Power Automate → OneDrive feeds. Full record + next steps:
-  [docs/research/2026-10-07-assistant-direction.md](docs/research/2026-10-07-assistant-direction.md). **Resume there.**
-- **Summary bench** (`bench/`, 5 models, 30 synthetic meetings) is running detached via `bench/finish.sh`;
-  progress in `bench/results/orchestrate.log`, scorecard at `bench/results/REPORT.md` when `FULL SCORECARD READY` appears.
+## Status — 2026-10-08
+- **Roles (Aaron, 2026-10-07):** Minutes is **only the transcriber on Aaron's laptop**. The always-on assistant is
+  **Hermes Agent on the engineering Mac mini** (`engineering-mac`). Record + remaining steps:
+  [docs/research/2026-10-07-assistant-direction.md](docs/research/2026-10-07-assistant-direction.md).
+- **Mini is live (2026-10-07 night):** Hermes Helper 0.1.0 deployed as launchd agent `com.northwoods.HermesHelper`
+  (Notes permission granted, 118 notes indexed); Minutes removed from the mini; Hermes Agent v0.21.5 installed under
+  `~/.hermes` with **Gemma 4 12B** served by launchd agent `com.northwoods.llama-server` (127.0.0.1:8080, alias
+  `gemma-4-12b`, 64K ctx); helper registered as MCP server `notes`. End-to-end "search my notes" answered with real
+  titles in 2 m 48 s. Honcho/cloud memory off (built-in files only). Next: Aaron picks the phone channel
+  (Discord/Telegram), then the OneDrive AI Feed, then the Teams bridge.
+- **Summary bench** (`bench/`): Aaron stopped it 2026-10-07 15:52 after the 5-meeting preview decided it
+  (Gemma 12B over Qwen 9B; see [bench/FINDINGS.md](bench/FINDINGS.md)). Partial rows stay in `bench/results/`; every runner resumes.
 - **Stage:** active development on branch `minutes-v1`, pushed to private repo
   `NorthwoodsCommunityChurch/avl-minutes` (created 2026-10-07 with Aaron's OK). `main` holds spec + plan only;
   merging `minutes-v1` into `main` still needs Aaron's OK.
@@ -52,14 +58,19 @@ Call tap (IOProc) ──────┴─ 16 kHz ───┼─ Sortformer dia
 → Attributor → TranscriptDocument → NotesBridge (Minutes --notes-helper) → Apple Notes
 NotesIndexer → notes-index.db (FTS5) ← Minutes --mcp (read-only) ← Claude Code
 ```
-One binary, several modes: app (default), `--mcp`, `--index` (headless Notes indexing, no UI — built for the mini,
-now superseded by the planned Hermes Helper target), `--notes-helper`, `--unregister-login`, `--audio-check`,
+One binary, several modes: app (default), `--mcp`, `--notes-helper`, `--unregister-login`, `--audio-check`,
 `--transcribe-check`; debug builds also have `--gallery` (all screens in one off-screen, non-focusable window).
+
+**Hermes Helper** (`HermesHelper.app`, second target, no UI) shares the Notes code: `--index` (default; launchd keeps
+the index fresh every 2 min), `--mcp` (read-only server named `hermes-helper`), `--notes-helper`, `--version`. Its index is
+`~/Library/Application Support/Hermes Helper/notes-index.db`; Minutes' index is untouched.
 
 ### Where things live
 - `Packages/MinutesKit/` — pure, tested logic (attribution, speakers, transcript doc, Notes index, MCP tools)
 - `Packages/AudioDeps/` — wraps vendored FluidAudio with its unused NeMo engine turned off
-- `Minutes/Audio`, `Minutes/Pipeline`, `Minutes/Notes`, `Minutes/Claude`, `Minutes/App`
+- `Minutes/Audio`, `Minutes/Pipeline`, `Minutes/Claude`, `Minutes/App`
+- `Shared/Notes` — Notes bridge, indexer, AppleScript runner, compiled into both apps; `Shared/AppIdentity.swift` names the running app for logs/messages
+- `HermesHelper/` — the mini's background app: main, `IndexService`, Info.plist, entitlements, launchd template
 - `scripts/` — build-and-run, fetch-deps, no-audio guard (+ self-test), audit-writes, mcp-smoke-test
 
 ## Key identifiers
@@ -72,6 +83,8 @@ now superseded by the planned Hermes Helper target), `--notes-helper`, `--unregi
 | Update feed (Sparkle) | `https://northwoodscommunitychurch.github.io/app-updates/appcast-minutes.xml` (org key; file not published until first release) |
 | Secrets location | none of its own — uses the org Sparkle key (`~/.sparkle/ed25519-private.txt`, master in OneDrive per `FILE-ORGANIZATION.md`) |
 | Data on disk | `~/Library/Application Support/Minutes/` (notes-index.db, voiceprint.json); models in `…/FluidAudio/Models` |
+| Hermes Helper | `com.northwoods.HermesHelper` 0.1.0 (1); on `engineering-mac` at `/Applications/HermesHelper.app`, launchd `com.northwoods.HermesHelper`, log `~/Library/Logs/HermesHelper.log`; deploy with `scripts/deploy-helper.sh` |
+| Hermes Agent (mini) | `~/.hermes/config.yaml` (model block + `mcp_servers.notes`), CLI `~/.local/bin/hermes`, one-shot test `hermes -z "…"`; model server launchd `com.northwoods.llama-server`, log `~/Library/Logs/llama-server.log` |
 
 ## Build / Run / Release
 ```bash
@@ -81,6 +94,7 @@ bash scripts/test-check-no-audio-writes.sh
 bash scripts/mcp-smoke-test.sh
 MINUTES_TRACE=1 /Applications/Minutes.app/Contents/MacOS/Minutes --transcribe-check [--both] [--save]
 bash scripts/audit-writes.sh start  # … run a meeting …  bash scripts/audit-writes.sh report
+bash scripts/deploy-helper.sh [host]     # Release-build Hermes Helper, install + (re)start its launchd agent on the mini
 ```
 Release: not yet — ask Aaron before any version bump or appcast publish.
 Aaron's calls (2026-10-07): **not listed in Canopy** (`app-updates/catalog.json` gets no entry);
@@ -112,6 +126,12 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
   succeeds or it's copied (`MeetingSession.hasUnsavedTranscript`).
 - **Sparkle never interrupts a meeting** (`Updater.swift`): background checks are skipped while one runs and
   an accepted update's relaunch waits until it ends. The gallery never starts Sparkle.
+- **Hermes Helper has no Sparkle** (ruling 2026-10-07): UI-less launchd agent, redeployed over SSH. Its Notes grant is
+  per bundle id; a launchd-run process gets the prompt on the mini's screen (Aaron clicks Allow once).
+- **Hermes config.yaml:** `provider: "auto"` appears 9 times; edit only the `model:` block (regex to the next top-level key).
+  No API key is needed for `provider: custom` against llama-server. `hermes doctor` validates; `hermes -z "…"` is one-shot.
+- **zsh does not word-split `$VAR`**: `kill $PIDS` fails with "illegal pid"; pipe `pgrep` into `xargs kill`. The sandbox
+  can't signal detached (`nohup`) processes either; killing the bench needed the sandbox off.
 
 ## Update Protocol
 | When you… | Update… |
@@ -132,3 +152,4 @@ End a work session with **`/save`**.
 | 2026-10-07 | Final review fix pass: timeline across capture gaps, helper deadlines, unsaved-transcript guard, Start gating |
 | 2026-10-07 | Aaron: no Canopy listing, no custom icon, no release script |
 | 2026-10-07 | Direction: Minutes = transcriber only; Hermes + Hermes Helper on the engineering mini; summary bench; `--index` mode |
+| 2026-10-08 | Hermes Helper target built and live on the mini; Minutes removed there; Hermes Agent + Gemma 12B set up; bench stopped on the preview |
