@@ -53,6 +53,8 @@ public enum FeedRecord {
             let preview = text.replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression).trimmingCharacters(in: .whitespaces)
             title = "\(from): \(String(preview.prefix(titleLimit)))"
             lines = ["From: \(from)", "Sent: \(field("created"))", "Chat: \(field("chat"))"]
+            // A backfill can write the same message again; the newest file for a message id wins.
+            if !field("id").isEmpty { groupKey = "teams:\(field("id"))" }
         default:
             return nil
         }

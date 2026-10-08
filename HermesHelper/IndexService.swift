@@ -23,24 +23,39 @@ enum IndexService {
         }
         indexer.start()
         logger.info("Index service started")
-        let feed = feedFolder.map { FeedIndexer(folder: $0, index: index) }
-        if let feed {
-            FeedIndexer.allowDownloadingPlaceholders()
-            print("\(stamp()) AI Feed folder: \(feed.folder.path)")
-            refreshFeed(feed)
-            Timer.scheduledTimer(withTimeInterval: feedInterval, repeats: true) { _ in
-                Task { @MainActor in refreshFeed(feed) }
-            }
-        } else {
-            print("\(stamp()) AI Feed folder not found; indexing Notes only")
+        FeedIndexer.allowDownloadingPlaceholders()
+        // OneDrive is often signed in after the helper starts (a fresh Mac), so the folder is looked for
+        // on every tick until it appears, not only at launch.
+        if !attachFeed(requested: feedFolder, index: index) {
+            print("\(stamp()) AI Feed folder not found; indexing Notes only and looking again every \(Int(feedInterval)) s")
         }
-        report(indexer, feed)
+        Timer.scheduledTimer(withTimeInterval: feedInterval, repeats: true) { _ in
+            Task { @MainActor in
+                if let feed { refreshFeed(feed) } else { _ = attachFeed(requested: feedFolder, index: index) }
+            }
+        }
+        report(indexer)
         // A status line every 10 minutes so the log shows it's alive. State only, never note text.
         Timer.scheduledTimer(withTimeInterval: 600, repeats: true) { _ in
-            Task { @MainActor in report(indexer, feed) }
+            Task { @MainActor in report(indexer) }
         }
         RunLoop.main.run()
         exit(0)
+    }
+
+    /// The feed indexer once its folder exists: `--feed <path>` if given, else the first OneDrive "AI Feed".
+    @MainActor private static var feed: FeedIndexer?
+
+    /// Starts indexing the feed folder if it exists now; false when it still doesn't.
+    @MainActor
+    private static func attachFeed(requested: URL?, index: NotesIndex) -> Bool {
+        guard let folder = requested ?? FeedIndexer.defaultFolder(),
+              FileManager.default.fileExists(atPath: folder.path) else { return false }
+        let indexer = FeedIndexer(folder: folder, index: index)
+        feed = indexer
+        print("\(stamp()) AI Feed folder: \(folder.path)"); fflush(stdout)
+        refreshFeed(indexer)
+        return true
     }
 
     @MainActor private static var feedBusy = false
@@ -75,7 +90,7 @@ enum IndexService {
     private static func stamp() -> String { ISO8601DateFormatter().string(from: Date()) }
 
     @MainActor
-    private static func report(_ indexer: NotesIndexer, _ feed: FeedIndexer?) {
+    private static func report(_ indexer: NotesIndexer) {
         let refreshed = indexer.lastRefresh.map { ISO8601DateFormatter().string(from: $0) } ?? "never"
         let problem = indexer.lastError.map { " problem: \($0)" } ?? ""
         let feedPart = feed == nil ? "" : ", feed records: \((try? feed!.count()) ?? -1)\(lastFeedProblem.map { " feed problem: \($0)" } ?? "")"

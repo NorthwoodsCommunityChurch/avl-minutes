@@ -39,6 +39,13 @@ private func parse(_ json: String, path: String) -> FeedRecord.Parsed? {
     #expect(parse(#"{"type":"teams","from":"Hermes","body":"The answer"}"#, path: "teams/z.json") == nil)
 }
 
+@Test func teamsMessagesGroupByMessageIdSoABackfillCopyReplacesTheLiveOne() throws {
+    let p = try #require(parse(#"{"type":"teams","chat":"19:abc","from":"Kirk Smith","created":"2026-10-08T17:00:00Z","id":"1791484137639","body":"hi"}"#, path: "teams/live.json"))
+    #expect(p.groupKey == "teams:1791484137639")
+    let noID = try #require(parse(#"{"type":"teams","chat":"19:abc","from":"Kirk Smith","created":"2026-10-08T17:00:00Z","body":"hi"}"#, path: "teams/old.json"))
+    #expect(noID.groupKey == nil)
+}
+
 @Test func teamsMessagesWithoutASenderAreSkipped() {
     // Bot and system messages carry no user display name; Hermes's own replies arrive this way.
     #expect(parse(#"{"type":"teams","chat":"19:abc","from":"","created":"2026-10-08T18:28:57Z","id":"m2","body":"Here is what I found."}"#, path: "teams/w.json") == nil)

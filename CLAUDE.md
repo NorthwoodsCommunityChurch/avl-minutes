@@ -158,6 +158,9 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
 - **OneDrive files are cloud placeholders** on the mini until something reads them; a background process gets
   "Resource deadlock avoided" unless it opts in (`setiopolicy_np(IOPOL_TYPE_VFS_MATERIALIZE_DATALESS_FILES…)`, plus
   `MaterializeDatalessFiles` in the launchd plist). A file still downloading is counted "unreadable" and retried.
+  **The helper's first touch of the OneDrive folder raises a macOS permission prompt on the mini's screen** and its
+  directory open blocks until someone clicks Allow (edit-3, 2026-10-08: stuck 25 min, a shell over SSH read the same
+  folder fine). The helper also keeps looking for the folder every 2 min, since OneDrive is usually signed in after it starts.
 - **Outlook writes several files per calendar event** (added, added, updated, updated); feed records carry a
   `group_key` (`calendar:<event id>`) and the newest file replaces the rest (index schema 2, migrates in place).
 - **Puget's gateway needs `X-Client`** and streaming; Hermes sends both via `model.default_headers` and its default

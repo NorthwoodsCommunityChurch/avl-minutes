@@ -61,7 +61,7 @@ scp -q hermes-teams/scripts/install-cloudflared.sh "$HOST:install-cloudflared.sh
 ssh "$HOST" 'bash ~/install-cloudflared.sh && rm -f ~/install-cloudflared.sh' <<< "$TOKEN" 2>&1 | grep -v post-quantum | tail -n 2
 sleep 15
 
-log "9/9 checks"
+log "9/9 checks (then, on the Mac's screen: click Allow when Hermes Helper asks for Notes and for OneDrive; sign in OneDrive first if it is not)"
 echo "door: $(curl -s --max-time 20 https://hermes.northwoodstech.workers.dev/health)"
 remote 'tail -n 2 ~/Library/Logs/HermesHelper.log; launchctl list | grep -E "northwoods|hermes" | awk "{print \$3, \$1}"'
 echo
