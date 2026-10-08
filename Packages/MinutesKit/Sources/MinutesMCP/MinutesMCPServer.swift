@@ -8,7 +8,8 @@ public enum MinutesMCPServer {
     public static let instructions = """
     Search Aaron's Apple Notes, including meeting transcripts made by the Minutes app. \
     Use search_notes first, then get_note to read a result in full. \
-    \(NotesTools.transcriptFolderHint)
+    \(NotesTools.transcriptFolderHint) \
+    current_time is the only clock available: call it before answering anything about today, now, or deadlines.
     """
 
     private static let dateHelp = "YYYY-MM-DD (local day) or ISO 8601. Filters on the note's last-modified date."
@@ -50,6 +51,11 @@ public enum MinutesMCPServer {
             description: "List note folders with how many notes each holds.",
             inputSchema: schema(properties: [:])
         ),
+        Tool(
+            name: "current_time",
+            description: "The current date, time, weekday, and time zone on Aaron's Mac. Call it whenever an answer depends on today, now, or how long until something; nothing else tells you the time, so never assume it.",
+            inputSchema: schema(properties: [:])
+        ),
     ]
 
     public static func call(
@@ -64,6 +70,7 @@ public enum MinutesMCPServer {
         guard tools.contains(where: { $0.name == name }) else {
             return failure("Unknown tool \"\(name)\".")
         }
+        if name == "current_time" { return .init(content: [.text(currentTime(timeZone: timeZone, now: now()))]) }
         guard FileManager.default.fileExists(atPath: indexURL.path) else {
             return .init(content: [.text("No notes indexed yet — \(noIndexHint).")])
         }
@@ -115,6 +122,25 @@ public enum MinutesMCPServer {
         }
         try await server.start(transport: StdioTransport())
         await server.waitUntilCompleted()
+    }
+
+    /// "Thursday, October 8, 2026 at 2:32 PM CDT (America/Chicago). ISO 8601: 2026-10-08T14:32:05-05:00"
+    static func currentTime(timeZone: TimeZone, now: Date) -> String {
+        let day = DateFormatter()
+        day.locale = Locale(identifier: "en_US_POSIX")
+        day.timeZone = timeZone
+        day.dateFormat = "EEEE, MMMM d, yyyy"
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = timeZone
+        let parts = calendar.dateComponents([.hour, .minute], from: now)
+        let hour24 = parts.hour ?? 0
+        let hour12 = hour24 % 12 == 0 ? 12 : hour24 % 12
+        let clock = String(format: "%d:%02d %@", hour12, parts.minute ?? 0, hour24 < 12 ? "AM" : "PM")
+        let iso = ISO8601DateFormatter()
+        iso.timeZone = timeZone
+        iso.formatOptions = [.withInternetDateTime]
+        let abbreviation = timeZone.abbreviation(for: now) ?? timeZone.identifier
+        return "\(day.string(from: now)) at \(clock) \(abbreviation) (\(timeZone.identifier)). ISO 8601: \(iso.string(from: now))"
     }
 
     private static func schema(properties: [String: Value], required: [String] = []) -> Value {

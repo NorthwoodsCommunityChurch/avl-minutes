@@ -151,6 +151,9 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
   an accepted update's relaunch waits until it ends. The gallery never starts Sparkle.
 - **Hermes Helper has no Sparkle** (ruling 2026-10-07): UI-less launchd agent, redeployed over SSH. Its Notes grant is
   per bundle id; a launchd-run process gets the prompt on the mini's screen (Aaron clicks Allow once).
+- **Hermes has no clock without its terminal tool** (its prompt tells the model to run `date`, and the terminal is off):
+  it told Aaron a 2 pm meeting was "coming up" at 2:32. The helper's MCP server now serves `current_time` and `SOUL.md`
+  says to call it before anything time-dependent.
 - **Hermes config.yaml:** `provider: "auto"` appears 9 times; edit only the `model:` block (regex to the next top-level key).
   No API key is needed for `provider: custom` against llama-server. `hermes doctor` validates; `hermes -z "…"` is one-shot.
 - **zsh does not word-split `$VAR`**: `kill $PIDS` fails with "illegal pid"; pipe `pgrep` into `xargs kill`. The sandbox

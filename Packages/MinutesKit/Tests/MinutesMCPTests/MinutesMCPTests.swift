@@ -18,7 +18,7 @@ private func seededIndex() throws -> URL {
 }
 
 @Test func toolsAreListedWithSchemas() {
-    #expect(MinutesMCPServer.tools.map(\.name) == ["search_notes", "list_notes", "get_note", "list_folders"])
+    #expect(MinutesMCPServer.tools.map(\.name) == ["search_notes", "list_notes", "get_note", "list_folders", "current_time"])
 }
 
 @Test func searchCallReturnsText() throws {
@@ -33,6 +33,20 @@ private func seededIndex() throws -> URL {
     #expect(MinutesMCPServer.call(name: "nope", arguments: nil, indexURL: url).isError == true)
     #expect(MinutesMCPServer.call(name: "list_notes", arguments: ["since": .string("yesterday")], indexURL: url).isError == true)
     #expect(MinutesMCPServer.call(name: "get_note", arguments: ["note_id": .string("missing")], indexURL: url).isError == true)
+}
+
+@Test func currentTimeNeedsNoIndexAndUsesTheGivenClock() {
+    // Hermes has no terminal, so this tool is the only clock it has; it must work before any note is indexed.
+    let absent = FileManager.default.temporaryDirectory.appendingPathComponent("absent-\(UUID().uuidString).db")
+    let chicago = TimeZone(identifier: "America/Chicago")!
+    let moment = ISO8601DateFormatter().date(from: "2026-10-08T19:32:05Z")!
+    let r = MinutesMCPServer.call(name: "current_time", arguments: nil, indexURL: absent, timeZone: chicago, now: { moment })
+    #expect(r.isError != true)
+    let out = text(r)
+    #expect(out.contains("Thursday, October 8, 2026"))
+    #expect(out.contains("2:32 PM"))
+    #expect(out.contains("CDT"))
+    #expect(out.contains("2026-10-08T14:32:05-05:00"))
 }
 
 @Test func missingIndexIsExplained() {
