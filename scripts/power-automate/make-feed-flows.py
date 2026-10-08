@@ -4,6 +4,8 @@ connection ids):
 
   sent      from an export of "AI Feed: mail":     "AI Feed: mail sent" — same flow watching Sent Items,
             JSON carries "direction": "sent" so the helper titles it "To <recipient>: <subject>".
+  mail-backfill  from an export of "AI Feed: mail": "AI Feed: mail backfill" — run once; Inbox, Sent Items
+            and Archive since 2026-01-01 in quarterly ranges (Get emails returns 1000 per call at most).
   calendar  from an export of "AI Feed: calendar": "AI Feed: calendar backfill" — run once; writes
             every event from 30 days ago to 120 days ahead (recurring ones expanded) in flow 2's shape.
 
@@ -76,8 +78,42 @@ elif kind == "calendar":
         "Page_through_events": {"type": "Until", "runAfter": after(["Initialize_more"]), "expression": "@equals(variables('more'), false)",
                                 "limit": {"count": 30, "timeout": "PT2H"}, "actions": page},
     }
+elif kind == "mail-backfill":
+    display, desc = "AI Feed: mail backfill", "Run once: writes every email since 2026-01-01 from Inbox, Sent Items and Archive into OneDrive AI Feed/mail."
+    html_host = defn["actions"]["Html_to_text"]["inputs"]["host"]
+    od_host = defn["actions"]["Create_file"]["inputs"]["host"]
+    o365 = {"apiId": "/providers/Microsoft.PowerApps/apis/shared_office365", "connectionName": "shared_office365", "operationId": "GetEmailsV3"}
+    # Get emails (V3) returns at most 1000 per call, so each folder is read in date ranges (Graph $search KQL).
+    ranges = ["received>=2026-10-01", "received>=2026-07-01 AND received<2026-10-01",
+              "received>=2026-04-01 AND received<2026-07-01", "received>=2026-01-01 AND received<2026-04-01"]
+    per_email = {
+        "Html_to_text": {"type": "OpenApiConnection", "inputs": {"parameters": {"Content": "<p class=\"editor-paragraph\">@{item()?['body']}</p>"}, "host": html_host, "authentication": auth}},
+        "Compose": {"type": "Compose", "runAfter": {"Html_to_text": ["Succeeded", "Failed", "TimedOut"]}, "inputs": {
+            "type": "mail",
+            "direction": "@{if(equals(items('For_each_folder'), 'SentItems'), 'sent', 'in')}",
+            "received": "@{item()?['receivedDateTime']}", "from": "@{item()?['from']}", "to": "@{item()?['toRecipients']}",
+            "subject": "@{item()?['subject']}", "conversation": "@{item()?['conversationId']}",
+            "body": "@{coalesce(body('Html_to_text'), item()?['body'])}"}},
+        "Create_file": {"type": "OpenApiConnection", "runAfter": after(["Compose"]), "inputs": {"parameters": {
+            "folderPath": "/AI Feed/mail",
+            "name": "@concat('backfill-', formatDateTime(utcNow(),'yyyyMMdd-HHmmss'), '-', rand(1000,9999), '.json')",
+            "body": "@outputs('Compose')"}, "host": od_host, "authentication": auth},
+            "runtimeConfiguration": {"contentTransfer": {"transferMode": "Chunked"}}},
+    }
+    per_range = {
+        "Get_emails": {"type": "OpenApiConnection", "inputs": {"parameters": {
+            "folderPath": "@items('For_each_folder')", "fetchOnlyUnread": False, "includeAttachments": False,
+            "searchQuery": "@items('For_each_range')", "top": 1000}, "host": o365, "authentication": auth}},
+        "For_each_email": {"type": "Foreach", "runAfter": after(["Get_emails"]), "foreach": "@outputs('Get_emails')?['body/value']",
+                           "actions": per_email, "runtimeConfiguration": {"concurrency": {"repetitions": 10}}},
+    }
+    defn["triggers"] = {"manual": {"type": "Request", "kind": "Button", "inputs": {"schema": {"type": "object", "properties": {}, "required": []}}}}
+    defn["actions"] = {
+        "For_each_folder": {"type": "Foreach", "foreach": ["Inbox", "SentItems", "Archive"], "runtimeConfiguration": {"concurrency": {"repetitions": 1}},
+                            "actions": {"For_each_range": {"type": "Foreach", "foreach": ranges, "runtimeConfiguration": {"concurrency": {"repetitions": 1}}, "actions": per_range}}},
+    }
 else:
-    raise SystemExit("kind must be sent or calendar")
+    raise SystemExit("kind must be sent, calendar or mail-backfill")
 
 new_id = str(uuid.uuid4())
 d["name"] = new_id; d["id"] = f"/providers/Microsoft.Flow/flows/{new_id}"
