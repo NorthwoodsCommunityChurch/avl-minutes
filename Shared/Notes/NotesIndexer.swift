@@ -41,7 +41,8 @@ final class NotesIndexer {
         do {
             let current = try await bridge.listMetadata()
             let index = self.index
-            let plan = try await Task.detached { IndexPlanner.plan(current: current, indexed: try index.stamps()) }.value
+            // Feed records (AI Feed files) are the FeedIndexer's; leave them out of this plan or they'd be deleted.
+            let plan = try await Task.detached { IndexPlanner.plan(current: current, indexed: FeedRecord.notesOnly(try index.stamps())) }.value
             try await Task.detached {
                 try index.transaction {
                     for note in plan.retag { try index.retag(note) }

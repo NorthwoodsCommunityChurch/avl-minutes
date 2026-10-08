@@ -17,7 +17,8 @@ public struct NotesTools: Sendable {
     Notes in the "Meeting Transcripts" folder are automatic speech-recognition transcripts \
     made by Minutes: expect misheard words, and treat speaker labels as approximate. \
     "Me" is Aaron; "Speaker n" are people in the room; "Caller n" are people on a call. \
-    All other folders are Aaron's own notes.
+    If folders "mail", "calendar", or "teams" exist (account "AI Feed"), they hold copies of Aaron's \
+    email, calendar events, and Teams chat messages, filed by arrival time. All other folders are Aaron's own notes.
     """
 
     public let index: NotesIndex
