@@ -56,12 +56,13 @@ async function main() {
   const local = merge(readLocal(), incoming);
   local.hermes = local.hermes || {};
   if (!local.hermes.key) local.hermes.key = apiKeyFromHermesEnv();
+  if (!local.notifyKey) local.notifyKey = require("node:crypto").randomBytes(24).toString("hex"); // helper -> relay feed events
   const bot = local.teamsBot || {};
   for (const [k, v] of Object.entries(bot)) if (/PASTE/i.test(String(v))) throw new Error(`teamsBot.${k} still has the placeholder text`);
   fs.mkdirSync(path.dirname(FILE), { recursive: true });
   fs.writeFileSync(FILE, `${JSON.stringify(local, null, 2)}\n`, { mode: 0o600 });
   fs.chmodSync(FILE, 0o600);
-  const report = { file: FILE, bot: !!(bot.appId && bot.appPassword), frontDoorKey: !!local.frontDoorKey, hermesKey: !!local.hermes.key, allowedUsers: (local.allowedUsers || []).length };
+  const report = { file: FILE, bot: !!(bot.appId && bot.appPassword), frontDoorKey: !!local.frontDoorKey, notifyKey: !!local.notifyKey, hermesKey: !!local.hermes.key, allowedUsers: (local.allowedUsers || []).length };
   console.log(JSON.stringify(report));
   if (!process.argv.includes("--no-restart")) {
     try {

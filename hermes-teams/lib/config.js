@@ -9,9 +9,10 @@ const DEFAULTS = {
   host: "127.0.0.1",
   baseUrl: "https://hermes.northwoodstech.workers.dev",
   frontDoorKey: "",
+  notifyKey: "",
   teamsBot: { appId: "", appPassword: "", tenantId: "" },
   allowedUsers: [{ name: "Aaron Larson" }],
-  hermes: { url: "http://127.0.0.1:8642", key: "", timeoutMs: 10 * 60 * 1000 },
+  hermes: { url: "http://127.0.0.1:8642", key: "", timeoutMs: 20 * 60 * 1000 },
   stateFile: path.join(ROOT, "data", "state.json"),
 };
 

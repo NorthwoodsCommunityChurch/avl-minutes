@@ -24,8 +24,8 @@ SQLite FTS5, MCP Swift SDK, XcodeGen.
   (`scripts/decommission-assistant-mac.sh engineering-mac`, Aaron's go; verified: no agents, apps, brew packages or procs left). Provisioning/migration is one
   command: `scripts/setup-assistant-mac.sh <host> [--old-host <alias>]` (Hermes restored from the backup in OneDrive
   `secrets/migration/`). Verified on edit-3: Teams message answered in 35 s, notes question in 55 s, 118 notes indexed.
-  Edit-3 time zone fixed (came up Pacific). OneDrive signed in on edit-3 2026-10-08 13:00 but the `AI Feed` folder had not
-  synced down as of 13:10 (see Status); auto-login and Teams feed flow 3 still pending.
+  Edit-3 time zone fixed (came up Pacific), OneDrive signed in and the feed indexed (needed Aaron's Allow click on the mini's
+  screen), auto-login on.
 - **Mini is live (2026-10-08, originally on engineering-mac):** Hermes Agent (now v0.21.6 on edit-3; `~/.hermes`, gateway as launchd `ai.hermes.gateway` with its
   API server on 127.0.0.1:8642) talks to **Puget's Gemma 4 31B** (`http://10.11.4.170:11434/v1`, model `gemma-bigctx`,
   header `X-Client: hermes`, streaming; Aaron's call 2026-10-08, "Hermes can run on that mini, but use the models on
@@ -38,6 +38,16 @@ SQLite FTS5, MCP Swift SDK, XcodeGen.
   rules (look things up on its own, never ask to research, answer briefly); terminal/browser/file/code/clarify tools
   are off on both platforms. Honcho/cloud memory off. Next: Teams feed flow (Aaron), a read-only Planning Center MCP
   server (Aaron creates a Personal Access Token), docs.
+- **Afternoon of 2026-10-08, all live on edit-3:** flow 3 (Teams chats) plus run-once backfills for Teams (since Jan 1) and the
+  calendar (past 30 / next 120 days) and a Sent Items mail flow, all built as import packages by `scripts/power-automate/*.py`
+  from Aaron's own exports (OneDrive `VS Code/Assistant/flows/`); Hermes got a clock (`current_time` on the helper's MCP),
+  song prep (`song_prep` / `song_energy_note` on the Planning Center server, mirror in `hermes-tools/pco-mcp/`), and the
+  **proactive loop** (helper → relay `POST /notify` → Hermes in Aaron's thread → Teams line; spec
+  [docs/superpowers/specs/2026-10-08-hermes-proactive-loop-design.md](docs/superpowers/specs/2026-10-08-hermes-proactive-loop-design.md)):
+  calendar changes and sent mail reach Hermes within ~2 min; she creates task cards when Aaron says "I need to…" and moves
+  them to the board's new **Done** list when a sent email closes one. Minutes: the Start hang (TimelineView in the menu bar
+  label) is fixed and Aaron's test passed. Unverified live: the first proactive Teams line (needs one message from Aaron to
+  the bot after the relay restart so it learns the home conversation).
 - **Summary bench** (`bench/`): Aaron stopped it 2026-10-07 15:52 after the 5-meeting preview decided it
   (Gemma 12B over Qwen 9B; see [bench/FINDINGS.md](bench/FINDINGS.md)). Partial rows stay in `bench/results/`; every runner resumes.
 - **Stage:** active development on branch `minutes-v1`, pushed to private repo
@@ -101,7 +111,9 @@ the index fresh every 2 min), `--mcp` (read-only server named `hermes-helper`), 
 | Hermes Helper | `com.northwoods.HermesHelper` 0.1.0 (1); on `engineering-mac` at `/Applications/HermesHelper.app`, launchd `com.northwoods.HermesHelper`, log `~/Library/Logs/HermesHelper.log`; deploy with `scripts/deploy-helper.sh` |
 | Hermes Agent (mini) | `~/.hermes/config.yaml` (model block → Puget `gemma-bigctx`; `mcp_servers.notes` + `mcp_servers.planka`), `~/.hermes/SOUL.md` (standing rules), `~/.hermes/.env` (`API_SERVER_KEY`), CLI `~/.local/bin/hermes`, one-shot `hermes -z "…"`, gateway log `~/.hermes/logs/gateway.log` |
 | Teams relay (mini) | `hermes-teams/` in this repo → `~/hermes-teams` on the mini, launchd `com.northwoods.hermes-teams`, log `~/Library/Logs/hermes-teams.log`, config `~/hermes-teams/config/local.json` (600); door `https://hermes.northwoodstech.workers.dev` (Worker `hermes`, tunnel `engineering-mac`, launchd `com.northwoods.cloudflared`); bot id `685fac05-84be-4bb9-aa30-4a2a430d22b1`; secrets master in OneDrive `VS Code/Assistant/secrets/` |
-| AI Feed | OneDrive `AI Feed/{mail,calendar,teams}` written by Power Automate flows "AI Feed: mail/calendar/teams" ([docs/guides/power-automate-ai-feed.md](docs/guides/power-automate-ai-feed.md)); indexed by the helper every 2 min (account "AI Feed", ids `feed:<path>`) |
+| AI Feed | OneDrive `AI Feed/{mail,calendar,teams}` written by Power Automate flows "AI Feed: mail/sent/calendar/teams" plus run-once backfills ([docs/guides/power-automate-ai-feed.md](docs/guides/power-automate-ai-feed.md); packages in OneDrive `VS Code/Assistant/flows/`, generators `scripts/power-automate/`); indexed by the helper every 2 min (account "AI Feed", ids `feed:<path>`, group keys `calendar:<event id>` / `teams:<message id>`) |
+| Proactive loop | helper `FeedNotifier` → relay `POST http://127.0.0.1:8787/notify` (`x-notify-key` = `notifyKey` in the relay's `config/local.json`) → Hermes in Aaron's home conversation → Teams; task board list "Done" (id 1881546439595656482) on board "To Do" |
+| Planning Center server | Weekend Rundown's `pco-mcp` (its folder is not under git; versioned mirror `hermes-tools/pco-mcp/`), on edit-3 at `~/pco-mcp` (venv, `mcp<2`, `pypdf`); tools incl. `song_prep`, `song_energy_note(s)`; Aaron's notes in `~/pco-mcp/song-energy-notes.json`; deploy `scripts/deploy-pco-mcp.sh` |
 
 ## Build / Run / Release
 ```bash
@@ -112,6 +124,8 @@ bash scripts/mcp-smoke-test.sh
 MINUTES_TRACE=1 /Applications/Minutes.app/Contents/MacOS/Minutes --transcribe-check [--both] [--save]
 bash scripts/audit-writes.sh start  # … run a meeting …  bash scripts/audit-writes.sh report
 bash scripts/deploy-helper.sh [host]     # Release-build Hermes Helper, install + (re)start its launchd agent on the mini
+bash scripts/deploy-pco-mcp.sh [host]    # copy the Planning Center server (+ song prep) to the mini, pip install, restart Hermes
+python3 scripts/power-automate/make-feed-flows.py sent|calendar <export.zip> <out.zip>   # import packages from Aaron's exports
 bash hermes-teams/scripts/deploy-teams-relay.sh [host]   # copy the relay to the mini + restart its agent
 (cd hermes-teams && npm test)             # relay tests (node --test)
 ```
@@ -201,3 +215,4 @@ End a work session with **`/save`**.
 | 2026-10-08 | Hermes Helper target built and live on the mini; Minutes removed there; Hermes Agent + Gemma 12B set up; bench stopped on the preview |
 | 2026-10-08 | Teams relay + Cloudflare door live; AI Feed (mail, calendar) indexed; model moved to Puget's Gemma 31B, local 12B removed; Planka MCP; SOUL rules |
 | 2026-10-08 | Host migrated engineering-mac → edit-3 (setup-assistant-mac.sh); Planning Center MCP (Weekend Rundown's pco-mcp) registered; decommission script written |
+| 2026-10-08 | Engineering mini wiped; Edit 3 time zone; Minutes menu-bar hang fixed; clock tool; Teams/calendar/sent flows + backfills; song prep tools; proactive loop (helper → relay /notify → Hermes → Teams) |

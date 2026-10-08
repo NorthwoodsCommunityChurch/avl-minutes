@@ -77,6 +77,14 @@ enum IndexService {
                     }
                     lastFeedProblem = nil
                     feedReported = true
+                    // The proactive loop: calendar changes and sent mail go to Hermes through the relay.
+                    let lines = FeedNotifier.lines(for: FeedNotifier.select(r.records))
+                    if !lines.isEmpty {
+                        Task { @MainActor in
+                            let status = await FeedNotifierClient.send(lines)
+                            print("\(stamp()) notify: \(status)"); fflush(stdout)
+                        }
+                    }
                 case .failure(let error):
                     let text = "\(error)"
                     if text != lastFeedProblem { print("\(stamp()) feed problem: \(text)"); fflush(stdout) }

@@ -5,6 +5,18 @@ const { cleanText, splitMessage, GLOBAL_SERVICE_URL } = require("./teams");
 const GREETING = "Hi Aaron. Ask me about your notes and meetings. `/new` starts a fresh conversation, `/help` repeats this.";
 const HELP = "Just type a question. `/new` starts a fresh conversation (I forget the thread so far). `/help` shows this.";
 const PRIVATE = "Sorry, this assistant is private.";
+const NO_MESSAGE = "NO_MESSAGE";
+
+/** What the relay tells Hermes when the helper reports feed changes (calendar edits, sent mail). */
+function buildFeedEventPrompt(records) {
+  const body = (records || []).map((r) => String(r).trim()).filter(Boolean).join("\n---\n");
+  return [
+    "Feed event (automatic, not a message from Aaron). Decide whether Aaron needs to hear about it, and act first if your standing rules say so (for example moving a task card to Done).",
+    `If yes, reply with only the one or two lines he should see in Teams. If nothing is worth saying, reply exactly ${NO_MESSAGE}.`,
+    "",
+    body,
+  ].join("\n");
+}
 
 function createRelay({ config, connector, hermes, state, log = () => {}, typingIntervalMs = 4000, now = () => Date.now() }) {
   const allowed = (config && config.allowedUsers) || [];
@@ -56,6 +68,11 @@ function createRelay({ config, connector, hermes, state, log = () => {}, typingI
     if (activity.serviceUrl) state.set("serviceUrl", activity.serviceUrl);
     const tenant = tenantOf(activity);
     if (tenant && !state.get("tenantId")) state.set("tenantId", tenant);
+    // Aaron's 1:1 chat is where proactive lines go; a group chat never is.
+    const type = activity.conversation && activity.conversation.conversationType;
+    if (activity.conversation && activity.conversation.id && (!type || type === "personal")) {
+      state.set("homeConversation", { id: activity.conversation.id, serviceUrl: activity.serviceUrl || state.get("serviceUrl") || GLOBAL_SERVICE_URL });
+    }
   }
 
   const send = (activity, payload) => connector.sendToConversation(activity.serviceUrl || state.get("serviceUrl") || GLOBAL_SERVICE_URL, activity.conversation.id, payload);
@@ -155,7 +172,34 @@ function createRelay({ config, connector, hermes, state, log = () => {}, typingI
     return p;
   }
 
-  return { handle, isAllowed, tenantOk };
+  /**
+   * A feed event from the helper: Hermes reads it in Aaron's own thread and either answers with the line Aaron
+   * should see (posted to his 1:1 chat) or NO_MESSAGE. Runs in the same one-at-a-time queue as chat messages.
+   */
+  function notify({ records }) {
+    const home = state.get("homeConversation");
+    if (!home || !home.id) {
+      const err = new Error("No home conversation yet: Aaron has to message the bot once");
+      err.status = 409;
+      return Promise.reject(err);
+    }
+    const run = async () => {
+      const started = now();
+      const r = await hermes.ask({ conversationId: home.id, text: buildFeedEventPrompt(records) });
+      const text = (r.text || "").trim();
+      const silent = !text || text.replace(/[`*.!]/g, "").trim().toUpperCase() === NO_MESSAGE;
+      if (!silent) {
+        for (const part of splitMessage(text)) await connector.sendToConversation(home.serviceUrl, home.id, { type: "message", textFormat: "markdown", text: part });
+      }
+      log("info", { event: "notified", records: (records || []).length, posted: !silent, chars: text.length, seconds: Math.round((now() - started) / 1000) });
+      return { posted: !silent };
+    };
+    const p = queue.then(run, run);
+    queue = p.catch(() => {});
+    return p;
+  }
+
+  return { handle, notify, isAllowed, tenantOk };
 }
 
-module.exports = { createRelay, GREETING, HELP, PRIVATE };
+module.exports = { createRelay, buildFeedEventPrompt, GREETING, HELP, PRIVATE, NO_MESSAGE };

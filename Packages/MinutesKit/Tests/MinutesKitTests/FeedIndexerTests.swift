@@ -26,7 +26,8 @@ private func write(_ text: String, to url: URL, modified: Date? = nil) throws {
 
     let feed = FeedIndexer(folder: folder, index: index)
     let first = try feed.refresh()
-    #expect(first == FeedIndexer.Result(indexed: 1, removed: 0, skipped: 1, total: 1))
+    #expect((first.indexed, first.removed, first.skipped, first.total, first.unreadable) == (1, 0, 1, 1, 0))
+    #expect(first.records.map(\.path) == ["mail/a.json"])
     #expect(try index.count() == 2)
     #expect(try index.note(id: "feed:mail/a.json")?.title == "Hermes test")
     #expect(try index.search("first", folder: "mail", since: nil, until: nil, limit: 5).count == 1)

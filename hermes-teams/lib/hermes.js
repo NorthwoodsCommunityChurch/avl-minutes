@@ -4,7 +4,7 @@
  * full agent (tools, memory) and keeps the conversation server-side; the relay stores each chat's last
  * response id so the next message continues the thread.
  */
-function createHermesClient({ url, key, state, fetch = globalThis.fetch, timeoutMs = 10 * 60 * 1000, model = "hermes-agent" }) {
+function createHermesClient({ url, key, state, fetch = globalThis.fetch, timeoutMs = 20 * 60 * 1000, model = "hermes-agent" }) {
   const base = String(url || "http://127.0.0.1:8642").replace(/\/+$/, "");
 
   async function post(body, signal) {

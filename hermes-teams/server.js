@@ -72,6 +72,24 @@ function createServer({ config, relay, verifier, hermes, log = () => {} }) {
         relay.handle(activity).catch((err) => log("error", { event: "handle-failed", message: err.message }));
         return;
       }
+      if (req.method === "POST" && url.pathname === "/notify") {
+        // Local only: the Cloudflare Worker forwards nothing but /webhooks/teams and /health. The helper sends feed
+        // changes here with the shared notify key; Hermes decides whether Aaron hears about them.
+        if (!config.notifyKey || req.headers["x-notify-key"] !== config.notifyKey) throw new RelayError(403, "Missing notify key");
+        const raw = await readBody(req);
+        let payload;
+        try {
+          payload = JSON.parse(raw);
+        } catch {
+          throw new RelayError(400, "Expected JSON");
+        }
+        const records = Array.isArray(payload && payload.records) ? payload.records.map(String) : [];
+        if (!records.length) throw new RelayError(400, "records[] is empty");
+        log("info", { event: "notify", records: records.length });
+        json(res, 202, { accepted: records.length });
+        relay.notify({ records }).catch((err) => log(err.status === 409 ? "warn" : "error", { event: "notify-failed", message: err.message }));
+        return;
+      }
       throw new RelayError(404, "Not found");
     } catch (err) {
       const status = err && err.status ? err.status : 500;

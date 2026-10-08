@@ -10,6 +10,19 @@ public final class FeedIndexer: @unchecked Sendable {
     private let lock = NSLock()
     private var skipped: [String: Date] = [:]
 
+    /// One record this pass put into the index: what the notifier looks at.
+    public struct IndexedRecord: Sendable, Equatable {
+        public let path: String
+        public let folder: String
+        public let title: String
+        public let body: String
+        public let groupKey: String?
+        public let modifiedAt: Date
+        public init(path: String, folder: String, title: String, body: String, groupKey: String?, modifiedAt: Date) {
+            self.path = path; self.folder = folder; self.title = title; self.body = body; self.groupKey = groupKey; self.modifiedAt = modifiedAt
+        }
+    }
+
     public struct Result: Sendable, Equatable {
         public var indexed: Int
         public var removed: Int
@@ -17,6 +30,8 @@ public final class FeedIndexer: @unchecked Sendable {
         public var total: Int
         /// Files that could not be read this pass (still downloading, permission); retried next pass.
         public var unreadable: Int
+        /// The records indexed this pass, in processing order (oldest file first).
+        public var records: [IndexedRecord] = []
         public init(indexed: Int, removed: Int, skipped: Int, total: Int, unreadable: Int = 0) {
             self.indexed = indexed
             self.removed = removed
@@ -87,6 +102,8 @@ public final class FeedIndexer: @unchecked Sendable {
                     }
                 }
                 try index.upsert(parsed.metadata, body: parsed.body, groupKey: parsed.groupKey)
+                result.records.append(IndexedRecord(path: path, folder: parsed.metadata.folder, title: parsed.metadata.title,
+                                                    body: parsed.body, groupKey: parsed.groupKey, modifiedAt: note.modifiedAt))
                 if let key = parsed.groupKey {
                     for gone in try index.delete(groupKey: key, except: parsed.metadata.id) {
                         let gonePath = String(gone.dropFirst(FeedRecord.idPrefix.count))

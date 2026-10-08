@@ -77,6 +77,28 @@ To type an expression: click the field → the dynamic content panel → the **E
 5. **Create file** into `/AI Feed/teams`.
 6. Save, test by sending any chat message. The Hermes 1:1 chat is captured too (both sides); harmless, and the indexer can skip it.
 
+## Flow 4 — "AI Feed: sent" (import, not built by hand)
+
+The mail flow again, watching **Sent Items**, with `"direction": "sent"` in the JSON so the helper titles the record
+"To <recipient>: <subject>" and Hermes can tell what Aaron sent from what he received. Built from Aaron's export of flow 1:
+`python3 scripts/power-automate/make-feed-flows.py sent <aimail-export.zip> AI-Feed-sent.zip`. Import: My flows → Import →
+**Import Package (Legacy)** → pick the zip → for each of the three connections click the wrench and choose the existing one →
+Import. It runs on its own from then on.
+
+## Run-once backfills (import, run, leave)
+
+Triggers only see what happens after they exist, so two run-once flows fill in history (same import steps, then open the
+flow and press **Run**):
+
+- **"AI Feed: teams backfill"** — every chat Aaron is in, paged back 50 messages at a time (Graph lets a chat be paged only by
+  `lastModifiedDateTime`), real messages only, since 2026-01-01. Built from the flow 3 export:
+  `python3 scripts/power-automate/make-teams-backfill-flow.py <teams-export.zip> <out.zip> [since-iso]`. Ran 2026-10-08.
+- **"AI Feed: calendar backfill"** — every event from 30 days ago to 120 days ahead (recurring ones expanded), action
+  `backfill`. Built from the flow 2 export: `python3 scripts/power-automate/make-feed-flows.py calendar <aicalendar-export.zip> <out.zip>`.
+
+Duplicates are harmless: the helper keeps the newest file per calendar event id and per Teams message id.
+The flow packages and the exports they were made from live in OneDrive `VS Code/Assistant/flows/`.
+
 ## Checks and limits
 
 - The Teams chat trigger and the channel triggers poll about every 3 minutes; mail and calendar are near-instant.
