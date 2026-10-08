@@ -2,7 +2,7 @@
 """Builds two Power Automate import packages from Aaron's exported AI Feed flows (so they reuse his
 connection ids):
 
-  sent      from an export of "AI Feed: mail":     "AI Feed: sent" — same flow watching Sent Items,
+  sent      from an export of "AI Feed: mail":     "AI Feed: mail sent" — same flow watching Sent Items,
             JSON carries "direction": "sent" so the helper titles it "To <recipient>: <subject>".
   calendar  from an export of "AI Feed: calendar": "AI Feed: calendar backfill" — run once; writes
             every event from 30 days ago to 120 days ahead (recurring ones expanded) in flow 2's shape.
@@ -33,7 +33,7 @@ auth = "@parameters('$authentication')"
 def after(names): return {n: ["Succeeded"] for n in names}
 
 if kind == "sent":
-    display, desc = "AI Feed: sent", "Copies every email Aaron sends into OneDrive AI Feed/mail with a sent marker."
+    display, desc = "AI Feed: mail sent", "Copies every email Aaron sends into OneDrive AI Feed/mail with a sent marker."
     trig = next(iter(defn["triggers"].values()))
     trig["inputs"]["parameters"]["folderPath"] = "SentItems"
     defn["actions"]["Compose"]["inputs"]["direction"] = "sent"

@@ -77,11 +77,11 @@ To type an expression: click the field → the dynamic content panel → the **E
 5. **Create file** into `/AI Feed/teams`.
 6. Save, test by sending any chat message. The Hermes 1:1 chat is captured too (both sides); harmless, and the indexer can skip it.
 
-## Flow 4 — "AI Feed: sent" (import, not built by hand)
+## Flow 4 — "AI Feed: mail sent" (import, not built by hand)
 
 The mail flow again, watching **Sent Items**, with `"direction": "sent"` in the JSON so the helper titles the record
 "To <recipient>: <subject>" and Hermes can tell what Aaron sent from what he received. Built from Aaron's export of flow 1:
-`python3 scripts/power-automate/make-feed-flows.py sent <aimail-export.zip> AI-Feed-sent.zip`. Import: My flows → Import →
+`python3 scripts/power-automate/make-feed-flows.py sent <aimail-export.zip> AI-Feed-mail-sent.zip`. Import: My flows → Import →
 **Import Package (Legacy)** → pick the zip → for each of the three connections click the wrench and choose the existing one →
 Import. It runs on its own from then on.
 
