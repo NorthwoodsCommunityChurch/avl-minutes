@@ -19,6 +19,9 @@ final class MeetingSession {
 
     private(set) var phase: Phase = .idle
     private(set) var startedAt: Date?
+    /// Advances once a second while listening; the menu bar label reads it for the elapsed time
+    /// (a `TimelineView` in a `MenuBarExtra` label pins the main thread at 100% on macOS 26).
+    private(set) var now = Date()
     private(set) var liveLines: [TranscriptLine] = []
     private(set) var volatileText: [Source: String] = [:]
     private(set) var levels: [Source: Float] = [:]
@@ -40,6 +43,7 @@ final class MeetingSession {
     private let bridge: NotesBridge
     private var streams: [Source: ActiveStream] = [:]
     private var saveTimer: Timer?
+    private var tickTimer: Timer?
     private var isSaving = false
     private static let saveInterval: TimeInterval = 30
     private static let logger = Logger(subsystem: "com.northwoods.Minutes", category: "MeetingSession")
@@ -123,6 +127,10 @@ final class MeetingSession {
         }
         document?.sources = Set(streams.keys)
         phase = .listening
+        now = Date()
+        tickTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+            Task { @MainActor in self?.now = Date() }
+        }
         saveTimer = Timer.scheduledTimer(withTimeInterval: Self.saveInterval, repeats: true) { [weak self] _ in
             Task { @MainActor in await self?.save() }
         }
@@ -135,6 +143,8 @@ final class MeetingSession {
         phase = .stopping
         saveTimer?.invalidate()
         saveTimer = nil
+        tickTimer?.invalidate()
+        tickTimer = nil
         for stream in streams.values { stream.stopCapture() }
         for (source, stream) in streams {
             Self.logger.info("Stopping \(source.rawValue, privacy: .public): transcriber")

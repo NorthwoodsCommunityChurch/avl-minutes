@@ -25,17 +25,19 @@ struct MinutesApp: App {
 
 /// Menu bar icon: a waveform when idle; a red record dot and the elapsed time while
 /// listening (the same pattern macOS uses for screen recording).
+///
+/// The elapsed time comes from `MeetingSession.now`, which ticks once a second while listening.
+/// Not a `TimelineView`: inside a `MenuBarExtra` label it makes the host re-render the status
+/// item in a tight loop and the app hangs at 100% CPU (macOS 26.5, any schedule, any start date).
 struct MenuBarLabel: View {
     let session: MeetingSession
 
     var body: some View {
         if session.isActive, let start = session.startedAt {
-            TimelineView(.periodic(from: start, by: 1)) { context in
-                HStack(spacing: 4) {
-                    Image(nsImage: Self.recordingImage)
-                    Text(ElapsedFormat.short(from: start, to: context.date))
-                        .monospacedDigit()
-                }
+            HStack(spacing: 4) {
+                Image(nsImage: Self.recordingImage)
+                Text(ElapsedFormat.short(from: start, to: session.now))
+                    .monospacedDigit()
             }
             .accessibilityLabel("Minutes is listening")
         } else {

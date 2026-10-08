@@ -20,11 +20,12 @@ SQLite FTS5, MCP Swift SDK, XcodeGen.
   **Hermes Agent on the engineering Mac mini** (`engineering-mac`). Record + remaining steps:
   [docs/research/2026-10-07-assistant-direction.md](docs/research/2026-10-07-assistant-direction.md).
 - **HOST MOVED 2026-10-08 afternoon:** the assistant now runs on **`edit-3`** (DC - Edit 3, 10.11.1.104, the erased
-  former video director M1 mini); `engineering-mac` goes back to engineering and still has the old copies until
-  `scripts/decommission-assistant-mac.sh engineering-mac` runs (needs Aaron's go). Provisioning/migration is one
+  former video director M1 mini); `engineering-mac` is back in engineering and was wiped of our software the same day
+  (`scripts/decommission-assistant-mac.sh engineering-mac`, Aaron's go; verified: no agents, apps, brew packages or procs left). Provisioning/migration is one
   command: `scripts/setup-assistant-mac.sh <host> [--old-host <alias>]` (Hermes restored from the backup in OneDrive
   `secrets/migration/`). Verified on edit-3: Teams message answered in 35 s, notes question in 55 s, 118 notes indexed.
-  Still on edit-3: Aaron signs in OneDrive (AI Feed), turns on auto-login; Teams feed flow 3 pending.
+  Edit-3 time zone fixed (came up Pacific). OneDrive signed in on edit-3 2026-10-08 13:00 but the `AI Feed` folder had not
+  synced down as of 13:10 (see Status); auto-login and Teams feed flow 3 still pending.
 - **Mini is live (2026-10-08, originally on engineering-mac):** Hermes Agent (now v0.21.6 on edit-3; `~/.hermes`, gateway as launchd `ai.hermes.gateway` with its
   API server on 127.0.0.1:8642) talks to **Puget's Gemma 4 31B** (`http://10.11.4.170:11434/v1`, model `gemma-bigctx`,
   header `X-Client: hermes`, streaming; Aaron's call 2026-10-08, "Hermes can run on that mini, but use the models on
@@ -133,6 +134,10 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
 - SpeechAnalyzer needs **no** `SFSpeechRecognizer.requestAuthorization`; calling it from a terminal
   run crashes with a TCC violation.
 - Running modes from a terminal attributes permissions to the terminal/VS Code, not Minutes.
+- **Never put a `TimelineView` in the `MenuBarExtra` label** (macOS 26.5): the host re-renders the status item in a tight
+  loop and pins the main thread at 100% (Aaron's first live Start hung, 2026-10-08; reproduced with a scratch app, any
+  schedule, any start date). The label reads a once-a-second `MeetingSession.now` instead. `TimelineView` inside the
+  popover content is fine.
 - **Design is Apple native** (Aaron, 2026-10-07): system controls, `.glass`/`.glassProminent`, no brand
   fonts/colors. The `northwoods-mac-app-design` skill's custom-brand direction was overridden.
 - **Screenshots: capture only the gallery window** (`screencapture -l <id>`, id printed as
@@ -156,7 +161,11 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
 - **Outlook writes several files per calendar event** (added, added, updated, updated); feed records carry a
   `group_key` (`calendar:<event id>`) and the newest file replaces the rest (index schema 2, migrates in place).
 - **Puget's gateway needs `X-Client`** and streaming; Hermes sends both via `model.default_headers` and its default
-  `stream: true`. Hermes's `hermes gateway restart` drains the current turn first, so a restart mid-question shows
+  `stream: true`. Puget's `gemma-bigctx` has n_ctx 262144 (confirmed by the puget session 2026-10-08); Hermes's
+  `context_length` stays 65536 on purpose, so one long chat never ties up the box's single slot. The queue is strict
+  first come, first served: a question can wait minutes behind a Weekend Rundown build (worst seen 6.7 min) plus a
+  15-25 s model swap, and a caller that disconnects loses its place, so the Teams relay waits up to 20 min. Live view:
+  Box Status Board `http://10.11.4.170:8777` (Hermes shows as "hermes"). Hermes's `hermes gateway restart` drains the current turn first, so a restart mid-question shows
   as "Hermes couldn't answer: fetch failed" in Teams.
 - **An erased Mac defaults to Pacific time** (edit-3 came up `America/Los_Angeles`, two hours behind the fleet's
   `America/Chicago`), which skews Hermes's sense of "today" and calendar times; `setup-assistant-mac.sh` step 1 now sets
