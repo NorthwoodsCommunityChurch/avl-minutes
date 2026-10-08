@@ -36,13 +36,16 @@ test("webhook needs the front-door key and a valid token, then answers 200 befor
   let resolveWork;
   const relay = { handle: () => new Promise((r) => { resolveWork = () => { finished = true; r(); }; }) };
   const verifier = { verify: async (auth) => { if (auth !== "Bearer good") { const e = new Error("bad"); e.status = 401; throw e; } return {}; } };
-  const { srv, port } = await start({ config: { frontDoorKey: "door" }, relay, verifier });
-  const activity = { type: "message", text: "hi" };
+  const logs = [];
+  const { srv, port } = await start({ config: { frontDoorKey: "door" }, relay, verifier, log: (level, data) => logs.push({ level, ...data }) });
+  const activity = { type: "message", text: "hi", from: { name: "A", aadObjectId: "aad" } };
   assert.equal((await req(port, "POST", "/webhooks/teams", { body: activity, headers: { authorization: "Bearer good" } })).status, 403);
   assert.equal((await req(port, "POST", "/webhooks/teams", { body: activity, headers: { authorization: "Bearer bad", "x-front-door-key": "door" } })).status, 401);
   assert.equal((await req(port, "POST", "/webhooks/teams", { raw: "not json", headers: { authorization: "Bearer good", "x-front-door-key": "door" } })).status, 400);
   const ok = await req(port, "POST", "/webhooks/teams", { body: activity, headers: { authorization: "Bearer good", "x-front-door-key": "door" } });
   assert.equal(ok.status, 200);
+  assert.ok(logs.some((l) => l.event === "inbound" && l.type === "message" && l.aadObjectId === "aad" && !("text" in l)));
+  assert.ok(logs.some((l) => l.event === "request-failed" && l.status === 401));
   assert.equal(finished, false, "the response came back before the relay finished");
   resolveWork();
   await new Promise((r) => setTimeout(r, 5));

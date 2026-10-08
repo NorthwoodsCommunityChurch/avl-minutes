@@ -67,6 +67,7 @@ function createServer({ config, relay, verifier, hermes, log = () => {} }) {
         }
         if (!activity || typeof activity !== "object" || Array.isArray(activity)) throw new RelayError(400, "Expected a JSON activity");
         await verifier.verify(req.headers.authorization, activity);
+        log("info", { event: "inbound", type: activity.type || null, name: (activity.from && activity.from.name) || null, aadObjectId: (activity.from && activity.from.aadObjectId) || null, conversation: (activity.conversation && activity.conversation.conversationType) || null, hasText: !!activity.text });
         json(res, 200, {});
         relay.handle(activity).catch((err) => log("error", { event: "handle-failed", message: err.message }));
         return;
@@ -74,7 +75,7 @@ function createServer({ config, relay, verifier, hermes, log = () => {} }) {
       throw new RelayError(404, "Not found");
     } catch (err) {
       const status = err && err.status ? err.status : 500;
-      if (status === 500) log("error", { event: "request-failed", message: err.message });
+      log(status === 500 ? "error" : "warn", { event: "request-failed", status, path: req.url, message: err.message });
       if (!res.headersSent) json(res, status, { ok: false, error: err.message });
     }
   });

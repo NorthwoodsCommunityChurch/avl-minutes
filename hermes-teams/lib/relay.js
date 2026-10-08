@@ -138,7 +138,10 @@ function createRelay({ config, connector, hermes, state, log = () => {}, typingI
   async function onConversationUpdate(activity) {
     if (!tenantOk(activity)) return;
     const added = (activity.membersAdded || []).map((m) => m.id);
-    if (activity.recipient && added.includes(activity.recipient.id)) await say(activity, GREETING);
+    if (activity.recipient && added.includes(activity.recipient.id)) {
+      log("info", { event: "greeted", conversation: activity.conversation && activity.conversation.id ? "yes" : "no" });
+      await say(activity, GREETING);
+    }
   }
 
   /** Processes one activity; activities run one at a time, in arrival order (the model has one slot). */
