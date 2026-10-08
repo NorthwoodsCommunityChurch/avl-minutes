@@ -17,9 +17,13 @@ public final class FeedIndexer: @unchecked Sendable {
         public let title: String
         public let body: String
         public let groupKey: String?
+        /// The file's modification date (when the flow wrote it).
         public let modifiedAt: Date
-        public init(path: String, folder: String, title: String, body: String, groupKey: String?, modifiedAt: Date) {
-            self.path = path; self.folder = folder; self.title = title; self.body = body; self.groupKey = groupKey; self.modifiedAt = modifiedAt
+        /// The item's own time: received, sent, start, or created.
+        public let createdAt: Date
+        public init(path: String, folder: String, title: String, body: String, groupKey: String?, modifiedAt: Date, createdAt: Date? = nil) {
+            self.path = path; self.folder = folder; self.title = title; self.body = body; self.groupKey = groupKey
+            self.modifiedAt = modifiedAt; self.createdAt = createdAt ?? modifiedAt
         }
     }
 
@@ -136,7 +140,8 @@ public final class FeedIndexer: @unchecked Sendable {
                 }
                 try index.upsert(parsed.metadata, body: parsed.body, groupKey: parsed.groupKey)
                 result.records.append(IndexedRecord(path: path, folder: parsed.metadata.folder, title: parsed.metadata.title,
-                                                    body: parsed.body, groupKey: parsed.groupKey, modifiedAt: note.modifiedAt))
+                                                    body: parsed.body, groupKey: parsed.groupKey, modifiedAt: note.modifiedAt,
+                                                    createdAt: parsed.metadata.createdAt))
                 if let key = parsed.groupKey {
                     for gone in try index.delete(groupKey: key, except: parsed.metadata.id) {
                         let gonePath = String(gone.dropFirst(FeedRecord.idPrefix.count))

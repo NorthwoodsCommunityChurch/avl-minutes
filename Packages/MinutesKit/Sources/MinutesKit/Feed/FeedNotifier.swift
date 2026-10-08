@@ -16,6 +16,8 @@ public enum FeedNotifier {
     public static func select(_ records: [FeedIndexer.IndexedRecord], now: Date = Date()) -> [FeedIndexer.IndexedRecord] {
         records.filter { r in
             guard now.timeIntervalSince(r.modifiedAt) <= freshness else { return false }
+            // Backfills write old items into brand-new files; they are history, never news.
+            if r.path.split(separator: "/").last?.hasPrefix("backfill-") == true { return false }
             switch r.folder {
             case "calendar":
                 let action = calendarAction(r.body)
@@ -25,7 +27,7 @@ public enum FeedNotifier {
                 }
                 return false
             case "mail":
-                return r.body.hasPrefix("Sent by Aaron to:")
+                return r.body.hasPrefix("Sent by Aaron to:") && now.timeIntervalSince(r.createdAt) <= freshness
             default:
                 return false
             }

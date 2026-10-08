@@ -2,9 +2,10 @@ import Foundation
 import Testing
 @testable import MinutesKit
 
-private func record(_ folder: String, _ title: String, body: String, age: TimeInterval, now: Date) -> FeedIndexer.IndexedRecord {
-    FeedIndexer.IndexedRecord(path: "\(folder)/\(UUID().uuidString).json", folder: folder, title: title, body: body,
-                              groupKey: nil, modifiedAt: now.addingTimeInterval(-age))
+private func record(_ folder: String, _ title: String, body: String, age: TimeInterval, now: Date,
+                    itemAge: TimeInterval? = nil, name: String = UUID().uuidString) -> FeedIndexer.IndexedRecord {
+    FeedIndexer.IndexedRecord(path: "\(folder)/\(name).json", folder: folder, title: title, body: body,
+                              groupKey: nil, modifiedAt: now.addingTimeInterval(-age), createdAt: now.addingTimeInterval(-(itemAge ?? age)))
 }
 
 @Test func onlyCalendarChangesAndSentMailQualify() {
@@ -42,4 +43,13 @@ private func record(_ folder: String, _ title: String, body: String, age: TimeIn
     #expect(lines.count == 12)
     #expect(lines[0].hasPrefix("Sunday Flow + Outlook: 40 occurrences updated"))
     #expect(lines[1].contains("Sent by Aaron to: person 1"))
+}
+
+@Test func backfilledSentMailNeverTriggers() {
+    // A mail backfill writes old sent mail into fresh files: the file is new, the email is not.
+    let now = Date()
+    let oldMailFreshFile = record("mail", "To Kirk: Old", body: "Sent by Aaron to: Kirk", age: 60, now: now, itemAge: 30 * 86400)
+    let backfillNamed = record("mail", "To Kirk: Named", body: "Sent by Aaron to: Kirk", age: 60, now: now, name: "backfill-20261008-223047-2995")
+    let real = record("mail", "To Kirk: Now", body: "Sent by Aaron to: Kirk", age: 60, now: now, itemAge: 120)
+    #expect(FeedNotifier.select([oldMailFreshFile, backfillNamed, real], now: now).map(\.title) == ["To Kirk: Now"])
 }
