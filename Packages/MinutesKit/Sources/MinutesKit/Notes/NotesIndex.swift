@@ -168,6 +168,32 @@ public final class NotesIndex: @unchecked Sendable {
         }
     }
 
+    /// A small key/value store next to the notes (format versions, refresh times).
+    public func setMeta(_ key: String, _ value: String) throws {
+        try serialized {
+            try db.query("""
+            INSERT INTO meta(key, value) VALUES(?1, ?2)
+            ON CONFLICT(key) DO UPDATE SET value = excluded.value
+            """, [.text(key), .text(value)])
+        }
+    }
+
+    public func meta(_ key: String) throws -> String? {
+        try serialized {
+            var value: String?
+            try db.query("SELECT value FROM meta WHERE key = ?1", [.text(key)]) { r in value = r.text(0) }
+            return value
+        }
+    }
+
+    /// Makes every note whose id starts with `idPrefix` look older than any file, so the next refresh re-reads
+    /// them all while they stay searchable in the meantime.
+    public func markStale(idPrefix: String) throws {
+        try serialized {
+            try db.query("UPDATE notes SET modified_at = 0 WHERE note_id LIKE ?1", [.text(idPrefix.replacingOccurrences(of: "%", with: "\\%") + "%")])
+        }
+    }
+
     public func setLastRefresh(_ date: Date) throws {
         try serialized {
             try db.query("""

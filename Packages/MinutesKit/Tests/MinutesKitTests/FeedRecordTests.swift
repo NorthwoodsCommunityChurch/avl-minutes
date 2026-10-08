@@ -4,8 +4,8 @@ import Testing
 
 private let mtime = Date(timeIntervalSince1970: 1_800_000_000)
 
-private func parse(_ json: String, path: String) -> FeedRecord.Parsed? {
-    FeedRecord.parse(Data(json.utf8), relativePath: path, fileModifiedAt: mtime)
+private func parse(_ json: String, path: String, timeZone: TimeZone = TimeZone(identifier: "America/Chicago")!) -> FeedRecord.Parsed? {
+    FeedRecord.parse(Data(json.utf8), relativePath: path, fileModifiedAt: mtime, timeZone: timeZone)
 }
 
 @Test func mailBecomesANoteInTheMailFolder() throws {
@@ -22,13 +22,21 @@ private func parse(_ json: String, path: String) -> FeedRecord.Parsed? {
 }
 
 @Test func calendarEventsSayWhenAndWhatHappened() throws {
+    // Outlook writes UTC with no offset; the record speaks Aaron's local time so "when" is answered by the title alone.
     let p = try #require(parse(#"{"type":"calendar","action":"Added","subject":"Staff meeting","start":"2026-10-09T14:00:00.0000000","end":"2026-10-09T15:00:00.0000000","location":"Room 2","organizer":"b@x.org","attendees":"a@x.org; c@x.org","id":"e1","body":"Agenda"}"#, path: "calendar/x.json"))
     #expect(p.metadata.folder == "calendar")
-    #expect(p.metadata.title == "Staff meeting")
+    #expect(p.metadata.title == "Staff meeting — Fri Oct 9, 2026 9:00 AM")
     #expect(p.body.contains("added"))
-    #expect(p.body.contains("When: 2026-10-09T14:00:00"))
+    #expect(p.body.contains("When: Fri Oct 9, 2026 9:00 AM to 10:00 AM CDT"))
+    #expect(p.body.contains("Start (UTC): 2026-10-09T14:00:00"))
     #expect(p.body.contains("Where: Room 2"))
     #expect(p.body.contains("Agenda"))
+}
+
+@Test func calendarEventsWithoutAParsableStartKeepTheirPlainTitle() throws {
+    let p = try #require(parse(#"{"type":"calendar","action":"updated","subject":"Vague","start":"soon","end":"","id":"e2","body":""}"#, path: "calendar/y.json"))
+    #expect(p.metadata.title == "Vague")
+    #expect(p.body.contains("When: soon"))
 }
 
 @Test func teamsMessagesAreTitledBySenderAndHermesIsSkipped() throws {
@@ -62,7 +70,7 @@ private func parse(_ json: String, path: String) -> FeedRecord.Parsed? {
 @Test func aPlainUpdatedCalendarRecordParses() throws {
     let json = #"{"type": "calendar", "action": "updated", "subject": "Proactive loop test (Claude)", "start": "2026-10-09T19:30:00Z", "end": "2026-10-09T20:10:00Z", "location": "Tech Center", "organizer": "Aaron Larson", "attendees": "Aaron Larson", "id": "claude-test-proactive-0001", "body": "Test only."}"#
     let p = try #require(parse(json, path: "calendar/20261008-215647-claudetest.json"))
-    #expect(p.metadata.title == "Proactive loop test (Claude)")
+    #expect(p.metadata.title == "Proactive loop test (Claude) — Fri Oct 9, 2026 2:30 PM")
     #expect(p.body.hasPrefix("Calendar event, updated"))
     #expect(p.groupKey == "calendar:claude-test-proactive-0001")
 }

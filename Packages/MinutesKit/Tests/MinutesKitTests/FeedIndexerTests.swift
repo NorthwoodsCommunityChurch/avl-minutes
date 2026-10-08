@@ -63,18 +63,18 @@ private func write(_ text: String, to url: URL, modified: Date? = nil) throws {
     try write(#"{"type":"calendar","action":"added","subject":"New Event","start":"2026-10-08T17:00:00.0000000","#  + event + "}", to: folder.appendingPathComponent("calendar/20261008-163339-1637.json"), modified: t0.addingTimeInterval(1))
     try write(#"{"type":"calendar","action":"updated","subject":"Hermes Test","start":"2026-10-08T17:00:00.0000000","#  + event + "}", to: folder.appendingPathComponent("calendar/20261008-163346-8239.json"), modified: t0.addingTimeInterval(8))
     try write(#"{"type":"calendar","action":"added","subject":"Other event","start":"2026-10-09T17:00:00.0000000","id":"AAMk-event-2"}"#, to: folder.appendingPathComponent("calendar/20261008-170000-1111.json"), modified: t0.addingTimeInterval(60))
-    let feed = FeedIndexer(folder: folder, index: index)
+    let feed = FeedIndexer(folder: folder, index: index, timeZone: TimeZone(identifier: "America/Chicago")!)
     let r = try feed.refresh()
     #expect(r.total == 2)
     let titles = try index.list(folder: "calendar", since: nil, until: nil, limit: 10).map(\.title).sorted()
-    #expect(titles == ["Hermes Test", "Other event"])
-    #expect(try index.note(id: "feed:calendar/20261008-163346-8239.json")?.title == "Hermes Test")
+    #expect(titles == ["Hermes Test — Thu Oct 8, 2026 12:00 PM", "Other event — Fri Oct 9, 2026 12:00 PM"])
+    #expect(try index.note(id: "feed:calendar/20261008-163346-8239.json")?.title == "Hermes Test — Thu Oct 8, 2026 12:00 PM")
     #expect(try index.note(id: "feed:calendar/20261008-163338-1572.json") == nil)
 
     // A later update to event 1 (next pass) replaces the survivor too, and nothing comes back.
     try write(#"{"type":"calendar","action":"updated","subject":"Hermes Test (moved)","start":"2026-10-08T18:00:00.0000000","#  + event + "}", to: folder.appendingPathComponent("calendar/20261008-180000-2222.json"), modified: t0.addingTimeInterval(120))
     #expect(try feed.refresh().total == 2)
-    #expect(try index.list(folder: "calendar", since: nil, until: nil, limit: 10).map(\.title).sorted() == ["Hermes Test (moved)", "Other event"])
+    #expect(try index.list(folder: "calendar", since: nil, until: nil, limit: 10).map(\.title).sorted() == ["Hermes Test (moved) — Thu Oct 8, 2026 1:00 PM", "Other event — Fri Oct 9, 2026 12:00 PM"])
     #expect(try feed.refresh() == FeedIndexer.Result(indexed: 0, removed: 0, skipped: 0, total: 2))
 }
 
@@ -105,4 +105,19 @@ private func write(_ text: String, to url: URL, modified: Date? = nil) throws {
     #expect(second.indexed == 3)
     #expect(second.capped == false)
     #expect(try feed.count() == 7)
+}
+
+@Test func aNewRecordFormatReindexesEveryFeedFile() throws {
+    let folder = try tempDir()
+    let index = try NotesIndex(url: tempDir().appendingPathComponent("index.db"))
+    let t0 = Date(timeIntervalSince1970: 1_800_000_000)
+    try write(#"{"type":"mail","subject":"Old format","body":"x"}"#, to: folder.appendingPathComponent("mail/a.json"), modified: t0)
+    let feed = FeedIndexer(folder: folder, index: index)
+    #expect(try feed.refresh().indexed == 1)
+    #expect(try feed.refresh().indexed == 0)                       // unchanged file, nothing to do
+    try index.setMeta("feed_format", "0")                            // pretend the index was built by an older helper
+    let again = FeedIndexer(folder: folder, index: index)
+    #expect(try again.refresh().indexed == 1)                        // re-read with the current format
+    #expect(try index.meta("feed_format") == String(FeedRecord.formatVersion))
+    #expect(try again.refresh().indexed == 0)
 }

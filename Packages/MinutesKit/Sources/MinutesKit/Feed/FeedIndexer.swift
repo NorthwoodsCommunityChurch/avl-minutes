@@ -53,11 +53,14 @@ public final class FeedIndexer: @unchecked Sendable {
     /// moment to download, so a pass is capped and mail and calendar always go first: new mail never waits behind
     /// old chat history. The caller runs another pass right away while `Result.capped` is true.
     public let maxPerPass: Int
+    /// Calendar times are written in this zone (Aaron's local time).
+    public let timeZone: TimeZone
 
-    public init(folder: URL, index: NotesIndex, maxPerPass: Int = 250) {
+    public init(folder: URL, index: NotesIndex, maxPerPass: Int = 250, timeZone: TimeZone = .current) {
         self.folder = folder
         self.index = index
         self.maxPerPass = max(1, maxPerPass)
+        self.timeZone = timeZone
     }
 
     private static func priority(_ id: String) -> Int {
@@ -80,6 +83,12 @@ public final class FeedIndexer: @unchecked Sendable {
     }
 
     public func refresh() throws -> Result {
+        // A newer record format: re-read every feed file (they stay searchable meanwhile).
+        let format = String(FeedRecord.formatVersion)
+        if try index.meta("feed_format") != format {
+            try index.markStale(idPrefix: FeedRecord.idPrefix)
+            try index.setMeta("feed_format", format)
+        }
         let files = try listing()
         let stamps = FeedRecord.feedOnly(try index.stamps())
         let current = files.map { file in
@@ -112,7 +121,7 @@ public final class FeedIndexer: @unchecked Sendable {
                     result.unreadable += 1
                     continue
                 }
-                guard let parsed = FeedRecord.parse(data, relativePath: path, fileModifiedAt: note.modifiedAt) else {
+                guard let parsed = FeedRecord.parse(data, relativePath: path, fileModifiedAt: note.modifiedAt, timeZone: timeZone) else {
                     skipped[path] = note.modifiedAt
                     result.skipped += 1
                     continue

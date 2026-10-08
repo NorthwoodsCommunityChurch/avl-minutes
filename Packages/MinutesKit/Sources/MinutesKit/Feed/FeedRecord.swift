@@ -21,7 +21,10 @@ public enum FeedRecord {
     /// `relativePath` is the file's path inside the feed folder, e.g. `mail/20261008-161658-6678.json`.
     /// `fileModifiedAt` becomes `modifiedAt` (what the index uses to notice changes); the item's own time
     /// (received / start / created) becomes `createdAt`.
-    public static func parse(_ data: Data, relativePath: String, fileModifiedAt: Date) -> Parsed? {
+    /// Bump when the text a record produces changes shape; the indexer then re-reads every feed file.
+    public static let formatVersion = 2
+
+    public static func parse(_ data: Data, relativePath: String, fileModifiedAt: Date, timeZone: TimeZone = .current) -> Parsed? {
         guard let object = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
               let type = string(object["type"]) else { return nil }
         let folder = relativePath.split(separator: "/").first.map(String.init) ?? type
@@ -45,11 +48,19 @@ public enum FeedRecord {
             }
         case "calendar":
             title = field("subject")
-            when = date(field("start"))
-            lines = ["Calendar event, \(field("action").lowercased().isEmpty ? "changed" : field("action").lowercased())",
-                     "When: \(field("start")) to \(field("end"))", "Where: \(field("location"))",
-                     "Organizer: \(field("organizer"))", "Attendees: \(field("attendees"))"]
             if title.isEmpty { title = "(untitled event)" }
+            when = date(field("start"))
+            let action = field("action").lowercased().isEmpty ? "changed" : field("action").lowercased()
+            // Outlook writes UTC; the record speaks Aaron's local time so the title alone answers "when".
+            if let start = when {
+                let end = date(field("end"))
+                title = "\(title) — \(local(start, timeZone: timeZone))"
+                lines = ["Calendar event, \(action)", "When: \(span(start, end, timeZone: timeZone))",
+                         "Start (UTC): \(field("start"))", "End (UTC): \(field("end"))"]
+            } else {
+                lines = ["Calendar event, \(action)", "When: \(field("start")) to \(field("end"))"]
+            }
+            lines += ["Where: \(field("location"))", "Organizer: \(field("organizer"))", "Attendees: \(field("attendees"))"]
             if !field("id").isEmpty { groupKey = "calendar:\(field("id"))" }
         case "teams":
             let from = field("from")
@@ -84,6 +95,34 @@ public enum FeedRecord {
     }
 
     /// Outlook writes `2026-10-09T14:00:00.0000000` (UTC, no offset) and `2026-10-08T16:16:42+00:00`.
+    /// "Fri Oct 9, 2026 9:00 AM" in the given zone.
+    static func local(_ date: Date, timeZone: TimeZone) -> String {
+        let f = DateFormatter()
+        f.locale = Locale(identifier: "en_US_POSIX")
+        f.timeZone = timeZone
+        f.dateFormat = "EEE MMM d, yyyy h:mm a"
+        return f.string(from: date)
+    }
+
+    /// "Fri Oct 9, 2026 9:00 AM to 10:00 AM CDT" (the end keeps only its time when it is the same day).
+    static func span(_ start: Date, _ end: Date?, timeZone: TimeZone) -> String {
+        let zone = timeZone.abbreviation(for: start) ?? timeZone.identifier
+        guard let end else { return "\(local(start, timeZone: timeZone)) \(zone)" }
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = timeZone
+        let endText: String
+        if calendar.isDate(start, inSameDayAs: end) {
+            let f = DateFormatter()
+            f.locale = Locale(identifier: "en_US_POSIX")
+            f.timeZone = timeZone
+            f.dateFormat = "h:mm a"
+            endText = f.string(from: end)
+        } else {
+            endText = local(end, timeZone: timeZone)
+        }
+        return "\(local(start, timeZone: timeZone)) to \(endText) \(zone)"
+    }
+
     static func date(_ text: String) -> Date? {
         let trimmed = text.trimmingCharacters(in: .whitespaces)
         guard !trimmed.isEmpty else { return nil }
