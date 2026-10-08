@@ -31,10 +31,10 @@ old_flow = [d for d in os.listdir(flows_dir) if os.path.isdir(os.path.join(flows
 m = json.load(open(f"{src}/manifest.json"))
 new_flow = str(uuid.uuid4())
 flowres = m["resources"].pop(old_flow)
-flowres["details"]["displayName"] = "AI Feed: teams backfill"
+flowres["details"]["displayName"] = "AI Feed: teams backfill 2"
 flowres["suggestedCreationType"] = "New"
 m["resources"] = {new_flow: flowres, **m["resources"]}
-m["details"].update(displayName="teams backfill", description=f"Run once: copies every chat message since {since[:10]} into OneDrive AI Feed/teams.",
+m["details"].update(displayName="teams backfill 2", description=f"Run once: copies every chat message since {since[:10]} into OneDrive AI Feed/teams.",
                     createdTime=datetime.datetime.now(datetime.UTC).isoformat().replace("+00:00", "Z"), packageTelemetryId=str(uuid.uuid4()))
 os.makedirs(f"{out}/Microsoft.Flow/flows/{new_flow}")
 json.dump(m, open(f"{out}/manifest.json", "w"), separators=(",", ":"))
@@ -45,7 +45,7 @@ for f in ("apisMap.json", "connectionsMap.json"):
 d = json.load(open(f"{flows_dir}/{old_flow}/definition.json"))
 new_id = str(uuid.uuid4())
 d["name"] = new_id; d["id"] = f"/providers/Microsoft.Flow/flows/{new_id}"
-d["properties"]["displayName"] = "AI Feed: teams backfill"
+d["properties"]["displayName"] = "AI Feed: teams backfill 2"
 teams = {"apiId": "/providers/Microsoft.PowerApps/apis/shared_teams", "connectionName": "shared_teams"}
 conv = {"apiId": "/providers/Microsoft.PowerApps/apis/shared_conversionservice", "connectionName": "shared_conversionservice"}
 od = {"apiId": "/providers/Microsoft.PowerApps/apis/shared_onedriveforbusiness", "connectionName": "shared_onedriveforbusiness"}
@@ -68,13 +68,15 @@ def setvar(name, value, run_after=()):
 
 per_message = {
     "Html_to_text": api(conv, "HtmlToText", {"Content": "<p class=\"editor-paragraph\">@{item()?['body']?['content']}</p>"}),
-    "Compose": {"type": "Compose", "runAfter": after(["Html_to_text"]), "inputs": {
+    # If Html to text fails on a message (seen 2026-10-08 on one long edited message), keep the raw body instead
+    # of losing the message: Compose runs after success or failure and falls back to the HTML content.
+    "Compose": {"type": "Compose", "runAfter": {"Html_to_text": ["Succeeded", "Failed", "TimedOut"]}, "inputs": {
         "type": "teams",
         "chat": "@{item()?['chatId']}",
         "from": "@{coalesce(item()?['from']?['user']?['displayName'], item()?['from']?['application']?['displayName'], '')}",
         "created": "@{item()?['createdDateTime']}",
         "id": "@{item()?['id']}",
-        "body": "@{body('Html_to_text')}"}},
+        "body": "@{coalesce(body('Html_to_text'), item()?['body']?['content'])}"}},
     "Create_file": api(od, "CreateFile", {
         "folderPath": "/AI Feed/teams",
         "name": "@concat('backfill-', formatDateTime(utcNow(),'yyyyMMdd-HHmmss'), '-', rand(1000,9999), '.json')",
@@ -104,13 +106,19 @@ per_chat = {
 }
 defn = d["properties"]["definition"]
 defn["triggers"] = {"manual": {"type": "Request", "kind": "Button", "inputs": {"schema": {"type": "object", "properties": {}, "required": []}}}}
+# "List chats" returns at most 100 chats per call (seen 2026-10-08: exactly 100, and a busy group chat was missing),
+# so the chats are listed once per type; the helper dedupes any message seen twice by its id.
+per_type = {
+    "List_chats": api(teams, "GetChats", {"chatType": "@items('For_each_chat_type')", "topic": "all"}),
+    "For_each_chat": {"type": "Foreach", "runAfter": after(["List_chats"]), "foreach": "@outputs('List_chats')?['body/value']",
+                      "actions": per_chat, "runtimeConfiguration": {"concurrency": {"repetitions": 1}}},
+}
 defn["actions"] = {
     "Initialize_since": init("since", "String", since),
     "Initialize_cursor": init("cursor", "String", "@utcNow()", run_after=["Initialize_since"]),
     "Initialize_more": init("more", "Boolean", True, run_after=["Initialize_cursor"]),
-    "List_chats": api(teams, "GetChats", {"chatType": "all", "topic": "all"}, run_after=["Initialize_more"]),
-    "For_each_chat": {"type": "Foreach", "runAfter": after(["List_chats"]), "foreach": "@outputs('List_chats')?['body/value']",
-                      "actions": per_chat, "runtimeConfiguration": {"concurrency": {"repetitions": 1}}},
+    "For_each_chat_type": {"type": "Foreach", "runAfter": after(["Initialize_more"]), "foreach": ["group", "oneOnOne", "meeting"],
+                           "actions": per_type, "runtimeConfiguration": {"concurrency": {"repetitions": 1}}},
 }
 json.dump(d, open(f"{out}/Microsoft.Flow/flows/{new_flow}/definition.json", "w"), indent=1)
 with zipfile.ZipFile(out_zip, "w", zipfile.ZIP_DEFLATED) as z:
