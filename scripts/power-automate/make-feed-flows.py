@@ -41,7 +41,7 @@ elif kind == "calendar":
     display, desc = "AI Feed: calendar backfill", "Run once: writes every calendar event from 30 days ago to 120 days ahead into OneDrive AI Feed/calendar."
     trig = next(iter(defn["triggers"].values()))
     calendar_id = trig["inputs"]["parameters"]["table"]
-    o365 = dict(defn["actions"]["Html_to_text"]["inputs"]["host"]); o365 = {"apiId": "/providers/Microsoft.PowerApps/apis/shared_office365", "connectionName": "shared_office365"}
+    o365 = {"apiId": "/providers/Microsoft.PowerApps/apis/shared_office365", "connectionName": "shared_office365", "operationId": "GetEventsCalendarViewV3"}
     html_host = defn["actions"]["Html_to_text"]["inputs"]["host"]
     od_host = defn["actions"]["Create_file"]["inputs"]["host"]
     per_event = {
@@ -94,6 +94,14 @@ json.dump({"packageSchemaVersion": "1.0", "flowAssets": {"assetPaths": [new_flow
 for f in ("apisMap.json", "connectionsMap.json"):
     shutil.copy(f"{flows_dir}/{old_flow}/{f}", f"{out}/Microsoft.Flow/flows/{new_flow}/{f}")
 json.dump(d, open(f"{out}/Microsoft.Flow/flows/{new_flow}/definition.json", "w"), indent=1)
+def _check(actions, where="actions"):
+    for name, a in actions.items():
+        if a.get("type") == "OpenApiConnection":
+            host = a["inputs"]["host"]
+            assert host.get("operationId") and host.get("connectionName") in d["properties"]["connectionReferences"], f"{where}/{name}: bad host {host}"
+        if "actions" in a:
+            _check(a["actions"], f"{where}/{name}")
+_check(defn["actions"])
 with zipfile.ZipFile(out_zip, "w", zipfile.ZIP_DEFLATED) as z:
     for root, _, files in os.walk(out):
         for f in files:
