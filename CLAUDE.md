@@ -15,7 +15,17 @@ SQLite FTS5, MCP Swift SDK, XcodeGen.
 
 ---
 
-## Status — 2026-10-08
+## Status — 2026-10-09
+- **2026-10-09, Hermes initiative (spec [docs/superpowers/specs/2026-10-09-hermes-initiative-design.md](docs/superpowers/specs/2026-10-09-hermes-initiative-design.md),
+  plan [docs/superpowers/plans/2026-10-09-hermes-initiative.md](docs/superpowers/plans/2026-10-09-hermes-initiative.md), Aaron's "approved"):** Aaron's tasks had been living in
+  Hermes's chat lists, not on the board, so his sent email to Danny (Higher Ground, Dante ticket #2050007) closed nothing, and the "Scrum Prep
+  Notes" cron job he asked for ran 42 min and could not deliver (Hermes cron has no path to the API server). Now: the relay posts every new
+  `~/.hermes/cron/output` file to his chat (`lib/cron-output.js`); the helper wakes Hermes 35 min before each meeting (`MeetingPrep`, notify
+  `kind: "meeting"`) and she briefs him; a relay note under each of his messages says card first, search first; `SOUL.md` rewritten with exact
+  tool JSON and versioned at `hermes-tools/SOUL.md`; today's 13 chat-only tasks put on the board by hand. Scrum job switched to `deliver local`.
+  Same afternoon: Hermes was found in a runaway loop (18 identical failing `read_file` calls, one Puget turn each, for an hour; Aaron's 11:02
+  question timed out behind it) — gateway hard-restarted, `tool_loop_guardrails.hard_stop_enabled: true`, `agent.max_turns: 60`
+  (backup `config.yaml.bak-20261009-loops`). Live checks: see the gotchas and the relay log (`cron-output`, `kind: meeting`).
 - **Roles (Aaron, 2026-10-07):** Minutes is **only the transcriber on Aaron's laptop**. The always-on assistant is
   **Hermes Agent on the engineering Mac mini** (`engineering-mac`). Record + remaining steps:
   [docs/research/2026-10-07-assistant-direction.md](docs/research/2026-10-07-assistant-direction.md).
@@ -88,6 +98,11 @@ One binary, several modes: app (default), `--mcp`, `--notes-helper`, `--unregist
 the index fresh every 2 min), `--mcp` (read-only server named `hermes-helper`), `--notes-helper`, `--version`. Its index is
 `~/Library/Application Support/Hermes Helper/notes-index.db`; Minutes' index is untouched.
 
+**Proactive paths (plumbing in code, judgment in Hermes):** feed changes and sent mail (`FeedNotifier`) and meetings starting within 35 min
+(`MeetingPrep`, marker meta keys `meeting_announced:<event>`) → relay `POST /notify {records, kind}` → Hermes in Aaron's thread → Teams.
+Hermes's own cron jobs → `~/.hermes/cron/output/<job>/<time>.md` → relay `CronOutputWatcher` → Teams. Each of Aaron's messages reaches
+Hermes with a relay note appended (card first, search first).
+
 ### Where things live
 - `Packages/MinutesKit/` — pure, tested logic (attribution, speakers, transcript doc, Notes index, MCP tools)
 - `Packages/AudioDeps/` — wraps vendored FluidAudio with its unused NeMo engine turned off
@@ -109,10 +124,11 @@ the index fresh every 2 min), `--mcp` (read-only server named `hermes-helper`), 
 | Secrets location | none of its own — uses the org Sparkle key (`~/.sparkle/ed25519-private.txt`, master in OneDrive per `FILE-ORGANIZATION.md`) |
 | Data on disk | `~/Library/Application Support/Minutes/` (notes-index.db, voiceprint.json); models in `…/FluidAudio/Models` |
 | Hermes Helper | `com.northwoods.HermesHelper` 0.1.0 (1); on `engineering-mac` at `/Applications/HermesHelper.app`, launchd `com.northwoods.HermesHelper`, log `~/Library/Logs/HermesHelper.log`; deploy with `scripts/deploy-helper.sh` |
-| Hermes Agent (mini) | `~/.hermes/config.yaml` (model block → Puget `gemma-bigctx`; `mcp_servers.notes` + `mcp_servers.planka`), `~/.hermes/SOUL.md` (standing rules), `~/.hermes/.env` (`API_SERVER_KEY`), CLI `~/.local/bin/hermes`, one-shot `hermes -z "…"`, gateway log `~/.hermes/logs/gateway.log` |
+| Hermes Agent (mini) | `~/.hermes/config.yaml` (model block → Puget `gemma-bigctx`; `mcp_servers.notes` + `mcp_servers.planka`; `tool_loop_guardrails.hard_stop_enabled: true`, `agent.max_turns: 60`), `~/.hermes/SOUL.md` (standing rules; master `hermes-tools/SOUL.md`, deploy `scripts/deploy-soul.sh`), `~/.hermes/.env` (`API_SERVER_KEY`), CLI `~/.local/bin/hermes`, one-shot `hermes -z "…"`, gateway log `~/.hermes/logs/gateway.log`, session db `~/.hermes/state.db` (`messages`, read-only for debugging) |
 | Teams relay (mini) | `hermes-teams/` in this repo → `~/hermes-teams` on the mini, launchd `com.northwoods.hermes-teams`, log `~/Library/Logs/hermes-teams.log`, config `~/hermes-teams/config/local.json` (600); door `https://hermes.northwoodstech.workers.dev` (Worker `hermes`, tunnel `engineering-mac`, launchd `com.northwoods.cloudflared`); bot id `685fac05-84be-4bb9-aa30-4a2a430d22b1`; secrets master in OneDrive `VS Code/Assistant/secrets/` |
 | AI Feed | OneDrive `AI Feed/{mail,calendar,teams}` written by Power Automate flows "AI Feed: mail/mail sent/calendar/teams" plus run-once backfills ([docs/guides/power-automate-ai-feed.md](docs/guides/power-automate-ai-feed.md); packages in OneDrive `VS Code/Assistant/flows/`, generators `scripts/power-automate/`); indexed by the helper every 2 min (account "AI Feed", ids `feed:<path>`, group keys `calendar:<event id>` / `teams:<message id>`) |
-| Proactive loop | helper `FeedNotifier` → relay `POST http://127.0.0.1:8787/notify` (`x-notify-key` = `notifyKey` in the relay's `config/local.json`) → Hermes in Aaron's home conversation → Teams; task board list "Done" (id 1881546439595656482) on board "To Do" |
+| Proactive loop | helper `FeedNotifier` (kind `feed`) and `MeetingPrep` (kind `meeting`) → relay `POST http://127.0.0.1:8787/notify` (`x-notify-key` = `notifyKey` in the relay's `config/local.json`) → Hermes in Aaron's home conversation → Teams; relay `CronOutputWatcher` posts `~/.hermes/cron/output/*/*.md` (state `postedOutputs`); task board list "Done" (id 1881546439595656482) on board "To Do" |
+| Hermes cron | job "Scrum Prep Notes" `ebe61605a654` (Tue/Wed/Fri 9:00, `deliver local`; the relay delivers); Hermes creates jobs with her `cronjob_manage` tool; `hermes cron list` on the mini |
 | Planning Center server | Weekend Rundown's `pco-mcp` (its folder is not under git; versioned mirror `hermes-tools/pco-mcp/`), on edit-3 at `~/pco-mcp` (venv, `mcp<2`, `pypdf`); tools incl. `song_prep`, `song_energy_note(s)`; Aaron's notes in `~/pco-mcp/song-energy-notes.json`; deploy `scripts/deploy-pco-mcp.sh` |
 
 ## Build / Run / Release
@@ -125,6 +141,7 @@ MINUTES_TRACE=1 /Applications/Minutes.app/Contents/MacOS/Minutes --transcribe-ch
 bash scripts/audit-writes.sh start  # … run a meeting …  bash scripts/audit-writes.sh report
 bash scripts/deploy-helper.sh [host]     # Release-build Hermes Helper, install + (re)start its launchd agent on the mini
 bash scripts/deploy-pco-mcp.sh [host]    # copy the Planning Center server (+ song prep) to the mini, pip install, restart Hermes
+bash scripts/deploy-soul.sh [host]       # copy hermes-tools/SOUL.md to the mini (dated backup) + hermes gateway restart; deploy between turns
 python3 scripts/power-automate/make-feed-flows.py sent|calendar <export.zip> <out.zip>   # import packages from Aaron's exports
 bash hermes-teams/scripts/deploy-teams-relay.sh [host]   # copy the relay to the mini + restart its agent
 (cd hermes-teams && npm test)             # relay tests (node --test)
@@ -208,6 +225,24 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
   the zone, and `hermes gateway restart` is needed for a running gateway to notice.
 - **Memory on the 16 GB mini:** the local 12B at 64K context pinned 10.4 GB and pushed 12.6 GB to swap; a quantized
   KV cache (`-ctk q8_0 -ctv q8_0 -fa on`) fixed it before the model was removed altogether.
+- **Hermes cron cannot deliver to the API server** (its deliver targets are its own chat platforms; `api_server` is reply-only). A job
+  Aaron asked for ran 42 min and its brief sat in `~/.hermes/cron/output` (2026-10-09). The relay's `CronOutputWatcher` posts each new
+  output file (skips `[SILENT]`, flags `[CRON_FAILURE]`, never replays files older than 10 min at startup); jobs use `deliver local`. The
+  output file is written by the run itself, whatever the delivery target.
+- **Gemma follows a rule next to the message, not one 20K tokens up the system prompt.** `SOUL.md` said the board is the only task list; a
+  dozen tasks still became chat lists (2026-10-09). The relay now appends a one-paragraph note under each of Aaron's messages (card first,
+  search first), and `SOUL.md` spells tool calls as exact JSON: the shorthand "boards get <id>" produced `{"boardId": …}` and the tool was
+  never invoked. Planka card creation needs `"type":"project"` or the board answers 400.
+- **A tool result over 50K chars is spilled to a file** (`tool_budget.mcp_result_size_chars`), and `boards get` on the To Do board is
+  already over it. Gemma then tried to read the file through the `tool_call` wrapper, got "'read_file' is a directly-listed tool", and
+  repeated the identical call 18 times (one Puget turn each, an hour) because `tool_loop_guardrails.hard_stop_enabled` was false and
+  `max_turns` 500; Aaron's question behind it timed out at 20 min. Now `hard_stop_enabled: true`, `max_turns: 60`, and `SOUL.md` says
+  `cards list` per list (small) and `read_file` called directly. `launchctl kickstart -k gui/$(id -u)/ai.hermes.gateway` ends a wedged
+  run in 30 s (`hermes gateway restart` waits up to 30 min for it).
+- **Meeting wake-ups come from the index, not OneDrive:** feed calendar records store the event start as `created_at`
+  (`NotesIndex.upcoming`); one marker per Outlook event id (meta `meeting_announced:<group key>`, value = start ISO) keeps a series
+  rewrite quiet and re-announces a moved meeting. No attendees, all-day (≥ 23 h), deleted and cancelled events are skipped before Hermes is
+  woken; a routine rehearsal reaches her and she answers NO_MESSAGE.
 
 ## Update Protocol
 | When you… | Update… |
@@ -232,3 +267,4 @@ End a work session with **`/save`**.
 | 2026-10-08 | Teams relay + Cloudflare door live; AI Feed (mail, calendar) indexed; model moved to Puget's Gemma 31B, local 12B removed; Planka MCP; SOUL rules |
 | 2026-10-08 | Host migrated engineering-mac → edit-3 (setup-assistant-mac.sh); Planning Center MCP (Weekend Rundown's pco-mcp) registered; decommission script written |
 | 2026-10-08 | Engineering mini wiped; Edit 3 time zone; Minutes menu-bar hang fixed; clock tool; Teams/calendar/sent flows + backfills; song prep tools; proactive loop (helper → relay /notify → Hermes → Teams) |
+| 2026-10-09 | Hermes initiative: cron-output voice, meeting wake-ups, relay note, SOUL.md versioned + exact tool JSON, 13 tasks backfilled; runaway tool loop found and capped (hard stops on, 60 turns) |
