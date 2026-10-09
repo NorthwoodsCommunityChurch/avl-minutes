@@ -4,6 +4,7 @@
  *   GET  /health          -> {ok, relay, bot:{configured}, hermes:{ok}}
  *   POST /webhooks/teams  -> front-door key, Microsoft's JWT, 200 at once; the answer follows in the chat.
  *   POST /notify          -> local only; {records[], kind?: feed|meeting} from Hermes Helper, needs x-notify-key.
+ *   ~/.hermes/cron/output -> watched; each new scheduled-job output is posted to Aaron's chat (lib/cron-output.js).
  * Binds 127.0.0.1 only; the Cloudflare Worker reaches it through the tunnel. Run by launchd (see launchd/).
  */
 const http = require("node:http");
@@ -11,6 +12,7 @@ const crypto = require("node:crypto");
 const { RelayError, createJwtVerifier, createConnectorClient } = require("./lib/teams");
 const { createHermesClient } = require("./lib/hermes");
 const { createRelay } = require("./lib/relay");
+const { createCronOutputWatcher } = require("./lib/cron-output");
 const { createState } = require("./lib/state");
 const { createLog } = require("./lib/log");
 const { loadConfig } = require("./lib/config");
@@ -115,8 +117,14 @@ function main() {
   const connector = configured ? createConnectorClient({ appId: bot.appId, appPassword: bot.appPassword, tenantId: () => bot.tenantId || state.get("tenantId") }) : null;
   const relay = createRelay({ config, connector, hermes, state, log });
   const server = createServer({ config, relay, verifier, hermes, log });
-  server.listen(config.port, config.host, () => log("info", { event: "listening", host: config.host, port: config.port, bot: configured, hermes: config.hermes.url }));
-  for (const sig of ["SIGTERM", "SIGINT"]) process.on(sig, () => { log("info", { event: "stopping", signal: sig }); server.close(() => process.exit(0)); });
+  // Hermes's own scheduled jobs reach Aaron through here: Hermes cron cannot deliver to the API server.
+  const cronOutput = createCronOutputWatcher({ dir: config.cronOutputDir, state, post: (text) => relay.postHome(text), log });
+  server.listen(config.port, config.host, () => {
+    log("info", { event: "listening", host: config.host, port: config.port, bot: configured, hermes: config.hermes.url });
+    cronOutput.start();
+    log("info", { event: "cron-output-watching", dir: config.cronOutputDir });
+  });
+  for (const sig of ["SIGTERM", "SIGINT"]) process.on(sig, () => { log("info", { event: "stopping", signal: sig }); cronOutput.stop(); server.close(() => process.exit(0)); });
 }
 
 module.exports = { createServer };

@@ -1,12 +1,15 @@
 "use strict";
 /** config/local.json on the mini (mode 600, written by scripts/setup.js). Never committed. */
 const fs = require("node:fs");
+const os = require("node:os");
 const path = require("node:path");
 
 const ROOT = path.resolve(__dirname, "..");
 const DEFAULTS = {
   port: 8787,
   host: "127.0.0.1",
+  // Hermes writes every scheduled job's output here; the relay posts each new file to Aaron (lib/cron-output.js).
+  cronOutputDir: path.join(os.homedir(), ".hermes", "cron", "output"),
   baseUrl: "https://hermes.northwoodstech.workers.dev",
   frontDoorKey: "",
   notifyKey: "",
