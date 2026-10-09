@@ -39,12 +39,24 @@ public struct IndexedNote: Sendable, Equatable {
     public let body: String
 }
 
+/// Which notes a search or listing covers.
+public enum NoteScope: Sendable, Equatable {
+    case all
+    case folder(String)
+    /// Aaron's own notes and transcripts: every account except the AI Feed.
+    case ownNotes
+}
+
 public struct NoteSummary: Sendable, Equatable {
     public let id: String
     public let title: String
     public let folder: String
+    public let account: String
     public let createdAt: Date
     public let modifiedAt: Date
+    /// The time the record is dated by: the last edit for a note, the item's own time (sent, or event
+    /// start) for a feed record, whose `modifiedAt` is only when the flow wrote the file.
+    public let datedAt: Date
     public let length: Int
 }
 
@@ -52,7 +64,10 @@ public struct NoteSearchHit: Sendable, Equatable {
     public let id: String
     public let title: String
     public let folder: String
+    public let account: String
     public let modifiedAt: Date
+    /// See `NoteSummary.datedAt`.
+    public let datedAt: Date
     /// ~30 words around the match; matched terms wrapped in [brackets].
     public let snippet: String
 }

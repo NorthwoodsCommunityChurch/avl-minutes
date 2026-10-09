@@ -240,6 +240,19 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
   `max_turns` 500; Aaron's question behind it timed out at 20 min. Now `hard_stop_enabled: true`, `max_turns: 60`, and `SOUL.md` says
   `cards list` per list (small) and `read_file` called directly. `launchctl kickstart -k gui/$(id -u)/ai.hermes.gateway` ends a wedged
   run in 30 s (`hermes gateway restart` waits up to 30 min for it).
+- **The notes tool's folder filter was exact and silent.** For "my notes on the atrium" Hermes passed folder "notes" (by analogy with
+  "mail"/"teams"), got "No notes match", and told Aaron he had none (2026-10-09) while an "Atrium" note, 13 of his own Teams messages
+  from the day before, and the Oct 8 transcript were all indexed. Now a folder name matches regardless of case, "notes" means every
+  account but the AI Feed (`NoteScope.ownNotes`), "email"/"transcripts"/"chats" land on their folders, and an unknown name is a tool
+  error that lists the real folders. `SOUL.md`: "my notes" means his notes, transcripts, and what he told her in Teams; search with no folder.
+- **Feed records are dated by the file, not the item.** `modified_at` is when the flow wrote the file, so the Oct 8 backfill made 6,746
+  old emails and chats look modified "today": `since` on mail/teams was useless and Hermes quoted file times as dates ("Modified today,
+  3:58 PM" for an older email). The tools now filter, sort, and label by the item's own time (`datedAt`: sent for mail/Teams, start for
+  calendar); the column itself is unchanged because the indexer uses it for change detection.
+- **"Remind me every 30 minutes until I do it" became a forever job** (2026-10-09 13:58): each run searched mail for 4-11 min of Puget
+  time and nothing would ever stop it. `SOUL.md` now gives the exact schedule forms (one-shots are "in 30m" or an ISO time) and a
+  self-ending prompt for nag reminders: check the card with `cards list`, and when it is gone, `cronjob_manage remove` the job (found
+  by name with `cronjob_manage list`; jobs are named after their card) and answer `[SILENT]`. The live job was edited the same way.
 - **Meeting wake-ups come from the index, not OneDrive:** feed calendar records store the event start as `created_at`
   (`NotesIndex.upcoming`); one marker per Outlook event id (meta `meeting_announced:<group key>`, value = start ISO) keeps a series
   rewrite quiet and re-announces a moved meeting. No attendees, all-day (≥ 23 h), deleted and cancelled events are skipped before Hermes is
@@ -269,3 +282,4 @@ End a work session with **`/save`**.
 | 2026-10-08 | Host migrated engineering-mac → edit-3 (setup-assistant-mac.sh); Planning Center MCP (Weekend Rundown's pco-mcp) registered; decommission script written |
 | 2026-10-08 | Engineering mini wiped; Edit 3 time zone; Minutes menu-bar hang fixed; clock tool; Teams/calendar/sent flows + backfills; song prep tools; proactive loop (helper → relay /notify → Hermes → Teams) |
 | 2026-10-09 | Hermes initiative: cron-output voice, meeting wake-ups, relay note, SOUL.md versioned + exact tool JSON, 13 tasks backfilled; runaway tool loop found and capped (hard stops on, 60 turns) |
+| 2026-10-09 | "Hermes couldn't find my notes": folder names resolve loosely and unknown ones are errors; feed records dated by item time; self-ending reminder jobs |

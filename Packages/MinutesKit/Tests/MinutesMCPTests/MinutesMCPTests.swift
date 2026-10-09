@@ -61,3 +61,12 @@ private func seededIndex() throws -> URL {
     let r = MinutesMCPServer.call(name: "list_folders", arguments: nil, indexURL: url, noIndexHint: "wait for the index service")
     #expect(text(r) == "No notes indexed yet — wait for the index service.")
 }
+
+@Test func unknownFolderIsAnErrorThatNamesTheFolders() throws {
+    let url = try seededIndex()
+    let r = MinutesMCPServer.call(name: "search_notes", arguments: ["query": .string("lobby"), "folder": .string("nope")], indexURL: url)
+    #expect(r.isError == true)
+    #expect(text(r).contains("No folder named \"nope\". Folders: Notes."))
+    let own = MinutesMCPServer.call(name: "search_notes", arguments: ["query": .string("lobby"), "folder": .string("notes")], indexURL: url)
+    #expect(own.isError != true && text(own).contains("\"Budget\""))
+}

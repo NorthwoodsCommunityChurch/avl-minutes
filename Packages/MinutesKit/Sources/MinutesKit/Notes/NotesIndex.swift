@@ -244,41 +244,67 @@ public final class NotesIndex: @unchecked Sendable {
         }
     }
 
-    public func search(_ query: String, folder: String?, since: Date?, until: Date?, limit: Int) throws -> [NoteSearchHit] {
+    /// The time a record is dated by: a note's last edit, or the item's own time (sent, or event start)
+    /// for feed records, whose `modified_at` is only when the flow wrote the file (one backfill wrote
+    /// 6,746 old items in an evening, so by file time they all looked like "yesterday").
+    private static func dated(feedAccount param: String) -> String {
+        "(CASE WHEN n.account = \(param) THEN n.created_at ELSE n.modified_at END)"
+    }
+
+    private static func bind(_ scope: NoteScope) -> (folder: SQLValue, ownOnly: SQLValue) {
+        switch scope {
+        case .all: (.null, .int(0))
+        case .folder(let name): (.text(name), .int(0))
+        case .ownNotes: (.null, .int(1))
+        }
+    }
+
+    public func search(_ query: String, scope: NoteScope, since: Date?, until: Date?, limit: Int) throws -> [NoteSearchHit] {
         guard let match = FTSQuery.make(from: query) else { return [] }
+        let (folder, ownOnly) = Self.bind(scope)
+        let dated = Self.dated(feedAccount: "?3")
         return try serialized {
             var hits: [NoteSearchHit] = []
             try db.query("""
-            SELECT n.note_id, n.title, n.folder, n.modified_at,
+            SELECT n.note_id, n.title, n.folder, n.account, n.modified_at, \(dated),
                    snippet(notes_fts, 1, '[', ']', ' … ', 30)
             FROM notes_fts JOIN notes n ON n.id = notes_fts.rowid
             WHERE notes_fts MATCH ?1
               AND (?2 IS NULL OR n.folder = ?2)
-              AND (?3 IS NULL OR n.modified_at >= ?3)
-              AND (?4 IS NULL OR n.modified_at < ?4)
+              AND (?4 = 0 OR n.account <> ?3)
+              AND (?5 IS NULL OR \(dated) >= ?5)
+              AND (?6 IS NULL OR \(dated) < ?6)
             ORDER BY bm25(notes_fts, 3.0, 1.0)
-            LIMIT ?5
-            """, [.text(match), Self.optional(folder), Self.optional(since), Self.optional(until), .int(Int64(limit))]) { r in
-                hits.append(NoteSearchHit(id: r.text(0), title: r.text(1), folder: r.text(2),
-                                          modifiedAt: date(milliseconds: r.int(3)), snippet: r.text(4)))
+            LIMIT ?7
+            """, [.text(match), folder, .text(FeedRecord.account), ownOnly,
+                  Self.optional(since), Self.optional(until), .int(Int64(limit))]) { r in
+                hits.append(NoteSearchHit(id: r.text(0), title: r.text(1), folder: r.text(2), account: r.text(3),
+                                          modifiedAt: date(milliseconds: r.int(4)), datedAt: date(milliseconds: r.int(5)),
+                                          snippet: r.text(6)))
             }
             return hits
         }
     }
 
-    public func list(folder: String?, since: Date?, until: Date?, limit: Int) throws -> [NoteSummary] {
-        try serialized {
+    /// Newest first by `datedAt`.
+    public func list(scope: NoteScope, since: Date?, until: Date?, limit: Int) throws -> [NoteSummary] {
+        let (folder, ownOnly) = Self.bind(scope)
+        let dated = Self.dated(feedAccount: "?2")
+        return try serialized {
             var out: [NoteSummary] = []
             try db.query("""
-            SELECT note_id, title, folder, created_at, modified_at, length(body) FROM notes
-            WHERE (?1 IS NULL OR folder = ?1)
-              AND (?2 IS NULL OR modified_at >= ?2)
-              AND (?3 IS NULL OR modified_at < ?3)
-            ORDER BY modified_at DESC LIMIT ?4
-            """, [Self.optional(folder), Self.optional(since), Self.optional(until), .int(Int64(limit))]) { r in
-                out.append(NoteSummary(id: r.text(0), title: r.text(1), folder: r.text(2),
-                                       createdAt: date(milliseconds: r.int(3)), modifiedAt: date(milliseconds: r.int(4)),
-                                       length: Int(r.int(5))))
+            SELECT n.note_id, n.title, n.folder, n.account, n.created_at, n.modified_at, \(dated), length(n.body)
+            FROM notes n
+            WHERE (?1 IS NULL OR n.folder = ?1)
+              AND (?3 = 0 OR n.account <> ?2)
+              AND (?4 IS NULL OR \(dated) >= ?4)
+              AND (?5 IS NULL OR \(dated) < ?5)
+            ORDER BY \(dated) DESC LIMIT ?6
+            """, [folder, .text(FeedRecord.account), ownOnly,
+                  Self.optional(since), Self.optional(until), .int(Int64(limit))]) { r in
+                out.append(NoteSummary(id: r.text(0), title: r.text(1), folder: r.text(2), account: r.text(3),
+                                       createdAt: date(milliseconds: r.int(4)), modifiedAt: date(milliseconds: r.int(5)),
+                                       datedAt: date(milliseconds: r.int(6)), length: Int(r.int(7))))
             }
             return out
         }

@@ -30,7 +30,7 @@ private func write(_ text: String, to url: URL, modified: Date? = nil) throws {
     #expect(first.records.map(\.path) == ["mail/a.json"])
     #expect(try index.count() == 2)
     #expect(try index.note(id: "feed:mail/a.json")?.title == "Hermes test")
-    #expect(try index.search("first", folder: "mail", since: nil, until: nil, limit: 5).count == 1)
+    #expect(try index.search("first", scope: .folder("mail"), since: nil, until: nil, limit: 5).count == 1)
 
     // Unchanged files are not re-read; a changed file is.
     #expect(try feed.refresh() == FeedIndexer.Result(indexed: 0, removed: 0, skipped: 0, total: 1))
@@ -66,7 +66,7 @@ private func write(_ text: String, to url: URL, modified: Date? = nil) throws {
     let feed = FeedIndexer(folder: folder, index: index, timeZone: TimeZone(identifier: "America/Chicago")!)
     let r = try feed.refresh()
     #expect(r.total == 2)
-    let titles = try index.list(folder: "calendar", since: nil, until: nil, limit: 10).map(\.title).sorted()
+    let titles = try index.list(scope: .folder("calendar"), since: nil, until: nil, limit: 10).map(\.title).sorted()
     #expect(titles == ["Hermes Test — Thu Oct 8, 2026 12:00 PM", "Other event — Fri Oct 9, 2026 12:00 PM"])
     #expect(try index.note(id: "feed:calendar/20261008-163346-8239.json")?.title == "Hermes Test — Thu Oct 8, 2026 12:00 PM")
     #expect(try index.note(id: "feed:calendar/20261008-163338-1572.json") == nil)
@@ -74,7 +74,7 @@ private func write(_ text: String, to url: URL, modified: Date? = nil) throws {
     // A later update to event 1 (next pass) replaces the survivor too, and nothing comes back.
     try write(#"{"type":"calendar","action":"updated","subject":"Hermes Test (moved)","start":"2026-10-08T18:00:00.0000000","#  + event + "}", to: folder.appendingPathComponent("calendar/20261008-180000-2222.json"), modified: t0.addingTimeInterval(120))
     #expect(try feed.refresh().total == 2)
-    #expect(try index.list(folder: "calendar", since: nil, until: nil, limit: 10).map(\.title).sorted() == ["Hermes Test (moved) — Thu Oct 8, 2026 1:00 PM", "Other event — Fri Oct 9, 2026 12:00 PM"])
+    #expect(try index.list(scope: .folder("calendar"), since: nil, until: nil, limit: 10).map(\.title).sorted() == ["Hermes Test (moved) — Thu Oct 8, 2026 1:00 PM", "Other event — Fri Oct 9, 2026 12:00 PM"])
     #expect(try feed.refresh() == FeedIndexer.Result(indexed: 0, removed: 0, skipped: 0, total: 2))
 }
 

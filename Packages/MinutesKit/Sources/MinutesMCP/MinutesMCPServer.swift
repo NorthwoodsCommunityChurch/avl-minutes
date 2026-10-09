@@ -12,7 +12,8 @@ public enum MinutesMCPServer {
     current_time is the only clock available: call it before answering anything about today, now, or deadlines.
     """
 
-    private static let dateHelp = "YYYY-MM-DD (local day) or ISO 8601. Filters on the note's last-modified date."
+    private static let dateHelp = "YYYY-MM-DD (local day) or ISO 8601. Filters on a note's last edit, or on the item's own time for mail and Teams (sent) and calendar (start) records."
+    private static let folderHelp = "A folder name from list_folders (case does not matter), or \"mail\", \"calendar\", \"teams\" for Aaron's email, calendar, and Teams chats, or \"notes\" for all of Aaron's own notes and transcripts together. Omit it to search everything, which is right for \"my notes on X\". An unknown name is an error, not an empty result."
     private static let untilHelp = dateHelp + " A plain date includes that whole day."
     private static let limitHelp = "Maximum results, 1-50. Default 20."
 
@@ -22,7 +23,7 @@ public enum MinutesMCPServer {
             description: "Full-text search across all of Aaron's notes and meeting transcripts. Words are matched with stemming and ranked (titles weigh more); wrap words in double quotes for an exact phrase. Returns note ids, titles, folders, dates, and a snippet with matches in [brackets]. " + NotesTools.transcriptFolderHint,
             inputSchema: schema(properties: [
                 "query": property("string", "Words to find, or \"an exact phrase\" in double quotes."),
-                "folder": property("string", "Only this folder, e.g. \"Meeting Transcripts\"."),
+                "folder": property("string", folderHelp),
                 "since": property("string", dateHelp),
                 "until": property("string", untilHelp),
                 "limit": property("integer", limitHelp),
@@ -30,9 +31,9 @@ public enum MinutesMCPServer {
         ),
         Tool(
             name: "list_notes",
-            description: "List notes, most recently modified first, optionally within one folder or date range. Use folder \"Meeting Transcripts\" to list meetings.",
+            description: "List notes, newest first (last edit for Aaron's notes; sent time for mail and Teams; start time for calendar), optionally within one folder or date range. Use folder \"Meeting Transcripts\" to list meetings.",
             inputSchema: schema(properties: [
-                "folder": property("string", "Only this folder."),
+                "folder": property("string", folderHelp),
                 "since": property("string", dateHelp),
                 "until": property("string", untilHelp),
                 "limit": property("integer", limitHelp),

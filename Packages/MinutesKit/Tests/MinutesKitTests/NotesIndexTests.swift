@@ -16,11 +16,11 @@ private func meta(_ id: String, _ title: String, folder: String = "Notes", modif
     try index.upsert(meta("1", "Lobby screens"), body: "Need new mounts.")
     try index.upsert(meta("2", "Budget"), body: "We decided the lobby screens can wait.")
     try index.upsert(meta("3", "Groceries"), body: "eggs, milk")
-    let stems = try index.search("decide", folder: nil, since: nil, until: nil, limit: 10)
+    let stems = try index.search("decide", scope: .all, since: nil, until: nil, limit: 10)
     #expect(stems.map(\.id) == ["2"])
-    let ranked = try index.search("lobby screens", folder: nil, since: nil, until: nil, limit: 10)
+    let ranked = try index.search("lobby screens", scope: .all, since: nil, until: nil, limit: 10)
     #expect(ranked.first?.id == "1")                    // title match outranks body match
-    let phrase = try index.search("\"screens can wait\"", folder: nil, since: nil, until: nil, limit: 10)
+    let phrase = try index.search("\"screens can wait\"", scope: .all, since: nil, until: nil, limit: 10)
     #expect(phrase.map(\.id) == ["2"])
     #expect(phrase.first?.snippet.contains("[screens can wait]") == true)
 }
@@ -29,7 +29,7 @@ private func meta(_ id: String, _ title: String, folder: String = "Notes", modif
     let index = try NotesIndex(url: tempURL())
     try index.upsert(meta("1", "Q"), body: "what's next")
     for q in ["what's", "\"unclosed", "AND", "*", "NEAR(", "-x", ""] {
-        _ = try index.search(q, folder: nil, since: nil, until: nil, limit: 5)
+        _ = try index.search(q, scope: .all, since: nil, until: nil, limit: 5)
     }
 }
 
@@ -37,10 +37,10 @@ private func meta(_ id: String, _ title: String, folder: String = "Notes", modif
     let index = try NotesIndex(url: tempURL())
     try index.upsert(meta("1", "A", folder: "Meeting Transcripts", modified: 1_000), body: "budget talk")
     try index.upsert(meta("2", "B", folder: "Notes", modified: 2_000), body: "budget idea")
-    #expect(try index.search("budget", folder: "Notes", since: nil, until: nil, limit: 10).map(\.id) == ["2"])
-    #expect(try index.search("budget", folder: nil, since: Date(timeIntervalSince1970: 1_500), until: nil, limit: 10).map(\.id) == ["2"])
-    #expect(try index.search("budget", folder: nil, since: nil, until: Date(timeIntervalSince1970: 1_500), limit: 10).map(\.id) == ["1"])
-    #expect(try index.list(folder: nil, since: nil, until: nil, limit: 10).map(\.id) == ["2", "1"])
+    #expect(try index.search("budget", scope: .folder("Notes"), since: nil, until: nil, limit: 10).map(\.id) == ["2"])
+    #expect(try index.search("budget", scope: .all, since: Date(timeIntervalSince1970: 1_500), until: nil, limit: 10).map(\.id) == ["2"])
+    #expect(try index.search("budget", scope: .all, since: nil, until: Date(timeIntervalSince1970: 1_500), limit: 10).map(\.id) == ["1"])
+    #expect(try index.list(scope: .all, since: nil, until: nil, limit: 10).map(\.id) == ["2", "1"])
     #expect(try index.folders() == [FolderCount(name: "Meeting Transcripts", count: 1), FolderCount(name: "Notes", count: 1)])
 }
 
@@ -48,13 +48,13 @@ private func meta(_ id: String, _ title: String, folder: String = "Notes", modif
     let index = try NotesIndex(url: tempURL())
     try index.upsert(meta("1", "Old"), body: "alpha")
     try index.upsert(meta("1", "New", modified: 2_000), body: "beta <b>emoji 🎉</b>")
-    #expect(try index.search("alpha", folder: nil, since: nil, until: nil, limit: 5).isEmpty)
+    #expect(try index.search("alpha", scope: .all, since: nil, until: nil, limit: 5).isEmpty)
     #expect(try index.note(id: "1")?.body == "beta <b>emoji 🎉</b>")
     try index.retag(meta("1", "New", folder: "Work", modified: 2_000))
     #expect(try index.note(id: "1")?.folder == "Work")
     #expect(try index.stamps()["1"] == IndexedStamp(title: "New", folder: "Work", account: "iCloud", modifiedMs: 2_000_000))
     try index.delete(ids: ["1"])
-    #expect(try index.search("beta", folder: nil, since: nil, until: nil, limit: 5).isEmpty)
+    #expect(try index.search("beta", scope: .all, since: nil, until: nil, limit: 5).isEmpty)
     #expect(try index.count() == 0)
     try index.checkIntegrity()
 }
@@ -65,7 +65,7 @@ private func meta(_ id: String, _ title: String, folder: String = "Notes", modif
     try writer.upsert(meta("1", "Shared"), body: "visible")
     try writer.setLastRefresh(Date(timeIntervalSince1970: 5_000))
     let reader = try NotesIndex(url: url, readOnly: true)
-    #expect(try reader.search("visible", folder: nil, since: nil, until: nil, limit: 5).count == 1)
+    #expect(try reader.search("visible", scope: .all, since: nil, until: nil, limit: 5).count == 1)
     #expect(try reader.lastRefresh() == Date(timeIntervalSince1970: 5_000))
     #expect(throws: (any Error).self) { try reader.upsert(meta("2", "x"), body: "y") }
 }
@@ -147,4 +147,26 @@ private func meta(_ id: String, _ title: String, folder: String = "Notes", modif
     #expect(found[1].groupKey == nil)
     #expect(found[0].body == "Calendar event, added")
     #expect(abs(found[0].start.timeIntervalSince(now.addingTimeInterval(10 * 60))) < 0.001)
+}
+
+@Test func ownNotesScopeAndFeedRecordsDateByItemTime() throws {
+    let index = try NotesIndex(url: tempURL())
+    try index.upsert(meta("own", "Atrium", folder: "Northwoods", modified: 2_000), body: "atrium speakers")
+    // A backfilled email: sent long ago (created_at), file written recently (modified_at).
+    try index.upsert(NoteMetadata(id: "feed:mail/a.json", title: "Re: Atrium", folder: "mail", account: FeedRecord.account,
+                                  createdAt: Date(timeIntervalSince1970: 500), modifiedAt: Date(timeIntervalSince1970: 3_000), isLocked: false),
+                     body: "atrium quote")
+    #expect(try index.search("atrium", scope: .ownNotes, since: nil, until: nil, limit: 10).map(\.id) == ["own"])
+    #expect(try index.search("atrium", scope: .folder("mail"), since: nil, until: nil, limit: 10).map(\.id) == ["feed:mail/a.json"])
+    // Date filters use the item's own time for feed records, never the file time.
+    #expect(try index.search("atrium", scope: .all, since: Date(timeIntervalSince1970: 1_500), until: nil, limit: 10).map(\.id) == ["own"])
+    #expect(try index.search("atrium", scope: .all, since: nil, until: Date(timeIntervalSince1970: 1_500), limit: 10).map(\.id) == ["feed:mail/a.json"])
+    let hits = try index.search("atrium", scope: .all, since: nil, until: nil, limit: 10)
+    #expect(hits.first { $0.id == "feed:mail/a.json" }?.datedAt == Date(timeIntervalSince1970: 500))
+    #expect(hits.first { $0.id == "own" }?.datedAt == Date(timeIntervalSince1970: 2_000))
+    // Listing orders by that same time: the note edited at 2,000 s comes before the email sent at 500 s.
+    let listed = try index.list(scope: .all, since: nil, until: nil, limit: 10)
+    #expect(listed.map(\.id) == ["own", "feed:mail/a.json"])
+    #expect(listed.map(\.account) == ["iCloud", FeedRecord.account])
+    #expect(try index.list(scope: .ownNotes, since: nil, until: nil, limit: 10).map(\.id) == ["own"])
 }
