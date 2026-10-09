@@ -85,3 +85,34 @@ test("state persists to disk and forgets a conversation", () => {
   again.clearResponse("c");
   assert.equal(createState(file).getResponse("c"), null);
 });
+
+test("the default client talks plain HTTP to a real server and honors the abort timeout", async () => {
+  // Node's built-in fetch gives up when a response takes over 300 s (undici's headersTimeout), well before the relay's
+  // own 20-minute limit; edit-3, 2026-10-09: "fetch failed" after 304 s. The default client has no such limit.
+  const http = require("node:http");
+  let delay = 0;
+  const seen = [];
+  const server = http.createServer((req, res) => {
+    let raw = "";
+    req.on("data", (c) => (raw += c));
+    req.on("end", () => {
+      if (req.url !== "/v1/responses") return res.writeHead(404).end();
+      seen.push({ url: req.url, auth: req.headers.authorization, body: JSON.parse(raw) });
+      setTimeout(() => res.writeHead(200, { "Content-Type": "application/json" }).end(JSON.stringify(response("resp_1", "Hi there"))), delay);
+    });
+  });
+  await new Promise((r) => server.listen(0, "127.0.0.1", r));
+  try {
+    const url = `http://127.0.0.1:${server.address().port}`;
+    const h = createHermesClient({ url, key: "k", state: createState(tmpFile()) });
+    assert.equal((await h.ask({ conversationId: "c", text: "hello" })).text, "Hi there");
+    assert.deepEqual(seen[0], { url: "/v1/responses", auth: "Bearer k", body: { model: "hermes-agent", input: "hello", store: true } });
+    assert.equal(await h.health(), false, "no /health route answers ok");
+    delay = 500;
+    const slow = createHermesClient({ url, key: "k", state: createState(tmpFile()), timeoutMs: 50 });
+    await assert.rejects(slow.ask({ conversationId: "c", text: "x" }), /timed out after 0 s/);
+  } finally {
+    server.closeAllConnections();
+    server.close();
+  }
+});
