@@ -48,20 +48,35 @@ public struct NotesTools: Sendable {
             return out.joined(separator: "\n")
         }
         let total = try index.searchCount(query, scope: scope, since: since, until: until)
+        // A silently cut list reads as the whole story: Hermes took the top 20 of 134 "atrium" hits, a June
+        // chat first, as all there was (2026-10-09). Say what was left out, and since relevance ranking buries
+        // the recent items her rules care about, show the newest matches too.
+        let newest = total > hits.count
+            ? try index.search(query, scope: scope, since: since, until: until, limit: Self.newestShown, newestFirst: true)
+                .filter { n in !hits.contains { $0.id == n.id } }
+            : []
         if total > hits.count {
-            // A silently cut list reads as the whole story (Hermes took the top 20 of 134 "atrium" hits as
-            // all there was, 2026-10-09); say what was left out and how to get at it.
             out.append("\(hits.count) of \(total) notes match \"\(query)\" (most relevant first; the rest are not shown — narrow with since, until, or folder, or raise limit up to 50):")
         } else {
             out.append("\(hits.count) \(hits.count == 1 ? "note matches" : "notes match") \"\(query)\":")
         }
-        for (i, hit) in hits.enumerated() {
+        for (i, hit) in hits.enumerated() { out += lines(i + 1, hit) }
+        if !newest.isEmpty {
             out.append("")
-            out.append("\(i + 1). \"\(hit.title)\" — \(hit.folder) — \(dateLabel(folder: hit.folder, account: hit.account)) \(format(hit.datedAt))")
-            out.append("   id: \(hit.id)")
-            out.append("   \(hit.snippet.replacingOccurrences(of: "\n", with: " "))")
+            out.append("Newest matches, not in the list above:")
+            for (i, hit) in newest.enumerated() { out += lines(hits.count + i + 1, hit) }
         }
         return out.joined(separator: "\n")
+    }
+
+    /// How many of the newest matches a cut search result adds.
+    static let newestShown = 5
+
+    private func lines(_ number: Int, _ hit: NoteSearchHit) -> [String] {
+        ["",
+         "\(number). \"\(hit.title)\" — \(hit.folder) — \(dateLabel(folder: hit.folder, account: hit.account)) \(format(hit.datedAt))",
+         "   id: \(hit.id)",
+         "   \(hit.snippet.replacingOccurrences(of: "\n", with: " "))"]
     }
 
     public func listNotes(folder: String?, since: Date?, until: Date?, limit: Int?) throws -> String {

@@ -245,6 +245,11 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
   from the day before, and the Oct 8 transcript were all indexed. Now a folder name matches regardless of case, "notes" means every
   account but the AI Feed (`NoteScope.ownNotes`), "email"/"transcripts"/"chats" land on their folders, and an unknown name is a tool
   error that lists the real folders. `SOUL.md`: "my notes" means his notes, transcripts, and what he told her in Teams; search with no folder.
+  Second miss the same evening: an unfiltered "atrium" search returned the 20 most relevant of 134 hits (a June chat first) with nothing
+  saying more existed, and she ignored the "20 of 134, narrow with since" line when it was added. Now a cut result also lists the newest
+  matches by date, the `since` help says to pass it whenever he names a day, and the relay note says the same next to his message
+  (that version answered "my notes on atrium from yesterday" correctly in 308 s). Card rule in the note now says "if this message names
+  something he has to do": the first version made her file cards from the day-old messages the search turned up.
 - **Feed records are dated by the file, not the item.** `modified_at` is when the flow wrote the file, so the Oct 8 backfill made 6,746
   old emails and chats look modified "today": `since` on mail/teams was useless and Hermes quoted file times as dates ("Modified today,
   3:58 PM" for an older email). The tools now filter, sort, and label by the item's own time (`datedAt`: sent for mail/Teams, start for

@@ -12,7 +12,7 @@ public enum MinutesMCPServer {
     current_time is the only clock available: call it before answering anything about today, now, or deadlines.
     """
 
-    private static let dateHelp = "YYYY-MM-DD (local day) or ISO 8601. Filters on a note's last edit, or on the item's own time for mail and Teams (sent) and calendar (start) records."
+    private static let dateHelp = "YYYY-MM-DD (local day) or ISO 8601. Filters on a note's last edit, or on the item's own time for mail and Teams (sent) and calendar (start) records. Pass it whenever Aaron names a day or a span (yesterday, this week, since Monday), with the date from current_time."
     private static let folderHelp = "A folder name from list_folders (case does not matter), or \"mail\", \"calendar\", \"teams\" for Aaron's email, calendar, and Teams chats, or \"notes\" for all of Aaron's own notes and transcripts together. Omit it to search everything, which is right for \"my notes on X\". An unknown name is an error, not an empty result."
     private static let untilHelp = dateHelp + " A plain date includes that whole day."
     private static let limitHelp = "Maximum results, 1-50. Default 20."

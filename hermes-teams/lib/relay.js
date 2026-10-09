@@ -58,7 +58,7 @@ const KINDS = new Set(["feed", "meeting"]);
  * system prompt; a 31B model follows a rule sitting next to the message far more reliably (edit-3, 2026-10-09: a dozen
  * tasks became chat lists instead of cards, and a ticket mention got no search).
  */
-const RELAY_NOTE = "[Relay note, not from Aaron. Before you answer: if he named something he has to do, create its card on the To Do board first and confirm \"Card added: …\". If he named a ticket, a person, a vendor, a quote, a project, or an event, search mail, teams, and notes for it first and lead with the newest thing you found, with its date. Keep the reply short.]";
+const RELAY_NOTE = "[Relay note, not from Aaron. Before you answer: if this message names something he has to do, create its card on the To Do board first and confirm \"Card added: …\" (things he said on other days are already on the board; never make cards from search results). If this message names a ticket, a person, a vendor, a quote, a project, or an event, search mail, teams, and notes for it first and lead with the newest thing you found, with its date. If he named a day or a span (yesterday, this week, since Monday), call current_time and pass since and until to search_notes. A search that says only some of its matches are shown is not an answer yet: narrow it. Keep the reply short.]";
 
 /** Aaron's words, verbatim, then the relay's note. */
 function buildAaronPrompt(text) {

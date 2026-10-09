@@ -259,7 +259,8 @@ public final class NotesIndex: @unchecked Sendable {
         }
     }
 
-    public func search(_ query: String, scope: NoteScope, since: Date?, until: Date?, limit: Int) throws -> [NoteSearchHit] {
+    /// Most relevant first (titles weigh more), or newest first by `datedAt` with `newestFirst`.
+    public func search(_ query: String, scope: NoteScope, since: Date?, until: Date?, limit: Int, newestFirst: Bool = false) throws -> [NoteSearchHit] {
         guard let match = FTSQuery.make(from: query) else { return [] }
         let (folder, ownOnly) = Self.bind(scope)
         let dated = Self.dated(feedAccount: "?3")
@@ -274,7 +275,7 @@ public final class NotesIndex: @unchecked Sendable {
               AND (?4 = 0 OR n.account <> ?3)
               AND (?5 IS NULL OR \(dated) >= ?5)
               AND (?6 IS NULL OR \(dated) < ?6)
-            ORDER BY bm25(notes_fts, 3.0, 1.0)
+            ORDER BY \(newestFirst ? "\(dated) DESC, n.id" : "bm25(notes_fts, 3.0, 1.0)")
             LIMIT ?7
             """, [.text(match), folder, .text(FeedRecord.account), ownOnly,
                   Self.optional(since), Self.optional(until), .int(Int64(limit))]) { r in

@@ -109,10 +109,23 @@ private func meta(_ id: String, _ title: String, folder: String = "Notes") -> No
 
 @Test func aCutListSaysHowManyWereLeftOut() throws {
     let (tools, index) = try makeTools()
-    for i in 1...6 { try index.upsert(meta("n\(i)", "Atrium \(i)"), body: "atrium item \(i)") }
+    for i in 1...6 {
+        let m = NoteMetadata(id: "n\(i)", title: "Atrium \(i)", folder: "Notes", account: "iCloud",
+                             createdAt: now, modifiedAt: now.addingTimeInterval(Double(i) * 3_600), isLocked: false)
+        try index.upsert(m, body: "atrium item \(i)")
+    }
     let cut = try tools.searchNotes(query: "atrium", folder: nil, since: nil, until: nil, limit: 4)
     #expect(cut.contains("4 of 6 notes match \"atrium\" (most relevant first; the rest are not shown — narrow with since, until, or folder, or raise limit up to 50):"))
-    #expect(cut.components(separatedBy: "\n   id: ").count == 5)
+    // The two matches the cut left out appear under "Newest matches", newest first, and nothing is listed twice.
+    let parts = cut.components(separatedBy: "Newest matches, not in the list above:")
+    #expect(parts.count == 2)
+    let shown = parts[0].components(separatedBy: "\n   id: ").dropFirst().map { $0.prefix(2) }
+    let newest = parts[1].components(separatedBy: "\n   id: ").dropFirst().map { $0.prefix(2) }
+    #expect(shown.count == 4 && newest.count == 2)
+    #expect(Set(shown + newest).count == 6)
+    let dates = parts[1].components(separatedBy: "modified ").dropFirst().map { $0.prefix(24) }
+    #expect(dates == dates.sorted(by: >) || dates.count == 2)
+    #expect(try index.search("atrium", scope: .all, since: nil, until: nil, limit: 2, newestFirst: true).map(\.id) == ["n6", "n5"])
     let whole = try tools.searchNotes(query: "atrium", folder: nil, since: nil, until: nil, limit: 10)
     #expect(whole.contains("6 notes match \"atrium\":"))
     #expect(try index.searchCount("atrium", scope: .ownNotes, since: nil, until: nil) == 6)
