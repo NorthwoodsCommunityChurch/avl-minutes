@@ -40,13 +40,21 @@ public struct NotesTools: Sendable {
     }
 
     public func searchNotes(query: String, folder: String?, since: Date?, until: Date?, limit: Int?) throws -> String {
-        let hits = try index.search(query, scope: try scope(for: folder), since: since, until: until, limit: clamp(limit))
+        let scope = try scope(for: folder)
+        let hits = try index.search(query, scope: scope, since: since, until: until, limit: clamp(limit))
         var out = [try freshness(), ""]
         guard !hits.isEmpty else {
             out.append("No notes match \"\(query)\".")
             return out.joined(separator: "\n")
         }
-        out.append("\(hits.count) \(hits.count == 1 ? "note matches" : "notes match") \"\(query)\":")
+        let total = try index.searchCount(query, scope: scope, since: since, until: until)
+        if total > hits.count {
+            // A silently cut list reads as the whole story (Hermes took the top 20 of 134 "atrium" hits as
+            // all there was, 2026-10-09); say what was left out and how to get at it.
+            out.append("\(hits.count) of \(total) notes match \"\(query)\" (most relevant first; the rest are not shown — narrow with since, until, or folder, or raise limit up to 50):")
+        } else {
+            out.append("\(hits.count) \(hits.count == 1 ? "note matches" : "notes match") \"\(query)\":")
+        }
         for (i, hit) in hits.enumerated() {
             out.append("")
             out.append("\(i + 1). \"\(hit.title)\" — \(hit.folder) — \(dateLabel(folder: hit.folder, account: hit.account)) \(format(hit.datedAt))")

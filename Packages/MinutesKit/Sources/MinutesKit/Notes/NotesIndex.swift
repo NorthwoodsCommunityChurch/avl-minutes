@@ -286,6 +286,29 @@ public final class NotesIndex: @unchecked Sendable {
         }
     }
 
+    /// How many records `search` would match before `limit`, so a caller can say "20 of 134" instead of
+    /// letting a truncated list pass for the whole story.
+    public func searchCount(_ query: String, scope: NoteScope, since: Date?, until: Date?) throws -> Int {
+        guard let match = FTSQuery.make(from: query) else { return 0 }
+        let (folder, ownOnly) = Self.bind(scope)
+        let dated = Self.dated(feedAccount: "?3")
+        return try serialized {
+            var count = 0
+            try db.query("""
+            SELECT count(*)
+            FROM notes_fts JOIN notes n ON n.id = notes_fts.rowid
+            WHERE notes_fts MATCH ?1
+              AND (?2 IS NULL OR n.folder = ?2)
+              AND (?4 = 0 OR n.account <> ?3)
+              AND (?5 IS NULL OR \(dated) >= ?5)
+              AND (?6 IS NULL OR \(dated) < ?6)
+            """, [.text(match), folder, .text(FeedRecord.account), ownOnly, Self.optional(since), Self.optional(until)]) { r in
+                count = Int(r.int(0))
+            }
+            return count
+        }
+    }
+
     /// Newest first by `datedAt`.
     public func list(scope: NoteScope, since: Date?, until: Date?, limit: Int) throws -> [NoteSummary] {
         let (folder, ownOnly) = Self.bind(scope)

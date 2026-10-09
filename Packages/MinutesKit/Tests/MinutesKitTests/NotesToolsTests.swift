@@ -106,3 +106,14 @@ private func meta(_ id: String, _ title: String, folder: String = "Notes") -> No
     // "since" means sent or start time for feed records: a month-old email is not "since yesterday".
     #expect(try tools.searchNotes(query: "clocking", folder: nil, since: now.addingTimeInterval(-86_400), until: nil, limit: nil).contains("1 note matches"))
 }
+
+@Test func aCutListSaysHowManyWereLeftOut() throws {
+    let (tools, index) = try makeTools()
+    for i in 1...6 { try index.upsert(meta("n\(i)", "Atrium \(i)"), body: "atrium item \(i)") }
+    let cut = try tools.searchNotes(query: "atrium", folder: nil, since: nil, until: nil, limit: 4)
+    #expect(cut.contains("4 of 6 notes match \"atrium\" (most relevant first; the rest are not shown — narrow with since, until, or folder, or raise limit up to 50):"))
+    #expect(cut.components(separatedBy: "\n   id: ").count == 5)
+    let whole = try tools.searchNotes(query: "atrium", folder: nil, since: nil, until: nil, limit: 10)
+    #expect(whole.contains("6 notes match \"atrium\":"))
+    #expect(try index.searchCount("atrium", scope: .ownNotes, since: nil, until: nil) == 6)
+}
