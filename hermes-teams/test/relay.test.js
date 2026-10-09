@@ -51,7 +51,7 @@ test("Aaron's message is answered after typing, in the same conversation", async
   const { relay, sent, asked, state, logs } = harness();
   await relay.handle(message("find my notes about projectors"));
   assert.equal(asked[0].conversationId, "a:conv1");
-  assert.equal(asked[0].text, "find my notes about projectors");
+  assert.ok(asked[0].text.startsWith("find my notes about projectors\n\n[Relay note"), "Aaron's words first, then the relay note");
   assert.ok(sent.some((s) => s.activity.type === "typing"));
   const reply = sent.find((s) => s.activity.type === "message");
   assert.equal(reply.activity.text, "The answer");
@@ -94,9 +94,10 @@ test("messages are processed one at a time, in order", async () => {
   let release;
   const { relay } = harness({
     askImpl: async (q) => {
-      order.push(`start ${q.text}`);
-      if (q.text === "one") await new Promise((r) => { release = r; });
-      order.push(`end ${q.text}`);
+      const words = q.text.split("\n")[0]; // Aaron's line; the relay note follows it
+      order.push(`start ${words}`);
+      if (words === "one") await new Promise((r) => { release = r; });
+      order.push(`end ${words}`);
       return { text: "ok" };
     },
   });
@@ -162,4 +163,14 @@ test("a configured tenant id is enforced from the first message", async () => {
   const { relay, asked } = harness({ tenantId: "tenant-9" });
   await relay.handle(message("hello"));
   assert.equal(asked.length, 0);
+});
+
+test("every message to Hermes carries the relay note after Aaron's own words, exactly once, unwrapped", () => {
+  const { buildAaronPrompt } = require("../lib/relay");
+  const p = buildAaronPrompt("I need to email Danny about the ticket");
+  assert.ok(p.startsWith("I need to email Danny about the ticket\n\n[Relay note, not from Aaron."));
+  assert.match(p, /create its card on the To Do board first/);
+  assert.match(p, /search mail, teams, and notes for it first/);
+  assert.equal(p.split("[Relay note").length, 2);
+  assert.ok(!p.includes("untrusted_feed_record"));
 });

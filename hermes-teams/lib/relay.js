@@ -53,6 +53,18 @@ function buildMeetingPrepPrompt(records, nonce = randomNonce()) {
 /** Notify kinds: "feed" (calendar changes, sent mail) and "meeting" (a meeting starting soon). Never merged together. */
 const KINDS = new Set(["feed", "meeting"]);
 
+/**
+ * Appended by the relay under each of Aaron's messages. The same rules live in SOUL.md, 20K tokens earlier in the
+ * system prompt; a 31B model follows a rule sitting next to the message far more reliably (edit-3, 2026-10-09: a dozen
+ * tasks became chat lists instead of cards, and a ticket mention got no search).
+ */
+const RELAY_NOTE = "[Relay note, not from Aaron. Before you answer: if he named something he has to do, create its card on the To Do board first and confirm \"Card added: …\". If he named a ticket, a person, a vendor, a quote, a project, or an event, search mail, teams, and notes for it first and lead with the newest thing you found, with its date. Keep the reply short.]";
+
+/** Aaron's words, verbatim, then the relay's note. */
+function buildAaronPrompt(text) {
+  return `${text}\n\n${RELAY_NOTE}`;
+}
+
 function createRelay({ config, connector, hermes, state, log = () => {}, typingIntervalMs = 4000, now = () => Date.now() }) {
   const allowed = (config && config.allowedUsers) || [];
   const configuredTenant = (config && config.teamsBot && config.teamsBot.tenantId) || "";
@@ -166,7 +178,7 @@ function createRelay({ config, connector, hermes, state, log = () => {}, typingI
     const started = now();
     const stopTyping = startTyping(activity);
     try {
-      const r = await hermes.ask({ conversationId, text });
+      const r = await hermes.ask({ conversationId, text: buildAaronPrompt(text) });
       await stopTyping();
       await say(activity, r.text);
       log("info", { event: "answered", ...who, chars: r.text.length, seconds: Math.round((now() - started) / 1000) });
@@ -288,4 +300,4 @@ function createRelay({ config, connector, hermes, state, log = () => {}, typingI
   return { handle, notify, postHome, isAllowed, tenantOk };
 }
 
-module.exports = { createRelay, buildFeedEventPrompt, buildMeetingPrepPrompt, GREETING, HELP, PRIVATE, NO_MESSAGE };
+module.exports = { createRelay, buildFeedEventPrompt, buildMeetingPrepPrompt, buildAaronPrompt, RELAY_NOTE, GREETING, HELP, PRIVATE, NO_MESSAGE };

@@ -97,7 +97,7 @@ test("Aaron's message goes ahead of feed events still waiting, and waiting event
   gates.shift()();
   await first;
   await question;
-  assert.equal(asked[2].text, "what's next?", "the question went before B and C");
+  assert.ok(asked[2].text.startsWith("what's next?\n\n[Relay note"), "the question went before B and C");
   await new Promise((r) => setImmediate(r));
   assert.equal(gates.length, 1, "B and C went together");
   assert.match(asked[3].text, /event B\n---\nevent C/);
