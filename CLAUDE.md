@@ -191,6 +191,11 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
   Now: the indexer marks a rewrite identical to the indexed record `unchanged` and the notifier drops it; a series groups
   by title without the " — <date>" suffix; the relay runs Aaron's messages ahead of waiting feed events and merges
   waiting events into one prompt (up to 24 records).
+- **Two hidden 300 s limits** cut Teams answers off behind a busy Puget queue (2026-10-09): Node's built-in `fetch`
+  drops a response slower than 300 s (undici `headersTimeout`; the relay now uses `node:http`, so its own 20-min abort
+  is the only deadline), and Hermes's history compression times out at 300 s (edit-3 `config.yaml` now sets
+  `auxiliary.compression.timeout: 900`; backup `config.yaml.bak-20261009`). Feed events land in Aaron's own thread, so
+  it reaches the compression threshold (~55.7K of 65K tokens) faster than chat alone would.
 - **Puget's gateway needs `X-Client`** and streaming; Hermes sends both via `model.default_headers` and its default
   `stream: true`. Puget's `gemma-bigctx` has n_ctx 262144 (confirmed by the puget session 2026-10-08); Hermes's
   `context_length` stays 65536 on purpose, so one long chat never ties up the box's single slot. The queue is strict
