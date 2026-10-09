@@ -6,7 +6,7 @@
 #   bash scripts/deploy-helper.sh other-host   # any ~/.ssh/config alias
 set -euo pipefail
 cd "$(dirname "$0")/.."
-HOST="${1:-engineering-mac}"
+HOST="${1:-edit-3}"
 LABEL="com.northwoods.HermesHelper"
 xcodegen generate --quiet
 xcodebuild -project Minutes.xcodeproj -scheme HermesHelper -configuration Release \

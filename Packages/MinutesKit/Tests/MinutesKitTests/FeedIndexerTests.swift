@@ -121,3 +121,22 @@ private func write(_ text: String, to url: URL, modified: Date? = nil) throws {
     #expect(try index.meta("feed_format") == String(FeedRecord.formatVersion))
     #expect(try again.refresh().indexed == 0)
 }
+
+@Test func aRewriteWithNoRealChangeIsMarkedUnchanged() throws {
+    // Outlook re-sends every occurrence of a series, word for word, whenever the series is touched (edit-3, 2026-10-09:
+    // nine identical copies of each Weekend Tech Rehearsal in 90 minutes). Only a real change is news.
+    let folder = try tempDir()
+    let index = try NotesIndex(url: tempDir().appendingPathComponent("index.db"))
+    let t0 = Date(timeIntervalSince1970: 1_800_000_000)
+    let same = #"{"type":"calendar","action":"updated","subject":"Rehearsal","start":"2026-10-16T21:15:00.0000000","id":"E1"}"#
+    try write(same, to: folder.appendingPathComponent("calendar/a.json"), modified: t0)
+    try write(same, to: folder.appendingPathComponent("calendar/b.json"), modified: t0.addingTimeInterval(1))
+    let feed = FeedIndexer(folder: folder, index: index)
+    let first = try feed.refresh()
+    #expect(first.records.map(\.unchanged) == [false, true])
+
+    try write(same, to: folder.appendingPathComponent("calendar/c.json"), modified: t0.addingTimeInterval(60))
+    #expect(try feed.refresh().records.map(\.unchanged) == [true])
+    try write(same.replacingOccurrences(of: "21:15", with: "22:15"), to: folder.appendingPathComponent("calendar/d.json"), modified: t0.addingTimeInterval(120))
+    #expect(try feed.refresh().records.map(\.unchanged) == [false])
+}

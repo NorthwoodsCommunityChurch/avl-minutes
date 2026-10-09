@@ -5,8 +5,8 @@ import Foundation
 ///
 /// Rules (spec 2026-10-08-hermes-proactive-loop-design.md): calendar records that were updated or deleted,
 /// calendar records added for the next 48 hours, and mail Aaron sent. Only files newer than an hour, so a
-/// backfill, a first pass, or a restart never floods Hermes; a recurring series collapses to one line; at most
-/// 12 lines per batch.
+/// backfill, a first pass, or a restart never floods Hermes; a file that repeats what is already indexed word for word
+/// is not news; a recurring series collapses to one line; at most 12 lines per batch.
 public enum FeedNotifier {
     /// OneDrive sync plus a pass can take a while; anything older than this is history, not news.
     public static let freshness: TimeInterval = 60 * 60
@@ -15,7 +15,7 @@ public enum FeedNotifier {
 
     public static func select(_ records: [FeedIndexer.IndexedRecord], now: Date = Date()) -> [FeedIndexer.IndexedRecord] {
         records.filter { r in
-            guard now.timeIntervalSince(r.modifiedAt) <= freshness else { return false }
+            guard now.timeIntervalSince(r.modifiedAt) <= freshness, !r.unchanged else { return false }
             // Backfills write old items into brand-new files; they are history, never news.
             if r.path.split(separator: "/").last?.hasPrefix("backfill-") == true { return false }
             switch r.folder {
@@ -41,18 +41,18 @@ public enum FeedNotifier {
         var seriesSeen: [String: Int] = [:]
         var groups: [String: [FeedIndexer.IndexedRecord]] = [:]
         for r in records where r.folder == "calendar" {
-            groups["\(r.title)|\(calendarAction(r.body))", default: []].append(r)
+            groups["\(seriesTitle(r.title))|\(calendarAction(r.body))", default: []].append(r)
         }
         for r in records {
             if r.folder == "calendar" {
-                let key = "\(r.title)|\(calendarAction(r.body))"
+                let key = "\(seriesTitle(r.title))|\(calendarAction(r.body))"
                 let group = groups[key] ?? [r]
                 if group.count > 1 {
                     if seriesSeen[key] != nil { continue }
                     seriesSeen[key] = group.count
                     let next = group.compactMap { firstDate(in: $0.body) }.filter { $0 >= now }.min()
                     let when = next.map { " next is \(Self.display($0))" } ?? ""
-                    out.append("\(r.title): \(group.count) occurrences \(calendarAction(r.body)),\(when)")
+                    out.append("\(seriesTitle(r.title)): \(group.count) occurrences \(calendarAction(r.body)),\(when)")
                     continue
                 }
             }
@@ -60,6 +60,12 @@ public enum FeedNotifier {
             if out.count == maxLines { break }
         }
         return Array(out.prefix(maxLines))
+    }
+
+    /// A calendar title without the " — <local date>" FeedRecord adds, so a series' occurrences share it.
+    static func seriesTitle(_ title: String) -> String {
+        guard let dash = title.range(of: " — ", options: .backwards) else { return title }
+        return String(title[..<dash.lowerBound])
     }
 
     static func calendarAction(_ body: String) -> String {

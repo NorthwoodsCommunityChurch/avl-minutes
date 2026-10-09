@@ -3,7 +3,7 @@
 #   bash hermes-teams/scripts/deploy-teams-relay.sh [host]      (default engineering-mac)
 set -euo pipefail
 cd "$(dirname "$0")/.."
-HOST="${1:-engineering-mac}"
+HOST="${1:-edit-3}"
 LABEL="com.northwoods.hermes-teams"
 tar czf /tmp/hermes-teams.tgz --exclude=config/local.json --exclude=data --exclude=node_modules --exclude='teams-app/*.zip' .
 scp -q /tmp/hermes-teams.tgz "$HOST:hermes-teams.tgz"

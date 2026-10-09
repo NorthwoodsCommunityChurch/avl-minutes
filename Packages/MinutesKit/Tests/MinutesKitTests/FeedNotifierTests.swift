@@ -53,3 +53,25 @@ private func record(_ folder: String, _ title: String, body: String, age: TimeIn
     let real = record("mail", "To Kirk: Now", body: "Sent by Aaron to: Kirk", age: 60, now: now, itemAge: 120)
     #expect(FeedNotifier.select([oldMailFreshFile, backfillNamed, real], now: now).map(\.title) == ["To Kirk: Now"])
 }
+
+@Test func unchangedRewritesNeverTrigger() {
+    let now = Date()
+    let body = "Calendar event, updated\nWhen: 2026-10-16T21:15:00 to x"
+    let changed = record("calendar", "Rehearsal — Fri Oct 16, 2026 4:15 PM", body: body, age: 60, now: now)
+    let base = record("calendar", "Rehearsal — Fri Oct 23, 2026 4:15 PM", body: body, age: 60, now: now)
+    let rewrite = FeedIndexer.IndexedRecord(path: base.path, folder: base.folder, title: base.title, body: base.body,
+                                            groupKey: nil, modifiedAt: base.modifiedAt, createdAt: base.createdAt, unchanged: true)
+    #expect(FeedNotifier.select([changed, rewrite], now: now).map(\.title) == [changed.title])
+}
+
+@Test func aSeriesCollapsesEvenThoughEachTitleCarriesItsDate() {
+    // Calendar titles end in " — <local date>" since feed format 2, so each occurrence's title differs.
+    let now = Date()
+    let records = (1...20).map { day in
+        record("calendar", "Weekend Tech Rehearsal — Fri Nov \(day), 2026 4:15 PM",
+               body: "Calendar event, updated\nWhen: 2026-11-\(String(format: "%02d", day))T16:15:00 to x", age: 30, now: now)
+    }
+    let lines = FeedNotifier.lines(for: FeedNotifier.select(records, now: now), now: now)
+    #expect(lines.count == 1)
+    #expect(lines[0].hasPrefix("Weekend Tech Rehearsal: 20 occurrences updated"))
+}

@@ -185,6 +185,12 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
   version in the index triggers a full re-read when record text changes shape (calendar titles now carry the local date).
 - **Outlook writes several files per calendar event** (added, added, updated, updated); feed records carry a
   `group_key` (`calendar:<event id>`) and the newest file replaces the rest (index schema 2, migrates in place).
+- **Outlook re-sends a whole recurring series, word for word, whenever it is touched** (2026-10-09: nine identical
+  copies of every Weekend Tech Rehearsal in 90 min). Each burst became a 12-line feed event, each took Hermes 2-5 min on
+  Puget, and they shared the relay's one queue with chat, so Aaron's questions waited 10+ min ("Hermes isn't responding").
+  Now: the indexer marks a rewrite identical to the indexed record `unchanged` and the notifier drops it; a series groups
+  by title without the " — <date>" suffix; the relay runs Aaron's messages ahead of waiting feed events and merges
+  waiting events into one prompt (up to 24 records).
 - **Puget's gateway needs `X-Client`** and streaming; Hermes sends both via `model.default_headers` and its default
   `stream: true`. Puget's `gemma-bigctx` has n_ctx 262144 (confirmed by the puget session 2026-10-08); Hermes's
   `context_length` stays 65536 on purpose, so one long chat never ties up the box's single slot. The queue is strict

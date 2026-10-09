@@ -6,6 +6,8 @@ const GREETING = "Hi Aaron. Ask me about your notes and meetings. `/new` starts 
 const HELP = "Just type a question. `/new` starts a fresh conversation (I forget the thread so far). `/help` shows this.";
 const PRIVATE = "Sorry, this assistant is private.";
 const NO_MESSAGE = "NO_MESSAGE";
+/** Feed events still waiting when Hermes frees up go to it together, up to this many records in one prompt. */
+const MAX_MERGED_RECORDS = 24;
 
 /** What the relay tells Hermes when the helper reports feed changes (calendar edits, sent mail). */
 function buildFeedEventPrompt(records, nonce = require("node:crypto").randomBytes(6).toString("hex")) {
@@ -27,7 +29,25 @@ function buildFeedEventPrompt(records, nonce = require("node:crypto").randomByte
 function createRelay({ config, connector, hermes, state, log = () => {}, typingIntervalMs = 4000, now = () => Date.now() }) {
   const allowed = (config && config.allowedUsers) || [];
   const configuredTenant = (config && config.teamsBot && config.teamsBot.tenantId) || "";
-  let queue = Promise.resolve();
+  // Hermes has one slot, so one job runs at a time. Aaron's activities always go before feed events still waiting
+  // (a burst of calendar rewrites once queued five events, minutes each, in front of his question), and waiting feed
+  // events are merged into one prompt.
+  const chatJobs = [];
+  const feedJobs = [];
+  let running = false;
+
+  function pump() {
+    if (running) return;
+    let job;
+    if (chatJobs.length) job = chatJobs.shift();
+    else if (feedJobs.length) job = takeFeedBatch();
+    else return;
+    running = true;
+    job().finally(() => {
+      running = false;
+      pump();
+    });
+  }
 
   const tenantOf = (activity) => (activity.conversation && activity.conversation.tenantId) || (activity.channelData && activity.channelData.tenant && activity.channelData.tenant.id) || "";
 
@@ -167,20 +187,46 @@ function createRelay({ config, connector, hermes, state, log = () => {}, typingI
     }
   }
 
-  /** Processes one activity; activities run one at a time, in arrival order (the model has one slot). */
+  /** Processes one activity; activities run one at a time, in arrival order, ahead of waiting feed events. */
   function handle(activity) {
     const run = async () => {
       if (activity.type === "message") await onMessage(activity);
       else if (activity.type === "conversationUpdate") await onConversationUpdate(activity);
     };
-    const p = queue.then(run, run);
-    queue = p.catch(() => {});
-    return p;
+    return new Promise((resolve, reject) => {
+      chatJobs.push(() => run().then(resolve, reject));
+      queueMicrotask(pump);
+    });
+  }
+
+  /** The oldest waiting feed events, as one job; each caller gets the shared outcome. */
+  function takeFeedBatch() {
+    const batch = [feedJobs.shift()];
+    let count = batch[0].records.length;
+    while (feedJobs.length && count + feedJobs[0].records.length <= MAX_MERGED_RECORDS) {
+      count += feedJobs[0].records.length;
+      batch.push(feedJobs.shift());
+    }
+    const records = batch.flatMap((j) => j.records);
+    return () => runFeedEvent(records).then((r) => batch.forEach((j) => j.resolve(r)), (err) => batch.forEach((j) => j.reject(err)));
+  }
+
+  async function runFeedEvent(records) {
+    const home = state.get("homeConversation");
+    const started = now();
+    const r = await hermes.ask({ conversationId: home.id, text: buildFeedEventPrompt(records) });
+    const text = (r.text || "").trim();
+    const silent = !text || text.replace(/[`*.!]/g, "").trim().toUpperCase() === NO_MESSAGE;
+    if (!silent) {
+      for (const part of splitMessage(text)) await connector.sendToConversation(home.serviceUrl, home.id, { type: "message", textFormat: "markdown", text: part });
+    }
+    log("info", { event: "notified", records: records.length, posted: !silent, chars: text.length, seconds: Math.round((now() - started) / 1000) });
+    return { posted: !silent };
   }
 
   /**
    * A feed event from the helper: Hermes reads it in Aaron's own thread and either answers with the line Aaron
-   * should see (posted to his 1:1 chat) or NO_MESSAGE. Runs in the same one-at-a-time queue as chat messages.
+   * should see (posted to his 1:1 chat) or NO_MESSAGE. Waits behind Aaron's own messages; see `pump`.
    */
   function notify({ records }) {
     const home = state.get("homeConversation");
@@ -189,20 +235,10 @@ function createRelay({ config, connector, hermes, state, log = () => {}, typingI
       err.status = 409;
       return Promise.reject(err);
     }
-    const run = async () => {
-      const started = now();
-      const r = await hermes.ask({ conversationId: home.id, text: buildFeedEventPrompt(records) });
-      const text = (r.text || "").trim();
-      const silent = !text || text.replace(/[`*.!]/g, "").trim().toUpperCase() === NO_MESSAGE;
-      if (!silent) {
-        for (const part of splitMessage(text)) await connector.sendToConversation(home.serviceUrl, home.id, { type: "message", textFormat: "markdown", text: part });
-      }
-      log("info", { event: "notified", records: (records || []).length, posted: !silent, chars: text.length, seconds: Math.round((now() - started) / 1000) });
-      return { posted: !silent };
-    };
-    const p = queue.then(run, run);
-    queue = p.catch(() => {});
-    return p;
+    return new Promise((resolve, reject) => {
+      feedJobs.push({ records: records || [], resolve, reject });
+      queueMicrotask(pump);
+    });
   }
 
   return { handle, notify, isAllowed, tenantOk };

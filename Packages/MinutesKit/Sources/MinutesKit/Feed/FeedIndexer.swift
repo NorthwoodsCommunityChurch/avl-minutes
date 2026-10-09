@@ -21,9 +21,13 @@ public final class FeedIndexer: @unchecked Sendable {
         public let modifiedAt: Date
         /// The item's own time: received, sent, start, or created.
         public let createdAt: Date
-        public init(path: String, folder: String, title: String, body: String, groupKey: String?, modifiedAt: Date, createdAt: Date? = nil) {
+        /// A newer file for something already indexed, word for word the same (Outlook re-sends a whole series
+        /// whenever it is touched). Indexed so the newest file wins, but it is not news.
+        public let unchanged: Bool
+        public init(path: String, folder: String, title: String, body: String, groupKey: String?, modifiedAt: Date,
+                    createdAt: Date? = nil, unchanged: Bool = false) {
             self.path = path; self.folder = folder; self.title = title; self.body = body; self.groupKey = groupKey
-            self.modifiedAt = modifiedAt; self.createdAt = createdAt ?? modifiedAt
+            self.modifiedAt = modifiedAt; self.createdAt = createdAt ?? modifiedAt; self.unchanged = unchanged
         }
     }
 
@@ -130,6 +134,7 @@ public final class FeedIndexer: @unchecked Sendable {
                     result.skipped += 1
                     continue
                 }
+                var unchanged = false
                 if let key = parsed.groupKey, let latest = try index.latestInGroup(key) {
                     let mine = milliseconds(note.modifiedAt)
                     if latest.modifiedMs > mine || (latest.modifiedMs == mine && latest.id > note.id) {
@@ -137,11 +142,12 @@ public final class FeedIndexer: @unchecked Sendable {
                         result.skipped += 1
                         continue
                     }
+                    unchanged = latest.title == parsed.metadata.title && latest.body == parsed.body
                 }
                 try index.upsert(parsed.metadata, body: parsed.body, groupKey: parsed.groupKey)
                 result.records.append(IndexedRecord(path: path, folder: parsed.metadata.folder, title: parsed.metadata.title,
                                                     body: parsed.body, groupKey: parsed.groupKey, modifiedAt: note.modifiedAt,
-                                                    createdAt: parsed.metadata.createdAt))
+                                                    createdAt: parsed.metadata.createdAt, unchanged: unchanged))
                 if let key = parsed.groupKey {
                     for gone in try index.delete(groupKey: key, except: parsed.metadata.id) {
                         let gonePath = String(gone.dropFirst(FeedRecord.idPrefix.count))

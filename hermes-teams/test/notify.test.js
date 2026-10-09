@@ -80,3 +80,29 @@ test("a group chat never becomes home", async () => {
   await relay.handle(group);
   assert.equal(state.get("homeConversation"), null);
 });
+
+test("Aaron's message goes ahead of feed events still waiting, and waiting events reach Hermes as one prompt", async () => {
+  // edit-3, 2026-10-09: bursts of calendar rewrites queued five feed events (2-5 min each on Puget) in front of a question.
+  const gates = [];
+  const { relay, asked } = harness({
+    askImpl: (q) => (q.text.includes("Feed event") ? new Promise((resolve) => gates.push(() => resolve({ text: "NO_MESSAGE" }))) : { text: "answer" }),
+  });
+  await relay.handle(message("hi"));
+  const first = relay.notify({ records: ["event A"] });
+  await new Promise((r) => setImmediate(r));
+  assert.equal(gates.length, 1, "event A is with Hermes");
+  const second = relay.notify({ records: ["event B"] });
+  const third = relay.notify({ records: ["event C"] });
+  const question = relay.handle(message("what's next?"));
+  gates.shift()();
+  await first;
+  await question;
+  assert.equal(asked[2].text, "what's next?", "the question went before B and C");
+  await new Promise((r) => setImmediate(r));
+  assert.equal(gates.length, 1, "B and C went together");
+  assert.match(asked[3].text, /event B\n---\nevent C/);
+  gates.shift()();
+  assert.deepEqual(await second, { posted: false });
+  assert.deepEqual(await third, { posted: false });
+  assert.equal(asked.length, 4);
+});

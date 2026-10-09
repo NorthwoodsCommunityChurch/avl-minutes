@@ -126,10 +126,10 @@ public final class NotesIndex: @unchecked Sendable {
     }
 
     /// The newest record in a group (by file date, then id), if any.
-    public func latestInGroup(_ groupKey: String) throws -> (id: String, modifiedMs: Int64)? {
+    public func latestInGroup(_ groupKey: String) throws -> (id: String, modifiedMs: Int64, title: String, body: String)? {
         try serialized {
-            var found: (id: String, modifiedMs: Int64)?
-            try db.query("SELECT note_id, modified_at FROM notes WHERE group_key = ?1 ORDER BY modified_at DESC, note_id DESC LIMIT 1", [.text(groupKey)]) { found = ($0.text(0), $0.int(1)) }
+            var found: (id: String, modifiedMs: Int64, title: String, body: String)?
+            try db.query("SELECT note_id, modified_at, title, body FROM notes WHERE group_key = ?1 ORDER BY modified_at DESC, note_id DESC LIMIT 1", [.text(groupKey)]) { found = ($0.text(0), $0.int(1), $0.text(2), $0.text(3)) }
             return found
         }
     }
