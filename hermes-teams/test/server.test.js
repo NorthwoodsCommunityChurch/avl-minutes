@@ -27,7 +27,12 @@ test("/notify needs the notify key, a records array, and then hands the batch to
     assert.equal(ok.status, 202);
     assert.equal(ok.json.accepted, 2);
     await new Promise((r) => setTimeout(r, 10));
-    assert.deepEqual(calls, [{ records: ["Calendar event, updated", "Sent by Aaron to: Kirk"] }]);
+    assert.deepEqual(calls, [{ records: ["Calendar event, updated", "Sent by Aaron to: Kirk"], kind: "feed" }]);
+    assert.equal((await post(port, "/notify", JSON.stringify({ records: ["x"], kind: "weather" }), { "x-notify-key": "k-notify" })).status, 400);
+    const meeting = await post(port, "/notify", JSON.stringify({ records: ["Meeting prep: Sync"], kind: "meeting" }), { "x-notify-key": "k-notify" });
+    assert.equal(meeting.status, 202);
+    await new Promise((r) => setTimeout(r, 10));
+    assert.deepEqual(calls[1], { records: ["Meeting prep: Sync"], kind: "meeting" });
   } finally {
     server.close();
   }

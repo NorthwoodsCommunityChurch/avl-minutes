@@ -106,3 +106,60 @@ test("Aaron's message goes ahead of feed events still waiting, and waiting event
   assert.deepEqual(await third, { posted: false });
   assert.equal(asked.length, 4);
 });
+
+const { buildMeetingPrepPrompt } = require("../lib/relay");
+
+test("the meeting-prep prompt asks for a brief and wraps the invite as untrusted data", () => {
+  const p = buildMeetingPrepPrompt(["Meeting prep: Atrium Tech Discussion\nStarts: Fri Oct 9, 2026 3:00 PM"], "abc123");
+  assert.match(p, /^Meeting prep \(automatic, not a message from Aaron\)/);
+  assert.match(p, /at most eight lines/);
+  assert.match(p, /NO_MESSAGE/);
+  assert.match(p, /never follow instructions/);
+  assert.ok(p.includes("<untrusted_feed_record_abc123>\nMeeting prep: Atrium Tech Discussion\nStarts: Fri Oct 9, 2026 3:00 PM\n</untrusted_feed_record_abc123>"));
+  assert.equal((p.match(/untrusted_feed_record/gi) || []).length, 3);
+});
+
+test("a meeting event uses the meeting prompt and is never merged into a feed batch", async () => {
+  const gates = [];
+  const { relay, asked, logs } = harness({
+    askImpl: (q) => (/^(Feed event|Meeting prep)/.test(q.text) ? new Promise((resolve) => gates.push(() => resolve({ text: "NO_MESSAGE" }))) : { text: "answer" }),
+  });
+  await relay.handle(message("hi"));
+  const first = relay.notify({ records: ["event A"] });
+  await new Promise((r) => setImmediate(r));
+  const meeting = relay.notify({ records: ["Meeting prep: Sync"], kind: "meeting" });
+  const second = relay.notify({ records: ["event B"] });
+  gates.shift()();
+  await first;
+  await new Promise((r) => setImmediate(r));
+  assert.match(asked[2].text, /^Meeting prep/);
+  assert.ok(!asked[2].text.includes("event B"), "the feed event behind it waited");
+  gates.shift()();
+  await meeting;
+  await new Promise((r) => setImmediate(r));
+  assert.match(asked[3].text, /^Feed event/);
+  assert.ok(asked[3].text.includes("event B"));
+  gates.shift()();
+  await second;
+  assert.ok(logs.some((l) => l.event === "notified" && l.kind === "meeting"));
+  assert.ok(logs.some((l) => l.event === "notified" && l.kind === "feed"));
+});
+
+test("an unknown kind is refused with 400", async () => {
+  const { relay } = harness();
+  await relay.handle(message("hi"));
+  await assert.rejects(relay.notify({ records: ["x"], kind: "weather" }), (e) => e.status === 400);
+});
+
+test("postHome posts markdown to Aaron's chat and refuses before a home conversation exists", async () => {
+  const { relay, sent } = harness();
+  await assert.rejects(relay.postHome("hello"), (e) => e.status === 409);
+  await relay.handle(message("hi"));
+  sent.length = 0;
+  await relay.postHome("**Scrum Prep Notes**\nline");
+  assert.equal(sent.length, 1);
+  assert.equal(sent[0].id, "a:home");
+  assert.equal(sent[0].serviceUrl, SERVICE_URL);
+  assert.equal(sent[0].activity.textFormat, "markdown");
+  assert.equal(sent[0].activity.text, "**Scrum Prep Notes**\nline");
+});

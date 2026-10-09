@@ -3,6 +3,7 @@
  * hermes-teams: the relay between the Teams bot "Hermes" and Hermes Agent on this Mac.
  *   GET  /health          -> {ok, relay, bot:{configured}, hermes:{ok}}
  *   POST /webhooks/teams  -> front-door key, Microsoft's JWT, 200 at once; the answer follows in the chat.
+ *   POST /notify          -> local only; {records[], kind?: feed|meeting} from Hermes Helper, needs x-notify-key.
  * Binds 127.0.0.1 only; the Cloudflare Worker reaches it through the tunnel. Run by launchd (see launchd/).
  */
 const http = require("node:http");
@@ -85,9 +86,11 @@ function createServer({ config, relay, verifier, hermes, log = () => {} }) {
         }
         const records = Array.isArray(payload && payload.records) ? payload.records.map(String) : [];
         if (!records.length) throw new RelayError(400, "records[] is empty");
-        log("info", { event: "notify", records: records.length });
+        const kind = payload.kind === undefined ? "feed" : String(payload.kind);
+        if (kind !== "feed" && kind !== "meeting") throw new RelayError(400, "kind must be feed or meeting");
+        log("info", { event: "notify", kind, records: records.length });
         json(res, 202, { accepted: records.length });
-        relay.notify({ records }).catch((err) => log(err.status === 409 ? "warn" : "error", { event: "notify-failed", message: err.message }));
+        relay.notify({ records, kind }).catch((err) => log(err.status === 409 ? "warn" : "error", { event: "notify-failed", message: err.message }));
         return;
       }
       throw new RelayError(404, "Not found");
