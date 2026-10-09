@@ -29,9 +29,11 @@ enum IndexService {
         if !attachFeed(requested: feedFolder, index: index) {
             print("\(stamp()) AI Feed folder not found; indexing Notes only and looking again every \(Int(feedInterval)) s")
         }
+        announceMeetings(index)
         Timer.scheduledTimer(withTimeInterval: feedInterval, repeats: true) { _ in
             Task { @MainActor in
                 if let feed { refreshFeed(feed) } else { _ = attachFeed(requested: feedFolder, index: index) }
+                announceMeetings(index)
             }
         }
         report(indexer)
@@ -93,6 +95,36 @@ enum IndexService {
                     lastFeedProblem = text
                     logger.error("Feed refresh failed")
                 }
+            }
+        }
+    }
+
+    @MainActor private static var meetingBusy = false
+
+    /// The clock half of the proactive loop: a meeting starting within `MeetingPrep.window` wakes Hermes with its
+    /// invite (relay kind "meeting"). Marked in the index only once the relay accepted it, so a relay outage retries
+    /// next tick until the meeting has started. Needs the index only, so it works while OneDrive is still catching up.
+    @MainActor
+    private static func announceMeetings(_ index: NotesIndex) {
+        guard !meetingBusy else { return }
+        meetingBusy = true
+        Task.detached {
+            let now = Date()
+            var picks: [MeetingPrep.Pick] = []
+            var status = ""
+            do {
+                let notes = try index.upcoming(folder: "calendar", account: FeedRecord.account, from: now, to: now.addingTimeInterval(MeetingPrep.window))
+                picks = MeetingPrep.select(notes, now: now) { key, start in (try? index.meta(key)) == start }
+                if !picks.isEmpty {
+                    status = await FeedNotifierClient.send(picks.map { MeetingPrep.record(for: $0, now: now) }, kind: "meeting")
+                    if status.hasPrefix("sent") { for pick in picks { try index.setMeta(pick.key, pick.startToken) } }
+                }
+            } catch {
+                status = "index problem: \(error)"
+            }
+            await MainActor.run {
+                meetingBusy = false
+                if !picks.isEmpty || !status.isEmpty { print("\(stamp()) meeting prep: \(picks.count) meeting(s), \(status)"); fflush(stdout) }
             }
         }
     }

@@ -23,14 +23,15 @@ enum FeedNotifierClient {
     }
 
     /// Posts the lines; returns a short status for the log. Never throws, never blocks longer than 10 s.
-    static func send(_ lines: [String]) async -> String {
+    /// `kind` is "feed" (calendar changes, sent mail) or "meeting" (a meeting starting soon); the relay picks the prompt.
+    static func send(_ lines: [String], kind: String = "feed") async -> String {
         guard !lines.isEmpty else { return "nothing to send" }
         guard let relay = relay() else { return "relay not configured (no notifyKey in hermes-teams config)" }
         var request = URLRequest(url: relay.url, timeoutInterval: 10)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(relay.key, forHTTPHeaderField: "x-notify-key")
-        request.httpBody = try? JSONSerialization.data(withJSONObject: ["records": lines])
+        request.httpBody = try? JSONSerialization.data(withJSONObject: ["records": lines, "kind": kind])
         do {
             let (_, response) = try await URLSession.shared.data(for: request)
             let status = (response as? HTTPURLResponse)?.statusCode ?? 0
