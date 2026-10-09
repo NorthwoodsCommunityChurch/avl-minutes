@@ -1242,6 +1242,14 @@ No commit (nothing in the repo changed). Note the deploy time in the Task 12 sta
 
 **Files:** none (operations; results go into Task 12's status).
 
+**Results (2026-10-09, inline execution):** Tasks 1–10 done and deployed (relay 12:06, helper 12:06, SOUL 12:09 local). Step 1
+passed: one-shot job "Relay test" wrote its file at 12:17:08, the relay posted it at 12:17:13 (`cron-output … posted:true`),
+job removed. Step 2 passed on the 1:00 PM Weekend Tech Rehearsal: helper `meeting prep: 1 meeting(s), sent` at 12:26:28
+(34 min ahead), relay `notified kind:meeting posted:false` after 537 s (NO_MESSAGE for a routine rehearsal, as the rule
+says); the 3:00 PM Atrium meeting is the first brief Aaron should see (~2:25–2:35 PM). Step 3 awaits Aaron's next task or
+ticket message in Teams. Found and fixed along the way: a runaway identical-failure loop (hard stops on, `max_turns` 60),
+Planka needing `"type":"project"`, and `boards get` spilling over 50K chars (SOUL now says `cards list`).
+
 - [ ] **Step 1: A one-shot job reaches Teams**
 
 Run: `ssh edit-3 'export PATH=$HOME/.local/bin:$PATH; hermes cron create --help | sed -n 1,12p'` to read the positional order, then create a one-shot job named `Relay test`, delivery `local`, schedule `in 2 minutes`, prompt `Reply with exactly: Relay test OK.` (if `--repeat` is needed for a one-shot, pass `--repeat 1`). Then `hermes cron list` to get its id.
