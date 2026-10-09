@@ -205,6 +205,35 @@ public final class NotesIndex: @unchecked Sendable {
 
     // MARK: Reads
 
+    /// A record waiting to happen. Feed calendar records store the event's start as `created_at`.
+    public struct UpcomingNote: Sendable, Equatable {
+        public let id: String
+        public let groupKey: String?
+        public let title: String
+        public let body: String
+        public let start: Date
+        public init(id: String, groupKey: String?, title: String, body: String, start: Date) {
+            self.id = id; self.groupKey = groupKey; self.title = title; self.body = body; self.start = start
+        }
+    }
+
+    /// Records in `folder` and `account` whose item time (`created_at`) is in `(from, to]`, soonest first.
+    public func upcoming(folder: String, account: String, from: Date, to: Date) throws -> [UpcomingNote] {
+        try serialized {
+            var out: [UpcomingNote] = []
+            try db.query("""
+            SELECT note_id, group_key, title, body, created_at FROM notes
+            WHERE folder = ?1 AND account = ?2 AND created_at > ?3 AND created_at <= ?4
+            ORDER BY created_at, note_id
+            """, [.text(folder), .text(account), .int(milliseconds(from)), .int(milliseconds(to))]) { r in
+                let key = r.text(1)   // Row.text gives "" for NULL
+                out.append(UpcomingNote(id: r.text(0), groupKey: key.isEmpty ? nil : key, title: r.text(2), body: r.text(3),
+                                        start: date(milliseconds: r.int(4))))
+            }
+            return out
+        }
+    }
+
     public func stamps() throws -> [String: IndexedStamp] {
         try serialized {
             var out: [String: IndexedStamp] = [:]

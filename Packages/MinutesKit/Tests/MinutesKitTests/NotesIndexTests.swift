@@ -125,3 +125,26 @@ private func meta(_ id: String, _ title: String, folder: String = "Notes", modif
     try reopened.upsert(meta("2", "After", folder: "calendar"), body: "y", groupKey: "calendar:E9")
     #expect(try reopened.ids(groupKey: "calendar:E9") == ["2"])
 }
+
+@Test func upcomingReturnsCalendarRecordsByItemTimeSoonestFirst() throws {
+    let index = try NotesIndex(url: tempURL())
+    let now = Date()
+    func put(_ id: String, start: TimeInterval, folder: String = "calendar", account: String = FeedRecord.account, group: String? = nil) throws {
+        try index.upsert(NoteMetadata(id: id, title: id, folder: folder, account: account,
+                                      createdAt: now.addingTimeInterval(start), modifiedAt: now, isLocked: false),
+                         body: "Calendar event, added", groupKey: group)
+    }
+    try put("feed:calendar/later.json", start: 30 * 60)
+    try put("feed:calendar/soon.json", start: 10 * 60, group: "calendar:A")
+    try put("feed:calendar/past.json", start: -60)
+    try put("feed:calendar/edge.json", start: 35 * 60)
+    try put("feed:calendar/far.json", start: 2 * 3600)
+    try put("feed:mail/x.json", start: 10 * 60, folder: "mail")
+    try put("Notes-x", start: 10 * 60, account: "iCloud")
+    let found = try index.upcoming(folder: "calendar", account: FeedRecord.account, from: now, to: now.addingTimeInterval(35 * 60))
+    #expect(found.map(\.id) == ["feed:calendar/soon.json", "feed:calendar/later.json", "feed:calendar/edge.json"])
+    #expect(found[0].groupKey == "calendar:A")
+    #expect(found[1].groupKey == nil)
+    #expect(found[0].body == "Calendar event, added")
+    #expect(abs(found[0].start.timeIntervalSince(now.addingTimeInterval(10 * 60))) < 0.001)
+}
