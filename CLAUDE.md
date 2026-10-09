@@ -109,9 +109,10 @@ Hermes with a relay note appended (card first, search first).
 - `Minutes/Audio`, `Minutes/Pipeline`, `Minutes/Claude`, `Minutes/App`
 - `Shared/Notes` — Notes bridge, indexer, AppleScript runner, compiled into both apps; `Shared/AppIdentity.swift` names the running app for logs/messages
 - `HermesHelper/` — the mini's background app: main, `IndexService`, Info.plist, entitlements, launchd template
-- `hermes-teams/` — Node relay between the Teams bot and Hermes's API (lib/, test/, cloudflare/, launchd/, scripts/)
-- `Packages/MinutesKit/Sources/MinutesKit/Feed/` — `FeedRecord` + `FeedIndexer` (AI Feed files → index records)
-- `scripts/` — build-and-run, fetch-deps, no-audio guard (+ self-test), audit-writes, mcp-smoke-test
+- `hermes-teams/` — Node relay between the Teams bot and Hermes's API (lib/ incl. `relay.js` prompts + queue and `cron-output.js` watcher, test/, cloudflare/, launchd/, scripts/)
+- `hermes-tools/` — what runs on the mini but is not an app: `SOUL.md` (Hermes's standing rules, master copy) and the `pco-mcp/` mirror
+- `Packages/MinutesKit/Sources/MinutesKit/Feed/` — `FeedRecord` + `FeedIndexer` (AI Feed files → index records), `FeedNotifier` (which changes wake Hermes), `MeetingPrep` (which meetings wake her)
+- `scripts/` — build-and-run, fetch-deps, no-audio guard (+ self-test), audit-writes, mcp-smoke-test, deploy-helper / deploy-soul / deploy-pco-mcp (to the mini), power-automate/ flow generators
 
 ## Key identifiers
 | Thing | Value |

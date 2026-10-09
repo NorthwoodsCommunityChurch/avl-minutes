@@ -11,3 +11,4 @@ DerivedData/
 xcuserdata/
 .superpowers/
 Vendor/
+.wrangler/
