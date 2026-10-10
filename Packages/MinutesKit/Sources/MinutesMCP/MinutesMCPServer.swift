@@ -9,7 +9,8 @@ public enum MinutesMCPServer {
     Search Aaron's Apple Notes, including meeting transcripts made by the Minutes app. \
     Use search_notes first, then get_note to read a result in full. \
     \(NotesTools.transcriptFolderHint) \
-    current_time is the only clock available: call it before answering anything about today, now, or deadlines.
+    current_time is the only clock available: call it before answering anything about today, now, or deadlines. \
+    task_board, where present, is Aaron's whole task board in one call: every open list and card with ids.
     """
 
     private static let dateHelp = "YYYY-MM-DD (local day) or ISO 8601. Filters on a note's last edit, or on the item's own time for mail and Teams (sent) and calendar (start) records. Pass it whenever Aaron names a day or a span (yesterday, this week, since Monday), with the date from current_time."
@@ -59,19 +60,46 @@ public enum MinutesMCPServer {
         ),
     ]
 
+    /// Aaron's task board, one line per card. Listed only where a `task-board.json` exists (the mini), so
+    /// Minutes' own server for Claude Code does not advertise a tool that cannot work there.
+    static let taskBoardTool = Tool(
+        name: "task_board",
+        description: "Aaron's task board (Planka, board \"To Do\"): every open list and every card, one line each, with list and card ids in brackets (a card id is what cards {\"action\":\"update\"} needs to move it). One call replaces listing each list: use it for \"my to-do list\", to find the card an email or a message closed, and for meeting prep. Done cards are left out unless include_done is true.",
+        inputSchema: schema(properties: [
+            "include_done": property("boolean", "Also list the Done cards. Default false."),
+        ])
+    )
+
+    /// The tool list for a server: the notes tools, plus task_board when its config file exists.
+    public static func tools(taskBoardConfigURL: URL?) -> [Tool] {
+        guard let url = taskBoardConfigURL, FileManager.default.fileExists(atPath: url.path) else { return tools }
+        return tools + [taskBoardTool]
+    }
+
     public static func call(
         name: String,
         arguments: [String: Value]?,
         indexURL: URL,
         timeZone: TimeZone = .current,
         now: @escaping @Sendable () -> Date = { Date() },
-        noIndexHint: String = "open Minutes once so it can index your notes"
+        noIndexHint: String = "open Minutes once so it can index your notes",
+        taskBoardConfigURL: URL? = nil
     ) -> CallTool.Result {
         let args = arguments ?? [:]
-        guard tools.contains(where: { $0.name == name }) else {
+        guard tools(taskBoardConfigURL: taskBoardConfigURL).contains(where: { $0.name == name }) else {
             return failure("Unknown tool \"\(name)\".")
         }
         if name == "current_time" { return .init(content: [.text(currentTime(timeZone: timeZone, now: now()))]) }
+        if name == "task_board", let configURL = taskBoardConfigURL {
+            do {
+                guard let text = try TaskBoard.describe(configURL: configURL, includeDone: args["include_done"]?.boolValue ?? false) else {
+                    return failure("Task board not configured on this Mac.")
+                }
+                return .init(content: [.text(text)])
+            } catch {
+                return failure("Task board unreachable: \(error)")
+            }
+        }
         guard FileManager.default.fileExists(atPath: indexURL.path) else {
             return .init(content: [.text("No notes indexed yet — \(noIndexHint).")])
         }
@@ -109,7 +137,8 @@ public enum MinutesMCPServer {
         indexURL: URL,
         version: String,
         name: String = "minutes",
-        noIndexHint: String = "open Minutes once so it can index your notes"
+        noIndexHint: String = "open Minutes once so it can index your notes",
+        taskBoardConfigURL: URL? = nil
     ) async throws {
         let server = Server(
             name: name,
@@ -117,9 +146,10 @@ public enum MinutesMCPServer {
             instructions: instructions,
             capabilities: .init(tools: .init(listChanged: false))
         )
-        await server.withMethodHandler(ListTools.self) { _ in .init(tools: tools) }
+        await server.withMethodHandler(ListTools.self) { _ in .init(tools: tools(taskBoardConfigURL: taskBoardConfigURL)) }
         await server.withMethodHandler(CallTool.self) { params in
-            call(name: params.name, arguments: params.arguments, indexURL: indexURL, noIndexHint: noIndexHint)
+            call(name: params.name, arguments: params.arguments, indexURL: indexURL, noIndexHint: noIndexHint,
+                 taskBoardConfigURL: taskBoardConfigURL)
         }
         try await server.start(transport: StdioTransport())
         await server.waitUntilCompleted()

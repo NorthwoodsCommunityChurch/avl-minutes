@@ -130,6 +130,7 @@ Hermes with a relay note appended (card first, search first).
 | AI Feed | OneDrive `AI Feed/{mail,calendar,teams}` written by Power Automate flows "AI Feed: mail/mail sent/calendar/teams" plus run-once backfills ([docs/guides/power-automate-ai-feed.md](docs/guides/power-automate-ai-feed.md); packages in OneDrive `VS Code/Assistant/flows/`, generators `scripts/power-automate/`); indexed by the helper every 2 min (account "AI Feed", ids `feed:<path>`, group keys `calendar:<event id>` / `teams:<message id>`) |
 | Proactive loop | helper `FeedNotifier` (kind `feed`) and `MeetingPrep` (kind `meeting`) → relay `POST http://127.0.0.1:8787/notify` (`x-notify-key` = `notifyKey` in the relay's `config/local.json`) → Hermes in Aaron's home conversation → Teams; relay `CronOutputWatcher` posts `~/.hermes/cron/output/*/*.md` (state `postedOutputs`); task board list "Done" (id 1881546439595656482) on board "To Do" |
 | Hermes cron | job "Scrum Prep Notes" `ebe61605a654` (Tue/Wed/Fri 9:00, `deliver local`; the relay delivers); Hermes creates jobs with her `cronjob_manage` tool; `hermes cron list` on the mini |
+| Task board tool | `task_board` on the helper's MCP server (`TaskBoard.swift`): Planka `GET /api/boards/<id>` with `X-Api-Key`, formatted one line per card (~90 chars) for every open list; config `~/Library/Application Support/Hermes Helper/task-board.json` on the mini only (mode 600: `baseURL`, `apiKey` = Hermes's `PLANKA_API_KEY`, `boardId`); the tool is listed only where that file exists, so Minutes' server for Claude Code never shows it |
 | Planning Center server | Weekend Rundown's `pco-mcp` (its folder is not under git; versioned mirror `hermes-tools/pco-mcp/`), on edit-3 at `~/pco-mcp` (venv, `mcp<2`, `pypdf`); tools incl. `song_prep`, `song_energy_note(s)`; Aaron's notes in `~/pco-mcp/song-energy-notes.json`; deploy `scripts/deploy-pco-mcp.sh` |
 
 ## Build / Run / Release
@@ -264,7 +265,11 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
   room audio, three Blake cost projects, lighting pricing); added by hand 2026-10-10, descriptions say so. The rule now names all eight
   open lists with ids, one `cards list` each in the same turn, every card shown; `boards get` is never used (it spills and started the
   runaway loop). Same morning she answered "Moved '…' to Done" with no tool call made: the rule now says move first, report only a move
-  that succeeded.
+  that succeeded. The eight-list rule then failed on its own weight: eight `cards list` results (80K chars, ~830 per card with every null
+  field and the callers' user records) blew Hermes's per-turn tool budget, which is scaled to the model's context (65K tokens: ~39K chars
+  per result, ~79K per turn, `tools/budget_config.py`), the 28K General To Do result spilled, and Gemma again tried to read it through
+  `tool_call` until the hard stop. Fix is plumbing: the helper's MCP server now serves `task_board`, the whole board in one ~9K call
+  (see Key identifiers); every board-reading rule in `SOUL.md` uses it. A one-shot "open my todo" with the relay note then listed all lists.
 - **Meeting wake-ups come from the index, not OneDrive:** feed calendar records store the event start as `created_at`
   (`NotesIndex.upcoming`); one marker per Outlook event id (meta `meeting_announced:<group key>`, value = start ISO) keeps a series
   rewrite quiet and re-announces a moved meeting. No attendees, all-day (≥ 23 h), deleted and cancelled events are skipped before Hermes is
@@ -295,4 +300,4 @@ End a work session with **`/save`**.
 | 2026-10-08 | Engineering mini wiped; Edit 3 time zone; Minutes menu-bar hang fixed; clock tool; Teams/calendar/sent flows + backfills; song prep tools; proactive loop (helper → relay /notify → Hermes → Teams) |
 | 2026-10-09 | Hermes initiative: cron-output voice, meeting wake-ups, relay note, SOUL.md versioned + exact tool JSON, 13 tasks backfilled; runaway tool loop found and capped (hard stops on, 60 turns) |
 | 2026-10-09 | "Hermes couldn't find my notes": folder names resolve loosely and unknown ones are errors; feed records dated by item time; self-ending reminder jobs |
-| 2026-10-10 | "Todo isn't comprehensive": SOUL lists all eight lists for a to-do request, verified Done moves, stop-reminder rule; 10 chat-only tasks added to the board |
+| 2026-10-10 | "Todo isn't comprehensive": `task_board` tool (whole board, one call) on the helper's MCP server; SOUL reads the board through it; verified Done moves; stop-reminder rule; 10 chat-only tasks added to the board |

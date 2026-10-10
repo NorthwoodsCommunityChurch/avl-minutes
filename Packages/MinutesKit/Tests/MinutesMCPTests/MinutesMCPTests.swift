@@ -70,3 +70,18 @@ private func seededIndex() throws -> URL {
     let own = MinutesMCPServer.call(name: "search_notes", arguments: ["query": .string("lobby"), "folder": .string("notes")], indexURL: url)
     #expect(own.isError != true && text(own).contains("\"Budget\""))
 }
+
+@Test func taskBoardToolAppearsOnlyWhenConfigured() throws {
+    let url = try seededIndex()
+    let missing = FileManager.default.temporaryDirectory.appendingPathComponent("no-board-\(UUID().uuidString).json")
+    #expect(MinutesMCPServer.tools(taskBoardConfigURL: nil).map(\.name) == MinutesMCPServer.tools.map(\.name))
+    #expect(MinutesMCPServer.tools(taskBoardConfigURL: missing).map(\.name) == MinutesMCPServer.tools.map(\.name))
+    #expect(MinutesMCPServer.call(name: "task_board", arguments: nil, indexURL: url, taskBoardConfigURL: missing).isError == true)
+    // Configured but pointing at nothing: the tool is listed and the failure is explained, never silent.
+    let config = FileManager.default.temporaryDirectory.appendingPathComponent("board-\(UUID().uuidString).json")
+    try Data(#"{"baseURL":"http://127.0.0.1:9","apiKey":"k","boardId":"b"}"#.utf8).write(to: config)
+    #expect(MinutesMCPServer.tools(taskBoardConfigURL: config).last?.name == "task_board")
+    let r = MinutesMCPServer.call(name: "task_board", arguments: ["include_done": .bool(true)], indexURL: url, taskBoardConfigURL: config)
+    #expect(r.isError == true)
+    #expect(text(r).hasPrefix("Task board unreachable:"))
+}

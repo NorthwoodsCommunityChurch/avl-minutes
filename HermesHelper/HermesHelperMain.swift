@@ -5,7 +5,8 @@ import MinutesMCP
 /// Hermes Helper: a background app for the assistant Mac mini. One binary, four modes:
 /// `--index` (the default; run by launchd) keeps the Apple Notes index current and indexes the
 /// OneDrive "AI Feed" folder (`--feed <path>` overrides the default location);
-/// `--mcp` serves that index read-only to Hermes Agent over stdio; `--notes-helper`
+/// `--mcp` serves that index read-only to Hermes Agent over stdio, plus the task board when
+/// `task-board.json` sits next to the index; `--notes-helper`
 /// runs one Apple Notes request for the index service; `--version` prints the version.
 @main
 enum HermesHelperMain {
@@ -25,8 +26,9 @@ enum HermesHelperMain {
         if args.contains("--mcp") {
             Task.detached {
                 do {
-                    try await MinutesMCPServer.run(indexURL: NotesIndex.defaultURL(appFolder: indexFolder),
-                                                   version: version, name: serverName, noIndexHint: noIndexHint)
+                    let indexURL = NotesIndex.defaultURL(appFolder: indexFolder)
+                    try await MinutesMCPServer.run(indexURL: indexURL, version: version, name: serverName, noIndexHint: noIndexHint,
+                                                   taskBoardConfigURL: indexURL.deletingLastPathComponent().appendingPathComponent("task-board.json"))
                     exit(0)
                 } catch {
                     FileHandle.standardError.write(Data("HermesHelper --mcp: \(error)\n".utf8))
