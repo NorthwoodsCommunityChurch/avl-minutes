@@ -258,6 +258,13 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
   time and nothing would ever stop it. `SOUL.md` now gives the exact schedule forms (one-shots are "in 30m" or an ISO time) and a
   self-ending prompt for nag reminders: check the card with `cards list`, and when it is gone, `cronjob_manage remove` the job (found
   by name with `cronjob_manage list`; jobs are named after their card) and answer `[SILENT]`. The live job was edited the same way.
+- **"Open my todo" got one list of eight** (2026-10-10): `SOUL.md` said "start with General To Do" and "summarize counts and the few most
+  relevant cards", so Hermes listed General To Do (24 cards) and Aaron, who had 71 open cards and remembered more, did not trust it. Ten
+  items from the Oct 8-9 chat had never become cards at all (Kirk/Blake confirmations, storage with Tiffany, Jason's Dante update, kids'
+  room audio, three Blake cost projects, lighting pricing); added by hand 2026-10-10, descriptions say so. The rule now names all eight
+  open lists with ids, one `cards list` each in the same turn, every card shown; `boards get` is never used (it spills and started the
+  runaway loop). Same morning she answered "Moved '…' to Done" with no tool call made: the rule now says move first, report only a move
+  that succeeded.
 - **Meeting wake-ups come from the index, not OneDrive:** feed calendar records store the event start as `created_at`
   (`NotesIndex.upcoming`); one marker per Outlook event id (meta `meeting_announced:<group key>`, value = start ISO) keeps a series
   rewrite quiet and re-announces a moved meeting. No attendees, all-day (≥ 23 h), deleted and cancelled events are skipped before Hermes is
@@ -288,3 +295,4 @@ End a work session with **`/save`**.
 | 2026-10-08 | Engineering mini wiped; Edit 3 time zone; Minutes menu-bar hang fixed; clock tool; Teams/calendar/sent flows + backfills; song prep tools; proactive loop (helper → relay /notify → Hermes → Teams) |
 | 2026-10-09 | Hermes initiative: cron-output voice, meeting wake-ups, relay note, SOUL.md versioned + exact tool JSON, 13 tasks backfilled; runaway tool loop found and capped (hard stops on, 60 turns) |
 | 2026-10-09 | "Hermes couldn't find my notes": folder names resolve loosely and unknown ones are errors; feed records dated by item time; self-ending reminder jobs |
+| 2026-10-10 | "Todo isn't comprehensive": SOUL lists all eight lists for a to-do request, verified Done moves, stop-reminder rule; 10 chat-only tasks added to the board |
