@@ -46,14 +46,16 @@ import Testing
 /// A Notes stand-in: note text by id, plus what was created and rewritten.
 private final class FakeStore: NoteStore, @unchecked Sendable {
     var texts: [String: String] = [:]
+    var folders: [String: String] = [:]
     var created: [(folder: String, html: String)] = []
     var bodiesSet: [(id: String, html: String)] = []
     func plaintext(ids: [String]) async throws -> [String: String] { ids.reduce(into: [:]) { $0[$1] = texts[$1] } }
     func createNote(folder: String, html: String) async throws -> String {
         created.append((folder, html)); let id = "new-\(created.count)"
-        texts[id] = html; return id
+        texts[id] = html; folders[id] = folder; return id
     }
     func setBody(noteID: String, html: String) async throws { bodiesSet.append((noteID, html)) }
+    func folder(ofNote id: String) async throws -> String? { folders[id] }
 }
 
 /// The index the writer finds notes through (what the helper's --index service keeps).
@@ -85,6 +87,7 @@ private func seededIndex(_ notes: [(id: String, folder: String, title: String, t
 @Test func writerAppendsToAnExistingHermesNoteAndReportsCounts() async throws {
     let store = FakeStore()
     store.texts["h1"] = "Project: Atrium\nRenovation.\n\nFacts\n- one\n\nLog\n- Oct 9: made"
+    store.folders["h1"] = "Hermes"
     let index = try seededIndex([("h1", "Hermes", "Project: Atrium", store.texts["h1"]!)])
     let writer = HermesNoteWriter(store: store, index: index)
     let msg = try await writer.write(title: "project: atrium", section: "facts", text: "- two\n- three", mode: .append)
@@ -103,6 +106,7 @@ private func seededIndex(_ notes: [(id: String, folder: String, title: String, t
 @Test func writerEnforcesSizesTitlesAndDuplicates() async throws {
     let store = FakeStore()
     store.texts["idx"] = "Hermes index\n\nItems\n- Project: Atrium: renovation"
+    store.folders["idx"] = "Hermes"
     let index = try seededIndex([("idx", "Hermes", "Hermes index", store.texts["idx"]!)])
     let writer = HermesNoteWriter(store: store, index: index)
     await #expect(throws: HermesNoteError.emptyTitle) { try await writer.write(title: " ", section: "Facts", text: "x", mode: .append) }
@@ -118,4 +122,23 @@ private func seededIndex(_ notes: [(id: String, folder: String, title: String, t
     #expect(made == "Created \"List: Orders\" in folder Hermes (1 sections, 49 characters).")
     await #expect(throws: HermesNoteError.duplicateTitle("List: Orders")) { try await writer.create(title: "List: Orders", body: "Items\n- x") }
     await #expect(throws: HermesNoteError.emptyText) { try await writer.create(title: "Empty", body: "") }
+}
+
+@Test func aNoteAaronMovedOutOfTheFolderIsNeverEditedAgain() async throws {
+    let store = FakeStore()
+    store.texts["h1"] = "Project: Atrium\n\nFacts\n- one"
+    store.folders["h1"] = "Northwoods"   // the index still says Hermes; Notes says he moved it
+    let index = try seededIndex([("h1", "Hermes", "Project: Atrium", store.texts["h1"]!)])
+    let writer = HermesNoteWriter(store: store, index: index)
+    let msg = try await writer.write(title: "Project: Atrium", section: "Facts", text: "- two", mode: .append)
+    #expect(msg.hasPrefix("Created \"Project: Atrium\" in folder Hermes"))
+    #expect(store.bodiesSet.isEmpty && store.created.count == 1)
+    // The same for a cached id: created here, then moved out.
+    store.folders["new-1"] = "Northwoods"
+    let again = try await writer.write(title: "Project: Atrium", section: "Facts", text: "- three", mode: .append)
+    #expect(again.hasPrefix("Created") && store.created.count == 2 && store.bodiesSet.isEmpty)
+    // A deleted note (folder nil) likewise.
+    store.folders["new-2"] = nil
+    _ = try await writer.write(title: "Project: Atrium", section: "Facts", text: "- four", mode: .append)
+    #expect(store.created.count == 3)
 }

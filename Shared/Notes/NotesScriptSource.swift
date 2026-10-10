@@ -60,6 +60,12 @@ on createNote(folderName, html)
 	end tell
 end createNote
 
+on folderOf(noteID)
+	tell application "Notes"
+		return name of container of note id noteID
+	end tell
+end folderOf
+
 on showNote(noteID)
 	tell application "Notes"
 		show note id noteID

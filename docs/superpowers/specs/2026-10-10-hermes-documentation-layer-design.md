@@ -102,7 +102,12 @@ index stays under 4,000.
 | `note_write` | `title`, `section`, `text`, `mode` (`append` default, or `replace`) | Finds the note by exact title in folder Hermes (creates it with that title if absent), appends `text` as new lines at the end of `section` (creating the section if absent) or replaces the section's lines; writes the whole body back through AppleScript; returns the note's new length and the section's line count |
 | `note_create` | `title`, `body` | Creates a note in folder Hermes from the plain-text shape above; refuses a duplicate title |
 
-Both read the live body first (through the `--notes-helper` child, not the index, which can be two minutes stale);
+Both run inside the index service: the MCP server writes a request file to a spool directory next to the index and
+the index service, the one process macOS has consented to for Notes automation (a child under Hermes's gateway never
+got through, and its waiting event wedged Notes), performs it and writes the reply. Both read the live body first
+(through the index service's `--notes-helper` child, not the index, which can be two minutes stale), and confirm the
+note still sits in the Hermes folder with one small event before editing (a moved note is left alone and a fresh one
+is created);
 they never touch attachments (her notes have none), never delete, never move. Titles are matched only inside the
 Hermes folder: a note of the same name anywhere else is simply not seen, so his notes cannot be edited by any
 title. All text is escaped before it becomes HTML.

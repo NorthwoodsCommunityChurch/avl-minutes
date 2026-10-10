@@ -9,6 +9,7 @@ enum NotesRequest: Codable {
     case create(folder: String, html: String)
     case setBody(noteID: String, html: String)
     case show(noteID: String)
+    case folderOf(noteID: String)
 
     /// How long the helper may take. Listing every note can be slow; a transcript write
     /// usually takes a few seconds even for long meetings.
@@ -17,7 +18,7 @@ enum NotesRequest: Codable {
         case .list, .plaintext: .seconds(180)
         case .create: .seconds(90)
         case .setBody: .seconds(60)
-        case .show: .seconds(20)
+        case .show, .folderOf: .seconds(20)
         }
     }
 }
@@ -27,6 +28,7 @@ enum NotesReply: Codable {
     case notes([NoteMetadata])
     case texts([String: String])
     case created(id: String)
+    case folder(String)
     case done
     case failed(NotesBridgeError)
 }
@@ -58,6 +60,16 @@ struct NotesBridge: Sendable {
 
     func setBody(noteID: String, html: String) async throws {
         guard case .done = try await send(.setBody(noteID: noteID, html: html)) else { throw NotesBridgeError.badOutput }
+    }
+
+    /// The folder a note sits in now (one small event), so a writer can refuse a note that moved.
+    func folder(ofNote id: String) async throws -> String? {
+        do {
+            guard case .folder(let name) = try await send(.folderOf(noteID: id)) else { throw NotesBridgeError.badOutput }
+            return name
+        } catch NotesBridgeError.scriptFailed {
+            return nil   // the note is gone
+        }
     }
 
     private func send(_ request: NotesRequest) async throws -> NotesReply {
@@ -108,6 +120,8 @@ enum NotesHelper {
             case .show(let noteID):
                 try runner.showNote(noteID: noteID)
                 reply = .done
+            case .folderOf(let noteID):
+                reply = .folder(try runner.folderOf(noteID: noteID))
             }
         } catch let error as NotesBridgeError {
             reply = .failed(error)

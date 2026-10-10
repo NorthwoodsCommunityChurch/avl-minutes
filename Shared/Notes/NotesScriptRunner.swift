@@ -80,6 +80,12 @@ final class NotesScriptRunner {
         return id
     }
 
+    func folderOf(noteID: String) throws -> String {
+        let result = try call("folderOf", NSAppleEventDescriptor(string: noteID))
+        guard let name = result.stringValue else { throw NotesBridgeError.badOutput }
+        return name
+    }
+
     func showNote(noteID: String) throws {
         _ = try call("showNote", NSAppleEventDescriptor(string: noteID))
     }

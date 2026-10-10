@@ -141,6 +141,8 @@ public protocol NoteStore: Sendable {
     func plaintext(ids: [String]) async throws -> [String: String]
     func createNote(folder: String, html: String) async throws -> String
     func setBody(noteID: String, html: String) async throws
+    /// The folder the note is in right now, or nil if it no longer exists.
+    func folder(ofNote id: String) async throws -> String?
 }
 
 /// Ids of notes this process created, so a second write in the two minutes before the index sees them finds
@@ -215,13 +217,20 @@ public struct HermesNoteWriter: Sendable {
         return title
     }
 
-    /// The note's id: from this process's cache, else from the index (notes in `folder` only). Never from Notes.
+    /// The note's id: from this process's cache, else from the index (notes in `folder` only), and in both cases
+    /// confirmed to still sit in `folder` by one small Notes event, because the cache and the index can be minutes
+    /// behind a note Aaron moved or deleted. A note that moved is not hers to edit any more: nil, so a fresh one is
+    /// created in the folder.
     private func find(title: String) async throws -> String? {
-        if let id = await cache.id(for: title) { return id }
-        guard let index else { return nil }
         let key = title.lowercased()
-        return try index.list(scope: .folder(folder), since: nil, until: nil, limit: 500)
-            .first { $0.title.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == key }?.id
+        var candidate = await cache.id(for: title)
+        if candidate == nil, let index {
+            candidate = try index.list(scope: .folder(folder), since: nil, until: nil, limit: 500)
+                .first { $0.title.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == key }?.id
+        }
+        guard let id = candidate else { return nil }
+        guard try await store.folder(ofNote: id) == folder else { return nil }
+        return id
     }
 
     private static func checkSize(_ note: HermesNote) throws {

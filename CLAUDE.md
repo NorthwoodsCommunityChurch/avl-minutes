@@ -125,7 +125,7 @@ HTML by the helper and read back as plain text; schema in `SOUL.md` "Your notes"
 - `Packages/AudioDeps/` — wraps vendored FluidAudio with its unused NeMo engine turned off
 - `Minutes/Audio`, `Minutes/Pipeline`, `Minutes/Claude`, `Minutes/App`
 - `Shared/Notes` — Notes bridge, indexer, AppleScript runner, compiled into both apps; `Shared/AppIdentity.swift` names the running app for logs/messages
-- `HermesHelper/` — the mini's background app: main, `IndexService`, Info.plist, entitlements, launchd template
+- `HermesHelper/` — the mini's background app: main, `IndexService`, `NoteRequestSpool` (note writes relayed to the index service), Info.plist, entitlements, launchd template
 - `hermes-teams/` — Node relay between the Teams bot and Hermes's API (lib/ incl. `relay.js` prompts + queue and `cron-output.js` watcher, test/, cloudflare/, launchd/, scripts/)
 - `hermes-tools/` — what runs on the mini but is not an app: `SOUL.md` (Hermes's standing rules, master copy) and the `pco-mcp/` mirror
 - `Packages/MinutesKit/Sources/MinutesKit/Tools/` — `NotesTools` (search/list/get formatting), `TaskBoard` (Planka in one call), `HermesNote` + `HermesNoteWriter` + `NoteStore` (her notes)
@@ -148,7 +148,7 @@ HTML by the helper and read back as plain text; schema in `SOUL.md` "Your notes"
 | AI Feed | OneDrive `AI Feed/{mail,calendar,teams}` written by Power Automate flows "AI Feed: mail/mail sent/calendar/teams" plus run-once backfills ([docs/guides/power-automate-ai-feed.md](docs/guides/power-automate-ai-feed.md); packages in OneDrive `VS Code/Assistant/flows/`, generators `scripts/power-automate/`); indexed by the helper every 2 min (account "AI Feed", ids `feed:<path>`, group keys `calendar:<event id>` / `teams:<message id>`) |
 | Proactive loop | helper `FeedNotifier` (kind `feed`) and `MeetingPrep` (kind `meeting`) → relay `POST http://127.0.0.1:8787/notify` (`x-notify-key` = `notifyKey` in the relay's `config/local.json`) → Hermes in Aaron's home conversation → Teams; relay `CronOutputWatcher` posts `~/.hermes/cron/output/*/*.md` (state `postedOutputs`); task board list "Done" (id 1881546439595656482) on board "To Do" |
 | Hermes cron | jobs "Scrum Prep Notes" `ebe61605a654` (Tue/Wed/Fri 9:00) and "Nightly notes tidy" (daily 11 PM, prompt in `docs/superpowers/plans/2026-10-10-hermes-documentation-layer.md` Task 7), both `deliver local` (the relay delivers); Hermes creates jobs with her `cronjob_manage` tool; `hermes cron list` on the mini |
-| Hermes's notes | Apple Notes folder **Hermes** on the mini's iCloud (Aaron's account); tools `note_write {title, section, text, mode}` and `note_create {title, body}` on the helper's MCP server, listed only where `NotesBridge` is wired (`HermesHelperMain`); sections fixed (`HermesNote.sectionNames`); limits 8,000 chars per note, 4,000 for `Hermes index`; writes via AppleScript only, never outside the folder |
+| Hermes's notes | Apple Notes folder **Hermes** on the mini's iCloud (Aaron's account); tools `note_write {title, section, text, mode}` and `note_create {title, body}` on the helper's MCP server, listed only where a note store is wired (`HermesHelperMain`: `NoteRequestSpool.Client`, served by the `--index` service through `~/Library/Application Support/Hermes Helper/note-requests/`); sections fixed (`HermesNote.sectionNames`); limits 8,000 chars per note, 4,000 for `Hermes index`; writes via AppleScript only, never outside the folder |
 | Task board tool | `task_board` on the helper's MCP server (`TaskBoard.swift`): Planka `GET /api/boards/<id>` with `X-Api-Key`, formatted one line per card (~90 chars) for every open list; config `~/Library/Application Support/Hermes Helper/task-board.json` on the mini only (mode 600: `baseURL`, `apiKey` = Hermes's `PLANKA_API_KEY`, `boardId`); the tool is listed only where that file exists, so Minutes' server for Claude Code never shows it |
 | Planning Center server | Weekend Rundown's `pco-mcp` (its folder is not under git; versioned mirror `hermes-tools/pco-mcp/`), on edit-3 at `~/pco-mcp` (venv, `mcp<2`, `pypdf`); tools incl. `song_prep`, `song_energy_note(s)`; Aaron's notes in `~/pco-mcp/song-energy-notes.json`; deploy `scripts/deploy-pco-mcp.sh` |
 
@@ -293,6 +293,14 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
   `HermesNote` recognizes sections by a fixed vocabulary (and tolerates "## Facts"), never by markers. Notes names a note after its first line,
   so the title rides in an `<h1>` and `note_create`'s body is content only. Last write wins inside the Hermes folder (a re-list before every write
   costs seconds); his own notes are never matched for writing, whatever their title.
+- **Only the index service may talk to Notes.** A `--notes-helper` child spawned under Hermes's gateway (python → `HermesHelper --mcp` →
+  child) never completed an AppleScript call: macOS's automation consent was granted to the launchd-started helper, not to that chain, and
+  the consent-blocked event wedged Notes.app itself ("AppleEvent timed out" for the index service too, twice on 2026-10-10, fixed each time
+  by `killall Notes`). No consent record was readable from `log show`. Note writes therefore go through `NoteRequestSpool`: the MCP server
+  drops `<id>.json` (a `NotesRequest`) in `~/Library/Application Support/Hermes Helper/note-requests/`, the index service serves it with its
+  own `NotesBridge` and drops `<id>.reply.json`; the first write through it took 10 s. The writer also never lists notes (the index plus a
+  cache finds them) and confirms the folder with one `folderOf` event before editing, so a note Aaron moved out is left alone. If a
+  `note_write` ever times out again, check the helper log's "last refresh": a stale one means Notes is wedged, and `killall Notes` clears it.
 - **Hermes's deferred-tool bridge fails with small local models** (`tools.tool_search`, default `auto`, hides MCP and plugin tools behind
   `tool_search` / `tool_describe` / `tool_call`). Hermes issues #110442 (Qwen's `<tool_call>` tag collides with the bridge name), #135762 (no way to
   keep MCP tools direct; 9B model failed 10 of 10), #96247 (1,523 `tool_search` calls; `enabled: "off"` fixed it) are our two `read_file` loops.

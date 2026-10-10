@@ -42,11 +42,11 @@
 **Interfaces:** `protocol NoteStore { listMetadata(); plaintext(ids:); createNote(folder:html:); setBody(noteID:html:) }` (matches `NotesBridge`); `HermesNoteWriter(store:folder:)` with `write(title:section:text:mode:) async throws -> String` and `create(title:body:) async throws -> String`.
 - [x] Tests: create in Hermes folder when only his note has that title; append to an existing Hermes note; replace; sizes; duplicates; empty title/body.
 
-### Task 3: MCP tools `note_write` / `note_create` and helper wiring — DONE 2026-10-10
+### Task 3: MCP tools `note_write` / `note_create` and helper wiring — DONE 2026-10-10 (plus `NoteRequestSpool`: writes served by the index service, the only Notes client; folder check before every edit)
 
 **Files:** `Packages/MinutesKit/Sources/MinutesMCP/MinutesMCPServer.swift` (`noteTools`, `tools(taskBoardConfigURL:notes:)`, `noteCall(name:arguments:store:)`, `run(... noteStore:)`), `Packages/MinutesKit/Tests/MinutesMCPTests/MinutesMCPTests.swift`, `HermesHelper/HermesHelperMain.swift` (passes `NotesBridge()`), `Shared/Notes/NotesBridge.swift` (`extension NotesBridge: NoteStore {}`).
 - [x] Test `noteToolsAreListedOnlyWithAStoreAndWriteThroughIt`.
-- [x] Deploy (2026-10-10 18:28): `bash scripts/deploy-helper.sh`; stdio check that `tools/list` shows `note_write`, `note_create`; one `note_write` to "Hermes log" from the shell; confirm the note appears in Notes on the mini and in `list_notes folder: Hermes` two minutes later.
+- [x] Deploy (2026-10-10 18:28, re-deployed 18:50 with the spool): `bash scripts/deploy-helper.sh`; stdio check that `tools/list` shows `note_write`, `note_create`; one `note_write` to "Hermes log" from the shell; confirm the note appears in Notes on the mini and in `list_notes folder: Hermes` two minutes later.
 
 ### Task 4: Relay: feed prompts in their own Hermes thread — DONE 2026-10-10
 

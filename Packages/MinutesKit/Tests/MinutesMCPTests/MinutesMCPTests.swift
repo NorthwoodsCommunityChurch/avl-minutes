@@ -91,6 +91,7 @@ private final class MemoryStore: NoteStore, @unchecked Sendable {
     func plaintext(ids: [String]) async throws -> [String: String] { [:] }
     func createNote(folder: String, html: String) async throws -> String { created.append((folder, html)); return "n1" }
     func setBody(noteID: String, html: String) async throws {}
+    func folder(ofNote id: String) async throws -> String? { "Hermes" }
 }
 
 @Test func noteToolsAreListedOnlyWithAStoreAndWriteThroughIt() async throws {

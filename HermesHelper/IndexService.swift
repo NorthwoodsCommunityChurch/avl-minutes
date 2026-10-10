@@ -22,6 +22,10 @@ enum IndexService {
             exit(1)
         }
         indexer.start()
+        // Note writes from the MCP server arrive here; this is the only process that talks to Notes.
+        let spool = NoteRequestSpool.Server(directory: NoteRequestSpool.directory(near: indexURL))
+        spool.start()
+        noteSpool = spool
         logger.info("Index service started")
         FeedIndexer.allowDownloadingPlaceholders()
         // OneDrive is often signed in after the helper starts (a fresh Mac), so the folder is looked for
@@ -47,6 +51,7 @@ enum IndexService {
 
     /// The feed indexer once its folder exists: `--feed <path>` if given, else the first OneDrive "AI Feed".
     @MainActor private static var feed: FeedIndexer?
+    @MainActor private static var noteSpool: NoteRequestSpool.Server?
 
     /// Starts indexing the feed folder if it exists now; false when it still doesn't.
     @MainActor
@@ -136,7 +141,8 @@ enum IndexService {
         let refreshed = indexer.lastRefresh.map { ISO8601DateFormatter().string(from: $0) } ?? "never"
         let problem = indexer.lastError.map { " problem: \($0)" } ?? ""
         let feedPart = feed == nil ? "" : ", feed records: \((try? feed!.count()) ?? -1)\(lastFeedProblem.map { " feed problem: \($0)" } ?? "")"
-        print("\(stamp()) notes indexed: \(indexer.noteCount), last refresh: \(refreshed)\(problem)\(feedPart)")
+        let spoolPart = noteSpool.map { ", note requests served: \($0.requestsServed)" } ?? ""
+        print("\(stamp()) notes indexed: \(indexer.noteCount), last refresh: \(refreshed)\(problem)\(feedPart)\(spoolPart)")
         fflush(stdout)
     }
 }
