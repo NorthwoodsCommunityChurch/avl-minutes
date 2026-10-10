@@ -15,7 +15,16 @@ SQLite FTS5, MCP Swift SDK, XcodeGen.
 
 ---
 
-## Status — 2026-10-09
+## Status — 2026-10-10
+- **2026-10-10, documentation layer (spec [docs/superpowers/specs/2026-10-10-hermes-documentation-layer-design.md](docs/superpowers/specs/2026-10-10-hermes-documentation-layer-design.md),
+  plan [docs/superpowers/plans/2026-10-10-hermes-documentation-layer.md](docs/superpowers/plans/2026-10-10-hermes-documentation-layer.md), research
+  [options](docs/research/2026-10-10-assistant-platform-options.md) and [how](docs/research/2026-10-10-hermes-documentation-layer-research.md)):** Aaron: "I keep coming
+  back to you for her memory … that's what she is for: creating and maintaining lists, projects, to do, calendars." Constraints he set: no Claude API
+  spend, no new hardware, model stays local (test the box's `qwen-coder` against `gemma-bigctx`). Built: Hermes keeps her own notes in the **Hermes**
+  folder of Aaron's Apple Notes (`HermesNote`, `note_write` / `note_create` on the helper's MCP server), captures a stated fact before answering
+  (relay note), reads the project's note for meeting prep, and feed prompts run in their own Hermes thread (relay key `feed`) so his thread stops
+  compacting. Pending in this session: bake-off results, `tools.tool_search.enabled: off` (Hermes issues #110442/#135762/#96247 describe our
+  `read_file` loops), deploys, the nightly tidy cron job.
 - **2026-10-09, Hermes initiative (spec [docs/superpowers/specs/2026-10-09-hermes-initiative-design.md](docs/superpowers/specs/2026-10-09-hermes-initiative-design.md),
   plan [docs/superpowers/plans/2026-10-09-hermes-initiative.md](docs/superpowers/plans/2026-10-09-hermes-initiative.md), Aaron's "approved"):** Aaron's tasks had been living in
   Hermes's chat lists, not on the board, so his sent email to Danny (Higher Ground, Dante ticket #2050007) closed nothing, and the "Scrum Prep
@@ -101,7 +110,13 @@ the index fresh every 2 min), `--mcp` (read-only server named `hermes-helper`), 
 **Proactive paths (plumbing in code, judgment in Hermes):** feed changes and sent mail (`FeedNotifier`) and meetings starting within 35 min
 (`MeetingPrep`, marker meta keys `meeting_announced:<event>`) → relay `POST /notify {records, kind}` → Hermes in Aaron's thread → Teams.
 Hermes's own cron jobs → `~/.hermes/cron/output/<job>/<time>.md` → relay `CronOutputWatcher` → Teams. Each of Aaron's messages reaches
-Hermes with a relay note appended (card first, search first).
+Hermes with a relay note appended (card first, note first, search first). Feed and meeting prompts run under the relay's `feed` conversation
+key, a separate Hermes thread that reads the notes, the board, and the index rather than his chat.
+
+**Documentation layer (Karpathy's "LLM wiki" on Apple Notes):** raw sources (feed index, his notes, transcripts, board) stay untouched; Hermes
+maintains a compiled wiki in the Notes folder **Hermes** (`Project: <name>`, `<Person> (<org>)`, `List: <name>`, plus `Hermes index` and
+`Hermes log`), plain text with fixed sections (Summary, Facts, Decisions, Open questions, People, Next, Items, Log; each line dated), rendered to
+HTML by the helper and read back as plain text; schema in `SOUL.md` "Your notes"; a nightly tidy cron job fills gaps from the day's messages.
 
 ### Where things live
 - `Packages/MinutesKit/` — pure, tested logic (attribution, speakers, transcript doc, Notes index, MCP tools)
@@ -111,6 +126,7 @@ Hermes with a relay note appended (card first, search first).
 - `HermesHelper/` — the mini's background app: main, `IndexService`, Info.plist, entitlements, launchd template
 - `hermes-teams/` — Node relay between the Teams bot and Hermes's API (lib/ incl. `relay.js` prompts + queue and `cron-output.js` watcher, test/, cloudflare/, launchd/, scripts/)
 - `hermes-tools/` — what runs on the mini but is not an app: `SOUL.md` (Hermes's standing rules, master copy) and the `pco-mcp/` mirror
+- `Packages/MinutesKit/Sources/MinutesKit/Tools/` — `NotesTools` (search/list/get formatting), `TaskBoard` (Planka in one call), `HermesNote` + `HermesNoteWriter` + `NoteStore` (her notes)
 - `Packages/MinutesKit/Sources/MinutesKit/Feed/` — `FeedRecord` + `FeedIndexer` (AI Feed files → index records), `FeedNotifier` (which changes wake Hermes), `MeetingPrep` (which meetings wake her)
 - `scripts/` — build-and-run, fetch-deps, no-audio guard (+ self-test), audit-writes, mcp-smoke-test, deploy-helper / deploy-soul / deploy-pco-mcp (to the mini), power-automate/ flow generators
 
@@ -130,6 +146,7 @@ Hermes with a relay note appended (card first, search first).
 | AI Feed | OneDrive `AI Feed/{mail,calendar,teams}` written by Power Automate flows "AI Feed: mail/mail sent/calendar/teams" plus run-once backfills ([docs/guides/power-automate-ai-feed.md](docs/guides/power-automate-ai-feed.md); packages in OneDrive `VS Code/Assistant/flows/`, generators `scripts/power-automate/`); indexed by the helper every 2 min (account "AI Feed", ids `feed:<path>`, group keys `calendar:<event id>` / `teams:<message id>`) |
 | Proactive loop | helper `FeedNotifier` (kind `feed`) and `MeetingPrep` (kind `meeting`) → relay `POST http://127.0.0.1:8787/notify` (`x-notify-key` = `notifyKey` in the relay's `config/local.json`) → Hermes in Aaron's home conversation → Teams; relay `CronOutputWatcher` posts `~/.hermes/cron/output/*/*.md` (state `postedOutputs`); task board list "Done" (id 1881546439595656482) on board "To Do" |
 | Hermes cron | job "Scrum Prep Notes" `ebe61605a654` (Tue/Wed/Fri 9:00, `deliver local`; the relay delivers); Hermes creates jobs with her `cronjob_manage` tool; `hermes cron list` on the mini |
+| Hermes's notes | Apple Notes folder **Hermes** on the mini's iCloud (Aaron's account); tools `note_write {title, section, text, mode}` and `note_create {title, body}` on the helper's MCP server, listed only where `NotesBridge` is wired (`HermesHelperMain`); sections fixed (`HermesNote.sectionNames`); limits 8,000 chars per note, 4,000 for `Hermes index`; writes via AppleScript only, never outside the folder |
 | Task board tool | `task_board` on the helper's MCP server (`TaskBoard.swift`): Planka `GET /api/boards/<id>` with `X-Api-Key`, formatted one line per card (~90 chars) for every open list; config `~/Library/Application Support/Hermes Helper/task-board.json` on the mini only (mode 600: `baseURL`, `apiKey` = Hermes's `PLANKA_API_KEY`, `boardId`); the tool is listed only where that file exists, so Minutes' server for Claude Code never shows it |
 | Planning Center server | Weekend Rundown's `pco-mcp` (its folder is not under git; versioned mirror `hermes-tools/pco-mcp/`), on edit-3 at `~/pco-mcp` (venv, `mcp<2`, `pypdf`); tools incl. `song_prep`, `song_energy_note(s)`; Aaron's notes in `~/pco-mcp/song-energy-notes.json`; deploy `scripts/deploy-pco-mcp.sh` |
 
@@ -270,6 +287,16 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
   per result, ~79K per turn, `tools/budget_config.py`), the 28K General To Do result spilled, and Gemma again tried to read it through
   `tool_call` until the hard stop. Fix is plumbing: the helper's MCP server now serves `task_board`, the whole board in one ~9K call
   (see Key identifiers); every board-reading rule in `SOUL.md` uses it. A one-shot "open my todo" with the relay note then listed all lists.
+- **Apple Notes returns headings as bare lines.** A note written with `<h2>Facts</h2>` comes back from `plaintext` as the line "Facts", so
+  `HermesNote` recognizes sections by a fixed vocabulary (and tolerates "## Facts"), never by markers. Notes names a note after its first line,
+  so the title rides in an `<h1>` and `note_create`'s body is content only. Last write wins inside the Hermes folder (a re-list before every write
+  costs seconds); his own notes are never matched for writing, whatever their title.
+- **Hermes's deferred-tool bridge fails with small local models** (`tools.tool_search`, default `auto`, hides MCP and plugin tools behind
+  `tool_search` / `tool_describe` / `tool_call`). Hermes issues #110442 (Qwen's `<tool_call>` tag collides with the bridge name), #135762 (no way to
+  keep MCP tools direct; 9B model failed 10 of 10), #96247 (1,523 `tool_search` calls; `enabled: "off"` fixed it) are our two `read_file` loops.
+  The documented workaround is `tools.tool_search.enabled: "off"` with `mcp_servers.<name>.tools.include` keeping the eager list small
+  (`~/bakeoff/apply-config.sh` on the mini applies it with a dated backup); the per-turn tool budget (`tools/budget_config.py`: 15% of the
+  context window per result, 30% per turn, so ~39K and ~79K chars at 65K tokens) is what spilled a 28K result when eight list calls ran in one turn.
 - **Meeting wake-ups come from the index, not OneDrive:** feed calendar records store the event start as `created_at`
   (`NotesIndex.upcoming`); one marker per Outlook event id (meta `meeting_announced:<group key>`, value = start ISO) keeps a series
   rewrite quiet and re-announces a moved meeting. No attendees, all-day (≥ 23 h), deleted and cancelled events are skipped before Hermes is
@@ -301,3 +328,4 @@ End a work session with **`/save`**.
 | 2026-10-09 | Hermes initiative: cron-output voice, meeting wake-ups, relay note, SOUL.md versioned + exact tool JSON, 13 tasks backfilled; runaway tool loop found and capped (hard stops on, 60 turns) |
 | 2026-10-09 | "Hermes couldn't find my notes": folder names resolve loosely and unknown ones are errors; feed records dated by item time; self-ending reminder jobs |
 | 2026-10-10 | "Todo isn't comprehensive": `task_board` tool (whole board, one call) on the helper's MCP server; SOUL reads the board through it; verified Done moves; stop-reminder rule; 10 chat-only tasks added to the board |
+| 2026-10-10 | Documentation layer: her notes in Apple Notes (`HermesNote`, `note_write`/`note_create`), capture rule, feed prompts in their own thread, SOUL "Your notes"; research on platform options and on how others keep agent documentation; bake-off runner |
