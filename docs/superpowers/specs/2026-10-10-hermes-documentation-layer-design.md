@@ -102,10 +102,10 @@ index stays under 4,000.
 | `note_write` | `title`, `section`, `text`, `mode` (`append` default, or `replace`) | Finds the note by exact title in folder Hermes (creates it with that title if absent), appends `text` as new lines at the end of `section` (creating the section if absent) or replaces the section's lines; writes the whole body back through AppleScript; returns the note's new length and the section's line count |
 | `note_create` | `title`, `body` | Creates a note in folder Hermes from the plain-text shape above; refuses a duplicate title |
 
-Both read the live body first (through the `--notes-helper` child, not the index, which can be two minutes stale),
-compare the note's modification time before writing, and retry once on a mismatch; they never touch attachments
-(her notes have none), never delete, never move. A title that resolves to a note outside the Hermes folder is an
-error. All text is escaped before it becomes HTML.
+Both read the live body first (through the `--notes-helper` child, not the index, which can be two minutes stale);
+they never touch attachments (her notes have none), never delete, never move. Titles are matched only inside the
+Hermes folder: a note of the same name anywhere else is simply not seen, so his notes cannot be edited by any
+title. All text is escaped before it becomes HTML.
 
 ### 3.3 Capture: the rule next to the message, and the schema in SOUL.md
 
@@ -147,6 +147,14 @@ answer, seconds, loop warnings. The winner becomes `model.default`; nothing else
   and is treated like her replies, which Aaron already reads.
 - No secrets anywhere new; the notes hold church business facts in Aaron's own iCloud, where his notes already live.
 - Nothing is deleted by any tool or rule; a wrong note is fixed by a `replace` of one section, visible in the Log.
+- The capture sentence rides only on Aaron's own messages (the relay appends it after checking the sender's Entra
+  object id); feed and meeting prompts never carry it, and the "Your notes" rule says to write only what *Aaron*
+  stated. Text that reaches a note from a feed record would still be Hermes's paraphrase, and every note she reads
+  back comes through Hermes's untrusted-tool-result wrapper like any other tool output, so an injected instruction
+  gains no standing by being written down. Titles are one short line without markup (`cleanTitle`), so a
+  model-chosen title cannot split a note or smuggle HTML into the name.
+- Last write wins inside the Hermes folder: a re-list of every note before each write would cost seconds, and the
+  only other writer there is Aaron editing one of her notes in the same minute, which he can redo.
 
 ## 6. Testing
 

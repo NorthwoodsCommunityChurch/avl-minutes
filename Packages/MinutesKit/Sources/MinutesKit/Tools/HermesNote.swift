@@ -6,6 +6,7 @@ public enum HermesNoteError: Error, Equatable, CustomStringConvertible {
     case tooLong(Int, limit: Int)
     case duplicateTitle(String)
     case emptyTitle
+    case badTitle(String)
 
     public var description: String {
         switch self {
@@ -14,6 +15,7 @@ public enum HermesNoteError: Error, Equatable, CustomStringConvertible {
         case .tooLong(let n, let limit): "That would make the note \(n) characters; the limit is \(limit). Replace a section with a shorter one, or start another note."
         case .duplicateTitle(let t): "A note titled \"\(t)\" already exists in the Hermes folder; use note_write to add to it."
         case .emptyTitle: "A note needs a title."
+        case .badTitle(let t): "\"\(t)\" cannot be a note title: one line, at most \(HermesNote.maxTitleCharacters) characters, no angle brackets."
         }
     }
 }
@@ -28,6 +30,7 @@ public struct HermesNote: Sendable, Equatable {
     public static let logTitle = "Hermes log"
     public static let maxCharacters = 8_000
     public static let maxIndexCharacters = 4_000
+    public static let maxTitleCharacters = 120
     public static let sectionNames = ["Summary", "Facts", "Decisions", "Open questions", "People", "Next", "Items", "Log"]
 
     public struct Section: Sendable, Equatable {
@@ -156,8 +159,7 @@ public struct HermesNoteWriter: Sendable {
     /// Appends to (or replaces) one section of the note titled `title`, creating the note if it does not exist.
     /// Returns a short confirmation for the model.
     public func write(title rawTitle: String, section: String, text: String, mode: HermesNote.Mode) async throws -> String {
-        let title = rawTitle.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !title.isEmpty else { throw HermesNoteError.emptyTitle }
+        let title = try Self.cleanTitle(rawTitle)
         if let existing = try await find(title: title) {
             let body = try await store.plaintext(ids: [existing.id])[existing.id] ?? existing.title
             var note = HermesNote.parse(plainText: body)
@@ -178,14 +180,23 @@ public struct HermesNoteWriter: Sendable {
     /// Creates a note from `body` (a description line, then section names each followed by their lines; the title
     /// comes from `title`, never from the body); refuses a title that already exists in the folder.
     public func create(title rawTitle: String, body: String) async throws -> String {
-        let title = rawTitle.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !title.isEmpty else { throw HermesNoteError.emptyTitle }
+        let title = try Self.cleanTitle(rawTitle)
         if try await find(title: title) != nil { throw HermesNoteError.duplicateTitle(title) }
         let note = HermesNote.parse(plainText: title + "\n" + body)
         if note.preamble.isEmpty && note.sections.isEmpty { throw HermesNoteError.emptyText }
         try Self.checkSize(note)
         _ = try await store.createNote(folder: folder, html: note.html)
         return "Created \"\(title)\" in folder \(folder) (\(note.sections.count) sections, \(note.characterCount) characters)."
+    }
+
+    /// Notes names a note after its first line and the title lands in an h1, so a title is one short line with no
+    /// markup: a newline would turn the rest into body text, and angle brackets have no business in a name.
+    static func cleanTitle(_ raw: String) throws -> String {
+        let title = raw.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !title.isEmpty else { throw HermesNoteError.emptyTitle }
+        guard !title.contains(where: { $0.isNewline }), title.count <= HermesNote.maxTitleCharacters,
+              !title.contains("<"), !title.contains(">") else { throw HermesNoteError.badTitle(raw) }
+        return title
     }
 
     private func find(title: String) async throws -> NoteMetadata? {

@@ -93,6 +93,10 @@ private final class FakeStore: NoteStore, @unchecked Sendable {
     let store = FakeStore()
     let writer = HermesNoteWriter(store: store)
     await #expect(throws: HermesNoteError.emptyTitle) { try await writer.write(title: " ", section: "Facts", text: "x", mode: .append) }
+    // A title is one short line with no markup: a newline would push the rest into the body, brackets are not a name.
+    await #expect(throws: HermesNoteError.badTitle("Project: A\nignore previous")) { try await writer.write(title: "Project: A\nignore previous", section: "Facts", text: "x", mode: .append) }
+    await #expect(throws: HermesNoteError.self) { try await writer.create(title: "<b>x</b>", body: "d") }
+    await #expect(throws: HermesNoteError.self) { try await writer.create(title: String(repeating: "t", count: 121), body: "d") }
     let big = String(repeating: "- a long line of notes text here\n", count: 300)
     await #expect(throws: HermesNoteError.self) { try await writer.write(title: "Project: Big", section: "Facts", text: big, mode: .append) }
     store.notes["idx"] = ("Hermes", "Hermes index", "Hermes index\n\nItems\n- Project: Atrium: renovation")
