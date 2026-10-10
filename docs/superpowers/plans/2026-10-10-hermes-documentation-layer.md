@@ -46,20 +46,20 @@
 
 **Files:** `Packages/MinutesKit/Sources/MinutesMCP/MinutesMCPServer.swift` (`noteTools`, `tools(taskBoardConfigURL:notes:)`, `noteCall(name:arguments:store:)`, `run(... noteStore:)`), `Packages/MinutesKit/Tests/MinutesMCPTests/MinutesMCPTests.swift`, `HermesHelper/HermesHelperMain.swift` (passes `NotesBridge()`), `Shared/Notes/NotesBridge.swift` (`extension NotesBridge: NoteStore {}`).
 - [x] Test `noteToolsAreListedOnlyWithAStoreAndWriteThroughIt`.
-- [ ] Deploy: `bash scripts/deploy-helper.sh`; stdio check that `tools/list` shows `note_write`, `note_create`; one `note_write` to "Hermes log" from the shell; confirm the note appears in Notes on the mini and in `list_notes folder: Hermes` two minutes later.
+- [x] Deploy (2026-10-10 18:28): `bash scripts/deploy-helper.sh`; stdio check that `tools/list` shows `note_write`, `note_create`; one `note_write` to "Hermes log" from the shell; confirm the note appears in Notes on the mini and in `list_notes folder: Hermes` two minutes later.
 
-### Task 4: Relay: feed prompts in their own Hermes thread — DONE 2026-10-10 (deploy pending)
+### Task 4: Relay: feed prompts in their own Hermes thread — DONE 2026-10-10
 
 **Files:** `hermes-teams/lib/relay.js` (`FEED_CONVERSATION = "feed"`, `runFeedEvent` asks with it), `hermes-teams/test/notify.test.js`.
 - [x] `npm test` green (45).
-- [ ] Deploy: `bash hermes-teams/scripts/deploy-teams-relay.sh` between turns.
+- [x] Deployed 2026-10-10 18:29.
 
-### Task 5: SOUL.md "Your notes" schema and the relay-note capture sentence
+### Task 5: SOUL.md "Your notes" schema and the relay-note capture sentence — DONE 2026-10-10
 
 **Files:** `hermes-tools/SOUL.md`, `hermes-teams/lib/relay.js` (RELAY_NOTE).
 
-- [ ] Step 1: Add to `RELAY_NOTE`, after the ticket/person sentence: `If this message states a fact, a decision, a measurement, a plan, or an open question about a project, a person, or an event, write it into that thing's note with note_write before you answer (section Facts, Decisions, Open questions, or Next; end each line with the date in parentheses) and confirm in two words, like "Noted in Atrium".`
-- [ ] Step 2: Add a `## Your notes` section to `SOUL.md`:
+- [x] Step 1: Add to `RELAY_NOTE`, after the ticket/person sentence: `If this message states a fact, a decision, a measurement, a plan, or an open question about a project, a person, or an event, write it into that thing's note with note_write before you answer (section Facts, Decisions, Open questions, or Next; end each line with the date in parentheses) and confirm in two words, like "Noted in Atrium".`
+- [x] Step 2: Add a `## Your notes` section to `SOUL.md`:
 
 ```
 ## Your notes
@@ -69,29 +69,29 @@
 - "My notes on X" means: open "Project: X" (or the person's note) first, then search everything with no folder, then answer from the note and the newest hits.
 - Keep notes short: under 8,000 characters (the tool refuses more); move old Log lines out with note_write mode "replace" when a section grows past about forty lines; "Hermes index" stays under 4,000.
 ```
-- [ ] Step 3: Change the sent-mail rule: remove "If no card matches but he told you earlier in this conversation that he needed to send it, create the card and move it to Done in the same turn, then tell him." Replace with: "If no card matches, reply NO_MESSAGE; the board is the record."
-- [ ] Step 4: Meeting prep rule: add "and the project's or person's note in the Hermes folder" to the gather list.
-- [ ] Step 5: `cd hermes-teams && npm test`; `bash scripts/deploy-soul.sh`; `bash hermes-teams/scripts/deploy-teams-relay.sh`.
-- [ ] Step 6: Commit: `git add hermes-tools/SOUL.md hermes-teams/lib/relay.js && git commit -m "SOUL + relay note: Hermes keeps her notes in Apple Notes; capture before answering; feed prompts read notes not chat"`.
+- [x] Step 3: Change the sent-mail rule: remove "If no card matches but he told you earlier in this conversation that he needed to send it, create the card and move it to Done in the same turn, then tell him." Replace with: "If no card matches, reply NO_MESSAGE; the board is the record."
+- [x] Step 4: Meeting prep rule: add "and the project's or person's note in the Hermes folder" to the gather list.
+- [x] Step 5: `cd hermes-teams && npm test`; `bash scripts/deploy-soul.sh`; `bash hermes-teams/scripts/deploy-teams-relay.sh`.
+- [x] Step 6 (commit 2013487): `git add hermes-tools/SOUL.md hermes-teams/lib/relay.js && git commit -m "SOUL + relay note: Hermes keeps her notes in Apple Notes; capture before answering; feed prompts read notes not chat"`.
 
-### Task 6: Hermes config: tool bridge off, Planka filtered
+### Task 6: Hermes config: tool bridge off, Planka filtered — DONE 2026-10-10 (kept; see research doc section 7)
 
 **Files:** `~/.hermes/config.yaml` on edit-3 (backup `config.yaml.bak-20261010-bridge`).
 
-- [ ] Step 1: After the bake-off's baseline finishes (`~/bakeoff/gemma-on/timings.txt` ends with "=== done"), append to config.yaml:
+- [x] Step 1: After the bake-off's baseline finishes (`~/bakeoff/gemma-on/timings.txt` ends with "=== done"), append to config.yaml:
 ```yaml
 tools:
   tool_search:
     enabled: "off"
 ```
 and under `mcp_servers.planka` add `    tools:\n      include: [cards]`.
-- [ ] Step 2: `hermes doctor` on the mini; `bash ~/bakeoff/run.sh gemma-off gemma-bigctx`, then `bash ~/bakeoff/run.sh qwen-off qwen-coder`.
-- [ ] Step 3: Compare `timings.txt` and the one-shot sessions (tool calls, loop warnings, answers). Keep the block if no task got worse; otherwise delete it and record why in CLAUDE.md.
-- [ ] Step 4: `hermes gateway restart` between turns (the config is read at start).
+- [x] Step 2: `hermes doctor` on the mini; `bash ~/bakeoff/run.sh gemma-off gemma-bigctx`, then `bash ~/bakeoff/run.sh qwen-off qwen-coder`.
+- [x] Step 3: Compare `timings.txt` and the one-shot sessions (tool calls, loop warnings, answers). Keep the block if no task got worse; otherwise delete it and record why in CLAUDE.md.
+- [x] Step 4: `hermes gateway restart` between turns (the config is read at start).
 
-### Task 7: Nightly tidy job
+### Task 7: Nightly tidy job — created 2026-10-10 (job 8db3e5922b05), first run tonight 11 PM
 
-- [ ] Step 1: On the mini: `hermes cron create "every day at 11pm" --name "Nightly notes tidy" --deliver local "<prompt>"` with the prompt:
+- [x] Step 1: On the mini: `hermes cron create "every day at 11pm" --name "Nightly notes tidy" --deliver local "<prompt>"` with the prompt:
 
 ```
 Tidy Hermes's notes for today. 1) current_time, then search_notes with folder "teams", query "Aaron Larson", since today's date, limit 50: these are Aaron's own messages to you today. 2) get_note "Hermes index". 3) For each message that states a fact, decision, measurement, plan, or open question about a project, person, or event: get_note that note and, if the line is missing, note_write it with its date. 4) list_notes with folder "Hermes": any note missing from "Hermes index" gets its line added there. 5) note_write "Hermes log", section Log, one line: today's date and what you added (or "nothing new"). Reply exactly [SILENT] unless two notes contradict each other; then reply one line naming both notes and the contradiction.
@@ -108,7 +108,7 @@ Tidy Hermes's notes for today. 1) current_time, then search_notes with folder "t
 - [ ] CLAUDE.md: Status, Architecture (notes layer), Where things live (`HermesNote.swift`), Key identifiers (Hermes folder, index/log notes, tidy job id, config block), gotchas (headings come back bare; bridge off; feed thread), history row. README: one sentence.
 - [ ] Commit and push.
 
-### Task 10: Model decision from the bake-off
+### Task 10: Model decision from the bake-off — DONE 2026-10-10: qwen-coder
 
-- [ ] Record the three runs' results in `docs/research/2026-10-10-hermes-documentation-layer-research.md` (new section "Bake-off results").
-- [ ] If `qwen-coder` wins on tool-following without losing answer quality: `model.default: "qwen-coder"` on the mini (backup), `hermes gateway restart`, CLAUDE.md row. Otherwise stay on Gemma and say why.
+- [x] Record the three runs' results in `docs/research/2026-10-10-hermes-documentation-layer-research.md` (new section "Bake-off results").
+- [x] If `qwen-coder` wins on tool-following without losing answer quality: `model.default: "qwen-coder"` on the mini (backup), `hermes gateway restart`, CLAUDE.md row. Otherwise stay on Gemma and say why.

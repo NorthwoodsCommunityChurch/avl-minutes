@@ -88,7 +88,6 @@ private func seededIndex() throws -> URL {
 
 private final class MemoryStore: NoteStore, @unchecked Sendable {
     var created: [(folder: String, html: String)] = []
-    func listMetadata() async throws -> [NoteMetadata] { [] }
     func plaintext(ids: [String]) async throws -> [String: String] { [:] }
     func createNote(folder: String, html: String) async throws -> String { created.append((folder, html)); return "n1" }
     func setBody(noteID: String, html: String) async throws {}

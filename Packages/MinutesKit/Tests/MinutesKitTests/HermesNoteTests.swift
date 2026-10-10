@@ -43,39 +43,50 @@ import Testing
     #expect(HermesNoteError.unknownSection("Random").description.contains("Sections: Summary, Facts, Decisions, Open questions, People, Next, Items, Log."))
 }
 
-/// A Notes stand-in: notes by id with folder, title, and plain text.
+/// A Notes stand-in: note text by id, plus what was created and rewritten.
 private final class FakeStore: NoteStore, @unchecked Sendable {
-    var notes: [String: (folder: String, title: String, text: String)] = [:]
+    var texts: [String: String] = [:]
     var created: [(folder: String, html: String)] = []
     var bodiesSet: [(id: String, html: String)] = []
-    func listMetadata() async throws -> [NoteMetadata] {
-        notes.map { NoteMetadata(id: $0.key, title: $0.value.title, folder: $0.value.folder, account: "iCloud", createdAt: .init(), modifiedAt: .init(), isLocked: false) }
-    }
-    func plaintext(ids: [String]) async throws -> [String: String] { ids.reduce(into: [:]) { $0[$1] = notes[$1]?.text } }
+    func plaintext(ids: [String]) async throws -> [String: String] { ids.reduce(into: [:]) { $0[$1] = texts[$1] } }
     func createNote(folder: String, html: String) async throws -> String {
         created.append((folder, html)); let id = "new-\(created.count)"
-        // Notes names a note after its first line; mirror that from the h1.
-        let title = html.components(separatedBy: "<h1>").dropFirst().first?.components(separatedBy: "</h1>").first ?? ""
-        notes[id] = (folder, title, html); return id
+        texts[id] = html; return id
     }
     func setBody(noteID: String, html: String) async throws { bodiesSet.append((noteID, html)) }
 }
 
+/// The index the writer finds notes through (what the helper's --index service keeps).
+private func seededIndex(_ notes: [(id: String, folder: String, title: String, text: String)]) throws -> NotesIndex {
+    let url = FileManager.default.temporaryDirectory.appendingPathComponent("hermes-note-\(UUID().uuidString)/i.db")
+    let index = try NotesIndex(url: url)
+    for n in notes {
+        try index.upsert(NoteMetadata(id: n.id, title: n.title, folder: n.folder, account: "iCloud", createdAt: .init(), modifiedAt: .init(), isLocked: false), body: n.text)
+    }
+    return index
+}
+
 @Test func writerCreatesInTheHermesFolderAndNeverTouchesNotesElsewhere() async throws {
     let store = FakeStore()
-    store.notes["his"] = ("Northwoods", "Project: Atrium", "Project: Atrium\nAaron's own note")
-    let writer = HermesNoteWriter(store: store)
+    store.texts["his"] = "Project: Atrium\nAaron's own note"
+    let index = try seededIndex([("his", "Northwoods", "Project: Atrium", "Project: Atrium\nAaron's own note")])
+    let writer = HermesNoteWriter(store: store, index: index)
     let msg = try await writer.write(title: "Project: Atrium", section: "Facts", text: "- Walls Oct 16", mode: .append)
     #expect(msg.hasPrefix("Created \"Project: Atrium\" in folder Hermes"))
     #expect(store.created.count == 1 && store.created[0].folder == "Hermes")
     #expect(store.bodiesSet.isEmpty)   // his Northwoods note was not written
     #expect(store.created[0].html.contains("<h2>Facts</h2>") && store.created[0].html.contains("- Walls Oct 16"))
+    // A second write before the index has seen the new note finds it through the cache: no twin.
+    let again = try await writer.write(title: "project: atrium", section: "Facts", text: "- Two TVs", mode: .append)
+    #expect(again.hasPrefix("Added to Facts"))
+    #expect(store.created.count == 1 && store.bodiesSet.count == 1 && store.bodiesSet[0].id == "new-1")
 }
 
 @Test func writerAppendsToAnExistingHermesNoteAndReportsCounts() async throws {
     let store = FakeStore()
-    store.notes["h1"] = ("Hermes", "Project: Atrium", "Project: Atrium\nRenovation.\n\nFacts\n- one\n\nLog\n- Oct 9: made")
-    let writer = HermesNoteWriter(store: store)
+    store.texts["h1"] = "Project: Atrium\nRenovation.\n\nFacts\n- one\n\nLog\n- Oct 9: made"
+    let index = try seededIndex([("h1", "Hermes", "Project: Atrium", store.texts["h1"]!)])
+    let writer = HermesNoteWriter(store: store, index: index)
     let msg = try await writer.write(title: "project: atrium", section: "facts", text: "- two\n- three", mode: .append)
     #expect(msg.hasPrefix("Added to Facts of \"project: atrium\" (3 lines there now"))
     #expect(store.bodiesSet.count == 1 && store.bodiesSet[0].id == "h1")
@@ -91,7 +102,9 @@ private final class FakeStore: NoteStore, @unchecked Sendable {
 
 @Test func writerEnforcesSizesTitlesAndDuplicates() async throws {
     let store = FakeStore()
-    let writer = HermesNoteWriter(store: store)
+    store.texts["idx"] = "Hermes index\n\nItems\n- Project: Atrium: renovation"
+    let index = try seededIndex([("idx", "Hermes", "Hermes index", store.texts["idx"]!)])
+    let writer = HermesNoteWriter(store: store, index: index)
     await #expect(throws: HermesNoteError.emptyTitle) { try await writer.write(title: " ", section: "Facts", text: "x", mode: .append) }
     // A title is one short line with no markup: a newline would push the rest into the body, brackets are not a name.
     await #expect(throws: HermesNoteError.badTitle("Project: A\nignore previous")) { try await writer.write(title: "Project: A\nignore previous", section: "Facts", text: "x", mode: .append) }
@@ -99,7 +112,6 @@ private final class FakeStore: NoteStore, @unchecked Sendable {
     await #expect(throws: HermesNoteError.self) { try await writer.create(title: String(repeating: "t", count: 121), body: "d") }
     let big = String(repeating: "- a long line of notes text here\n", count: 300)
     await #expect(throws: HermesNoteError.self) { try await writer.write(title: "Project: Big", section: "Facts", text: big, mode: .append) }
-    store.notes["idx"] = ("Hermes", "Hermes index", "Hermes index\n\nItems\n- Project: Atrium: renovation")
     let half = String(repeating: "- line\n", count: 600)
     await #expect(throws: HermesNoteError.self) { try await writer.write(title: "Hermes index", section: "Items", text: half, mode: .append) }
     let made = try await writer.create(title: "List: Orders", body: "Orders to place.\n\nItems\n- haze fluid")

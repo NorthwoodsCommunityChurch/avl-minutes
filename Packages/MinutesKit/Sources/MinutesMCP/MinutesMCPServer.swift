@@ -103,10 +103,17 @@ public enum MinutesMCPServer {
         return out
     }
 
-    /// The note writing tools; async because Apple Notes is reached through a child process.
-    public static func noteCall(name: String, arguments: [String: Value]?, store: any NoteStore) async -> CallTool.Result {
+    /// Ids of notes this server created, shared across calls (see HermesNoteCache).
+    static let noteCache = HermesNoteCache()
+
+    /// The note writing tools; async because Apple Notes is reached through a child process. The index locates
+    /// the note (no AppleScript listing); it may be absent in tests.
+    public static func noteCall(name: String, arguments: [String: Value]?, store: any NoteStore, indexURL: URL? = nil) async -> CallTool.Result {
         let args = arguments ?? [:]
-        let writer = HermesNoteWriter(store: store)
+        let index: NotesIndex? = indexURL.flatMap { url in
+            FileManager.default.fileExists(atPath: url.path) ? try? NotesIndex(url: url, readOnly: true) : nil
+        }
+        let writer = HermesNoteWriter(store: store, index: index, cache: noteCache)
         do {
             switch name {
             case "note_write":
@@ -207,7 +214,7 @@ public enum MinutesMCPServer {
         }
         await server.withMethodHandler(CallTool.self) { params in
             if let noteStore, noteTools.contains(where: { $0.name == params.name }) {
-                return await noteCall(name: params.name, arguments: params.arguments, store: noteStore)
+                return await noteCall(name: params.name, arguments: params.arguments, store: noteStore, indexURL: indexURL)
             }
             return call(name: params.name, arguments: params.arguments, indexURL: indexURL, noIndexHint: noIndexHint,
                         taskBoardConfigURL: taskBoardConfigURL)

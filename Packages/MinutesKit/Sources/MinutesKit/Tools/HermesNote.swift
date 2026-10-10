@@ -138,42 +138,57 @@ public struct HermesNote: Sendable, Equatable {
 
 /// What the writer needs from Apple Notes; the apps' NotesBridge satisfies it.
 public protocol NoteStore: Sendable {
-    func listMetadata() async throws -> [NoteMetadata]
     func plaintext(ids: [String]) async throws -> [String: String]
     func createNote(folder: String, html: String) async throws -> String
     func setBody(noteID: String, html: String) async throws
 }
 
+/// Ids of notes this process created, so a second write in the two minutes before the index sees them finds
+/// the note instead of creating a twin.
+public actor HermesNoteCache {
+    private var ids: [String: String] = [:]
+    public init() {}
+    public func id(for title: String) -> String? { ids[title.lowercased()] }
+    public func remember(_ id: String, for title: String) { ids[title.lowercased()] = id }
+}
+
 /// Creates and edits notes in the Hermes folder only. Notes elsewhere, whatever their title, are never read for
-/// writing or changed: his notes stay his. Last write wins inside the folder (a re-list before every write would
-/// cost seconds; Aaron and Hermes editing the same note in the same minute is accepted).
+/// writing or changed: his notes stay his. The note is found through the index (plus the cache above), never by
+/// listing Apple Notes over AppleScript: a second client listing every note while the index service does the same
+/// hung Notes.app for minutes (2026-10-10). Only the small per-note events (read text, set body, create) go to
+/// Notes. Last write wins inside the folder.
 public struct HermesNoteWriter: Sendable {
     public let store: any NoteStore
     public let folder: String
+    public let index: NotesIndex?
+    public let cache: HermesNoteCache
 
-    public init(store: any NoteStore, folder: String = HermesNote.folder) {
+    public init(store: any NoteStore, folder: String = HermesNote.folder, index: NotesIndex? = nil, cache: HermesNoteCache = HermesNoteCache()) {
         self.store = store
         self.folder = folder
+        self.index = index
+        self.cache = cache
     }
 
     /// Appends to (or replaces) one section of the note titled `title`, creating the note if it does not exist.
     /// Returns a short confirmation for the model.
     public func write(title rawTitle: String, section: String, text: String, mode: HermesNote.Mode) async throws -> String {
         let title = try Self.cleanTitle(rawTitle)
-        if let existing = try await find(title: title) {
-            let body = try await store.plaintext(ids: [existing.id])[existing.id] ?? existing.title
+        if let existingID = try await find(title: title) {
+            let body = try await store.plaintext(ids: [existingID])[existingID] ?? title
             var note = HermesNote.parse(plainText: body)
             if note.title.isEmpty { note.title = title }
             try note.upsert(section: section, text: text, mode: mode)
             try Self.checkSize(note)
-            try await store.setBody(noteID: existing.id, html: note.html)
+            try await store.setBody(noteID: existingID, html: note.html)
             let count = note.sections.first { $0.name == HermesNote.sectionName(section) }?.lines.count ?? 0
             return "\(mode == .append ? "Added to" : "Replaced") \(HermesNote.sectionName(section) ?? section) of \"\(title)\" (\(count) lines there now, \(note.characterCount) characters in the note)."
         }
         var note = HermesNote(title: title)
         try note.upsert(section: section, text: text, mode: mode)
         try Self.checkSize(note)
-        _ = try await store.createNote(folder: folder, html: note.html)
+        let id = try await store.createNote(folder: folder, html: note.html)
+        await cache.remember(id, for: title)
         return "Created \"\(title)\" in folder \(folder) with a \(HermesNote.sectionName(section) ?? section) section (\(note.characterCount) characters)."
     }
 
@@ -185,7 +200,8 @@ public struct HermesNoteWriter: Sendable {
         let note = HermesNote.parse(plainText: title + "\n" + body)
         if note.preamble.isEmpty && note.sections.isEmpty { throw HermesNoteError.emptyText }
         try Self.checkSize(note)
-        _ = try await store.createNote(folder: folder, html: note.html)
+        let id = try await store.createNote(folder: folder, html: note.html)
+        await cache.remember(id, for: title)
         return "Created \"\(title)\" in folder \(folder) (\(note.sections.count) sections, \(note.characterCount) characters)."
     }
 
@@ -199,9 +215,13 @@ public struct HermesNoteWriter: Sendable {
         return title
     }
 
-    private func find(title: String) async throws -> NoteMetadata? {
+    /// The note's id: from this process's cache, else from the index (notes in `folder` only). Never from Notes.
+    private func find(title: String) async throws -> String? {
+        if let id = await cache.id(for: title) { return id }
+        guard let index else { return nil }
         let key = title.lowercased()
-        return try await store.listMetadata().first { $0.folder == folder && $0.title.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == key }
+        return try index.list(scope: .folder(folder), since: nil, until: nil, limit: 500)
+            .first { $0.title.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == key }?.id
     }
 
     private static func checkSize(_ note: HermesNote) throws {
