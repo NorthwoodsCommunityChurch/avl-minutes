@@ -85,3 +85,24 @@ private func seededIndex() throws -> URL {
     #expect(r.isError == true)
     #expect(text(r).hasPrefix("Task board unreachable:"))
 }
+
+private final class MemoryStore: NoteStore, @unchecked Sendable {
+    var created: [(folder: String, html: String)] = []
+    func listMetadata() async throws -> [NoteMetadata] { [] }
+    func plaintext(ids: [String]) async throws -> [String: String] { [:] }
+    func createNote(folder: String, html: String) async throws -> String { created.append((folder, html)); return "n1" }
+    func setBody(noteID: String, html: String) async throws {}
+}
+
+@Test func noteToolsAreListedOnlyWithAStoreAndWriteThroughIt() async throws {
+    #expect(!MinutesMCPServer.tools(taskBoardConfigURL: nil).contains { $0.name == "note_write" })
+    #expect(MinutesMCPServer.tools(taskBoardConfigURL: nil, notes: true).map(\.name).suffix(2) == ["note_write", "note_create"])
+    let store = MemoryStore()
+    let ok = await MinutesMCPServer.noteCall(name: "note_write", arguments: ["title": .string("Project: Atrium"), "section": .string("Facts"), "text": .string("- Walls Oct 16 (Oct 8)")], store: store)
+    #expect(ok.isError != true && text(ok).hasPrefix("Created \"Project: Atrium\" in folder Hermes"))
+    #expect(store.created.first?.folder == "Hermes")
+    let bad = await MinutesMCPServer.noteCall(name: "note_write", arguments: ["title": .string("X"), "section": .string("Random"), "text": .string("y")], store: store)
+    #expect(bad.isError == true && text(bad).contains("No section named \"Random\""))
+    let missing = await MinutesMCPServer.noteCall(name: "note_create", arguments: ["title": .string("X")], store: store)
+    #expect(missing.isError == true)
+}

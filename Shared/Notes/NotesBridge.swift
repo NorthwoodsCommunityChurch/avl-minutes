@@ -83,6 +83,9 @@ struct NotesBridge: Sendable {
     }
 }
 
+/// The bridge already has the writer's four calls; this lets the helper's MCP server hand it to HermesNoteWriter.
+extension NotesBridge: NoteStore {}
+
 /// `--notes-helper` mode (Minutes and Hermes Helper): reads one NotesRequest from stdin, runs it with
 /// NSAppleScript on this process's main thread, writes one NotesReply, exits.
 enum NotesHelper {

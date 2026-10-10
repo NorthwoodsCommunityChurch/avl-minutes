@@ -52,13 +52,15 @@ function buildMeetingPrepPrompt(records, nonce = randomNonce()) {
 
 /** Notify kinds: "feed" (calendar changes, sent mail) and "meeting" (a meeting starting soon). Never merged together. */
 const KINDS = new Set(["feed", "meeting"]);
+/** The Hermes conversation key automated prompts run in; Aaron's messages use his Teams conversation id. */
+const FEED_CONVERSATION = "feed";
 
 /**
  * Appended by the relay under each of Aaron's messages. The same rules live in SOUL.md, 20K tokens earlier in the
  * system prompt; a 31B model follows a rule sitting next to the message far more reliably (edit-3, 2026-10-09: a dozen
  * tasks became chat lists instead of cards, and a ticket mention got no search).
  */
-const RELAY_NOTE = "[Relay note, not from Aaron. Before you answer: if this message names something he has to do, create its card on the To Do board first and confirm \"Card added: …\" (things he said on other days are already on the board; never make cards from search results). If this message names a ticket, a person, a vendor, a quote, a project, or an event, search mail, teams, and notes for it first and lead with the newest thing you found, with its date. If he named a day or a span (yesterday, this week, since Monday), call current_time and pass since and until to search_notes. A search that says only some of its matches are shown is not an answer yet: narrow it. Keep the reply short.]";
+const RELAY_NOTE = "[Relay note, not from Aaron. Before you answer: if this message names something he has to do, create its card on the To Do board first and confirm \"Card added: …\" (things he said on other days are already on the board; never make cards from search results). If this message names a ticket, a person, a vendor, a quote, a project, or an event, search mail, teams, and notes for it first and lead with the newest thing you found, with its date. If this message states a fact, a decision, a measurement, a plan, or an open question about a project, a person, or an event, write it into that thing's note with note_write before you answer (section Facts, Decisions, Open questions, or Next; end each line with the date in parentheses) and confirm in two words, like \"Noted in Atrium\". If he named a day or a span (yesterday, this week, since Monday), call current_time and pass since and until to search_notes. A search that says only some of its matches are shown is not an answer yet: narrow it. Keep the reply short.]";
 
 /** Aaron's words, verbatim, then the relay's note. */
 function buildAaronPrompt(text) {
@@ -252,10 +254,12 @@ function createRelay({ config, connector, hermes, state, log = () => {}, typingI
   }
 
   async function runFeedEvent(records, kind) {
-    const home = state.get("homeConversation");
     const started = now();
     const prompt = kind === "meeting" ? buildMeetingPrepPrompt(records) : buildFeedEventPrompt(records);
-    const r = await hermes.ask({ conversationId: home.id, text: prompt });
+    // Automated prompts get their own Hermes thread (FEED_CONVERSATION): they read the notes, the board, and the
+    // index instead of Aaron's chat history, and his own thread stops filling up with feed traffic (it hit
+    // Hermes's compression limit six times in three days, 2026-10-08 to 10-10). The answer still posts to his chat.
+    const r = await hermes.ask({ conversationId: FEED_CONVERSATION, text: prompt });
     const text = (r.text || "").trim();
     const silent = !text || text.replace(/[`*.!]/g, "").trim().toUpperCase() === NO_MESSAGE;
     if (!silent) await postHome(text);
@@ -276,8 +280,8 @@ function createRelay({ config, connector, hermes, state, log = () => {}, typingI
 
   /**
    * A feed event ("feed": calendar changes, sent mail) or a meeting wake-up ("meeting") from the helper: Hermes reads
-   * it in Aaron's own thread and either answers with the lines Aaron should see (posted to his 1:1 chat) or
-   * NO_MESSAGE. Waits behind Aaron's own messages; see `pump`. Kinds are never merged with each other.
+   * it in its own thread (see runFeedEvent) and either answers with the lines Aaron should see (posted to his 1:1
+   * chat) or NO_MESSAGE. Waits behind Aaron's own messages; see `pump`. Kinds are never merged with each other.
    */
   function notify({ records, kind = "feed" }) {
     if (!KINDS.has(kind)) {
@@ -300,4 +304,4 @@ function createRelay({ config, connector, hermes, state, log = () => {}, typingI
   return { handle, notify, postHome, isAllowed, tenantOk };
 }
 
-module.exports = { createRelay, buildFeedEventPrompt, buildMeetingPrepPrompt, buildAaronPrompt, RELAY_NOTE, GREETING, HELP, PRIVATE, NO_MESSAGE };
+module.exports = { createRelay, buildFeedEventPrompt, buildMeetingPrepPrompt, buildAaronPrompt, RELAY_NOTE, FEED_CONVERSATION, GREETING, HELP, PRIVATE, NO_MESSAGE };

@@ -56,7 +56,7 @@ test("Aaron's 1:1 chat becomes the home conversation and notify posts Hermes's l
   assert.deepEqual(state.get("homeConversation"), { id: "a:home", serviceUrl: SERVICE_URL });
   sent.length = 0;
   const r = await relay.notify({ records: ["Calendar event, updated\nSubject: Sync\nWhen: 3pm"] });
-  assert.equal(asked[1].conversationId, "a:home");
+  assert.equal(asked[1].conversationId, "feed");   // its own Hermes thread, not Aaron's
   assert.match(asked[1].text, /Feed event/);
   assert.equal(r.posted, true);
   const msg = sent.find((s) => s.activity.type === "message");

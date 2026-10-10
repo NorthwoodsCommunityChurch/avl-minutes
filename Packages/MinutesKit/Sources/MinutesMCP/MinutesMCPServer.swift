@@ -10,7 +10,8 @@ public enum MinutesMCPServer {
     Use search_notes first, then get_note to read a result in full. \
     \(NotesTools.transcriptFolderHint) \
     current_time is the only clock available: call it before answering anything about today, now, or deadlines. \
-    task_board, where present, is Aaron's whole task board in one call: every open list and card with ids.
+    task_board, where present, is Aaron's whole task board in one call: every open list and card with ids. \
+    note_write and note_create, where present, keep Hermes's own notes in the Hermes folder of Aaron's Apple Notes.
     """
 
     private static let dateHelp = "YYYY-MM-DD (local day) or ISO 8601. Filters on a note's last edit, or on the item's own time for mail and Teams (sent) and calendar (start) records. Pass it whenever Aaron names a day or a span (yesterday, this week, since Monday), with the date from current_time."
@@ -70,10 +71,64 @@ public enum MinutesMCPServer {
         ])
     )
 
-    /// The tool list for a server: the notes tools, plus task_board when its config file exists.
-    public static func tools(taskBoardConfigURL: URL?) -> [Tool] {
-        guard let url = taskBoardConfigURL, FileManager.default.fileExists(atPath: url.path) else { return tools }
-        return tools + [taskBoardTool]
+    /// Hermes's own notes, listed only where a note store is wired (the mini); Minutes' server for Claude Code stays
+    /// read-only.
+    static let noteTools: [Tool] = [
+        Tool(
+            name: "note_write",
+            description: "Add lines to one section of one of your own notes in the Hermes folder of Aaron's Apple Notes, creating the note if it does not exist. Sections: " + HermesNote.sectionNames.joined(separator: ", ") + ". Read the note with get_note first when adding to it. Never for Aaron's own notes: titles are matched only inside the Hermes folder.",
+            inputSchema: schema(properties: [
+                "title": property("string", "The note's title, e.g. \"Project: Atrium\", \"Brian Turnbull (House Right)\", \"List: Orders\", \"Hermes index\", \"Hermes log\"."),
+                "section": property("string", "One of: " + HermesNote.sectionNames.joined(separator: ", ") + "."),
+                "text": property("string", "The lines to add, one per line, each ending with its date in parentheses, e.g. \"- Walls go in Friday Oct 16. (Oct 8)\"."),
+                "mode": property("string", "\"append\" (default) adds the lines at the end of the section; \"replace\" replaces the section's lines."),
+            ], required: ["title", "section", "text"])
+        ),
+        Tool(
+            name: "note_create",
+            description: "Create a new note in the Hermes folder. The body is plain text: a one-line description, then sections named exactly " + HermesNote.sectionNames.joined(separator: ", ") + " each followed by its lines. Refuses a title that already exists there.",
+            inputSchema: schema(properties: [
+                "title": property("string", "The note's title."),
+                "body": property("string", "Plain text in the note shape (description line, then section names each on its own line followed by lines)."),
+            ], required: ["title", "body"])
+        ),
+    ]
+
+    /// The tool list for a server: the notes tools, plus task_board when its config file exists, plus the note
+    /// writing tools when a store is wired.
+    public static func tools(taskBoardConfigURL: URL?, notes: Bool = false) -> [Tool] {
+        var out = tools
+        if let url = taskBoardConfigURL, FileManager.default.fileExists(atPath: url.path) { out.append(taskBoardTool) }
+        if notes { out += noteTools }
+        return out
+    }
+
+    /// The note writing tools; async because Apple Notes is reached through a child process.
+    public static func noteCall(name: String, arguments: [String: Value]?, store: any NoteStore) async -> CallTool.Result {
+        let args = arguments ?? [:]
+        let writer = HermesNoteWriter(store: store)
+        do {
+            switch name {
+            case "note_write":
+                guard let title = args["title"]?.stringValue, let section = args["section"]?.stringValue, let text = args["text"]?.stringValue else {
+                    return failure("note_write needs \"title\", \"section\", and \"text\".")
+                }
+                let modeText = args["mode"]?.stringValue ?? "append"
+                guard let mode = HermesNote.Mode(rawValue: modeText) else { return failure("\"mode\" must be \"append\" or \"replace\", got \"\(modeText)\".") }
+                return .init(content: [.text(try await writer.write(title: title, section: section, text: text, mode: mode))])
+            case "note_create":
+                guard let title = args["title"]?.stringValue, let body = args["body"]?.stringValue else {
+                    return failure("note_create needs \"title\" and \"body\".")
+                }
+                return .init(content: [.text(try await writer.create(title: title, body: body))])
+            default:
+                return failure("Unknown tool \"\(name)\".")
+            }
+        } catch let error as HermesNoteError {
+            return failure(error.description)
+        } catch {
+            return failure("Could not reach Apple Notes: \(error)")
+        }
     }
 
     public static func call(
@@ -138,7 +193,8 @@ public enum MinutesMCPServer {
         version: String,
         name: String = "minutes",
         noIndexHint: String = "open Minutes once so it can index your notes",
-        taskBoardConfigURL: URL? = nil
+        taskBoardConfigURL: URL? = nil,
+        noteStore: (any NoteStore)? = nil
     ) async throws {
         let server = Server(
             name: name,
@@ -146,10 +202,15 @@ public enum MinutesMCPServer {
             instructions: instructions,
             capabilities: .init(tools: .init(listChanged: false))
         )
-        await server.withMethodHandler(ListTools.self) { _ in .init(tools: tools(taskBoardConfigURL: taskBoardConfigURL)) }
+        await server.withMethodHandler(ListTools.self) { _ in
+            .init(tools: tools(taskBoardConfigURL: taskBoardConfigURL, notes: noteStore != nil))
+        }
         await server.withMethodHandler(CallTool.self) { params in
-            call(name: params.name, arguments: params.arguments, indexURL: indexURL, noIndexHint: noIndexHint,
-                 taskBoardConfigURL: taskBoardConfigURL)
+            if let noteStore, noteTools.contains(where: { $0.name == params.name }) {
+                return await noteCall(name: params.name, arguments: params.arguments, store: noteStore)
+            }
+            return call(name: params.name, arguments: params.arguments, indexURL: indexURL, noIndexHint: noIndexHint,
+                        taskBoardConfigURL: taskBoardConfigURL)
         }
         try await server.start(transport: StdioTransport())
         await server.waitUntilCompleted()

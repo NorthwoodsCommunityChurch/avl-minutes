@@ -6,7 +6,7 @@ import MinutesMCP
 /// `--index` (the default; run by launchd) keeps the Apple Notes index current and indexes the
 /// OneDrive "AI Feed" folder (`--feed <path>` overrides the default location);
 /// `--mcp` serves that index read-only to Hermes Agent over stdio, plus the task board when
-/// `task-board.json` sits next to the index; `--notes-helper`
+/// `task-board.json` sits next to the index, and Hermes's own notes (`note_write`, `note_create`, folder "Hermes"); `--notes-helper`
 /// runs one Apple Notes request for the index service; `--version` prints the version.
 @main
 enum HermesHelperMain {
@@ -28,7 +28,8 @@ enum HermesHelperMain {
                 do {
                     let indexURL = NotesIndex.defaultURL(appFolder: indexFolder)
                     try await MinutesMCPServer.run(indexURL: indexURL, version: version, name: serverName, noIndexHint: noIndexHint,
-                                                   taskBoardConfigURL: indexURL.deletingLastPathComponent().appendingPathComponent("task-board.json"))
+                                                   taskBoardConfigURL: indexURL.deletingLastPathComponent().appendingPathComponent("task-board.json"),
+                                                   noteStore: NotesBridge())
                     exit(0)
                 } catch {
                     FileHandle.standardError.write(Data("HermesHelper --mcp: \(error)\n".utf8))
