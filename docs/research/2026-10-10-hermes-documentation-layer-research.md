@@ -133,6 +133,30 @@ Open questions for the spec: whether Hermes nudges can be pointed at a note inst
 memory-provider plugin could do it [13]); whether the index note stays under the size where wikis degrade [7]; how
 the helper authenticates note writes (same `--notes-helper` child as Minutes).
 
+## 7. Bake-off results (2026-10-10, one-shots on the mini with the relay note appended)
+
+Six real tasks per run: his to-do (T1), "my notes on atrium from yesterday" (T2), a message needing a card and a
+search (T3), three full-detail Planka lists in one message (T5, the spill case), and a sent-mail feed event that should
+close a test card (T6). Scored from the session store: tool calls, loop warnings, seconds, answer. Test cards were
+created for T3 and T6 and deleted afterwards. Runner and scorer: `~/bakeoff/run.sh`, `~/bakeoff/score.py` on edit-3.
+
+| Run | T1 to-do | T2 notes | T3 card | T5 spill | T6 feed | Loops |
+|---|---|---|---|---|---|---|
+| Gemma 4 31B, bridge on (today's setup) | 184 s, task_board once, all 8 lists | 188 s, current_time, search, 8 get_note, correct Oct 9 items | 212 s, card + search + newest ticket line | 174 s, 6 cards calls, full listing, no spill | 195 s, card moved to Done, one line | 0 |
+| Gemma 4 31B, bridge off | 195 s, task_board once (direct call), all 8 lists | 162 s, current_time, search, 5 get_note, correct Oct 9 items, newest first | 206 s, card + search + newest ticket line | 174 s, task_board + 3 cards calls, full listing, no spill | 88 s, card moved to Done, one line | 0 |
+| qwen-coder, bridge off | 72 s, task_board once, all 8 lists | 19 s, current_time + one search with since, correct Oct 9 items (calendar, Teams) | 23 s, search + card; no "last on ticket" line | 50 s, 3 cards calls, full listing | 29 s, card moved to Done, one line | 0 |
+
+Notes: the baseline is clean because yesterday's fixes already landed (task_board, SOUL rules); the bridge-off run
+measures whether removing `tool_search` / `tool_call` changes behavior or time; the Qwen run measures the model.
+
+**Reading.** Bridge off cost nothing and removed the bridge calls (Gemma's feed event went from 195 s to 88 s). The box's
+`qwen-coder` did every task correctly, called tools directly, and was three to eight times faster than Gemma; its
+answers are terser (task 3 omitted the "newest thing found" line the relay note asks for). A probe through the
+gateway's chat endpoint accepted a 102,407-token prompt, so Hermes's 65K window is safe. Decision 2026-10-10: `model.default:
+"qwen-coder"` (backup `config.yaml.bak-20261010-model`), `tools.tool_search.enabled: "off"`, Planka filtered to `cards`
+(backup `config.yaml.bak-20261010-bridge`). Caveat: the box swaps models between clients (15 to 25 s); if other work on
+the box runs Gemma, Hermes's traffic now causes swaps. Revert is one line and a restart.
+
 ## Sources
 
 1. Hermes issue #110442, Qwen models mis-route to `tool_call` — https://github.com/NousResearch/hermes-agent/issues/110442
