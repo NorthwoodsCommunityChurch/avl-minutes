@@ -142,3 +142,15 @@ private func seededIndex(_ notes: [(id: String, folder: String, title: String, t
     _ = try await writer.write(title: "Project: Atrium", section: "Facts", text: "- four", mode: .append)
     #expect(store.created.count == 3)
 }
+
+@Test func renderedHTMLUsesOnlyTheTagsTheSpoolServerAccepts() {
+    let note = HermesNote(title: "T <x>", preamble: ["a > b"], sections: [.init(name: "Facts", lines: ["<script>alert(1)</script>", "x & y"])])
+    var rest = Substring(note.html)
+    while let open = rest.firstIndex(of: "<") {
+        let close = rest[open...].firstIndex(of: ">")!
+        #expect(HermesNote.htmlTags.contains(String(rest[open...close])))
+        rest = rest[rest.index(after: close)...]
+    }
+    #expect(!rest.contains(">"))
+    #expect(note.html.contains("&lt;script&gt;"))
+}

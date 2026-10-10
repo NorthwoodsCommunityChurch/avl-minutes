@@ -16,7 +16,10 @@ import OSLog
 /// request here, and the server acts under the consent macOS gave the helper, so it does only what Hermes's own
 /// notes need. Listing and showing notes are refused; a note is created only in the Hermes folder; a note is read
 /// or rewritten only after the server itself confirms it sits in the Hermes folder; at most a few ids per read.
-/// A shared secret would not add to that (a same-user process could read it too), so the scope is the control.
+/// The HTML accepted is only what `HermesNote.html` produces (div, h1, h2, br, escaped text), capped at 64 KB.
+/// A shared secret would not add to that (a same-user process could read it too), so the scope is the control;
+/// what stays is the mini's own same-user boundary, where the relay key, the board key, and Hermes's config
+/// already live, so the spool adds no capability a process there did not already have.
 enum NoteRequestSpool {
     static let directoryName = "note-requests"
 
@@ -38,6 +41,21 @@ enum NoteRequestSpool {
 
     static let folder = HermesNote.folder
     static let maxReadIDs = 5
+    static let maxHTMLBytes = 65_536
+
+    /// Only what `HermesNote.html` produces: div, h1, h2, br tags and escaped text. Anything else (links, images,
+    /// scripts, styles, raw angle brackets) is refused, so the spool cannot put arbitrary markup into Aaron's Notes.
+    static func isOurHTML(_ html: String) -> Bool {
+        guard html.utf8.count <= maxHTMLBytes else { return false }
+        var rest = Substring(html)
+        while let open = rest.firstIndex(of: "<") {
+            guard let close = rest[open...].firstIndex(of: ">") else { return false }
+            let tag = rest[open...close]
+            guard HermesNote.htmlTags.contains(String(tag)) else { return false }
+            rest = rest[rest.index(after: close)...]
+        }
+        return !rest.contains(">")
+    }
 
     private static func writeAtomically(_ data: Data, to url: URL) throws {
         let tmp = url.appendingPathExtension("tmp")
@@ -178,14 +196,14 @@ enum NoteRequestSpool {
                     guard let name = try await bridge.folder(ofNote: noteID) else { return .failed(.scriptFailed("no such note")) }
                     return .folder(name)
                 case .create(let folder, let html):
-                    guard folder == NoteRequestSpool.folder else { return .failed(.permissionDenied) }
+                    guard folder == NoteRequestSpool.folder, NoteRequestSpool.isOurHTML(html) else { return .failed(.permissionDenied) }
                     return .created(id: try await bridge.createNote(folder: folder, html: html))
                 case .plaintext(let ids):
                     guard ids.count <= NoteRequestSpool.maxReadIDs else { return .failed(.permissionDenied) }
                     for id in ids where try await bridge.folder(ofNote: id) != NoteRequestSpool.folder { return .failed(.permissionDenied) }
                     return .texts(try await bridge.plaintext(ids: ids))
                 case .setBody(let noteID, let html):
-                    guard try await bridge.folder(ofNote: noteID) == NoteRequestSpool.folder else { return .failed(.permissionDenied) }
+                    guard NoteRequestSpool.isOurHTML(html), try await bridge.folder(ofNote: noteID) == NoteRequestSpool.folder else { return .failed(.permissionDenied) }
                     try await bridge.setBody(noteID: noteID, html: html)
                     return .done
                 }

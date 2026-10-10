@@ -298,7 +298,7 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
   the consent-blocked event wedged Notes.app itself ("AppleEvent timed out" for the index service too, twice on 2026-10-10, fixed each time
   by `killall Notes`). No consent record was readable from `log show`. Note writes therefore go through `NoteRequestSpool`: the MCP server
   drops `<id>.json` (a `NotesRequest`) in `~/Library/Application Support/Hermes Helper/note-requests/`, the index service serves it with its
-  own `NotesBridge` and drops `<id>.reply.json`; the first write through it took 10 s. The writer also never lists notes (the index plus a
+  own `NotesBridge` and drops `<id>.reply.json`; the first write through it took 10 s. The server enforces the scope itself (any same-user process could drop a request): list and show refused, create only into the Hermes folder, read or rewrite only after confirming a note's folder, five ids per read, and the spool directory must be this user's with mode 700. The writer also never lists notes (the index plus a
   cache finds them) and confirms the folder with one `folderOf` event before editing, so a note Aaron moved out is left alone. If a
   `note_write` ever times out again, check the helper log's "last refresh": a stale one means Notes is wedged, and `killall Notes` clears it.
 - **Hermes's deferred-tool bridge fails with small local models** (`tools.tool_search`, default `auto`, hides MCP and plugin tools behind

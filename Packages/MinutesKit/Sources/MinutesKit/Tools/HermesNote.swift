@@ -120,6 +120,9 @@ public struct HermesNote: Sendable, Equatable {
         }
     }
 
+    /// The tags `html` ever emits; the helper's spool server accepts exactly these and nothing else.
+    public static let htmlTags = ["<div>", "</div>", "<h1>", "</h1>", "<h2>", "</h2>", "<br>"]
+
     static func escape(_ text: String) -> String {
         var out = ""
         out.reserveCapacity(text.count)
