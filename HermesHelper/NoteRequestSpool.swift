@@ -10,7 +10,13 @@ import OSLog
 ///
 /// Protocol: the client writes `<id>.json` (a `NotesRequest`), the server answers with `<id>.reply.json`
 /// (a `NotesReply`), both written to a temp name and renamed so neither side reads a half file. The directory
-/// sits next to the index (mode 700). Requests carry no secrets; replies carry note text only for the caller.
+/// sits next to the index (mode 700, owned by this user, checked at every start).
+///
+/// Scope, enforced by the server and not by trust in the client: any process running as this user could drop a
+/// request here, and the server acts under the consent macOS gave the helper, so it does only what Hermes's own
+/// notes need. Listing and showing notes are refused; a note is created only in the Hermes folder; a note is read
+/// or rewritten only after the server itself confirms it sits in the Hermes folder; at most a few ids per read.
+/// A shared secret would not add to that (a same-user process could read it too), so the scope is the control.
 enum NoteRequestSpool {
     static let directoryName = "note-requests"
 
@@ -22,6 +28,16 @@ enum NoteRequestSpool {
         try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true,
                                                 attributes: [.posixPermissions: 0o700])
     }
+
+    /// Owned by the running user, mode exactly 0700, a real directory (not a link).
+    static func isPrivate(_ directory: URL) -> Bool {
+        var st = stat()
+        guard lstat(directory.path, &st) == 0 else { return false }
+        return (st.st_mode & S_IFMT) == S_IFDIR && st.st_uid == getuid() && (st.st_mode & 0o777) == 0o700
+    }
+
+    static let folder = HermesNote.folder
+    static let maxReadIDs = 5
 
     private static func writeAtomically(_ data: Data, to url: URL) throws {
         let tmp = url.appendingPathExtension("tmp")
@@ -94,9 +110,15 @@ enum NoteRequestSpool {
         init(directory: URL) { self.directory = directory }
 
         /// Watches the directory (plus a slow timer in case a wake is missed) and serves what is there now.
+        /// Refuses to serve a directory this user does not own with mode 700.
         func start() {
             do { try NoteRequestSpool.ensure(directory) } catch {
                 Self.logger.error("spool directory could not be created")
+                return
+            }
+            guard NoteRequestSpool.isPrivate(directory) else {
+                Self.logger.error("spool directory is not owned by this user with mode 700; note writes disabled")
+                print("\(ISO8601DateFormatter().string(from: Date())) note requests disabled: spool directory must be owned by this user with mode 700"); fflush(stdout)
                 return
             }
             descriptor = open(directory.path, O_EVTONLY)
@@ -146,17 +168,26 @@ enum NoteRequestSpool {
             served += 1
         }
 
+        /// The scope rules live here; see the type comment.
         private func run(_ request: NotesRequest) async -> NotesReply {
             do {
                 switch request {
-                case .list: return .notes(try await bridge.listMetadata())
-                case .plaintext(let ids): return .texts(try await bridge.plaintext(ids: ids))
-                case .create(let folder, let html): return .created(id: try await bridge.createNote(folder: folder, html: html))
-                case .setBody(let noteID, let html): try await bridge.setBody(noteID: noteID, html: html); return .done
-                case .show(let noteID): try await bridge.showNote(noteID: noteID); return .done
+                case .list, .show:
+                    return .failed(.permissionDenied)
                 case .folderOf(let noteID):
                     guard let name = try await bridge.folder(ofNote: noteID) else { return .failed(.scriptFailed("no such note")) }
                     return .folder(name)
+                case .create(let folder, let html):
+                    guard folder == NoteRequestSpool.folder else { return .failed(.permissionDenied) }
+                    return .created(id: try await bridge.createNote(folder: folder, html: html))
+                case .plaintext(let ids):
+                    guard ids.count <= NoteRequestSpool.maxReadIDs else { return .failed(.permissionDenied) }
+                    for id in ids where try await bridge.folder(ofNote: id) != NoteRequestSpool.folder { return .failed(.permissionDenied) }
+                    return .texts(try await bridge.plaintext(ids: ids))
+                case .setBody(let noteID, let html):
+                    guard try await bridge.folder(ofNote: noteID) == NoteRequestSpool.folder else { return .failed(.permissionDenied) }
+                    try await bridge.setBody(noteID: noteID, html: html)
+                    return .done
                 }
             } catch let error as NotesBridgeError {
                 return .failed(error)

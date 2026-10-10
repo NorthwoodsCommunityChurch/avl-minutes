@@ -146,7 +146,11 @@ answer, seconds, loop warnings. The winner becomes `model.default`; nothing else
 
 ## 5. Security
 
-- Hermes can create and edit notes only inside the Hermes folder; the helper enforces it, not the rules.
+- Hermes can create and edit notes only inside the Hermes folder; the helper enforces it, not the rules, and the
+  index service enforces it again on every spooled request (any same-user process could drop one): list and show
+  are refused, create only into the Hermes folder, read and rewrite only for notes it confirms are there, at most
+  five ids per read, and the spool directory must be this user's with mode 700 or the service refuses to serve it.
+  A shared secret would not add to that, since a same-user process could read it too.
 - Writes go through AppleScript only (never the Notes database), the same path Minutes uses for transcripts.
 - Outside text (feed records) stays inside the nonce-tagged untrusted block; a note's content is Hermes's own words
   and is treated like her replies, which Aaron already reads.
