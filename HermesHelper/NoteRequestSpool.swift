@@ -46,15 +46,28 @@ enum NoteRequestSpool {
     /// Only what `HermesNote.html` produces: div, h1, h2, br tags and escaped text. Anything else (links, images,
     /// scripts, styles, raw angle brackets) is refused, so the spool cannot put arbitrary markup into Aaron's Notes.
     static func isOurHTML(_ html: String) -> Bool {
-        guard html.utf8.count <= maxHTMLBytes else { return false }
+        guard html.utf8.count <= maxHTMLBytes, html.hasPrefix("<div><h1>") else { return false }
         var rest = Substring(html)
         while let open = rest.firstIndex(of: "<") {
+            // Text before the tag: no stray > and no entity other than the four the renderer writes, so what Notes
+            // decodes is exactly the escaped text, nothing a different parser could read as markup.
+            let text = rest[..<open]
+            guard !text.contains(">"), Self.entitiesAreOurs(text) else { return false }
             guard let close = rest[open...].firstIndex(of: ">") else { return false }
-            let tag = rest[open...close]
-            guard HermesNote.htmlTags.contains(String(tag)) else { return false }
+            guard HermesNote.htmlTags.contains(String(rest[open...close])) else { return false }
             rest = rest[rest.index(after: close)...]
         }
-        return !rest.contains(">")
+        return !rest.contains(">") && Self.entitiesAreOurs(rest)
+    }
+
+    private static func entitiesAreOurs(_ text: Substring) -> Bool {
+        var rest = text
+        while let amp = rest.firstIndex(of: "&") {
+            let tail = rest[amp...]
+            guard let entity = ["&amp;", "&lt;", "&gt;", "&quot;"].first(where: { tail.hasPrefix($0) }) else { return false }
+            rest = tail.dropFirst(entity.count)
+        }
+        return true
     }
 
     private static func writeAtomically(_ data: Data, to url: URL) throws {

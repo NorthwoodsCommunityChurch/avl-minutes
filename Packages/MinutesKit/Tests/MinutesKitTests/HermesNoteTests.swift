@@ -153,4 +153,13 @@ private func seededIndex(_ notes: [(id: String, folder: String, title: String, t
     }
     #expect(!rest.contains(">"))
     #expect(note.html.contains("&lt;script&gt;"))
+    #expect(note.html.hasPrefix("<div><h1>"))
+    // Every ampersand the renderer writes starts one of its four entities.
+    var text = Substring(note.html)
+    while let amp = text.firstIndex(of: "&") {
+        let tail = text[amp...]
+        let entity = ["&amp;", "&lt;", "&gt;", "&quot;"].first { tail.hasPrefix($0) }
+        #expect(entity != nil)
+        text = tail.dropFirst(entity?.count ?? 1)
+    }
 }
