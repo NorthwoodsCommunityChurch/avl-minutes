@@ -62,14 +62,15 @@ struct NotesBridge: Sendable {
         guard case .done = try await send(.setBody(noteID: noteID, html: html)) else { throw NotesBridgeError.badOutput }
     }
 
-    /// The folder a note sits in now (one small event), so a writer can refuse a note that moved.
+    /// The folder a note sits in now (one small event), so a writer can refuse a note that moved. Throws
+    /// `scriptFailed` with Notes' own message when the note cannot be reached.
+    func folderName(ofNote id: String) async throws -> String {
+        guard case .folder(let name) = try await send(.folderOf(noteID: id)) else { throw NotesBridgeError.badOutput }
+        return name
+    }
+
     func folder(ofNote id: String) async throws -> String? {
-        do {
-            guard case .folder(let name) = try await send(.folderOf(noteID: id)) else { throw NotesBridgeError.badOutput }
-            return name
-        } catch NotesBridgeError.scriptFailed {
-            return nil   // the note is gone
-        }
+        do { return try await folderName(ofNote: id) } catch NotesBridgeError.scriptFailed { return nil }
     }
 
     private func send(_ request: NotesRequest) async throws -> NotesReply {

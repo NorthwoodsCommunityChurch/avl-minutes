@@ -61,14 +61,20 @@ on createNote(folderName, html)
 end createNote
 
 on folderOf(noteID)
+	-- "container of note" fails on macOS 26.5 ("Can't get name of container"), so look the id up per folder.
+	set target to noteID as text
 	tell application "Notes"
-		return name of container of note id noteID
+		set acct to my targetAccount()
+		repeat with f in folders of acct
+			if (id of notes of f) contains target then return name of f
+		end repeat
 	end tell
+	return ""
 end folderOf
 
 on showNote(noteID)
 	tell application "Notes"
-		show note id noteID
+		show note id (noteID as text)
 		activate
 	end tell
 	return true
@@ -76,7 +82,7 @@ end showNote
 
 on setBody(noteID, html)
 	tell application "Notes"
-		set body of note id noteID to html
+		set body of note id (noteID as text) to html
 	end tell
 	return true
 end setBody

@@ -301,6 +301,12 @@ happens, follow `../App Updates/SPARKLE-GUIDE.md` by hand.
   own `NotesBridge` and drops `<id>.reply.json`; the first write through it took 10 s. The server enforces the scope itself (any same-user process could drop a request): list and show refused, create only into the Hermes folder, read or rewrite only after confirming a note's folder, five ids per read, and the spool directory must be this user's with mode 700. The writer also never lists notes (the index plus a
   cache finds them) and confirms the folder with one `folderOf` event before editing, so a note Aaron moved out is left alone. If a
   `note_write` ever times out again, check the helper log's "last refresh": a stale one means Notes is wedged, and `killall Notes` clears it.
+- **Never drive Notes from an SSH shell on the mini** (`osascript -e 'tell application "Notes" …'`): it waits for a consent prompt nobody
+  sees and wedges Notes.app for every client until `killall Notes` (2026-10-10, third time). Go through the helper's spool instead.
+- **`container of note` fails on macOS 26.5** ("Can't get name of container of note id …"). The first folder check used it, every lookup
+  read as "note moved", and `note_write` created a fresh note each time: ten copies of three notes in one tidy run (2026-10-10). `folderOf`
+  now looks the id up folder by folder. Duplicates were merged into the newest copy; the older copies are titled "Duplicate of … (safe to
+  delete)" because nothing in the helper can delete a note, by design.
 - **Hermes's deferred-tool bridge fails with small local models** (`tools.tool_search`, default `auto`, hides MCP and plugin tools behind
   `tool_search` / `tool_describe` / `tool_call`). Hermes issues #110442 (Qwen's `<tool_call>` tag collides with the bridge name), #135762 (no way to
   keep MCP tools direct; 9B model failed 10 of 10), #96247 (1,523 `tool_search` calls; `enabled: "off"` fixed it) are our two `read_file` loops.

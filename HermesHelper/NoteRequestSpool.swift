@@ -206,8 +206,7 @@ enum NoteRequestSpool {
                 case .list, .show:
                     return .failed(.permissionDenied)
                 case .folderOf(let noteID):
-                    guard let name = try await bridge.folder(ofNote: noteID) else { return .failed(.scriptFailed("no such note")) }
-                    return .folder(name)
+                    return .folder(try await bridge.folderName(ofNote: noteID))   // scriptFailed carries Notes' message
                 case .create(let folder, let html):
                     guard folder == NoteRequestSpool.folder, NoteRequestSpool.isOurHTML(html) else { return .failed(.permissionDenied) }
                     return .created(id: try await bridge.createNote(folder: folder, html: html))
