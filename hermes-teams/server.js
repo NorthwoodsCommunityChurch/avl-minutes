@@ -2,9 +2,12 @@
 /**
  * hermes-teams: the relay between the Teams bot "Hermes" and Hermes Agent on this Mac.
  *   GET  /health          -> {ok, relay, bot:{configured}, hermes:{ok}}
+ *   GET  /status          -> local only; {busy, waiting}: deploy scripts wait for an idle relay before restarting.
  *   POST /webhooks/teams  -> front-door key, Microsoft's JWT, 200 at once; the answer follows in the chat.
- *   POST /notify          -> local only; {records[], kind?: feed|meeting} from Hermes Helper, needs x-notify-key.
- *   ~/.hermes/cron/output -> watched; each new scheduled-job output is posted to Aaron's chat (lib/cron-output.js).
+ *   POST /notify          -> local only; {records[], kind?: feed|meeting|progress, ids?[]} from Hermes Helper or the mesh
+ *                            bridge (progress, ids = mesh message ids), needs x-notify-key.
+ *   ~/.hermes/cron/output -> watched; each new scheduled-job output goes to Hermes for review, then to Aaron's chat
+ *                            (lib/cron-output.js, lib/relay.js).
  * Binds 127.0.0.1 only; the Cloudflare Worker reaches it through the tunnel. Run by launchd (see launchd/).
  */
 const http = require("node:http");
@@ -14,6 +17,8 @@ const { createHermesClient } = require("./lib/hermes");
 const { createRelay } = require("./lib/relay");
 const { createCronOutputWatcher } = require("./lib/cron-output");
 const { createState } = require("./lib/state");
+const { createOutbox } = require("./lib/outbox");
+const { readUpcomingJobs, snapshotJobs, readJobStart } = require("./lib/jobs");
 const { createLog } = require("./lib/log");
 const { loadConfig } = require("./lib/config");
 
@@ -59,6 +64,10 @@ function createServer({ config, relay, verifier, hermes, log = () => {} }) {
         const ok = hermes && hermes.health ? await hermes.health() : null;
         return json(res, 200, { ok: true, relay: "hermes-teams", bot: { configured: !!(config && config.teamsBot && config.teamsBot.appId) }, hermes: { ok } });
       }
+      if (req.method === "GET" && url.pathname === "/status") {
+        // Local only (the Worker forwards /webhooks/teams and /health): scripts/wait-hermes-idle.sh polls it.
+        return json(res, 200, relay.status ? relay.status() : { busy: false, waiting: 0 });
+      }
       if (req.method === "POST" && url.pathname === "/webhooks/teams") {
         if (!keyOk(req.headers["x-front-door-key"])) throw new RelayError(403, "Missing front-door key");
         const raw = await readBody(req);
@@ -89,10 +98,11 @@ function createServer({ config, relay, verifier, hermes, log = () => {} }) {
         const records = Array.isArray(payload && payload.records) ? payload.records.map(String) : [];
         if (!records.length) throw new RelayError(400, "records[] is empty");
         const kind = payload.kind === undefined ? "feed" : String(payload.kind);
-        if (kind !== "feed" && kind !== "meeting") throw new RelayError(400, "kind must be feed or meeting");
+        if (kind !== "feed" && kind !== "meeting" && kind !== "progress") throw new RelayError(400, "kind must be feed, meeting, or progress");
+        const ids = Array.isArray(payload.ids) ? payload.ids.map(String).filter(Boolean) : [];
         log("info", { event: "notify", kind, records: records.length });
         json(res, 202, { accepted: records.length });
-        relay.notify({ records, kind }).catch((err) => log(err.status === 409 ? "warn" : "error", { event: "notify-failed", message: err.message }));
+        relay.notify(ids.length ? { records, kind, ids } : { records, kind }).catch((err) => log(err.status === 409 ? "warn" : "error", { event: "notify-failed", message: err.message }));
         return;
       }
       throw new RelayError(404, "Not found");
@@ -115,10 +125,12 @@ function main() {
     ? createJwtVerifier({ appId: bot.appId })
     : { verify: async () => { throw new RelayError(503, "Teams bot not configured yet: run scripts/setup.js"); } };
   const connector = configured ? createConnectorClient({ appId: bot.appId, appPassword: bot.appPassword, tenantId: () => bot.tenantId || state.get("tenantId") }) : null;
-  const relay = createRelay({ config, connector, hermes, state, log });
+  const outbox = createOutbox({ state });
+  const relay = createRelay({ config, connector, hermes, state, log, outbox, upcomingJobs: () => readUpcomingJobs({ file: config.cronJobsFile }), jobSnapshot: () => snapshotJobs({ file: config.cronJobsFile }), jobStart: (jobId) => readJobStart({ file: config.cronJobsFile, jobId }) });
   const server = createServer({ config, relay, verifier, hermes, log });
-  // Hermes's own scheduled jobs reach Aaron through here: Hermes cron cannot deliver to the API server.
-  const cronOutput = createCronOutputWatcher({ dir: config.cronOutputDir, state, post: (text) => relay.postHome(text), log });
+  // Hermes's own scheduled jobs reach Aaron through here (Hermes cron cannot deliver to the API server), after Hermes
+  // has checked them against what he already got.
+  const cronOutput = createCronOutputWatcher({ dir: config.cronOutputDir, state, deliver: (parsed) => relay.deliverScheduled(parsed), log });
   server.listen(config.port, config.host, () => {
     log("info", { event: "listening", host: config.host, port: config.port, bot: configured, hermes: config.hermes.url });
     cronOutput.start();

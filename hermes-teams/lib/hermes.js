@@ -53,11 +53,16 @@ function createHermesClient({ url, key, state, fetch = httpFetch, timeoutMs = 20
     return texts.join("\n\n").trim();
   }
 
-  async function ask({ conversationId, text }) {
+  /**
+   * fresh: start a new Hermes conversation and keep no thread. Automated prompts use it: in one shared thread a job
+   * review answered with a calendar line from the day before (2026-10-13), and their context block already carries
+   * what Aaron was sent.
+   */
+  async function ask({ conversationId, text, fresh = false }) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), timeoutMs);
     try {
-      const previous = state.getResponse(conversationId);
+      const previous = fresh ? null : state.getResponse(conversationId);
       const body = { model, input: text, store: true };
       if (previous) body.previous_response_id = previous;
       let { res, json } = await post(body, controller.signal);
@@ -67,8 +72,9 @@ function createHermesClient({ url, key, state, fetch = httpFetch, timeoutMs = 20
         ({ res, json } = await post(body, controller.signal));
       }
       if (!res.ok) throw new Error(`Hermes answered ${res.status}: ${(json.error && json.error.message) || json.message || "unknown error"}`);
-      if (json.id) state.setResponse(conversationId, json.id);
-      return { text: extract(json) || "Hermes had no answer.", responseId: json.id || null };
+      if (json.id && !fresh) state.setResponse(conversationId, json.id);
+      const answer = extract(json);
+      return { text: answer || "Hermes had no answer.", empty: !answer, responseId: json.id || null };
     } catch (err) {
       if (err && err.name === "AbortError") throw new Error(`Hermes timed out after ${Math.round(timeoutMs / 1000)} s`);
       throw err;

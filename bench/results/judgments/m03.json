@@ -1,0 +1,307 @@
+{
+ "meeting": "m03",
+ "judge_version": "j1",
+ "attempts": 1,
+ "wall_s": 33.7,
+ "grades": {
+  "A": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "actions",
+     "claim": "Caller 1 and Caller 2 — Verify if the second lamp module is covered",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "B": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "actions",
+     "claim": "Marcus — Confirm the correct lamp module/part number",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Marcus/Dana — Look into whether the second lamp is covered",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron — Box up and ship the dead lamp back",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "C": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [],
+   "format_ok": true
+  },
+  "D": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "actions",
+     "claim": "Caller 1 and Caller 2 — research warranty coverage for the second projector lamp",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "E": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "actions",
+     "claim": "Marcus — investigate second lamp coverage",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "F": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "actions",
+     "claim": "Marcus — Research warranty coverage for the second lamp module",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "G": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "miss",
+     "owner": "n/a"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "actions",
+     "claim": "Caller 1 and Caller 2 — Verify if the second lamp is covered",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "H": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "actions",
+     "claim": "Dana and Marcus — Check if the second lamp is covered",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "I": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "actions",
+     "claim": "Marcus — confirm the correct lamp part number",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Dana/Marcus — research whether the second lamp is covered",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron — ship the dead lamp back",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "J": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "actions",
+     "claim": "Marcus — Determine if the second lamp module is covered",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  }
+ },
+ "flags": [],
+ "raw": "{\"A\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"actions\",\"claim\":\"Caller 1 and Caller 2 — Verify if the second lamp module is covered\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"B\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"actions\",\"claim\":\"Marcus — Confirm the correct lamp module/part number\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Marcus/Dana — Look into whether the second lamp is covered\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Aaron — Box up and ship the dead lamp back\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"C\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[],\"format_ok\":true},\n\"D\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"actions\",\"claim\":\"Caller 1 and Caller 2 — research warranty coverage for the second projector lamp\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"E\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"actions\",\"claim\":\"Marcus — investigate second lamp coverage\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"F\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"actions\",\"claim\":\"Marcus — Research warranty coverage for the second lamp module\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"G\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"miss\",\"owner\":\"n/a\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"actions\",\"claim\":\"Caller 1 and Caller 2 — Verify if the second lamp is covered\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"H\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"actions\",\"claim\":\"Dana and Marcus — Check if the second lamp is covered\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"I\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"actions\",\"claim\":\"Marcus — confirm the correct lamp part number\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Dana/Marcus — research whether the second lamp is covered\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Aaron — ship the dead lamp back\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"J\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"actions\",\"claim\":\"Marcus — Determine if the second lamp module is covered\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true}}"
+}

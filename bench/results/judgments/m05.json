@@ -1,0 +1,494 @@
+{
+ "meeting": "m05",
+ "judge_version": "j1",
+ "attempts": 1,
+ "wall_s": 71.1,
+ "grades": {
+  "A": {
+   "decisions": {},
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "backup issue stays open/flagged as priority",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "LED wall handled separately as vendor conversation",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "moving backups to cloud is parked",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Devin investigate backup hang and verify last good copy",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron loop in panel/AV vendor re LED wall",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron contact AV vendor re Ultra X router",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "B": {
+   "decisions": {},
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "cloud migration paused",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "LED wall vendor contact assigned to Aaron",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Devin investigate overnight backup hang",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron coordinate with panel vendor for LED wall",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "C": {
+   "decisions": {},
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "backup stays flagged open/priority",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "cloud move not pursued now, parked",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "LED wall handled directly with vendor",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Ultra X router outside MSP scope",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Devin investigate backup hang, verify last good copy",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Devin investigate port config if persists",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron contact AV/panel vendor re LED wall",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "D": {
+   "decisions": {},
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "cloud move parked",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Ultra EX router outside MSP scope",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Aaron contact panel vendor re LED wall",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Devin investigate backup failure and verify last good copy",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "E": {
+   "decisions": {},
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "park idea of moving media to cloud",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Aaron handle LED wall directly with vendor",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Ultra ex router outside MSP scope",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Devin investigate backup hang",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron contact LED wall panel vendor",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "F": {
+   "decisions": {},
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "park cloud migration discussion",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Devin review port configs if drops persist",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Ultra Ex and LED wall tile outside MSP scope",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Devin verify most recent successful backup",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "G": {
+   "decisions": {},
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "move backups to cloud parked",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Ultra EX router outside MSP scope",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Devin investigate backup failure, verify last good copy",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron contact vendor re dead LED wall tiles",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "H": {
+   "decisions": {},
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "park cloud storage migration proposal",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Devin investigate backup failure, verify last successful copy",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron contact LED wall vendor",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "I": {
+   "decisions": {},
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "move to cloud postponed",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Aaron contact LED wall vendor directly",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Ultra EX router outside MSP scope",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Devin double check two workstations",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron contact LED wall panel vendor",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "J": {
+   "decisions": {},
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "cloud migration parked for cost analysis",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "LED wall handled by Aaron's vendor",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Devin check port config if persists",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Devin finish workstation checks due tomorrow",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Devin verify backup status, investigate hang",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron contact panel vendor re LED wall",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Devin note Ultra X router scope in report",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  }
+ },
+ "flags": [],
+ "raw": "{\"A\":{\"decisions\":{},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"backup issue stays open/flagged as priority\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"LED wall handled separately as vendor conversation\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"moving backups to cloud is parked\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Devin investigate backup hang and verify last good copy\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Aaron loop in panel/AV vendor re LED wall\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Aaron contact AV vendor re Ultra X router\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\"B\":{\"decisions\":{},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"cloud migration paused\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"LED wall vendor contact assigned to Aaron\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Devin investigate overnight backup hang\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Aaron coordinate with panel vendor for LED wall\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\"C\":{\"decisions\":{},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"backup stays flagged open/priority\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"cloud move not pursued now, parked\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"LED wall handled directly with vendor\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"Ultra X router outside MSP scope\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Devin investigate backup hang, verify last good copy\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Devin investigate port config if persists\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Aaron contact AV/panel vendor re LED wall\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\"D\":{\"decisions\":{},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"cloud move parked\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"Ultra EX router outside MSP scope\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"Aaron contact panel vendor re LED wall\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Devin investigate backup failure and verify last good copy\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\"E\":{\"decisions\":{},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"park idea of moving media to cloud\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"Aaron handle LED wall directly with vendor\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"Ultra ex router outside MSP scope\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Devin investigate backup hang\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Aaron contact LED wall panel vendor\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\"F\":{\"decisions\":{},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"park cloud migration discussion\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"Devin review port configs if drops persist\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"Ultra Ex and LED wall tile outside MSP scope\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Devin verify most recent successful backup\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\"G\":{\"decisions\":{},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"move backups to cloud parked\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"Ultra EX router outside MSP scope\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Devin investigate backup failure, verify last good copy\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Aaron contact vendor re dead LED wall tiles\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\"H\":{\"decisions\":{},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"park cloud storage migration proposal\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Devin investigate backup failure, verify last successful copy\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Aaron contact LED wall vendor\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\"I\":{\"decisions\":{},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"move to cloud postponed\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"Aaron contact LED wall vendor directly\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"Ultra EX router outside MSP scope\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Devin double check two workstations\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Aaron contact LED wall panel vendor\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\"J\":{\"decisions\":{},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"cloud migration parked for cost analysis\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"LED wall handled by Aaron's vendor\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"Devin check port config if persists\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Devin finish workstation checks due tomorrow\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Devin verify backup status, investigate hang\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Aaron contact panel vendor re LED wall\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Devin note Ultra X router scope in report\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true}}"
+}

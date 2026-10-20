@@ -1,0 +1,32 @@
+gemma-bigctx: 17 calls to make (1 done), 1 in flight
+[1/17] m02 rep0 ok wall=73.92s model=31.79s in=3897 out=990
+[2/17] m03 rep0 ok wall=72.44s model=30.58s in=3809 out=950
+[3/17] m04 rep0 ok wall=70.25s model=35.51s in=3879 out=1117
+[4/17] m05 rep0 ok wall=37.81s model=37.28s in=3869 out=1189
+[5/17] m06 rep0 ok wall=66.17s model=29.44s in=4080 out=905
+[6/17] m07 rep0 ok wall=62.22s model=38.16s in=7630 out=1103
+[7/17] m08 rep0 ok wall=56.56s model=34.55s in=8158 out=972
+[8/17] m09 rep0 ok wall=67.05s model=38.79s in=7862 out=1119
+[9/17] m01 rep1 ok wall=62.39s model=38.42s in=4140 out=1209
+[10/17] m02 rep1 ok wall=54.05s model=28.97s in=3897 out=897
+[11/17] m03 rep1 ok wall=64.96s model=32.41s in=3809 out=1014
+[12/17] m04 rep1 ok wall=86.51s model=36.95s in=3879 out=1165
+[13/17] m05 rep1 ok wall=90.33s model=29.87s in=3869 out=922
+[14/17] m06 rep1 ok wall=79.88s model=35.53s in=4080 out=1102
+[15/17] m07 rep1 ok wall=96.27s model=45.46s in=7630 out=1336
+[16/17] m08 rep1 ok wall=95.63s model=41.09s in=8158 out=1179
+gemma-bigctx: 2 calls to make (17 done), 1 in flight
+[1/2] m01 m02 m03 m04 m05 m06 m07 m08 m09 m10 m11 m12 m13 m14 m15 m16 m17 m18 m19 m20 m21 m22 m23 m24  rep0 ERROR FileNotFoundError: [Errno 2] No such file or directory: '/Users/aaronlarson/Documents/VS Code/Assistant/bench/corpus/transcripts/m01 m02 m0
+[2/2] m01 m02 m03 m04 m05 m06 m07 m08 m09 m10 m11 m12 m13 m14 m15 m16 m17 m18 m19 m20 m21 m22 m23 m24  rep1 ERROR FileNotFoundError: [Errno 2] No such file or directory: '/Users/aaronlarson/Documents/VS Code/Assistant/bench/corpus/transcripts/m01 m02 m0
+gemma-bigctx: 31 calls to make (17 done), 1 in flight
+[1/31] m10 rep0 ok wall=63.55s model=39.85s in=7504 out=1155
+[2/31] m11 rep0 ok wall=111.86s model=45.71s in=8607 out=1315
+[3/31] m12 rep0 ok wall=58.57s model=36.25s in=7075 out=1048
+[4/31] m13 rep0 ok wall=76.44s model=52.32s in=9818 out=1493
+[5/31] m14 rep0 ok wall=83.7s model=61.92s in=11713 out=1734
+[6/31] m15 rep0 ok wall=98.07s model=42.19s in=9753 out=1163
+[7/31] m16 rep0 ok wall=110.68s model=46.71s in=10180 out=1301
+[8/31] m17 rep0 ok wall=105.6s model=36.05s in=9950 out=970
+[9/31] m18 rep0 ok wall=118.45s model=55.86s in=10877 out=1575
+[10/31] m19 rep0 ok wall=448.37s model=50.12s in=10719 out=1397
+[11/31] m20 rep0 ok wall=215.73s model=106.09s in=14980 out=2978

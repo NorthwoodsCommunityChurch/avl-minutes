@@ -1,0 +1,374 @@
+{
+ "meeting": "m02",
+ "judge_version": "j1",
+ "attempts": 1,
+ "wall_s": 78.3,
+ "grades": {
+  "A": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "miss"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "Both will monitor the north screen during Sunday's live feed",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "B": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "miss"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "monitor the screen during the live feed on Sunday",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Speaker 1 — Research pricing for a new media player",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "C": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "miss"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "Monitor the screen during the live feed on Sunday",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Speaker 1 — Price out a few new media players",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "D": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "actions",
+     "claim": "Aaron and Speaker 1 — Watch the north lobby screen during the live feed",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Speaker 1 — Price out a couple of modern media player options",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "E": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "miss"
+   },
+   "extras": [
+    {
+     "section": "actions",
+     "claim": "Speaker 1 — Price out a few new media players",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron and Speaker 1 — Monitor the screen during the live feed",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "F": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "actions",
+     "claim": "Speaker 1 — price out modern media players",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron and Speaker 1 — monitor the north lobby screen",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "G": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "miss"
+   },
+   "extras": [
+    {
+     "section": "actions",
+     "claim": "Aaron and Speaker 1 — Monitor the north lobby screen",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Speaker 1 — Price out new media player options",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "H": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "miss"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "Monitor the north lobby screen during Sunday's live feed",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Postpone any decision on purchasing a new media player, but gather pricing",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Speaker 1 — Research and price options for a new media player",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron and Speaker 1 — Monitor the north lobby screen during Sunday's live feed",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "I": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "miss"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "Monitor the screen during the Sunday live feed",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Defer purchasing a new media player and addressing the dim hallway screen",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron and Speaker 1 — Monitor the north lobby screen during the live feed",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Speaker 1 — Research pricing for a modern media player",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "J": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "Not deciding on a new media player at this time; revisit later",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Speaker 1 — price out a couple of modern media player options",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron & Speaker 1 — watch the north lobby screen during the live feed",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  }
+ },
+ "flags": [],
+ "raw": "{\"A\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"miss\"}, \"extras\": [{\"section\": \"decisions\", \"claim\": \"Both will monitor the north screen during Sunday's live feed\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true},\n\"B\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"miss\"}, \"extras\": [{\"section\": \"decisions\", \"claim\": \"monitor the screen during the live feed on Sunday\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Speaker 1 — Research pricing for a new media player\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true},\n\"C\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"miss\"}, \"extras\": [{\"section\": \"decisions\", \"claim\": \"Monitor the screen during the live feed on Sunday\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Speaker 1 — Price out a few new media players\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true},\n\"D\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"hit\"}, \"extras\": [{\"section\": \"actions\", \"claim\": \"Aaron and Speaker 1 — Watch the north lobby screen during the live feed\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Speaker 1 — Price out a couple of modern media player options\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true},\n\"E\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"miss\"}, \"extras\": [{\"section\": \"actions\", \"claim\": \"Speaker 1 — Price out a few new media players\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron and Speaker 1 — Monitor the screen during the live feed\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true},\n\"F\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"hit\"}, \"extras\": [{\"section\": \"actions\", \"claim\": \"Speaker 1 — price out modern media players\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron and Speaker 1 — monitor the north lobby screen\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true},\n\"G\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"miss\"}, \"extras\": [{\"section\": \"actions\", \"claim\": \"Aaron and Speaker 1 — Monitor the north lobby screen\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Speaker 1 — Price out new media player options\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true},\n\"H\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"miss\"}, \"extras\": [{\"section\": \"decisions\", \"claim\": \"Monitor the north lobby screen during Sunday's live feed\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Postpone any decision on purchasing a new media player, but gather pricing\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Speaker 1 — Research and price options for a new media player\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron and Speaker 1 — Monitor the north lobby screen during Sunday's live feed\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true},\n\"I\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"miss\"}, \"extras\": [{\"section\": \"decisions\", \"claim\": \"Monitor the screen during the Sunday live feed\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Defer purchasing a new media player and addressing the dim hallway screen\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron and Speaker 1 — Monitor the north lobby screen during the live feed\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Speaker 1 — Research pricing for a modern media player\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true},\n\"J\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"hit\"}, \"extras\": [{\"section\": \"decisions\", \"claim\": \"Not deciding on a new media player at this time; revisit later\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Speaker 1 — price out a couple of modern media player options\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron & Speaker 1 — watch the north lobby screen during the live feed\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true}}"
+}

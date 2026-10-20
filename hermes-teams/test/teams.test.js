@@ -2,7 +2,7 @@
 const test = require("node:test");
 const assert = require("node:assert/strict");
 const crypto = require("node:crypto");
-const { createJwtVerifier, createConnectorClient, cleanText, splitMessage, RelayError } = require("../lib/teams");
+const { createJwtVerifier, createConnectorClient, cleanText, splitMessage, toTeamsMarkdown, RelayError } = require("../lib/teams");
 
 const APP_ID = "11111111-2222-3333-4444-555555555555";
 const { publicKey, privateKey } = crypto.generateKeyPairSync("rsa", { modulusLength: 2048 });
@@ -93,4 +93,21 @@ test("splitMessage keeps paragraphs together under the limit and hard-splits a g
   assert.deepEqual(splitMessage("short", 100), ["short"]);
   const giant = splitMessage("z".repeat(250), 100);
   assert.deepEqual(giant.map((p) => p.length), [100, 100, 50]);
+});
+
+// Teams drops a single newline between two plain lines: "**Scrum Prep Notes**\nScrum prep for today" arrived as one line
+// (Aaron's screenshot, 2026-10-20). Lists and code keep their single newlines; every other line break becomes a blank line.
+test("toTeamsMarkdown gives plain lines their own paragraph and leaves lists and code alone", () => {
+  assert.equal(toTeamsMarkdown("**Scrum Prep Notes**\nScrum prep for today"), "**Scrum Prep Notes**\n\nScrum prep for today");
+  assert.equal(toTeamsMarkdown("Updates: walls Friday\nOwes: drawings\nAsk: Lot C audio"), "Updates: walls Friday\n\nOwes: drawings\n\nAsk: Lot C audio");
+  assert.equal(
+    toTeamsMarkdown("**Dante**\n- Glenn finished the K1 work\n- Run the stress test\n**Atrium**\n1. Quote $209,880\n2. Meet MJ"),
+    "**Dante**\n\n- Glenn finished the K1 work\n- Run the stress test\n\n**Atrium**\n\n1. Quote $209,880\n2. Meet MJ",
+  );
+  assert.equal(toTeamsMarkdown("- one\n  still one\n- two"), "- one\n  still one\n- two");
+  assert.equal(toTeamsMarkdown("Run:\n```\nhermes cron list\nhermes doctor\n```\nDone"), "Run:\n\n```\nhermes cron list\nhermes doctor\n```\n\nDone");
+  assert.equal(toTeamsMarkdown("a\n\n\n\nb"), "a\n\nb");
+  assert.equal(toTeamsMarkdown("a\r\nb"), "a\n\nb");
+  assert.equal(toTeamsMarkdown("one line"), "one line");
+  assert.equal(toTeamsMarkdown(""), "");
 });

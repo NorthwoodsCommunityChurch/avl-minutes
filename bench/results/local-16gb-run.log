@@ -1,0 +1,15 @@
+== gemma-4-12b: starting llama-server on :11435 (14:20:14)
+gemma-4-12b: 49 calls to make (1 done), 1 in flight
+[1/49] m02 rep0 ok wall=77.9s model=77.89s in=3897 out=1982
+[2/49] m03 rep0 ok wall=47.76s model=47.51s in=3809 out=1112
+[3/49] m04 rep0 ok wall=47.17s model=46.9s in=3879 out=1081
+[4/49] m05 rep0 ok wall=134.78s model=134.6s in=3869 out=3697
+[5/49] m06 rep0 ok wall=49.07s model=48.68s in=4080 out=1125
+[6/49] m07 rep0 ok wall=74.74s model=74.43s in=7630 out=1527
+[7/49] m08 rep0 ok wall=171.21s model=170.88s in=8158 out=4279
+[8/49] m09 rep0 ok wall=74.1s model=73.66s in=7862 out=1481
+[9/49] m10 rep0 ok wall=89.04s model=88.77s in=7504 out=1966
+[10/49] m11 rep0 ok wall=83.4s model=83.09s in=8607 out=1679
+[11/49] m12 rep0 ok wall=80.11s model=79.88s in=7075 out=1749
+[12/49] m13 rep0 ok wall=78.22s model=77.88s in=9818 out=1398
+[13/49] m14 rep0 ok wall=93.87s model=93.66s in=11713 out=1644

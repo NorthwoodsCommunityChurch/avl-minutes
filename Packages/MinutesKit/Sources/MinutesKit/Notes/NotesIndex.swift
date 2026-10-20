@@ -234,6 +234,25 @@ public final class NotesIndex: @unchecked Sendable {
         }
     }
 
+    /// Who else writes in a Teams chat, newest first, from the feed's Teams records (their bodies start
+    /// "From: <name>" and carry a "Chat: <id>" line). A chat id is an opaque string, so a sent message's line names
+    /// the people instead.
+    public func teamsChatPeople(chat: String, excluding: String, limit: Int = 6) throws -> [String] {
+        guard !chat.isEmpty else { return [] }
+        return try serialized {
+            var out: [String] = []
+            try db.query("""
+            SELECT body FROM notes WHERE folder = 'teams' AND account = ?1 AND instr(body, ?2) > 0
+            ORDER BY created_at DESC LIMIT 200
+            """, [.text(FeedRecord.account), .text("\nChat: \(chat)\n")]) { r in
+                guard let first = r.text(0).split(separator: "\n", maxSplits: 1).first, first.hasPrefix("From: ") else { return }
+                let name = String(first.dropFirst("From: ".count)).trimmingCharacters(in: .whitespaces)
+                if !name.isEmpty, name != excluding, !out.contains(name) { out.append(name) }
+            }
+            return Array(out.prefix(limit))
+        }
+    }
+
     public func stamps() throws -> [String: IndexedStamp] {
         try serialized {
             var out: [String: IndexedStamp] = [:]

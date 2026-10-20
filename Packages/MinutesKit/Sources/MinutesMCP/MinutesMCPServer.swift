@@ -10,7 +10,8 @@ public enum MinutesMCPServer {
     Use search_notes first, then get_note to read a result in full. \
     \(NotesTools.transcriptFolderHint) \
     current_time is the only clock available: call it before answering anything about today, now, or deadlines. \
-    task_board, where present, is Aaron's whole task board in one call: every open list and card with ids. \
+    task_board, where present, is Aaron's whole task board in one call: every open list and card with ids; \
+    task_list_create adds a list to it, task_list_order puts its lists in order, and task_card_move moves cards by name. \
     note_write and note_create, where present, keep Hermes's own notes in the Hermes folder of Aaron's Apple Notes.
     """
 
@@ -65,10 +66,43 @@ public enum MinutesMCPServer {
     /// Minutes' own server for Claude Code does not advertise a tool that cannot work there.
     static let taskBoardTool = Tool(
         name: "task_board",
-        description: "Aaron's task board (Planka, board \"To Do\"): every open list and every card, one line each, with list and card ids in brackets (a card id is what cards {\"action\":\"update\"} needs to move it). One call replaces listing each list: use it for \"my to-do list\", to find the card an email or a message closed, and for meeting prep. Done cards are left out unless include_done is true.",
+        description: "Aaron's task board (Planka, board \"To Do\"): every open list and every card, one line each, with list and card ids in brackets (move cards with task_card_move, by name). One call replaces listing each list: use it for \"my to-do list\", to find the card an email or a message closed, and for meeting prep. Done cards are left out unless include_done is true.",
         inputSchema: schema(properties: [
             "include_done": property("boolean", "Also list the Done cards. Default false."),
         ])
+    )
+
+    /// Adds one open list to the board; listed with task_board. Create only: deleting a Planka list deletes its cards.
+    static let taskListCreateTool = Tool(
+        name: "task_list_create",
+        description: "Add a new list (column) to Aaron's task board, placed after the open lists and before Done. Use it only when Aaron asks for a new list; refused when a list with that name already exists (it names that list's id). Lists cannot be renamed or deleted here. Returns the new list's id for cards {\"action\":\"create\"}.",
+        inputSchema: schema(properties: [
+            "name": property("string", "The list's name, as Aaron said it, e.g. \"Icebox\"."),
+        ], required: ["name"])
+    )
+
+    /// Puts the board's open lists in order (2026-10-20, Aaron: "Heremes needs to be able to reorder columns"). Positions
+    /// only: no list is renamed, closed, or deleted, and Done stays last.
+    static let taskListOrderTool = Tool(
+        name: "task_list_order",
+        description: "Put the lists (columns) on Aaron's task board in order, left to right. Pass the lists he named, in his order: they go first and every other open list keeps its order after them; Done always stays last. To move one list, pass the full order from task_board. Names (any case) or list ids. Returns the new order.",
+        inputSchema: schema(properties: [
+            "order": .object(["type": .string("array"), "items": .object(["type": .string("string")]),
+                              "description": .string("List names or ids, left to right, e.g. [\"High priority\", \"This weeks to do\", \"General To Do\", \"Icebox\"].")]),
+        ], required: ["order"])
+    )
+
+    /// Moves cards by name, so Hermes never has to carry card ids (2026-10-20: six moves with ids that were not on the
+    /// board paused the Planka tool and her corrected retry was refused).
+    static let taskCardMoveTool = Tool(
+        name: "task_card_move",
+        description: "Move cards on Aaron's task board to a list (any list, Done included), in one call. Name each card by its name as task_board shows it, a piece of its name only that card has, or its id; name the list by its name or id. Cards go to the bottom of the list, or the top with top: true. Answers one line per card: moved, or why not (no such card, several match: pass the id, already there).",
+        inputSchema: schema(properties: [
+            "cards": .object(["type": .string("array"), "items": .object(["type": .string("string")]),
+                              "description": .string("Card names (or ids), e.g. [\"Send all Hermes tweaks to MJ\", \"Kids' room audio\"].")]),
+            "list": property("string", "The list to move them to, e.g. \"MJ\", \"Icebox\", \"Done\"."),
+            "top": property("boolean", "Put them at the top of the list instead of the bottom. Default false."),
+        ], required: ["cards", "list"])
     )
 
     /// Hermes's own notes, listed only where a note store is wired (the mini); Minutes' server for Claude Code stays
@@ -94,11 +128,11 @@ public enum MinutesMCPServer {
         ),
     ]
 
-    /// The tool list for a server: the notes tools, plus task_board when its config file exists, plus the note
+    /// The tool list for a server: the notes tools, plus the task board tools when its config file exists, plus the note
     /// writing tools when a store is wired.
     public static func tools(taskBoardConfigURL: URL?, notes: Bool = false) -> [Tool] {
         var out = tools
-        if let url = taskBoardConfigURL, FileManager.default.fileExists(atPath: url.path) { out.append(taskBoardTool) }
+        if let url = taskBoardConfigURL, FileManager.default.fileExists(atPath: url.path) { out += [taskBoardTool, taskListCreateTool, taskListOrderTool, taskCardMoveTool] }
         if notes { out += noteTools }
         return out
     }
@@ -158,6 +192,53 @@ public enum MinutesMCPServer {
                     return failure("Task board not configured on this Mac.")
                 }
                 return .init(content: [.text(text)])
+            } catch {
+                return failure("Task board unreachable: \(error)")
+            }
+        }
+        if name == "task_list_create", let configURL = taskBoardConfigURL {
+            guard let listName = args["name"]?.stringValue else { return failure("task_list_create needs \"name\".") }
+            do {
+                guard let text = try TaskBoard.createList(configURL: configURL, name: listName) else {
+                    return failure("Task board not configured on this Mac.")
+                }
+                return .init(content: [.text(text)])
+            } catch let error as TaskBoardError {
+                if case .badRequest = error { return failure(error.description) }
+                return failure("Task board unreachable: \(error)")
+            } catch {
+                return failure("Task board unreachable: \(error)")
+            }
+        }
+        if name == "task_card_move", let configURL = taskBoardConfigURL {
+            let usage = "task_card_move needs \"cards\", a list of card names, and \"list\"."
+            guard case .array(let items)? = args["cards"], !items.isEmpty, let list = args["list"]?.stringValue else { return failure(usage) }
+            let cards = items.compactMap { $0.stringValue }
+            guard cards.count == items.count else { return failure(usage) }
+            do {
+                guard let text = try TaskBoard.moveCards(configURL: configURL, cards: cards, to: list, top: args["top"]?.boolValue ?? false) else {
+                    return failure("Task board not configured on this Mac.")
+                }
+                return .init(content: [.text(text)])
+            } catch let error as TaskBoardError {
+                if case .refused = error { return failure(error.description) }
+                return failure("Task board unreachable: \(error)")
+            } catch {
+                return failure("Task board unreachable: \(error)")
+            }
+        }
+        if name == "task_list_order", let configURL = taskBoardConfigURL {
+            guard case .array(let items)? = args["order"], !items.isEmpty else { return failure("task_list_order needs \"order\", a list of list names.") }
+            let order = items.compactMap { $0.stringValue }
+            guard order.count == items.count else { return failure("task_list_order needs \"order\", a list of list names.") }
+            do {
+                guard let text = try TaskBoard.orderLists(configURL: configURL, order: order) else {
+                    return failure("Task board not configured on this Mac.")
+                }
+                return .init(content: [.text(text)])
+            } catch let error as TaskBoardError {
+                if case .refused = error { return failure(error.description) }
+                return failure("Task board unreachable: \(error)")
             } catch {
                 return failure("Task board unreachable: \(error)")
             }

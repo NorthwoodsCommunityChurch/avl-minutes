@@ -174,3 +174,53 @@ test("every message to Hermes carries the relay note after Aaron's own words, ex
   assert.equal(p.split("[Relay note").length, 2);
   assert.ok(!p.includes("untrusted_feed_record"));
 });
+
+// Teams joins two plain lines a single newline separates; the scrum brief's job name and first line arrived as one
+// line (2026-10-20). Both ways out (a chat answer, a post to his home chat) go through toTeamsMarkdown.
+test("answers and home posts reach Teams with a blank line between plain lines", async () => {
+  const { relay, sent, state } = harness({ askImpl: () => ({ text: "Updates: walls Friday\nOwes: drawings\n- one\n- two" }) });
+  await relay.handle(message("atrium?"));
+  const reply = sent.find((s) => s.activity.type === "message");
+  assert.equal(reply.activity.text, "Updates: walls Friday\n\nOwes: drawings\n\n- one\n- two");
+  state.set("homeConversation", { id: "a:home", serviceUrl: SERVICE_URL });
+  await relay.postHome("**Scrum Prep Notes**\nScrum prep for today");
+  assert.equal(sent[sent.length - 1].activity.text, "**Scrum Prep Notes**\n\nScrum prep for today");
+});
+
+test("the job review prompt tells her to keep the output's layout", () => {
+  const { buildScheduledPrompt } = require("../lib/relay");
+  assert.match(buildScheduledPrompt({ name: "Scrum Prep Notes", response: "brief" }, null, "abc"), /Keep the output's layout: a bold line per topic, then one short bullet per fact/);
+});
+
+test("status says busy while Hermes answers and counts what waits behind it", async () => {
+  let release;
+  const { relay } = harness({ askImpl: () => new Promise((r) => { release = () => r({ text: "ok" }); }) });
+  assert.deepEqual(relay.status(), { busy: false, waiting: 0 });
+  const first = relay.handle(message("one"));
+  const second = relay.handle(message("two"));
+  await new Promise((r) => setTimeout(r, 5));
+  assert.deepEqual(relay.status(), { busy: true, waiting: 1 });
+  release();
+  await new Promise((r) => setTimeout(r, 5));
+  release();
+  await Promise.all([first, second]);
+  assert.deepEqual(relay.status(), { busy: false, waiting: 0 });
+});
+
+// Aaron, 2026-10-20: she should say "jason asked you to do this, would you like to add it to your to-do?". That offer is
+// posted from the feed thread; his "yes" lands in his own thread, so his message carries what she sent him since her last
+// answer there.
+test("Aaron's message carries the automatic messages sent since her last answer to him", async () => {
+  const { relay, asked, state } = harness();
+  await relay.handle({ ...message("hi"), id: "auto-1" });
+  state.set("homeConversation", { id: "a:conv1", serviceUrl: SERVICE_URL });
+  await relay.handle({ ...message("first question"), id: "auto-2" });
+  await relay.postHome("Jason asked you to send the lighting budget numbers by Friday (email). Add it to your to-do?", "feed");
+  await relay.handle({ ...message("yes"), id: "auto-3" });
+  const q = asked.at(-1).text;
+  assert.ok(q.startsWith("yes\n\n[Relay note"), q.slice(0, 120));
+  assert.match(q, /Since your last answer to him you sent these automatic messages/);
+  assert.match(q, /\(feed\): Jason asked you to send the lighting budget numbers by Friday \(email\)\. Add it to your to-do\?/);
+  await relay.handle({ ...message("thanks"), id: "auto-4" });
+  assert.doesNotMatch(asked.at(-1).text, /automatic messages/, "only what came after her last answer");
+});

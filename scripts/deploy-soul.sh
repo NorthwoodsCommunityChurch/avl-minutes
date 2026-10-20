@@ -5,6 +5,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 HOST="${1:-edit-3}"
+bash scripts/wait-hermes-idle.sh "$HOST"
 scp -q hermes-tools/SOUL.md "$HOST:SOUL.md.new"
 ssh "$HOST" 'set -euo pipefail
 export PATH=$HOME/.local/bin:$PATH

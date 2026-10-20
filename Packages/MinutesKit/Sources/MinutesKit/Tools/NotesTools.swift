@@ -41,42 +41,115 @@ public struct NotesTools: Sendable {
 
     public func searchNotes(query: String, folder: String?, since: Date?, until: Date?, limit: Int?) throws -> String {
         let scope = try scope(for: folder)
-        let hits = try index.search(query, scope: scope, since: since, until: until, limit: clamp(limit))
+        let wanted = clamp(limit)
+        // A recurring meeting is one item, not one hit per occurrence: 52 "Scrum — <date>" invites through Feb 2027
+        // took 12 of Hermes's top 20 for "Scrum" and pushed out Jason's "we will skip scrum on Tuesday" (2026-10-13).
+        let items = try collapsedSearch(wanted) {
+            try index.search(query, scope: scope, since: since, until: until, limit: $0)
+        }
         var out = [try freshness(), ""]
-        guard !hits.isEmpty else {
+        guard !items.isEmpty else {
             out.append("No notes match \"\(query)\".")
             return out.joined(separator: "\n")
         }
         let total = try index.searchCount(query, scope: scope, since: since, until: until)
+        let shownRecords = items.reduce(0) { $0 + $1.occurrences.count }
         // A silently cut list reads as the whole story: Hermes took the top 20 of 134 "atrium" hits, a June
         // chat first, as all there was (2026-10-09). Say what was left out, and since relevance ranking buries
-        // the recent items her rules care about, show the newest matches too.
-        let newest = total > hits.count
-            ? try index.search(query, scope: scope, since: since, until: until, limit: Self.newestShown, newestFirst: true)
-                .filter { n in !hits.contains { $0.id == n.id } }
-            : []
-        if total > hits.count {
-            out.append("\(hits.count) of \(total) notes match \"\(query)\" (most relevant first; the rest are not shown — narrow with since, until, or folder, or raise limit up to 50):")
-        } else {
-            out.append("\(hits.count) \(hits.count == 1 ? "note matches" : "notes match") \"\(query)\":")
+        // the recent items her rules care about, show the newest matches too: newest that already happened, since
+        // a future invite is not news (the "newest" Scrum matches were Feb 2027 occurrences).
+        var newest: [SearchItem] = []
+        if total > shownRecords {
+            let shownIds = Set(items.flatMap { $0.occurrences.map(\.id) })
+            let shownSeries = Set(items.compactMap(\.seriesTitle))
+            let latest = min(until ?? now(), now())
+            newest = try collapsedSearch(Self.newestShown, keep: { item in
+                !item.occurrences.contains { shownIds.contains($0.id) } && !(item.seriesTitle.map(shownSeries.contains) ?? false)
+            }) {
+                try index.search(query, scope: scope, since: since, until: latest, limit: $0, newestFirst: true)
+            }
         }
-        for (i, hit) in hits.enumerated() { out += lines(i + 1, hit) }
+        if total > shownRecords {
+            out.append("\(shownRecords) of \(total) notes match \"\(query)\" (most relevant first; the rest are not shown — narrow with since, until, or folder, or raise limit up to 50):")
+        } else {
+            out.append("\(shownRecords) \(shownRecords == 1 ? "note matches" : "notes match") \"\(query)\":")
+        }
+        for (i, item) in items.enumerated() { out += lines(i + 1, item) }
         if !newest.isEmpty {
             out.append("")
             out.append("Newest matches, not in the list above:")
-            for (i, hit) in newest.enumerated() { out += lines(hits.count + i + 1, hit) }
+            for (i, item) in newest.enumerated() { out += lines(items.count + i + 1, item) }
         }
         return out.joined(separator: "\n")
     }
 
     /// How many of the newest matches a cut search result adds.
     static let newestShown = 5
+    /// Raw hits first fetched per item wanted, and the most ever fetched for one list.
+    static let overFetch = 5
+    static let maxFetch = 2_000
 
-    private func lines(_ number: Int, _ hit: NoteSearchHit) -> [String] {
-        ["",
-         "\(number). \"\(hit.title)\" — \(hit.folder) — \(dateLabel(folder: hit.folder, account: hit.account)) \(format(hit.datedAt))",
-         "   id: \(hit.id)",
-         "   \(hit.snippet.replacingOccurrences(of: "\n", with: " "))"]
+    /// Up to `wanted` items from `fetch(limit)`, series collapsed, fetching more raw hits while collapsed series
+    /// (or `keep` dropping items) leave the list short and the index still has more.
+    private func collapsedSearch(_ wanted: Int, keep: (SearchItem) -> Bool = { _ in true },
+                                 _ fetch: (Int) throws -> [NoteSearchHit]) throws -> [SearchItem] {
+        var limit = wanted * Self.overFetch
+        while true {
+            let hits = try fetch(limit)
+            let items = collapseSeries(hits).filter(keep)
+            if items.count >= wanted || hits.count < limit || limit >= Self.maxFetch { return Array(items.prefix(wanted)) }
+            limit = min(limit * 4, Self.maxFetch)
+        }
+    }
+
+    /// One line of search output: a single record, or every matched occurrence of one recurring calendar series.
+    struct SearchItem {
+        var occurrences: [NoteSearchHit]
+        /// Set for calendar feed records (the title without its " — <date>" suffix).
+        let seriesTitle: String?
+    }
+
+    /// Groups calendar occurrences of one series under the place its best-ranked occurrence held; order is kept.
+    func collapseSeries(_ hits: [NoteSearchHit]) -> [SearchItem] {
+        var items: [SearchItem] = []
+        var seriesAt: [String: Int] = [:]
+        for hit in hits {
+            guard hit.account == FeedRecord.account, hit.folder == "calendar" else {
+                items.append(SearchItem(occurrences: [hit], seriesTitle: nil))
+                continue
+            }
+            let series = FeedNotifier.seriesTitle(hit.title)
+            if let at = seriesAt[series] {
+                items[at].occurrences.append(hit)
+            } else {
+                seriesAt[series] = items.count
+                items.append(SearchItem(occurrences: [hit], seriesTitle: series))
+            }
+        }
+        return items
+    }
+
+    private func lines(_ number: Int, _ item: SearchItem) -> [String] {
+        guard let series = item.seriesTitle, item.occurrences.count > 1 else {
+            let hit = item.occurrences[0]
+            return ["",
+                    "\(number). \"\(hit.title)\" — \(hit.folder) — \(dateLabel(folder: hit.folder, account: hit.account)) \(format(hit.datedAt))",
+                    "   id: \(hit.id)",
+                    "   \(hit.snippet.replacingOccurrences(of: "\n", with: " "))"]
+        }
+        // Shown by the occurrence that matters for prep: the next one, else the latest that happened.
+        let byStart = item.occurrences.sorted { $0.datedAt < $1.datedAt }
+        let current = now()
+        let next = byStart.first { $0.datedAt >= current }
+        let last = byStart.last { $0.datedAt < current }
+        let shown = next ?? last ?? byStart[0]
+        var when: [String] = []
+        if let next { when.append("next starts \(format(next.datedAt))") }
+        if let last { when.append("last started \(format(last.datedAt))") }
+        return ["",
+                "\(number). \"\(series)\" — calendar — recurring, \(item.occurrences.count) occurrences match; \(when.joined(separator: ", "))",
+                "   id: \(shown.id)",
+                "   \(shown.snippet.replacingOccurrences(of: "\n", with: " "))"]
     }
 
     public func listNotes(folder: String?, since: Date?, until: Date?, limit: Int?) throws -> String {

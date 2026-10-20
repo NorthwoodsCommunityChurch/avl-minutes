@@ -1,0 +1,12 @@
+gemma-bigctx: 32 calls to make (28 done), 1 in flight
+[1/32] m21 rep0 ok wall=72.41s model=59.23s in=17380 out=1479
+[2/32] m22 rep0 ok wall=95.45s model=47.73s in=16007 out=1173
+[3/32] m23 rep0 ok wall=72.69s model=47.85s in=15593 out=1189
+[4/32] m24 rep0 ok wall=72.54s model=49.93s in=13411 out=1316
+[5/32] m25 rep0 ok wall=122.21s model=75.64s in=20965 out=1851
+[6/32] m26 rep0 ok wall=105.26s model=83.25s in=22523 out=2028
+[7/32] m27 rep0 ok wall=122.87s model=57.95s in=19625 out=1371
+[8/32] m28 rep0 ok wall=144.41s model=84.69s in=21500 out=2104
+[9/32] m29 rep0 ok wall=136.75s model=104.25s in=31722 out=2289
+[10/32] m30 rep0 ok wall=109.4s model=87.97s in=34609 out=1750
+[11/32] m09 rep1 ok wall=69.69s model=46.52s in=7862 out=1366

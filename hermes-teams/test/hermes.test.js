@@ -42,6 +42,20 @@ test("ask sends the stored previous_response_id and keeps the new id", async () 
   assert.equal(state.getResponse("conv-1"), "resp_new");
 });
 
+test("a fresh ask starts a new Hermes conversation and leaves the stored thread alone", async () => {
+  const state = createState(tmpFile());
+  state.setResponse("feed", "resp_old");
+  const calls = [];
+  const fetch = async (url, init) => {
+    calls.push(JSON.parse(init.body));
+    return { ok: true, status: 200, json: async () => response("resp_new", "ok") };
+  };
+  const h = createHermesClient({ url: "http://127.0.0.1:8642", key: "k", fetch, state });
+  await h.ask({ conversationId: "feed", text: "Job review …", fresh: true });
+  assert.equal(calls[0].previous_response_id, undefined, "no earlier thread to pull stale items from");
+  assert.equal(state.getResponse("feed"), "resp_old");
+});
+
 test("ask retries once without a previous id Hermes no longer knows", async () => {
   const state = createState(tmpFile());
   state.setResponse("conv-1", "resp_gone");
@@ -64,7 +78,9 @@ test("ask reports Hermes errors and empty answers", async () => {
   const failing = createHermesClient({ url: "http://127.0.0.1:8642", key: "k", state, fetch: async () => ({ ok: false, status: 500, json: async () => ({ error: { message: "boom" } }) }) });
   await assert.rejects(failing.ask({ conversationId: "c", text: "x" }), /boom/);
   const empty = createHermesClient({ url: "http://127.0.0.1:8642", key: "k", state, fetch: async () => ({ ok: true, status: 200, json: async () => ({ id: "r", output: [] }) }) });
-  assert.equal((await empty.ask({ conversationId: "c", text: "x" })).text, "Hermes had no answer.");
+  const none = await empty.ask({ conversationId: "c", text: "x" });
+  assert.equal(none.text, "Hermes had no answer.");
+  assert.equal(none.empty, true, "a caller can tell a placeholder from a real answer");
 });
 
 test("ask gives up after the timeout", async () => {

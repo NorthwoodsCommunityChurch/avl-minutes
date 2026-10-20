@@ -170,3 +170,20 @@ private func meta(_ id: String, _ title: String, folder: String = "Notes", modif
     #expect(listed.map(\.account) == ["iCloud", FeedRecord.account])
     #expect(try index.list(scope: .ownNotes, since: nil, until: nil, limit: 10).map(\.id) == ["own"])
 }
+
+@Test func teamsChatPeopleNamesTheOthersInAChatNewestFirst() throws {
+    let index = try NotesIndex(url: tempURL())
+    func teams(_ id: String, _ from: String, _ chat: String, _ at: TimeInterval) throws {
+        try index.upsert(NoteMetadata(id: "feed:teams/\(id).json", title: "\(from): x", folder: "teams", account: FeedRecord.account,
+                                      createdAt: Date(timeIntervalSince1970: at), modifiedAt: Date(timeIntervalSince1970: at), isLocked: false),
+                         body: "From: \(from)\nSent: x\nChat: \(chat)\n\nx")
+    }
+    try teams("1", "Seth Potter", "19:a_b@unq.gbl.spaces", 10)
+    try teams("2", "Aaron Larson", "19:a_b@unq.gbl.spaces", 20)
+    try teams("3", "MJ Brand", "19:a_b@unq.gbl.spaces", 30)
+    try teams("4", "Seth Potter", "19:a_b@unq.gbl.spaces", 40)
+    try teams("5", "Kirk", "19:a_c@unq.gbl.spaces", 50)
+    #expect(try index.teamsChatPeople(chat: "19:a_b@unq.gbl.spaces", excluding: "Aaron Larson") == ["Seth Potter", "MJ Brand"])
+    #expect(try index.teamsChatPeople(chat: "19:none", excluding: "Aaron Larson") == [])
+    #expect(try index.teamsChatPeople(chat: "", excluding: "Aaron Larson") == [])
+}

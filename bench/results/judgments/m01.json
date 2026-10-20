@@ -1,0 +1,434 @@
+{
+ "meeting": "m01",
+ "judge_version": "j1",
+ "attempts": 1,
+ "wall_s": 59.6,
+ "grades": {
+  "A": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "second confidence monitor will be shelved until January",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Update the ProPresenter countdown timer to 9:25",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Check tracking for the new Camera 3 SDI cable",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "B": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "Hold off on adding a second confidence monitor this quarter",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Jenna continues running ProPresenter in the booth",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Two new volunteers will shadow this week",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Update the livestream countdown timer in ProPresenter to 9:25",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Check tracking on the camera 3 SDI cable tonight",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Speaker 3 — Oversee the two shadowing volunteers",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "C": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "second confidence monitor is postponed until January",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Update the countdown timer in ProPresenter",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Check tracking for the Camera 3 SDI cable",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "D": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "second confidence monitor will not be added this quarter",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Update the countdown timer in Pro Presenter",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Check tracking status on the camera cable",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "E": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "hold off on purchasing a second confidence monitor until January",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Check tracking on the camera three cable tonight",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "F": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "Hold off on adding a second confidence monitor this quarter",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Jenna continues running ProPresenter for Sunday",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Two new volunteers will shadow this week",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Update/fix the ProPresenter countdown timer",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Check tracking on the camera 3 SDI cable tonight",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "G": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "second confidence monitor is postponed until January",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Check tracking for the camera three SDI cable tonight",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "H": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "Postpone adding a second stage confidence monitor",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Park the proposal to switch the band to in-ear monitors",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Update the ProPresenter countdown timer to 9:25",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Check tracking for the new Camera 3 SDI cable",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "I": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "second confidence monitor is postponed until January",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Update countdown timer in ProPresenter before Sunday",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Check tracking on camera 3 cable tonight",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "J": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "second confidence monitor will not be added this quarter",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "update the countdown timer in ProPresenter",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "check tracking for the camera 3 SDI cable",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  }
+ },
+ "flags": [],
+ "raw": "{\"A\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"second confidence monitor will be shelved until January\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Update the ProPresenter countdown timer to 9:25\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Check tracking for the new Camera 3 SDI cable\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"B\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"Hold off on adding a second confidence monitor this quarter\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"Jenna continues running ProPresenter in the booth\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"Two new volunteers will shadow this week\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Update the livestream countdown timer in ProPresenter to 9:25\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Check tracking on the camera 3 SDI cable tonight\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Speaker 3 — Oversee the two shadowing volunteers\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"C\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"second confidence monitor is postponed until January\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Update the countdown timer in ProPresenter\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Check tracking for the Camera 3 SDI cable\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"D\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"second confidence monitor will not be added this quarter\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Update the countdown timer in Pro Presenter\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Check tracking status on the camera cable\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"E\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"hold off on purchasing a second confidence monitor until January\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Check tracking on the camera three cable tonight\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"F\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"Hold off on adding a second confidence monitor this quarter\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"Jenna continues running ProPresenter for Sunday\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"Two new volunteers will shadow this week\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Update/fix the ProPresenter countdown timer\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Check tracking on the camera 3 SDI cable tonight\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"G\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"second confidence monitor is postponed until January\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Check tracking for the camera three SDI cable tonight\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"H\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"Postpone adding a second stage confidence monitor\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"decisions\",\"claim\":\"Park the proposal to switch the band to in-ear monitors\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Update the ProPresenter countdown timer to 9:25\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Check tracking for the new Camera 3 SDI cable\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"I\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"second confidence monitor is postponed until January\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Update countdown timer in ProPresenter before Sunday\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"Check tracking on camera 3 cable tonight\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true},\n\"J\":{\"decisions\":{\"d1\":\"hit\",\"d2\":\"hit\"},\"actions\":{\"a1\":{\"found\":\"hit\",\"owner\":\"right\"},\"a2\":{\"found\":\"hit\",\"owner\":\"right\"}},\"questions\":{\"q1\":\"hit\"},\"extras\":[{\"section\":\"decisions\",\"claim\":\"second confidence monitor will not be added this quarter\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"update the countdown timer in ProPresenter\",\"verdict\":\"supported\",\"trap\":null},{\"section\":\"actions\",\"claim\":\"check tracking for the camera 3 SDI cable\",\"verdict\":\"supported\",\"trap\":null}],\"format_ok\":true}}"
+}

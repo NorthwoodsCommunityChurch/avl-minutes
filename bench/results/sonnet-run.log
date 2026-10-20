@@ -1,0 +1,68 @@
+claude-sonnet: 17 calls to make (1 done)
+[1/17] m02 rep0 ok wall=7.31s
+[2/17] m03 rep0 ok wall=8.91s
+[3/17] m04 rep0 ok wall=15.1s
+[4/17] m05 rep0 ok wall=12.06s
+[5/17] m06 rep0 ok wall=13.79s
+[6/17] m07 rep0 ok wall=20.93s
+[7/17] m08 rep0 ok wall=10.99s
+[8/17] m09 rep0 ok wall=15.79s
+[9/17] m01 rep1 ok wall=13.81s
+[10/17] m02 rep1 ok wall=10.08s
+[11/17] m03 rep1 ok wall=8.84s
+[12/17] m04 rep1 ok wall=8.26s
+[13/17] m05 rep1 ok wall=10.56s
+[14/17] m06 rep1 ok wall=15.65s
+[15/17] m07 rep1 ok wall=21.47s
+[16/17] m08 rep1 ok wall=11.55s
+[17/17] m09 rep1 ok wall=11.37s
+claude-sonnet: 2 calls to make (18 done)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/aaronlarson/Documents/VS Code/Assistant/bench/run_claude.py", line 55, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/Users/aaronlarson/Documents/VS Code/Assistant/bench/run_claude.py", line 36, in main
+    transcript = common.load_transcript(meeting)
+  File "/Users/aaronlarson/Documents/VS Code/Assistant/bench/common.py", line 29, in load_transcript
+    return (TRANSCRIPTS / f"{meeting}.txt").read_text()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 787, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/aaronlarson/Documents/VS Code/Assistant/bench/corpus/transcripts/m01 m02 m03 m04 m05 m06 m07 m08 m09 m10 m11 m12 m13 m14 m15 m16 m17 m18 m19 m20 m21 m22 m23 m24 .txt'
+claude-sonnet: 30 calls to make (18 done)
+[1/30] m10 rep0 ok wall=9.1s
+[2/30] m11 rep0 ok wall=8.55s
+[3/30] m12 rep0 ok wall=9.32s
+[4/30] m13 rep0 ok wall=16.76s
+[5/30] m14 rep0 ok wall=14.05s
+[6/30] m15 rep0 ok wall=11.03s
+[7/30] m16 rep0 ok wall=8.37s
+[8/30] m17 rep0 ok wall=9.02s
+[9/30] m18 rep0 ok wall=14.18s
+[10/30] m19 rep0 ok wall=10.8s
+[11/30] m20 rep0 ok wall=62.64s
+[12/30] m21 rep0 ok wall=14.3s
+[13/30] m22 rep0 ok wall=12.85s
+[14/30] m23 rep0 ok wall=12.05s
+[15/30] m24 rep0 ok wall=11.45s
+[16/30] m10 rep1 ok wall=8.91s
+[17/30] m11 rep1 ok wall=11.42s
+[18/30] m12 rep1 ok wall=9.94s
+[19/30] m13 rep1 ok wall=12.41s
+[20/30] m14 rep1 ok wall=13.45s
+[21/30] m15 rep1 ok wall=10.15s
+[22/30] m16 rep1 ok wall=9.5s
+[23/30] m17 rep1 ok wall=9.61s
+[24/30] m18 rep1 ok wall=21.07s
+[25/30] m19 rep1 ok wall=10.67s
+[26/30] m20 rep1 ok wall=41.81s
+[27/30] m21 rep1 ok wall=17.64s
+[28/30] m22 rep1 ok wall=11.44s
+[29/30] m23 rep1 ok wall=20.1s
+[30/30] m24 rep1 ok wall=11.48s

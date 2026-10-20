@@ -4,6 +4,7 @@
 # new tools are picked up.   bash scripts/deploy-pco-mcp.sh [host]
 set -euo pipefail
 HOST="${1:-edit-3}"
+bash "$(dirname "$0")/wait-hermes-idle.sh" "$HOST"
 SRC="$HOME/Documents/VS Code/Weekend Rundown/Weekend Rundown/pco-mcp"
 MIRROR="$(cd "$(dirname "$0")/.." && pwd)/hermes-tools/pco-mcp"
 cp "$SRC/server.py" "$SRC/song_prep.py" "$SRC/test_song_prep.py" "$SRC/requirements.txt" "$MIRROR/"

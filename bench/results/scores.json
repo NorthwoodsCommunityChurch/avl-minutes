@@ -1,0 +1,246 @@
+{
+ "gemma-bigctx": {
+  "reps": [
+   {
+    "meetings": 5,
+    "decision_recall": 1.0,
+    "action_recall": 0.95,
+    "core_recall": 0.9722,
+    "question_recall": 0.8,
+    "owner_accuracy": 1.0,
+    "invented_decisions": 0,
+    "invented_actions": 0,
+    "control_decisions": 2,
+    "supported_extras": 14,
+    "traps_by_kind": {},
+    "unusable": 0,
+    "wall_p50_s": 70.25,
+    "wall_p90_s": 73.33,
+    "model_p50_s": 35.51,
+    "model_p90_s": 40.76
+   },
+   {
+    "meetings": 5,
+    "decision_recall": 1.0,
+    "action_recall": 1.0,
+    "core_recall": 1.0,
+    "question_recall": 1.0,
+    "owner_accuracy": 1.0,
+    "invented_decisions": 0,
+    "invented_actions": 0,
+    "control_decisions": 3,
+    "supported_extras": 13,
+    "traps_by_kind": {},
+    "unusable": 0,
+    "wall_p50_s": 64.96,
+    "wall_p90_s": 88.8,
+    "model_p50_s": 32.41,
+    "model_p90_s": 37.83
+   }
+  ],
+  "bar": {
+   "checks": {
+    "core recall >= 90%": true,
+    "invented decisions <= 1": true,
+    "no unusable summaries": true,
+    "p90 model time <= 180 s": true
+   },
+   "pass": true
+  }
+ },
+ "qwen-coder": {
+  "reps": [
+   {
+    "meetings": 5,
+    "decision_recall": 1.0,
+    "action_recall": 1.0,
+    "core_recall": 1.0,
+    "question_recall": 0.8,
+    "owner_accuracy": 1.0,
+    "invented_decisions": 0,
+    "invented_actions": 0,
+    "control_decisions": 1,
+    "supported_extras": 14,
+    "traps_by_kind": {},
+    "unusable": 0,
+    "wall_p50_s": 295.46,
+    "wall_p90_s": 380.1,
+    "model_p50_s": 53.32,
+    "model_p90_s": 61.84
+   },
+   {
+    "meetings": 5,
+    "decision_recall": 1.0,
+    "action_recall": 1.0,
+    "core_recall": 1.0,
+    "question_recall": 0.8,
+    "owner_accuracy": 1.0,
+    "invented_decisions": 0,
+    "invented_actions": 0,
+    "control_decisions": 3,
+    "supported_extras": 14,
+    "traps_by_kind": {},
+    "unusable": 0,
+    "wall_p50_s": 233.6,
+    "wall_p90_s": 271.19,
+    "model_p50_s": 48.62,
+    "model_p90_s": 54.14
+   }
+  ],
+  "bar": {
+   "checks": {
+    "core recall >= 90%": true,
+    "invented decisions <= 1": true,
+    "no unusable summaries": true,
+    "p90 model time <= 180 s": true
+   },
+   "pass": true
+  }
+ },
+ "claude-sonnet": {
+  "reps": [
+   {
+    "meetings": 5,
+    "decision_recall": 1.0,
+    "action_recall": 1.0,
+    "core_recall": 1.0,
+    "question_recall": 1.0,
+    "owner_accuracy": 1.0,
+    "invented_decisions": 0,
+    "invented_actions": 0,
+    "control_decisions": 4,
+    "supported_extras": 19,
+    "traps_by_kind": {},
+    "unusable": 0,
+    "wall_p50_s": 10.31,
+    "wall_p90_s": 13.88,
+    "model_p50_s": null,
+    "model_p90_s": null
+   },
+   {
+    "meetings": 5,
+    "decision_recall": 1.0,
+    "action_recall": 1.0,
+    "core_recall": 1.0,
+    "question_recall": 1.0,
+    "owner_accuracy": 1.0,
+    "invented_decisions": 0,
+    "invented_actions": 0,
+    "control_decisions": 3,
+    "supported_extras": 22,
+    "traps_by_kind": {},
+    "unusable": 0,
+    "wall_p50_s": 10.08,
+    "wall_p90_s": 12.51,
+    "model_p50_s": null,
+    "model_p90_s": null
+   }
+  ],
+  "bar": {
+   "checks": {
+    "core recall >= 90%": true,
+    "invented decisions <= 1": true,
+    "no unusable summaries": true
+   },
+   "pass": true
+  }
+ },
+ "gemma-4-12b": {
+  "reps": [
+   {
+    "meetings": 5,
+    "decision_recall": 1.0,
+    "action_recall": 1.0,
+    "core_recall": 1.0,
+    "question_recall": 0.8,
+    "owner_accuracy": 1.0,
+    "invented_decisions": 0,
+    "invented_actions": 0,
+    "control_decisions": 3,
+    "supported_extras": 12,
+    "traps_by_kind": {},
+    "unusable": 0,
+    "wall_p50_s": 77.9,
+    "wall_p90_s": 122.55,
+    "model_p50_s": 77.89,
+    "model_p90_s": 122.43
+   },
+   {
+    "meetings": 5,
+    "decision_recall": 1.0,
+    "action_recall": 0.9,
+    "core_recall": 0.9444,
+    "question_recall": 0.8,
+    "owner_accuracy": 1.0,
+    "invented_decisions": 0,
+    "invented_actions": 0,
+    "control_decisions": 3,
+    "supported_extras": 12,
+    "traps_by_kind": {},
+    "unusable": 0,
+    "wall_p50_s": 48.48,
+    "wall_p90_s": 131.08,
+    "model_p50_s": 48.39,
+    "model_p90_s": 131.03
+   }
+  ],
+  "bar": {
+   "checks": {
+    "core recall >= 90%": true,
+    "invented decisions <= 1": true,
+    "no unusable summaries": true,
+    "p90 model time <= 180 s": true
+   },
+   "pass": true
+  }
+ },
+ "qwen3.5-9b": {
+  "reps": [
+   {
+    "meetings": 5,
+    "decision_recall": 1.0,
+    "action_recall": 1.0,
+    "core_recall": 1.0,
+    "question_recall": 0.8,
+    "owner_accuracy": 1.0,
+    "invented_decisions": 0,
+    "invented_actions": 0,
+    "control_decisions": 2,
+    "supported_extras": 12,
+    "traps_by_kind": {},
+    "unusable": 0,
+    "wall_p50_s": 170.92,
+    "wall_p90_s": 206.96,
+    "model_p50_s": 170.92,
+    "model_p90_s": 206.88
+   },
+   {
+    "meetings": 5,
+    "decision_recall": 1.0,
+    "action_recall": 0.95,
+    "core_recall": 0.9722,
+    "question_recall": 0.8,
+    "owner_accuracy": 1.0,
+    "invented_decisions": 0,
+    "invented_actions": 0,
+    "control_decisions": 3,
+    "supported_extras": 12,
+    "traps_by_kind": {},
+    "unusable": 0,
+    "wall_p50_s": 137.59,
+    "wall_p90_s": 245.98,
+    "model_p50_s": 137.41,
+    "model_p90_s": 245.77
+   }
+  ],
+  "bar": {
+   "checks": {
+    "core recall >= 90%": true,
+    "invented decisions <= 1": true,
+    "no unusable summaries": true,
+    "p90 model time <= 180 s": false
+   },
+   "pass": false
+  }
+ }
+}

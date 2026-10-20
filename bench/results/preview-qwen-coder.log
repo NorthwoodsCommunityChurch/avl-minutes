@@ -1,0 +1,12 @@
+qwen-coder: 10 calls to make (0 done), 3 in flight
+[1/10] m01 rep0 ok wall=295.46s model=61.22s in=4063 out=3139
+[2/10] m02 rep0 ok wall=348.95s model=53.32s in=3831 out=2763
+[3/10] m03 rep0 ok wall=400.87s model=51.74s in=3731 out=2664
+[4/10] m04 rep0 ok wall=278.12s model=50.76s in=3815 out=2599
+[5/10] m05 rep0 ok wall=287.07s model=62.25s in=3794 out=3127
+[6/10] m01 rep1 ok wall=290.41s model=55.07s in=4063 out=2804
+[7/10] m02 rep1 ok wall=233.6s model=48.62s in=3831 out=2444
+[8/10] m03 rep1 ok wall=212.69s model=41.37s in=3731 out=2105
+[9/10] m04 rep1 ok wall=210.34s model=52.74s in=3815 out=2698
+[10/10] m05 rep1 ok wall=242.35s model=48.11s in=3794 out=2321
+restored gemma-bigctx

@@ -10,6 +10,8 @@ const DEFAULTS = {
   host: "127.0.0.1",
   // Hermes writes every scheduled job's output here; the relay posts each new file to Aaron (lib/cron-output.js).
   cronOutputDir: path.join(os.homedir(), ".hermes", "cron", "output"),
+  // Hermes's job list; automated prompts name the jobs due in the next 2 hours (lib/jobs.js).
+  cronJobsFile: path.join(os.homedir(), ".hermes", "cron", "jobs.json"),
   baseUrl: "https://hermes.northwoodstech.workers.dev",
   frontDoorKey: "",
   notifyKey: "",

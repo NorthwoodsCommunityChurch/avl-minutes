@@ -84,8 +84,10 @@ enum IndexService {
                     }
                     lastFeedProblem = nil
                     feedReported = true
-                    // The proactive loop: calendar changes and sent mail go to Hermes through the relay.
-                    let lines = FeedNotifier.lines(for: FeedNotifier.select(r.records))
+                    // The proactive loop: calendar changes, sent mail, and sent Teams messages go to Hermes through the relay.
+                    let lines = FeedNotifier.lines(for: FeedNotifier.select(r.records)) { chat in
+                        (try? feed.index.teamsChatPeople(chat: chat, excluding: FeedNotifier.aaronName)) ?? []
+                    }
                     if !lines.isEmpty {
                         Task { @MainActor in
                             let status = await FeedNotifierClient.send(lines)

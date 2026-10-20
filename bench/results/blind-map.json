@@ -1,0 +1,212 @@
+{
+ "m01": {
+  "A": [
+   "qwen-coder",
+   0
+  ],
+  "B": [
+   "claude-sonnet",
+   1
+  ],
+  "C": [
+   "gemma-bigctx",
+   0
+  ],
+  "D": [
+   "qwen3.5-9b",
+   0
+  ],
+  "E": [
+   "gemma-4-12b",
+   1
+  ],
+  "F": [
+   "claude-sonnet",
+   0
+  ],
+  "G": [
+   "gemma-4-12b",
+   0
+  ],
+  "H": [
+   "qwen-coder",
+   1
+  ],
+  "I": [
+   "qwen3.5-9b",
+   1
+  ],
+  "J": [
+   "gemma-bigctx",
+   1
+  ]
+ },
+ "m02": {
+  "A": [
+   "qwen3.5-9b",
+   1
+  ],
+  "B": [
+   "gemma-bigctx",
+   0
+  ],
+  "C": [
+   "gemma-4-12b",
+   0
+  ],
+  "D": [
+   "claude-sonnet",
+   1
+  ],
+  "E": [
+   "gemma-4-12b",
+   1
+  ],
+  "F": [
+   "gemma-bigctx",
+   1
+  ],
+  "G": [
+   "qwen3.5-9b",
+   0
+  ],
+  "H": [
+   "qwen-coder",
+   1
+  ],
+  "I": [
+   "qwen-coder",
+   0
+  ],
+  "J": [
+   "claude-sonnet",
+   0
+  ]
+ },
+ "m03": {
+  "A": [
+   "gemma-4-12b",
+   0
+  ],
+  "B": [
+   "claude-sonnet",
+   0
+  ],
+  "C": [
+   "qwen3.5-9b",
+   1
+  ],
+  "D": [
+   "qwen-coder",
+   1
+  ],
+  "E": [
+   "qwen3.5-9b",
+   0
+  ],
+  "F": [
+   "qwen-coder",
+   0
+  ],
+  "G": [
+   "gemma-4-12b",
+   1
+  ],
+  "H": [
+   "gemma-bigctx",
+   0
+  ],
+  "I": [
+   "claude-sonnet",
+   1
+  ],
+  "J": [
+   "gemma-bigctx",
+   1
+  ]
+ },
+ "m04": {
+  "A": [
+   "qwen3.5-9b",
+   1
+  ],
+  "B": [
+   "gemma-4-12b",
+   0
+  ],
+  "C": [
+   "qwen-coder",
+   1
+  ],
+  "D": [
+   "qwen3.5-9b",
+   0
+  ],
+  "E": [
+   "gemma-bigctx",
+   1
+  ],
+  "F": [
+   "gemma-4-12b",
+   1
+  ],
+  "G": [
+   "claude-sonnet",
+   1
+  ],
+  "H": [
+   "gemma-bigctx",
+   0
+  ],
+  "I": [
+   "claude-sonnet",
+   0
+  ],
+  "J": [
+   "qwen-coder",
+   0
+  ]
+ },
+ "m05": {
+  "A": [
+   "claude-sonnet",
+   1
+  ],
+  "B": [
+   "qwen3.5-9b",
+   0
+  ],
+  "C": [
+   "claude-sonnet",
+   0
+  ],
+  "D": [
+   "gemma-bigctx",
+   1
+  ],
+  "E": [
+   "gemma-4-12b",
+   1
+  ],
+  "F": [
+   "qwen-coder",
+   1
+  ],
+  "G": [
+   "gemma-bigctx",
+   0
+  ],
+  "H": [
+   "qwen-coder",
+   0
+  ],
+  "I": [
+   "gemma-4-12b",
+   0
+  ],
+  "J": [
+   "qwen3.5-9b",
+   1
+  ]
+ }
+}

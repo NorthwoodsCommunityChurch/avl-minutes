@@ -51,9 +51,11 @@ function harness(dir, { pollMs = 1000, settleMs = 0, startupGraceMs = 10 * 60_00
     startupGraceMs,
     now: now || (() => clock),
     log: (level, data) => logs.push({ level, ...data }),
-    post: async (text) => {
+    deliver: async (parsed) => {
+      const text = formatCronOutput(parsed);
       if (postImpl) await postImpl(text);
       posts.push(text);
+      return { posted: !/^silent-review/.test(parsed.response) };
     },
   });
   return { w, posts, logs, state, tick: (ms) => { clock += ms; } };
@@ -81,6 +83,15 @@ test("a new output file is posted once with the job name as its header; silent r
   assert.ok(logs.some((l) => l.event === "cron-output" && l.posted === false && l.chars === 0));
   assert.ok(logs.some((l) => l.event === "cron-output" && l.posted === true && l.job === "Scrum Prep Notes" && l.chars === 9));
   assert.ok(!logs.some((l) => JSON.stringify(l).includes("the brief")), "logs never carry the text");
+  // When Hermes's review decides Aaron already has it, the watcher logs posted:false and still never re-delivers it.
+  write(dir, "job1/2026-10-09_11-00-00.md", FILE("silent-review same brief"));
+  await w.scan();
+  tick(10);
+  await w.scan();
+  tick(10);
+  await w.scan();
+  assert.equal(posts.length, 2, "delivered once");
+  assert.ok(logs.some((l) => l.event === "cron-output" && l.posted === false && l.chars === 24));
 });
 
 test("files already there at startup are never posted, except fresh ones the relay missed while down", async () => {
@@ -132,7 +143,7 @@ test("without a home conversation the file waits and goes out on a later scan; a
   assert.equal(posts.length, 0);
   assert.equal(logs.filter((l) => l.event === "cron-output-waiting").length, 1, "warned once");
   home = true;
-  tick(10);
+  tick(1000); // a refused delivery waits a full poll
   await w.scan();
   assert.deepEqual(posts, ["**Relay test** failed:\nchild failed"]);
 });
@@ -160,4 +171,53 @@ test("start() posts a file written later, even when the folder appears after sta
   for (let i = 0; i < 80 && posts.length === 0; i++) await new Promise((r) => setTimeout(r, 25));
   w.stop();
   assert.deepEqual(posts, ["**Scrum Prep Notes**\nlate"]);
+});
+
+test("deliver gets the file's key and job id; a refused delivery waits a full poll before it is tried again", async () => {
+  const dir = tmpDir();
+  const seen = [];
+  let refuse = true;
+  const { w, posts, tick } = harness(dir, {
+    pollMs: 1000,
+    postImpl: async () => {
+      seen.push(Date.now());
+      if (refuse) throw new Error("Bot Framework 503");
+    },
+  });
+  await w.scan();
+  write(dir, "ebe6/2026-10-13_09-01-57.md", FILE("brief"));
+  await w.scan();
+  tick(10);
+  await w.scan();
+  assert.equal(seen.length, 1);
+  tick(10);
+  await w.scan();
+  tick(10);
+  await w.scan();
+  assert.equal(seen.length, 1, "no retry inside the poll interval: each retry may cost a Hermes turn");
+  refuse = false;
+  tick(1000);
+  await w.scan();
+  assert.equal(seen.length, 2);
+  assert.deepEqual(posts, ["**Scrum Prep Notes**\nbrief"]);
+});
+
+test("an output still in review when the relay stops is delivered after a restart, however old it is", async () => {
+  const dir = tmpDir();
+  const stateFile = path.join(tmpDir(), "state.json");
+  write(dir, "ebe6/a.md", FILE("brief"));
+  const first = createCronOutputWatcher({ dir, state: createState(stateFile), settleMs: 0, now: Date.now, deliver: () => new Promise(() => {}) });
+  await first.scan();
+  first.scan(); // hands the file to a review that never finishes (the relay is about to stop)
+  await new Promise((r) => setTimeout(r, 10));
+  assert.deepEqual(createState(stateFile).get("inReview"), ["ebe6/a.md"]);
+  fs.utimesSync(path.join(dir, "ebe6/a.md"), (Date.now() - 60 * 60_000) / 1000, (Date.now() - 60 * 60_000) / 1000);
+  const got = [];
+  const second = createCronOutputWatcher({ dir, state: createState(stateFile), settleMs: 0, now: Date.now, deliver: async (p) => { got.push(p); return { posted: true }; } });
+  await second.scan();
+  await second.scan();
+  assert.equal(got.length, 1, "an hour-old file is not history when it was mid-review");
+  assert.equal(got[0].key, "ebe6/a.md");
+  assert.equal(got[0].jobId, "ebe6");
+  assert.deepEqual(createState(stateFile).get("inReview"), []);
 });

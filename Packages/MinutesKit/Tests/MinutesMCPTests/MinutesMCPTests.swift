@@ -80,10 +80,27 @@ private func seededIndex() throws -> URL {
     // Configured but pointing at nothing: the tool is listed and the failure is explained, never silent.
     let config = FileManager.default.temporaryDirectory.appendingPathComponent("board-\(UUID().uuidString).json")
     try Data(#"{"baseURL":"http://127.0.0.1:9","apiKey":"k","boardId":"b"}"#.utf8).write(to: config)
-    #expect(MinutesMCPServer.tools(taskBoardConfigURL: config).last?.name == "task_board")
+    #expect(MinutesMCPServer.tools(taskBoardConfigURL: config).map(\.name).suffix(4) == ["task_board", "task_list_create", "task_list_order", "task_card_move"])
+    #expect(!MinutesMCPServer.tools(taskBoardConfigURL: missing).contains { $0.name == "task_list_create" })
     let r = MinutesMCPServer.call(name: "task_board", arguments: ["include_done": .bool(true)], indexURL: url, taskBoardConfigURL: config)
     #expect(r.isError == true)
     #expect(text(r).hasPrefix("Task board unreachable:"))
+    let create = MinutesMCPServer.call(name: "task_list_create", arguments: ["name": .string("Icebox")], indexURL: url, taskBoardConfigURL: config)
+    #expect(create.isError == true && text(create).hasPrefix("Task board unreachable:"))
+    let nameless = MinutesMCPServer.call(name: "task_list_create", arguments: [:], indexURL: url, taskBoardConfigURL: config)
+    #expect(nameless.isError == true && text(nameless) == "task_list_create needs \"name\".")
+    let order = MinutesMCPServer.call(name: "task_list_order", arguments: ["order": .array([.string("Icebox")])], indexURL: url, taskBoardConfigURL: config)
+    #expect(order.isError == true && text(order).hasPrefix("Task board unreachable:"))
+    for bad: [String: Value] in [[:], ["order": .string("Icebox")], ["order": .array([])], ["order": .array([.int(1)])]] {
+        let r = MinutesMCPServer.call(name: "task_list_order", arguments: bad, indexURL: url, taskBoardConfigURL: config)
+        #expect(r.isError == true && text(r) == "task_list_order needs \"order\", a list of list names.")
+    }
+    let move = MinutesMCPServer.call(name: "task_card_move", arguments: ["cards": .array([.string("x")]), "list": .string("MJ")], indexURL: url, taskBoardConfigURL: config)
+    #expect(move.isError == true && text(move).hasPrefix("Task board unreachable:"))
+    for bad: [String: Value] in [[:], ["cards": .array([.string("x")])], ["list": .string("MJ")], ["cards": .array([]), "list": .string("MJ")]] {
+        let r = MinutesMCPServer.call(name: "task_card_move", arguments: bad, indexURL: url, taskBoardConfigURL: config)
+        #expect(r.isError == true && text(r) == "task_card_move needs \"cards\", a list of card names, and \"list\".")
+    }
 }
 
 private final class MemoryStore: NoteStore, @unchecked Sendable {

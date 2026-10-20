@@ -179,4 +179,39 @@ function splitMessage(text, max = MAX_MESSAGE_CHARS) {
   return parts;
 }
 
-module.exports = { RelayError, createJwtVerifier, createConnectorClient, cleanText, splitMessage, decodeJwt, OPENID_URL, ISSUER, SCOPE, GLOBAL_SERVICE_URL, MAX_MESSAGE_CHARS };
+const LIST_ITEM = /^\s*(?:[-*+]|\d+[.)])\s/;
+const CONTINUATION = /^\s+\S/;
+const FENCE = /^\s*```/;
+
+/**
+ * Hermes writes Markdown with single newlines; Teams joins two plain lines that a single newline separates ("**Scrum Prep
+ * Notes**\nScrum prep for today" arrived as one line, 2026-10-20). A blank line goes between every pair of lines except
+ * list items following each other, an indented line continuing a list item, and lines inside a code fence.
+ */
+function toTeamsMarkdown(text) {
+  const lines = String(text || "").replace(/\r\n?/g, "\n").split("\n");
+  const out = [];
+  let inFence = false;
+  let afterBlank = true; // at the start, or the last line written was blank
+  let inList = false; // the last line written was a list item or an indented line continuing one
+  for (const line of lines) {
+    if (!line.trim()) {
+      if (inFence) out.push(line);
+      else if (!afterBlank) out.push("");
+      afterBlank = !inFence;
+      inList = false;
+      continue;
+    }
+    const item = LIST_ITEM.test(line);
+    const continues = inList && !item && CONTINUATION.test(line);
+    if (!inFence && !afterBlank && !(inList && (item || continues))) out.push("");
+    out.push(line);
+    if (FENCE.test(line)) inFence = !inFence;
+    afterBlank = false;
+    inList = !inFence && (item || continues);
+  }
+  while (out.length && !out[out.length - 1].trim()) out.pop();
+  return out.join("\n");
+}
+
+module.exports = { RelayError, createJwtVerifier, createConnectorClient, cleanText, splitMessage, toTeamsMarkdown, decodeJwt, OPENID_URL, ISSUER, SCOPE, GLOBAL_SERVICE_URL, MAX_MESSAGE_CHARS };

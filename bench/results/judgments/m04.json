@@ -1,0 +1,536 @@
+{
+ "meeting": "m04",
+ "judge_version": "j1",
+ "attempts": 1,
+ "wall_s": 200.1,
+ "grades": {
+  "A": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "partial",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "Tyler will own and manage the graphics schedule for November",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Dana — Nudge regular volunteers to claim shifts",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Tyler — Manage November graphics schedule",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron — Confirm Thanksgiving service schedule with worship team",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "B": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "Center Close and Side manned, wide (Camera 2) locked off and unmanned",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Tyler will manage stream graphics for November",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Graphics sign-ups will remain separate from camera sign-ups",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Speaker 1 — Nudge regulars to claim their slots",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron — Ask the worship team about Thanksgiving",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "C": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "wide camera will use looser preset framing to cover stage resets",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Tyler will independently manage the stream graphics schedule",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Tyler — Build and manage the November stream graphics schedule",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron — Ask the worship team about Thanksgiving",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "D": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "Tyler will own and build the schedule for stream graphics separately",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Dana — Nudge regulars to claim slots",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Tyler — Build graphics schedule",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron — Ask worship team for Thanksgiving service plan",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "E": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "Two positions manned, wide camera locked and unmanned",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Graphics scheduling handled separately from camera sign-ups",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Tyler will manage the graphics schedule for November",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Dana — nudge regular volunteers to claim slots",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron — walk Marcus through lower thirds during shadow weekend",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron — ask the worship team about Thanksgiving",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "F": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "Only center close and side manned; wide (Camera 2) locked and unmanned",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Tyler will own and manage the stream graphics for November",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Dana will own and manage the camera schedule for November",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Dana — Nudge regulars to claim sign-up slots",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron — Ask the worship team about Thanksgiving schedule",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "G": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "Camera two (wide) locked off and unmanned, preset with looser frame",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Stream graphics kept separate, not posted on Planning Center",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Tyler will own and manage the stream graphics schedule",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Dana will own and manage the camera volunteer schedule",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Dana — nudge regular volunteers to claim slots",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron — walk Marcus through the lower thirds",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Tyler — build and manage the November graphics schedule",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron — ask the worship team about Thanksgiving",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "H": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "partial",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "wide camera (Camera 2) unmanned and locked with loose frame",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Two volunteers will be scheduled per service",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Graphics staffing handled separately from camera sign-ups",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Tyler will manage the graphics schedule for November",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Dana — Nudge regular volunteers to claim slots",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron — Ask the worship team about Thanksgiving",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "I": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "Camera two (wide) locked off, framing preset loosely",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Tyler will own and build the November graphics schedule himself",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "decisions",
+     "claim": "Marcus will do one more shadow shift before running it independently",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron — attend Marcus's shadow shift to walk him through lower thirds",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron — ask worship team about Thanksgiving service plan",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  },
+  "J": {
+   "decisions": {
+    "d1": "hit",
+    "d2": "hit"
+   },
+   "actions": {
+    "a1": {
+     "found": "hit",
+     "owner": "right"
+    },
+    "a2": {
+     "found": "hit",
+     "owner": "right"
+    }
+   },
+   "questions": {
+    "q1": "hit"
+   },
+   "extras": [
+    {
+     "section": "decisions",
+     "claim": "Stream graphics scheduling managed separately by Tyler, not in Planning Center",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Dana — Nudge regular volunteers once sign-ups open",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Tyler — Build and manage the November stream graphics schedule",
+     "verdict": "supported",
+     "trap": null
+    },
+    {
+     "section": "actions",
+     "claim": "Aaron — Ask worship team about Thanksgiving",
+     "verdict": "supported",
+     "trap": null
+    }
+   ],
+   "format_ok": true
+  }
+ },
+ "flags": [],
+ "raw": "{\"A\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"partial\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"hit\"}, \"extras\": [{\"section\": \"decisions\", \"claim\": \"Tyler will own and manage the graphics schedule for November\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Dana — Nudge regular volunteers to claim shifts\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Tyler — Manage November graphics schedule\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron — Confirm Thanksgiving service schedule with worship team\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true}, \"B\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"hit\"}, \"extras\": [{\"section\": \"decisions\", \"claim\": \"Center Close and Side manned, wide (Camera 2) locked off and unmanned\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Tyler will manage stream graphics for November\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Graphics sign-ups will remain separate from camera sign-ups\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Speaker 1 — Nudge regulars to claim their slots\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron — Ask the worship team about Thanksgiving\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true}, \"C\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"hit\"}, \"extras\": [{\"section\": \"decisions\", \"claim\": \"wide camera will use looser preset framing to cover stage resets\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Tyler will independently manage the stream graphics schedule\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Tyler — Build and manage the November stream graphics schedule\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron — Ask the worship team about Thanksgiving\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true}, \"D\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"hit\"}, \"extras\": [{\"section\": \"decisions\", \"claim\": \"Tyler will own and build the schedule for stream graphics separately\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Dana — Nudge regulars to claim slots\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Tyler — Build graphics schedule\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron — Ask worship team for Thanksgiving service plan\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true}, \"E\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"hit\"}, \"extras\": [{\"section\": \"decisions\", \"claim\": \"Two positions manned, wide camera locked and unmanned\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Graphics scheduling handled separately from camera sign-ups\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Tyler will manage the graphics schedule for November\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Dana — nudge regular volunteers to claim slots\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron — walk Marcus through lower thirds during shadow weekend\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron — ask the worship team about Thanksgiving\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true}, \"F\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"hit\"}, \"extras\": [{\"section\": \"decisions\", \"claim\": \"Only center close and side manned; wide (Camera 2) locked and unmanned\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Tyler will own and manage the stream graphics for November\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Dana will own and manage the camera schedule for November\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Dana — Nudge regulars to claim sign-up slots\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron — Ask the worship team about Thanksgiving schedule\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true}, \"G\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"hit\"}, \"extras\": [{\"section\": \"decisions\", \"claim\": \"Camera two (wide) locked off and unmanned, preset with looser frame\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Stream graphics kept separate, not posted on Planning Center\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Tyler will own and manage the stream graphics schedule\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Dana will own and manage the camera volunteer schedule\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Dana — nudge regular volunteers to claim slots\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron — walk Marcus through the lower thirds\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Tyler — build and manage the November graphics schedule\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron — ask the worship team about Thanksgiving\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true}, \"H\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"partial\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"hit\"}, \"extras\": [{\"section\": \"decisions\", \"claim\": \"wide camera (Camera 2) unmanned and locked with loose frame\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Two volunteers will be scheduled per service\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Graphics staffing handled separately from camera sign-ups\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Tyler will manage the graphics schedule for November\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Dana — Nudge regular volunteers to claim slots\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron — Ask the worship team about Thanksgiving\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true}, \"I\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"hit\"}, \"extras\": [{\"section\": \"decisions\", \"claim\": \"Camera two (wide) locked off, framing preset loosely\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Tyler will own and build the November graphics schedule himself\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"decisions\", \"claim\": \"Marcus will do one more shadow shift before running it independently\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron — attend Marcus's shadow shift to walk him through lower thirds\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron — ask worship team about Thanksgiving service plan\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true}, \"J\": {\"decisions\": {\"d1\": \"hit\", \"d2\": \"hit\"}, \"actions\": {\"a1\": {\"found\": \"hit\", \"owner\": \"right\"}, \"a2\": {\"found\": \"hit\", \"owner\": \"right\"}}, \"questions\": {\"q1\": \"hit\"}, \"extras\": [{\"section\": \"decisions\", \"claim\": \"Stream graphics scheduling managed separately by Tyler, not in Planning Center\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Dana — Nudge regular volunteers once sign-ups open\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Tyler — Build and manage the November stream graphics schedule\", \"verdict\": \"supported\", \"trap\": null}, {\"section\": \"actions\", \"claim\": \"Aaron — Ask worship team about Thanksgiving\", \"verdict\": \"supported\", \"trap\": null}], \"format_ok\": true}}"
+}

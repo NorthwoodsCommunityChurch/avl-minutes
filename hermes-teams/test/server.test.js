@@ -46,3 +46,30 @@ test("/notify is off entirely when no key is configured", async () => {
     server.close();
   }
 });
+
+test("/notify takes kind progress and passes the mesh message ids on", async () => {
+  const { server, calls, port } = await start();
+  try {
+    const r = await post(port, "/notify", JSON.stringify({ records: ["From session: assistant"], kind: "progress", ids: ["858b4ff7"] }), { "x-notify-key": "k-notify" });
+    assert.equal(r.status, 202);
+    await new Promise((res) => setTimeout(res, 10));
+    assert.deepEqual(calls[0], { records: ["From session: assistant"], kind: "progress", ids: ["858b4ff7"] });
+  } finally {
+    server.close();
+  }
+});
+
+// Deploys restarted Hermes mid-answer twice on 2026-10-20 (a lost board answer, then "ECONNREFUSED 127.0.0.1:8642").
+// The deploy scripts wait on /status until nothing is running or waiting.
+test("/status reports whether the relay is busy and how many jobs wait", async () => {
+  const relay = { handle: async () => {}, notify: async () => ({}), status: () => ({ busy: true, waiting: 2 }) };
+  const server = createServer({ config: { frontDoorKey: "fd", notifyKey: "k" }, relay, verifier: { verify: async () => {} }, hermes: { health: async () => true } });
+  await new Promise((r) => server.listen(0, "127.0.0.1", r));
+  try {
+    const res = await fetch(`http://127.0.0.1:${server.address().port}/status`);
+    assert.equal(res.status, 200);
+    assert.deepEqual(await res.json(), { busy: true, waiting: 2 });
+  } finally {
+    server.close();
+  }
+});

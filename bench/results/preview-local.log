@@ -1,0 +1,21 @@
+== gemma-4-12b: starting llama-server on :11435 (14:39:46)
+gemma-4-12b: 5 calls to make (14 done), 1 in flight
+[1/5] m01 rep1 ok wall=164.42s model=164.4s in=4140 out=4528
+[2/5] m02 rep1 ok wall=44.01s model=43.91s in=3897 out=1015
+[3/5] m03 rep1 ok wall=48.0s model=47.92s in=3809 out=1132
+[4/5] m04 rep1 ok wall=81.08s model=80.98s in=3879 out=2128
+[5/5] m05 rep1 ok wall=48.48s model=48.39s in=3869 out=1155
+== gemma-4-12b: done (14:46:15)
+== qwen3.5-9b: starting llama-server on :11435 (14:46:15)
+qwen3.5-9b: 10 calls to make (0 done), 1 in flight
+[1/10] m01 rep0 ok wall=170.92s model=170.92s in=4063 out=6695
+[2/10] m02 rep0 ok wall=159.42s model=159.38s in=3831 out=6278
+[3/10] m03 rep0 ok wall=174.46s model=174.4s in=3731 out=6776
+[4/10] m04 rep0 ok wall=156.9s model=156.84s in=3815 out=6095
+[5/10] m05 rep0 ok wall=228.62s model=228.54s in=3794 out=8884
+[6/10] m01 rep1 ok wall=310.99s model=310.73s in=4063 out=12371
+[7/10] m02 rep1 ok wall=85.12s model=84.92s in=3831 out=3493
+[8/10] m03 rep1 ok wall=137.59s model=137.41s in=3731 out=5642
+[9/10] m04 rep1 ok wall=148.46s model=148.34s in=3815 out=6122
+[10/10] m05 rep1 ok wall=123.29s model=123.13s in=3794 out=5075
+== qwen3.5-9b: done (15:14:35)

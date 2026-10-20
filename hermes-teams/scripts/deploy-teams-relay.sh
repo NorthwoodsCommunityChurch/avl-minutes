@@ -1,10 +1,11 @@
 #!/bin/bash
 # Copies the relay to the mini and (re)starts its launchd agent. Keeps the mini's config/ and data/.
-#   bash hermes-teams/scripts/deploy-teams-relay.sh [host]      (default engineering-mac)
+#   bash hermes-teams/scripts/deploy-teams-relay.sh [host]      (default edit-3)
 set -euo pipefail
 cd "$(dirname "$0")/.."
 HOST="${1:-edit-3}"
 LABEL="com.northwoods.hermes-teams"
+bash ../scripts/wait-hermes-idle.sh "$HOST"
 tar czf /tmp/hermes-teams.tgz --exclude=config/local.json --exclude=data --exclude=node_modules --exclude='teams-app/*.zip' .
 scp -q /tmp/hermes-teams.tgz "$HOST:hermes-teams.tgz"
 rm -f /tmp/hermes-teams.tgz

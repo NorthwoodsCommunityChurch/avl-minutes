@@ -1,0 +1,13 @@
+claude-sonnet: 12 calls to make (48 done)
+[1/12] m25 rep0 ok wall=17.35s
+[2/12] m26 rep0 ok wall=34.15s
+[3/12] m27 rep0 ok wall=15.35s
+[4/12] m28 rep0 ok wall=19.84s
+[5/12] m29 rep0 ok wall=17.69s
+[6/12] m30 rep0 ok wall=19.41s
+[7/12] m25 rep1 ok wall=22.92s
+[8/12] m26 rep1 ok wall=38.54s
+[9/12] m27 rep1 ok wall=14.72s
+[10/12] m28 rep1 ok wall=29.48s
+[11/12] m29 rep1 ok wall=17.13s
+[12/12] m30 rep1 ok wall=19.45s

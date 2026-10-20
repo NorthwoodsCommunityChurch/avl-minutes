@@ -111,7 +111,7 @@ private func meta(_ id: String, _ title: String, folder: String = "Notes") -> No
     let (tools, index) = try makeTools()
     for i in 1...6 {
         let m = NoteMetadata(id: "n\(i)", title: "Atrium \(i)", folder: "Notes", account: "iCloud",
-                             createdAt: now, modifiedAt: now.addingTimeInterval(Double(i) * 3_600), isLocked: false)
+                             createdAt: now, modifiedAt: now.addingTimeInterval(Double(i - 7) * 3_600), isLocked: false)
         try index.upsert(m, body: "atrium item \(i)")
     }
     let cut = try tools.searchNotes(query: "atrium", folder: nil, since: nil, until: nil, limit: 4)
@@ -129,4 +129,36 @@ private func meta(_ id: String, _ title: String, folder: String = "Notes") -> No
     let whole = try tools.searchNotes(query: "atrium", folder: nil, since: nil, until: nil, limit: 10)
     #expect(whole.contains("6 notes match \"atrium\":"))
     #expect(try index.searchCount("atrium", scope: .ownNotes, since: nil, until: nil) == 6)
+}
+
+/// 2026-10-13: "Scrum" matched 52 occurrences of the recurring invite (through Feb 2027) plus Aaron's and Jason's
+/// Teams messages. The occurrences took 12 of the top 20 and every "newest" slot, so Jason's "we will skip scrum on
+/// Tuesday" never reached Hermes and her meeting-prep brief said nothing new had come from him.
+@Test func aRecurringMeetingIsOneResultAndNewestMeansAlreadyHappened() throws {
+    let (tools, index) = try makeTools()
+    for week in -2...30 {
+        let start = now.addingTimeInterval(Double(week) * 7 * 86_400 + 3_600)
+        try index.upsert(NoteMetadata(id: "feed:calendar/s\(week + 10).json", title: "Scrum — wk \(week)", folder: "calendar",
+                                      account: FeedRecord.account, createdAt: start, modifiedAt: now.addingTimeInterval(-60), isLocked: false),
+                         body: "Calendar event, added\nSubject: Scrum\nScrum standup in Video Control, scrum notes")
+    }
+    for i in 1...6 {
+        try index.upsert(NoteMetadata(id: "feed:teams/a\(i).json", title: "Aaron Larson: for scrum item \(i)", folder: "teams",
+                                      account: FeedRecord.account, createdAt: now.addingTimeInterval(Double(-i - 2) * 86_400),
+                                      modifiedAt: now, isLocked: false), body: "for scrum I need item \(i)")
+    }
+    try index.upsert(NoteMetadata(id: "feed:teams/jason.json", title: "Jason Lee: Hey Everyone!", folder: "teams", account: FeedRecord.account,
+                                  createdAt: now.addingTimeInterval(-3_600), modifiedAt: now, isLocked: false),
+                     body: "Hey Everyone! With today's holiday most of the team will be out tomorrow so we will skip scrum on Tuesday.")
+
+    let out = try tools.searchNotes(query: "Scrum", folder: nil, since: nil, until: nil, limit: 5)
+    // The series is one line that names the next and the last occurrence and points at the next one's id.
+    #expect(out.contains("\"Scrum\" — calendar — recurring, 33 occurrences match; next starts Mon Oct 5, 2026 3:53 PM, last started Mon Sep 28, 2026 3:53 PM"))
+    #expect(out.contains("id: feed:calendar/s10.json"))
+    #expect(out.components(separatedBy: "— calendar —").count == 2)
+    #expect(out.contains("Jason Lee: Hey Everyone!"))
+    // Five items covered 37 of 40 records; the newest list holds only things that already happened.
+    #expect(out.contains("37 of 40 notes match \"Scrum\""))
+    let newest = try #require(out.components(separatedBy: "Newest matches, not in the list above:").last)
+    #expect(!newest.contains("calendar") && newest.contains("Aaron Larson: for scrum item"))
 }

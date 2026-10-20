@@ -2,7 +2,7 @@
 # Builds Hermes Helper (Release) and installs it on the assistant mini as a launchd user
 # agent that keeps the Notes index current. Safe to rerun: it replaces the app and
 # restarts the agent. Never rsync an .app (OneDrive extended attributes break signatures).
-#   bash scripts/deploy-helper.sh              # to engineering-mac
+#   bash scripts/deploy-helper.sh              # to edit-3
 #   bash scripts/deploy-helper.sh other-host   # any ~/.ssh/config alias
 set -euo pipefail
 cd "$(dirname "$0")/.."
